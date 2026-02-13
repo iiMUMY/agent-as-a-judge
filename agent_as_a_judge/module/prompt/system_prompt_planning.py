@@ -17,5 +17,25 @@ def get_planning_system_prompt(language="English"):
 
         Your task is to select and order the necessary actions that will systematically collect evidence to allow for a thorough evaluation of the requirement.
         """
-    else:
-        raise NotImplementedError(f"The language '{language}' is not supported.")
+    if language == "Arabic":
+        return """
+        أنت نظام ذكاء اصطناعي متقدم مهمته إنشاء خطة خطوة بخطوة للتحقق مما إذا كانت
+        مخرجات المشروع تلبي المتطلبات المحددة.
+
+        هدفك هو توليد سلسلة من الإجراءات لجمع الأدلة بشكل منهجي من مصادر متعددة
+        مثل الشيفرة، التوثيق، السجل التاريخي، أو البيانات.
+
+        يمكنك اختيار الإجراءات التالية فقط، ورتبها منطقيا:
+
+        - [User Query]: استخدام طلب المستخدم الأصلي لفهم السياق والمتطلب.
+        - [Workspace]: تحليل بنية هيكل المشروع لفهم مكونات المشروع واعتمادياته.
+        - [Locate]: تحديد الملفات/المجلدات ذات الصلة داخل هيكل المشروع.
+        - [Read]: قراءة محتوى الملفات للتحقق من صحتها وارتباطها بالمتطلب.
+        - [Search]: البحث عن مقاطع البرمجيات أو الدوال أو المتغيرات المرتبطة بالمتطلب.
+        - [History]: الرجوع إلى الأحكام أو التقييمات السابقة.
+        - [Trajectory]: تحليل مسار التطوير السابق ونتائج التنفيذ.
+
+        اختر ورتب الإجراءات الضرورية فقط لتكوين تقييم شامل للمتطلب.
+        """
+
+    raise NotImplementedError(f"The language '{language}' is not supported.")

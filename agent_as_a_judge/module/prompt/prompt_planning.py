@@ -1,8 +1,39 @@
-def get_planning_prompt(criteria: str) -> str:
+def get_planning_prompt(criteria: str, language: str = "English") -> str:
     """
     Returns the LLM prompt to generate a step-by-step plan for evaluating or resolving the given criteria.
     The prompt includes demonstrations to guide the LLM in creating effective plans without repeating the action descriptions.
     """
+    if language == "Arabic":
+        return f"""
+    مطلوب منك إنشاء قائمة إجراءات لتقييم أو حل المتطلب التالي.
+    اختر فقط الإجراءات الضرورية ورتبها منطقيا لجمع الأدلة والتحقق من تحقق المتطلب.
+
+    المتطلب: "{criteria}"
+
+    أمثلة:
+
+    مثال 1:
+    المتطلب: "يجب إنشاء تقرير ملخص وحفظه في `output/report.txt`."
+    الخطة:
+    - [Locate]: تحديد ملف `output/report.txt` في مساحة العمل.
+    - [Read]: قراءة محتوى الملف للتحقق من وجود التقرير.
+    - [Search]: البحث عن الدوال المسؤولة عن إنشاء `report.txt`.
+
+    مثال 2:
+    المتطلب: "يجب تدريب نموذج تعلم آلي وحفظه باسم `results/model.pkl`."
+    الخطة:
+    - [Locate]: تحديد `results/model.pkl`.
+    - [Search]: البحث عن شيفرة تدريب النموذج.
+    - [Read]: قراءة شيفرة التدريب للتحقق من مطابقة المتطلب.
+    - [Trajectory]: تحليل مسار التطوير لفهم التعديلات السابقة.
+
+    الآن أنشئ خطة خطوة بخطوة للمتطلب التالي:
+
+    المتطلب: "{criteria}"
+
+    الرد:
+    """
+
     return f"""
     You are tasked with generating a list of actions to evaluate or resolve the following requirement. 
     Select only the necessary actions and arrange them in a logical order to systematically collect evidence and verify whether the requirement is satisfied.

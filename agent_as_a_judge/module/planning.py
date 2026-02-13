@@ -19,14 +19,15 @@ load_dotenv()
 
 
 class Planning:
-    def __init__(self):
+    def __init__(self, language: str = "English"):
+        self.language = language
         self.llm = LLM(
             model=os.getenv("DEFAULT_LLM"), api_key=os.getenv("OPENAI_API_KEY")
         )
 
     def generate_plan(self, criteria: str) -> dict:
-        system_prompt = get_planning_system_prompt("English")  #
-        user_prompt = get_planning_prompt(criteria)
+        system_prompt = get_planning_system_prompt(self.language)
+        user_prompt = get_planning_prompt(criteria, language=self.language)
 
         messages = [
             {"role": "system", "content": system_prompt},

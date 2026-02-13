@@ -11,6 +11,11 @@
         "type": ["string", "null"],
         "description": "The message from the external user to the agent. If null, no message was sent."
       },
+      "language": {
+        "type": ["string", "null"],
+        "enum": ["English", "Arabic", null],
+        "description": "Optional language of the step content. If omitted, the pipeline default language is used."
+      },
       "agent": {
         "type": "object",
         "properties": {

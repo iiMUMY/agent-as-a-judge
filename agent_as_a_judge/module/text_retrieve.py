@@ -36,8 +36,9 @@ logging.basicConfig(
 
 
 class DevTextRetrieve:
-    def __init__(self, trajectory_file: str):
+    def __init__(self, trajectory_file: str, language: str = "English"):
         self.trajectory_file = Path(trajectory_file)
+        self.language = language
         self.raw_trajectory_data = self.load_trajectory_data()
         self.text_data = self.process_trajectory_data()
         self.spacy_nlp = None
@@ -222,8 +223,10 @@ class DevTextRetrieve:
             drop_mode="head",
         )
 
-        system_prompt = get_retrieve_system_prompt(language="English")
-        prompt = get_text_retrieve_prompt(criteria=criteria, long_context=combined_text)
+        system_prompt = get_retrieve_system_prompt(language=self.language)
+        prompt = get_text_retrieve_prompt(
+            criteria=criteria, long_context=combined_text, language=self.language
+        )
 
         messages = [
             {"role": "system", "content": system_prompt},

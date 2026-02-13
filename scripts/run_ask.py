@@ -103,6 +103,13 @@ def parse_arguments():
         default=[".DS_Store"],
         help="Files to exclude in search",
     )
+    parser.add_argument(
+        "--language",
+        type=str,
+        default="English",
+        choices=["English", "Arabic"],
+        help="Language for prompts and answers",
+    )
 
     return parser.parse_args()
 
@@ -121,6 +128,7 @@ if __name__ == "__main__":
         exclude_files=args.exclude_files,
         setting="black_box",
         planning="comprehensive (no planning)",
+        language=args.language,
         judge_dir=judge_dir,
         workspace_dir=workspace_dir,
         instance_dir=None,

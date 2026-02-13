@@ -1,4 +1,6 @@
-def get_prompt_locate(criteria: str, workspace_info: str) -> str:
+def get_prompt_locate(
+    criteria: str, workspace_info: str, language: str = "English"
+) -> str:
 
     demonstration = """
 Example:
@@ -18,6 +20,18 @@ And the workspace information is:
 Based on the criteria, the following paths (no more than 5) should be returned, each wrapped in dollar signs (`$`):
 $/project/src/db.py$
 $/project/src/logging.py$
+    """
+
+    if language == "Arabic":
+        return f"""
+فيما يلي هيكل مساحة العمل:
+{workspace_info}
+
+وهذا هو المعيار المرتبط بالمهمة:
+{criteria}
+
+اتبع نفس صيغة المثال وأرجع فقط مسارات الملفات المطابقة للمعيار:
+{demonstration}
     """
 
     return f"""

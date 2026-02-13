@@ -17,5 +17,23 @@ Avoid including details about file contents or existence, as this information is
 
 Your goal is to provide clear and concise information that helps determine if there were any execution problems with the files mentioned in the criteria.
         """
-    else:
-        raise NotImplementedError(f"The language '{language}' is not supported.")
+    if language == "Arabic":
+        return """
+أنت نظام ذكاء اصطناعي متخصص في استخراج تغذية راجعة من بيئة التنفيذ عبر مسارات العمل (trajectory).
+مهمتك تحليل بيانات المسار المقدمة واستخراج المعلومات الأكثر صلة بالملفات المذكورة في المعيار.
+
+ركّز على ما يلي:
+
+1. حدّد أحدث الخطوات التي ظهرت فيها الملفات المرتبطة مباشرة بالمعيار أثناء التنفيذ أو التحميل أو الحفظ.
+2. قدّم ملاحظات البيئة لهذه الملفات، مثل الأخطاء أو التحذيرات أو المشكلات أثناء التنفيذ.
+3. وضّح ما إذا كانت هناك مشاكل قد تؤثر على نجاح هذه الملفات أو وظائفها في المشروع.
+
+يجب أن يكون الإخراج بالشكل التالي:
+
+- **<RELEVANT STEPS>**: اذكر الخطوات المتعلقة بالملفات ذات الصلة مع ملاحظات البيئة المهمة.
+
+تجنب تفاصيل محتوى الملفات أو وجودها؛ هذه المعلومات متاحة من مصادر أخرى.
+ركّز فقط على ملاحظات البيئة التنفيذية للملفات الأكثر صلة بالمعيار.
+        """
+
+    raise NotImplementedError(f"The language '{language}' is not supported.")

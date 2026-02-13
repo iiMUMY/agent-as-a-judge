@@ -21,7 +21,8 @@ logging.basicConfig(
 
 
 class DevLocate:
-    def __init__(self):
+    def __init__(self, language: str = "English"):
+        self.language = language
         self.llm = self._initialize_llm()
 
     def _initialize_llm(self) -> LLM:
@@ -34,8 +35,10 @@ class DevLocate:
         return LLM(model=model, api_key=api_key)
 
     def locate_file(self, criteria: str, workspace_info: str) -> dict:
-        system_prompt = get_system_prompt_locate(language="English")
-        prompt = get_prompt_locate(criteria=criteria, workspace_info=workspace_info)
+        system_prompt = get_system_prompt_locate(language=self.language)
+        prompt = get_prompt_locate(
+            criteria=criteria, workspace_info=workspace_info, language=self.language
+        )
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},

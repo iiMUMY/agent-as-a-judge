@@ -122,13 +122,15 @@ class JudgeAgent:
     @property
     def aaaj_ask(self):
         if not hasattr(self, "_aaaj_ask"):
-            self._aaaj_ask = DevAsk(self.workspace, self.judge_workspace)
+            self._aaaj_ask = DevAsk(
+                self.workspace, self.judge_workspace, language=self.config.language
+            )
         return self._aaaj_ask
 
     @property
     def aaaj_locate(self):
         if not hasattr(self, "_aaaj_locate"):
-            self._aaaj_locate = DevLocate()
+            self._aaaj_locate = DevLocate(language=self.config.language)
         return self._aaaj_locate
 
     @property
@@ -146,7 +148,9 @@ class JudgeAgent:
     @property
     def aaaj_retrieve(self):
         if not hasattr(self, "_aaaj_retrieve"):
-            self._aaaj_retrieve = DevTextRetrieve(str(self.trajectory_file))
+            self._aaaj_retrieve = DevTextRetrieve(
+                str(self.trajectory_file), language=self.config.language
+            )
         return self._aaaj_retrieve
 
     @staticmethod
@@ -166,7 +170,7 @@ class JudgeAgent:
             criteria = requirement["criteria"]
 
             if self.config.planning == "planning":
-                self.planning = Planning()
+                self.planning = Planning(language=self.config.language)
                 planning_result = self.planning.generate_plan(criteria)
                 workflow = planning_result["actions"]
                 planning_llm_stats = planning_result["llm_stats"]
@@ -270,7 +274,15 @@ class JudgeAgent:
 
             elif info_type == "read" and related_files:
                 for file_path in related_files:
-                    content, llm_stats = self.aaaj_read.read(Path(file_path))
+                    normalized_path = Path(file_path)
+                    if (
+                        os.name == "nt"
+                        and not normalized_path.exists()
+                        and str(file_path).startswith("/")
+                    ):
+                        normalized_path = Path(str(file_path).lstrip("/"))
+
+                    content, llm_stats = self.aaaj_read.read(normalized_path)
                     combined_evidence += f">>> [Key Evidence] Content of Files:\n\nContent of {file_path}:\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
                     logging.info(
                         f">>> [Key Evidence] Content of Files:\n\nContent of {file_path}:\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
@@ -378,7 +390,7 @@ class JudgeAgent:
         logging.info("Saving the graph and tags...")
         with open(self.graph_file, "wb") as f:
             pickle.dump(graph, f)
-        with open(self.tags_file, "w") as f:
+        with open(self.tags_file, "w", encoding="utf-8") as f:
             json.dump(
                 (
                     [
@@ -398,6 +410,7 @@ class JudgeAgent:
                 ),
                 f,
                 indent=4,
+                ensure_ascii=False,
             )
 
     def _save_file_structure(self):
@@ -426,7 +439,7 @@ class JudgeAgent:
         }
         save_path = self.judge_workspace / "tree_structure.json"
         with open(save_path, "w", encoding="utf-8") as f:
-            json.dump(self.workspace_info, f, indent=4)
+            json.dump(self.workspace_info, f, indent=4, ensure_ascii=False)
 
     def locate_file(self, criteria: str, workspace_info: str) -> dict:
 
@@ -471,11 +484,11 @@ class JudgeAgent:
 
         output_file = self.judge_dir / self.instance.name
         instance_data["judge_stats"] = self.judge_stats
-        with open(output_file, "w") as f:
-            json.dump(instance_data, f, indent=4)
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump(instance_data, f, indent=4, ensure_ascii=False)
 
     def _load_instance_data(self):
 
         if self.instance:
-            with open(self.instance, "r") as f:
+            with open(self.instance, "r", encoding="utf-8") as f:
                 return json.load(f)

@@ -1,0 +1,78 @@
+{
+    "name": "01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+    "query": "أحتاج بناء نظام لتصنيف صور Fashion-MNIST باستخدام نموذج ResNet-18 في PyTorch. يجب تحميل بيانات Fashion-MNIST في `src/data_loader.py`. أريد إظهار تقدم التدريب باستخدام مكتبة tqdm داخل حلقة التدريب في `src/train.py`، وتنفيذ زيادة بيانات عبر `torchvision.transforms` (مثل الدوران والتكبير/التصغير) داخل `src/data_loader.py`. كما يجب استيراد نموذج ResNet-18 من PyTorch في `src/model.py`. بعد التدريب، احفظ النموذج المدرّب باسم `fashionnet.pt` داخل `models/saved_models/`. يفضّل أن يكون التدريب فعالا وأن تكون الشيفرة واضحة وسهلة الصيانة، مع إضافة لمحة عن قابلية تفسير النموذج مثل Grad-CAM إن أمكن.",
+    "tags": [
+        "Classification",
+        "Computer Vision",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم تحميل بيانات \"Fashion-MNIST\" داخل `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "تم تنفيذ زيادة البيانات باستخدام `torchvision.transforms` (مثل الدوران والتحجيم) داخل `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "تم استيراد نموذج \"ResNet-18\" من \"PyTorch\" داخل `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم عرض تقدم التدريب باستخدام مكتبة \"tqdm\" داخل حلقة التدريب الرئيسية في `src/train.py`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "تم حفظ النموذج المدرّب باسم `fashionnet.pt` داخل `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون الشيفرة واضحة وسهلة الفهم والصيانة مع تعليقات مناسبة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون عملية التدريب فعالة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يفضّل تقديم لمحات عن قابلية تفسير النموذج، مثل استخدام Grad-CAM للتصور.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

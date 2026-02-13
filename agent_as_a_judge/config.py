@@ -10,6 +10,7 @@ class AgentConfig:
     exclude_files: Optional[List[str]] = None
     setting: str = "gray_box"
     planning: str = "efficient (no planning)"
+    language: str = "English"
     judge_dir: Optional[Path] = None
     workspace_dir: Optional[Path] = None
     instance_dir: Optional[Path] = None
@@ -34,6 +35,7 @@ class AgentConfig:
             ),
             setting=args.setting,
             planning=args.planning,
+            language=(args.language if hasattr(args, "language") else "English"),
             judge_dir=Path(args.judge_dir),
             workspace_dir=Path(args.workspace_dir),
             instance_dir=Path(args.instance_dir),

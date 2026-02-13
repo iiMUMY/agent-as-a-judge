@@ -1,0 +1,19 @@
+{
+    "workspace": "benchmark_single_39\\workspaces\\OpenHands\\39_Drug_Response_Prediction_SVM_GDSC_ML",
+    "tree_structure": {
+        ".": {
+            "gdsc_dataset.csv": null
+        },
+        "results": {
+            "drug_response_prediction_report.md": null,
+            "drug_response_prediction_report.pdf": null,
+            "performance.txt": null,
+            "rmse_scores.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

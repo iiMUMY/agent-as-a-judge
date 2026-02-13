@@ -1,4 +1,16 @@
-def get_judge_prompt(criteria: str, evidence: str) -> str:
+def get_judge_prompt(criteria: str, evidence: str, language: str = "English") -> str:
+
+    if language == "Arabic":
+        return f"""
+المعلومات التالية تتعلق بالمشروع:
+{evidence}
+
+يرجى تقييم المعيار التالي:
+{criteria}
+
+بحسب الإرشادات، استجب باستخدام <SATISFIED> أو <UNSATISFIED> ثم قدّم تبريرا مختصرا
+يشير إلى أدلة محددة من المعلومات المتاحة.
+    """
 
     return f"""
 Provided below is relevant information about the project:

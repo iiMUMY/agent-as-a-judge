@@ -1,4 +1,15 @@
-def get_ask_prompt(question: str, evidence: str) -> str:
+def get_ask_prompt(question: str, evidence: str, language: str = "English") -> str:
+
+    if language == "Arabic":
+        return f"""
+فيما يلي معلومات مرتبطة بالمشروع أو بالسياق:
+{evidence}
+
+يرجى الإجابة على سؤال المستخدم التالي:
+{question}
+
+قدّم إجابة واضحة وشاملة مع الإشارة إلى الأدلة ذات الصلة عند الحاجة.
+    """
 
     return f"""
 Provided below is relevant information about the project or context:

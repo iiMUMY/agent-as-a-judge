@@ -1,5 +1,8 @@
 {
    "generic": "This is a task that requires you to write, execute, and save source code. You have a hard time limit of 30 minutes to produce your programmatic solution to the given task. This time limit includes execution time. The quality of your solution will be judged based on what you left in the working folder by the time 30 minutes expire. Additionally, the hardware you are running on is unknown, and the presence of a GPU is not guaranteed.",
+   "generic_ar": "هذه مهمة تتطلب منك كتابة الشيفرة المصدرية وتنفيذها وحفظها. لديك حد زمني صارم قدره 30 دقيقة لإنتاج الحل البرمجي المطلوب، وهذا يشمل وقت التنفيذ. سيتم تقييم جودة الحل بناء على ما تتركه في مجلد العمل عند انتهاء الوقت. كما أن العتاد غير معروف، ولا يوجد ضمان بوجود وحدة معالجة رسومية.",
    "is_training_needed": "Keep the time limit in mind when setting hyperparameters for training.",
-   "is_kaggle_api_needed": "You can use the Kaggle API credentials stored in `kaggle.json` in your current working directory."
+   "is_training_needed_ar": "ضع حد الوقت في الاعتبار عند ضبط معاملات التدريب.",
+   "is_kaggle_api_needed": "You can use the Kaggle API credentials stored in `kaggle.json` in your current working directory.",
+   "is_kaggle_api_needed_ar": "يمكنك استخدام بيانات اعتماد Kaggle API الموجودة في `kaggle.json` داخل مجلد العمل الحالي."
 }

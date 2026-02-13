@@ -24,9 +24,10 @@ logging.basicConfig(
 
 
 class DevAsk:
-    def __init__(self, workspace: Path, judge_dir: Path):
+    def __init__(self, workspace: Path, judge_dir: Path, language: str = "English"):
         self.workspace = workspace
         self.judge_dir = judge_dir
+        self.language = language
         self.llm = self._initialize_llm()
 
     def _initialize_llm(self) -> LLM:
@@ -60,8 +61,10 @@ class DevAsk:
     def _collect_judgments(
         self, criteria: str, evidence: str, majority_vote: int, llm_stats: dict
     ) -> tuple:
-        system_prompt = get_judge_system_prompt(language="English")
-        prompt = get_judge_prompt(criteria=criteria, evidence=evidence)
+        system_prompt = get_judge_system_prompt(language=self.language)
+        prompt = get_judge_prompt(
+            criteria=criteria, evidence=evidence, language=self.language
+        )
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},
@@ -105,8 +108,10 @@ class DevAsk:
         if not evidence:
             raise ValueError("Evidence must be provided.")
 
-        system_prompt = get_ask_system_prompt(language="English")
-        prompt = get_ask_prompt(evidence=evidence, question=question)
+        system_prompt = get_ask_system_prompt(language=self.language)
+        prompt = get_ask_prompt(
+            evidence=evidence, question=question, language=self.language
+        )
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": prompt},

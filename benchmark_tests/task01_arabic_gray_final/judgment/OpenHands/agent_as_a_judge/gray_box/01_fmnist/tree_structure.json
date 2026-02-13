@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_single_01_ar_clean\\workspaces\\OpenHands\\01_fmnist",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "fashionnet.pt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

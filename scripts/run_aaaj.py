@@ -117,6 +117,13 @@ def parse_arguments():
         type=str,
         help="Path to the trajectory directory, if available",
     )
+    parser.add_argument(
+        "--language",
+        type=str,
+        default="English",
+        choices=["English", "Arabic"],
+        help="Language for prompts and judgments",
+    )
 
     return parser.parse_args()
 
@@ -143,6 +150,7 @@ if __name__ == "__main__":
         exclude_files=args.exclude_files,
         setting=args.setting,
         planning=args.planning,
+        language=args.language,
         judge_dir=judge_dir,
         workspace_dir=workspace_dir,
         instance_dir=instance_dir,
