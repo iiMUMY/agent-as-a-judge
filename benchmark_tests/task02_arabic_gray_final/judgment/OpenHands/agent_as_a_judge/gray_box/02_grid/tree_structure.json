@@ -1,0 +1,19 @@
+{
+    "workspace": "benchmark_tests\\task02_arabic_gray_final\\workspaces\\OpenHands\\02_grid",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "q_learning_model.npy": null
+        },
+        "results": {},
+        "results\\figures": {
+            "learning_curve.png": null,
+            "path_changes.gif": null
+        },
+        "src": {
+            "env.py": null,
+            "train.py": null
+        }
+    }
+}

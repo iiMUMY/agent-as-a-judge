@@ -1,0 +1,71 @@
+{
+    "name": "03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+    "query": "نفّذ مصنّف Naive Bayes في `src/model.py` لبيانات 20 Newsgroups. يجب تحميل البيانات في `src/data_loader.py` مع المعالجة المسبقة (إزالة كلمات الوقف وعلامات الترقيم والرموز الخاصة) واستخدام ميزات TF-IDF. احفظ صور السحابة `results/figures/wordcloud_before.png` و`results/figures/wordcloud_after.png`، واحفظ تقرير الأداء الذي يتضمن precision وrecall وF1-score في `results/metrics/performance.txt`.",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم استخدام بيانات \"20 Newsgroups\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "تمت المعالجة المسبقة للبيانات بما يشمل إزالة كلمات الوقف وعلامات الترقيم والرموز الخاصة، وتم إنشاء سحابتين للكلمات قبل وبعد التدريب وحفظهما في `results/figures/wordcloud_before.png` و`results/figures/wordcloud_after.png`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تم استخدام ميزات \"TF-IDF\" عند تحميل البيانات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "تم تنفيذ \"Naive Bayes classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "تمت طباعة تقرير الأداء وحفظه في `results/metrics/performance.txt` ويتضمن \"precision\" و\"recall\" و\"F1-score\".",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يفضّل أن يكون النموذج سهل التفسير.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يفضّل أن يكون التقرير النهائي واضحا وسهل المراجعة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

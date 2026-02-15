@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\task03_arabic_gray_final\\workspaces\\OpenHands\\03_news",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "wordcloud_after.png": null,
+            "wordcloud_before.png": null
+        },
+        "results\\metrics": {
+            "performance.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

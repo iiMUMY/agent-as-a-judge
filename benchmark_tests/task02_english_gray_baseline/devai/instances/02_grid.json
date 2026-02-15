@@ -1,0 +1,70 @@
+{
+    "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "query": "Build a Gridworld maze solver using Q-learning. Implement the environment in `src/env.py` with configurable grid size and start/end positions, implement Q-learning in `src/train.py`, record episodes and returns, save `results/figures/learning_curve.png`, save `results/figures/path_changes.gif`, and save the model as `models/saved_models/q_learning_model.npy`.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"Q-learning\" algorithm is used in `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "The \"Gridworld\" environment is defined in `src/env.py` with the ability for a user to specify a grid size and start/end positions.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Learning curves are recorded during training, and saved as `results/figures/learning_curve.png`. Episodes and returns are recorded.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "The learned model is saved as `models/saved_models/q_learning_model.npy`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Paths taken during learning are visualized and saved as `results/figures/path_changes.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Some real-time progress or feedback during the training process should be displayed.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The code should be easy to modify or extend later.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "English"
+}

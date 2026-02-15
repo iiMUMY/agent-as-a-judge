@@ -1,0 +1,70 @@
+{
+    "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "query": "أنشئ نظاما لحل مهام Gridworld باستخدام خوارزمية Q-learning. يجب تعريف البيئة في `src/env.py` مع إمكانية تحديد حجم الشبكة ونقطة البداية والنهاية. يجب تنفيذ Q-learning في `src/train.py` وتسجيل الحلقات والعوائد، ثم حفظ `results/figures/learning_curve.png` و`results/figures/path_changes.gif` وحفظ النموذج في `models/saved_models/q_learning_model.npy`.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "تم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية تحديد حجم الشبكة ونقطة البداية والنهاية.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تم تسجيل منحنى التعلم أثناء التدريب وحفظه في `results/figures/learning_curve.png` مع تسجيل الحلقات والعوائد.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "تم حفظ النموذج المتعلم في `models/saved_models/q_learning_model.npy`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تم تصور المسارات أثناء التعلم وحفظها في `results/figures/path_changes.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يفضّل عرض تقدم التدريب بشكل مباشر.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يفضّل أن تكون الشيفرة سهلة التعديل والتوسعة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "step": 1,
+        "user_message": "حمّل بيانات 20 Newsgroups ونفّذ المعالجة المسبقة وميزات TF-IDF.",
+        "language": "Arabic",
+        "agent": {
+            "agent_name": "OpenHands",
+            "action": "تم تعديل src/data_loader.py",
+            "thought": "تم استخدام fetch_20newsgroups مع تنظيف النص وإزالة الرموز واستخدام TfidfVectorizer مع stop words."
+        },
+        "environment": "src/data_loader.py يستخدم 20 Newsgroups ويطبّق TF-IDF والمعالجة المسبقة."
+    },
+    {
+        "step": 2,
+        "user_message": "نفّذ نموذج Naive Bayes في src/model.py.",
+        "language": "Arabic",
+        "agent": {
+            "agent_name": "OpenHands",
+            "action": "تم تعديل src/model.py",
+            "thought": "تم تنفيذ MultinomialNB كمصنّف Naive Bayes."
+        },
+        "environment": "src/model.py يعرّف مصنّف Naive Bayes."
+    },
+    {
+        "step": 3,
+        "user_message": "احفظ سحب الكلمات وتقرير الأداء.",
+        "language": "Arabic",
+        "agent": {
+            "agent_name": "OpenHands",
+            "action": "تم إنشاء المخرجات",
+            "thought": "تم حفظ wordcloud_before وwordcloud_after وتقرير الأداء الذي يتضمن precision وrecall وf1-score."
+        },
+        "environment": "المخرجات محفوظة في results/figures وresults/metrics/performance.txt."
+    }
+]

@@ -1,0 +1,157 @@
+{
+    "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "query": "أنشئ نظاما لحل مهام Gridworld باستخدام خوارزمية Q-learning. يجب تعريف البيئة في `src/env.py` مع إمكانية تحديد حجم الشبكة ونقطة البداية والنهاية. يجب تنفيذ Q-learning في `src/train.py` وتسجيل الحلقات والعوائد، ثم حفظ `results/figures/learning_curve.png` و`results/figures/path_changes.gif` وحفظ النموذج في `models/saved_models/q_learning_model.npy`.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "تم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية تحديد حجم الشبكة ونقطة البداية والنهاية.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تم تسجيل منحنى التعلم أثناء التدريب وحفظه في `results/figures/learning_curve.png` مع تسجيل الحلقات والعوائد.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "تم حفظ النموذج المتعلم في `models/saved_models/q_learning_model.npy`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تم تصور المسارات أثناء التعلم وحفظها في `results/figures/path_changes.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يفضّل عرض تقدم التدريب بشكل مباشر.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يفضّل أن تكون الشيفرة سهلة التعديل والتوسعة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "تم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0031275,
+                "inference_time": 1.1743478775024414,
+                "input_tokens": 1019,
+                "output_tokens": 58,
+                "accumulated_cost": 0.0026875000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم استخدام خوارزمية \"Q-learning\" في `src/train.py` كما هو موضح في محتوى الملف. يتم إنشاء Q-table باستخدام numpy، ويتم تسجيل الحلقات والعوائد، مما يشير إلى تنفيذ خوارزمية Q-learning."
+                ]
+            },
+            "total_time": 8.30900502204895
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "تم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية تحديد حجم الشبكة ونقطة البداية والنهاية.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0034025000000000006,
+                "inference_time": 1.9178249835968018,
+                "input_tokens": 1069,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0058225,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية تحديد حجم الشبكة ونقطة البداية والنهاية. يتضح ذلك من محتوى الملف الذي يظهر أن `GridworldEnv` يحتوي على معاملات `grid_size` و`start_pos` و`end_pos` في دالة `__init__`."
+                ]
+            },
+            "total_time": 6.307821750640869
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "تم تسجيل منحنى التعلم أثناء التدريب وحفظه في `results/figures/learning_curve.png` مع تسجيل الحلقات والعوائد.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031975000000000003,
+                "inference_time": 1.868281364440918,
+                "input_tokens": 935,
+                "output_tokens": 86,
+                "accumulated_cost": 0.008845,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن الخطوة 3 تشير إلى أن منحنى التعلم تم حفظه بنجاح في `results/figures/learning_curve.png`، إلا أن محاولة الوصول إلى محتوى الملف أظهرت خطأ يفيد بعدم وجود الملف. هذا يشير إلى أن الملف المطلوب غير موجود في المسار المحدد، مما يعني أن المتطلب لم يتحقق بالكامل."
+                ]
+            },
+            "total_time": 5.170037269592285
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "تم حفظ النموذج المتعلم في `models/saved_models/q_learning_model.npy`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028650000000000004,
+                "inference_time": 1.016920804977417,
+                "input_tokens": 878,
+                "output_tokens": 67,
+                "accumulated_cost": 0.011195,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: النموذج المتعلم تم حفظه في `models/saved_models/q_learning_model.npy` كما هو موضح في هيكل المشروع. بالإضافة إلى ذلك، لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية الحفظ، مما يشير إلى أن عملية الحفظ تمت بنجاح."
+                ]
+            },
+            "total_time": 3.412010908126831
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "تم تصور المسارات أثناء التعلم وحفظها في `results/figures/path_changes.gif`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032525,
+                "inference_time": 1.8414065837860107,
+                "input_tokens": 961,
+                "output_tokens": 85,
+                "accumulated_cost": 0.0136825,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The content of `path_changes.gif` indicates an error related to an unsupported image format, as shown in the error message. This suggests that the file is not correctly saved or is not in a valid format, contradicting the trajectory evidence that claims successful saving without issues. Therefore, the requirement to visualize and save the paths in `results/figures/path_changes.gif` is not met."
+                ]
+            },
+            "total_time": 4.6726274490356445
+        }
+    ]
+}

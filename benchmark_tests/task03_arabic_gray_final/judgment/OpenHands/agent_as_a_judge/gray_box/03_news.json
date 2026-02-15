@@ -1,0 +1,158 @@
+{
+    "name": "03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+    "query": "نفّذ مصنّف Naive Bayes في `src/model.py` لبيانات 20 Newsgroups. يجب تحميل البيانات في `src/data_loader.py` مع المعالجة المسبقة (إزالة كلمات الوقف وعلامات الترقيم والرموز الخاصة) واستخدام ميزات TF-IDF. احفظ صور السحابة `results/figures/wordcloud_before.png` و`results/figures/wordcloud_after.png`، واحفظ تقرير الأداء الذي يتضمن precision وrecall وF1-score في `results/metrics/performance.txt`.",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم استخدام بيانات \"20 Newsgroups\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "تمت المعالجة المسبقة للبيانات بما يشمل إزالة كلمات الوقف وعلامات الترقيم والرموز الخاصة، وتم إنشاء سحابتين للكلمات قبل وبعد التدريب وحفظهما في `results/figures/wordcloud_before.png` و`results/figures/wordcloud_after.png`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تم استخدام ميزات \"TF-IDF\" عند تحميل البيانات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "تم تنفيذ \"Naive Bayes classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "تمت طباعة تقرير الأداء وحفظه في `results/metrics/performance.txt` ويتضمن \"precision\" و\"recall\" و\"F1-score\".",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يفضّل أن يكون النموذج سهل التفسير.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يفضّل أن يكون التقرير النهائي واضحا وسهل المراجعة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "تم استخدام بيانات \"20 Newsgroups\" في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00298,
+                "inference_time": 1.6895642280578613,
+                "input_tokens": 992,
+                "output_tokens": 50,
+                "accumulated_cost": 0.00238,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم استخدام بيانات \"20 Newsgroups\" في `src/data_loader.py` كما هو موضح في محتوى الملف حيث يتم استيراد البيانات باستخدام `fetch_20newsgroups(subset=\"train\")`."
+                ]
+            },
+            "total_time": 7.499273300170898
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "تمت المعالجة المسبقة للبيانات بما يشمل إزالة كلمات الوقف وعلامات الترقيم والرموز الخاصة، وتم إنشاء سحابتين للكلمات قبل وبعد التدريب وحفظهما في `results/figures/wordcloud_before.png` و`results/figures/wordcloud_after.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.004262500000000001,
+                "inference_time": 2.1784791946411133,
+                "input_tokens": 1189,
+                "output_tokens": 129,
+                "accumulated_cost": 0.0054025,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن المعالجة المسبقة للبيانات قد تمت بنجاح باستخدام TF-IDF كما هو مذكور في تعديل `src/data_loader.py`، إلا أن سحابتين الكلمات المحفوظتين في `results/figures/wordcloud_before.png` و`results/figures/wordcloud_after.png` لا يمكن قراءتهما بسبب خطأ في تنسيق الصورة. الرسالة تشير إلى أن الصور غير مدعومة، مما يعني أن السحابتين لم يتم إنشاؤهما بشكل صحيح أو لم يتم حفظهما بتنسيق مدعوم."
+                ]
+            },
+            "total_time": 7.803143739700317
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "تم استخدام ميزات \"TF-IDF\" عند تحميل البيانات في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0033675000000000003,
+                "inference_time": 1.4404964447021484,
+                "input_tokens": 1031,
+                "output_tokens": 79,
+                "accumulated_cost": 0.0081,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is satisfied as the content of `src/data_loader.py` shows that the `TfidfVectorizer` from `sklearn.feature_extraction.text` is used to process the data. The function `load_data_with_tfidf()` applies TF-IDF features to the cleaned text data, confirming the use of TF-IDF when loading the data."
+                ]
+            },
+            "total_time": 7.13741397857666
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "تم تنفيذ \"Naive Bayes classifier\" في `src/model.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00315,
+                "inference_time": 1.8444011211395264,
+                "input_tokens": 864,
+                "output_tokens": 99,
+                "accumulated_cost": 0.0104775,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ \"Naive Bayes classifier\" في `src/model.py` كما هو موضح في محتوى الملف الذي يظهر استيراد `MultinomialNB` من `sklearn.naive_bayes` وإنشاء دالة `build_model` التي تعيد `MultinomialNB()`. بالإضافة إلى ذلك، لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء تنفيذ النموذج، مما يشير إلى أن التنفيذ تم بنجاح."
+                ]
+            },
+            "total_time": 4.408494710922241
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "تمت طباعة تقرير الأداء وحفظه في `results/metrics/performance.txt` ويتضمن \"precision\" و\"recall\" و\"F1-score\".",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00303,
+                "inference_time": 5.733227491378784,
+                "input_tokens": 888,
+                "output_tokens": 81,
+                "accumulated_cost": 0.01293,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم حفظ تقرير الأداء في `results/metrics/performance.txt` ويتضمن المقاييس المطلوبة \"precision\" و\"recall\" و\"F1-score\" كما هو موضح في محتوى الملف: `('precision: 0.81\\r\\nrecall: 0.79\\r\\nf1-score: 0.80\\r\\n', None)`."
+                ]
+            },
+            "total_time": 8.923532247543335
+        }
+    ]
+}

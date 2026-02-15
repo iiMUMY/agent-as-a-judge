@@ -1,0 +1,157 @@
+{
+    "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "query": "Build a Gridworld maze solver using Q-learning. Implement the environment in `src/env.py` with configurable grid size and start/end positions, implement Q-learning in `src/train.py`, record episodes and returns, save `results/figures/learning_curve.png`, save `results/figures/path_changes.gif`, and save the model as `models/saved_models/q_learning_model.npy`.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"Q-learning\" algorithm is used in `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "The \"Gridworld\" environment is defined in `src/env.py` with the ability for a user to specify a grid size and start/end positions.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Learning curves are recorded during training, and saved as `results/figures/learning_curve.png`. Episodes and returns are recorded.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "The learned model is saved as `models/saved_models/q_learning_model.npy`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Paths taken during learning are visualized and saved as `results/figures/path_changes.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Some real-time progress or feedback during the training process should be displayed.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The code should be easy to modify or extend later.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "English",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"Q-learning\" algorithm is used in `src/train.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0029350000000000005,
+                "inference_time": 2.1693313121795654,
+                "input_tokens": 810,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0027350000000000005,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the \"Q-learning\" algorithm is used in `src/train.py` is satisfied. The trajectory evidence explicitly states that `src/train.py` was edited to implement the Q-learning algorithm, which includes a Q-learning table using numpy. Additionally, the successful generation and saving of the `q_learning_model.npy` artifact further confirm that the Q-learning model was executed and saved without any issues, indicating a functional implementation."
+                ]
+            },
+            "total_time": 10.704708337783813
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "The \"Gridworld\" environment is defined in `src/env.py` with the ability for a user to specify a grid size and start/end positions.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002625,
+                "inference_time": 1.4186577796936035,
+                "input_tokens": 782,
+                "output_tokens": 67,
+                "accumulated_cost": 0.0051400000000000005,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is satisfied as the environment feedback indicates that the `src/env.py` file was successfully edited to define the `GridworldEnv` class with configurable parameters, including grid size, start position, and end position. This suggests that the class implementation allows users to specify these parameters, fulfilling the requirement."
+                ]
+            },
+            "total_time": 5.304157733917236
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Learning curves are recorded during training, and saved as `results/figures/learning_curve.png`. Episodes and returns are recorded.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026625000000000004,
+                "inference_time": 2.053708553314209,
+                "input_tokens": 769,
+                "output_tokens": 74,
+                "accumulated_cost": 0.007505,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is met as the project structure includes a file named `learning_curve.png` located in the `results/figures/` directory, indicating that learning curves were recorded during training. Additionally, the trajectory evidence confirms that this file was successfully saved without any errors, suggesting that episodes and returns were recorded as part of the learning process."
+                ]
+            },
+            "total_time": 4.88864803314209
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "The learned model is saved as `models/saved_models/q_learning_model.npy`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026525000000000003,
+                "inference_time": 1.462214469909668,
+                "input_tokens": 745,
+                "output_tokens": 79,
+                "accumulated_cost": 0.009765,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the learned model is saved as `models/saved_models/q_learning_model.npy` is met. The project structure explicitly lists the file `q_learning_model.npy` under the `models/saved_models` directory. Additionally, the trajectory evidence confirms that the model was successfully saved in the specified directory without any errors or warnings, indicating compliance with the requirement."
+                ]
+            },
+            "total_time": 4.532341003417969
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Paths taken during learning are visualized and saved as `results/figures/path_changes.gif`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027075000000000003,
+                "inference_time": 6.092505693435669,
+                "input_tokens": 747,
+                "output_tokens": 84,
+                "accumulated_cost": 0.0120225,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that paths taken during learning are visualized and saved as `results/figures/path_changes.gif` is met. The project structure confirms the presence of `path_changes.gif` in the `results/figures/` directory. Additionally, the trajectory evidence indicates that the file was successfully generated and saved without any errors or warnings, confirming that the visualization process was completed as required."
+                ]
+            },
+            "total_time": 8.974271059036255
+        }
+    ]
+}
