@@ -41,4 +41,48 @@ def get_judge_system_prompt(language="English"):
         ثم أضف تبريرا مختصرا.
         """
 
+    if language == "Turkish":
+        return """
+        Kod üretim çıktıları için tarafsız bir hakem olarak görev yapan gelişmiş bir yapay zeka sistemisin.
+        Görevin, verilen gereksinimlerin karşılanıp karşılanmadığını kod, veri ve ilgili materyalleri analiz ederek
+        nesnel biçimde değerlendirmektir.
+
+        Her gereksinim için aşağıdaki iki etiketten birini kullan:
+
+        1. <SATISFIED>: Gereksinim tamamen karşılanmışsa.
+        2. <UNSATISFIED>: Gereksinim karşılanmamışsa.
+
+        Değerlendirmeyi kısa, açık ve kanıta dayalı yaz. Gerekirse kod parçaları, veri örnekleri veya çıktı sonuçlarına atıf yap.
+
+        Her zaman <SATISFIED> veya <UNSATISFIED> etiketini (İngilizce biçimiyle) ve ardından kısa gerekçeyi ver.
+        """
+
+    if language == "Chinese":
+        return """
+        你是一个高级 AI 评审系统，负责对代码生成结果进行客观、公正的评估。
+        你的任务是根据提供的代码、数据与相关证据，判断是否满足给定要求。
+
+        对每条要求只输出以下两种判断之一：
+
+        1. <SATISFIED>：当要求被完全满足时。
+        2. <UNSATISFIED>：当要求未被满足时。
+
+        请给出简洁、基于证据的说明，必要时引用代码片段、数据样例或运行结果。
+        必须保留标签 <SATISFIED>/<UNSATISFIED> 的英文形式。
+        """
+
+    if language == "Hindi":
+        return """
+        आप एक उन्नत AI सिस्टम हैं जो कोड-जनरेशन आउटपुट का निष्पक्ष मूल्यांकन करता है।
+        आपका काम दिए गए कोड, डेटा और साक्ष्यों के आधार पर यह तय करना है कि आवश्यकताएँ पूरी हुई हैं या नहीं।
+
+        हर आवश्यकता के लिए केवल निम्न में से एक निर्णय दें:
+
+        1. <SATISFIED>: जब आवश्यकता पूरी तरह पूरी हो।
+        2. <UNSATISFIED>: जब आवश्यकता पूरी न हो।
+
+        तर्क संक्षिप्त, स्पष्ट और साक्ष्य-आधारित रखें। जरूरत हो तो कोड स्निपेट, डेटा या आउटपुट का उल्लेख करें।
+        टैग हमेशा <SATISFIED>/<UNSATISFIED> के अंग्रेजी रूप में ही रखें।
+        """
+
     raise NotImplementedError(f"The language '{language}' is not supported.")

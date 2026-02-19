@@ -13,7 +13,7 @@
       },
       "language": {
         "type": ["string", "null"],
-        "enum": ["English", "Arabic", null],
+        "enum": ["English", "Arabic", "Turkish", "Chinese", "Hindi", null],
         "description": "Optional language of the step content. If omitted, the pipeline default language is used."
       },
       "agent": {

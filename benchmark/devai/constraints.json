@@ -1,8 +1,17 @@
 {
    "generic": "This is a task that requires you to write, execute, and save source code. You have a hard time limit of 30 minutes to produce your programmatic solution to the given task. This time limit includes execution time. The quality of your solution will be judged based on what you left in the working folder by the time 30 minutes expire. Additionally, the hardware you are running on is unknown, and the presence of a GPU is not guaranteed.",
    "generic_ar": "هذه مهمة تتطلب منك كتابة الشيفرة المصدرية وتنفيذها وحفظها. لديك حد زمني صارم قدره 30 دقيقة لإنتاج الحل البرمجي المطلوب، وهذا يشمل وقت التنفيذ. سيتم تقييم جودة الحل بناء على ما تتركه في مجلد العمل عند انتهاء الوقت. كما أن العتاد غير معروف، ولا يوجد ضمان بوجود وحدة معالجة رسومية.",
+   "generic_tr": "Bu görev, kaynak kod yazmayı, çalıştırmayı ve kaydetmeyi gerektirir. Verilen göreve programatik çözüm üretmek için 30 dakikalık katı bir süreniz vardır. Bu süreye çalıştırma süresi de dahildir. Çözümünüzün kalitesi, 30 dakika dolduğunda çalışma klasöründe bıraktıklarınıza göre değerlendirilecektir. Ayrıca kullandığınız donanım bilinmemektedir ve GPU bulunması garanti değildir.",
+   "generic_zh": "此任务要求你编写、执行并保存源代码。你有 30 分钟的硬性时限来完成该任务的程序化解决方案（包含执行时间）。评估将基于你在时间结束时留在工作目录中的结果。此外，运行硬件未知，不保证有 GPU。",
+   "generic_hi": "यह कार्य आपसे स्रोत कोड लिखने, चलाने और सहेजने की अपेक्षा करता है। दिए गए कार्य का प्रोग्रामेटिक समाधान तैयार करने के लिए आपके पास 30 मिनट की सख्त समय-सीमा है, जिसमें execution समय भी शामिल है। समाधान की गुणवत्ता का मूल्यांकन समय समाप्त होने पर कार्य-फ़ोल्डर में उपलब्ध परिणामों के आधार पर किया जाएगा। साथ ही, हार्डवेयर अज्ञात है और GPU की उपलब्धता सुनिश्चित नहीं है।",
    "is_training_needed": "Keep the time limit in mind when setting hyperparameters for training.",
    "is_training_needed_ar": "ضع حد الوقت في الاعتبار عند ضبط معاملات التدريب.",
+   "is_training_needed_tr": "Eğitim hiperparametrelerini ayarlarken süre sınırını göz önünde bulundurun.",
+   "is_training_needed_zh": "设置训练超参数时请考虑时间限制。",
+   "is_training_needed_hi": "ट्रेनिंग के हाइपरपैरामीटर सेट करते समय समय-सीमा को ध्यान में रखें।",
    "is_kaggle_api_needed": "You can use the Kaggle API credentials stored in `kaggle.json` in your current working directory.",
-   "is_kaggle_api_needed_ar": "يمكنك استخدام بيانات اعتماد Kaggle API الموجودة في `kaggle.json` داخل مجلد العمل الحالي."
+   "is_kaggle_api_needed_ar": "يمكنك استخدام بيانات اعتماد Kaggle API الموجودة في `kaggle.json` داخل مجلد العمل الحالي.",
+   "is_kaggle_api_needed_tr": "Geçerli çalışma dizininizdeki `kaggle.json` dosyasında bulunan Kaggle API kimlik bilgilerini kullanabilirsiniz.",
+   "is_kaggle_api_needed_zh": "你可以使用当前工作目录中 `kaggle.json` 文件里的 Kaggle API 凭据。",
+   "is_kaggle_api_needed_hi": "आप वर्तमान कार्य-निर्देशिका में `kaggle.json` में संग्रहीत Kaggle API credentials का उपयोग कर सकते हैं।"
 }

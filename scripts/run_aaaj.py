@@ -121,7 +121,7 @@ def parse_arguments():
         "--language",
         type=str,
         default="English",
-        choices=["English", "Arabic"],
+        choices=["English", "Arabic", "Turkish", "Chinese", "Hindi"],
         help="Language for prompts and judgments",
     )
 
