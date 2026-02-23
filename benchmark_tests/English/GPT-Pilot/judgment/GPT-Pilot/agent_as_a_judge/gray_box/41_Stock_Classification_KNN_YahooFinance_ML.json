@@ -1,0 +1,213 @@
+{
+    "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+    "query": "Develop a stock classification system using a KNN model on the Yahoo Finance dataset. Your implementation should decide if a given stock will increase or decrease in price. Start by loading the dataset and performing feature engineering, including generating technical indicators and selecting the most relevant features in `src/data_loader.py`. Standardize the data to ensure feature values are within the same range in `src/data_loader.py`. Apply the KNN classifier to classify stocks based on the engineered features, and save the implementation in `src/model.py`. Next, save the classification results to `results/classification_results.txt`, and visualize the correlation between the technical indicators and the classification result as a heatmap using seaborn. Save the headmap as `results/figures/feature_correlation_heatmap.png`. Finally, create an interactive Jupyter Notebook under `results/` that explains the process, showcases the classification results, and will help ease future updates that introduce new data.",
+    "tags": [
+        "Classification",
+        "Financial Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"Yahoo Finance\" dataset is used, including data loading and preparation in `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Feature engineering is performed, including generating technical indicators and conducting feature selection in `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Data is standardized to ensure feature values are within the same range in `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "The \"KNN classifier\" is applied to classify stocks based on the engineered features. Please save the implementation in `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "The classification results are saved in `results/classification_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "A heatmap representing the correlations between the technical indicators and the classification results is saved as `results/figures/feature_correlation_heatmap.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "An interactive \"Jupyter Notebook\" is created under `results/` to explain the process and showcase the classification results.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The Jupyter Notebook should include clear explanations of each step, including feature engineering and model evaluation.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The correlation heatmap should highlight the most significant technical indicators and provide insights into their relationships.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "The system should allow easy updates with new data, making the notebook flexible for future analysis.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"Yahoo Finance\" dataset is used, including data loading and preparation in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032325,
+                "inference_time": 2.6511576175689697,
+                "input_tokens": 845,
+                "output_tokens": 112,
+                "accumulated_cost": 0.0026850000000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Yahoo Finance\" dataset should be used, including data loading and preparation in `src/data_loader.py`. However, the file `src/data_loader.py` does not exist in the provided project structure, as indicated by the error message. Additionally, while the trajectory evidence mentions attempts to execute the script, it also highlights issues such as missing data fields and data type mismatches, which suggest incomplete or faulty data handling. Without the existence of the file and proper data handling, the requirement is not met."
+                ]
+            },
+            "total_time": 9.98148226737976
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Feature engineering is performed, including generating technical indicators and conducting feature selection in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029000000000000002,
+                "inference_time": 2.9958112239837646,
+                "input_tokens": 764,
+                "output_tokens": 99,
+                "accumulated_cost": 0.004767500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that feature engineering, including generating technical indicators and conducting feature selection, should be performed in `src/data_loader.py`. However, the provided evidence indicates that the file `src/data_loader.py` does not exist in the specified directory. Although the trajectory evidence suggests that these tasks were executed successfully in previous steps, the absence of the actual file means there is no verifiable code or content to confirm that the feature engineering and selection were implemented as required."
+                ]
+            },
+            "total_time": 7.372444152832031
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Data is standardized to ensure feature values are within the same range in `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028025000000000003,
+                "inference_time": 3.0588138103485107,
+                "input_tokens": 717,
+                "output_tokens": 101,
+                "accumulated_cost": 0.007037500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The evidence provided indicates that the `standardize_data` function in `src/data_loader.py` was executed successfully without errors or warnings, as noted in Step 45. Furthermore, Step 47 confirms that a test was conducted to validate the output of this function, and the results showed that feature values were within the expected range. This suggests that the data standardization process was effective and met the intended criteria, ensuring that feature values are standardized to be within the same range."
+                ]
+            },
+            "total_time": 7.858595371246338
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "The \"KNN classifier\" is applied to classify stocks based on the engineered features. Please save the implementation in `src/model.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027600000000000003,
+                "inference_time": 2.087679862976074,
+                "input_tokens": 704,
+                "output_tokens": 100,
+                "accumulated_cost": 0.0092075,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is satisfied as the evidence indicates that the KNN classifier was implemented and executed within the `src/model.py` file, specifically for classifying stocks based on engineered features. The successful execution without errors or warnings, as noted in Step 47, confirms that the implementation was correctly integrated and functional. Additionally, Step 49 confirms that the `src/model.py` file was saved after modifications, ensuring that the latest implementation of the KNN classifier was stored correctly."
+                ]
+            },
+            "total_time": 6.647785902023315
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "The classification results are saved in `results/classification_results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030350000000000004,
+                "inference_time": 2.295828342437744,
+                "input_tokens": 786,
+                "output_tokens": 107,
+                "accumulated_cost": 0.0114025,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement that the classification results are saved in `results/classification_results.txt` is not met. The key evidence indicates that the file `benchmark_tests\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\41_Stock_Classification\\results\\classification_results.txt` does not exist, as shown by the error message. Despite the trajectory evidence suggesting that the file was saved and accessed successfully, the current state of the project shows that the file is missing, which contradicts the requirement."
+                ]
+            },
+            "total_time": 7.061026334762573
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "A heatmap representing the correlations between the technical indicators and the classification results is saved as `results/figures/feature_correlation_heatmap.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003425,
+                "inference_time": 2.8998923301696777,
+                "input_tokens": 798,
+                "output_tokens": 143,
+                "accumulated_cost": 0.01356,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a heatmap representing the correlations between the technical indicators and the classification results should be saved as `results/figures/feature_correlation_heatmap.png`. However, the provided evidence indicates that this file does not exist, as shown by the error message stating \"Error: File benchmark_tests\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\41_Stock_Classification\\results\\figures\\feature_correlation_heatmap.png does not exist.\" Despite the trajectory evidence suggesting that the file was saved and loaded successfully, the current state of the workspace does not reflect the presence of this file, leading to the conclusion that the requirement is not met."
+                ]
+            },
+            "total_time": 7.381506443023682
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "An interactive \"Jupyter Notebook\" is created under `results/` to explain the process and showcase the classification results.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029775,
+                "inference_time": 1.819303035736084,
+                "input_tokens": 811,
+                "output_tokens": 95,
+                "accumulated_cost": 0.0159025,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an interactive Jupyter Notebook should be created under the `results/` directory to explain the process and showcase the classification results. However, the provided evidence indicates that the file `interactive_notebook.ipynb` does not exist in the specified directory. Although the trajectory evidence suggests that a notebook was executed and updated, the absence of the file in the directory means the requirement is not met as per the current project structure."
+                ]
+            },
+            "total_time": 11.517882108688354
+        }
+    ]
+}

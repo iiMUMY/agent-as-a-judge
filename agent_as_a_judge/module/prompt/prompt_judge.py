@@ -20,7 +20,7 @@ Projeye ilişkin bilgiler:
 Lütfen şu ölçütü değerlendir:
 {criteria}
 
-Yalnızca <SATISFIED> veya <UNSATISFIED> etiketi ve kısa gerekçe döndür.
+Yönergelere göre, <SATISFIED> veya <UNSATISFIED> ifadelerinden birini seçin ve ardından proje bilgilerindeki belirli unsurlara (kod parçacıkları, veri örnekleri veya çıktı sonuçları gibi) atıfta bulunan kısa bir gerekçe sunun.
     """
 
     if language == "Chinese":

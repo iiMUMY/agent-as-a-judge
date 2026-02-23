@@ -1,0 +1,222 @@
+{
+    "name": "36_Music_Emotion_Classification_SVM_GTZAN_ML",
+    "query": "Help me develop a project for music emotion classification using an SVM model with the GTZAN dataset. The project should include audio preprocessing using librosa for noise removal and normalization, MFCC feature extraction with 13 coefficients, and the use of a linear SVM classifier with hyperparameter tuning. The dataset loading, audio preprocessing, including noise removal and normalization, and MFCC feature extraction must be implemented in `src/data_loader.py`. Implement the SVM classifier in `src/model.py`. Save the classification results to `results/predictions.txt`, visualize audio spectrograms with librosa (saving them to `results/figures/`), and create an interactive webpage in `src/app.py` with Streamlit that allows real-time audio file uploads and displays both classification results and spectrograms in `results/figures/`. Ensure efficient resource management with attention to automatically managing the launch and termination of the Streamlit webpage.",
+    "tags": [
+        "Audio Processing",
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"GTZAN\" music emotion loaded in `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Audio preprocessing, including noise removal and normalization, is performed in `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "MFCC feature extraction is implemented in `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "A \"SVM classifier\" is implemented in `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "The classification results are saved in `results/predictions.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Audio spectrograms are visualized with \"librosa\" and saved to `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "An interactive web page is created in `src/app.py` using \"Streamlit\" to display classification results and spectrograms in `results/figures/`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The \"Streamlit\" webpage should allow users to upload new audio files and view the classification results in real-time.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The spectrogram visualizations should include options to adjust the frequency range and time resolution for deeper analysis.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "The system should perform efficient resource management especially on managing the launch and termination of the Streamlit webpage.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"GTZAN\" music emotion loaded in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028125000000000003,
+                "inference_time": 2.1599032878875732,
+                "input_tokens": 785,
+                "output_tokens": 85,
+                "accumulated_cost": 0.0022625,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement to load the \"GTZAN\" music emotion dataset in `src/data_loader.py` is not met because the file `data_loader.py` does not exist in the specified directory. Although the trajectory evidence suggests successful execution and loading of the dataset, the absence of the actual file in the project structure means that the requirement cannot be verified or considered fulfilled based on the provided information."
+                ]
+            },
+            "total_time": 8.723176956176758
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Audio preprocessing, including noise removal and normalization, is performed in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028950000000000004,
+                "inference_time": 2.525438070297241,
+                "input_tokens": 698,
+                "output_tokens": 115,
+                "accumulated_cost": 0.00443,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that audio preprocessing, including noise removal and normalization, should be performed in `src/data_loader.py`. However, the provided trajectory evidence indicates issues with both processes. In Step 47, a warning was logged about unexpected value ranges during audio normalization, suggesting potential inconsistencies in output audio levels. In Step 49, an error was reported due to a missing dependency for the noise removal function, causing the process to halt. These issues indicate that the audio preprocessing pipeline is not functioning as required, thus failing to meet the criteria."
+                ]
+            },
+            "total_time": 8.123672008514404
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "MFCC feature extraction is implemented in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030600000000000002,
+                "inference_time": 3.6196014881134033,
+                "input_tokens": 772,
+                "output_tokens": 113,
+                "accumulated_cost": 0.006615,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement for MFCC feature extraction to be implemented in `src/data_loader.py` is not met. The evidence indicates that the file `src/data_loader.py` does not exist, as shown by the error message stating the file does not exist. Additionally, while the trajectory evidence mentions that MFCC feature extraction was attempted, it does not provide any code or confirm the presence of an implementation in the specified file. Therefore, without the file or its content, it cannot be confirmed that MFCC feature extraction is implemented as required."
+                ]
+            },
+            "total_time": 14.440523862838745
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "A \"SVM classifier\" is implemented in `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029825000000000003,
+                "inference_time": 2.391402006149292,
+                "input_tokens": 785,
+                "output_tokens": 102,
+                "accumulated_cost": 0.008882500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an \"SVM classifier\" should be implemented in `src/model.py`. However, the provided evidence indicates that the file `src/model.py` does not exist in the specified directory. Without the file, it is impossible to verify the implementation of the SVM classifier. Additionally, while the trajectory evidence mentions the execution of `src/model.py`, it does not provide direct evidence of the file's content or existence. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 6.879835844039917
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "The classification results are saved in `results/predictions.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002945,
+                "inference_time": 2.6132631301879883,
+                "input_tokens": 774,
+                "output_tokens": 101,
+                "accumulated_cost": 0.011017500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement that the classification results are saved in `results/predictions.txt` is not met. The key evidence indicates that the file `benchmark_tests\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\36_Music_Emotion_C\\results\\predictions.txt` does not exist, which contradicts the trajectory evidence suggesting the file was successfully saved and accessed. The absence of the file in the provided project structure confirms that the requirement is not satisfied."
+                ]
+            },
+            "total_time": 7.486485004425049
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Audio spectrograms are visualized with \"librosa\" and saved to `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030075,
+                "inference_time": 2.655500888824463,
+                "input_tokens": 783,
+                "output_tokens": 105,
+                "accumulated_cost": 0.013235,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement states that audio spectrograms should be visualized with \"librosa\" and saved to the `results/figures/` directory. However, the provided evidence indicates that the directory `results/figures/` does not exist, as shown by the error message when attempting to access its contents. Despite the trajectory evidence suggesting that the spectrograms were successfully saved, the absence of the directory contradicts this claim, leading to the conclusion that the requirement is not met."
+                ]
+            },
+            "total_time": 6.83027982711792
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "An interactive web page is created in `src/app.py` using \"Streamlit\" to display classification results and spectrograms in `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0034925,
+                "inference_time": 2.653355360031128,
+                "input_tokens": 941,
+                "output_tokens": 114,
+                "accumulated_cost": 0.01591,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an interactive web page should be created in `src/app.py` using Streamlit to display classification results and spectrograms from the `results/figures/` directory. However, the evidence indicates that the file `src/app.py` does not exist, and the `results/figures/` directory is also missing. Additionally, the trajectory evidence highlights issues with missing dependencies and inaccessible image files, which further prevent the successful execution and functionality of the intended web page. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 8.619431018829346
+        }
+    ]
+}

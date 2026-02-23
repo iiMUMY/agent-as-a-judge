@@ -1,0 +1,187 @@
+{
+    "name": "44_Text_Classification_BERT_AGNews_DL",
+    "query": "Hey! Could you help me build a text classification system using a pretrained BERT model on the AG News dataset? Start by loading and preprocessing the data in `src/data_loader.py` (including removing whatever noise you can and performing tokenization). Once that's done, please save the BERT model parameters under `models/saved_models/`. Apply the BERT model and save the classification results to `results/results.txt`. Also, visualize the confusion matrix using seaborn and save it as `results/figures/confusion_matrix.png`. Finally, create an interactive Jupyter Notebook to display the input texts alongside their classification results under `results/`. It would be great if the notebook explained how transfer learning was used and its impact on the model's performance. Likewise, it would be good if your implementation is straightforward to swap out the dataset, including the code to retrain BERT. Thanks a bunch!",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"AG News\" dataset is loaded in `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Data preprocessing is performed in `src/data_loader.py`, including noise removal and tokenization.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "The \"BERT\" model is applied for text classification and the parameters are saved under `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "The classification results are saved as `results/results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "The confusion matrix of classification result is visualized using \"seaborn,\" and saved as `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "An interactive \"Jupyter Notebook\" is created to display input texts and their classification results under `results`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The Jupyter Notebook should explain how transfer learning was applied and its impact on model performance.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The confusion matrix visualization should clearly differentiate between correctly and incorrectly classified samples.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "The system should allow for easy retraining of the \"BERT\" model with new data.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"AG News\" dataset is loaded in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030875,
+                "inference_time": 2.4000110626220703,
+                "input_tokens": 783,
+                "output_tokens": 113,
+                "accumulated_cost": 0.0022900000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement that the \"AG News\" dataset is loaded in `src/data_loader.py` is not met. The evidence indicates that the file `src/data_loader.py` does not exist, as shown by the error message stating \"Error: File benchmark_tests\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\44_Text_Classification\\src\\data_loader.py does not exist.\" Additionally, while the trajectory evidence mentions attempts to execute this file, the absence of the file itself means the dataset cannot be loaded as required."
+                ]
+            },
+            "total_time": 8.167924880981445
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Data preprocessing is performed in `src/data_loader.py`, including noise removal and tokenization.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00296,
+                "inference_time": 2.516244649887085,
+                "input_tokens": 796,
+                "output_tokens": 97,
+                "accumulated_cost": 0.004637500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that data preprocessing, including noise removal and tokenization, should be performed in `src/data_loader.py`. However, the file `src/data_loader.py` does not exist, as indicated by the error message. Although the trajectory evidence mentions the execution of noise removal and tokenization processes, the absence of the actual file means there is no verifiable code to confirm these operations are implemented as required. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 7.174213171005249
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "The \"BERT\" model is applied for text classification and the parameters are saved under `models/saved_models/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029100000000000003,
+                "inference_time": 2.648812770843506,
+                "input_tokens": 796,
+                "output_tokens": 92,
+                "accumulated_cost": 0.006940000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the BERT model should be applied for text classification and the parameters saved under `models/saved_models/`. However, the provided evidence indicates that the directory `models/saved_models/` does not exist, as shown by the error message. Despite the trajectory evidence suggesting successful saving and loading of model parameters, the absence of the directory contradicts the requirement that the parameters are saved in the specified location."
+                ]
+            },
+            "total_time": 8.32426381111145
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "The classification results are saved as `results/results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029075000000000004,
+                "inference_time": 2.4814350605010986,
+                "input_tokens": 763,
+                "output_tokens": 100,
+                "accumulated_cost": 0.009070000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement that the classification results are saved as `results/results.txt` is not met. The evidence indicates that the file `benchmark_tests\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\44_Text_Classification\\results\\results.txt` does not exist, as shown by the error message stating the file does not exist. Despite the trajectory evidence suggesting successful operations, the absence of the file in the workspace structure confirms that the requirement is not fulfilled."
+                ]
+            },
+            "total_time": 6.581798076629639
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "The confusion matrix of classification result is visualized using \"seaborn,\" and saved as `results/figures/confusion_matrix.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028150000000000002,
+                "inference_time": 2.0839834213256836,
+                "input_tokens": 754,
+                "output_tokens": 93,
+                "accumulated_cost": 0.011502500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is met as evidenced by the trajectory steps provided. Step 45 confirms that the confusion matrix was successfully visualized using the \"seaborn\" library, indicating that the visualization process was executed correctly. Step 46 further confirms that the visualization was saved to the specified path `results/figures/confusion_matrix.png` without any errors or warnings, demonstrating that the file path was correctly specified and the file was written successfully."
+                ]
+            },
+            "total_time": 7.704205751419067
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "An interactive \"Jupyter Notebook\" is created to display input texts and their classification results under `results`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00285,
+                "inference_time": 4.0176873207092285,
+                "input_tokens": 708,
+                "output_tokens": 108,
+                "accumulated_cost": 0.013667500000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The provided information does not include any specific details or evidence about the creation of an interactive Jupyter Notebook. While the trajectory evidence mentions that a Jupyter Notebook was executed and updated successfully, there is no direct evidence or description of the notebook's content, structure, or interactivity. The project tree is also empty, providing no additional context or confirmation of the notebook's existence or its interactive features. Therefore, without explicit evidence of the notebook's creation and its interactive elements, the requirement is not fully met."
+                ]
+            },
+            "total_time": 8.067846775054932
+        }
+    ]
+}

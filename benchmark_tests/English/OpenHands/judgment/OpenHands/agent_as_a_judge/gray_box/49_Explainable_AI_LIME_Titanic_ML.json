@@ -1,0 +1,212 @@
+{
+    "name": "49_Explainable_AI_LIME_Titanic_ML",
+    "query": "Hi there! I'm looking to create a project that explains model predictions using LIME, specifically with the Titanic survival prediction dataset. First, load the dataset in `src/data_loader.py`.Then, train a Random Forest classifier and save it under `models/saved_models/`? Finally, use LIME to explain the Random Forest classifier predictions and implement it in `src/visualize.py`. Generate a report including the explanations and save it as `results/model_explanation.md`. The report should be built with either Dash or Bokeh, implemented in `src/report.py`, so users can explore how different features affect the model's predictions. The explanation should be clear and easy to understand for non-tech folks.  Additionally, save a well-labeled intuitive feature importance plot in `results/figures/feature_importance.png`. Thanks!",
+    "tags": [
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"Titanic\" survival prediction dataset is loaded in `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "A \"Random Forest classifier\" is trained for survival prediction.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "\"LIME\" is used for model prediction explanation and implemented in `src/visualize.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "A model prediction explanation report is generated and saved as `results/model_explanation.md`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "A feature importance plot is saved as `results/figures/feature_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                4
+            ],
+            "criteria": "An interactive report showcasing the impact of different features on predictions is created using \"Dash\" or \"Bokeh\" and implemented in `src/report.py`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "The trained model is saved under `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The explanation report should be written in a clear and accessible style, making it understandable even for those without a deep technical background.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The feature importance plot should be visually intuitive, with clear labels and descriptions.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"Titanic\" survival prediction dataset is loaded in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002795,
+                "inference_time": 2.5106396675109863,
+                "input_tokens": 722,
+                "output_tokens": 99,
+                "accumulated_cost": 0.0023450000000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The provided information indicates that the file `src/data_loader.py` was executed to load the \"Titanic\" survival prediction dataset, as mentioned in Step 45 of the trajectory evidence. However, there is no explicit confirmation or evidence provided that the dataset was successfully loaded into the system. The information only mentions a warning about missing values and a note on the need for data preprocessing. Without explicit confirmation of successful data loading, the requirement cannot be considered fully satisfied."
+                ]
+            },
+            "total_time": 10.248112201690674
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "A \"Random Forest classifier\" is trained for survival prediction.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0024725000000000003,
+                "inference_time": 1.699193000793457,
+                "input_tokens": 701,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0045275,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The provided information indicates that a Random Forest classifier model was trained and saved successfully, with satisfactory performance metrics logged. However, there is no explicit mention or evidence that the model was specifically trained for \"survival prediction.\" The requirement is not fully met as the task-specific criterion of survival prediction is not confirmed in the provided evidence."
+                ]
+            },
+            "total_time": 8.577505826950073
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"LIME\" is used for model prediction explanation and implemented in `src/visualize.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030900000000000003,
+                "inference_time": 2.089561939239502,
+                "input_tokens": 812,
+                "output_tokens": 106,
+                "accumulated_cost": 0.00702,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that LIME should be used for model prediction explanation and implemented in `src/visualize.py`. However, the evidence indicates that the file `src/visualize.py` does not exist, as shown by the error message stating the file does not exist. Additionally, while there are references to the execution of `src/visualize.py` in the trajectory evidence, the absence of the file itself means that the implementation cannot be verified. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 7.899030685424805
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "A model prediction explanation report is generated and saved as `results/model_explanation.md`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00289,
+                "inference_time": 1.6173503398895264,
+                "input_tokens": 732,
+                "output_tokens": 106,
+                "accumulated_cost": 0.008915,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a model prediction explanation report should be generated and saved as `results/model_explanation.md`. However, the provided evidence indicates that the file `benchmark_tests\\English\\OpenHands\\full55_english_run\\workspaces\\OpenHands\\results\\model_explanation.md` does not exist. Despite the trajectory evidence suggesting that the file was generated and accessible, the current state of the project structure shows that the file is missing. This discrepancy means the requirement is not met."
+                ]
+            },
+            "total_time": 4.603487968444824
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "A feature importance plot is saved as `results/figures/feature_importance.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00317,
+                "inference_time": 1.8902802467346191,
+                "input_tokens": 760,
+                "output_tokens": 127,
+                "accumulated_cost": 0.0109625,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is for a feature importance plot to be saved as `results/figures/feature_importance.png`. However, the provided evidence indicates that the file does not exist at the specified path, as shown by the error message: \"Error: File benchmark_tests\\English\\OpenHands\\full55_english_run\\workspaces\\OpenHands\\results\\figures\\feature_importance.png does not exist.\" Despite the trajectory evidence suggesting that the plot was generated and saved successfully, the current state of the workspace does not reflect this, leading to the conclusion that the requirement is not met."
+                ]
+            },
+            "total_time": 5.521004676818848
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "An interactive report showcasing the impact of different features on predictions is created using \"Dash\" or \"Bokeh\" and implemented in `src/report.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029025,
+                "inference_time": 1.7911362648010254,
+                "input_tokens": 757,
+                "output_tokens": 101,
+                "accumulated_cost": 0.013000000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an interactive report should be created using \"Dash\" or \"Bokeh\" and implemented in `src/report.py`. However, the provided evidence indicates that the file `src/report.py` does not exist in the specified directory, as shown by the error message. Although the trajectory evidence suggests that the script was executed successfully, the absence of the file in the project structure means that the requirement for the implementation in `src/report.py` is not met."
+                ]
+            },
+            "total_time": 5.950942516326904
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "The trained model is saved under `models/saved_models/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028325,
+                "inference_time": 2.6597347259521484,
+                "input_tokens": 717,
+                "output_tokens": 104,
+                "accumulated_cost": 0.014865000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is for the trained model to be saved under `models/saved_models/`. However, the provided evidence indicates that the directory `benchmark_tests\\English\\OpenHands\\full55_english_run\\workspaces\\OpenHands\\models\\saved_models` does not exist, as shown by the error message. Despite the trajectory evidence suggesting that the model was saved and loaded successfully, the absence of the directory contradicts this, leading to the conclusion that the requirement is not met."
+                ]
+            },
+            "total_time": 6.510925769805908
+        }
+    ]
+}

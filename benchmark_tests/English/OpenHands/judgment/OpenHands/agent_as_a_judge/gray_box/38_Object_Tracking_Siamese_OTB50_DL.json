@@ -1,0 +1,240 @@
+{
+    "name": "38_Object_Tracking_Siamese_OTB50_DL",
+    "query": "I need to create a system for object tracking using a Siamese network and the OTB50 dataset. The OTB50 dataset should be loaded in `src/data_loader.py`. The system should include data augmentation steps such as rotation and scaling, performed in `src/data_loader.py`. Implement the Siamese network in `src/model.py`.  Hyperparameters, such as learning rate and batch size, should be tuned in `src/train.py`. The tracking results should be saved as `results/tracking_results.txt`. Visualize the tracking results with OpenCV and save tracking videos under `results/videos/`. Additionally, create a comprehensive Markdown report that includes details of data preprocessing, model training, and evaluation process and save it as `results/object_tracking_report.md`. Ensure that the system can process new video sequences with minimal adjustments for flexible application. The Markdown report should include a section analyzing the impact of different hyperparameters on the tracking performance.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"OTB50\" dataset is loaded in `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Data augmentation, such as rotation and scaling, is performed in `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "A \"Siamese\"network is implemented in `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Hyperparameters, such as learning rate and batch size, are tuned in `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "The tracking results are saved as `results/tracking_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Tracking results are visualized with OpenCV and saved to `results/videos/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "A detailed Markdown document containing data preprocessing, model training, and evaluation processes is created and saved as `results/object_tracking_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                6
+            ],
+            "criteria": "The Markdown report should include a section analyzing the impact of different hyperparameters on tracking performance.",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The tracking videos should be saved in high resolution and include annotations that highlight the tracked object.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Ensure the system is capable of processing new video sequences with minimal modification, allowing for flexible use cases.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"OTB50\" dataset is loaded in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026475000000000005,
+                "inference_time": 2.659339427947998,
+                "input_tokens": 711,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0022925000000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The evidence indicates that the \"OTB50\" dataset is not successfully loaded in `src/data_loader.py`. There are two main issues: a warning about missing or not found data files, which affects the dataset's completeness, and an error due to a deprecated function call that needs updating for compatibility and proper functionality. These issues prevent the successful loading and processing of the \"OTB50\" dataset."
+                ]
+            },
+            "total_time": 10.251018524169922
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Data augmentation, such as rotation and scaling, is performed in `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030125,
+                "inference_time": 2.979024887084961,
+                "input_tokens": 805,
+                "output_tokens": 100,
+                "accumulated_cost": 0.00474,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that data augmentation, including rotation and scaling, should be performed in `src/data_loader.py`. However, the evidence indicates that the file `data_loader.py` does not exist in the specified path, as shown by the error message. Although the trajectory evidence mentions steps involving data augmentation, these references are not supported by the actual presence of the file in the project structure. Therefore, the requirement is not met due to the absence of the necessary file."
+                ]
+            },
+            "total_time": 8.758386850357056
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "A \"Siamese\"network is implemented in `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031275,
+                "inference_time": 2.7440671920776367,
+                "input_tokens": 735,
+                "output_tokens": 129,
+                "accumulated_cost": 0.007180000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The evidence provided indicates that the \"Siamese\" network implementation in `src/model.py` was executed and tested, but there were issues affecting its functionality. Specifically, a warning about potential convergence issues due to suboptimal parameter initialization was logged, and a critical error related to a missing dependency for a specific layer halted further execution. These issues suggest that while there is an attempt to implement a \"Siamese\" network, the implementation is not fully functional or complete, as it cannot run successfully in its current state. Therefore, the requirement for a working \"Siamese\" network implementation is not met."
+                ]
+            },
+            "total_time": 7.457626104354858
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Hyperparameters, such as learning rate and batch size, are tuned in `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029325,
+                "inference_time": 2.30892014503479,
+                "input_tokens": 797,
+                "output_tokens": 94,
+                "accumulated_cost": 0.009600000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that hyperparameters, such as learning rate and batch size, should be tuned in `src/train.py`. However, the file `src/train.py` does not exist in the provided project structure, as indicated by the error message. Although the trajectory evidence mentions steps where hyperparameters were adjusted, without the actual file or its content, there is no concrete evidence to confirm that the tuning was implemented in `src/train.py`."
+                ]
+            },
+            "total_time": 7.343079566955566
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "The tracking results are saved as `results/tracking_results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030600000000000002,
+                "inference_time": 2.512495994567871,
+                "input_tokens": 776,
+                "output_tokens": 112,
+                "accumulated_cost": 0.011835000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement that the tracking results are saved as `results/tracking_results.txt` is not met. The key evidence indicates that the file `benchmark_tests\\English\\OpenHands\\full55_english_run\\workspaces\\OpenHands\\results\\tracking_results.txt` does not exist, as shown by the error message stating the file does not exist. Despite the trajectory evidence suggesting successful operations in previous steps, the current state of the workspace does not contain the required file, which is a critical deficiency in meeting the requirement."
+                ]
+            },
+            "total_time": 6.743175268173218
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Tracking results are visualized with OpenCV and saved to `results/videos/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030075,
+                "inference_time": 2.5729873180389404,
+                "input_tokens": 795,
+                "output_tokens": 102,
+                "accumulated_cost": 0.014177500000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that tracking results should be visualized with OpenCV and saved to `results/videos/`. However, the evidence indicates that the directory `benchmark_tests\\English\\OpenHands\\full55_english_run\\workspaces\\OpenHands\\results\\videos` does not exist. This contradicts the trajectory evidence that suggests the files were saved successfully. The absence of the directory or files means the requirement to save the tracking results to the specified path is not met."
+                ]
+            },
+            "total_time": 7.4168782234191895
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "A detailed Markdown document containing data preprocessing, model training, and evaluation processes is created and saved as `results/object_tracking_report.md`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032775,
+                "inference_time": 2.09030818939209,
+                "input_tokens": 779,
+                "output_tokens": 133,
+                "accumulated_cost": 0.016375000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a detailed Markdown document containing data preprocessing, model training, and evaluation processes should be created and saved as `results/object_tracking_report.md`. However, the provided evidence indicates that this file does not exist, as shown by the error message: \"Error: File benchmark_tests\\English\\OpenHands\\full55_english_run\\workspaces\\OpenHands\\results\\object_tracking_report.md does not exist.\" Despite the trajectory evidence suggesting that the file was successfully created and accessed, the current state of the project structure does not reflect the presence of this file, leading to the conclusion that the requirement is not met."
+                ]
+            },
+            "total_time": 8.377633571624756
+        },
+        {
+            "requirement_index": 7,
+            "criteria": "The Markdown report should include a section analyzing the impact of different hyperparameters on tracking performance.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026525000000000003,
+                "inference_time": 2.225468397140503,
+                "input_tokens": 705,
+                "output_tokens": 89,
+                "accumulated_cost": 0.018592500000000005,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The Markdown report does include a section analyzing the impact of different hyperparameters on tracking performance, as indicated by the execution of the script in Step 47. However, the analysis is incomplete due to missing hyperparameter values, which affects the comprehensiveness of the report. Additionally, the formatting issues noted in Step 49 could impact the readability of this section. These deficiencies prevent the requirement from being fully satisfied."
+                ]
+            },
+            "total_time": 7.006441354751587
+        }
+    ]
+}

@@ -19,7 +19,7 @@ Proje/senaryo ile ilgili bilgiler:
 Kullanıcı sorusu:
 {question}
 
-Gerekli yerlerde kanıta referans vererek net bir yanıt ver.
+Yönergelere uygun olarak, verilen bilgilerden uygun olan belirli unsurlara atıfta bulunarak kapsamlı bir yanıt verin.
     """
 
     if language == "Chinese":
