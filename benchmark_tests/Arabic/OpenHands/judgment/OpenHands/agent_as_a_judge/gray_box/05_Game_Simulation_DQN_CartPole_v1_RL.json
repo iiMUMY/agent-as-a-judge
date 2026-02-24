@@ -1,0 +1,156 @@
+{
+    "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+    "query": "إنشاء نظام موثوق لتدريب وكيل DQN باستخدام PyTorch في بيئة OpenAI Gym مثل CartPole-v1. تنفيذ DQN باستخدام PyTorch في `src/model.py`. يجب إنشاء البيئة في الملف الرئيسي، `src/main.py`. التعامل مع أي عدم تطابق في الأبعاد بين DQN والبيئة (كما يحدث إذا تم تغيير معرف بيئة Gym) عن طريق تسجيل خطأ. أيضًا، يرجى تسجيل العائد بعد كل حلقة في `results/metrics/` وتحديثه بعد انتهاء كل حلقة جديدة. حفظ منحنى العائد النهائي على مدار الحلقات كـ `results/figures/return_over_time.png` والنموذج المدرب النهائي كـ `models/saved_models/dqn_model.pt`. إذا كان ذلك ممكنًا، أضف تعليقات توضيحية إلى منحنى العائد على مدار الحلقات لإبراز المعالم الرئيسية.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية \"DQN\" باستخدام PyTorch وحفظها في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم إنشاء بيئة \"OpenAI Gym\" في `src/main.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم رسم منحنى العائد بمرور الوقت، مع تسجيل العائد لكل حلقة، وحفظه كـ `results/figures/reward_over_time.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/dqn_model.pt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تسجيل العائد لكل حلقة في `results/metrics/` وتحديثه بعد انتهاء كل حلقة.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتعامل النظام مع عدم تطابق الأبعاد، وتسجيل المشكلات لتسهيل تصحيح الأخطاء.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يحتوي منحنى العائد على مدار الحلقات على تعليقات توضيحية للمعالم الرئيسية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تنفيذ خوارزمية \"DQN\" باستخدام PyTorch وحفظها في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00287,
+                "inference_time": 1.6238031387329102,
+                "input_tokens": 820,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0022075000000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن الملف `src/model.py` غير موجود في المسار المحدد، مما يعني أنه لا يمكن تنفيذ خوارزمية \"DQN\" أو حفظها في هذا الملف. على الرغم من أن خطوات المسار تشير إلى تحميل وحفظ ناجح، إلا أن عدم وجود الملف فعليًا يتعارض مع هذا الادعاء."
+                ]
+            },
+            "total_time": 9.417217493057251
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم إنشاء بيئة \"OpenAI Gym\" في `src/main.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027,
+                "inference_time": 1.7657763957977295,
+                "input_tokens": 788,
+                "output_tokens": 73,
+                "accumulated_cost": 0.004197500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد إنشاء بيئة \"OpenAI Gym\" في `src/main.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو تأكيد إنشاء البيئة بشكل مباشر."
+                ]
+            },
+            "total_time": 6.890904664993286
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم رسم منحنى العائد بمرور الوقت، مع تسجيل العائد لكل حلقة، وحفظه كـ `results/figures/reward_over_time.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028125,
+                "inference_time": 1.7326908111572266,
+                "input_tokens": 725,
+                "output_tokens": 100,
+                "accumulated_cost": 0.006157500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن محاولة حفظ الرسم البياني للعائد بمرور الوقت فشلت في البداية بسبب عدم وجود الدليل `results/figures/`. على الرغم من أنه تم إنشاء الدليل لاحقًا وتم حفظ الرسم البياني بنجاح، إلا أنه لا يوجد دليل واضح على أن العائد تم تسجيله لكل حلقة كما هو مطلوب. لا توجد معلومات كافية لتأكيد أن جميع المتطلبات قد تم تحقيقها بالكامل."
+                ]
+            },
+            "total_time": 5.805652379989624
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/dqn_model.pt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027500000000000003,
+                "inference_time": 1.9377012252807617,
+                "input_tokens": 764,
+                "output_tokens": 84,
+                "accumulated_cost": 0.007835000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `benchmark_tests\\Arabic\\OpenHands\\workspaces\\OpenHands\\05_Game_Simulation_.../models/saved_models/dqn_model.pt` غير موجود. على الرغم من أن خطوات المسار تشير إلى أن النموذج تم حفظه بنجاح، إلا أن عدم وجود الملف فعليًا يعني أن المتطلب لم يتحقق."
+                ]
+            },
+            "total_time": 6.749203205108643
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تسجيل العائد لكل حلقة في `results/metrics/` وتحديثه بعد انتهاء كل حلقة.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002305,
+                "inference_time": 1.1768078804016113,
+                "input_tokens": 690,
+                "output_tokens": 58,
+                "accumulated_cost": 0.009565000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تسجيل العائد لكل حلقة في `results/metrics/` بنجاح، ولم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية التسجيل، مما يشير إلى أن عملية التحديث تمت بنجاح بعد انتهاء كل حلقة."
+                ]
+            },
+            "total_time": 5.788599729537964
+        }
+    ]
+}

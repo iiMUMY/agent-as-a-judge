@@ -1,0 +1,213 @@
+{
+    "name": "43_Social_Network_Analysis_GCN_Cora_ML",
+    "query": "مرحبًا! هل يمكنك مساعدتي في إنشاء نظام لتحليل الشبكات الاجتماعية باستخدام نموذج GCN مع مجموعة بيانات شبكة الاقتباسات Cora؟ أولاً، دعنا نقم بتحميل ومعالجة مجموعة البيانات، بما في ذلك التطبيع وإزالة الضوضاء، في `src/data_loader.py`. ثم، قم بتطبيق نموذج GCN لتصنيف العقد وضبط معلمات الضبط مثل معدل التعلم وحجم الطبقة المخفية للحصول على أفضل النتائج في `src/train.py`. احفظ النموذج تحت `models/saved_models/`. بمجرد الانتهاء من ذلك، يرجى حفظ أداء تصنيف العقد في `results/metrics/node_classification_results.txt`. قم بتصور هيكل شبكة الاقتباسات واحفظه كـ `results/figures/citation_network_visualization.png`. أخيرًا، قم بإنشاء رسم بياني تفاعلي للشبكة باستخدام إما D3.js أو Bokeh لعرض نتائج تصنيف العقد وتصور الشبكة في `results/figures/`. سيكون من الرائع أيضًا إذا كان بإمكان تنفيذك السماح للمبرمج بتبديل مجموعات بيانات الاقتباسات الأخرى بسهولة. شكرًا جزيلاً على مساعدتك!",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Cora citation network\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك التطبيع وإزالة الضوضاء، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم ضبط المعاملات الفائقة مثل معدل التعلم وحجم الطبقة المخفية لتحسين النموذج في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ النموذج تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ أداء تصنيف العقد في `results/metrics/node_classification_results.txt`.",
+            "category": "Performence Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تصور هيكل شبكة الاستشهادات وحفظه كـ `results/figures/citation_network_visualization.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء رسم بياني تفاعلي للشبكة باستخدام \"D3.js\" أو \"Bokeh\" لعرض نتائج تصنيف العقد وتصور الشبكة في `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يسمح الرسم البياني التفاعلي للشبكة للمستخدمين باستكشاف العقد الفردية وتصنيفاتها بشكل ديناميكي.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يوضح تصور شبكة الاقتباسات الفرق بوضوح بين فئات العقد والعلاقات المختلفة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب تصميم النظام للتعامل مع مجموعات بيانات الاقتباسات الإضافية مع تعديلات طفيفة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة البيانات \"Cora citation network\" في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0023875000000000003,
+                "inference_time": 1.1764686107635498,
+                "input_tokens": 731,
+                "output_tokens": 56,
+                "accumulated_cost": 0.002075,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحميل مجموعة البيانات \"Cora citation network\" بنجاح في `src/data_loader.py`، كما يتضح من الخطوة الأخيرة في مسار التنفيذ حيث لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية التحميل."
+                ]
+            },
+            "total_time": 8.325498342514038
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك التطبيع وإزالة الضوضاء، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027050000000000004,
+                "inference_time": 1.7352683544158936,
+                "input_tokens": 766,
+                "output_tokens": 79,
+                "accumulated_cost": 0.0043825,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يتم تنفيذ معالجة البيانات المسبقة بشكل صحيح في `src/data_loader.py`، حيث تم تسجيل تحذير بشأن القيم المفقودة التي قد تؤثر على دقة التطبيع، بالإضافة إلى خطأ في إزالة الضوضاء بسبب عدم توافق الأبعاد. هذه المشاكل تشير إلى أن معالجة البيانات المسبقة ليست مكتملة أو فعالة."
+                ]
+            },
+            "total_time": 6.652758836746216
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم ضبط المعاملات الفائقة مثل معدل التعلم وحجم الطبقة المخفية لتحسين النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029050000000000005,
+                "inference_time": 1.6805129051208496,
+                "input_tokens": 870,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0069050000000000005,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تقييم ضبط المعاملات الفائقة مثل معدل التعلم وحجم الطبقة المخفية في `src/train.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. لا يوجد دليل على أن هذه المعاملات قد تم ضبطها بالفعل في الكود، ولا يمكن التحقق من تنفيذها أو تحسينها."
+                ]
+            },
+            "total_time": 8.281103610992432
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ النموذج تحت `models/saved_models/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002445,
+                "inference_time": 1.2527456283569336,
+                "input_tokens": 726,
+                "output_tokens": 63,
+                "accumulated_cost": 0.0089675,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار حيث تشير الأدلة المقدمة إلى أن النموذج تم حفظه بنجاح في المسار `models/saved_models/` دون أي أخطاء أو تحذيرات، كما تم تحميل النموذج من نفس المسار لاختبار الأداء بنجاح."
+                ]
+            },
+            "total_time": 7.068683862686157
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ أداء تصنيف العقد في `results/metrics/node_classification_results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002975,
+                "inference_time": 2.662087917327881,
+                "input_tokens": 810,
+                "output_tokens": 95,
+                "accumulated_cost": 0.0113225,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل مباشر على أن الملف `results/metrics/node_classification_results.txt` تم إنشاؤه بنجاح أو يحتوي على بيانات، حيث أن محاولة الوصول إلى محتواه أظهرت خطأ يشير إلى عدم وجود الملف. على الرغم من أن الدليل `results/metrics/` تم إنشاؤه لاحقًا، إلا أنه لا يوجد تأكيد على أن الملف المطلوب تم حفظه بنجاح."
+                ]
+            },
+            "total_time": 8.628345251083374
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تصور هيكل شبكة الاستشهادات وحفظه كـ `results/figures/citation_network_visualization.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027025,
+                "inference_time": 1.9506065845489502,
+                "input_tokens": 805,
+                "output_tokens": 69,
+                "accumulated_cost": 0.01312,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن خطوات التنفيذ تشير إلى أن ملف `citation_network_visualization.png` تم إنشاؤه وحفظه بنجاح، إلا أن محاولة الوصول إلى الملف تشير إلى أنه غير موجود. هذا يتعارض مع المعيار الذي يتطلب أن يتم حفظ التصور كملف موجود."
+                ]
+            },
+            "total_time": 6.412062644958496
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء رسم بياني تفاعلي للشبكة باستخدام \"D3.js\" أو \"Bokeh\" لعرض نتائج تصنيف العقد وتصور الشبكة في `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00317,
+                "inference_time": 2.203989267349243,
+                "input_tokens": 824,
+                "output_tokens": 111,
+                "accumulated_cost": 0.0158025,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن المعلومات تشير إلى أن الرسم البياني تم إنشاؤه وحفظه بنجاح باستخدام \"Bokeh\" في `results/figures/`، إلا أنه لا يوجد دليل واضح على أن الرسم البياني يعرض نتائج تصنيف العقد وتصور الشبكة كما هو مطلوب. بالإضافة إلى ذلك، لا يوجد دليل على أن الرسم البياني التفاعلي تم إنشاؤه باستخدام \"D3.js\" أو أن أي من المكتبتين تم استخدامهما لتحقيق المتطلبات المحددة بالكامل."
+                ]
+            },
+            "total_time": 9.196563482284546
+        }
+    ]
+}

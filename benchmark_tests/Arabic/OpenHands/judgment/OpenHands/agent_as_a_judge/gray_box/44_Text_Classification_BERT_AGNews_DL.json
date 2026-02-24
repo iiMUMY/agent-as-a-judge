@@ -1,0 +1,188 @@
+{
+    "name": "44_Text_Classification_BERT_AGNews_DL",
+    "query": "مرحبًا! هل يمكنك مساعدتي في بناء نظام تصنيف نصوص باستخدام نموذج BERT المدرب مسبقًا على مجموعة بيانات AG News؟ ابدأ بتحميل ومعالجة البيانات في `src/data_loader.py` (بما في ذلك إزالة أي ضوضاء يمكنك وإجراء عملية الترميز). بمجرد الانتهاء من ذلك، يرجى حفظ معلمات نموذج BERT تحت `models/saved_models/`. قم بتطبيق نموذج BERT واحفظ نتائج التصنيف في `results/results.txt`. أيضًا، قم بتصور مصفوفة الالتباس باستخدام seaborn واحفظها كـ `results/figures/confusion_matrix.png`. أخيرًا، قم بإنشاء دفتر Jupyter تفاعلي لعرض النصوص المدخلة جنبًا إلى جنب مع نتائج التصنيف تحت `results/`. سيكون من الرائع إذا شرح الدفتر كيف تم استخدام التعلم بالنقل وتأثيره على أداء النموذج. وبالمثل، سيكون من الجيد إذا كانت طريقتك في التنفيذ تسهل استبدال مجموعة البيانات، بما في ذلك الكود لإعادة تدريب BERT. شكرًا جزيلاً!",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"AG News\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك إزالة الضوضاء والتقطيع.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تطبيق نموذج \"BERT\" لتصنيف النصوص ويتم حفظ المعلمات تحت `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ نتائج التصنيف كـ `results/results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تصور مصفوفة الالتباس لنتيجة التصنيف باستخدام \"seaborn\"، ويتم حفظها كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "يتم إنشاء \"Jupyter Notebook\" تفاعلي لعرض النصوص المدخلة ونتائج تصنيفها تحت `results`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يشرح دفتر Jupyter كيف تم تطبيق التعلم بالنقل وتأثيره على أداء النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تميز مصفوفة الالتباس بوضوح بين العينات المصنفة بشكل صحيح وغير صحيح.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يسمح النظام بإعادة تدريب نموذج \"BERT\" بسهولة باستخدام بيانات جديدة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة البيانات \"AG News\" في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024625000000000003,
+                "inference_time": 1.3753159046173096,
+                "input_tokens": 725,
+                "output_tokens": 65,
+                "accumulated_cost": 0.00206,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحميل مجموعة البيانات \"AG News\" بنجاح باستخدام `src/data_loader.py`، كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية التحميل، مما يشير إلى أن المتطلب قد تحقق بالكامل."
+                ]
+            },
+            "total_time": 7.813670873641968
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك إزالة الضوضاء والتقطيع.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0023075,
+                "inference_time": 1.004122018814087,
+                "input_tokens": 703,
+                "output_tokens": 55,
+                "accumulated_cost": 0.0039275000000000004,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ `src/data_loader.py` بنجاح، حيث تم الإبلاغ عن إزالة الضوضاء والتقطيع دون أي أخطاء أو تحذيرات، مما يشير إلى أن معالجة البيانات المسبقة قد تمت كما هو مطلوب."
+                ]
+            },
+            "total_time": 4.270395517349243
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تطبيق نموذج \"BERT\" لتصنيف النصوص ويتم حفظ المعلمات تحت `models/saved_models/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002745,
+                "inference_time": 1.3566172122955322,
+                "input_tokens": 786,
+                "output_tokens": 78,
+                "accumulated_cost": 0.006280000000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is satisfied as the evidence indicates that during the execution of the BERT model for text classification, the model parameters were successfully saved to the directory `models/saved_models/`. The environment feedback confirmed a successful save operation with no errors or warnings, and the subsequent successful load operation for evaluation purposes further confirms that the parameters were stored correctly and are usable."
+                ]
+            },
+            "total_time": 8.129412412643433
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ نتائج التصنيف كـ `results/results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0024925,
+                "inference_time": 1.9386019706726074,
+                "input_tokens": 721,
+                "output_tokens": 69,
+                "accumulated_cost": 0.0078125,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `results/results.txt` غير موجود، حيث يظهر خطأ يفيد بعدم وجود الملف. على الرغم من أن الخطوات المرجعية تشير إلى أن الحفظ تم بنجاح، إلا أن عدم وجود الملف فعليًا يتعارض مع هذا الادعاء."
+                ]
+            },
+            "total_time": 5.59013032913208
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور مصفوفة الالتباس لنتيجة التصنيف باستخدام \"seaborn\"، ويتم حفظها كـ `results/figures/confusion_matrix.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025650000000000004,
+                "inference_time": 1.3136262893676758,
+                "input_tokens": 730,
+                "output_tokens": 74,
+                "accumulated_cost": 0.0098125,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار المحدد حيث تم استخدام مكتبة \"seaborn\" لتصور مصفوفة الالتباس، وتم حفظ النتيجة بنجاح في المسار `results/figures/confusion_matrix.png` دون أي أخطاء أو تحذيرات، مما يشير إلى أن العملية تمت بسلاسة."
+                ]
+            },
+            "total_time": 5.4341206550598145
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء \"Jupyter Notebook\" تفاعلي لعرض النصوص المدخلة ونتائج تصنيفها تحت `results`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024725000000000003,
+                "inference_time": 2.2956361770629883,
+                "input_tokens": 741,
+                "output_tokens": 62,
+                "accumulated_cost": 0.0119425,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The evidence from the trajectory indicates that the \"Jupyter Notebook\" was successfully executed, with input texts being loaded and classified, and results displayed under `results`. There were no errors or warnings reported, suggesting that the interactive notebook functions as intended for displaying input texts and classification results."
+                ]
+            },
+            "total_time": 7.432774305343628
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+    "query": "قم بإعداد مشروع للتنبؤ بمرض السكري باستخدام نموذج الانحدار اللوجستي ومجموعة بيانات Pima Indians Diabetes. قم بإجراء تحجيم الميزات وتوحيد البيانات في `src/data_loader.py`. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`، واحفظ درجة الدقة في `results/metrics/accuracy_score.txt`. قم بإنشاء وحفظ منحنى ROC في `results/figures/roc_curve.png`. أنشئ لوحة معلومات تفاعلية باستخدام Tableau أو Power BI لعرض أداء النموذج وتسليط الضوء على الميزات المهمة. تأكد من أن لوحة المعلومات سهلة الاستخدام ووثق خطوات معالجة مجموعة البيانات وإنشاء التصورات. أثناء التطوير، يجب على النظام إدارة فتح وإغلاق Tableau أو Power BI تلقائيًا لمنع الحجب غير الضروري.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Pima Indians Diabetes\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ مقياس الميزات وتوحيد البيانات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تنفيذ نموذج \"Logistic Regression\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ درجة الدقة في `results/metrics/accuracy_score.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء منحنى ROC وحفظه كـ `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء لوحة تحكم تفاعلية باستخدام \"Tableau\" أو \"Power BI\" لعرض أداء النموذج والميزات المهمة.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تسمح لوحة المعلومات للمستخدمين باستكشاف الجوانب المختلفة لأداء النموذج وفهم الميزات التي تساهم بشكل أكبر في التنبؤات.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن توضح لوحة المعلومات بوضوح كيفية معالجة مجموعة البيانات وكيفية إنشاء التصورات.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "أثناء التطوير، يجب على النظام فتح وإغلاق \"Tableau\" أو \"Power BI\" تلقائيًا حسب الحاجة لتجنب فترات طويلة من الحجب أو الخمول.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

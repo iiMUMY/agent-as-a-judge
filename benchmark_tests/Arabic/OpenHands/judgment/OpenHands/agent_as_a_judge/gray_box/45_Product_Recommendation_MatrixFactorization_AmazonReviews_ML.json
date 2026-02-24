@@ -1,0 +1,192 @@
+{
+    "name": "45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
+    "query": "هل يمكنك مساعدتي في إعداد نظام توصية للمنتجات باستخدام خوارزمية تحليل المصفوفة مع مجموعة فرعية من الإلكترونيات من مجموعة بيانات مراجعات أمازون 2023؟ يجب عليك التعامل مع تحميل البيانات وجميع معالجة البيانات المسبقة، بما في ذلك إزالة الضوضاء والتطبيع في `src/data_loader.py`. قم بتطبيق نموذج العوامل الكامنة لحساب تفاعلات المستخدم-المنتج واحفظ التنفيذ في `src/model.py`. اطبع واحفظ نتائج التوصية في `results/recommendation_results.txt`. ثم قم بتصور هذه التوصيات باستخدام مكتبة Plotly واحفظ التصور كـ `results/figures/recommendation_visualization.html`. أخيرًا، قم بإنشاء تقرير تحليل يغطي معالجة البيانات المسبقة، وتدريب النموذج، والنتائج، ويجب حفظه كـ `results/recommendation_report.md`.",
+    "tags": [
+        "Recommender Systems"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل الجزء \"Electronics\" من مجموعة البيانات \"Amazon Reviews 2023\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك إزالة الضوضاء والتطبيع في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ \"نموذج العوامل الكامنة\" لحساب تفاعلات المستخدم-العنصر في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التوصية كـ `results/recommendation_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم تصور نتائج التوصية باستخدام \"Plotly\" وحفظها كـ `results/figures/recommendation_visualization.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير تحليل يحتوي على معالجة البيانات المسبقة، وتدريب النموذج، ونتائج التوصية وحفظه كـ `results/recommendation_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب مناقشة تأثير خطوات المعالجة المسبقة المختلفة على دقة التوصية في تقرير التحليل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التصور تفاعليًا، مما يسمح للمستخدمين باستكشاف نتائج التوصية لمنتجات مختلفة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب تصميم النظام لدمج بيانات سلوك المستخدم الإضافية أو ميزات المنتج بسهولة للتحسينات المستقبلية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل الجزء \"Electronics\" من مجموعة البيانات \"Amazon Reviews 2023\" في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00254,
+                "inference_time": 1.3468923568725586,
+                "input_tokens": 764,
+                "output_tokens": 63,
+                "accumulated_cost": 0.0023225,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحميل الجزء \"Electronics\" من مجموعة البيانات \"Amazon Reviews 2023\" بنجاح باستخدام `src/data_loader.py`، حيث لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن تحميل البيانات تم بنجاح."
+                ]
+            },
+            "total_time": 8.488751649856567
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك إزالة الضوضاء والتطبيع في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00269,
+                "inference_time": 1.570906400680542,
+                "input_tokens": 800,
+                "output_tokens": 69,
+                "accumulated_cost": 0.0043774999999999994,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد تنفيذ معالجة البيانات المسبقة في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو وظيفته."
+                ]
+            },
+            "total_time": 5.201040983200073
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ \"نموذج العوامل الكامنة\" لحساب تفاعلات المستخدم-العنصر في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031625000000000004,
+                "inference_time": 2.1032423973083496,
+                "input_tokens": 825,
+                "output_tokens": 110,
+                "accumulated_cost": 0.007129999999999999,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: تنفيذ \"نموذج العوامل الكامنة\" لحساب تفاعلات المستخدم-العنصر في `src/model.py` غير محقق بشكل كامل. الأدلة تشير إلى وجود خطأ في الأبعاد بين المصفوفات المستخدمة في النموذج، مما يؤدي إلى فشل التنفيذ. بالإضافة إلى ذلك، هناك تحذير بشأن عدم تهيئة بعض المعلمات بشكل صحيح، مما قد يؤثر على أداء النموذج. هذه المشاكل تشير إلى أن النموذج لم يتم تنفيذه بشكل صحيح."
+                ]
+            },
+            "total_time": 9.026928901672363
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ نتائج التوصية كـ `results/recommendation_results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026825000000000004,
+                "inference_time": 3.808206081390381,
+                "input_tokens": 745,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0093225,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا بالكامل لأن هناك مشكلة في حفظ نتائج التوصية في `results/recommendation_results.txt` بسبب عدم وجود إذن للكتابة في الدليل المحدد. على الرغم من أن النتائج تم تحميلها بنجاح في وقت سابق، إلا أن المشكلة الحالية تشير إلى أن النتائج لا يمكن حفظها بشكل صحيح في الوقت الحالي."
+                ]
+            },
+            "total_time": 9.811825513839722
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور نتائج التوصية باستخدام \"Plotly\" وحفظها كـ `results/figures/recommendation_visualization.html`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002865,
+                "inference_time": 2.6089107990264893,
+                "input_tokens": 898,
+                "output_tokens": 62,
+                "accumulated_cost": 0.012015,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن الملف `recommendation_visualization.html` غير موجود في المسار المحدد. تشير الأدلة إلى وجود خطأ أثناء محاولة تحميل الملف، مما يدل على أن عملية الحفظ لم تتم بنجاح أو أن المسار المستخدم غير صحيح."
+                ]
+            },
+            "total_time": 7.545793056488037
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء تقرير تحليل يحتوي على معالجة البيانات المسبقة، وتدريب النموذج، ونتائج التوصية وحفظه كـ `results/recommendation_report.md`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027125000000000005,
+                "inference_time": 1.927445650100708,
+                "input_tokens": 745,
+                "output_tokens": 85,
+                "accumulated_cost": 0.013989999999999999,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم إنشاء تقرير التحليل وحفظه كـ `results/recommendation_report.md` بنجاح. تشير الأدلة إلى أن عملية إنشاء التقرير وحفظه تمت بدون أي أخطاء أو تحذيرات، مما يدل على أن معالجة البيانات المسبقة، وتدريب النموذج، ونتائج التوصية قد تمت معالجتها بشكل صحيح وتم تضمينها في التقرير."
+                ]
+            },
+            "total_time": 7.349839210510254
+        }
+    ]
+}

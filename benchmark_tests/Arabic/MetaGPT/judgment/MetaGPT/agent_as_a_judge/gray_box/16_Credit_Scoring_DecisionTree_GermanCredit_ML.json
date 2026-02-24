@@ -1,0 +1,218 @@
+{
+    "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+    "query": "ساعدني في تطوير نظام لتوقع درجات الائتمان باستخدام مجموعة بيانات الائتمان الألمانية، والتي يمكن تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data). قم بتحميل مجموعة البيانات ومعالجتها مسبقًا، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات، في `src/data_loader.py`. استخدم مصنف شجرة القرار المطبق في `src/model.py` مع التحقق المتقاطع لتقييم النموذج في `src/train.py`. قم بتصور أهمية الميزات في `results/figures/feature_importances.png`. قم بإنشاء تقرير تصنيف، بما في ذلك الدقة والاسترجاع ودرجة F1، واحفظه في `results/metrics/classification_report.txt`. أنشئ تقريرًا بتنسيق Markdown مع النتائج والتصورات واحفظه في `results/report.md`. يجب أن يتم تحميل مجموعة البيانات بسلاسة مع معالجة الأخطاء بشكل صحيح، ويجب أن يكون تقرير Markdown منظمًا بشكل جيد لسهولة المراجعة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تحميل مجموعة البيانات \"German Credit\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) في ملف `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ مصنف \"Decision Tree\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور أهمية الميزات في `results/figures/feature_importances.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء تقرير تصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\"، وحفظه كـ `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة، مع معالجة واضحة للأخطاء إذا ظهرت أي مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون تقرير Markdown منظمًا بشكل جيد، مما يسهل مراجعة جميع النتائج والتصورات.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "تحميل مجموعة البيانات \"German Credit\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) في ملف `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027525,
+                "inference_time": 1.6153295040130615,
+                "input_tokens": 837,
+                "output_tokens": 66,
+                "accumulated_cost": 0.0021275,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل على وجود الملف `src/data_loader.py` في بنية المشروع، حيث تم الإبلاغ عن عدم وجوده. بالإضافة إلى ذلك، لا يوجد دليل مباشر على أن تحميل مجموعة البيانات \"German Credit\" يتم في هذا الملف، حيث أن محتوى الملف غير متاح للتحقق."
+                ]
+            },
+            "total_time": 11.88616681098938
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0035900000000000003,
+                "inference_time": 2.882002592086792,
+                "input_tokens": 876,
+                "output_tokens": 140,
+                "accumulated_cost": 0.004655,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار معالجة البيانات المسبقة في `src/data_loader.py` قد تم تنفيذها بشكل كامل. أولاً، الملف `src/data_loader.py` غير موجود، مما يعني عدم وجود دليل على تنفيذ معالجة البيانات المسبقة. ثانياً، تشير الأدلة المرجعية إلى وجود تحذير بشأن القيم المفقودة في العمود 'age'، حيث يتم استخدام القيمة الافتراضية 0، وهو ما قد لا يكون مناسبًا لجميع الحالات. بالإضافة إلى ذلك، هناك خطأ في ترميز العمود 'gender' بسبب وجود قيم غير معروفة، مما يشير إلى أن ترميز الميزات لم يتم التعامل معه بشكل صحيح."
+                ]
+            },
+            "total_time": 8.01920223236084
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ مصنف \"Decision Tree\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029100000000000003,
+                "inference_time": 2.273839235305786,
+                "input_tokens": 832,
+                "output_tokens": 83,
+                "accumulated_cost": 0.006922500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار مصنف \"Decision Tree\" منفذا في `src/model.py` لأن الملف المذكور غير موجود، كما هو موضح في الدليل الذي يشير إلى خطأ في محاولة الوصول إلى الملف. بالإضافة إلى ذلك، تم تسجيل تحذير بشأن عدم تطابق الأبعاد وخطأ في حفظ النموذج، مما يشير إلى مشاكل في تنفيذ النموذج."
+                ]
+            },
+            "total_time": 8.592698812484741
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028775000000000003,
+                "inference_time": 2.166163682937622,
+                "input_tokens": 835,
+                "output_tokens": 79,
+                "accumulated_cost": 0.0091675,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py` لأن الملف غير موجود فعليًا وفقًا للمعلومات المقدمة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو تأكيد استخدام التحقق المتقاطع."
+                ]
+            },
+            "total_time": 8.063854217529297
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور أهمية الميزات في `results/figures/feature_importances.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0024950000000000003,
+                "inference_time": 2.6568305492401123,
+                "input_tokens": 718,
+                "output_tokens": 70,
+                "accumulated_cost": 0.010762500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الملف `results/figures/feature_importances.png` غير موجود، كما هو موضح في رسالة الخطأ التي تشير إلى عدم وجود الملف. على الرغم من أن الخطوات ذات الصلة تشير إلى تحميل الملف بنجاح، إلا أن الأدلة الحالية لا تدعم وجود الملف أو تصور أهمية الميزات."
+                ]
+            },
+            "total_time": 6.304593801498413
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء تقرير تصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\"، وحفظه كـ `results/metrics/classification_report.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030075,
+                "inference_time": 2.8966288566589355,
+                "input_tokens": 847,
+                "output_tokens": 89,
+                "accumulated_cost": 0.012965,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم إنشاء تقرير التصنيف وحفظه كـ `results/metrics/classification_report.txt`. الدليل يشير إلى أن محاولة حفظ التقرير فشلت بسبب عدم وجود الدليل `results/metrics/`. على الرغم من أن حساب \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" تم بنجاح، إلا أن التقرير لم يتم حفظه بسبب هذا الخطأ."
+                ]
+            },
+            "total_time": 7.2596142292022705
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003,
+                "inference_time": 2.6153173446655273,
+                "input_tokens": 820,
+                "output_tokens": 95,
+                "accumulated_cost": 0.015095,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md` بنجاح. الدليل يشير إلى أن الملف `results/report.md` غير موجود، مما يعني أن عملية الحفظ لم تكتمل كما هو مطلوب. على الرغم من أن الدليل `results` تم إنشاؤه لاحقًا، إلا أنه لا يوجد دليل على أن الملف تم حفظه بنجاح بعد ذلك."
+                ]
+            },
+            "total_time": 7.790409088134766
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "name": "43_Social_Network_Analysis_GCN_Cora_ML",
+    "query": "مرحبًا! هل يمكنك مساعدتي في إنشاء نظام لتحليل الشبكات الاجتماعية باستخدام نموذج GCN مع مجموعة بيانات شبكة الاقتباسات Cora؟ أولاً، دعنا نقم بتحميل ومعالجة مجموعة البيانات، بما في ذلك التطبيع وإزالة الضوضاء، في `src/data_loader.py`. ثم، قم بتطبيق نموذج GCN لتصنيف العقد وضبط معلمات الضبط مثل معدل التعلم وحجم الطبقة المخفية للحصول على أفضل النتائج في `src/train.py`. احفظ النموذج تحت `models/saved_models/`. بمجرد الانتهاء من ذلك، يرجى حفظ أداء تصنيف العقد في `results/metrics/node_classification_results.txt`. قم بتصور هيكل شبكة الاقتباسات واحفظه كـ `results/figures/citation_network_visualization.png`. أخيرًا، قم بإنشاء رسم بياني تفاعلي للشبكة باستخدام إما D3.js أو Bokeh لعرض نتائج تصنيف العقد وتصور الشبكة في `results/figures/`. سيكون من الرائع أيضًا إذا كان بإمكان تنفيذك السماح للمبرمج بتبديل مجموعات بيانات الاقتباسات الأخرى بسهولة. شكرًا جزيلاً على مساعدتك!",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Cora citation network\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك التطبيع وإزالة الضوضاء، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم ضبط المعاملات الفائقة مثل معدل التعلم وحجم الطبقة المخفية لتحسين النموذج في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ النموذج تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ أداء تصنيف العقد في `results/metrics/node_classification_results.txt`.",
+            "category": "Performence Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تصور هيكل شبكة الاستشهادات وحفظه كـ `results/figures/citation_network_visualization.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء رسم بياني تفاعلي للشبكة باستخدام \"D3.js\" أو \"Bokeh\" لعرض نتائج تصنيف العقد وتصور الشبكة في `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يسمح الرسم البياني التفاعلي للشبكة للمستخدمين باستكشاف العقد الفردية وتصنيفاتها بشكل ديناميكي.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يوضح تصور شبكة الاقتباسات الفرق بوضوح بين فئات العقد والعلاقات المختلفة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب تصميم النظام للتعامل مع مجموعات بيانات الاقتباسات الإضافية مع تعديلات طفيفة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

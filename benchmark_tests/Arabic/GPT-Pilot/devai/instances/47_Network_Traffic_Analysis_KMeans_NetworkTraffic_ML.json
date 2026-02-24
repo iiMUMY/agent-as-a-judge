@@ -1,0 +1,91 @@
+{
+    "name": "47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+    "query": "تطوير نظام لتحليل حركة مرور الشبكة باستخدام خوارزمية التجميع K-means مع مجموعة بيانات التطفل على الشبكة (CIC-IDS-2017) من Kaggle. قم بتحميل مجموعة البيانات وتوحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`. قم بتنفيذ خوارزمية التجميع K-means في `src/model.py`. قم بتقييم المجموعات باستخدام معامل السيلويت واحفظ نتائج التقييم تحت `results/metrics/`. احفظ نتائج التجميع كـ `results/clustering_results.txt`. قم بتصور نتائج التجميع واحفظ المرئيات كـ `results/figures/network_traffic_visualization.png`. قم بإنشاء لوحة تحكم تفاعلية باستخدام Dash أو Bokeh لاستكشاف نتائج التجميع، واحفظ لوحة التحكم تحت `results/`. تأكد من أن النظام معياري بحيث يمكن للمستخدم تغيير خوارزمية التجميع بسرعة.",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Network Intrusion dataset (CIC-IDS-2017)\" من Kaggle يتم تحميله في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية التجميع \"K-means\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام \"معامل السيلويت\" للتقييم. يتم حفظ نتائج التقييم تحت `results/metrics/`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم طباعة نتائج التجميع وحفظها كـ `results/clustering_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم تصور تجميع حركة المرور الشبكية وحفظه كـ `results/figures/network_traffic_visualization.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم إنشاء لوحة تحكم تفاعلية باستخدام \"Dash\" أو \"Bokeh\" لعرض نتائج التجميع وحفظها تحت `results/`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تسمح لوحة التحكم للمستخدمين بتصفية والتعمق في مجموعات محددة لتحليل مفصل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تميز المرئيات بوضوح بين المجموعات المختلفة، مما يسهل التعرف على الأنماط في بيانات حركة مرور الشبكة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يكون المشروع معياريًا، مما يسمح للمستخدم بتغيير خوارزمية التجميع بسهولة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

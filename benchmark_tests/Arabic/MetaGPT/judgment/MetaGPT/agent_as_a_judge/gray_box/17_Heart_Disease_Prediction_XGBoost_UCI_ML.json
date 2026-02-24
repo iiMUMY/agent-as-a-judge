@@ -1,0 +1,269 @@
+{
+    "name": "17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+    "query": "إنشاء مشروع للتنبؤ بأمراض القلب باستخدام نموذج XGBoost مع مجموعة بيانات UCI Heart Disease، والتي يمكن تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). قم بتحميل مجموعة البيانات في `src/data_loader.py`. نفذ اختيار الميزات وتوحيد البيانات في `src/data_loader.py`. استخدم قيم SHAP لشرح أهمية الميزات، واحفظ النتائج كـ `results/figures/shap_importance.png`. نفذ نموذج XGBoost في `src/model.py`. ثم استخدم قيم SHAP لشرح أهمية الميزات، واحفظ النتائج كـ `results/shap_importance.png`. احفظ منحنى ROC في `results/figures/roc_curve.png`. أخيرًا، قم بإنشاء تقرير HTML يحتوي على جميع النتائج والتصورات، واحفظه كـ `results/report.html`. تأكد من أن تصورات SHAP تبرز بوضوح الميزات الأكثر تأثيرًا. قم بتضمين مقارنة الأداء مع نموذج آخر، مثل الانحدار اللوجستي، للتحقق من قوة نموذج XGBoost. احفظ نموذج XGBoost تحت `models/saved_models/`.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"UCI Heart Disease\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ توحيد البيانات الذي يضمن أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"XGBoost\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "تُستخدم قيم \"SHAP\" لشرح أهمية الميزات، ويتم حفظ النتائج كـ `results/figures/shap_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ منحنى ROC كـ `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء تقرير HTML يحتوي على النتائج والمرئيات، ويتم حفظه كـ `results/report.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تضمين مقارنة الأداء مع نموذج آخر (مثل الانحدار اللوجستي) للتحقق من متانة نموذج XGBoost.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 8,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نموذج XGBoost تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون تصورات SHAP واضحة وتبرز الميزات الأكثر تأثيرًا، مما يجعل النتائج سهلة الفهم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"UCI Heart Disease\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028825000000000005,
+                "inference_time": 2.1786608695983887,
+                "input_tokens": 861,
+                "output_tokens": 73,
+                "accumulated_cost": 0.00228,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل يشير إلى أن الملف `src/data_loader.py` غير موجود، مما يعني أنه لا يمكن تحميل مجموعة البيانات باستخدام هذا الملف كما هو مطلوب. على الرغم من أن الخطوات السابقة تشير إلى أن البيانات تم تحميلها بنجاح، إلا أن عدم وجود الملف المطلوب يعني أن المعيار لم يتحقق بالكامل."
+                ]
+            },
+            "total_time": 8.785505771636963
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ اختيار الميزات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00251,
+                "inference_time": 1.7971971035003662,
+                "input_tokens": 740,
+                "output_tokens": 66,
+                "accumulated_cost": 0.0038525,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من تنفيذ اختيار الميزات فيه."
+                ]
+            },
+            "total_time": 5.390063047409058
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ توحيد البيانات الذي يضمن أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028575,
+                "inference_time": 1.975736141204834,
+                "input_tokens": 843,
+                "output_tokens": 75,
+                "accumulated_cost": 0.0061675,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد تنفيذ توحيد البيانات في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من الكود الفعلي أو التأكد من تنفيذ التوحيد."
+                ]
+            },
+            "total_time": 8.179240942001343
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ نموذج \"XGBoost\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0025425,
+                "inference_time": 1.556445837020874,
+                "input_tokens": 757,
+                "output_tokens": 65,
+                "accumulated_cost": 0.008355000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا توجد أدلة محددة في المعلومات المتاحة تشير إلى تنفيذ نموذج \"XGBoost\" في `src/model.py`. المعلومات المقدمة تتعلق بتحذير حول المعلمة `max_depth` وخطأ في حفظ النموذج، ولكنها لا تؤكد نوع النموذج المستخدم."
+                ]
+            },
+            "total_time": 7.163936376571655
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "تُستخدم قيم \"SHAP\" لشرح أهمية الميزات، ويتم حفظ النتائج كـ `results/figures/shap_importance.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027075000000000003,
+                "inference_time": 2.4320573806762695,
+                "input_tokens": 775,
+                "output_tokens": 77,
+                "accumulated_cost": 0.010670000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار المحدد حيث تم حفظ نتائج \"SHAP\" كملف `results/figures/shap_importance.png` بنجاح بعد إنشاء الدليل المطلوب. تشير الأدلة إلى أنه لم يتم تسجيل أي أخطاء أو تحذيرات أخرى بعد معالجة المشكلة الأولية، مما يدل على أن العملية تمت بنجاح."
+                ]
+            },
+            "total_time": 9.30948543548584
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ منحنى ROC كـ `results/figures/roc_curve.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024325,
+                "inference_time": 1.3272974491119385,
+                "input_tokens": 733,
+                "output_tokens": 60,
+                "accumulated_cost": 0.012755000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم حفظ منحنى ROC بنجاح كـ `results/figures/roc_curve.png` بعد إنشاء الدليل المطلوب. الدليل على ذلك هو الخطوة اللاحقة في مسار العمل التي تشير إلى عدم وجود مشاكل إضافية بعد إنشاء الدليل."
+                ]
+            },
+            "total_time": 5.6080076694488525
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء تقرير HTML يحتوي على النتائج والمرئيات، ويتم حفظه كـ `results/report.html`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00266,
+                "inference_time": 2.1521339416503906,
+                "input_tokens": 740,
+                "output_tokens": 81,
+                "accumulated_cost": 0.014822500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن هناك خطأ مسجل يشير إلى أن المسار `results/report.html` غير موجود أو لا يمكن الوصول إليه، مما يعني أن التقرير لم يتم حفظه بنجاح. بالإضافة إلى ذلك، هناك تحذير حول عدم توافق بعض المرئيات مع تنسيق HTML، مما قد يؤثر على جودة العرض النهائي للتقرير."
+                ]
+            },
+            "total_time": 6.500796318054199
+        },
+        {
+            "requirement_index": 7,
+            "criteria": "يتم تضمين مقارنة الأداء مع نموذج آخر (مثل الانحدار اللوجستي) للتحقق من متانة نموذج XGBoost.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025875000000000004,
+                "inference_time": 2.4583654403686523,
+                "input_tokens": 759,
+                "output_tokens": 69,
+                "accumulated_cost": 0.017042500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تضمين مقارنة الأداء مع نموذج الانحدار اللوجستي كما هو موضح في ملف `logistic_regression_comparison.py`. تم تنفيذ الملف بنجاح دون أخطاء، وتم حفظ نتائج المقارنة في ملف `performance_metrics.csv`، مما يشير إلى أن مقارنة الأداء قد تمت بشكل صحيح."
+                ]
+            },
+            "total_time": 7.697191476821899
+        },
+        {
+            "requirement_index": 8,
+            "criteria": "يتم حفظ نموذج XGBoost تحت `models/saved_models/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00238,
+                "inference_time": 1.5909640789031982,
+                "input_tokens": 748,
+                "output_tokens": 51,
+                "accumulated_cost": 0.019250000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار حيث تشير الأدلة إلى أنه بعد تعديل أذونات الدليل، تم حفظ نموذج XGBoost بنجاح في `models/saved_models/` كما تم تسجيل رسالة نجاح تؤكد ذلك."
+                ]
+            },
+            "total_time": 6.750542402267456
+        }
+    ]
+}

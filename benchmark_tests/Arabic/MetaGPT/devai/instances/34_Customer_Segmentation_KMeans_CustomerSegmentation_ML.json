@@ -1,0 +1,89 @@
+{
+    "name": "34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+    "query": "أحتاج إلى إنشاء نظام لتجزئة العملاء باستخدام خوارزمية التجميع K-means مع مجموعة بيانات تجزئة العملاء من Kaggle. ابدأ بتوحيد البيانات في `src/data_loader.py`، ثم استخدم طريقة الكوع لتحديد العدد الأمثل من المجموعات واحفظ مخطط الكوع في `results/figures/elbow.jpg`. نفذ خوارزمية K-means في `src/model.py`. احفظ مراكز المجموعات في `results/metrics/cluster_centers.txt`. قم بتصور نتائج التجزئة باستخدام seaborn واحفظ المخطط كـ `results/figures/customer_segmentation.png`. أنشئ لوحة تحكم تفاعلية باستخدام Dash تتيح استكشاف الديناميكي للمجموعات.",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Kaggle Customer Segmentation\"، بما في ذلك تحميل البيانات وتحضيرها في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم استخدام طريقة الكوع لتحديد العدد الأمثل من المجموعات. يرجى حفظ مخطط الكوع في `results/figures/elbow.jpg`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية التجميع K-means في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ مراكز المجموعات في `results/metrics/cluster_centers.txt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم تصور تقسيم العملاء باستخدام \"seaborn\"، مع حفظ المخطط كـ `results/figures/customer_segmentation.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء لوحة تحكم تفاعلية تسمح بالاستكشاف الديناميكي للفئات باستخدام \"Dash\".",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يوضح مخطط الكوع بوضوح كيفية تحديد العدد الأمثل من المجموعات.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": " النظام يدير بشكل صحيح إطلاق وإنهاء لوحة التحكم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

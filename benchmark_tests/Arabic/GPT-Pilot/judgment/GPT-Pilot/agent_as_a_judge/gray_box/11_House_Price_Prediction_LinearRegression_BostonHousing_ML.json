@@ -1,0 +1,190 @@
+{
+    "name": "11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+    "query": "مرحبًا. قم بإعداد مشروع لتوقع أسعار المنازل باستخدام نموذج الانحدار الخطي على مجموعة بيانات Boston Housing. قم بتحميل مجموعة البيانات باستخدام `from datasets import load_dataset` و `ds = load_dataset(\"~/mrseba/boston_house_price\")` في `src/data_loader.py`. تأكد من إجراء مقياس الميزات وتوحيد البيانات في `src/data_loader.py`. قم بتنفيذ نموذج الانحدار الخطي في `src/model.py`. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`. اطبع خطأ المربعات المتوسطة (MSE)، وخطأ القيمة المطلقة المتوسطة (MAE)، ودرجة $R^2$، واحفظها تحت `results/metrics/metrics.txt`. قم بتصور المقارنة بين القيم المتوقعة والفعلية واحفظ النتيجة كـ `results/figures/prediction_vs_actual.png`. يجب أن توضح التصورات بوضوح دقة النموذج (والتي، إذا تم تنفيذها بشكل صحيح، يجب أن تكون جيدة).",
+    "tags": [
+        "Financial Analysis",
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Boston Housing\" باستخدام `from datasets import load_dataset` و `ds = load_dataset(\"mrseba/boston_house_price\")` في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ مقياس الميزات وتوحيد البيانات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"Linear Regression\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام \"Cross-validation\" لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة \"Mean Squared Error (MSE)\", \"Mean Absolute Error (MAE)\", و \"R^2 score\"، وحفظها كـ `results/metrics/metrics.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور مقارنة القيم المتوقعة مقابل الفعلية وحفظها كـ `results/figures/prediction_vs_actual.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة باستخدام كود `load_dataset` المقدم، ويجب تجربة طرق أخرى إذا ظهرت مشاكل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن توضح التصورات بوضوح دقة النموذج من خلال تسليط الضوء على الفروقات بين القيم المتوقعة والفعلية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "hint": "`ds = load_dataset(\"~/mrseba/boston_house_price\")` in the query is wrong, and it should be `ds = load_dataset(\"mrseba/boston_house_price\")`. We leave it here to check the self-debugging skill of the agents.",
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Boston Housing\" باستخدام `from datasets import load_dataset` و `ds = load_dataset(\"mrseba/boston_house_price\")` في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028750000000000004,
+                "inference_time": 1.8277771472930908,
+                "input_tokens": 862,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0023,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is not satisfied because the file `src/data_loader.py` does not exist, as indicated by the error message. Therefore, the code `from datasets import load_dataset` and `ds = load_dataset(\"mrseba/boston_house_price\")` cannot be verified to be present or used in the specified file."
+                ]
+            },
+            "total_time": 9.715377569198608
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ مقياس الميزات وتوحيد البيانات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030925,
+                "inference_time": 2.336622476577759,
+                "input_tokens": 829,
+                "output_tokens": 102,
+                "accumulated_cost": 0.0044975,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المقدمة. بالإضافة إلى ذلك، تم تسجيل تحذير حول عدم تطابق الأبعاد أثناء عملية توحيد البيانات، مما يشير إلى أن توحيد البيانات لم يتم بشكل صحيح. كما تم تسجيل خطأ في مقياس الميزات بسبب وجود قيم مفقودة، مما يعني أن تنفيذ مقياس الميزات لم يكن ناجحًا."
+                ]
+            },
+            "total_time": 6.461116552352905
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ نموذج \"Linear Regression\" في `src/model.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025475000000000003,
+                "inference_time": 2.0228023529052734,
+                "input_tokens": 731,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0064725,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ نموذج \"Linear Regression\" في `src/model.py` بنجاح. الدليل على ذلك هو الخطوة 48 في مسار التنفيذ، حيث تم تأكيد أن الملف `src/model.py` تم تنفيذه بنجاح بعد حل مشكلة الاعتماديات، وتم تدريب النموذج بدون أخطاء إضافية."
+                ]
+            },
+            "total_time": 6.247012615203857
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام \"Cross-validation\" لتقييم النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002785,
+                "inference_time": 1.366142749786377,
+                "input_tokens": 822,
+                "output_tokens": 73,
+                "accumulated_cost": 0.008625,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد استخدام \"Cross-validation\" لتقييم النموذج في `src/train.py` لأن الملف غير موجود وفقًا للمعلومات المتاحة. على الرغم من أن خطوات المسار تشير إلى أن \"Cross-validation\" قد تم استخدامه، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من ذلك بشكل مباشر."
+                ]
+            },
+            "total_time": 7.785686016082764
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم طباعة \"Mean Squared Error (MSE)\", \"Mean Absolute Error (MAE)\", و \"R^2 score\"، وحفظها كـ `results/metrics/metrics.txt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002725,
+                "inference_time": 1.134103775024414,
+                "input_tokens": 754,
+                "output_tokens": 84,
+                "accumulated_cost": 0.010727500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم حساب \"Mean Squared Error (MSE)\" و\"Mean Absolute Error (MAE)\" و\"R^2 score\" بنجاح وحفظها في الملف `results/metrics/metrics.txt` كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات، مما يشير إلى أن العملية تمت بشكل صحيح."
+                ]
+            },
+            "total_time": 7.385555267333984
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تصور مقارنة القيم المتوقعة مقابل الفعلية وحفظها كـ `results/figures/prediction_vs_actual.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026750000000000003,
+                "inference_time": 1.8899567127227783,
+                "input_tokens": 798,
+                "output_tokens": 68,
+                "accumulated_cost": 0.012542500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل يشير إلى أن الملف `prediction_vs_actual.png` غير موجود في المسار المحدد. على الرغم من أن هناك خطوة لاحقة تشير إلى إنشاء الدليل بنجاح وإعادة محاولة الحفظ، إلا أنه لا يوجد دليل واضح على أن الملف تم حفظه بنجاح في النهاية."
+                ]
+            },
+            "total_time": 7.4813525676727295
+        }
+    ]
+}

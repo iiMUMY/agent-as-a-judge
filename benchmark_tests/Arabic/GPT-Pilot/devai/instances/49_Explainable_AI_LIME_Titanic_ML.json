@@ -1,0 +1,92 @@
+{
+    "name": "49_Explainable_AI_LIME_Titanic_ML",
+    "query": "مرحبًا! أبحث عن إنشاء مشروع يشرح تنبؤات النماذج باستخدام LIME، تحديدًا مع مجموعة بيانات تنبؤ البقاء على قيد الحياة في Titanic. أولاً، قم بتحميل مجموعة البيانات في `src/data_loader.py`. ثم، قم بتدريب مصنف Random Forest واحفظه تحت `models/saved_models/`. أخيرًا، استخدم LIME لشرح تنبؤات مصنف Random Forest وطبقها في `src/visualize.py`. قم بإنشاء تقرير يتضمن التفسيرات واحفظه كـ `results/model_explanation.md`. يجب بناء التقرير باستخدام إما Dash أو Bokeh، وتطبيقه في `src/report.py`، حتى يتمكن المستخدمون من استكشاف كيفية تأثير الميزات المختلفة على تنبؤات النموذج. يجب أن يكون التفسير واضحًا وسهل الفهم للأشخاص غير التقنيين. بالإضافة إلى ذلك، احفظ مخطط أهمية الميزات بشكل جيد التسمية وبديهي في `results/figures/feature_importance.png`. شكرًا!",
+    "tags": [
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة بيانات التنبؤ بالبقاء \"Titanic\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تدريب \"Random Forest classifier\" للتنبؤ بالبقاء.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام \"LIME\" لشرح تنبؤات النموذج ويتم تنفيذها في `src/visualize.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم إنشاء تقرير شرح تنبؤات النموذج وحفظه كـ `results/model_explanation.md`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير تفاعلي يعرض تأثير الميزات المختلفة على التنبؤات باستخدام \"Dash\" أو \"Bokeh\" ويتم تنفيذه في `src/report.py`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم حفظ النموذج المدرب تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يكون تقرير التفسير مكتوبًا بأسلوب واضح وسهل الوصول، مما يجعله مفهومًا حتى لأولئك الذين ليس لديهم خلفية تقنية عميقة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون مخطط أهمية الميزات بديهيًا بصريًا، مع تسميات وأوصاف واضحة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

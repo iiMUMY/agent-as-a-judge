@@ -1,0 +1,192 @@
+{
+    "name": "42_Medical_Image_Classification_DenseNet121_ChestXray_DL",
+    "query": "إنشاء نظام لتصنيف الصور الطبية باستخدام نموذج DenseNet-121 المدرب مسبقًا ومجموعة بيانات Kaggle Chest X-ray. ابدأ بتحميل ومعالجة مجموعة البيانات وأداء تعزيز البيانات (بما في ذلك الدوران، الترجمة، والتحجيم) في `src/data_loader.py`. طبق نموذج DenseNet-121 للتصنيف، سجل الدقة واحفظها في `results/metrics/classification_accuracy.txt`. قم بضبط النموذج وحفظه كـ `models/saved_models/chest_xray_densenet_model.pth`. استخدم Grad-CAM لتصور عملية اتخاذ القرار للنموذج واحفظ هذه التصورات كـ `results/figures/grad_cam_visualizations.gif`. أخيرًا، أنشئ تقرير Markdown يوثق بنية النموذج، عملية التدريب، تقنيات تعزيز البيانات، وتحليل النتائج، واحفظه كـ `results/medical_image_classification_report.md`. سيكون من الجيد أيضًا أن يكون النظام مرنًا بحيث يمكن ضبط DenseNet-121 بسهولة أكبر بواسطة مستخدم بشري.",
+    "tags": [
+        "Classification",
+        "Computer Vision",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Kaggle Chest X-ray\"، مع تحميل البيانات ومعالجتها مسبقًا في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ زيادة البيانات، بما في ذلك التدوير والترجمة وتغيير حجم الصور في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تحسين النموذج المدرب مسبقًا \"DenseNet-121\" وحفظه في `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم طباعة دقة التصنيف وحفظها كـ `results/metrics/classification_accuracy.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم استخدام \"Grad-CAM\" لتصور قرارات النموذج، وحفظ التصورات كـ `results/figures/grad_cam_visualizations.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء تقرير \"Markdown\" يحتوي على بنية النموذج وعملية التدريب وزيادة البيانات وتحليل النتائج، وحفظه كـ `results/medical_image_classification_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتضمن تقرير \"Markdown\" قسمًا يشرح تأثير تعزيز البيانات على أداء النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تبرز تصورات \"Grad-CAM\" بوضوح المناطق في الصور التي ساهمت بشكل أكبر في قرارات النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يكون النظام مرنًا للسماح بمزيد من ضبط نموذج \"DenseNet-121\".",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Kaggle Chest X-ray\"، مع تحميل البيانات ومعالجتها مسبقًا في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029575,
+                "inference_time": 1.647395372390747,
+                "input_tokens": 859,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0024225,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود فعليًا في المسار المحدد، مما يعني أنه لا يمكن التحقق من تحميل ومعالجة البيانات باستخدام هذا الملف. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل تأكيد ذلك بشكل قاطع."
+                ]
+            },
+            "total_time": 8.634692668914795
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ زيادة البيانات، بما في ذلك التدوير والترجمة وتغيير حجم الصور في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026825000000000004,
+                "inference_time": 1.750291109085083,
+                "input_tokens": 785,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0042250000000000005,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد تنفيذ زيادة البيانات في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من الكود الفعلي أو التأكد من تنفيذ العمليات المطلوبة."
+                ]
+            },
+            "total_time": 4.561289072036743
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تحسين النموذج المدرب مسبقًا \"DenseNet-121\" وحفظه في `models/saved_models/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030050000000000003,
+                "inference_time": 1.5945792198181152,
+                "input_tokens": 798,
+                "output_tokens": 101,
+                "accumulated_cost": 0.0063625,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن النموذج \"DenseNet-121\" لم يتم حفظه بنجاح في `models/saved_models/` بسبب خطأ ناتج عن عدم كفاية مساحة القرص. بالإضافة إلى ذلك، هناك تحذير أثناء عملية التدريب يشير إلى أن بعض الطبقات لم تكن قابلة للتدريب بسبب الأوزان المجمدة، مما قد يؤثر على عملية التحسين إذا كان الهدف هو تحديث جميع الطبقات."
+                ]
+            },
+            "total_time": 5.853117227554321
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم طباعة دقة التصنيف وحفظها كـ `results/metrics/classification_accuracy.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002625,
+                "inference_time": 1.7565243244171143,
+                "input_tokens": 726,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0080475,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الملف `results/metrics/classification_accuracy.txt` غير موجود، كما هو موضح في الرسالة \"Error: File results\\metrics\\classification_accuracy.txt does not exist.\" على الرغم من أن الخطوات ذات الصلة تشير إلى أن دقة التصنيف تم حفظها بنجاح، إلا أن عدم وجود الملف يشير إلى أن المعيار لم يتحقق."
+                ]
+            },
+            "total_time": 5.852554559707642
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم استخدام \"Grad-CAM\" لتصور قرارات النموذج، وحفظ التصورات كـ `results/figures/grad_cam_visualizations.gif`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026275,
+                "inference_time": 1.4775240421295166,
+                "input_tokens": 759,
+                "output_tokens": 73,
+                "accumulated_cost": 0.00987,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن خطوات التنفيذ تشير إلى أن التصورات باستخدام \"Grad-CAM\" تم حفظها بنجاح في `results/figures/grad_cam_visualizations.gif`، إلا أن محاولة الوصول إلى الملف تشير إلى أنه غير موجود. هذا يتعارض مع المعيار الذي يتطلب وجود الملف المحفوظ."
+                ]
+            },
+            "total_time": 5.3366289138793945
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء تقرير \"Markdown\" يحتوي على بنية النموذج وعملية التدريب وزيادة البيانات وتحليل النتائج، وحفظه كـ `results/medical_image_classification_report.md`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027275000000000003,
+                "inference_time": 2.1437909603118896,
+                "input_tokens": 731,
+                "output_tokens": 90,
+                "accumulated_cost": 0.0117,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم الإشارة إلى أن النظام حاول حفظ تقرير Markdown باسم `results/medical_image_classification_report.md` وأن عملية الحفظ تمت بنجاح دون أي أخطاء أو تحذيرات. هذا يشير إلى أن التقرير الذي يحتوي على بنية النموذج وعملية التدريب وزيادة البيانات وتحليل النتائج قد تم إنشاؤه وحفظه بنجاح، مما يفي بالمتطلب المحدد."
+                ]
+            },
+            "total_time": 6.969633102416992
+        }
+    ]
+}

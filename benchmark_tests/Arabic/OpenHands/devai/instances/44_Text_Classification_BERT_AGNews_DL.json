@@ -1,0 +1,84 @@
+{
+    "name": "44_Text_Classification_BERT_AGNews_DL",
+    "query": "مرحبًا! هل يمكنك مساعدتي في بناء نظام تصنيف نصوص باستخدام نموذج BERT المدرب مسبقًا على مجموعة بيانات AG News؟ ابدأ بتحميل ومعالجة البيانات في `src/data_loader.py` (بما في ذلك إزالة أي ضوضاء يمكنك وإجراء عملية الترميز). بمجرد الانتهاء من ذلك، يرجى حفظ معلمات نموذج BERT تحت `models/saved_models/`. قم بتطبيق نموذج BERT واحفظ نتائج التصنيف في `results/results.txt`. أيضًا، قم بتصور مصفوفة الالتباس باستخدام seaborn واحفظها كـ `results/figures/confusion_matrix.png`. أخيرًا، قم بإنشاء دفتر Jupyter تفاعلي لعرض النصوص المدخلة جنبًا إلى جنب مع نتائج التصنيف تحت `results/`. سيكون من الرائع إذا شرح الدفتر كيف تم استخدام التعلم بالنقل وتأثيره على أداء النموذج. وبالمثل، سيكون من الجيد إذا كانت طريقتك في التنفيذ تسهل استبدال مجموعة البيانات، بما في ذلك الكود لإعادة تدريب BERT. شكرًا جزيلاً!",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"AG News\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك إزالة الضوضاء والتقطيع.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تطبيق نموذج \"BERT\" لتصنيف النصوص ويتم حفظ المعلمات تحت `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ نتائج التصنيف كـ `results/results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تصور مصفوفة الالتباس لنتيجة التصنيف باستخدام \"seaborn\"، ويتم حفظها كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "يتم إنشاء \"Jupyter Notebook\" تفاعلي لعرض النصوص المدخلة ونتائج تصنيفها تحت `results`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يشرح دفتر Jupyter كيف تم تطبيق التعلم بالنقل وتأثيره على أداء النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تميز مصفوفة الالتباس بوضوح بين العينات المصنفة بشكل صحيح وغير صحيح.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يسمح النظام بإعادة تدريب نموذج \"BERT\" بسهولة باستخدام بيانات جديدة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

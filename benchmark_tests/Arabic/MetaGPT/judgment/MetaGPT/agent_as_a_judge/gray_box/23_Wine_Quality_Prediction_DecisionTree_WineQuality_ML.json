@@ -1,0 +1,219 @@
+{
+    "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+    "query": "قم ببناء نظام لتوقع جودة النبيذ باستخدام نموذج شجرة القرار مع مجموعة بيانات جودة النبيذ من UCI. قم بتهيئة البيانات في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وتقييس الميزات. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`. قم بتنفيذ نموذج الانحدار لشجرة القرار في `src/model.py`. احفظ متوسط مربع الخطأ في `results/metrics/mean_squared_error.txt`. قم بتصور وحفظ أهمية الميزات كـ `results/figures/feature_importance.png`. أنشئ دفتر Jupyter مع النتائج والتصورات، ولخص ملاحظاتك. يجب أن يوثق الدفتر خطوات التهيئة بشكل شامل لضمان إمكانية إعادة الإنتاج. قم بتحويل الدفتر إلى تقرير PDF واحفظه كـ `results/report.pdf`. يجب أن يتضمن تقرير PDF أيضًا مناقشة موجزة حول التحسينات المحتملة للنموذج.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Wine Quality\" من \"UCI\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وتقييس الميزات.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج الانحدار \"Decision Tree\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ متوسط مربع الخطأ (MSE) في `results/metrics/mean_squared_error.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء وحفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء دفتر Jupyter يحتوي على خطوات المعالجة المسبقة والنتائج والتصورات مع تلخيص الملاحظات. يتم تحويل الدفتر إلى تقرير PDF وحفظه كـ `results/report.pdf`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يبرز مخطط أهمية الميزات بوضوح الميزات الأكثر تأثيرًا.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن التقرير النهائي بصيغة PDF مناقشة موجزة حول التحسينات المحتملة للنموذج.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Wine Quality\" من \"UCI\".",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0025875000000000004,
+                "inference_time": 1.3614764213562012,
+                "input_tokens": 747,
+                "output_tokens": 72,
+                "accumulated_cost": 0.002215,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تقديم دليل واضح على استخدام مجموعة البيانات \"Wine Quality\" من \"UCI\" في المشروع. المعلومات المتاحة تشير فقط إلى تحذير بشأن القيم المفقودة وخطأ في توافق الأبعاد، ولكن لا يوجد تأكيد على أن مجموعة البيانات قد تم تحميلها واستخدامها بشكل صحيح في المشروع."
+                ]
+            },
+            "total_time": 8.0612633228302
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وتقييس الميزات.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030125000000000004,
+                "inference_time": 1.948927402496338,
+                "input_tokens": 905,
+                "output_tokens": 75,
+                "accumulated_cost": 0.005035,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد تنفيذ معالجة البيانات المسبقة في `src/data_loader.py` لأن الملف غير موجود، مما يعني عدم وجود دليل على تنفيذ معالجة القيم المفقودة أو تقييس الميزات. بالإضافة إلى ذلك، تشير الأدلة إلى وجود مشاكل في تقييس الميزات، مما يعزز عدم تحقيق المعيار."
+                ]
+            },
+            "total_time": 7.393687009811401
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ نموذج الانحدار \"Decision Tree\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027325000000000006,
+                "inference_time": 1.861365556716919,
+                "input_tokens": 801,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0070875,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `src/model.py` غير موجود، مما يعني أنه لا يمكن تنفيذ نموذج الانحدار \"Decision Tree\" في هذا الملف. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح سابق، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من تنفيذ النموذج حاليا."
+                ]
+            },
+            "total_time": 5.841134071350098
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028725,
+                "inference_time": 2.0794341564178467,
+                "input_tokens": 833,
+                "output_tokens": 79,
+                "accumulated_cost": 0.0093725,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد أن التحقق المتقاطع يتم استخدامه لتقييم النموذج في `src/train.py` لأن الملف غير موجود وفقًا للمعلومات المتاحة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو تأكيد استخدام التحقق المتقاطع."
+                ]
+            },
+            "total_time": 6.648992538452148
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ متوسط مربع الخطأ (MSE) في `results/metrics/mean_squared_error.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032600000000000003,
+                "inference_time": 3.787569046020508,
+                "input_tokens": 904,
+                "output_tokens": 100,
+                "accumulated_cost": 0.0119475,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `benchmark_tests\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\23_Wine_Quality_Predict\\results\\metrics\\mean_squared_error.txt` غير موجود، مما يعني أن متوسط مربع الخطأ (MSE) لم يتم حفظه في الموقع المحدد. على الرغم من أن خطوات المسار تشير إلى أن العملية تمت بنجاح، إلا أن عدم وجود الملف يتعارض مع هذا الادعاء."
+                ]
+            },
+            "total_time": 9.396272420883179
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء وحفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026075,
+                "inference_time": 2.8258790969848633,
+                "input_tokens": 751,
+                "output_tokens": 73,
+                "accumulated_cost": 0.014135,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المتطلب لأن الدليل `results/figures/` غير موجود، مما أدى إلى فشل عملية حفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`. على الرغم من أن إنشاء المخطط تم بنجاح، إلا أن المشكلة تتعلق بمسار الحفظ."
+                ]
+            },
+            "total_time": 7.510826110839844
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء دفتر Jupyter يحتوي على خطوات المعالجة المسبقة والنتائج والتصورات مع تلخيص الملاحظات. يتم تحويل الدفتر إلى تقرير PDF وحفظه كـ `results/report.pdf`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00271,
+                "inference_time": 2.199010133743286,
+                "input_tokens": 756,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0162575,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار المحدد حيث تم تحويل دفتر Jupyter إلى تقرير PDF وحفظه كـ `results/report.pdf`، كما هو موضح في الأدلة المقدمة. على الرغم من وجود تحذير بشأن دعم الخطوط وحجم الملف الكبير، إلا أن هذه الأمور لا تؤثر على تحقيق المعيار الأساسي المتعلق بإنشاء التقرير وحفظه."
+                ]
+            },
+            "total_time": 5.820493459701538
+        }
+    ]
+}

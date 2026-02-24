@@ -1,0 +1,213 @@
+{
+    "name": "49_Explainable_AI_LIME_Titanic_ML",
+    "query": "مرحبًا! أبحث عن إنشاء مشروع يشرح تنبؤات النماذج باستخدام LIME، تحديدًا مع مجموعة بيانات تنبؤ البقاء على قيد الحياة في Titanic. أولاً، قم بتحميل مجموعة البيانات في `src/data_loader.py`. ثم، قم بتدريب مصنف Random Forest واحفظه تحت `models/saved_models/`. أخيرًا، استخدم LIME لشرح تنبؤات مصنف Random Forest وطبقها في `src/visualize.py`. قم بإنشاء تقرير يتضمن التفسيرات واحفظه كـ `results/model_explanation.md`. يجب بناء التقرير باستخدام إما Dash أو Bokeh، وتطبيقه في `src/report.py`، حتى يتمكن المستخدمون من استكشاف كيفية تأثير الميزات المختلفة على تنبؤات النموذج. يجب أن يكون التفسير واضحًا وسهل الفهم للأشخاص غير التقنيين. بالإضافة إلى ذلك، احفظ مخطط أهمية الميزات بشكل جيد التسمية وبديهي في `results/figures/feature_importance.png`. شكرًا!",
+    "tags": [
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة بيانات التنبؤ بالبقاء \"Titanic\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تدريب \"Random Forest classifier\" للتنبؤ بالبقاء.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام \"LIME\" لشرح تنبؤات النموذج ويتم تنفيذها في `src/visualize.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم إنشاء تقرير شرح تنبؤات النموذج وحفظه كـ `results/model_explanation.md`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم حفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير تفاعلي يعرض تأثير الميزات المختلفة على التنبؤات باستخدام \"Dash\" أو \"Bokeh\" ويتم تنفيذه في `src/report.py`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم حفظ النموذج المدرب تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يكون تقرير التفسير مكتوبًا بأسلوب واضح وسهل الوصول، مما يجعله مفهومًا حتى لأولئك الذين ليس لديهم خلفية تقنية عميقة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون مخطط أهمية الميزات بديهيًا بصريًا، مع تسميات وأوصاف واضحة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة بيانات التنبؤ بالبقاء \"Titanic\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027575000000000004,
+                "inference_time": 1.5275514125823975,
+                "input_tokens": 807,
+                "output_tokens": 74,
+                "accumulated_cost": 0.0020425,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد أن `src/data_loader.py` يقوم بتحميل مجموعة بيانات \"Titanic\" بنجاح لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو وظيفته."
+                ]
+            },
+            "total_time": 6.452740907669067
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تدريب \"Random Forest classifier\" للتنبؤ بالبقاء.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027675000000000004,
+                "inference_time": 1.3843867778778076,
+                "input_tokens": 743,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0041075,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تقديم أي دليل مباشر على أن \"Random Forest classifier\" تم تدريبه بنجاح للتنبؤ بالبقاء. المعلومات المتاحة تشير إلى وجود تحذير بشأن القيم المفقودة في البيانات والتي قد تؤثر على أداء النموذج، بالإضافة إلى ملاحظة حول دقة النموذج المنخفضة. لا يوجد تأكيد على أن النموذج قد تم تدريبه بشكل صحيح لتحقيق الهدف المحدد."
+                ]
+            },
+            "total_time": 5.981810092926025
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم استخدام \"LIME\" لشرح تنبؤات النموذج ويتم تنفيذها في `src/visualize.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027350000000000005,
+                "inference_time": 1.5842809677124023,
+                "input_tokens": 850,
+                "output_tokens": 61,
+                "accumulated_cost": 0.006432500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is not met because the file `src/visualize.py` does not exist in the specified directory, as indicated by the error message. Without the file, it is not possible to confirm that \"LIME\" is used to explain model predictions within it."
+                ]
+            },
+            "total_time": 7.506364107131958
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم إنشاء تقرير شرح تنبؤات النموذج وحفظه كـ `results/model_explanation.md`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026175,
+                "inference_time": 2.1340689659118652,
+                "input_tokens": 767,
+                "output_tokens": 70,
+                "accumulated_cost": 0.008720000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم إنشاء الدليل `results/` بنجاح في خطوة لاحقة، وتم حفظ الملف `model_explanation.md` دون أي مشاكل إضافية. لا توجد أخطاء أو تحذيرات أخرى تم تسجيلها بعد هذه الخطوة، مما يشير إلى أن العملية تمت بنجاح بعد معالجة المشكلة الأولية."
+                ]
+            },
+            "total_time": 6.606146574020386
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027525,
+                "inference_time": 1.8643090724945068,
+                "input_tokens": 765,
+                "output_tokens": 84,
+                "accumulated_cost": 0.011052500000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم حفظ مخطط أهمية الميزات بنجاح كـ `results/figures/feature_importance.png` بعد معالجة المشكلة الأولية المتعلقة بعدم وجود الدليل. تم إنشاء الدليل `results/figures/` بنجاح، ولم يتم تسجيل أي أخطاء أو تحذيرات في المحاولة الثانية للحفظ، مما يشير إلى أن العملية تمت بنجاح."
+                ]
+            },
+            "total_time": 6.709970235824585
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء تقرير تفاعلي يعرض تأثير الميزات المختلفة على التنبؤات باستخدام \"Dash\" أو \"Bokeh\" ويتم تنفيذه في `src/report.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003125,
+                "inference_time": 2.066786527633667,
+                "input_tokens": 778,
+                "output_tokens": 118,
+                "accumulated_cost": 0.013395000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يتم تحقيق المعيار لأن هناك خطأ في البيئة يشير إلى عدم القدرة على استيراد مكتبة \"Dash\"، مما يعني أن التقرير التفاعلي لا يمكن إنشاؤه باستخدام \"Dash\". بالإضافة إلى ذلك، هناك تحذير بشأن استخدام \"Bokeh\" يشير إلى أن بعض الميزات قد تكون قديمة أو غير مدعومة، مما قد يؤثر على وظائف التقرير التفاعلي. لا يوجد دليل على أن التقرير التفاعلي يتم إنشاؤه وتنفيذه بنجاح في `src/report.py`."
+                ]
+            },
+            "total_time": 7.122112035751343
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم حفظ النموذج المدرب تحت `models/saved_models/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0023650000000000003,
+                "inference_time": 1.4921977519989014,
+                "input_tokens": 682,
+                "output_tokens": 66,
+                "accumulated_cost": 0.015082500000000004,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار حيث تشير الأدلة المقدمة في \"Trajectory Evidence\" إلى أن النموذج المدرب تم حفظه بنجاح في المسار `models/saved_models/` دون تسجيل أي أخطاء أو تحذيرات، مما يدل على أن عملية الحفظ تمت بسلاسة."
+                ]
+            },
+            "total_time": 4.940282821655273
+        }
+    ]
+}

@@ -1,0 +1,214 @@
+{
+    "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+    "query": "تطوير نظام تصنيف الأسهم باستخدام نموذج KNN على مجموعة بيانات Yahoo Finance. يجب أن يحدد تنفيذك ما إذا كان سعر السهم المعطى سيرتفع أو ينخفض. ابدأ بتحميل مجموعة البيانات وإجراء هندسة الميزات، بما في ذلك توليد المؤشرات الفنية واختيار الميزات الأكثر صلة في `src/data_loader.py`. قم بتوحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`. طبق مصنف KNN لتصنيف الأسهم بناءً على الميزات المهندسة، واحفظ التنفيذ في `src/model.py`. بعد ذلك، احفظ نتائج التصنيف في `results/classification_results.txt`، وقم بتصور العلاقة بين المؤشرات الفنية ونتيجة التصنيف كخريطة حرارية باستخدام seaborn. احفظ الخريطة الحرارية كـ `results/figures/feature_correlation_heatmap.png`. أخيرًا، أنشئ دفتر Jupyter تفاعلي تحت `results/` يشرح العملية، ويعرض نتائج التصنيف، ويساعد في تسهيل التحديثات المستقبلية التي تقدم بيانات جديدة.",
+    "tags": [
+        "Classification",
+        "Financial Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Yahoo Finance\"، بما في ذلك تحميل البيانات وتحضيرها في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك توليد المؤشرات الفنية وإجراء اختيار الميزات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تطبيق \"KNN classifier\" لتصنيف الأسهم بناءً على الميزات المهندسة. يرجى حفظ التنفيذ في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التصنيف في `results/classification_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم حفظ خريطة حرارية تمثل الارتباطات بين المؤشرات الفنية ونتائج التصنيف كـ `results/figures/feature_correlation_heatmap.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم إنشاء \"Jupyter Notebook\" تفاعلي تحت `results/` لشرح العملية وعرض نتائج التصنيف.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتضمن دفتر Jupyter تفسيرات واضحة لكل خطوة، بما في ذلك هندسة الميزات وتقييم النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تسلط الخريطة الحرارية الضوء على المؤشرات الفنية الأكثر أهمية وتوفر رؤى حول علاقاتها.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يسمح النظام بتحديثات سهلة مع بيانات جديدة، مما يجعل الدفتر مرنًا للتحليل المستقبلي.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Yahoo Finance\"، بما في ذلك تحميل البيانات وتحضيرها في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026425000000000003,
+                "inference_time": 1.4474046230316162,
+                "input_tokens": 761,
+                "output_tokens": 74,
+                "accumulated_cost": 0.00168,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المتاحة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح للملف، إلا أن عدم وجود الملف فعليًا في بنية المشروع يعني أن تحميل وتحضير البيانات لا يمكن التحقق منهما."
+                ]
+            },
+            "total_time": 6.213996410369873
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك توليد المؤشرات الفنية وإجراء اختيار الميزات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028775000000000003,
+                "inference_time": 2.717989683151245,
+                "input_tokens": 835,
+                "output_tokens": 79,
+                "accumulated_cost": 0.00393,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد تنفيذ هندسة الميزات وتوليد المؤشرات الفنية واختيار الميزات في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المتاحة. على الرغم من أن الخطوات في المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو وظيفته."
+                ]
+            },
+            "total_time": 6.898569345474243
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028625000000000005,
+                "inference_time": 1.8515136241912842,
+                "input_tokens": 853,
+                "output_tokens": 73,
+                "accumulated_cost": 0.00634,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد أن البيانات تم توحيدها في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى أن التوحيد قد تم بنجاح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من ذلك بشكل مباشر."
+                ]
+            },
+            "total_time": 6.3283092975616455
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تطبيق \"KNN classifier\" لتصنيف الأسهم بناءً على الميزات المهندسة. يرجى حفظ التنفيذ في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028450000000000003,
+                "inference_time": 1.3721904754638672,
+                "input_tokens": 830,
+                "output_tokens": 77,
+                "accumulated_cost": 0.008427500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد ملف `src/model.py` في المسار المحدد، مما يعني أن تنفيذ \"KNN classifier\" غير موجود أو لم يتم حفظه في الموقع المطلوب. بالإضافة إلى ذلك، تشير الأدلة إلى وجود خطأ أثناء محاولة حفظ النموذج بسبب عدم وجود الدليل، مما يؤكد أن التنفيذ لم يتم حفظه بنجاح."
+                ]
+            },
+            "total_time": 5.532882928848267
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ نتائج التصنيف في `results/classification_results.txt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0022,
+                "inference_time": 1.480379581451416,
+                "input_tokens": 668,
+                "output_tokens": 53,
+                "accumulated_cost": 0.009992500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم الإشارة في خطوات المسار ذات الصلة إلى أن نتائج التصنيف تم حفظها في `results/classification_results.txt` دون أي أخطاء أو تحذيرات، مما يدل على أن المتطلب قد تحقق بنجاح."
+                ]
+            },
+            "total_time": 4.779131889343262
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ خريطة حرارية تمثل الارتباطات بين المؤشرات الفنية ونتائج التصنيف كـ `results/figures/feature_correlation_heatmap.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030975000000000004,
+                "inference_time": 2.486210823059082,
+                "input_tokens": 775,
+                "output_tokens": 116,
+                "accumulated_cost": 0.012307500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل مباشر في المعلومات المقدمة يشير إلى أن خريطة حرارية تمثل الارتباطات بين المؤشرات الفنية ونتائج التصنيف قد تم حفظها بنجاح كـ `results/figures/feature_correlation_heatmap.png`. على الرغم من أن هناك إشارة إلى محاولة حفظ الخريطة الحرارية وفشلها بسبب عدم وجود الدليل، إلا أنه لا يوجد تأكيد على أن الخريطة الحرارية المطلوبة قد تم إنشاؤها وحفظها بنجاح بعد إنشاء الدليل."
+                ]
+            },
+            "total_time": 9.66300106048584
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء \"Jupyter Notebook\" تفاعلي تحت `results/` لشرح العملية وعرض نتائج التصنيف.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0022825000000000002,
+                "inference_time": 1.0943293571472168,
+                "input_tokens": 709,
+                "output_tokens": 51,
+                "accumulated_cost": 0.014150000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم إنشاء \"Jupyter Notebook\" التفاعلي بنجاح تحت `results/` وعرض نتائج التصنيف دون أي أخطاء أو تحذيرات، مما يشير إلى أن الوظيفة تعمل كما هو متوقع."
+                ]
+            },
+            "total_time": 5.429795265197754
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+{
+    "name": "31_Cancer_Prediction_SVM_BreastCancer_ML",
+    "query": "هل يمكنك مساعدتي في إنشاء مشروع لتوقع سرطان الثدي باستخدام نموذج SVM مع مجموعة بيانات Breast Cancer Wisconsin؟ قم بتحميل مجموعة البيانات وتنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`. قم بتنفيذ مصنف SVM لتوقع السرطان في `src/model.py`. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`. احفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`. قم بإعداد تقرير مفصل يوثق العملية بأكملها - من معالجة البيانات إلى تدريب النموذج وتقييمه. يجب أن يغطي التقرير عملية اختيار الميزات ويتضمن خريطة حرارية واضحة لمقاييس الأداء. احفظ التقرير كـ `results/metrics/breast_cancer_prediction_report.pdf`.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Breast Cancer Wisconsin\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم استخدام \"SVM classifier\" للتنبؤ بالسرطان ويجب تنفيذه في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة مصفوفة الالتباس وحفظها كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير مفصل يحتوي على معالجة البيانات المسبقة وتدريب النموذج وعملية التقييم وحفظه كـ `results/metrics/breast_cancer_prediction_report.pdf`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب توثيق عملية اختيار الميزات بشكل جيد في التقرير، موضحًا سبب اختيار ميزات معينة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تميز الخريطة الحرارية بوضوح بين مقاييس الأداء المختلفة، مثل الدقة والاسترجاع ودرجة F1.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يتضمن التقرير مناقشة حول أداء النموذج والمجالات المحتملة للتحسين.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Breast Cancer Wisconsin\".",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027475,
+                "inference_time": 2.426621198654175,
+                "input_tokens": 731,
+                "output_tokens": 92,
+                "accumulated_cost": 0.0020175,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن هناك إشارة إلى تحميل مجموعة بيانات \"Breast Cancer Wisconsin\" في الخطوة 5، إلا أن الأدلة المتاحة لا تؤكد بشكل قاطع أن مجموعة البيانات قد تم استخدامها بنجاح في المشروع. هناك مشاكل مذكورة تتعلق بالقيم المفقودة وأنواع البيانات غير المتوافقة، مما يشير إلى أن استخدام مجموعة البيانات لم يكن ناجحًا أو مكتملًا."
+                ]
+            },
+            "total_time": 8.126489400863647
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00282,
+                "inference_time": 1.9582126140594482,
+                "input_tokens": 812,
+                "output_tokens": 79,
+                "accumulated_cost": 0.0041125,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تنفيذ اختيار الميزات في `src/data_loader.py` لأن الملف غير موجود، كما هو موضح في الدليل الرئيسي. بالإضافة إلى ذلك، تم تسجيل خطأ أثناء محاولة تحميل البيانات باستخدام هذا الملف، مما يشير إلى وجود مشكلة في مسار البيانات أو تنسيقها، مما يؤثر على قدرة الملف على تنفيذ اختيار الميزات بشكل صحيح."
+                ]
+            },
+            "total_time": 7.92493462562561
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم استخدام \"SVM classifier\" للتنبؤ بالسرطان ويجب تنفيذه في `src/model.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025250000000000003,
+                "inference_time": 1.2363383769989014,
+                "input_tokens": 758,
+                "output_tokens": 63,
+                "accumulated_cost": 0.006395,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ \"SVM classifier\" للتنبؤ بالسرطان في `src/model.py` كما هو موضح في الخطوة الأخيرة من الأدلة المقدمة. لم يتم الإبلاغ عن أي أخطاء أثناء التنفيذ، مما يشير إلى أن المتطلب قد تحقق بنجاح."
+                ]
+            },
+            "total_time": 6.954094886779785
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024800000000000004,
+                "inference_time": 1.1044416427612305,
+                "input_tokens": 748,
+                "output_tokens": 61,
+                "accumulated_cost": 0.00858,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ `src/train.py` بنجاح باستخدام التحقق المتقاطع لتقييم النموذج، ولم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن التحقق المتقاطع تم تنفيذه بنجاح."
+                ]
+            },
+            "total_time": 4.911867380142212
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم طباعة مصفوفة الالتباس وحفظها كـ `results/figures/confusion_matrix.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026850000000000003,
+                "inference_time": 1.887375831604004,
+                "input_tokens": 746,
+                "output_tokens": 82,
+                "accumulated_cost": 0.010415,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن الخطوات ذات الصلة تشير إلى أن مصفوفة الالتباس تم طباعتها وحفظها بنجاح، إلا أن الدليل الرئيسي يظهر أن الملف `results/figures/confusion_matrix.png` غير موجود. هذا يشير إلى أن عملية الحفظ لم تتم كما هو متوقع، مما يجعل المعيار غير محقق."
+                ]
+            },
+            "total_time": 5.300763368606567
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء تقرير مفصل يحتوي على معالجة البيانات المسبقة وتدريب النموذج وعملية التقييم وحفظه كـ `results/metrics/breast_cancer_prediction_report.pdf`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028025000000000003,
+                "inference_time": 2.675955295562744,
+                "input_tokens": 777,
+                "output_tokens": 86,
+                "accumulated_cost": 0.0126075,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن هناك تحذيرًا يشير إلى أن الدليل `results/metrics/` غير موجود، مما قد يمنع حفظ التقرير `breast_cancer_prediction_report.pdf`. بالإضافة إلى ذلك، لا يوجد دليل على أن التقرير قد تم إنشاؤه بالفعل أو أنه يحتوي على معالجة البيانات المسبقة وتدريب النموذج وعملية التقييم."
+                ]
+            },
+            "total_time": 7.684477806091309
+        }
+    ]
+}

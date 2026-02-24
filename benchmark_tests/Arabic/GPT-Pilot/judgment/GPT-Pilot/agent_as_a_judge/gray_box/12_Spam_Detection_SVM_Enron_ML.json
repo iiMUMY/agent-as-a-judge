@@ -1,0 +1,220 @@
+{
+    "name": "12_Spam_Detection_SVM_Enron_ML",
+    "query": "مرحبًا. أحتاج منك بناء مشروع لاكتشاف رسائل البريد الإلكتروني العشوائية باستخدام المصنف Support Vector Machine (SVM) على مجموعة بيانات Enron-Spam. يجب أن يقوم المشروع بتهيئة النص عن طريق إزالة الكلمات التوقف وعلامات الترقيم، واستخدام ميزات TF-IDF، وإجراء ضبط للمعلمات الفائقة باستخدام GridSearchCV، وحفظ مصفوفة الالتباس في `results/figures/confusion_matrix.png`. كما أحتاج إلى كتابة وحفظ تقرير شامل، يتضمن الدقة والاسترجاع وF1-score ومصفوفة الالتباس (التي سيتم إنشاؤها كـ `results/figures/confusion_matrix.png`)، تحت `results/classification_report.pdf`. يجب تحميل مجموعة بيانات Enron-Spam في `src/data_loader.py`. يجب أن يتم تهيئة النص، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم وحساب ميزات TF-IDF، في `src/data_loader.py`. يجب تنفيذ المصنف SVM في `src/model.py`. يجب إجراء ضبط المعلمات الفائقة باستخدام GridSearchCV في `src/train.py`. سيكون من المفيد إذا تم تحسين خطوة تهيئة النص للتعامل مع عدد كبير من رسائل البريد الإلكتروني بكفاءة.",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Enron-Spam\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة النصوص المسبقة، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام ميزات \"TF-IDF\" في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ \"SVM classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم ضبط المعلمات الفائقة باستخدام \"GridSearchCV\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" والشكل `results/figures/confusion_matrix.png`، كـ `results/classification_report.pdf`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب تحسين خطوة تهيئة النص للتعامل مع عدد كبير من رسائل البريد الإلكتروني بكفاءة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التقرير التصنيفي شاملاً.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة البيانات \"Enron-Spam\" في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002425,
+                "inference_time": 0.8466055393218994,
+                "input_tokens": 730,
+                "output_tokens": 60,
+                "accumulated_cost": 0.002055,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحميل مجموعة البيانات \"Enron-Spam\" بنجاح باستخدام `src/data_loader.py`، حيث لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن تحميل البيانات تم بنجاح وبدون مشاكل."
+                ]
+            },
+            "total_time": 7.358044147491455
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة النصوص المسبقة، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00267,
+                "inference_time": 2.085578203201294,
+                "input_tokens": 796,
+                "output_tokens": 68,
+                "accumulated_cost": 0.004580000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تنفيذ معالجة النصوص المسبقة بشكل كامل بسبب التحذير المتعلق بعدم القدرة على تحميل مكتبة معينة مطلوبة لهذه العملية. هذا التحذير قد يؤثر على وظيفة إزالة الكلمات التوقف وعلامات الترقيم، مما يعني أن المتطلب لم يتحقق بالكامل."
+                ]
+            },
+            "total_time": 7.979871988296509
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم استخدام ميزات \"TF-IDF\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028850000000000004,
+                "inference_time": 1.9678163528442383,
+                "input_tokens": 814,
+                "output_tokens": 85,
+                "accumulated_cost": 0.006702500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد استخدام ميزات \"TF-IDF\" في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. بالإضافة إلى ذلك، تم تسجيل خطأ سابق يتعلق بعدم القدرة على العثور على وحدة نمطية مطلوبة لـ \"TF-IDF\"، مما يشير إلى أن الميزات قد لا تكون مستخدمة أو مهيأة بشكل صحيح."
+                ]
+            },
+            "total_time": 8.092370510101318
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ \"SVM classifier\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027125000000000005,
+                "inference_time": 2.6278717517852783,
+                "input_tokens": 793,
+                "output_tokens": 73,
+                "accumulated_cost": 0.008667500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/model.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن خطوات التنفيذ تشير إلى تحميل وحفظ النموذج بنجاح، إلا أن عدم وجود الملف يعني أن تنفيذ \"SVM classifier\" في `src/model.py` لا يمكن التحقق منه."
+                ]
+            },
+            "total_time": 6.137112617492676
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم ضبط المعلمات الفائقة باستخدام \"GridSearchCV\" في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029850000000000002,
+                "inference_time": 2.248971462249756,
+                "input_tokens": 870,
+                "output_tokens": 81,
+                "accumulated_cost": 0.011237500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد أن المعلمات الفائقة تم ضبطها باستخدام \"GridSearchCV\" في `src/train.py` لأن الملف `train.py` غير موجود في المسار المحدد. على الرغم من أن خطوات المسار تشير إلى استخدام \"GridSearchCV\"، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من تنفيذ الكود الفعلي."
+                ]
+            },
+            "total_time": 7.399693727493286
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028325000000000004,
+                "inference_time": 2.318315029144287,
+                "input_tokens": 749,
+                "output_tokens": 96,
+                "accumulated_cost": 0.0130825,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `results/figures/confusion_matrix.png` غير موجود، مما يعني أن مصفوفة الالتباس لم يتم حفظها بنجاح في الموقع المحدد. على الرغم من أن الخطوات اللاحقة تشير إلى أن الدليل تم إنشاؤه وإعادة محاولة الحفظ بنجاح، إلا أن عدم وجود الملف في النهاية يشير إلى أن المعيار لم يتحقق."
+                ]
+            },
+            "total_time": 5.344160795211792
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" والشكل `results/figures/confusion_matrix.png`، كـ `results/classification_report.pdf`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027375000000000003,
+                "inference_time": 2.106485605239868,
+                "input_tokens": 755,
+                "output_tokens": 85,
+                "accumulated_cost": 0.015105,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن هناك خطأ في الوصول إلى المسار المحدد لحفظ تقرير التصنيف كملف `results/classification_report.pdf`. بالإضافة إلى ذلك، هناك تحذير بشأن عدم توافق الأبعاد عند محاولة إنشاء الشكل `results/figures/confusion_matrix.png`. هذه المشاكل تشير إلى أن التقرير والشكل لم يتم حفظهما بنجاح كما هو مطلوب."
+                ]
+            },
+            "total_time": 6.846120595932007
+        }
+    ]
+}

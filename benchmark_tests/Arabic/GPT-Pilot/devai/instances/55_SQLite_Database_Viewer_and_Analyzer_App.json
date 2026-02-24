@@ -1,0 +1,189 @@
+{
+    "name": "55_SQLite_Database_Viewer_and_Analyzer_App",
+    "query": "أريد إنشاء تطبيق يمكّن المستخدمين من عرض وتحليل بيانات تطوير الذكاء الاصطناعي المخزنة في قاعدة بيانات SQLite. في الواجهة الأمامية (المطبقة في `src/frontend.py`)، يجب على المستخدم إما تحميل قاعدة بيانات SQLite جديدة، بما في ذلك سجلات تدريب نماذج الذكاء الاصطناعي أو بيانات الاستجابة للمطالبات، عن طريق اختيار ملف من جهازهم أو اختيار قاعدة بيانات تم تحميلها مسبقًا ومخزنة في `src/cache.py`. بهذه الطريقة، لن يحتاج المستخدم إلى تحميل قاعدة البيانات في كل مرة يريد تحليلها. إذا تم تحميل قاعدة بيانات جديدة، يمكنهم تسميتها، وسيتم إرسال الملف إلى الواجهة الخلفية (`src/backend.py`) وتخزينه للاستخدام المستقبلي. بمجرد تحميل قاعدة البيانات، يمكن للمستخدمين التفاعل معها. يجب أن يرى المستخدم قائمة بالنماذج أو التطبيقات من جدول `app`. يجب أن يكونوا قادرين على اختيار تطبيق واحد، وعرض مهام تطويره من جدول `development_planning`. بعد اختيار مهمة، يمكنهم عرض جميع خطوات التطوير المرتبطة بها. أخيرًا، سيؤدي اختيار خطوة إلى عرض بيانات مفصلة مثل `prompt_path`، `messages`، `llm_response`، و `prompt_data`، مع عرض المعلومات المناسبة على الواجهة الأمامية (في `src/frontend_render.py`).\nستتبع قاعدة بيانات SQLite دائمًا هذا الهيكل: يحتوي جدول `app` على جميع التطبيقات المخزنة في قاعدة البيانات. يحتوي كل تطبيق على مهام تطوير متعددة مخزنة كمصفوفة في جدول `development_planning` تحت المفتاح `development_plan`. كل عنصر في المصفوفة هو كائن JSON بثلاثة أزواج مفتاحية: `description`، `user_review_goal`، و `programming_goal`. تحتوي كل مهمة تطوير على العديد من خطوات التطوير، والتي يتم تخزينها في جدول `development_steps` وترتبط بجدول `app` باستخدام حقل `app_id`.\nالتحدي هو أنه لا يوجد اتصال مباشر بين مهمة التطوير وخطوة التطوير. لذلك، في `src/backend_logic.py`، يجب استرجاع جميع خطوات التطوير ثم تقسيمها حسب حقل `prompt_path`. تبدأ كل مهمة تطوير بقيمة `prompt_path` تساوي `development/task/breakdown.prompt`، لذا يمكن تجميع خطوات التطوير عن طريق تقسيم قائمة الخطوات إلى قوائم أصغر، حيث تبدأ كل منها بالخطوة التي تحتوي على `prompt_path` يساوي `development/task/breakdown.prompt`. سيعطي هذا مجموعة الخطوات الصحيحة لكل مهمة.\nتحتوي كل خطوة تطوير على القيم التالية، والتي يجب عرضها على الواجهة الأمامية (`src/frontend_render.py`):\n- `prompt_path`: سلسلة نصية.\n- `messages`: مصفوفة من كائنات JSON.\n- `llm_response`: كائن JSON.\n- `prompt_data`: كائن JSON.\nستحتوي مصفوفة `messages` دائمًا على كائنات JSON بالمفاتيح `content` و `role`. يجب أن تعرض الواجهة الأمامية `content` في حقل نصي كبير، مع عرض `role` كعلامة. سيحتوي كائن `llm_response` دائمًا على مفتاح `text`، والذي يجب عرضه كمنطقة نصية لعرض سلاسل طويلة محتملة. قد يحتوي كائن `prompt_data` على أزواج مفتاحية متنوعة، ويجب عرض كل منها للمستخدم بتنسيق مناسب.",
+    "tags": [
+        "Other"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ الواجهة الأمامية في `src/frontend.py` وتسمح للمستخدمين بتحميل قاعدة بيانات SQLite جديدة أو اختيار واحدة مخزنة مسبقًا من `src/cache.py`. يجب حفظ الملف المختار وأن يكون متاحًا للاستخدام المستقبلي.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "عند تحميل قاعدة بيانات جديدة، يمكن للمستخدمين تعيين اسم لها، ويتم إرسال الملف إلى الخلفية (`src/backend.py`) وتخزينه للاستخدام المستقبلي.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تخزين قواعد البيانات التي تم تحميلها مسبقًا في `src/cache.py` ويمكن اختيارها دون إعادة التحميل.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "بمجرد تحميل قاعدة بيانات أو اختيارها، يمكن للمستخدم عرض قائمة بنماذج أو تطبيقات الذكاء الاصطناعي من جدول `app` داخل قاعدة البيانات.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يمكن للمستخدمين اختيار تطبيق وعرض مهام تطويره من جدول `development_planning`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "بعد اختيار مهمة، يمكن للمستخدمين عرض جميع خطوات التطوير المرتبطة، والتي يتم عرضها على الواجهة الأمامية المنفذة في `src/frontend_render.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يؤدي اختيار خطوة تطوير إلى عرض بيانات مفصلة تتضمن `prompt_path`، `messages`، `llm_response`، و`prompt_data`، مع عرضها بشكل مناسب على الواجهة الأمامية (`src/frontend_render.py`).",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [],
+            "criteria": "في `src/backend_logic.py`، يتم استرجاع جميع خطوات التطوير من جدول `development_steps` وتجميعها حسب مهمة التطوير باستخدام حقل `prompt_path` الذي يبدأ بـ `development/task/breakdown.prompt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 8,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "criteria": "يتم عرض مصفوفة `messages` على الواجهة الأمامية (`src/frontend_render.py`)، حيث يتم عرض `content` في حقل نص كبير و`role` كعلامة لكل رسالة.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 9,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "criteria": "يتم عرض كائن `llm_response` مع مفتاح `text` في منطقة نص لاستيعاب السلاسل الطويلة المحتملة على الواجهة الأمامية (`src/frontend_render.py`).",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 10,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+            ],
+            "criteria": "يتم عرض كائن `prompt_data` مع أزواج المفتاح والقيمة الخاصة به في تنسيق مناسب على الواجهة الأمامية (`src/frontend_render.py`).",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 11,
+            "prerequisites": [],
+            "criteria": "تتبع قاعدة بيانات SQLite الهيكل المحدد مع جداول `app`، `development_planning`، و`development_steps`، كما هو موضح في استعلام المشروع.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 12,
+            "prerequisites": [
+                11
+            ],
+            "criteria": "كل تطبيق في جدول `app` يحتوي على مهام تطوير متعددة مخزنة كمصفوفة تحت مفتاح `development_plan` في جدول `development_planning`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 13,
+            "prerequisites": [
+                11
+            ],
+            "criteria": "تحتوي كل مهمة تطوير على العديد من خطوات التطوير المخزنة في جدول `development_steps` ومرتبطة بجدول `app` باستخدام حقل `app_id`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تسمح واجهة المستخدم الأمامية بالتفاعل السهل مع قاعدة البيانات، مما يضمن أن يتمكن المستخدمون من التنقل بسلاسة بين التطبيقات والمهام والخطوات.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتعامل النظام بكفاءة مع قواعد بيانات SQLite الكبيرة، مما يضمن الحفاظ على الأداء مع مجموعات البيانات الكبيرة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب عرض المعلومات على الواجهة الأمامية بطريقة بديهية وسهلة الاستخدام، مما يضمن سهولة التفاعل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 3,
+            "criteria": "يجب أن يعكس تجميع خطوات التطوير بدقة مجموعة الخطوات الصحيحة لكل مهمة، وفقًا للمنطق المطبق في `src/backend_logic.py`.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": false,
+    "is_web_navigation_needed": false,
+    "resource": "https://github.com/Pythagora-io/gpt-pilot/wiki/How-to-write-a-good-initial-project-description",
+    "language": "Arabic"
+}

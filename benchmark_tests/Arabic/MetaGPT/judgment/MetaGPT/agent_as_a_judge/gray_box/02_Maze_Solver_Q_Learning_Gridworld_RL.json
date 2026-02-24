@@ -1,0 +1,157 @@
+{
+    "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "query": "هل يمكنك مساعدتي في إنشاء نظام لحل مهام Gridworld على شكل متاهة باستخدام خوارزمية Q-learning؟ يجب أن يستخدم النظام مكتبة numpy لجعل الحسابات الأساسية أكثر كفاءة وmatplotlib للتصورات. يجب تنفيذ خوارزمية Q-learning في `src/train.py`، ويجب تنفيذ بيئة Gridworld المسماة بشكل مناسب في `src/env.py` بطريقة يمكن فيها تحديد حجم الشبكة ومواقع البداية/النهاية عند إنشائها. يحتاج النظام إلى تسجيل منحنى التعلم أثناء التدريب، متتبعًا الحلقات والعوائد المقابلة لها، وحفظه كـ `results/figures/learning_curve.png`. بالإضافة إلى ذلك، أود منك تصور وحفظ المسارات التي اتخذها الوكيل في كل حلقة في ملف يسمى `results/figures/path_changes.gif`، وحفظ النموذج المدرب كـ `models/saved_models/q_learning_model.npy`. سيكون من الرائع الحصول على نوع من التغذية الراجعة في الوقت الحقيقي أثناء التدريب، مثل رؤية التقدم أو الحصول على تحديثات حول كيفية تعلم النموذج. أيضًا، إذا كان بإمكانك، يرجى محاولة كتابة الكود بطريقة يسهل تعديلها أو توسيعها لاحقًا.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية للمستخدم تحديد حجم الشبكة ومواقع البداية/النهاية.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تسجيل منحنيات التعلم أثناء التدريب، وحفظها كـ `results/figures/learning_curve.png`. يتم تسجيل الحلقات والعوائد.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ النموذج المتعلم كـ `models/saved_models/q_learning_model.npy`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تصور المسارات المتخذة أثناء التعلم وحفظها كـ `results/figures/path_changes.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب عرض بعض التقدم أو التغذية الراجعة في الوقت الحقيقي أثناء عملية التدريب.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب كتابة الكود بطريقة يسهل تعديلها أو توسيعها لاحقًا.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028175000000000006,
+                "inference_time": 3.7327373027801514,
+                "input_tokens": 827,
+                "output_tokens": 75,
+                "accumulated_cost": 0.0022725,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد استخدام خوارزمية \"Q-learning\" في `src/train.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو تأكيد استخدام الخوارزمية."
+                ]
+            },
+            "total_time": 11.84935975074768
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية للمستخدم تحديد حجم الشبكة ومواقع البداية/النهاية.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003125,
+                "inference_time": 2.9008278846740723,
+                "input_tokens": 846,
+                "output_tokens": 101,
+                "accumulated_cost": 0.0045375,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد أن بيئة \"Gridworld\" تم تعريفها في `src/env.py` مع إمكانية تحديد حجم الشبكة ومواقع البداية/النهاية، لأن الملف `src/env.py` غير موجود وفقًا للمعلومات المتاحة. على الرغم من أن الخطوات المرجعية تشير إلى أن البيئة تم تحميلها وتعديلها بنجاح، إلا أن عدم وجود الملف فعليًا في المشروع يجعل من المستحيل التحقق من هذا المعيار."
+                ]
+            },
+            "total_time": 9.177803993225098
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تسجيل منحنيات التعلم أثناء التدريب، وحفظها كـ `results/figures/learning_curve.png`. يتم تسجيل الحلقات والعوائد.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00278,
+                "inference_time": 1.8973588943481445,
+                "input_tokens": 788,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0062,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن الخطوات ذات الصلة تشير إلى أن ملف `results/figures/learning_curve.png` تم حفظه بنجاح، إلا أن الأدلة الرئيسية تشير إلى أن الملف غير موجود حاليًا في المسار المحدد. هذا يتعارض مع المعيار الذي يتطلب تسجيل منحنيات التعلم وحفظها كملف صورة."
+                ]
+            },
+            "total_time": 5.756418704986572
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ النموذج المتعلم كـ `models/saved_models/q_learning_model.npy`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028000000000000004,
+                "inference_time": 2.1706063747406006,
+                "input_tokens": 816,
+                "output_tokens": 76,
+                "accumulated_cost": 0.008257500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `q_learning_model.npy` غير موجود في المسار المحدد. على الرغم من أن الخطوات اللاحقة تشير إلى أن الدليل تم إنشاؤه وتمت محاولة الحفظ بنجاح، إلا أن عدم وجود الملف في الموقع المحدد يشير إلى أن المتطلب لم يتحقق."
+                ]
+            },
+            "total_time": 9.369404554367065
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور المسارات المتخذة أثناء التعلم وحفظها كـ `results/figures/path_changes.gif`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0025175,
+                "inference_time": 1.9749372005462646,
+                "input_tokens": 703,
+                "output_tokens": 76,
+                "accumulated_cost": 0.010020000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن هناك تحذيرًا يشير إلى أن المسار المحدد لحفظ الملف `results/figures/path_changes.gif` قد لا يكون موجودًا أو أن هناك مشكلة في الأذونات. هذا التحذير يؤثر على نجاح حفظ الملف وبالتالي على القدرة على تصور المسارات المتخذة بشكل صحيح."
+                ]
+            },
+            "total_time": 6.638628721237183
+        }
+    ]
+}

@@ -1,0 +1,215 @@
+{
+    "name": "33_Object_Detection_YOLOv3_COCO_DL",
+    "query": "ساعدني في تطوير نظام لكشف الأجسام باستخدام نموذج YOLOv3 ومجموعة بيانات COCO. قم بتنزيل مجموعة البيانات ومعالجة الصور عن طريق تغيير الحجم والتطبيع في `src/data_loader.py`. قم بتنفيذ نموذج YOLOv3 واستخدم Non-Maximum Suppression (NMS) لتحسين النتائج في `src/model.py`. احفظ الأجسام المكتشفة في `results/figures/`، وأنشئ صفحة ويب تفاعلية باستخدام Streamlit في `src/app.py` لعرض نتائج الكشف. أخيرًا، قم بتقييم أداء النموذج، بما في ذلك المقاييس مثل mAP ووقت الاستدلال، واحفظ نتائج التقييم في `results/metrics/model_performance.txt`. يجب أن يدير النظام بشكل صحيح إطلاق وإنهاء تطبيق Streamlit لمنع استخدام الموارد غير الضروري.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنزيل مجموعة البيانات \"COCO\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك تغيير حجم الصور وتطبيعها، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"YOLOv3\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم تطبيق \"القمع غير الأقصى\" (NMS) لتحسين نتائج الكشف. يرجى تنفيذ ذلك في `src/model.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج الكشف في المجلد المحدد `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء صفحة ويب تفاعلية في `src/app.py` باستخدام \"Streamlit\" لعرض نتائج الكشف المحفوظة في `results/figures/`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج تقييم أداء النموذج في `results/metrics/model_performance.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون صفحة الويب \"Streamlit\" سهلة الاستخدام، مما يسمح للمستخدمين بتحميل وعرض صور جديدة للكشف بسهولة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يشمل تقييم الأداء مقاييس مثل mAP ووقت الاستدلال.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يدير النظام بشكل صحيح إطلاق وإنهاء تطبيق Streamlit.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تنزيل مجموعة البيانات \"COCO\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027325,
+                "inference_time": 1.7521817684173584,
+                "input_tokens": 805,
+                "output_tokens": 72,
+                "accumulated_cost": 0.00215,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود، مما يعني أنه لا يمكن تنفيذ أي عملية تنزيل لمجموعة البيانات \"COCO\". بالإضافة إلى ذلك، تشير الأدلة إلى وجود تحذير وخطأ متعلقين بتحميل البيانات، مما يعزز عدم تحقيق المتطلب."
+                ]
+            },
+            "total_time": 10.180623292922974
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك تغيير حجم الصور وتطبيعها، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030325000000000005,
+                "inference_time": 2.5527141094207764,
+                "input_tokens": 821,
+                "output_tokens": 98,
+                "accumulated_cost": 0.0043775,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار معالجة البيانات المسبقة، بما في ذلك تغيير حجم الصور وتطبيعها، قد تم تنفيذها في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. بالإضافة إلى ذلك، تشير الأدلة المرجعية إلى وجود تحذيرات وأخطاء تتعلق بتغيير حجم الصور وتطبيعها، مما يدل على أن هذه العمليات لم تُنفذ بشكل صحيح أو لم تُنفذ على الإطلاق."
+                ]
+            },
+            "total_time": 8.295227289199829
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ نموذج \"YOLOv3\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028650000000000004,
+                "inference_time": 2.007120370864868,
+                "input_tokens": 738,
+                "output_tokens": 102,
+                "accumulated_cost": 0.0064075,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل واضح في المعلومات المتاحة يشير إلى أن نموذج \"YOLOv3\" قد تم تنفيذه بنجاح في `src/model.py`. بينما تم حل مشكلة الاعتماد المفقود وتم تنفيذ الملف بنجاح، لا يوجد تأكيد على أن النموذج نفسه قد تم تنفيذه بشكل صحيح أو أن الأداء كان مقبولًا. التحذير بشأن تدهور الأداء المحتمل يشير إلى أن التنفيذ قد لا يكون مثاليًا."
+                ]
+            },
+            "total_time": 7.556753635406494
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تطبيق \"القمع غير الأقصى\" (NMS) لتحسين نتائج الكشف. يرجى تنفيذ ذلك في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027475000000000004,
+                "inference_time": 1.8558564186096191,
+                "input_tokens": 807,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0085325,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/model.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ NMS بنجاح في `src/model.py`، إلا أن عدم وجود الملف فعليًا يعني أن التحقق من تنفيذ NMS غير ممكن."
+                ]
+            },
+            "total_time": 7.0404627323150635
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ نتائج الكشف في المجلد المحدد `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003555,
+                "inference_time": 2.9855921268463135,
+                "input_tokens": 1050,
+                "output_tokens": 93,
+                "accumulated_cost": 0.0103175,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الأدلة المقدمة تشير إلى أن الملفات في المجلد `results/figures/` لا توجد، حيث تظهر رسائل خطأ تفيد بعدم وجود الملفات `filename1` إلى `filename5`. على الرغم من أن خطوات التنفيذ تشير إلى أن الملفات تم حفظها بنجاح، إلا أن الأدلة الفعلية من محتوى الملفات تتعارض مع ذلك، مما يعني أن المتطلب لم يتحقق."
+                ]
+            },
+            "total_time": 8.510915040969849
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء صفحة ويب تفاعلية في `src/app.py` باستخدام \"Streamlit\" لعرض نتائج الكشف المحفوظة في `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029100000000000003,
+                "inference_time": 1.5322797298431396,
+                "input_tokens": 876,
+                "output_tokens": 72,
+                "accumulated_cost": 0.012315,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا لأن الملف `src/app.py` غير موجود، مما يعني أنه لا يمكن إنشاء صفحة ويب تفاعلية باستخدام \"Streamlit\". بالإضافة إلى ذلك، فإن المجلد `results/figures/` غير موجود، مما يعني أنه لا توجد نتائج للكشف يمكن عرضها."
+                ]
+            },
+            "total_time": 6.74561619758606
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم حفظ نتائج تقييم أداء النموذج في `results/metrics/model_performance.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030600000000000002,
+                "inference_time": 2.0026471614837646,
+                "input_tokens": 856,
+                "output_tokens": 92,
+                "accumulated_cost": 0.01465,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The evidence indicates that the file `benchmark_tests\\Arabic\\OpenHands\\workspaces\\OpenHands\\33_Object_Detection\\results\\metrics\\model_performance.txt` does not exist, as shown by the error message. Despite the trajectory evidence suggesting successful saving and loading, the current state of the project shows the file is missing, which means the requirement to save model performance results in the specified file is not met."
+                ]
+            },
+            "total_time": 5.734705209732056
+        }
+    ]
+}

@@ -1,0 +1,210 @@
+{
+    "name": "32_Weather_Data_Analysis_LinearRegression_Weather_ML",
+    "query": "تطوير نظام لتحليل بيانات الطقس باستخدام نموذج الانحدار الخطي على مجموعة بيانات الطقس من Kaggle. قم بتحميل مجموعة البيانات وتنفيذ هندسة الميزات، بما في ذلك اختيار وتوليد الميزات ومعالجة البيانات المفقودة باستخدام تعويض المتوسط أو الاستيفاء في `src/data_loader.py`. ثم، يجب تطبيق نموذج الانحدار الخطي في `src/model.py`. قم بتصور وحفظ مصفوفة الارتباط في `results/figures/correlation_matrix.png` ونتائج التنبؤ كخط بياني مع فواصل الثقة في `results/figures/prediction_results.png`. أخيرًا، قم بإنشاء تقرير مفصل يغطي معالجة البيانات الأولية، هندسة الميزات، تدريب النموذج، ونتائج التنبؤ. احفظ التقرير في `results/weather_analysis_report.pdf`. يجب أن تكون عملية هندسة الميزات موثقة جيدًا.",
+    "tags": [
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Kaggle Weather\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار وتوليد الميزات، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم التعامل مع البيانات المفقودة باستخدام التعويض بالمتوسط أو الاستيفاء في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم استخدام نموذج \"Linear Regression\" لتحليل بيانات الطقس ويجب تنفيذه في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ مصفوفة الارتباط كـ `results/figures/correlation_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم رسم نتائج التنبؤ وحفظها كخط بياني مع فترات ثقة. يتم حفظ الرسم كـ `results/figures/prediction_results.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                5
+            ],
+            "criteria": "يتم إنشاء تقرير مفصل يحتوي على معالجة البيانات الأولية، وهندسة الميزات، وتدريب النموذج، ونتائج التنبؤ وحفظه كـ `results/weather_analysis_report.pdf`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون عملية هندسة الميزات موثقة بوضوح في التقرير، موضحة الأسباب وراء اختيار وتوليد الميزات.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن التقرير مناقشة حول مصفوفة الارتباط، مسلطًا الضوء على أي علاقات مثيرة للاهتمام بين الميزات.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة البيانات \"Kaggle Weather\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00289,
+                "inference_time": 2.3161115646362305,
+                "input_tokens": 828,
+                "output_tokens": 82,
+                "accumulated_cost": 0.002275,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود في المسار المحدد، مما يعني أنه لا يمكن تحميل مجموعة البيانات \"Kaggle Weather\" من هذا الملف. على الرغم من أن هناك إشارة إلى تنفيذ ناجح في خطوات سابقة، إلا أن عدم وجود الملف فعليًا يتعارض مع هذا الادعاء."
+                ]
+            },
+            "total_time": 10.490831136703491
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار وتوليد الميزات، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0025525,
+                "inference_time": 1.7484080791473389,
+                "input_tokens": 717,
+                "output_tokens": 76,
+                "accumulated_cost": 0.004217500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا توجد أدلة محددة في المعلومات المقدمة تشير إلى تنفيذ هندسة الميزات، بما في ذلك اختيار وتوليد الميزات، في `src/data_loader.py`. المعلومات المتاحة تشير فقط إلى تحميل الملف بنجاح دون أخطاء، ولكنها لا تقدم تفاصيل حول محتوى الملف أو وظائفه المتعلقة بهندسة الميزات."
+                ]
+            },
+            "total_time": 5.153545618057251
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم التعامل مع البيانات المفقودة باستخدام التعويض بالمتوسط أو الاستيفاء في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00254,
+                "inference_time": 3.266559600830078,
+                "input_tokens": 768,
+                "output_tokens": 62,
+                "accumulated_cost": 0.006570000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: التحذير المذكور في الأدلة يشير إلى أن بعض القيم المفقودة لم يتم تعويضها بشكل صحيح باستخدام التعويض بالمتوسط أو الاستيفاء في `src/data_loader.py`. هذا يشير إلى أن المتطلب لم يتم تحقيقه بالكامل."
+                ]
+            },
+            "total_time": 7.750483989715576
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام نموذج \"Linear Regression\" لتحليل بيانات الطقس ويجب تنفيذه في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028400000000000005,
+                "inference_time": 2.9125289916992188,
+                "input_tokens": 828,
+                "output_tokens": 77,
+                "accumulated_cost": 0.008830000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن الملف `src/model.py` غير موجود، مما يعني أنه لا يمكن التحقق من تنفيذ نموذج \"Linear Regression\" لتحليل بيانات الطقس في هذا الملف. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل تأكيد ذلك بشكل قاطع."
+                ]
+            },
+            "total_time": 7.959138631820679
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ مصفوفة الارتباط كـ `results/figures/correlation_matrix.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002625,
+                "inference_time": 2.0208628177642822,
+                "input_tokens": 754,
+                "output_tokens": 74,
+                "accumulated_cost": 0.011065000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار حيث تشير الأدلة إلى أنه بعد إنشاء الدليل `results/figures/` بنجاح، تمت محاولة حفظ مصفوفة الارتباط مرة أخرى دون أي أخطاء أو تحذيرات إضافية، مما يدل على أن الملف `correlation_matrix.png` قد تم حفظه بنجاح."
+                ]
+            },
+            "total_time": 7.025404214859009
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم رسم نتائج التنبؤ وحفظها كخط بياني مع فترات ثقة. يتم حفظ الرسم كـ `results/figures/prediction_results.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027700000000000003,
+                "inference_time": 1.7049031257629395,
+                "input_tokens": 828,
+                "output_tokens": 70,
+                "accumulated_cost": 0.013755000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل واضح في المعلومات المقدمة يشير إلى أن الرسم البياني يتضمن فترات ثقة. بينما تم حل مشكلة مسار الدليل وتم حفظ الرسم البياني بنجاح، لا توجد تفاصيل حول ما إذا كانت فترات الثقة قد تم تضمينها في الرسم البياني المحفوظ."
+                ]
+            },
+            "total_time": 7.886669397354126
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء تقرير مفصل يحتوي على معالجة البيانات الأولية، وهندسة الميزات، وتدريب النموذج، ونتائج التنبؤ وحفظه كـ `results/weather_analysis_report.pdf`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029375000000000004,
+                "inference_time": 2.396906614303589,
+                "input_tokens": 819,
+                "output_tokens": 89,
+                "accumulated_cost": 0.0157025,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: التقرير المطلوب `results/weather_analysis_report.pdf` غير موجود، كما هو موضح في الدليل الذي يشير إلى خطأ في وجود الملف. بالإضافة إلى ذلك، هناك مشاكل في حفظ الملف بسبب امتلاء الدليل تقريبًا، وأخطاء في البيانات المفقودة خلال مرحلة هندسة الميزات، مما يؤثر على دقة واكتمال التحليل والتنبؤات في التقرير."
+                ]
+            },
+            "total_time": 7.252710580825806
+        }
+    ]
+}

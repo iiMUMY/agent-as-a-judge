@@ -1,0 +1,204 @@
+{
+    "name": "28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+    "query": "هل يمكنك مساعدتي في بناء نظام لتوقع أسعار الأسهم باستخدام نموذج LSTM ومجموعة بيانات Yahoo Finance؟ يرجى تنظيف البيانات، بما في ذلك التعامل مع القيم المفقودة والقيم الشاذة، واستخدام نافذة زمنية لتحويل بيانات السلاسل الزمنية إلى مشكلة تعلم تحت إشراف. يجب تنفيذ نموذج LSTM في `src/model.py`، ويجب تنفيذ تحميل البيانات وتنظيفها وتحويلها في `src/data_loader.py`. احفظ نتائج التوقعات في `results/predictions.txt` وقم بإنشاء وحفظ رسوم بيانية تفاعلية لنتائج التوقعات في `results/figures/prediction_interactive.html` باستخدام Plotly. أنشئ دفتر Jupyter مع تصور بنية النموذج وعملية التدريب ونتائج التوقعات واحفظه كتقرير PDF في `results/report.pdf`.",
+    "tags": [
+        "Financial Analysis",
+        "Supervised Learning",
+        "Time Series Forecasting"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم تنفيذ النموذج \"LSTM\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Yahoo Finance\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تنظيف البيانات، بما في ذلك التعامل مع القيم المفقودة والقيم الشاذة، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                2
+            ],
+            "criteria": "يتم استخدام نافذة زمنية لتحويل بيانات السلاسل الزمنية إلى مشكلة تعلم تحت إشراف. يرجى حفظ التنفيذ في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التنبؤ في `results/predictions.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم إنشاء الرسوم البيانية التفاعلية لنتائج التنبؤ باستخدام \"Plotly\" وحفظها في `results/figures/prediction_interactive.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء دفتر Jupyter يحتوي على تصور بنية النموذج وعملية التدريب ونتائج التنبؤ وحفظه كتقرير PDF في `results/report.pdf`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "تم تنفيذ النموذج \"LSTM\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028175000000000006,
+                "inference_time": 2.2764194011688232,
+                "input_tokens": 835,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0023375,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار تنفيذ النموذج \"LSTM\" في `src/model.py` محققًا لأن الملف `model.py` غير موجود في المسار المحدد. بالإضافة إلى ذلك، لا يوجد دليل على وجود أي كود فعلي في الملف المذكور، مما يعني أن النموذج لم يتم تنفيذه في هذا الملف."
+                ]
+            },
+            "total_time": 8.120659828186035
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تحميل مجموعة البيانات \"Yahoo Finance\" في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002405,
+                "inference_time": 1.620150089263916,
+                "input_tokens": 730,
+                "output_tokens": 58,
+                "accumulated_cost": 0.0044175,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحميل مجموعة البيانات \"Yahoo Finance\" بنجاح في `src/data_loader.py`، حيث لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية التحميل، مما يشير إلى أن تحميل البيانات تم بنجاح ودون مشاكل."
+                ]
+            },
+            "total_time": 6.640089511871338
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنظيف البيانات، بما في ذلك التعامل مع القيم المفقودة والقيم الشاذة، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030150000000000003,
+                "inference_time": 2.304678201675415,
+                "input_tokens": 774,
+                "output_tokens": 108,
+                "accumulated_cost": 0.006797500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: المعيار غير محقق بالكامل. على الرغم من أن `src/data_loader.py` تم تنفيذه بنجاح، إلا أن هناك تحذيرًا بشأن القيم المفقودة التي لم يتم التعامل معها بشكل كامل، مما يشير إلى أن تنظيف البيانات لم يتم بشكل كامل. بالإضافة إلى ذلك، تم الإشارة إلى وجود تحسينات محتملة في التعامل مع القيم الشاذة، مما يعني أن هذه الجوانب لم تُعالج بشكل كافٍ في الكود الحالي."
+                ]
+            },
+            "total_time": 7.325864315032959
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام نافذة زمنية لتحويل بيانات السلاسل الزمنية إلى مشكلة تعلم تحت إشراف. يرجى حفظ التنفيذ في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026675,
+                "inference_time": 1.6170375347137451,
+                "input_tokens": 819,
+                "output_tokens": 62,
+                "accumulated_cost": 0.00892,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يعني أن التنفيذ لم يتم حفظه كما هو مطلوب."
+                ]
+            },
+            "total_time": 7.566404104232788
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ نتائج التنبؤ في `results/predictions.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027500000000000003,
+                "inference_time": 1.4923546314239502,
+                "input_tokens": 832,
+                "output_tokens": 67,
+                "accumulated_cost": 0.0110875,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `results/predictions.txt` غير موجود، حيث يظهر خطأ عند محاولة الوصول إليه. على الرغم من أن خطوات المسار تشير إلى أن العملية تمت بنجاح، إلا أن عدم وجود الملف فعليًا يتعارض مع هذا الادعاء."
+                ]
+            },
+            "total_time": 7.6140429973602295
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء الرسوم البيانية التفاعلية لنتائج التنبؤ باستخدام \"Plotly\" وحفظها في `results/figures/prediction_interactive.html`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026650000000000003,
+                "inference_time": 1.5640559196472168,
+                "input_tokens": 850,
+                "output_tokens": 54,
+                "accumulated_cost": 0.013340000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن الملف `prediction_interactive.html` غير موجود في المسار المحدد، كما تم تسجيل خطأ أثناء محاولة تحميل الملف المحفوظ، مما يشير إلى أنه لم يتم حفظه بشكل صحيح."
+                ]
+            },
+            "total_time": 6.863991975784302
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء دفتر Jupyter يحتوي على تصور بنية النموذج وعملية التدريب ونتائج التنبؤ وحفظه كتقرير PDF في `results/report.pdf`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026725000000000004,
+                "inference_time": 2.10259747505188,
+                "input_tokens": 749,
+                "output_tokens": 80,
+                "accumulated_cost": 0.015467500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا توجد أدلة كافية تشير إلى أن دفتر Jupyter يحتوي على تصور بنية النموذج وعملية التدريب ونتائج التنبؤ. المعلومات المتاحة تشير فقط إلى وجود تحذير متعلق بمكتبة التصور ومشكلة في حفظ التقرير كملف PDF، ولكنها لا تؤكد أن جميع العناصر المطلوبة تم تضمينها في التقرير."
+                ]
+            },
+            "total_time": 9.265893936157227
+        }
+    ]
+}

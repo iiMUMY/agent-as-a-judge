@@ -1,0 +1,184 @@
+{
+    "name": "09_Recommendation_System_NCF_MovieLens_ML",
+    "query": "ساعدني في تطوير نظام لتوصية الأفلام بناءً على تقييمات المستخدمين من مجموعة بيانات MovieLens باستخدام نهج التصفية التعاونية العصبية (NCF). أولاً، قم بتحميل مجموعة البيانات وقسمها إلى مجموعات تدريب واختبار في `src/data_loader.py`. بعد ذلك، قم بتنفيذ نهج NCF وخط أساس تحليل المصفوفة في `src/model.py`. باستخدام هذه النماذج، اطبع مثالاً لأفضل 10 توصيات لمستخدم اختبار باستخدام نهج NCF وخط الأساس واحفظها في `results/metrics/top_10_recommendations.txt`. سيكون من الجيد إذا كانت هذه التوصيات النموذجية ذات مغزى بالنظر إلى المستخدم الاختباري. قم بتقييم أداء النظام باستخدام RMSE، MAE، إلخ، واحفظ نتائج هذا التقييم في `results/metrics/evaluation_metrics.txt`. حاول التأكد من وجود معالجة قوية للمسارات يمكنها التعامل مع الدلائل المفقودة وما شابه عند حفظ الملفات.",
+    "tags": [
+        "Recommender Systems",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية \"Neural Collaborative Filtering (NCF)\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"MovieLens\" في 'src/data_loader.py'.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تقسيم البيانات إلى مجموعات تدريب واختبار في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خط أساس تحليل المصفوفة في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ أفضل 10 توصيات لمستخدم اختبار تحت نهج \"NCF\" والخط الأساسي في `results/metrics/top_10_recommendations.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تقييم أداء نظام التوصية، بما في ذلك باستخدام \"RMSE\" و\"MAE\"، ويتم حفظ النتائج كـ `results/metrics/evaluation_metrics.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "تم تنفيذ معالجة قوية للمسارات للتعامل مع أشياء مثل الدلائل المفقودة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون أفضل 10 توصيات واضحة وذات صلة بتفضيلات المستخدم النموذجي.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تنفيذ خوارزمية \"Neural Collaborative Filtering (NCF)\" في `src/model.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026950000000000003,
+                "inference_time": 3.394998788833618,
+                "input_tokens": 790,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0025050000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ خوارزمية \"Neural Collaborative Filtering (NCF)\" بنجاح في `src/model.py` كما هو موضح في الخطوات ذات الصلة في مسار التنفيذ. على الرغم من وجود تحذير بشأن توافق إصدار مكتبة معينة، إلا أن الخوارزمية تم تحميلها وتنفيذها."
+                ]
+            },
+            "total_time": 13.326883792877197
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تحميل مجموعة البيانات \"MovieLens\" في 'src/data_loader.py'.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027775000000000005,
+                "inference_time": 1.8587114810943604,
+                "input_tokens": 819,
+                "output_tokens": 73,
+                "accumulated_cost": 0.004725,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف 'src/data_loader.py' غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن هناك إشارة إلى تنفيذ تحميل مجموعة البيانات \"MovieLens\" في هذا الملف، إلا أن عدم وجود الملف فعليًا يعني أن العملية لا يمكن أن تكون قد تمت بنجاح."
+                ]
+            },
+            "total_time": 9.947221755981445
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تقسيم البيانات إلى مجموعات تدريب واختبار في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027,
+                "inference_time": 2.483319044113159,
+                "input_tokens": 816,
+                "output_tokens": 66,
+                "accumulated_cost": 0.0069325,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد أن البيانات تم تقسيمها إلى مجموعات تدريب واختبار في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. بالإضافة إلى ذلك، لا يوجد دليل مباشر في المعلومات المتاحة يشير إلى تنفيذ عملية تقسيم البيانات بنجاح."
+                ]
+            },
+            "total_time": 10.379375696182251
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ خط أساس تحليل المصفوفة في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027475,
+                "inference_time": 2.857959032058716,
+                "input_tokens": 759,
+                "output_tokens": 85,
+                "accumulated_cost": 0.009222500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل واضح على تنفيذ خط أساس تحليل المصفوفة في `src/model.py`. بدلاً من ذلك، هناك تحذير يشير إلى عدم توافق بعض الوظائف مع الإصدار الحالي من المكتبة، بالإضافة إلى خطأ في حفظ النتائج بسبب مسار غير موجود أو غير قابل للوصول. هذه المشاكل تشير إلى أن التنفيذ لم يكتمل أو لم يتم بشكل صحيح."
+                ]
+            },
+            "total_time": 8.52597689628601
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ أفضل 10 توصيات لمستخدم اختبار تحت نهج \"NCF\" والخط الأساسي في `results/metrics/top_10_recommendations.txt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026575,
+                "inference_time": 1.982123851776123,
+                "input_tokens": 707,
+                "output_tokens": 89,
+                "accumulated_cost": 0.011047500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار حيث تم حفظ أفضل 10 توصيات لمستخدم اختبار تحت نهج \"NCF\" والخط الأساسي في `results/metrics/top_10_recommendations.txt` بنجاح، كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية الحفظ، مما يشير إلى أن العملية تمت بنجاح."
+                ]
+            },
+            "total_time": 6.316054105758667
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تقييم أداء نظام التوصية، بما في ذلك باستخدام \"RMSE\" و\"MAE\"، ويتم حفظ النتائج كـ `results/metrics/evaluation_metrics.txt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028150000000000002,
+                "inference_time": 2.202183485031128,
+                "input_tokens": 778,
+                "output_tokens": 87,
+                "accumulated_cost": 0.013427500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تقييم أداء نظام التوصية باستخدام مقاييس الأداء \"RMSE\" و\"MAE\"، وتم حفظ النتائج بنجاح في الملف `results/metrics/evaluation_metrics.txt` كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية الحفظ أو التحميل، مما يشير إلى أن المتطلب قد تحقق بالكامل."
+                ]
+            },
+            "total_time": 12.538021326065063
+        }
+    ]
+}

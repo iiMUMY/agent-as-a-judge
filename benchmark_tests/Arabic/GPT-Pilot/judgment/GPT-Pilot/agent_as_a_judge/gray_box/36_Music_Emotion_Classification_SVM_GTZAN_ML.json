@@ -1,0 +1,223 @@
+{
+    "name": "36_Music_Emotion_Classification_SVM_GTZAN_ML",
+    "query": "ساعدني في تطوير مشروع لتصنيف مشاعر الموسيقى باستخدام نموذج SVM مع مجموعة بيانات GTZAN. يجب أن يتضمن المشروع معالجة الصوت المسبق باستخدام مكتبة librosa لإزالة الضوضاء والتطبيع، واستخراج ميزات MFCC مع 13 معاملًا، واستخدام مصنف SVM خطي مع ضبط المعاملات الفائقة. يجب تنفيذ تحميل مجموعة البيانات، معالجة الصوت المسبق، بما في ذلك إزالة الضوضاء والتطبيع، واستخراج ميزات MFCC في `src/data_loader.py`. نفذ مصنف SVM في `src/model.py`. احفظ نتائج التصنيف في `results/predictions.txt`، وقم بتصور مخططات الطيف الصوتي باستخدام librosa (وحفظها في `results/figures/`)، وأنشئ صفحة ويب تفاعلية في `src/app.py` باستخدام Streamlit تتيح تحميل ملفات الصوت في الوقت الحقيقي وتعرض نتائج التصنيف ومخططات الطيف في `results/figures/`. تأكد من إدارة الموارد بكفاءة مع الانتباه إلى إدارة إطلاق وإنهاء صفحة الويب Streamlit تلقائيًا.",
+    "tags": [
+        "Audio Processing",
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مشاعر الموسيقى \"GTZAN\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة الصوت المسبق، بما في ذلك إزالة الضوضاء والتطبيع، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تنفيذ استخراج ميزات MFCC في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم تنفيذ \"مصنف SVM\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التصنيف في `results/predictions.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور مخططات الطيف الصوتي باستخدام \"librosa\" وحفظها في `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء صفحة ويب تفاعلية في `src/app.py` باستخدام \"Streamlit\" لعرض نتائج التصنيف ومخططات الطيف في `results/figures/`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تسمح صفحة الويب \"Streamlit\" للمستخدمين بتحميل ملفات صوتية جديدة وعرض نتائج التصنيف في الوقت الحقيقي.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تتضمن تصورات مخططات الطيف خيارات لضبط نطاق التردد ودقة الوقت لتحليل أعمق.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يقوم النظام بإدارة الموارد بكفاءة خاصة في إدارة إطلاق وإنهاء صفحة الويب Streamlit.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مشاعر الموسيقى \"GTZAN\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002775,
+                "inference_time": 1.607825756072998,
+                "input_tokens": 822,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0021775,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد تحميل مشاعر الموسيقى \"GTZAN\" في `src/data_loader.py` لأن الملف المذكور غير موجود وفقًا للمعلومات المتاحة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من ذلك بشكل قاطع."
+                ]
+            },
+            "total_time": 9.997583389282227
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة الصوت المسبق، بما في ذلك إزالة الضوضاء والتطبيع، في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024975,
+                "inference_time": 2.031508445739746,
+                "input_tokens": 703,
+                "output_tokens": 74,
+                "accumulated_cost": 0.0039825,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ معالجة الصوت المسبق بنجاح في `src/data_loader.py`، بما في ذلك إزالة الضوضاء والتطبيع، كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات، مما يشير إلى أن الوظائف المتعلقة بمعالجة الصوت تعمل بشكل صحيح."
+                ]
+            },
+            "total_time": 6.274330377578735
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ استخراج ميزات MFCC في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026575,
+                "inference_time": 2.0354108810424805,
+                "input_tokens": 767,
+                "output_tokens": 74,
+                "accumulated_cost": 0.0057,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح لاستخراج ميزات MFCC، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من تنفيذ هذه الوظيفة فعليًا."
+                ]
+            },
+            "total_time": 5.048183917999268
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ \"مصنف SVM\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029125,
+                "inference_time": 2.294137716293335,
+                "input_tokens": 765,
+                "output_tokens": 100,
+                "accumulated_cost": 0.007957500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد دليل واضح في المعلومات المقدمة يشير إلى أن \"مصنف SVM\" قد تم تنفيذه بنجاح في `src/model.py`. بينما تم ذكر أن هناك تحذيرًا أثناء تنفيذ مصنف SVM، إلا أن هذا يشير إلى مشكلة في تحجيم البيانات، وليس إلى تنفيذ ناجح. بالإضافة إلى ذلك، هناك خطأ في حفظ النموذج، مما يشير إلى أن العملية لم تكتمل بنجاح."
+                ]
+            },
+            "total_time": 6.94089674949646
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ نتائج التصنيف في `results/predictions.txt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024000000000000002,
+                "inference_time": 2.0636589527130127,
+                "input_tokens": 736,
+                "output_tokens": 56,
+                "accumulated_cost": 0.009992500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم حفظ نتائج التصنيف في `results/predictions.txt` بنجاح كما هو موضح في الخطوة 7 من الأدلة المقدمة، حيث تم الإشارة إلى أن الملف تم إنشاؤه وتخزينه دون مشاكل."
+                ]
+            },
+            "total_time": 5.357991933822632
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تصور مخططات الطيف الصوتي باستخدام \"librosa\" وحفظها في `results/figures/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024400000000000003,
+                "inference_time": 1.8539903163909912,
+                "input_tokens": 700,
+                "output_tokens": 69,
+                "accumulated_cost": 0.011767500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحقيق المعيار حيث تم الإشارة إلى أن مخططات الطيف الصوتي تم تصورها باستخدام مكتبة \"librosa\" وحفظها بنجاح في الدليل `results/figures/` دون أي أخطاء أو تحذيرات، مما يدل على أن العملية تمت كما هو مطلوب."
+                ]
+            },
+            "total_time": 5.934067964553833
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء صفحة ويب تفاعلية في `src/app.py` باستخدام \"Streamlit\" لعرض نتائج التصنيف ومخططات الطيف في `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030425,
+                "inference_time": 2.1127560138702393,
+                "input_tokens": 917,
+                "output_tokens": 75,
+                "accumulated_cost": 0.013980000000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يوجد ملف `src/app.py` في المسار المحدد، مما يعني أن صفحة الويب التفاعلية لم يتم إنشاؤها. بالإضافة إلى ذلك، لا يوجد دليل على وجود مخططات الطيف في `results/figures/`، مما يشير إلى أن النتائج المطلوبة لعرضها غير متوفرة."
+                ]
+            },
+            "total_time": 5.928603410720825
+        }
+    ]
+}

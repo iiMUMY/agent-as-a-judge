@@ -1,0 +1,216 @@
+{
+    "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+    "query": "ساعدني في تطوير نظام للتنبؤ بتسرب العملاء باستخدام مجموعة بيانات Telco Customer Churn، والتي يمكن تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). قم بتحميل مجموعة البيانات في `src/data_loader.py`. يجب أن يتضمن المشروع هندسة الميزات، مثل اختيار الميزات وتوسيعها، والتعامل مع البيانات غير المتوازنة باستخدام تقنيات زيادة أو تقليل العينة المطبقة في `src/data_loader.py`. التفاصيل الدقيقة لهذا متروكة لك لتقررها. قم بتنفيذ نموذج الانحدار اللوجستي في `src/model.py` وأجرِ التحقق المتقاطع أثناء تدريب النموذج في `src/train.py`. أخيرًا، اطبع واحفظ تقرير التصنيف (بما في ذلك الدقة والاسترجاع ودرجة F1) في `results/metrics/classification_report.txt`، واحفظ منحنى ROC في `results/figures/roc_curve.png`. تأكد من تحميل مجموعة البيانات بسلاسة مع معالجة الأخطاء المناسبة. يجب أن تختار هندسة الميزات بدقة الميزات الأكثر صلة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Telco Customer Churn\"، مع إمكانية تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار الميزات وتقييسها، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة أو التقليل من العينة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"Logistic Regression\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاستدعاء\" و\"درجة F1\"، كملف `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ \"منحنى ROC\" كملف `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة، مع معالجة الأخطاء بشكل مناسب إذا ظهرت مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون عملية هندسة الميزات شاملة، مما يضمن اختيار الميزات الأكثر صلة للنموذج.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Telco Customer Churn\"، مع إمكانية تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002885,
+                "inference_time": 1.7925288677215576,
+                "input_tokens": 834,
+                "output_tokens": 80,
+                "accumulated_cost": 0.002105,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل يشير إلى أن الملف `src/data_loader.py` غير موجود، مما يعني أنه لا يمكن تحميل مجموعة البيانات \"Telco Customer Churn\" باستخدام هذا الملف كما هو مطلوب. على الرغم من أن الخطوات السابقة تشير إلى أن تحميل البيانات تم بنجاح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من ذلك بشكل قاطع."
+                ]
+            },
+            "total_time": 10.31122374534607
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار الميزات وتقييسها، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028625000000000005,
+                "inference_time": 2.0408835411071777,
+                "input_tokens": 749,
+                "output_tokens": 99,
+                "accumulated_cost": 0.00425,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: على الرغم من أن `src/data_loader.py` تم تحميله بنجاح دون أخطاء، إلا أن هناك تحذيرًا حول عدم استخدام بعض الميزات المختارة في النموذج النهائي. هذا يشير إلى أن عملية اختيار الميزات قد لا تكون قد نُفذت بشكل كامل أو فعال لضمان أن جميع الميزات المختارة ذات صلة بالنموذج. لا يوجد دليل واضح على تنفيذ تقييس الميزات في المعلومات المتاحة."
+                ]
+            },
+            "total_time": 6.475579023361206
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة أو التقليل من العينة في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027150000000000004,
+                "inference_time": 1.9816455841064453,
+                "input_tokens": 798,
+                "output_tokens": 72,
+                "accumulated_cost": 0.006755000000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة والتقليل من العينة في `src/data_loader.py`. تم تنفيذ هذه التقنيات بنجاح دون أي أخطاء أو تحذيرات كبيرة، مما يشير إلى أن الوظائف المتعلقة بمعالجة البيانات غير المتوازنة تعمل بشكل صحيح."
+                ]
+            },
+            "total_time": 9.525707960128784
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ نموذج \"Logistic Regression\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026875000000000002,
+                "inference_time": 1.8147194385528564,
+                "input_tokens": 811,
+                "output_tokens": 66,
+                "accumulated_cost": 0.0089025,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `src/model.py` غير موجود، مما يعني أنه لا يمكن تنفيذ نموذج \"Logistic Regression\" في هذا الملف. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يتعارض مع هذا الادعاء."
+                ]
+            },
+            "total_time": 6.706217527389526
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00286,
+                "inference_time": 2.712085008621216,
+                "input_tokens": 828,
+                "output_tokens": 79,
+                "accumulated_cost": 0.011147500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py` لأن الملف غير موجود فعليًا وفقًا للمعلومات المقدمة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو تأكيد استخدام التحقق المتقاطع."
+                ]
+            },
+            "total_time": 8.661477327346802
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاستدعاء\" و\"درجة F1\"، كملف `results/metrics/classification_report.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027875000000000005,
+                "inference_time": 2.2676730155944824,
+                "input_tokens": 827,
+                "output_tokens": 72,
+                "accumulated_cost": 0.013545000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم حفظ تقرير التصنيف كملف `results/metrics/classification_report.txt`، حيث تم تسجيل خطأ يشير إلى عدم وجود الدليل `results/metrics/`. بالإضافة إلى ذلك، لم يتم العثور على الملف في المسار المحدد، مما يؤكد أن عملية الحفظ لم تتم بنجاح."
+                ]
+            },
+            "total_time": 9.264997959136963
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم حفظ \"منحنى ROC\" كملف `results/figures/roc_curve.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029875,
+                "inference_time": 2.5815298557281494,
+                "input_tokens": 787,
+                "output_tokens": 102,
+                "accumulated_cost": 0.015390000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن محاولة حفظ \"منحنى ROC\" كملف `results/figures/roc_curve.png` قد فشلت في البداية بسبب عدم وجود الدليل المطلوب. على الرغم من أنه تم إنشاء الدليل لاحقًا وتمت إعادة محاولة الحفظ بنجاح، إلا أن الدليل المقدم لا يحتوي على تأكيد نهائي لوجود الملف، حيث يظهر خطأ يشير إلى أن الملف لا يزال غير موجود."
+                ]
+            },
+            "total_time": 6.793154954910278
+        }
+    ]
+}

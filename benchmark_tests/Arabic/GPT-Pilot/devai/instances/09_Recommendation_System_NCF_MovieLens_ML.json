@@ -1,0 +1,80 @@
+{
+    "name": "09_Recommendation_System_NCF_MovieLens_ML",
+    "query": "ساعدني في تطوير نظام لتوصية الأفلام بناءً على تقييمات المستخدمين من مجموعة بيانات MovieLens باستخدام نهج التصفية التعاونية العصبية (NCF). أولاً، قم بتحميل مجموعة البيانات وقسمها إلى مجموعات تدريب واختبار في `src/data_loader.py`. بعد ذلك، قم بتنفيذ نهج NCF وخط أساس تحليل المصفوفة في `src/model.py`. باستخدام هذه النماذج، اطبع مثالاً لأفضل 10 توصيات لمستخدم اختبار باستخدام نهج NCF وخط الأساس واحفظها في `results/metrics/top_10_recommendations.txt`. سيكون من الجيد إذا كانت هذه التوصيات النموذجية ذات مغزى بالنظر إلى المستخدم الاختباري. قم بتقييم أداء النظام باستخدام RMSE، MAE، إلخ، واحفظ نتائج هذا التقييم في `results/metrics/evaluation_metrics.txt`. حاول التأكد من وجود معالجة قوية للمسارات يمكنها التعامل مع الدلائل المفقودة وما شابه عند حفظ الملفات.",
+    "tags": [
+        "Recommender Systems",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية \"Neural Collaborative Filtering (NCF)\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"MovieLens\" في 'src/data_loader.py'.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تقسيم البيانات إلى مجموعات تدريب واختبار في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خط أساس تحليل المصفوفة في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ أفضل 10 توصيات لمستخدم اختبار تحت نهج \"NCF\" والخط الأساسي في `results/metrics/top_10_recommendations.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تقييم أداء نظام التوصية، بما في ذلك باستخدام \"RMSE\" و\"MAE\"، ويتم حفظ النتائج كـ `results/metrics/evaluation_metrics.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "تم تنفيذ معالجة قوية للمسارات للتعامل مع أشياء مثل الدلائل المفقودة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون أفضل 10 توصيات واضحة وذات صلة بتفضيلات المستخدم النموذجي.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

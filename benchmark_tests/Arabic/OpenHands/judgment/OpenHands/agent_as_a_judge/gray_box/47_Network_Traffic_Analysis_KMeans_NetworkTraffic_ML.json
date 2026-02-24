@@ -1,0 +1,212 @@
+{
+    "name": "47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+    "query": "تطوير نظام لتحليل حركة مرور الشبكة باستخدام خوارزمية التجميع K-means مع مجموعة بيانات التطفل على الشبكة (CIC-IDS-2017) من Kaggle. قم بتحميل مجموعة البيانات وتوحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`. قم بتنفيذ خوارزمية التجميع K-means في `src/model.py`. قم بتقييم المجموعات باستخدام معامل السيلويت واحفظ نتائج التقييم تحت `results/metrics/`. احفظ نتائج التجميع كـ `results/clustering_results.txt`. قم بتصور نتائج التجميع واحفظ المرئيات كـ `results/figures/network_traffic_visualization.png`. قم بإنشاء لوحة تحكم تفاعلية باستخدام Dash أو Bokeh لاستكشاف نتائج التجميع، واحفظ لوحة التحكم تحت `results/`. تأكد من أن النظام معياري بحيث يمكن للمستخدم تغيير خوارزمية التجميع بسرعة.",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Network Intrusion dataset (CIC-IDS-2017)\" من Kaggle يتم تحميله في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية التجميع \"K-means\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام \"معامل السيلويت\" للتقييم. يتم حفظ نتائج التقييم تحت `results/metrics/`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم طباعة نتائج التجميع وحفظها كـ `results/clustering_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم تصور تجميع حركة المرور الشبكية وحفظه كـ `results/figures/network_traffic_visualization.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم إنشاء لوحة تحكم تفاعلية باستخدام \"Dash\" أو \"Bokeh\" لعرض نتائج التجميع وحفظها تحت `results/`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تسمح لوحة التحكم للمستخدمين بتصفية والتعمق في مجموعات محددة لتحليل مفصل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تميز المرئيات بوضوح بين المجموعات المختلفة، مما يسهل التعرف على الأنماط في بيانات حركة مرور الشبكة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يكون المشروع معياريًا، مما يسمح للمستخدم بتغيير خوارزمية التجميع بسهولة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Network Intrusion dataset (CIC-IDS-2017)\" من Kaggle يتم تحميله في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025625,
+                "inference_time": 2.642169952392578,
+                "input_tokens": 765,
+                "output_tokens": 65,
+                "accumulated_cost": 0.0022500000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تحميل مجموعة بيانات \"Network Intrusion dataset (CIC-IDS-2017)\" بنجاح باستخدام `src/data_loader.py`، ولم يتم الإبلاغ عن أي أخطاء أو تحذيرات تؤثر على عملية التحميل، مما يشير إلى أن المتطلب قد تحقق بالكامل."
+                ]
+            },
+            "total_time": 9.172224760055542
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002805,
+                "inference_time": 2.1475069522857666,
+                "input_tokens": 826,
+                "output_tokens": 74,
+                "accumulated_cost": 0.004490000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تقييم توحيد البيانات في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. بالإضافة إلى ذلك، تشير الأدلة المرجعية إلى وجود تحذيرات حول عدم توحيد بعض القيم بشكل صحيح، مما يشير إلى أن عملية التوحيد قد لا تكون قد تمت بشكل صحيح."
+                ]
+            },
+            "total_time": 7.566771507263184
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ خوارزمية التجميع \"K-means\" في `src/model.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024375000000000004,
+                "inference_time": 0.9117043018341064,
+                "input_tokens": 739,
+                "output_tokens": 59,
+                "accumulated_cost": 0.0066300000000000005,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم تنفيذ خوارزمية \"K-means\" في `src/model.py` بنجاح، حيث لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء التنفيذ، مما يشير إلى أن الخوارزمية تعمل بشكل صحيح في البيئة الحالية."
+                ]
+            },
+            "total_time": 4.809979677200317
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام \"معامل السيلويت\" للتقييم. يتم حفظ نتائج التقييم تحت `results/metrics/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024125,
+                "inference_time": 1.213996410369873,
+                "input_tokens": 689,
+                "output_tokens": 69,
+                "accumulated_cost": 0.0083225,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم استخدام \"معامل السيلويت\" للتقييم، وتم حفظ النتائج بنجاح في المسار `results/metrics/` كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات، مما يشير إلى أن المتطلب قد تحقق بالكامل."
+                ]
+            },
+            "total_time": 5.888986587524414
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم طباعة نتائج التجميع وحفظها كـ `results/clustering_results.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028525000000000004,
+                "inference_time": 2.7423553466796875,
+                "input_tokens": 801,
+                "output_tokens": 85,
+                "accumulated_cost": 0.01056,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `results/clustering_results.txt` غير موجود، حيث تم تسجيل خطأ عند محاولة الوصول إليه. على الرغم من أن الخطوات اللاحقة تشير إلى أن الدليل تم إنشاؤه والنتائج تم حفظها بنجاح، إلا أن عدم وجود الملف في الدليل الحالي يشير إلى أن المعيار لم يتحقق بالكامل."
+                ]
+            },
+            "total_time": 9.375773906707764
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تصور تجميع حركة المرور الشبكية وحفظه كـ `results/figures/network_traffic_visualization.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027275000000000003,
+                "inference_time": 2.0335018634796143,
+                "input_tokens": 743,
+                "output_tokens": 87,
+                "accumulated_cost": 0.012645,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن هناك خطأ في البيئة يشير إلى عدم وجود إذن للكتابة في الدليل المحدد، مما يمنع حفظ التصور كملف `results/figures/network_traffic_visualization.png`. بالإضافة إلى ذلك، تم تسجيل تحذير حول بعض الحزم المفقودة أثناء التجميع، مما قد يؤثر على دقة التصور النهائي."
+                ]
+            },
+            "total_time": 5.307765483856201
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء لوحة تحكم تفاعلية باستخدام \"Dash\" أو \"Bokeh\" لعرض نتائج التجميع وحفظها تحت `results/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024400000000000003,
+                "inference_time": 1.267160177230835,
+                "input_tokens": 744,
+                "output_tokens": 58,
+                "accumulated_cost": 0.0147525,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: تم إنشاء لوحة تحكم تفاعلية باستخدام مكتبة \"Dash\" لعرض نتائج التجميع، وتم حفظ النتائج في المجلد `results/` بنجاح دون أي أخطاء أو تحذيرات، مما يحقق المعيار المطلوب."
+                ]
+            },
+            "total_time": 6.9802021980285645
+        }
+    ]
+}

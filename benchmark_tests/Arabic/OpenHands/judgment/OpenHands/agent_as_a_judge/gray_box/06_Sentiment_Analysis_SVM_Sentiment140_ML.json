@@ -1,0 +1,161 @@
+{
+    "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+    "query": "يرجى مساعدتي في بناء نظام لتحليل المشاعر على التغريدات باستخدام مجموعة بيانات Sentiment140 المتاحة من Hugging Face. قم بتحميل مجموعة بيانات Sentiment140 وعند تحميل البيانات، قم بتنظيفها بإزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، كل ذلك في `src/data_loader.py`. استخدم Word2Vec أو GloVe لتوجيه النصوص. يجب أن يحدث هذا في `src/data_loader.py`. بعد ذلك، قم بتنفيذ وتدريب مصنف SVM في `src/model.py`. أخيرًا، اكتب تقريرًا عن دقة المصنف في `results/metrics/accuracy_score.txt`. من الناحية المثالية، يجب أن يكون التقرير سهل الفهم.",
+    "tags": [
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم الحصول على مجموعة البيانات \"Sentiment140\" المتاحة من \"Hugging Face\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنظيف مجموعة البيانات، بما في ذلك إزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، جميعها في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام تضمينات الكلمات، إما \"Word2Vec\" أو \"GloVe\"، لتحويل النص إلى متجهات في `src/data_loader.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم تنفيذ وتدريب \"SVM classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة وحفظ درجة الدقة كـ `results/metrics/accuracy_score.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون عملية تنزيل مجموعة البيانات موثوقة، مع معالجة واضحة للأخطاء.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التقرير النهائي للدقة بسيطًا وسهل الفهم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم الحصول على مجموعة البيانات \"Sentiment140\" المتاحة من \"Hugging Face\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029850000000000002,
+                "inference_time": 2.802075147628784,
+                "input_tokens": 830,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0022475000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن الملف `src/data_loader.py` غير موجود في المسار المحدد، مما يعني أنه لا يمكن التحقق من أن مجموعة البيانات \"Sentiment140\" يتم الحصول عليها من \"Hugging Face\" في هذا الملف. على الرغم من أن الخطوات المرجعية تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل تأكيد ذلك بشكل قاطع."
+                ]
+            },
+            "total_time": 11.272775888442993
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنظيف مجموعة البيانات، بما في ذلك إزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، جميعها في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027900000000000004,
+                "inference_time": 2.746264696121216,
+                "input_tokens": 756,
+                "output_tokens": 90,
+                "accumulated_cost": 0.004410000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الأدلة المقدمة تشير إلى أن عملية تنظيف البيانات في `src/data_loader.py` غير مكتملة. تم تسجيل تحذير يشير إلى أن بعض الرموز الخاصة لم تتم إزالتها بشكل صحيح، بالإضافة إلى خطأ في تحميل مجموعة البيانات بعد التنظيف بسبب عدم إزالة بعض كلمات التوقف كما هو متوقع. هذه المشاكل تشير إلى أن عملية تنظيف البيانات لا تلبّي المتطلبات المحددة."
+                ]
+            },
+            "total_time": 8.111973285675049
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم استخدام تضمينات الكلمات، إما \"Word2Vec\" أو \"GloVe\"، لتحويل النص إلى متجهات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030450000000000004,
+                "inference_time": 3.042884588241577,
+                "input_tokens": 854,
+                "output_tokens": 91,
+                "accumulated_cost": 0.006795000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لا يمكن تأكيد استخدام تضمينات الكلمات \"Word2Vec\" أو \"GloVe\" لتحويل النص إلى متجهات في `src/data_loader.py` لأن الملف غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن هناك إشارة إلى تحميل نموذج \"Word2Vec\" في خطوات سابقة، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من تنفيذ هذا المتطلب بشكل مباشر."
+                ]
+            },
+            "total_time": 9.585302591323853
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ وتدريب \"SVM classifier\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029200000000000003,
+                "inference_time": 2.4777581691741943,
+                "input_tokens": 760,
+                "output_tokens": 102,
+                "accumulated_cost": 0.009017500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: لم يتم تنفيذ وتدريب \"SVM classifier\" بنجاح في `src/model.py` بسبب خطأ \"ModuleNotFoundError\" الذي يشير إلى عدم وجود مكتبة 'sklearn' الضرورية. على الرغم من تثبيت المكتبة لاحقًا، إلا أن التحذير \"ConvergenceWarning\" يشير إلى أن النموذج لم يتقارب بشكل صحيح، مما يعني أن التدريب لم يكن مثاليًا وقد يؤثر على أداء النموذج."
+                ]
+            },
+            "total_time": 7.559455633163452
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم طباعة وحفظ درجة الدقة كـ `results/metrics/accuracy_score.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026100000000000003,
+                "inference_time": 2.270240068435669,
+                "input_tokens": 752,
+                "output_tokens": 73,
+                "accumulated_cost": 0.010617500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: الملف `accuracy_score.txt` غير موجود في المسار المحدد، كما هو موضح في رسالة الخطأ التي تشير إلى عدم وجود الملف. على الرغم من أن الخطوات المرجعية تشير إلى أن العملية تمت بنجاح، إلا أن الأدلة الفعلية لا تدعم ذلك، حيث أن الملف المطلوب غير موجود."
+                ]
+            },
+            "total_time": 7.25678277015686
+        }
+    ]
+}
