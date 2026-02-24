@@ -1,0 +1,217 @@
+{
+    "name": "20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+    "query": "Kaggle Car Prices veri kümesi kullanılarak Random Forest modeli ile bir araba fiyat tahmin projesi oluşturmama yardımcı olabilir misiniz? Veri kümesini yükleyin ve önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapın. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın. R-kare skoru, Ortalama Kare Hata (MSE) ve Ortalama Mutlak Hata (MAE) değerlerini `results/metrics/results/metrics.txt` dosyasına kaydedin. Özellik önemini görselleştirin ve `results/figures/feature_importance.png` dosyasına kaydedin. Seçilen özelliklerin araba fiyat tahminlerine nasıl katkıda bulunduğuna dair içgörüler içeren bir Markdown raporu oluşturun. Raporu `results/report.md` olarak kaydedin.",
+    "tags": [
+        "Financial Analysis",
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Kaggle Car Prices\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi uygulanır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"Random Forest\" regresyon modeli `src/model.py` içinde kullanılır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "\"R-kare\" skoru, \"Ortalama Kare Hata (MSE)\" ve \"Ortalama Mutlak Hata (MAE)\" `results/metrics/results/metrics.txt` dosyasına kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "Özellik önemleri görselleştirilir ve `results/figures/feature_importance.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "Sonuçlar ve görselleştirmeler içeren bir Markdown dosyası oluşturulur ve `results/report.md` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Özellik seçimi süreci kapsamlı olmalı ve modelde yalnızca en ilgili özelliklerin kullanıldığından emin olunmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Markdown raporu, seçilen özelliklerin araba fiyat tahminlerine nasıl katkıda bulunduğuna dair net içgörüler sağlamalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Kaggle Car Prices\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028175,
+                "inference_time": 2.16849684715271,
+                "input_tokens": 763,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0031725,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Kaggle Car Prices\" veri kümesinin `src/data_loader.py` dosyası içinde başarıyla yüklendiği belirtilmiştir. Step 45'te, \"Kaggle Car Prices veri kümesi başarıyla yüklendi.\" çıktısı alınmış ve herhangi bir hata veya uyarı mesajı bulunmamaktadır. Bu, veri kümesinin başarıyla yüklendiğini doğrulamaktadır."
+                ]
+            },
+            "total_time": 10.974487781524658
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00304,
+                "inference_time": 2.6367363929748535,
+                "input_tokens": 860,
+                "output_tokens": 89,
+                "accumulated_cost": 0.006475,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyasının var olmadığı belirtilmiştir. Dosya içeriği incelenemediği için özellik seçiminin uygulanıp uygulanmadığı doğrulanamamaktadır. Trajectory Evidence, dosyanın çalıştırıldığını ve özellik seçiminin başarıyla tamamlandığını belirtse de, dosyanın mevcut olmaması bu gereksinimin karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 10.097483396530151
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"Random Forest\" regresyon modeli `src/model.py` içinde kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031800000000000005,
+                "inference_time": 3.1012227535247803,
+                "input_tokens": 848,
+                "output_tokens": 106,
+                "accumulated_cost": 0.010245,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı veya dosya içeriği hakkında doğrudan bir kanıt sunulmamış. Ancak, \"Random Forest\" modelinin `src/model.py` dosyasında eğitildiği ve tahmin işlemlerinin gerçekleştirildiği belirtilmiş. Bu, modelin kullanıldığını ima etse de, dosya içeriği veya kod parçacıkları gibi somut kanıtlar sunulmadığı için gereksinim tam olarak karşılanmış sayılmaz."
+                ]
+            },
+            "total_time": 11.434244155883789
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031600000000000005,
+                "inference_time": 3.3242440223693848,
+                "input_tokens": 844,
+                "output_tokens": 105,
+                "accumulated_cost": 0.013452500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/train.py` dosyasının var olmadığı belirtilmiştir, bu nedenle dosya içeriği incelenememektedir. Ancak, adım 47'de çapraz doğrulama işleminin başlatıldığı ve tamamlandığı belirtilmiştir. Bu bilgi, dosyanın varlığını ve içeriğini doğrulamak için yeterli değildir. Dolayısıyla, çapraz doğrulamanın gerçekten kullanılıp kullanılmadığı kesin olarak belirlenememektedir."
+                ]
+            },
+            "total_time": 12.166517972946167
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "\"R-kare\" skoru, \"Ortalama Kare Hata (MSE)\" ve \"Ortalama Mutlak Hata (MAE)\" `results/metrics/results/metrics.txt` dosyasına kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003085,
+                "inference_time": 3.025000810623169,
+                "input_tokens": 734,
+                "output_tokens": 125,
+                "accumulated_cost": 0.0163225,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"R-kare\" skoru, \"Ortalama Kare Hata (MSE)\" ve \"Ortalama Mutlak Hata (MAE)\" metriklerinin `results/metrics/results/metrics.txt` dosyasına başarıyla kaydedildiği belirtilmiş olsa da, dosyanın yüklenmesi sırasında \"Dosya bulunamadı\" hatası alındığı için bu metriklerin gerçekten kaydedilip kaydedilmediği doğrulanamamaktadır. Bu durum, dosyanın varlığının ve erişilebilirliğinin kontrol edilmesi gerektiğini göstermektedir."
+                ]
+            },
+            "total_time": 9.627986431121826
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Özellik önemleri görselleştirilir ve `results/figures/feature_importance.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0023425,
+                "inference_time": 1.9258434772491455,
+                "input_tokens": 669,
+                "output_tokens": 67,
+                "accumulated_cost": 0.01879,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Özellik önemleri görselleştirilmiş ve `results/figures/feature_importance.png` dosyası olarak kaydedilmiştir. Step 47'de, dosyanın başarıyla kaydedildiği belirtilmiştir, bu da gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 8.804882764816284
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Sonuçlar ve görselleştirmeler içeren bir Markdown dosyası oluşturulur ve `results/report.md` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00234,
+                "inference_time": 2.630007266998291,
+                "input_tokens": 652,
+                "output_tokens": 71,
+                "accumulated_cost": 0.021125,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: `results/report.md` dosyası, Step 47'de başarıyla kaydedildiği belirtilmiştir. Önceki izin hatası çözülmüş ve dosya oluşturma işlemi tamamlanmıştır. Başka bir hata veya uyarı rapor edilmediği için gereksinim karşılanmıştır."
+                ]
+            },
+            "total_time": 8.586939573287964
+        }
+    ]
+}

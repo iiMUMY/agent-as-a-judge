@@ -1,0 +1,113 @@
+{
+  "name": "50_Math_Problem_Solving_Transformer_DeepMindMath_DL",
+  "query": "Merhaba! DeepMind Mathematics veri kümesinden matematik problemlerini çözmek için bir Transformer modeli kullanan bir projede yardıma ihtiyacım var. Lütfen veri kümesini yükleyin ve `src/data_loader.py` içinde ön işleme yapın. Ön işleme, matematiksel ifadeleri sözdizimsel olarak tutarlı bir şekilde ayrıştırmalı ve standartlaştırmalı, böylece model bunları kolayca işleyebilir. Transformer'ı `src/model.py` içinde uygulayın. Ayrıca, `src/train.py` içinde öğrenme oranı ve yığın boyutu gibi hiperparametreleri ayarlayın ve eğitim kaybı eğrisini `results/figures/training_loss_curve.png` olarak kaydedin. Transformer tarafından üretilen bazı çözümleri örnekleyin ve `results/sample_solutions.txt` olarak kaydedin. Modelinizi kullanarak, `src/interface.py` içinde Gradio veya Streamlit ile çeşitli kullanıcı tarafından verilen matematik problemlerini çözebilen basit bir etkileşimli araç oluşturun. Son olarak, modelin farklı problem türleriyle nasıl performans gösterdiğine dair bir rapor oluşturun, model doğruluğu, hata analizi ve gelecekteki iyileştirme önerilerini içeren. Bunu `results/metrics/model_report.md` olarak kaydedin. Şimdiden teşekkürler!",
+  "tags": [
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "DeepMind Mathematics veri kümesi `src/data_loader.py` içinde yüklenmiştir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri ön işleme, `src/data_loader.py` içinde matematiksel ifadelerin ayrıştırılması ve standartlaştırılması dahil olmak üzere gerçekleştirilmiştir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Transformer\" modeli `src/model.py` içinde uygulanmıştır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Öğrenme oranı ve yığın boyutu gibi hiperparametreler `src/train.py` içinde ayarlanmıştır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Model eğitim kaybı eğrisi `results/figures/training_loss_curve.png` olarak kaydedilmiştir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Transformer tarafından üretilen bazı çözümler `results/sample_solutions.txt` olarak kaydedilmiştir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Kullanıcıların matematik problemleri girmesine ve çözümler almasına olanak tanıyan etkileşimli bir araç \"Gradio\" veya \"Streamlit\" kullanılarak `src/interface.py` içinde oluşturulmuştur.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Model doğruluğu, hata analizi ve gelecekteki iyileştirme önerilerini içeren bir rapor oluşturulmuş ve `results/metrics/model_report.md` olarak kaydedilmiştir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ön işleme adımı, matematiksel ifadelerin model tarafından kolayca işlenebilecek şekilde standartlaştırılmasını sağlamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Etkileşimli araç, geniş bir yelpazede matematiksel problem türlerini ele alabilmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Rapor, modelin farklı matematiksel problem türlerini nasıl ele aldığına dair içgörüler sağlamalı, belirli güçlü yönleri ve iyileştirme alanlarını tanımlamalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

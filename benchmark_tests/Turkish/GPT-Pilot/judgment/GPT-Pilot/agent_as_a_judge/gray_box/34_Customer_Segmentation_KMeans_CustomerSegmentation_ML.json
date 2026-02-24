@@ -1,0 +1,210 @@
+{
+    "name": "34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+    "query": "Kaggle Customer Segmentation veri kümesi kullanılarak K-means kümeleme algoritması ile bir müşteri segmentasyon sistemi oluşturmam gerekiyor. `src/data_loader.py` içinde verileri standartlaştırarak başlayın, ardından optimal küme sayısını belirlemek için dirsek yöntemini kullanın ve dirsek grafiğini `results/figures/elbow.jpg` olarak kaydedin. K-means algoritmasını `src/model.py` içinde uygulayın. Küme merkezlerini `results/metrics/cluster_centers.txt` dosyasına kaydedin. Segmentasyon sonuçlarını seaborn kullanarak görselleştirin ve grafiği `results/figures/customer_segmentation.png` olarak kaydedin. Segmentlerin dinamik olarak keşfedilmesine olanak tanıyan etkileşimli bir Dash panosu oluşturun.",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Kaggle Customer Segmentation\" veri kümesi kullanılır, veri yükleme ve hazırlama `src/data_loader.py` içinde yapılır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veriler, `src/data_loader.py` içinde özellik değerlerinin aynı aralıkta olmasını sağlamak için standartlaştırılır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Optimal küme sayısını belirlemek için dirsek yöntemi kullanılır. Lütfen dirsek grafiğini `results/figures/elbow.jpg` olarak kaydedin.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "K-means kümeleme algoritması `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "Küme merkezleri `results/metrics/cluster_centers.txt` dosyasına kaydedilir.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "Müşteri segmentasyonu \"seaborn\" kullanılarak görselleştirilir ve grafik `results/figures/customer_segmentation.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "Segmentlerin dinamik olarak keşfedilmesine olanak tanıyan etkileşimli bir pano \"Dash\" kullanılarak oluşturulur.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Dirsek grafiği, optimal küme sayısının nasıl belirlendiğini açıkça gösterir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Sistem, panonun başlatılmasını ve sonlandırılmasını düzgün bir şekilde yönetir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Kaggle Customer Segmentation\" veri kümesi kullanılır, veri yükleme ve hazırlama `src/data_loader.py` içinde yapılır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0031325000000000003,
+                "inference_time": 3.3546056747436523,
+                "input_tokens": 849,
+                "output_tokens": 101,
+                "accumulated_cost": 0.0037750000000000006,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Kaggle Customer Segmentation\" veri kümesinin `src/data_loader.py` dosyası kullanılarak başarıyla yüklendiği ve veri hazırlama sürecinin tamamlandığı belirtilmiştir. Başlangıçta eksik değerler tespit edilmesine rağmen, bu sorun daha sonra çözülmüş ve veri hazırlama işlemi başarıyla tamamlanmıştır. Bu, veri yükleme ve hazırlama gereksiniminin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 13.45882797241211
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veriler, `src/data_loader.py` içinde özellik değerlerinin aynı aralıkta olmasını sağlamak için standartlaştırılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031975000000000003,
+                "inference_time": 4.957667827606201,
+                "input_tokens": 775,
+                "output_tokens": 126,
+                "accumulated_cost": 0.007050000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısında herhangi bir dosya veya klasör bulunmadığı belirtilmiş, bu da `src/data_loader.py` dosyasının varlığını ve çalışmasını sorgulatıyor. Ancak, Trajectory Evidence bölümünde `src/data_loader.py` dosyasının çalıştırıldığı ve standartlaştırma işleminin başarıyla tamamlandığı belirtilmiş. Bu çelişki, verilerin gerçekten standartlaştırılıp standartlaştırılmadığı konusunda kesin bir kanıt sunmuyor. Dolayısıyla, gereksinimin karşılandığına dair yeterli kanıt yok."
+                ]
+            },
+            "total_time": 12.408098220825195
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Optimal küme sayısını belirlemek için dirsek yöntemi kullanılır. Lütfen dirsek grafiğini `results/figures/elbow.jpg` olarak kaydedin.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002575,
+                "inference_time": 2.3148605823516846,
+                "input_tokens": 702,
+                "output_tokens": 82,
+                "accumulated_cost": 0.009670000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Gereksinim, \"results/figures/elbow.jpg\" dosyasının başarıyla kaydedildiği ve herhangi bir hata veya uyarı mesajı alınmadığı belirtilen adımlar (Adım 45 ve Adım 46) ile karşılanmıştır. Bu, dirsek grafiğinin istenilen konumda kaydedildiğini doğrular."
+                ]
+            },
+            "total_time": 7.993176698684692
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "K-means kümeleme algoritması `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003215,
+                "inference_time": 4.029368162155151,
+                "input_tokens": 834,
+                "output_tokens": 113,
+                "accumulated_cost": 0.013342500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: K-means kümeleme algoritması `src/model.py` içinde uygulanmış gibi görünse de, uygulama sırasında \"ConvergenceWarning\" uyarısı alınmıştır. Bu uyarı, algoritmanın beklenen sayıda küme oluşturamadığını ve veri setinde tekrarlayan noktalar olabileceğini belirtmektedir. Bu durum, algoritmanın doğru çalışmasını etkileyebilir ve veri setinin gözden geçirilmesi gerektiğini gösterir. Dolayısıyla, gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 15.796764612197876
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Küme merkezleri `results/metrics/cluster_centers.txt` dosyasına kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002765,
+                "inference_time": 2.441664695739746,
+                "input_tokens": 714,
+                "output_tokens": 98,
+                "accumulated_cost": 0.016195,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Küme merkezlerinin `results/metrics/cluster_centers.txt` dosyasına kaydedilmesi gereksinimi tam olarak karşılanmamıştır. Adım 45'te dosya başarıyla kaydedilmiş gibi görünse de, Adım 47'de disk dolu hatası nedeniyle yazma işlemi başarısız olmuştur. Bu durum, dosyanın tam ve doğru bir şekilde kaydedilmesini engelleyebilir."
+                ]
+            },
+            "total_time": 10.274949550628662
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Müşteri segmentasyonu \"seaborn\" kullanılarak görselleştirilir ve grafik `results/figures/customer_segmentation.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028675000000000003,
+                "inference_time": 3.343993663787842,
+                "input_tokens": 739,
+                "output_tokens": 102,
+                "accumulated_cost": 0.019065000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Müşteri segmentasyonu \"seaborn\" kullanılarak görselleştirilmiş ve grafik `results/figures/customer_segmentation.png` olarak kaydedilmiştir. Step 45 ve Step 46'da belirtilen bilgiler, işlemin başarıyla tamamlandığını ve dosyanın varlığının doğrulandığını göstermektedir. Herhangi bir hata veya uyarı mesajı bulunmaması, gereksinimin karşılandığını kanıtlamaktadır."
+                ]
+            },
+            "total_time": 10.370107412338257
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Segmentlerin dinamik olarak keşfedilmesine olanak tanıyan etkileşimli bir pano \"Dash\" kullanılarak oluşturulur.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033575000000000002,
+                "inference_time": 4.367163896560669,
+                "input_tokens": 835,
+                "output_tokens": 127,
+                "accumulated_cost": 0.022817500000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"Dash\" kullanılarak etkileşimli bir pano oluşturulmaya çalışıldığı belirtilmiş, ancak proje ağacında herhangi bir dosya veya kod yapısı bulunmadığı için bu gereksinimin karşılandığına dair somut bir kanıt yok. Ayrıca, \"Dash\" modülünün başlangıçta eksik olduğu ve daha sonra yüklendiği belirtilmiş olsa da, etkileşimli panonun segmentlerin dinamik keşfine olanak tanıyacak şekilde yapılandırıldığına dair bir kanıt sunulmamış."
+                ]
+            },
+            "total_time": 14.244463205337524
+        }
+    ]
+}

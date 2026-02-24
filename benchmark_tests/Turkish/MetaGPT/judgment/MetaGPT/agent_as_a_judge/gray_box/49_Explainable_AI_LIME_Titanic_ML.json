@@ -1,0 +1,213 @@
+{
+    "name": "49_Explainable_AI_LIME_Titanic_ML",
+    "query": "Merhaba! LIME kullanarak model tahminlerini açıklayan bir proje oluşturmak istiyorum, özellikle Titanic hayatta kalma tahmin veri seti ile. İlk olarak, veri setini `src/data_loader.py` içinde yükleyin. Ardından, bir Random Forest sınıflandırıcısı eğitin ve `models/saved_models/` altında kaydedin. Son olarak, Random Forest sınıflandırıcısının tahminlerini açıklamak için LIME kullanın ve bunu `src/visualize.py` içinde uygulayın. Açıklamaları içeren bir rapor oluşturun ve `results/model_explanation.md` olarak kaydedin. Rapor, kullanıcıların farklı özelliklerin modelin tahminlerini nasıl etkilediğini keşfetmelerini sağlamak için Dash veya Bokeh ile oluşturulmalı ve `src/report.py` içinde uygulanmalıdır. Açıklama, teknik olmayan kişiler için net ve anlaşılır olmalıdır. Ayrıca, `results/figures/feature_importance.png` içinde iyi etiketlenmiş, sezgisel bir özellik önem grafiği kaydedin. Teşekkürler!",
+    "tags": [
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Titanic\" hayatta kalma tahmin veri seti `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Hayatta kalma tahmini için bir \"Random Forest sınıflandırıcısı\" eğitilir.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Model tahmin açıklaması için \"LIME\" kullanılır ve `src/visualize.py` içinde uygulanır.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Model tahmin açıklama raporu oluşturulur ve `results/model_explanation.md` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Özellik önem grafiği `results/figures/feature_importance.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                4
+            ],
+            "criteria": "Farklı özelliklerin tahminler üzerindeki etkisini gösteren etkileşimli bir rapor \"Dash\" veya \"Bokeh\" kullanılarak oluşturulur ve `src/report.py` içinde uygulanır.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Eğitilmiş model `models/saved_models/` altında kaydedilir.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Açıklama raporu, derin teknik bilgiye sahip olmayanlar için bile anlaşılır olacak şekilde açık ve erişilebilir bir tarzda yazılmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Özellik önem grafiği, net etiketler ve açıklamalarla görsel olarak sezgisel olmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Titanic\" hayatta kalma tahmin veri seti `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031650000000000003,
+                "inference_time": 1.9020566940307617,
+                "input_tokens": 806,
+                "output_tokens": 115,
+                "accumulated_cost": 0.0035400000000000006,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: İlk çalıştırmada \"FileNotFoundError: Titanic dataset not found\" hatası alındığı için veri seti yüklenememiştir. Ancak, sonraki çalıştırmada \"Dataset loaded successfully\" mesajı alınmıştır. Bu, sorunun giderildiğini gösterse de, ilk denemede yükleme başarısız olduğu için gereksinim tam olarak karşılanmamıştır. Gereksinimin tam olarak karşılanması için ilk denemede de veri setinin başarıyla yüklenmesi gerekmektedir."
+                ]
+            },
+            "total_time": 9.493924617767334
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Hayatta kalma tahmini için bir \"Random Forest sınıflandırıcısı\" eğitilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003935000000000001,
+                "inference_time": 2.820071220397949,
+                "input_tokens": 946,
+                "output_tokens": 157,
+                "accumulated_cost": 0.006702500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje dosya yapısında ve içeriklerinde \"Random Forest sınıflandırıcısı\" eğitimi için gerekli olan dosyalar mevcut değil. \"model_training.py\", \"random_forest_classifier.py\", \"classifier.py\", \"random_forest.py\" ve \"train_random_forest.py\" gibi dosyaların hiçbiri bulunamadı. Bu nedenle, hayatta kalma tahmini için bir \"Random Forest sınıflandırıcısı\" eğitildiğine dair somut bir kanıt yok. Çevresel geri bildirimler, model eğitiminin tamamlandığını belirtse de, bu geri bildirimler dosya içeriği veya kod yapısı ile desteklenmediği için yeterli değildir."
+                ]
+            },
+            "total_time": 9.695794343948364
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Model tahmin açıklaması için \"LIME\" kullanılır ve `src/visualize.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032300000000000002,
+                "inference_time": 2.962225914001465,
+                "input_tokens": 832,
+                "output_tokens": 115,
+                "accumulated_cost": 0.009892500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, \"LIME\" kullanılarak model tahmin açıklamasının `src/visualize.py` içinde uygulanmasını içeriyor. Ancak, belirtilen dosya mevcut değil ve bu nedenle dosya içeriği doğrulanamıyor. Her ne kadar adım 49'da \"LIME model tahmin açıklaması başarıyla tamamlandı\" ifadesi bulunsa da, dosyanın var olmaması nedeniyle bu işlevselliğin gerçekten uygulandığını ve çalıştığını doğrulamak mümkün değil."
+                ]
+            },
+            "total_time": 7.72155499458313
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Model tahmin açıklama raporu oluşturulur ve `results/model_explanation.md` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025925,
+                "inference_time": 2.0090653896331787,
+                "input_tokens": 681,
+                "output_tokens": 89,
+                "accumulated_cost": 0.012457500000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/model_explanation.md\" dosyasının oluşturulması ve kaydedilmesi sırasında herhangi bir hata veya sorun olmadığı belirtilmiştir. Adım 45 ve 46'da dosyanın başarıyla oluşturulup kaydedildiği açıkça ifade edilmiştir. Bu, model tahmin açıklama raporunun başarıyla oluşturulduğunu ve belirtilen konumda kaydedildiğini gösterir."
+                ]
+            },
+            "total_time": 6.301187515258789
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Özellik önem grafiği `results/figures/feature_importance.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00272,
+                "inference_time": 1.3269896507263184,
+                "input_tokens": 732,
+                "output_tokens": 89,
+                "accumulated_cost": 0.015392500000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Trajectory Evidence bölümünde, `results/figures/feature_importance.png` dosyasının başarıyla kaydedildiği ve görselleştirme için yüklendiği belirtilmiştir. Çevresel geri bildirimde herhangi bir hata veya uyarı rapor edilmediği için dosyanın başarıyla kaydedildiği ve işlevselliğinin sağlandığı anlaşılmaktadır."
+                ]
+            },
+            "total_time": 5.433454513549805
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Farklı özelliklerin tahminler üzerindeki etkisini gösteren etkileşimli bir rapor \"Dash\" veya \"Bokeh\" kullanılarak oluşturulur ve `src/report.py` içinde uygulanır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002935,
+                "inference_time": 2.2594990730285645,
+                "input_tokens": 750,
+                "output_tokens": 106,
+                "accumulated_cost": 0.018372500000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Proje bilgilerine göre, `src/report.py` dosyası çalıştırıldığında \"Dash uygulaması başlatıldı\" ve \"Bokeh grafikleri başarıyla yüklendi\" mesajları alınmıştır. Bu, etkileşimli raporun hem Dash hem de Bokeh kullanılarak başarıyla oluşturulduğunu ve çalıştığını göstermektedir. Herhangi bir hata veya uyarı mesajı da bulunmamaktadır, bu da gereksinimin karşılandığını doğrular."
+                ]
+            },
+            "total_time": 7.460803508758545
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Eğitilmiş model `models/saved_models/` altında kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030375000000000003,
+                "inference_time": 1.8815128803253174,
+                "input_tokens": 779,
+                "output_tokens": 109,
+                "accumulated_cost": 0.021762500000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, modelin `models/saved_models/` dizinine kaydedilmesi gerektiğini belirtmektedir. Adım 45 ve 47'de modelin başarıyla kaydedildiği ve yüklendiği belirtilmiş olsa da, adım 50'de model kaydedilirken \"Permission denied\" hatası alınmıştır. Bu, modelin her zaman başarıyla kaydedilemediğini ve dolayısıyla gereksinimin tam olarak karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 7.20400595664978
+        }
+    ]
+}

@@ -1,0 +1,212 @@
+{
+    "name": "29_Financial_Time_Series_Prediction_LSTM_ML",
+    "query": "Bana, hisse senedi fiyatları veya Bitcoin fiyatları gibi gerçek dünya Finansal Analizi ile bir LSTM modeli kullanarak finansal zaman serisi tahmin sistemi kurmamda yardımcı olabilir misiniz? Öncelikle, `src/data_loader.py` içinde eksik değerler ve aykırı değerlerle ilgilenerek verileri temizlememiz gerekecek. Ardından, `src/data_loader.py` içinde bir zaman penceresi kullanarak zaman serisi verilerini denetimli öğrenme formatına dönüştürelim. Son olarak, tahmin için `src/model.py` içinde uygulanan bir LSTM modeli uygulayın. Tahminleri aldıktan sonra sonuçları `results/prediction_results.text` olarak kaydedin. Tahmin sonuçlarını görselleştiren etkileşimli bir gösterge tablosu oluşturun ve uygulamayı `src/dashboard.py` içinde kaydedin. Son olarak, model mimarisi, eğitim süreci ve performans analizini gösteren bir Markdown belgesi oluşturup `results/report.md` olarak kaydederseniz sevinirim. Sistem, kaynakları korumak için Dash uygulamasının başlangıç ve durdurma işlemlerini otomatik olarak yönetmelidir. Çok teşekkürler!",
+    "tags": [
+        "Financial Analysis",
+        "Supervised Learning",
+        "Time Series Forecasting"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "Gerçek dünya finansal zaman serisi verileri (örneğin, \"hisse senedi fiyatları\" veya \"Bitcoin fiyatları\") `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veri temizleme işlemi, eksik değerler ve aykırı değerlerin ele alınması dahil olmak üzere `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Zaman serisi verilerini denetimli öğrenme problemine dönüştürmek için bir zaman penceresi kullanılır. Lütfen bunu `src/data_loader.py` içinde uygulayın.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "Finansal zaman serisi tahmini için bir \"LSTM\" modeli kullanılır ve `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "Tahmin sonuçları `results/prediction_results.txt` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "Tahmin sonuçlarının etkileşimli bir görselleştirme gösterge tablosu \"Dash\" kullanılarak oluşturulur. Uygulama `src/visualize.py` içinde kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "Model mimarisi, eğitim süreci ve performans analizini içeren bir Markdown belgesi oluşturulur ve `results/report.md` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "\"Dash\" gösterge tablosu, kullanıcıların tahmin sonuçlarıyla etkileşimde bulunmasına, farklı zaman dilimlerini keşfetmesine ve ayrıntılı analiz için belirli dönemlere yakınlaştırmasına olanak tanımalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Geliştirme sırasında, sistem gereksiz kaynak kullanımını önlemek için \"Dash\" uygulamasının başlangıç ve durdurma işlemlerini otomatik olarak yönetmelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "Gerçek dünya finansal zaman serisi verileri (örneğin, \"hisse senedi fiyatları\" veya \"Bitcoin fiyatları\") `src/data_loader.py` içinde yüklenir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0031475,
+                "inference_time": 3.565227746963501,
+                "input_tokens": 819,
+                "output_tokens": 110,
+                "accumulated_cost": 0.0034700000000000004,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: `src/data_loader.py` dosyasının çalıştırılması sırasında \"Loading real-world financial time series data\" mesajının alınması, dosyanın gerçek dünya finansal zaman serisi verilerini yüklediğini göstermektedir. Bu, gereksinimin karşılandığını kanıtlar. Ancak, eksik veri noktalarıyla ilgili bir uyarı alınmış olsa da, bu durum verilerin yüklenmesini tamamen engellememiştir. Dolayısıyla, gereksinim genel olarak karşılanmıştır."
+                ]
+            },
+            "total_time": 15.2387113571167
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veri temizleme işlemi, eksik değerler ve aykırı değerlerin ele alınması dahil olmak üzere `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00315,
+                "inference_time": 3.352490186691284,
+                "input_tokens": 756,
+                "output_tokens": 126,
+                "accumulated_cost": 0.0065725,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: `src/data_loader.py` dosyası, eksik değerlerin doldurulması ve aykırı değerlerin ayıklanması işlemlerini başarıyla gerçekleştirmiştir. Adım 46'da eksik değerlerin doldurulması ve Adım 47'de aykırı değerlerin ayıklanması işlemlerinin başlatıldığı belirtilmiş, Adım 48'de ise veri temizleme işleminin başarıyla tamamlandığı mesajı alınmıştır. Bu, veri temizleme işlemlerinin gereksinimlere uygun olarak gerçekleştirildiğini göstermektedir."
+                ]
+            },
+            "total_time": 9.627141952514648
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Zaman serisi verilerini denetimli öğrenme problemine dönüştürmek için bir zaman penceresi kullanılır. Lütfen bunu `src/data_loader.py` içinde uygulayın.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003685,
+                "inference_time": 5.241262435913086,
+                "input_tokens": 834,
+                "output_tokens": 160,
+                "accumulated_cost": 0.01031,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısında `src/data_loader.py` dosyasının yüklendiği ve zaman penceresi fonksiyonunun çağrıldığı belirtilmiş olsa da, bu dosyanın içeriği veya zaman penceresi uygulamasının detayları hakkında yeterli bilgi verilmemiştir. Ayrıca, zaman penceresi fonksiyonunun başlangıçta bir uyarı verdiği ve daha sonra parametre güncellemeleriyle çalıştığı belirtilmiş, ancak bu işlemlerin zaman serisi verilerini denetimli öğrenme problemine dönüştürmek için yeterli olup olmadığına dair kesin bir kanıt sunulmamıştır. Bu nedenle, gereksinimin tam olarak karşılandığına dair yeterli kanıt bulunmamaktadır."
+                ]
+            },
+            "total_time": 13.936942100524902
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Finansal zaman serisi tahmini için bir \"LSTM\" modeli kullanılır ve `src/model.py` içinde uygulanır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0030575000000000003,
+                "inference_time": 2.8434646129608154,
+                "input_tokens": 827,
+                "output_tokens": 99,
+                "accumulated_cost": 0.013895000000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Gereksinim, finansal zaman serisi tahmini için bir \"LSTM\" modelinin `src/model.py` dosyasında uygulanmasıdır. Trajectory Evidence bölümünde, `src/model.py` dosyasının başarıyla yüklendiği, LSTM modelinin çalıştırıldığı ve eğitim sürecinin hatasız tamamlandığı belirtilmiştir. Bu, LSTM modelinin doğru bir şekilde uygulandığını ve çalıştığını gösterir."
+                ]
+            },
+            "total_time": 11.562360525131226
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Tahmin sonuçları `results/prediction_results.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0023375,
+                "inference_time": 1.6744036674499512,
+                "input_tokens": 687,
+                "output_tokens": 62,
+                "accumulated_cost": 0.0165375,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/prediction_results.txt\" dosyasının başarıyla kaydedildiği ve erişilebilir olduğu belirtilmiştir. Adım 45 ve 46'da çevresel geri bildirim, dosyanın başarıyla kaydedildiğini ve mevcut olduğunu doğrulamaktadır."
+                ]
+            },
+            "total_time": 8.101653099060059
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Tahmin sonuçlarının etkileşimli bir görselleştirme gösterge tablosu \"Dash\" kullanılarak oluşturulur. Uygulama `src/visualize.py` içinde kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003915,
+                "inference_time": 4.283184051513672,
+                "input_tokens": 874,
+                "output_tokens": 173,
+                "accumulated_cost": 0.0205875,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, tahmin sonuçlarının etkileşimli bir görselleştirme gösterge tablosu \"Dash\" kullanılarak oluşturulmasını ve uygulamanın `src/visualize.py` içinde kaydedilmesini içeriyor. Ancak, `src/visualize.py` dosyası çalıştırıldığında bir uyarı ve bir hata ile karşılaşılmıştır. Uyarı, görselleştirme kütüphanesinin güncel olmaması nedeniyle bazı özelliklerin eksik çalışabileceğini belirtirken, hata veri dosyasının bulunamamasıyla ilgilidir. Varsayılan verilerle devam edilse de, bu durum uygulamanın işlevselliğini tam olarak sağlamamaktadır. Bu nedenle, gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 15.406194686889648
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Model mimarisi, eğitim süreci ve performans analizini içeren bir Markdown belgesi oluşturulur ve `results/report.md` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028025000000000003,
+                "inference_time": 2.5052995681762695,
+                "input_tokens": 761,
+                "output_tokens": 90,
+                "accumulated_cost": 0.0237475,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: `results/report.md` dosyasının oluşturulması, model mimarisi ve eğitim sürecinin belgelenmesi, performans analizinin eklenmesi ve dosyanın başarıyla kaydedilmesi adımları tamamlanmış. Bu, belirtilen gereksinimin karşılandığını gösteriyor. Herhangi bir hata veya uyarı mesajı bulunmaması da bu durumu destekliyor."
+                ]
+            },
+            "total_time": 11.648297309875488
+        }
+    ]
+}

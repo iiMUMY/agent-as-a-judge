@@ -1,0 +1,213 @@
+{
+    "name": "43_Social_Network_Analysis_GCN_Cora_ML",
+    "query": "Merhaba! Cora atıf ağı veri kümesi ile bir GCN modeli kullanarak bir sosyal ağ analizi sistemi oluşturmama yardımcı olabilir misiniz? Öncelikle, veri kümesini `src/data_loader.py` içinde yükleyip ön işleme yapalım, normalizasyon ve gürültü giderme dahil. Ardından, düğümleri sınıflandırmak için GCN modelini uygulayın ve `src/train.py` içinde en iyi sonuçları elde etmek için öğrenme oranı ve gizli katman boyutu gibi hiperparametreleri ayarlayın. Modeli `models/saved_models/` altında kaydedin. Bunu yaptıktan sonra, düğüm sınıflandırma performansını `results/metrics/node_classification_results.txt` dosyasına kaydedin. Atıf ağı yapısını görselleştirin ve `results/figures/citation_network_visualization.png` olarak kaydedin. Son olarak, düğüm sınıflandırma sonuçlarını ve ağ görselleştirmesini `results/figures/` içinde sergilemek için D3.js veya Bokeh kullanarak etkileşimli bir ağ grafiği oluşturun. Ayrıca, uygulamanızın başka atıf veri kümelerine kolayca geçiş yapmasına izin vermesi harika olurdu. Yardımınız için çok teşekkürler!",
+    "tags": [
+        "Unsupervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Cora atıf ağı\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veri ön işleme, normalizasyon ve gürültü giderme dahil, `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Öğrenme oranı ve gizli katman boyutu gibi hiperparametreler `src/train.py` içinde modeli optimize etmek için ayarlanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Model `models/saved_models/` altında kaydedilir.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Düğüm sınıflandırma performansı `results/metrics/node_classification_results.txt` içinde kaydedilir.",
+            "category": "Performence Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Atıf ağı yapısı görselleştirilir ve `results/figures/citation_network_visualization.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4,
+                5
+            ],
+            "criteria": "Düğüm sınıflandırma sonuçlarını ve ağ görselleştirmesini `results/figures/` içinde sergilemek için \"D3.js\" veya \"Bokeh\" kullanılarak etkileşimli bir ağ grafiği oluşturulur.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Etkileşimli ağ grafiği, kullanıcıların bireysel düğümleri ve sınıflandırmalarını dinamik olarak keşfetmelerine olanak tanımalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Atıf ağı görselleştirmesi, farklı düğüm sınıflarını ve ilişkilerini net bir şekilde ayırt etmelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Sistem, ek atıf veri kümelerini minimum değişiklikle işleyebilecek şekilde tasarlanmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Cora atıf ağı\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00302,
+                "inference_time": 2.0854904651641846,
+                "input_tokens": 808,
+                "output_tokens": 100,
+                "accumulated_cost": 0.002975,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Cora atıf ağı\" veri kümesinin `src/data_loader.py` içinde yüklendiğine dair bir kanıt bulunmamaktadır. Dosya mevcut değil ve bu nedenle içeriği doğrulanamıyor. Ayrıca, dosyanın çalıştırılması sırasında bazı düğümlerin eksik olabileceğine dair bir uyarı verilmiş, bu da veri kümesinin eksik veya hatalı yüklenmiş olabileceğini gösteriyor."
+                ]
+            },
+            "total_time": 13.982956886291504
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veri ön işleme, normalizasyon ve gürültü giderme dahil, `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032050000000000004,
+                "inference_time": 1.3733608722686768,
+                "input_tokens": 994,
+                "output_tokens": 72,
+                "accumulated_cost": 0.006752500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is not fully satisfied because the file `src/data_loader.py` does not exist in the specified directory, as indicated by the error message. Although the trajectory evidence suggests that data preprocessing, normalization, and noise reduction were attempted, the absence of the actual file means that these operations cannot be verified or executed as required."
+                ]
+            },
+            "total_time": 8.827756643295288
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Öğrenme oranı ve gizli katman boyutu gibi hiperparametreler `src/train.py` içinde modeli optimize etmek için ayarlanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026925,
+                "inference_time": 2.0656120777130127,
+                "input_tokens": 753,
+                "output_tokens": 81,
+                "accumulated_cost": 0.009890000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Hiperparametreler `src/train.py` dosyasında ayarlanmış ve model eğitimi başlatılmış olsa da, öğrenme oranının çok yüksek olabileceği ve eğitimin kararsız olabileceği konusunda bir uyarı verilmiştir. Bu, hiperparametrelerin model optimizasyonu için uygun şekilde ayarlanmadığını gösterir."
+                ]
+            },
+            "total_time": 7.793338775634766
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Model `models/saved_models/` altında kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0023550000000000003,
+                "inference_time": 2.7300946712493896,
+                "input_tokens": 630,
+                "output_tokens": 78,
+                "accumulated_cost": 0.012152500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"Total Nodes: 0\" ifadesi, belirtilen dizin altında herhangi bir dosya veya modelin kaydedilmediğini gösteriyor. Bu, modelin belirtilen konumda kaydedilmediğini veya kaydedilen dosyaların doğru bir şekilde listelenmediğini düşündürmektedir."
+                ]
+            },
+            "total_time": 7.243346214294434
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Düğüm sınıflandırma performansı `results/metrics/node_classification_results.txt` içinde kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027150000000000004,
+                "inference_time": 1.5570521354675293,
+                "input_tokens": 694,
+                "output_tokens": 98,
+                "accumulated_cost": 0.014792500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Düğüm sınıflandırma performansının `results/metrics/node_classification_results.txt` dosyasında kaydedildiği belirtilmiştir. Adım 45 ve Adım 47'de bu dosyanın başarıyla kaydedildiği ve yüklendiği, herhangi bir hata veya uyarı mesajı rapor edilmediği belirtilmiştir. Bu, dosyanın doğru bir şekilde oluşturulduğunu ve kullanıldığını gösterir."
+                ]
+            },
+            "total_time": 5.782095193862915
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Atıf ağı yapısı görselleştirilir ve `results/figures/citation_network_visualization.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031575000000000006,
+                "inference_time": 2.3802883625030518,
+                "input_tokens": 775,
+                "output_tokens": 122,
+                "accumulated_cost": 0.0174375,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, atıf ağı yapısının `results/figures/citation_network_visualization.png` olarak kaydedilmesini içeriyor. Ancak, belirtilen dosya yolunda böyle bir dosya bulunmadığına dair bir hata mesajı mevcut. Bu, dosyanın gerçekten kaydedilmediğini veya yanlış bir konumda olduğunu gösteriyor. Çevresel geri bildirimde dosyanın başarıyla kaydedildiği belirtilse de, dosyanın var olmaması bu gereksinimin karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 9.293771982192993
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Düğüm sınıflandırma sonuçlarını ve ağ görselleştirmesini `results/figures/` içinde sergilemek için \"D3.js\" veya \"Bokeh\" kullanılarak etkileşimli bir ağ grafiği oluşturulur.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033075000000000005,
+                "inference_time": 2.0925471782684326,
+                "input_tokens": 731,
+                "output_tokens": 148,
+                "accumulated_cost": 0.020297500000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, \"Bokeh\" kullanılarak etkileşimli bir ağ grafiği oluşturulmasını içeriyordu, ancak \"Bokeh\" kütüphanesi yüklenirken bir hata mesajı alındı: \"ModuleNotFoundError: No module named 'bokeh'\". Bu, \"Bokeh\" ile ağ görselleştirmesinin oluşturulmasını engelledi. Alternatif olarak \"D3.js\" ile bir ağ grafiği başarıyla oluşturulmuş ve `results/figures/` dizinine kaydedilmiş olsa da, gereksinim \"Bokeh\" kullanımını da içerdiği için tamamen karşılanmamıştır."
+                ]
+            },
+            "total_time": 9.178904294967651
+        }
+    ]
+}

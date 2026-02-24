@@ -1,0 +1,238 @@
+{
+    "name": "37_Lane_Detection_ResNet50_TuSimple_DL",
+    "query": "Bir şerit tespit sistemi geliştirin. `src/model.py` dosyasında PyTorch'tan standart önceden eğitilmiş ResNet-50 modelini içe aktararak başlayın. Test veri setimiz olarak TuSimple şerit tespit veri seti ile çalışacağız ve bu veri seti `src/data_loader.py` aracılığıyla yüklenmelidir. Ardından veri setini yükleyin ve ön işleme yapın, `src/data_loader.py` dosyasında rastgele kırpma, döndürme ve ölçekleme gibi veri artırma tekniklerini içeren işlemleri gerçekleştirin. Modeli ince ayarlayın ve tespit doğruluğunu `results/metrics/detection_accuracy.txt` dosyasına kaydedin ve eğitilmiş modeli `models/saved_models/lane_detection_model.pth` olarak kaydedin. Doğrulama için verilerin bir alt kümesini ayırın, bu `src/data_loader.py` dosyasında uygulanmıştır. Tespit sonuçlarını matplotlib kullanarak görselleştirin ve `results/figures/` dizinine kaydedin. Veri ön işleme, model eğitimi ve değerlendirme dahil olmak üzere tüm sürecin ayrıntılı bir raporunu oluşturun ve bunu `results/lane_detection_report.pdf` olarak kaydedin. Rapor ayrıca modelin eğriler veya zayıf aydınlatma gibi zorlu koşullar altındaki performansını da analiz etmelidir.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"TuSimple\" şerit tespit veri seti `src/data_loader.py` dosyasında yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Rastgele kırpma, döndürme ve ölçekleme dahil veri artırma işlemleri `src/data_loader.py` dosyasında gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Verilerin bir alt kümesi doğrulama için ayrılır ve `src/data_loader.py` dosyasında uygulanır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "Önceden eğitilmiş \"ResNet-50\" modeli `src/model.py` dosyasında PyTorch'tan içe aktarılır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "\"ResNet-50\" modelini ince ayarlayın ve `models/saved_models/lane_detection_model.pth` olarak kaydedin.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "Tespit doğruluğu `results/metrics/detection_accuracy.txt` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "Tespit sonuçları \"matplotlib\" ile görselleştirilir ve `results/figures/` dizinine kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "Veri ön işleme, model eğitimi ve değerlendirme sürecini içeren ayrıntılı bir rapor oluşturulur ve `results/lane_detection_report.pdf` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Rapor, modelin eğriler veya zayıf aydınlatma koşulları gibi zorlu senaryolardaki performans analizini içermelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Veri artırma adımları iyi belgelenmeli ve raporda artırılmış görüntü örnekleri dahil edilmelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"TuSimple\" şerit tespit veri seti `src/data_loader.py` dosyasında yüklenir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0029675000000000005,
+                "inference_time": 1.7254302501678467,
+                "input_tokens": 727,
+                "output_tokens": 115,
+                "accumulated_cost": 0.00289,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"TuSimple\" şerit tespit veri setinin `src/data_loader.py` dosyasında yüklendiği belirtilmiştir. Step 45'te, bu dosyanın çalıştırılması sonucunda \"TuSimple veri seti başarıyla yüklendi\" çıktısı alınmıştır. Bu, veri setinin başarıyla yüklendiğini ve işlevselliğin sağlandığını göstermektedir. Performansla ilgili bir uyarı alınmış olsa da, bu işlevselliği doğrudan etkilememektedir."
+                ]
+            },
+            "total_time": 8.867753028869629
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Rastgele kırpma, döndürme ve ölçekleme dahil veri artırma işlemleri `src/data_loader.py` dosyasında gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031550000000000003,
+                "inference_time": 1.5136616230010986,
+                "input_tokens": 874,
+                "output_tokens": 97,
+                "accumulated_cost": 0.006320000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, `src/data_loader.py` dosyasında rastgele kırpma, döndürme ve ölçekleme dahil veri artırma işlemlerinin gerçekleştirilmesini öngörmektedir. Ancak, belirtilen dosya mevcut değildir ve bu nedenle bu işlemlerin gerçekleştirilmesi mümkün değildir. Ayrıca, dosyanın var olmadığına dair hata mesajı, bu gereksinimin karşılanmadığını açıkça göstermektedir."
+                ]
+            },
+            "total_time": 6.304677724838257
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Verilerin bir alt kümesi doğrulama için ayrılır ve `src/data_loader.py` dosyasında uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031325,
+                "inference_time": 1.8649804592132568,
+                "input_tokens": 825,
+                "output_tokens": 107,
+                "accumulated_cost": 0.009302500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyasının var olmadığı belirtilmiştir. Dosya içeriği mevcut olmadığından, verilerin bir alt kümesinin doğrulama için ayrıldığına dair kanıt sunulamamaktadır. Trajectory Evidence, dosyanın çalıştırıldığını ve veri doğrulama işleminin başarılı olduğunu belirtse de, bu işlemlerin gerçekten `src/data_loader.py` dosyasında uygulandığını doğrulamak için dosya içeriğine ihtiyaç vardır."
+                ]
+            },
+            "total_time": 7.277932405471802
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Önceden eğitilmiş \"ResNet-50\" modeli `src/model.py` dosyasında PyTorch'tan içe aktarılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030600000000000002,
+                "inference_time": 2.0432424545288086,
+                "input_tokens": 896,
+                "output_tokens": 82,
+                "accumulated_cost": 0.012837500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/model.py` dosyasının var olmadığı belirtilmiştir, bu nedenle dosya içeriği doğrulanamamaktadır. Ancak, adımlar arasında bu dosyanın çalıştırıldığı ve PyTorch'tan modelin başarıyla yüklendiği belirtilmiştir. Yine de, dosyanın mevcut olmaması nedeniyle gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 7.344184398651123
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "\"ResNet-50\" modelini ince ayarlayın ve `models/saved_models/lane_detection_model.pth` olarak kaydedin.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030550000000000004,
+                "inference_time": 1.4011719226837158,
+                "input_tokens": 786,
+                "output_tokens": 109,
+                "accumulated_cost": 0.015432500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, \"ResNet-50\" modelinin ince ayarlanması ve `models/saved_models/lane_detection_model.pth` olarak kaydedilmesi yönündedir. Ancak, belirtilen dosya yolu altında `lane_detection_model.pth` dosyasının mevcut olmadığı rapor edilmiştir. Bu durum, modelin belirtilen konumda kaydedilmediğini veya dosyanın eksik olduğunu göstermektedir. Dolayısıyla, gereksinim karşılanmamıştır."
+                ]
+            },
+            "total_time": 6.565855979919434
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Tespit doğruluğu `results/metrics/detection_accuracy.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024100000000000002,
+                "inference_time": 1.9450359344482422,
+                "input_tokens": 688,
+                "output_tokens": 69,
+                "accumulated_cost": 0.01802,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/metrics/detection_accuracy.txt\" dosyasının başarıyla kaydedildiği ve yüklendiği belirtilmiştir. İşlem sırasında herhangi bir hata veya uyarı mesajı rapor edilmemiştir, bu da dosyanın doğru bir şekilde oluşturulduğunu ve kullanılabilir olduğunu gösterir."
+                ]
+            },
+            "total_time": 5.9563329219818115
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Tespit sonuçları \"matplotlib\" ile görselleştirilir ve `results/figures/` dizinine kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0036975000000000003,
+                "inference_time": 2.431103229522705,
+                "input_tokens": 895,
+                "output_tokens": 146,
+                "accumulated_cost": 0.0216125,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, tespit sonuçlarının \"matplotlib\" ile görselleştirilip `results/figures/` dizinine kaydedilmesi gerektiğini belirtmektedir. Ancak, proje yapısında `results/figures/` dizininin mevcut olmadığı ve bu dizine kaydedilen dosyaların bulunmadığı belirtilmiştir. Ayrıca, ilk görselleştirme denemesinde \"Permission denied\" hatası alınmış ve bu da dosya izinleriyle ilgili bir sorun olduğunu göstermektedir. İkinci denemede dosya kaydedilmiş olsa da, dizinin var olmadığı bilgisi gereksinimin tam olarak karşılanmadığını gösteriyor."
+                ]
+            },
+            "total_time": 7.759666204452515
+        },
+        {
+            "requirement_index": 7,
+            "criteria": "Veri ön işleme, model eğitimi ve değerlendirme sürecini içeren ayrıntılı bir rapor oluşturulur ve `results/lane_detection_report.pdf` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027600000000000003,
+                "inference_time": 1.9566528797149658,
+                "input_tokens": 716,
+                "output_tokens": 97,
+                "accumulated_cost": 0.02438,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `results/lane_detection_report.pdf` dosyasının başarıyla oluşturulduğunu ve erişilebilir olduğunu belirtse de, raporun veri ön işleme, model eğitimi ve değerlendirme sürecini ayrıntılı bir şekilde içerip içermediğine dair herhangi bir kanıt sunulmamaktadır. Bu nedenle, gereksinimin tam olarak karşılandığını doğrulamak için yeterli bilgi yoktur."
+                ]
+            },
+            "total_time": 5.600855827331543
+        }
+    ]
+}

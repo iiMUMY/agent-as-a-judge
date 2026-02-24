@@ -1,0 +1,69 @@
+{
+  "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+  "query": "CartPole-v1 gibi bir OpenAI Gym ortamında PyTorch kullanarak bir DQN ajanı eğitmek için güvenilir bir sistem oluşturun. DQN'yi PyTorch kullanarak `src/model.py` içinde uygulayın. Ortam, `src/main.py` ana dosyasında başlatılmalıdır. DQN ve ortam arasındaki boyut uyumsuzluklarını (örneğin, Gym ortam kimliği değişirse) bir hata kaydederek ele alın. Ayrıca, her bölümden sonra getiriyi `results/metrics/` dosyasına kaydedin ve her yeni bölüm tamamlandığında güncelleyin. Bölüm eğrisi üzerindeki son getiriyi `results/figures/return_over_time.png` olarak ve son eğitilmiş modeli `models/saved_models/dqn_model.pt` olarak kaydedin. Mümkünse, bölüm eğrisi üzerindeki getiriyi önemli kilometre taşlarını göstermek için açıklamalar ekleyin.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"DQN\" algoritması PyTorch kullanılarak uygulanır ve `src/model.py` içinde kaydedilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Bir \"OpenAI Gym\" ortamı `src/main.py` içinde başlatılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Zamanla getiri eğrisi çizilir, her bölümün getirisi kaydedilir ve `results/figures/reward_over_time.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Eğitilmiş model `models/saved_models/dqn_model.pt` olarak kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Her bölümün getirisi `results/metrics/` dosyasına kaydedilir ve her bölüm tamamlandığında güncellenir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Sistem, boyut uyumsuzluklarını ele almalı ve sorunları kolay hata ayıklama için kaydetmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Bölüm eğrisi üzerindeki getiri, önemli kilometre taşlarıyla açıklanmıştır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

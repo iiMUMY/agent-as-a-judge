@@ -1,0 +1,212 @@
+{
+    "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+    "query": "Lending Club Loan veri kümesi ile bir Random Forest sınıflandırıcı kullanarak bir kredi temerrüt tahmin sistemi oluşturmama yardımcı olabilir misiniz? Veri kümesini yükleyerek, dengesiz verileri aşırı örnekleme veya az örnekleme teknikleri kullanarak ele alarak ve önemli özellikleri belirlemek için özellik seçimi yaparak başlayın, bunların hepsi `src/data_loader.py` içinde uygulanmıştır. Bir Random Forest modeli eğitin ve eğitilmiş modeli `models/saved_models/` içinde kaydedin. Özellik önemlerini `results/feature_importances.txt` olarak kaydedin ve ROC eğrisini matplotlib kullanarak `results/figures/roc_curve.png` olarak kaydedin. Son olarak, veri ön işleme adımlarını, model eğitimi ve değerlendirme sürecini özetleyen ayrıntılı bir Markdown raporu oluşturun ve bunu `results/loan_default_prediction_report.md` olarak kaydedin. Rapor, model performansı hakkında içgörüler ve potansiyel iyileştirmeler için öneriler içermelidir.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Lending Club Loan\" veri kümesi `src/data_loader.py` içinde yüklenmiştir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Dengesiz veriler aşırı örnekleme veya az örnekleme teknikleri kullanılarak ele alınır, `src/data_loader.py` içinde uygulanmıştır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapılır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Kredi temerrüdünü tahmin etmek için bir \"Random Forest\" sınıflandırıcı uygulanır. Eğitilmiş modeli `models/saved_models/` içinde kaydedin.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "Özellik önemleri `results/feature_importances.txt` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "\"ROC eğrisi\" görselleştirilir ve \"matplotlib\" kullanılarak `results/figures/roc_curve.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                5
+            ],
+            "criteria": "Veri ön işleme adımlarını, model eğitimi ve değerlendirme sürecini içeren bir Markdown raporu oluşturulur ve `results/loan_default_prediction_report.md` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Markdown raporu ayrıntılıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Markdown raporu, model performansı hakkında içgörüler ve potansiyel iyileştirmeler için öneriler içermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Lending Club Loan\" veri kümesi `src/data_loader.py` içinde yüklenmiştir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026925000000000004,
+                "inference_time": 1.9849059581756592,
+                "input_tokens": 749,
+                "output_tokens": 82,
+                "accumulated_cost": 0.00313,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Lending Club Loan\" veri kümesinin `src/data_loader.py` içinde yüklenmesi sırasında sorunlar yaşandığı belirtilmiştir. Adım 25'te, dosya yolunun bulunamaması nedeniyle veri kümesinin yüklenemediği açıkça ifade edilmiştir. Bu durum, veri kümesinin başarıyla yüklenmediğini göstermektedir."
+                ]
+            },
+            "total_time": 11.076081037521362
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Dengesiz veriler aşırı örnekleme veya az örnekleme teknikleri kullanılarak ele alınır, `src/data_loader.py` içinde uygulanmıştır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027525,
+                "inference_time": 2.514274835586548,
+                "input_tokens": 785,
+                "output_tokens": 79,
+                "accumulated_cost": 0.0063750000000000005,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is satisfied as evidenced by the trajectory steps. The `src/data_loader.py` file was executed, and messages indicate that data imbalance was detected and addressed using an oversampling technique. The successful completion of oversampling and the confirmation that the data is now balanced demonstrate that the requirement to handle imbalanced data using oversampling or undersampling techniques has been met."
+                ]
+            },
+            "total_time": 9.265762567520142
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031375,
+                "inference_time": 2.9086759090423584,
+                "input_tokens": 855,
+                "output_tokens": 100,
+                "accumulated_cost": 0.010287500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Özellik seçimi süreci `src/data_loader.py` dosyasında başlatılmış ve tamamlanmış olsa da, \"Özellik seçimi sırasında beklenmeyen veri türü tespit edildi\" uyarısı, sürecin beklenildiği gibi çalışmadığını ve önemli özelliklerin doğru bir şekilde belirlenememiş olabileceğini gösteriyor. Bu uyarı, özellik seçiminin güvenilirliğini sorgulatmaktadır."
+                ]
+            },
+            "total_time": 13.028601884841919
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Kredi temerrüdünü tahmin etmek için bir \"Random Forest\" sınıflandırıcı uygulanır. Eğitilmiş modeli `models/saved_models/` içinde kaydedin.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0027575000000000004,
+                "inference_time": 2.6700761318206787,
+                "input_tokens": 803,
+                "output_tokens": 75,
+                "accumulated_cost": 0.013662500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Random Forest\" sınıflandırıcısının eğitildiği ve modelin `models/saved_models/random_forest_model.pkl` dizinine başarıyla kaydedildiği belirtilmiştir. Çevresel geri bildirimde herhangi bir hata veya uyarı bildirilmemiştir, bu da işlemin başarılı olduğunu göstermektedir."
+                ]
+            },
+            "total_time": 10.880572319030762
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Özellik önemleri `results/feature_importances.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028025000000000003,
+                "inference_time": 4.001357793807983,
+                "input_tokens": 697,
+                "output_tokens": 106,
+                "accumulated_cost": 0.016435,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Özellik önemlerinin `results/feature_importances.txt` dosyası olarak kaydedildiği belirtilmiştir. Adım 45'te dosyanın başarıyla kaydedildiği ve Adım 46'da başarıyla yüklendiği çevresel geri bildirimlerle doğrulanmıştır. Herhangi bir hata veya uyarı mesajı bulunmaması, dosyanın işlevselliğini veya başarıyla çalışmasını etkileyebilecek bir sorun olmadığını göstermektedir."
+                ]
+            },
+            "total_time": 13.201528787612915
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "\"ROC eğrisi\" görselleştirilir ve \"matplotlib\" kullanılarak `results/figures/roc_curve.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002615,
+                "inference_time": 1.8178324699401855,
+                "input_tokens": 670,
+                "output_tokens": 94,
+                "accumulated_cost": 0.018832500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"ROC eğrisi\"nin matplotlib kullanılarak başarıyla oluşturulduğu ve `results/figures/roc_curve.png` olarak kaydedildiği belirtilmiştir. Adım 45 ve 46'da, ROC eğrisinin oluşturulup kaydedildiği ve herhangi bir hata veya uyarı rapor edilmediği açıkça ifade edilmiştir. Bu, gereksinimin tamamen karşılandığını gösterir."
+                ]
+            },
+            "total_time": 7.895524024963379
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Veri ön işleme adımlarını, model eğitimi ve değerlendirme sürecini içeren bir Markdown raporu oluşturulur ve `results/loan_default_prediction_report.md` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028525000000000004,
+                "inference_time": 2.9550740718841553,
+                "input_tokens": 781,
+                "output_tokens": 90,
+                "accumulated_cost": 0.021705000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, `results/loan_default_prediction_report.md` dosyasının var olmadığı belirtilerek karşılanmamıştır. Proje yapısında veya dosya içeriğinde bu raporun oluşturulduğuna dair kanıt bulunmamaktadır. Trajectory Evidence, dosyanın başarıyla oluşturulduğunu iddia etse de, mevcut kanıtlar bu iddiayı desteklememektedir."
+                ]
+            },
+            "total_time": 11.022113800048828
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+  "name": "11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+  "query": "Merhaba. Boston Housing veri kümesi üzerinde Lineer Regresyon modeli kullanarak bir ev fiyat tahmin projesi kurun. Veri kümesini `from datasets import load_dataset` ve `ds = load_dataset(\"~/mrseba/boston_house_price\")` kullanarak `src/data_loader.py` içinde yükleyin. Özellik ölçeklendirme ve veri standardizasyonunun `src/data_loader.py` içinde gerçekleştirildiğinden emin olun. Lineer Regresyon modelini `src/model.py` içinde uygulayın. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın. Ortalama Kare Hata (MSE), Ortalama Mutlak Hata (MAE) ve $R^2$ skorunu yazdırın ve `results/metrics/metrics.txt` altında kaydedin. Tahmin edilen ve gerçek değerler arasındaki karşılaştırmayı görselleştirin ve sonucu `results/figures/prediction_vs_actual.png` olarak kaydedin. Görselleştirmeler modelin doğruluğunu açıkça göstermelidir (doğru yapılırsa iyi olmalıdır).",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Boston Housing\" veri kümesi `from datasets import load_dataset` ve `ds = load_dataset(\"mrseba/boston_house_price\")` kullanılarak `src/data_loader.py` içinde kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik ölçeklendirme ve veri standardizasyonu `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Lineer Regresyon\" modeli `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Modeli değerlendirmek için `src/train.py` içinde \"çapraz doğrulama\" kullanılır.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"Ortalama Kare Hata (MSE),\" \"Ortalama Mutlak Hata (MAE),\" ve \"R^2 skoru\" yazdırılır ve `results/metrics/metrics.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Tahmin edilen ve gerçek değerlerin karşılaştırması görselleştirilir ve `results/figures/prediction_vs_actual.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Veri kümesi sağlanan `load_dataset` kodu kullanılarak sorunsuz yüklenmelidir ve sorun çıkarsa diğer yöntemler denenmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Görselleştirmeler, tahmin edilen ve gerçek değerler arasındaki farkları vurgulayarak modelin doğruluğunu açıkça göstermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "`ds = load_dataset(\"~/mrseba/boston_house_price\")` in the query is wrong, and it should be `ds = load_dataset(\"mrseba/boston_house_price\")`. We leave it here to check the self-debugging skill of the agents.",
+  "language": "Turkish"
+}

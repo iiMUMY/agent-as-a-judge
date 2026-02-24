@@ -1,0 +1,216 @@
+{
+    "name": "27_Image_Generation_DCGAN_MNIST_DL",
+    "query": "MNIST veri kümesi kullanılarak bir DCGAN modeli ile görüntü oluşturma sistemi oluşturmam gerekiyor. MNIST veri kümesini `src/data_loader.py` içinde yükleyin ve DCGAN modelini `src/model.py` içinde uygulayın. Sistem, doğru DCGAN mimarisinin kullanılmasını sağlamalı, oluşturulan görüntüleri `results/figures/` içine kaydetmeli, model eğitimi sırasında eğitim kaybını `results/metrics/` altında ve oluşturulan görüntüleri `results/figures/` altında kaydederek izlemeli ve performansı artırmak için `src/train.py` içinde gürültü vektör boyutları ve öğrenme oranı gibi üretim parametreleri üzerinde bir hiperparametre araması yapmalıdır. Ayrıca, oluşturulan görüntülerin bir GIF animasyonunu `results/figures/generated_images.gif` olarak oluşturun ve kaydedin, eğitim sürecini ve sonuçlarını iyi yapılandırılmış bir Jupyter Notebook'ta sunun ve Notebook'u `results/training_report.pdf` olarak kaydedilen cilalı bir PDF raporuna dönüştürün. DCGAN model mimarisi, diğer GAN varyantlarıyla karışıklığı önlemek için Notebook'ta açıkça belgelenmelidir.",
+    "tags": [
+        "Computer Vision",
+        "Generative Models"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"MNIST\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "\"DCGAN\" modeli, standart bir GAN değil, `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Oluşturulan görüntüler belirtilen `results/figures/` klasörüne kaydedilir.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Model eğitimi, `results/metrics/` altında kaydedilen eğitim kaybı ile izlenir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "Model performansını artırmak için gürültü vektör boyutları ve öğrenme oranı gibi parametreleri aramak için bir hiperparametre arama yöntemi `src/train.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "Oluşturulan görüntülerin bir GIF animasyonu oluşturulur ve `results/figures/generated_images.gif` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "Eğitim süreci ve sonuçlar bir Jupyter Notebook'ta sunulur, PDF raporuna dönüştürülür ve `results/training_report.pdf` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "DCGAN model mimarisi, diğer GAN varyantlarıyla karışıklığı önlemek için Notebook'ta açıkça belgelenmelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "PDF raporu, model mimarisi, eğitim süreci, sonuçlar ve gelecekteki iyileştirmeler için net bölümlerle iyi yapılandırılmış olmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "hint": "Saving figures is mentioned twice, i.e., once in requirement 2 and once in requirement 3.",
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"MNIST\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031875000000000002,
+                "inference_time": 1.5753490924835205,
+                "input_tokens": 831,
+                "output_tokens": 111,
+                "accumulated_cost": 0.0032050000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"MNIST\" veri kümesinin `src/data_loader.py` içinde yüklendiğine dair kanıt yoktur çünkü belirtilen dosya mevcut değildir. Proje yapısında veya dosya içeriğinde bu dosyanın varlığına dair bir kanıt sunulmamıştır. Trajectory Evidence, dosyanın çalıştırıldığını ve veri kümesinin yüklendiğini iddia etse de, bu bilgi mevcut dosya yapısı ve içerik kanıtlarıyla desteklenmemektedir."
+                ]
+            },
+            "total_time": 7.539588689804077
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "\"DCGAN\" modeli, standart bir GAN değil, `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00331,
+                "inference_time": 1.9307429790496826,
+                "input_tokens": 856,
+                "output_tokens": 117,
+                "accumulated_cost": 0.007065000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, \"DCGAN\" modelinin `src/model.py` içinde uygulandığını belirtse de, verilen bilgilerde bu modelin standart bir GAN yerine DCGAN olarak uygulandığını doğrulayan herhangi bir kanıt bulunmamaktadır. Ayrıca, modelin eğitim sürecinde \"Epoch 1: Loss not decreasing\" uyarısı alındığı belirtilmiş, bu da modelin doğru bir şekilde çalışmadığını veya optimize edilmediğini gösterebilir. Bu nedenle, gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 6.421154022216797
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Oluşturulan görüntüler belirtilen `results/figures/` klasörüne kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026925000000000004,
+                "inference_time": 1.2211318016052246,
+                "input_tokens": 681,
+                "output_tokens": 99,
+                "accumulated_cost": 0.009687500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, `results/figures/` klasörüne görüntülerin kaydedilmesi olarak belirtilmiştir. Ancak, Step 47'de \"Disk alanı yetersiz\" uyarısı nedeniyle `plot2.png` dosyası başarıyla kaydedilememiştir. Bu durum, tüm görüntülerin belirtilen klasöre kaydedilmesi gereksiniminin tam olarak karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 4.760225534439087
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Model eğitimi, `results/metrics/` altında kaydedilen eğitim kaybı ile izlenir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00233,
+                "inference_time": 1.111978530883789,
+                "input_tokens": 668,
+                "output_tokens": 66,
+                "accumulated_cost": 0.012127500000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Model eğitimi, `results/metrics/training_loss.csv` dosyasının kaydedilmesi ve güncellenmesi ile izlenmiştir. Trajectory Evidence bölümünde belirtilen adımlar, bu dosyanın başarılı bir şekilde işlendiğini ve herhangi bir sorun olmadığını göstermektedir."
+                ]
+            },
+            "total_time": 6.628052711486816
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Model performansını artırmak için gürültü vektör boyutları ve öğrenme oranı gibi parametreleri aramak için bir hiperparametre arama yöntemi `src/train.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030975000000000004,
+                "inference_time": 1.7805485725402832,
+                "input_tokens": 827,
+                "output_tokens": 103,
+                "accumulated_cost": 0.015802500000000004,
+                "satisfied": false,
+                "reason": [
+                    "< SATISFIED >: `src/train.py` dosyasında hiperparametre arama işlemi gerçekleştirilmiştir. Adım 45 ve Adım 49'da belirtilen çıktılar, gürültü vektör boyutu ve öğrenme oranı gibi parametrelerin arandığını ve en iyi parametrelerin başarıyla belirlendiğini göstermektedir. Başlangıçta bir hata oluşmuş olsa da, bu hata düzeltilmiş ve işlem başarıyla tamamlanmıştır."
+                ]
+            },
+            "total_time": 6.351534366607666
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Oluşturulan görüntülerin bir GIF animasyonu oluşturulur ve `results/figures/generated_images.gif` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029050000000000005,
+                "inference_time": 1.8720839023590088,
+                "input_tokens": 790,
+                "output_tokens": 93,
+                "accumulated_cost": 0.018540000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, `results/figures/generated_images.gif` dosyasının var olmadığı belirtilen hata mesajı nedeniyle karşılanmamıştır. Her ne kadar çevresel geri bildirimde GIF dosyasının başarıyla kaydedildiği belirtilmiş olsa da, dosya sisteminde bu dosyanın mevcut olmadığı açıkça belirtilmiştir. Bu durum, gereksinimin tam olarak karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 5.497209548950195
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Eğitim süreci ve sonuçlar bir Jupyter Notebook'ta sunulur, PDF raporuna dönüştürülür ve `results/training_report.pdf` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028850000000000004,
+                "inference_time": 1.3755578994750977,
+                "input_tokens": 810,
+                "output_tokens": 86,
+                "accumulated_cost": 0.021942500000000004,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Eğitim süreci ve sonuçların Jupyter Notebook'ta tamamlandığı ve başarıyla toplandığı belirtilmiştir. Ayrıca, bu sonuçların PDF formatına dönüştürülerek `results/training_report.pdf` dosyasına kaydedildiği ve dosyanın varlığının doğrulandığı açıkça ifade edilmiştir. Bu, gereksinimin tam olarak karşılandığını gösterir."
+                ]
+            },
+            "total_time": 5.792985916137695
+        }
+    ]
+}

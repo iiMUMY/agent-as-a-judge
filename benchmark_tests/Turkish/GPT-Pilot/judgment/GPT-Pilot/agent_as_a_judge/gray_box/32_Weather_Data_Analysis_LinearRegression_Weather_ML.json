@@ -1,0 +1,210 @@
+{
+    "name": "32_Weather_Data_Analysis_LinearRegression_Weather_ML",
+    "query": "Kaggle'dan alınan Weather veri kümesi üzerinde Lineer Regresyon modeli kullanarak bir hava durumu veri analizi sistemi geliştirin. Veri kümesini yükleyin ve özellik seçimi ve oluşturma dahil olmak üzere özellik mühendisliği yapın ve eksik verileri `src/data_loader.py` içinde ortalama atama veya enterpolasyon kullanarak ele alın. Ardından, Lineer Regresyon modeli `src/model.py` içinde uygulanmalıdır. Korelasyon matrisini `results/figures/correlation_matrix.png` olarak görselleştirin ve kaydedin ve tahmin sonuçlarını güven aralıklarıyla birlikte bir çizgi grafiği olarak `results/figures/prediction_results.png` içinde kaydedin. Son olarak, veri ön işleme, özellik mühendisliği, model eğitimi ve tahmin sonuçlarını kapsayan ayrıntılı bir rapor oluşturun. Raporu `results/weather_analysis_report.pdf` içinde kaydedin. Özellik mühendisliği süreci iyi belgelenmelidir.",
+    "tags": [
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Kaggle Weather\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Özellik mühendisliği, özellik seçimi ve oluşturma dahil olmak üzere `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Eksik veriler `src/data_loader.py` içinde ortalama atama veya enterpolasyon kullanılarak ele alınır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "\"Lineer Regresyon\" modeli hava durumu veri analizi için kullanılır ve `src/model.py` içinde uygulanmalıdır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "Korelasyon matrisi `results/figures/correlation_matrix.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "Tahmin sonuçları çizgi grafiği olarak çizilir ve güven aralıklarıyla birlikte kaydedilir. Grafik `results/figures/prediction_results.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                5
+            ],
+            "criteria": "Veri ön işleme, özellik mühendisliği, model eğitimi ve tahmin sonuçlarını içeren ayrıntılı bir rapor oluşturulur ve `results/weather_analysis_report.pdf` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Özellik mühendisliği süreci, özellik seçimi ve oluşturmanın arkasındaki mantığı açıklayarak raporda açıkça belgelenmelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Rapor, özellikler arasındaki ilginç ilişkileri vurgulayarak korelasyon matrisi üzerine bir tartışma içermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Kaggle Weather\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003425,
+                "inference_time": 2.538018226623535,
+                "input_tokens": 874,
+                "output_tokens": 124,
+                "accumulated_cost": 0.00353,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Kaggle Weather\" veri kümesinin `src/data_loader.py` içinde yüklenmesi gereksinimi karşılanmamıştır. Proje yapısında `src/data_loader.py` dosyası mevcut değildir ve bu dosyanın içeriği erişilememektedir. Ayrıca, Adım 48'de \"FileNotFoundError: Kaggle Weather veri kümesi bulunamadı\" hatası, veri kümesinin başarıyla yüklenemediğini göstermektedir. Bu durum, dosyanın işlevselliğini etkileyen bir sorundur."
+                ]
+            },
+            "total_time": 13.684921979904175
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Özellik mühendisliği, özellik seçimi ve oluşturma dahil olmak üzere `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028275,
+                "inference_time": 2.2963197231292725,
+                "input_tokens": 759,
+                "output_tokens": 93,
+                "accumulated_cost": 0.0067350000000000005,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyasında özellik mühendisliği ve özellik seçimi işlemleri başarıyla gerçekleştirilmiş olsa da, özellik oluşturma aşamasında \"Özellik oluşturma hatası: Geçersiz veri türü\" uyarısı alınmıştır. Bu hata, özellik oluşturma işleminin tamamlanmadığını ve dolayısıyla gereksinimin tam olarak karşılanmadığını göstermektedir."
+                ]
+            },
+            "total_time": 8.159218549728394
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Eksik veriler `src/data_loader.py` içinde ortalama atama veya enterpolasyon kullanılarak ele alınır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027925,
+                "inference_time": 1.6800730228424072,
+                "input_tokens": 809,
+                "output_tokens": 77,
+                "accumulated_cost": 0.00965,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is not satisfied because the file `src/data_loader.py` does not exist in the specified directory, as indicated by the error message. Although the trajectory evidence suggests that the file was executed and handled missing data using mean imputation and interpolation, the absence of the file in the project structure means that the requirement cannot be verified or considered fulfilled."
+                ]
+            },
+            "total_time": 7.720327138900757
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "\"Lineer Regresyon\" modeli hava durumu veri analizi için kullanılır ve `src/model.py` içinde uygulanmalıdır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002885,
+                "inference_time": 1.6075758934020996,
+                "input_tokens": 830,
+                "output_tokens": 81,
+                "accumulated_cost": 0.013357500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Lineer Regresyon\" modelinin hava durumu veri analizi için kullanıldığı ve `src/model.py` dosyasında uygulandığı belirtilmiştir. Adım 45'te, modelin başarıyla yüklendiği ve hava durumu verileriyle eğitildiği ifade edilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 11.410829782485962
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Korelasyon matrisi `results/figures/correlation_matrix.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032475000000000004,
+                "inference_time": 2.035067081451416,
+                "input_tokens": 815,
+                "output_tokens": 121,
+                "accumulated_cost": 0.016287500000000003,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Korelasyon matrisi `results/figures/correlation_matrix.png` olarak kaydedildiği iddia edilmesine rağmen, dosya sisteminde bu dosya mevcut değil. Dosyanın var olmadığına dair bir hata mesajı alınmıştır: \"Error: File benchmark_tests\\Turkish\\GPT-Pilot\\workspaces\\GPT-Pilot\\32_Weather_Data_An…\\results\\figures\\correlation_matrix.png does not exist.\" Bu durum, dosyanın gerçekten kaydedilmediğini veya yanlış bir konumda olduğunu gösterir."
+                ]
+            },
+            "total_time": 7.92193078994751
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Tahmin sonuçları çizgi grafiği olarak çizilir ve güven aralıklarıyla birlikte kaydedilir. Grafik `results/figures/prediction_results.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025850000000000005,
+                "inference_time": 1.4135503768920898,
+                "input_tokens": 806,
+                "output_tokens": 57,
+                "accumulated_cost": 0.019727500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Trajectory evidence indicates that the prediction results were successfully plotted and saved as a line graph with confidence intervals at the specified path `results/figures/prediction_results.png`. The steps confirm the successful creation and saving of the file, fulfilling the requirement."
+                ]
+            },
+            "total_time": 9.25644588470459
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Veri ön işleme, özellik mühendisliği, model eğitimi ve tahmin sonuçlarını içeren ayrıntılı bir rapor oluşturulur ve `results/weather_analysis_report.pdf` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029025,
+                "inference_time": 1.9325742721557617,
+                "input_tokens": 761,
+                "output_tokens": 100,
+                "accumulated_cost": 0.022832500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `results/weather_analysis_report.pdf` dosyasının başarıyla oluşturulduğunu ve kaydedildiğini gösteriyor. Ancak, veri ön işleme, özellik mühendisliği, model eğitimi ve tahmin sonuçlarını içeren ayrıntılı bir raporun içeriği hakkında herhangi bir bilgi verilmemiştir. Bu nedenle, raporun belirtilen tüm unsurları içerip içermediği doğrulanamamaktadır."
+                ]
+            },
+            "total_time": 7.600593328475952
+        }
+    ]
+}

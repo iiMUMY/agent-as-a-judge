@@ -1,0 +1,209 @@
+{
+    "name": "19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+    "query": "Rossmann Mağaza Satışları veri kümesine dayalı bir LSTM tabanlı sıralama-sıralama modeli kullanarak bir satış tahmin sistemi geliştirin, Kaggle'dan [buradan](https://www.kaggle.com/c/rossmann-store-sales/data) indirip `src/data_loader.py` içinde yükleyin. Verileri eğitim ve test setlerine ayırın ve `src/data_loader.py` içinde kaydedin. `LSTM` tabanlı bir sıralama-sıralama modeli uygulayın ve eğitilmiş modeli `models/saved_models/` dizini altında kaydedin. Tahmin sonuçlarını `results/figures/forecast_results.png` olarak kaydedin. Tahmin edilen ve gerçek değerler arasındaki karşılaştırma grafiğini `results/figures/comparison_plot.png` olarak kaydedin. Tahmin sonuçlarını ve karşılaştırma grafiklerini içeren, farklı tahmin ufuklarını keşfetmek için bazı etkileşimli unsurlar içeren bir HTML raporu oluşturun ve `results/report.html` olarak kaydedin. Modelin satış verilerindeki mevsimsel eğilimleri yakalayacak şekilde ayarlandığından emin olun.",
+    "tags": [
+        "Supervised Learning",
+        "Time Series Forecasting"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Rossmann Mağaza Satışları\" veri kümesi kullanılır, potansiyel olarak Kaggle'dan [bu bağlantıdan](https://www.kaggle.com/c/rossmann-store-sales/data) indirilir ve `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veriler eğitim ve test setlerine ayrılır ve `src/data_loader.py` içinde uygulanır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "\"LSTM\" tabanlı bir sıralama-sıralama modeli kullanılır. Lütfen eğitilmiş modeli `models/saved_models/` dizini altında kaydedin.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "Tahmin sonuçları çizilir ve `results/figures/forecast_results.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "Tahmin edilen ve gerçek değerlerin karşılaştırma grafiği `results/figures/comparison_plot.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "Tahmin sonuçlarını ve karşılaştırma grafiklerini içeren bir HTML raporu oluşturulur ve `results/report.html` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                5
+            ],
+            "criteria": "HTML raporu, kullanıcıların farklı tahmin ufuklarını keşfetmelerine olanak tanıyan etkileşimli unsurlar içermelidir.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Model, satış verilerindeki mevsimsel eğilimleri daha doğru tahmin için yakalayacak şekilde ayarlanmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Rossmann Mağaza Satışları\" veri kümesi kullanılır, potansiyel olarak Kaggle'dan [bu bağlantıdan](https://www.kaggle.com/c/rossmann-store-sales/data) indirilir ve `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029275000000000004,
+                "inference_time": 3.395261287689209,
+                "input_tokens": 795,
+                "output_tokens": 94,
+                "accumulated_cost": 0.0032725000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Rossmann Mağaza Satışları\" veri kümesi `src/data_loader.py` dosyası aracılığıyla yüklenmiş olsa da, yükleme sırasında tarih formatı hatası gibi sorunlar yaşanmıştır. Bu hata, veri kümesinin işlevselliğini etkileyebilir ve bu durumun düzeltilmesi gerekmektedir. Bu nedenle, gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 11.658758401870728
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veriler eğitim ve test setlerine ayrılır ve `src/data_loader.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031925,
+                "inference_time": 2.343837261199951,
+                "input_tokens": 765,
+                "output_tokens": 128,
+                "accumulated_cost": 0.0065525,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Verilerin eğitim ve test setlerine ayrılması işlemi `src/data_loader.py` dosyasında uygulanmış ve işlem başarıyla tamamlanmış olsa da, \"Veri seti boyutu beklenenden küçük, eğitim ve test setleri dengesiz olabilir\" şeklinde bir uyarı alınmıştır. Bu uyarı, eğitim ve test setlerinin dengesiz olabileceğini gösteriyor ve bu durum, verilerin uygun şekilde ayrılmadığını veya yeterli büyüklükte olmadığını düşündürmektedir. Dolayısıyla, gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 7.554288148880005
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"LSTM\" tabanlı bir sıralama-sıralama modeli kullanılır. Lütfen eğitilmiş modeli `models/saved_models/` dizini altında kaydedin.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0036725000000000004,
+                "inference_time": 2.527914524078369,
+                "input_tokens": 989,
+                "output_tokens": 120,
+                "accumulated_cost": 0.00995,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, eğitilmiş LSTM modelinin `models/saved_models/` dizini altında kaydedilmesini öngörmektedir. Ancak, belirtilen dizin altında `lstm_model.h5` veya `lstm_trained_model.pth` dosyaları bulunmamaktadır. Her iki dosya için de \"does not exist\" hatası alınmıştır. Bu durum, modelin belirtilen dosya adlarıyla kaydedilmediğini veya mevcut olmadığını göstermektedir. Bu nedenle gereksinim karşılanmamıştır."
+                ]
+            },
+            "total_time": 9.766581535339355
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Tahmin sonuçları çizilir ve `results/figures/forecast_results.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024400000000000003,
+                "inference_time": 1.947939395904541,
+                "input_tokens": 660,
+                "output_tokens": 79,
+                "accumulated_cost": 0.012405000000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Tahmin sonuçlarının `results/figures/forecast_results.png` olarak kaydedildiği belirtilmiştir. Çevresel geri bildirimde, dosyanın başarıyla kaydedildiği ve işlem sırasında herhangi bir hata veya uyarı mesajı rapor edilmediği ifade edilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 6.303437232971191
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Tahmin edilen ve gerçek değerlerin karşılaştırma grafiği `results/figures/comparison_plot.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028875000000000003,
+                "inference_time": 1.7914886474609375,
+                "input_tokens": 723,
+                "output_tokens": 108,
+                "accumulated_cost": 0.015265,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/figures/comparison_plot.png\" dosyasının başarıyla kaydedildiği ve yüklendiği belirtilmiştir. Çevresel geri bildirimde herhangi bir hata veya uyarı mesajı bulunmamakta, bu da dosyanın işlevselliğini veya başarıyla çalışmasını etkileyebilecek bir sorun olmadığını göstermektedir. Dolayısıyla, tahmin edilen ve gerçek değerlerin karşılaştırma grafiği belirtilen dosya olarak kaydedilmiştir."
+                ]
+            },
+            "total_time": 5.810024976730347
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Tahmin sonuçlarını ve karşılaştırma grafiklerini içeren bir HTML raporu oluşturulur ve `results/report.html` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029100000000000003,
+                "inference_time": 2.1467738151550293,
+                "input_tokens": 780,
+                "output_tokens": 96,
+                "accumulated_cost": 0.0183875,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, tahmin sonuçlarını ve karşılaştırma grafiklerini içeren bir HTML raporunun `results/report.html` olarak kaydedilmesini içeriyor. Ancak, Step 47'de \"Error: Failed to save report due to insufficient disk space.\" ifadesi, raporun başarıyla kaydedilemediğini gösteriyor. Bu durum, gereksinimin karşılanmadığını açıkça ortaya koymaktadır."
+                ]
+            },
+            "total_time": 7.148671388626099
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "HTML raporu, kullanıcıların farklı tahmin ufuklarını keşfetmelerine olanak tanıyan etkileşimli unsurlar içermelidir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029700000000000004,
+                "inference_time": 2.0824694633483887,
+                "input_tokens": 720,
+                "output_tokens": 117,
+                "accumulated_cost": 0.0209675,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, HTML raporunun etkileşimli unsurlar içerdiğini belirtse de, bu unsurların tüm kullanıcılar için düzgün çalışıp çalışmadığına dair belirsizlik bulunmaktadır. Özellikle, \"Step 47\"de belirtilen \"Some interactive elements may not render correctly on older browsers\" uyarısı, etkileşimli unsurların tüm kullanıcılar için tutarlı bir deneyim sunamayabileceğini göstermektedir. Bu durum, gereksinimin tam olarak karşılanmadığını işaret eder."
+                ]
+            },
+            "total_time": 6.79659104347229
+        }
+    ]
+}

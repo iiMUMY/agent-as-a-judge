@@ -1,0 +1,158 @@
+{
+    "name": "07_Image_Super_Resolution_SRCNN_Set5_DL",
+    "query": "Merhaba, SRCNN modeli kullanarak Set5 veri kümesiyle (mevcut `https://huggingface.co/datasets/eugenesiow/Set5` adresinden) görüntü süper çözünürlük için bir proje oluşturmam gerekiyor. Veri kümesini `src/data_loader.py` içinde yükleyin. Verileri yüklerken, `src/data_loader.py` içinde yeniden boyutlandırma ve normalleştirme gibi görüntü ön işleme adımlarını dahil edin. SRCNN modeli `src/model.py` içinde yüklenmeli ve kullanılmalıdır. Detaylara yakınlaştırarak 5 set karşılaştırma görüntüsünü `results/figures/super_resolution_compare.png` olarak ve süper çözünürlük sonuçlarını `results/figures/super_resolution_results.png` olarak kaydedin. Oluşturulan görüntüler yüksek kaliteli olmalı ve iyileştirmeleri net bir şekilde göstermelidir.",
+    "tags": [
+        "Computer Vision",
+        "Generative Models"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Set5\" veri kümesi (\"Hugging Face\" üzerinden mevcut) `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Yeniden boyutlandırma ve normalleştirme dahil olmak üzere görüntü ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"SRCNN\" modeli `src/model.py` içinde kullanılır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Detaylara yakınlaştırılmış beş set karşılaştırma görüntüsü kaydedilir ve `results/figures/super_resolution_compare.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Süper çözünürlük sonuçları `results/figures/super_resolution_results.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Proje, detaylı karşılaştırmalarla yüksek kaliteli, net süper çözünürlük görüntüleri üretmelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Ana iyileştirmeleri vurgulayan, iyi organize edilmiş çıktı görüntüleri dahil edilmelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Set5\" veri kümesi (\"Hugging Face\" üzerinden mevcut) `src/data_loader.py` içinde yüklenir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0030350000000000004,
+                "inference_time": 2.3354735374450684,
+                "input_tokens": 786,
+                "output_tokens": 107,
+                "accumulated_cost": 0.0033775000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Set5\" veri kümesinin \"Hugging Face\" üzerinden `src/data_loader.py` dosyası içinde başarıyla yüklendiği belirtilmiştir. Adım 45'te veri kümesinin başarıyla yüklendiği ve herhangi bir hata veya uyarı mesajı olmadığı, Adım 47'de ise veri kümesinin zaten yüklü olduğu için yeniden yükleme yapılmadığı ifade edilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 11.967644214630127
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Yeniden boyutlandırma ve normalleştirme dahil olmak üzere görüntü ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00353,
+                "inference_time": 3.351595640182495,
+                "input_tokens": 828,
+                "output_tokens": 146,
+                "accumulated_cost": 0.007052500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `src/data_loader.py` dosyasında görüntü ön işlemenin gerçekleştirildiğini ve yeniden boyutlandırma ile normalleştirme işlemlerinin yapıldığını belirtmektedir. Ancak, bu işlemlerin başarılı bir şekilde tamamlandığına dair kanıt, yalnızca son çalıştırmada (Adım 49) sağlanmıştır. İlk çalıştırmada (Adım 47) bir hata oluşmuş ve bu hata, yeniden boyutlandırma işleminin başarısız olduğunu göstermektedir. Bu durum, işlemin her zaman güvenilir bir şekilde çalışmadığını ve dolayısıyla gereksinimin tam olarak karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 11.174959659576416
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"SRCNN\" modeli `src/model.py` içinde kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0034175000000000004,
+                "inference_time": 2.8526031970977783,
+                "input_tokens": 851,
+                "output_tokens": 129,
+                "accumulated_cost": 0.010427500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"SRCNN\" modelinin `src/model.py` içinde kullanıldığına dair doğrudan bir kanıt yoktur. Dosya içeriği mevcut değil ve \"Error: File benchmark_tests\\Turkish\\OpenHands\\workspaces\\OpenHands\\07_Image_Super_Res\\src\\model.py does not exist.\" hatası, dosyanın var olmadığını gösteriyor. Çevresel geri bildirimler dosyanın yüklendiğini ve çalıştırıldığını belirtse de, bu geri bildirimler dosyanın içeriğini doğrulamak için yeterli değildir."
+                ]
+            },
+            "total_time": 9.427656650543213
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Detaylara yakınlaştırılmış beş set karşılaştırma görüntüsü kaydedilir ve `results/figures/super_resolution_compare.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028450000000000003,
+                "inference_time": 4.696354627609253,
+                "input_tokens": 682,
+                "output_tokens": 114,
+                "accumulated_cost": 0.012972500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `results/figures/super_resolution_compare.png` dosyasının kaydedildiğini belirtse de, detaylara yakınlaştırılmış beş set karşılaştırma görüntüsünün gerçekten kaydedilip kaydedilmediğine dair doğrudan bir kanıt sunmamaktadır. Sadece dosyanın kaydedilmesi sırasında hata veya uyarı mesajı olmadığı belirtilmiştir, ancak bu, beş set karşılaştırma görüntüsünün içerikte yer aldığına dair kesin bir kanıt sağlamaz."
+                ]
+            },
+            "total_time": 11.129992485046387
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Süper çözünürlük sonuçları `results/figures/super_resolution_results.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00255,
+                "inference_time": 2.6033365726470947,
+                "input_tokens": 668,
+                "output_tokens": 88,
+                "accumulated_cost": 0.015482500000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Süper çözünürlük sonuçlarının `results/figures/super_resolution_results.png` olarak kaydedildiği belirtilmiştir. Başlangıçta \"Permission denied\" hatası alınmış olsa da, Step 47'de dosyanın başarıyla kaydedildiği ve herhangi bir hata veya uyarı mesajı olmadığı belirtilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 7.524395227432251
+        }
+    ]
+}

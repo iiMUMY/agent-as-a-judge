@@ -1,0 +1,219 @@
+{
+    "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+    "query": "UCI'den Wine Quality veri kümesi ile bir Karar Ağacı modeli kullanarak bir şarap kalitesi tahmin sistemi oluşturun. Eksik değerlerin işlenmesi ve özellik ölçeklendirme dahil olmak üzere verileri `src/data_loader.py` içinde ön işleyin. Modeli `src/train.py` içinde çapraz doğrulama ile değerlendirin. Karar Ağacı regresyon modelini `src/model.py` içinde uygulayın. Ortalama kare hatayı `results/metrics/mean_squared_error.txt` olarak kaydedin. Özellik önemini görselleştirin ve `results/figures/feature_importance.png` olarak kaydedin. Sonuçlar ve görselleştirmeler içeren bir Jupyter Notebook oluşturun ve gözlemlerinizi özetleyin. Notebook, tekrarlanabilirliği sağlamak için ön işleme adımlarını ayrıntılı bir şekilde belgelemelidir. Notebook'u bir PDF raporuna dönüştürün ve `results/report.pdf` olarak kaydedin. PDF raporu ayrıca modelin potansiyel iyileştirmeleri hakkında kısa bir tartışma içermelidir.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"UCI\"den \"Wine Quality\" veri kümesi kullanılır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Eksik değerlerin işlenmesi ve özellik ölçeklendirme dahil olmak üzere veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"Karar Ağacı\" regresyon modeli `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Model `src/train.py` içinde çapraz doğrulama ile değerlendirilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Ortalama Kare Hata (MSE) `results/metrics/mean_squared_error.txt` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Özellik önem grafiği oluşturulur ve `results/figures/feature_importance.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "Ön işleme adımları, sonuçlar ve görselleştirmeler içeren bir Jupyter Notebook oluşturulur ve gözlemler özetlenir. Notebook, bir PDF raporuna dönüştürülür ve `results/report.pdf` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Özellik önem grafiği, en etkili özellikleri net bir şekilde vurgulamalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Son PDF raporu, modelin potansiyel iyileştirmeleri hakkında kısa bir tartışma içermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"UCI\"den \"Wine Quality\" veri kümesi kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003085,
+                "inference_time": 2.5243561267852783,
+                "input_tokens": 842,
+                "output_tokens": 98,
+                "accumulated_cost": 0.0037675,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısında herhangi bir dosya veya klasör bulunmadığı belirtilmiş, bu da veri kümesinin kullanılmadığını gösteriyor. Ayrıca, veri kümesinin indirilmesi ve işlenmesi sırasında sütun başlıklarıyla ilgili bir uyarı alınmış, ancak bu uyarının nasıl ele alındığına dair bir bilgi yok. Bu durum, veri kümesinin doğru bir şekilde kullanılmadığını düşündürmektedir."
+                ]
+            },
+            "total_time": 12.314580917358398
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Eksik değerlerin işlenmesi ve özellik ölçeklendirme dahil olmak üzere veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029900000000000005,
+                "inference_time": 5.998919486999512,
+                "input_tokens": 824,
+                "output_tokens": 93,
+                "accumulated_cost": 0.006775,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyası mevcut değil, bu nedenle dosyanın veri ön işleme görevlerini gerçekleştirdiğini doğrulamak mümkün değil. Her ne kadar adım geri bildirimleri dosyanın eksik değerleri işleme ve özellik ölçeklendirme görevlerini başarıyla tamamladığını gösterse de, dosyanın var olmaması bu işlevlerin gerçekten gerçekleştirildiğini kanıtlamıyor."
+                ]
+            },
+            "total_time": 12.219860315322876
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"Karar Ağacı\" regresyon modeli `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028350000000000003,
+                "inference_time": 2.7967796325683594,
+                "input_tokens": 714,
+                "output_tokens": 105,
+                "accumulated_cost": 0.009600000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, \"Karar Ağacı\" regresyon modelinin `src/model.py` içinde uygulandığını doğrulamak için yeterli kanıt sunmamaktadır. Çıktılar, modelin başarıyla eğitildiğini ve yüklendiğini belirtse de, modelin türü veya kullanılan algoritma hakkında spesifik bir bilgi verilmemiştir. Bu nedenle, \"Karar Ağacı\" modelinin gerçekten uygulanıp uygulanmadığını belirlemek mümkün değildir."
+                ]
+            },
+            "total_time": 8.76602029800415
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Model `src/train.py` içinde çapraz doğrulama ile değerlendirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027825000000000003,
+                "inference_time": 2.2704105377197266,
+                "input_tokens": 765,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0121825,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement states that the model should be evaluated with cross-validation within the `src/train.py` file. However, the evidence indicates that the `src/train.py` file does not exist in the specified directory. Although the trajectory evidence suggests that cross-validation was performed successfully, the absence of the actual file means the requirement cannot be verified or considered fulfilled based on the available project structure and file content evidence."
+                ]
+            },
+            "total_time": 9.78331732749939
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Ortalama Kare Hata (MSE) `results/metrics/mean_squared_error.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024475,
+                "inference_time": 1.5169343948364258,
+                "input_tokens": 699,
+                "output_tokens": 70,
+                "accumulated_cost": 0.01484,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/metrics/mean_squared_error.txt\" dosyasına yazma işlemi başlatıldığı ve dosyanın başarıyla kaydedildiği belirtilmiştir. Ayrıca, dosyanın varlığı kontrol edilmiş ve doğrulanmıştır. Bu, MSE'nin belirtilen dosyaya kaydedildiğini doğrular."
+                ]
+            },
+            "total_time": 5.683247089385986
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Özellik önem grafiği oluşturulur ve `results/figures/feature_importance.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002765,
+                "inference_time": 2.1393415927886963,
+                "input_tokens": 750,
+                "output_tokens": 89,
+                "accumulated_cost": 0.017902500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Özellik önem grafiği oluşturulmuş ve `results/figures/feature_importance.png` dosyası olarak başarıyla kaydedilmiştir. Başlangıçta \"Matplotlib is not installed\" hatası alınmış, ancak kütüphane yüklendikten sonra dosya sorunsuz bir şekilde kaydedilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 7.4356231689453125
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Ön işleme adımları, sonuçlar ve görselleştirmeler içeren bir Jupyter Notebook oluşturulur ve gözlemler özetlenir. Notebook, bir PDF raporuna dönüştürülür ve `results/report.pdf` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0028725,
+                "inference_time": 2.571103096008301,
+                "input_tokens": 737,
+                "output_tokens": 103,
+                "accumulated_cost": 0.020702500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Proje bilgileri, Jupyter Notebook'un oluşturulduğunu ve ön işleme adımları, sonuçlar ve görselleştirmeler içerdiğini belirtmektedir. Ayrıca, bu notebook'un PDF formatına başarıyla dönüştürüldüğü ve `results/report.pdf` olarak kaydedildiği belirtilmiştir. Herhangi bir hata veya uyarı mesajı rapor edilmemiştir, bu da sürecin sorunsuz bir şekilde tamamlandığını göstermektedir."
+                ]
+            },
+            "total_time": 7.397626876831055
+        }
+    ]
+}

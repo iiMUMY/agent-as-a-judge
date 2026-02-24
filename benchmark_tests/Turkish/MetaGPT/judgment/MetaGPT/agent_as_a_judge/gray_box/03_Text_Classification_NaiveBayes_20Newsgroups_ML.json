@@ -1,0 +1,159 @@
+{
+    "name": "03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+    "query": "Lütfen 20 Newsgroups veri kümesi için bir Naive Bayes sınıflandırıcısı uygulayın ve `src/model.py` adlı bir dosyada kaydedin. Veri kümesi `src/data_loader.py` içinde yüklenmelidir. Program, durak kelimeleri, noktalama işaretleri ve özel karakterlerin kaldırılması dahil olmak üzere veri ön işleme işlemlerini gerçekleştirmelidir. Sınıflandırıcınızı eğitmeden önce ve sonra kelime bulutları oluşturarak iyileşmeyi gösterin ve bunları `results/figures/wordcloud_before.png` ve `results/figures/wordcloud_after.png` olarak kaydedin. Lütfen `src/data_loader.py` içinde verileri yüklerken TF-IDF özelliklerini hesaplayın ve dahil edin. Son olarak, bir performans raporu (doğruluk, geri çağırma ve F1-skora dahil) yazdırın ve `results/metrics/performance.txt` olarak kaydedin. Modelin yorumlanması kolay olmalı ve nihai rapor, kolay inceleme için net bir şekilde yapılandırılmalıdır.",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"20 Newsgroups\" veri kümesi `src/data_loader.py` içinde kullanılır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veri ön işleme yapılır, durak kelimeleri, noktalama işaretleri ve özel karakterlerin kaldırılması dahil. Sınıflandırıcıyı eğitmeden önce ve sonra kelime bulutları görselleştirilir ve `results/figures/wordcloud_before.png` ve `results/figures/wordcloud_after.png` olarak kaydedilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "\"TF-IDF\" özellikleri `src/data_loader.py` içinde verileri yüklerken kullanılır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "\"Naive Bayes sınıflandırıcısı\" `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Doğruluk, geri çağırma ve \"F1-skora\" dahil bir performans raporu yazdırılır ve `results/metrics/performance.txt` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Modelin yorumlanması kolay olmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Nihai rapor, kolay inceleme için net bir şekilde yapılandırılmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "hint": "In the query, there is a missing word \"be\" after the word \"should\" in \"The dataset should loaded in `src/data_loader.py`\".",
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"20 Newsgroups\" veri kümesi `src/data_loader.py` içinde kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00288,
+                "inference_time": 2.0015008449554443,
+                "input_tokens": 792,
+                "output_tokens": 90,
+                "accumulated_cost": 0.0035075,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"20 Newsgroups\" veri kümesi `src/data_loader.py` içinde kullanılmıştır, ancak bazı kategorilerin eksik olduğu belirtilmiştir. Bu, veri kümesinin tam olarak yüklenmediğini ve dolayısıyla gereksinimin tam olarak karşılanmadığını gösterir. Ayrıca, gelecekteki uyumluluk sorunlarına işaret eden bir `DeprecationWarning` de alınmıştır."
+                ]
+            },
+            "total_time": 10.243560552597046
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veri ön işleme yapılır, durak kelimeleri, noktalama işaretleri ve özel karakterlerin kaldırılması dahil. Sınıflandırıcıyı eğitmeden önce ve sonra kelime bulutları görselleştirilir ve `results/figures/wordcloud_before.png` ve `results/figures/wordcloud_after.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033925000000000005,
+                "inference_time": 2.77555775642395,
+                "input_tokens": 797,
+                "output_tokens": 140,
+                "accumulated_cost": 0.0060675,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, `results/figures/wordcloud_before.png` ve `results/figures/wordcloud_after.png` dosyalarının varlığını ve içeriğini gerektirir. Ancak, her iki dosya da mevcut değildir. `wordcloud_before.png` dosyası için herhangi bir hata mesajı olmamasına rağmen, dosya bulunamamıştır. `wordcloud_after.png` dosyası ise \"Disk dolu\" hatası nedeniyle kaydedilememiştir. Bu durum, kelime bulutlarının görselleştirilip kaydedilmediğini doğrulamayı imkansız hale getirir."
+                ]
+            },
+            "total_time": 6.228477954864502
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"TF-IDF\" özellikleri `src/data_loader.py` içinde verileri yüklerken kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031925,
+                "inference_time": 3.627794027328491,
+                "input_tokens": 717,
+                "output_tokens": 140,
+                "accumulated_cost": 0.008982500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"Total Nodes: 0\" ifadesi, proje dosya yapısının eksik veya hatalı olduğunu gösteriyor. Bu, `src/data_loader.py` dosyasının varlığını veya içeriğini doğrulamak için yeterli kanıt sunmuyor. Ayrıca, \"TF-IDF özellikleri yükleniyor\" mesajı alınmış olsa da, bu mesajın dosya içeriği veya işlevselliği hakkında kesin bir kanıt sağlamadığı belirtilmiştir. Bu nedenle, \"TF-IDF\" özelliklerinin gerçekten kullanılıp kullanılmadığına dair kesin bir kanıt yoktur."
+                ]
+            },
+            "total_time": 8.815083742141724
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "\"Naive Bayes sınıflandırıcısı\" `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003195,
+                "inference_time": 2.383282423019409,
+                "input_tokens": 838,
+                "output_tokens": 110,
+                "accumulated_cost": 0.012752500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, \"Naive Bayes sınıflandırıcısı\"nın `src/model.py` içinde uygulandığını doğrudan doğrulayan bir kanıt sunmamaktadır. Yalnızca dosyanın yüklendiği, çalıştırıldığı ve değişikliklerin kaydedildiği belirtilmiştir. Ancak, Naive Bayes sınıflandırıcısının gerçekten uygulanıp uygulanmadığını veya nasıl uygulandığını gösteren bir kod parçası veya detay verilmemiştir."
+                ]
+            },
+            "total_time": 9.065634489059448
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Doğruluk, geri çağırma ve \"F1-skora\" dahil bir performans raporu yazdırılır ve `results/metrics/performance.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002955,
+                "inference_time": 2.2402114868164062,
+                "input_tokens": 754,
+                "output_tokens": 107,
+                "accumulated_cost": 0.0158,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/metrics/performance.txt\" dosyasına performans raporunun başarıyla yazdırıldığı ve içeriğinde doğruluk, geri çağırma ve F1-skora değerlerinin bulunduğu belirtilmiştir. \"Dosya başarıyla kaydedildi\" ve \"Değerler başarıyla yazıldı\" mesajları, dosyanın beklendiği gibi oluşturulduğunu ve içeriğinin doğru bir şekilde yazıldığını göstermektedir. Bu nedenle, gereksinim tamamen karşılanmıştır."
+                ]
+            },
+            "total_time": 6.942799806594849
+        }
+    ]
+}

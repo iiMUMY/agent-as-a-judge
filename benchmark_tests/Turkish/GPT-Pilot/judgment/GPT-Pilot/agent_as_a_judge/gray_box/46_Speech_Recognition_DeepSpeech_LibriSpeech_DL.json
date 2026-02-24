@@ -1,0 +1,212 @@
+{
+    "name": "46_Speech_Recognition_DeepSpeech_LibriSpeech_DL",
+    "query": "DeepSpeech kütüphanesini ve LibriSpeech veri setini kullanarak bir konuşma tanıma sistemi geliştirmek istiyorum. Benim için veri yükleme ve gürültü azaltma ve normalleştirme dahil ses ön işleme işlemlerini `src/data_loader.py` içinde uygulayabilir misiniz? Öğrenme oranı ve batch boyutu gibi hiperparametreleri `src/train.py` içinde ayarlayın. Tanıma sonuçlarını `results/recognition_results.txt` olarak kaydedin. Ardından, ses işleme aşamalarının (dalga formu ve spektrogram gibi) görselleştirmelerini oluşturun ve `results/figures/audio_visualization.png` olarak kaydedin. Tanıma doğruluğu, hata analizi ve gelecekteki iyileştirme önerileri hakkında ayrıntılı bir rapor oluşturun ve `results/recognition_report.md` olarak kaydedin. Ayrıca, DeepSpeech'in kurulum sürecini, yaygın kurulum sorunları için ipuçlarıyla birlikte belgeleyin ve [DeepSpeech belgeleri](https://deepspeech.readthedocs.io/en/r0.9/) referans alın. Son modeli `models/saved_models/` içinde kaydedin. Şimdiden teşekkürler!",
+    "tags": [
+        "Audio Processing"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"LibriSpeech\" veri seti `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Gürültü azaltma ve normalleştirme dahil ses ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Öğrenme oranı ve batch boyutu gibi hiperparametreler `src/train.py` içinde ayarlanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Konuşma tanıma modeli `models/saved_models/` içinde kaydedilir.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Tanıma sonuçları `results/recognition_results.txt` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "Dalga formu ve spektrogram gibi ses işleme görselleştirmeleri oluşturulur ve `results/figures/audio_visualization.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Tanıma doğruluğu, hata analizi ve gelecekteki iyileştirme önerilerini içeren bir rapor oluşturulur ve `results/recognition_report.md` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "\"DeepSpeech\" kütüphanesinin kurulum süreci iyi belgelenmeli, kütüphane yüklenemezse sorun giderme ipuçları içermelidir. Rehberlik için [DeepSpeech belgeleri](https://deepspeech.readthedocs.io/en/r0.9/) referans alın.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Görselleştirmeler, ses işleme aşamalarını açıkça göstermeli ve ön işlemenin etkilerini yorumlamayı kolaylaştırmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Rapor, \"DeepSpeech\" kütüphanesinin uygulanması zor olursa alternatif modeller veya yaklaşımlar için öneriler içermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"LibriSpeech\" veri seti `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033175,
+                "inference_time": 3.8799140453338623,
+                "input_tokens": 859,
+                "output_tokens": 117,
+                "accumulated_cost": 0.0033175,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"LibriSpeech\" veri setinin `src/data_loader.py` içinde yüklendiğine dair kanıtlar, dosyanın mevcut olmadığını belirten bir hata mesajı ile çelişiyor. Dosya yapısında `data_loader.py` dosyasının bulunmadığı belirtilmiş ve bu nedenle veri setinin bu dosya aracılığıyla yüklenmesi mümkün görünmüyor. Trajectory Evidence'da belirtilen adımlar, dosyanın varlığını ve işlevselliğini doğrulamak için yeterli değil."
+                ]
+            },
+            "total_time": 12.910423040390015
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Gürültü azaltma ve normalleştirme dahil ses ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0035250000000000004,
+                "inference_time": 3.112089157104492,
+                "input_tokens": 870,
+                "output_tokens": 135,
+                "accumulated_cost": 0.006772500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyası mevcut değil, bu nedenle gürültü azaltma ve normalleştirme işlemlerinin bu dosya içinde gerçekleştirildiğini doğrulamak mümkün değil. Ayrıca, dosya ile ilgili hata ve uyarılar, işlevselliğin tam olarak sağlanmadığını gösteriyor. Örneğin, normalleştirme işlemi sırasında bir `ValueError` hatası meydana gelmiş ve gürültü azaltma modülünün performansında yavaşlama gözlemlenmiş. Bu durumlar, ses ön işlemenin başarılı bir şekilde tamamlanmadığını gösteriyor."
+                ]
+            },
+            "total_time": 10.689315795898438
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Öğrenme oranı ve batch boyutu gibi hiperparametreler `src/train.py` içinde ayarlanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028275,
+                "inference_time": 2.303816556930542,
+                "input_tokens": 855,
+                "output_tokens": 69,
+                "accumulated_cost": 0.010152500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/train.py` dosyası mevcut değil, bu nedenle öğrenme oranı ve batch boyutu gibi hiperparametrelerin bu dosyada ayarlandığını doğrulamak mümkün değil. Dosyanın var olmadığına dair hata mesajı, bu gereksinimin karşılanmadığını gösteriyor."
+                ]
+            },
+            "total_time": 9.68274211883545
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Konuşma tanıma modeli `models/saved_models/` içinde kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028025000000000003,
+                "inference_time": 2.7912847995758057,
+                "input_tokens": 689,
+                "output_tokens": 108,
+                "accumulated_cost": 0.012750000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"Total Nodes: 0\" ifadesi, proje dizininde herhangi bir dosya veya klasörün bulunmadığını gösteriyor. Bu, `models/saved_models/` dizininde konuşma tanıma modelinin kaydedildiğine dair doğrudan bir kanıt sunmuyor. Trajectory Evidence, modelin kaydedildiğini ve yüklendiğini belirtse de, bu bilgi proje yapısında doğrulanmamış."
+                ]
+            },
+            "total_time": 11.35030746459961
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Tanıma sonuçları `results/recognition_results.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026825,
+                "inference_time": 1.786888837814331,
+                "input_tokens": 733,
+                "output_tokens": 85,
+                "accumulated_cost": 0.015725000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Tanıma sonuçlarının `results/recognition_results.txt` dosyasına kaydedildiği belirtilmiştir. Adım 46'da yazma işleminin tamamlandığı ve adım 48'de disk alanı sorunu çözülerek dosyanın başarıyla kaydedildiği açıkça ifade edilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 8.31855583190918
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Dalga formu ve spektrogram gibi ses işleme görselleştirmeleri oluşturulur ve `results/figures/audio_visualization.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029500000000000004,
+                "inference_time": 3.4727375507354736,
+                "input_tokens": 668,
+                "output_tokens": 128,
+                "accumulated_cost": 0.018192500000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"Total Nodes: 0\" ifadesi, proje dosya yapısının eksik veya hatalı olduğunu gösteriyor. Ayrıca, \"audio_visualization.png\" dosyasının kaydedilmesiyle ilgili bir hata rapor edilmiş ve bu hata daha sonra düzeltilmiş olsa da, proje yapısında bu dosyanın varlığı veya içeriği hakkında kesin bir kanıt sunulmamış. Bu nedenle, ses işleme görselleştirmelerinin oluşturulup kaydedildiğine dair yeterli kanıt bulunmamaktadır."
+                ]
+            },
+            "total_time": 10.65806245803833
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Tanıma doğruluğu, hata analizi ve gelecekteki iyileştirme önerilerini içeren bir rapor oluşturulur ve `results/recognition_report.md` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002765,
+                "inference_time": 2.4865458011627197,
+                "input_tokens": 670,
+                "output_tokens": 109,
+                "accumulated_cost": 0.020635000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `results/recognition_report.md` dosyasının başarıyla kaydedildiğini belirtse de, raporun içeriği hakkında herhangi bir bilgi verilmemiştir. Tanıma doğruluğu, hata analizi ve gelecekteki iyileştirme önerilerini içeren bir raporun gerçekten oluşturulup oluşturulmadığına dair kanıt yoktur. Bu nedenle, gereksinimin karşılandığına dair yeterli kanıt bulunmamaktadır."
+                ]
+            },
+            "total_time": 8.658170700073242
+        }
+    ]
+}

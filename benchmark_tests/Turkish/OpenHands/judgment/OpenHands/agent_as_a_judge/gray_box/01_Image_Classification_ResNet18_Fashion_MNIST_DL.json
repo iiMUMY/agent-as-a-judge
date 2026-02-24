@@ -1,0 +1,165 @@
+{
+    "name": "01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+    "query": "Merhaba! Fashion-MNIST veri kümesinden görüntüleri sınıflandırmak için PyTorch'ta ResNet-18 modelini kullanarak bir sistem kurmama yardımcı olabilir misiniz? Fashion-MNIST veri kümesi `src/data_loader.py` içinde yüklenmeli. Eğitim döngüsünde `src/train.py` içinde tqdm kütüphanesi ile eğitim ilerlemesini gösterecek bir sistem istiyorum ve modeli daha sağlam hale getirmek için `torchvision.transforms` ile (dönme ve ölçekleme gibi) bazı veri artırımları yapılmalı. Bu sonuncusu `src/data_loader.py` içinde uygulanmalı ve ResNet-18 modeli `src/model.py` içinde PyTorch'tan içe aktarılmalı. Eğitim tamamlandığında, lütfen eğitilmiş modeli `models/saved_models/` dizininde `fashionnet.pt` olarak kaydedin. Eğitim sürecinin mümkün olduğunca verimli olması harika olurdu. Ayrıca, kodu kolay anlaşılır ve kolay bakım yapılabilir bir tarzda yazmaya çalışın. Yapabilirseniz, model yorumlanabilirliği hakkında bazı içgörüler de eklemek harika olurdu, örneğin Grad-CAM veya benzeri bir şey kullanarak. Çok teşekkürler!",
+    "tags": [
+        "Classification",
+        "Computer Vision",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Fashion-MNIST\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veri artırımı `torchvision.transforms` kullanılarak yapılır, dönme, ölçekleme vb. dahil. Uygulama `src/data_loader.py` içindedir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"ResNet-18\" modeli \"PyTorch\"'tan `src/model.py` içinde içe aktarılır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Eğitim ilerlemesi ana eğitim döngüsünde `src/train.py` içinde \"tqdm\" kütüphanesi kullanılarak gösterilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Eğitilmiş model `models/saved_models/` dizininde `fashionnet.pt` dosya adı altında kaydedilir.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Kod, uygun yorumlarla açık, anlaşılır ve bakımı kolay bir tarzda yazılmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Eğitim süreci verimli olmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Model yorumlanabilirliği hakkında içgörüler sağlanmalıdır, örneğin görselleştirme için Grad-CAM gibi teknikler kullanılarak.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Fashion-MNIST\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033750000000000004,
+                "inference_time": 2.325927734375,
+                "input_tokens": 802,
+                "output_tokens": 137,
+                "accumulated_cost": 0.0035800000000000007,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Fashion-MNIST\" veri kümesinin `src/data_loader.py` içinde yüklendiği belirtilmiş olsa da, \"FileNotFoundError: 'fashion-mnist' dosyası bulunamadı\" hatası, veri kümesinin doğrudan bu dosyadan yüklenemediğini göstermektedir. Veri kümesi başka bir kaynaktan başarıyla yüklendiği için işlevsellik etkilenmemiştir, ancak gereksinim doğrudan `src/data_loader.py` dosyasında yüklenmesi gerektiğini belirttiğinden, bu gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 11.826004981994629
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veri artırımı `torchvision.transforms` kullanılarak yapılır, dönme, ölçekleme vb. dahil. Uygulama `src/data_loader.py` içindedir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029925000000000004,
+                "inference_time": 1.647840976715088,
+                "input_tokens": 841,
+                "output_tokens": 89,
+                "accumulated_cost": 0.007315000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Veri artırımı `torchvision.transforms` kullanılarak yapılmış ve dönme, ölçekleme işlemleri başarıyla uygulanmış olsa da, veri artırımı sırasında bazı görüntülerin beklenenden daha fazla kırpıldığına dair bir uyarı alınmıştır. Bu durum, veri setinin kalitesini etkileyebilir ve bu nedenle gereksinim tam olarak karşılanmamış sayılır."
+                ]
+            },
+            "total_time": 8.668603420257568
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"ResNet-18\" modeli \"PyTorch\"'tan `src/model.py` içinde içe aktarılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030800000000000003,
+                "inference_time": 3.152493715286255,
+                "input_tokens": 840,
+                "output_tokens": 98,
+                "accumulated_cost": 0.0106125,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"ResNet-18\" modelinin \"PyTorch\"tan `src/model.py` içinde içe aktarıldığına dair doğrudan bir kanıt yoktur. Dosya içeriği mevcut değil ve dosyanın var olmadığı belirtilmiş. Çalıştırma sırasında modelin yüklendiğine dair çevresel geri bildirim olsa da, bu doğrudan dosya içeriği veya kod yapısı hakkında bilgi sağlamaz."
+                ]
+            },
+            "total_time": 9.504323244094849
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Eğitim ilerlemesi ana eğitim döngüsünde `src/train.py` içinde \"tqdm\" kütüphanesi kullanılarak gösterilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031500000000000005,
+                "inference_time": 2.877805233001709,
+                "input_tokens": 912,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0144625,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is not satisfied because the file `src/train.py` does not exist, as indicated by the error message. Without the file, it is impossible to confirm that the training progress is shown using the \"tqdm\" library within the main training loop. The reference to the environment feedback suggests that \"tqdm\" was used, but without the actual file, this cannot be verified."
+                ]
+            },
+            "total_time": 11.899527311325073
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Eğitilmiş model `models/saved_models/` dizininde `fashionnet.pt` dosya adı altında kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025025000000000004,
+                "inference_time": 1.3863568305969238,
+                "input_tokens": 721,
+                "output_tokens": 70,
+                "accumulated_cost": 0.01736,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: `fashionnet.pt` dosyasının `models/saved_models/` dizininde başarıyla kaydedildiği ve yüklendiği belirtilmiştir. \"Model saved successfully\" ve \"Model loaded successfully\" mesajları, dosyanın doğru bir şekilde kaydedildiğini ve kullanılabilir olduğunu doğrulamaktadır."
+                ]
+            },
+            "total_time": 7.246758460998535
+        }
+    ]
+}

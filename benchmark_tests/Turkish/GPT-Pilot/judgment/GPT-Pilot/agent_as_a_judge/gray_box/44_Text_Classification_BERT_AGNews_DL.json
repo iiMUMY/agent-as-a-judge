@@ -1,0 +1,188 @@
+{
+    "name": "44_Text_Classification_BERT_AGNews_DL",
+    "query": "Merhaba! Bana AG News veri kümesi üzerinde önceden eğitilmiş bir BERT modeli kullanarak bir metin sınıflandırma sistemi oluşturmamda yardımcı olabilir misin? `src/data_loader.py` içinde verileri yükleyip ön işleme ile başlayın (gürültüyü ne kadar kaldırabiliyorsanız kaldırın ve tokenizasyon yapın). Bu işlem tamamlandıktan sonra, lütfen BERT model parametrelerini `models/saved_models/` altında kaydedin. BERT modelini uygulayın ve sınıflandırma sonuçlarını `results/results.txt` dosyasına kaydedin. Ayrıca, sınıflandırma sonuçlarının karışıklık matrisini seaborn kullanarak görselleştirin ve `results/figures/confusion_matrix.png` olarak kaydedin. Son olarak, `results/` altında giriş metinlerini sınıflandırma sonuçlarıyla birlikte göstermek için etkileşimli bir Jupyter Notebook oluşturun. Not defterinin transfer öğreniminin nasıl kullanıldığını ve modelin performansı üzerindeki etkisini açıklaması harika olurdu. Aynı şekilde, veri kümesini değiştirmeyi ve BERT'i yeniden eğitmek için kodu içermeyi kolaylaştırırsanız iyi olur. Çok teşekkürler!",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"AG News\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veri ön işleme `src/data_loader.py` içinde gerçekleştirilir, gürültü giderme ve tokenizasyon dahil.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "\"BERT\" modeli metin sınıflandırması için uygulanır ve parametreler `models/saved_models/` altında kaydedilir.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Sınıflandırma sonuçları `results/results.txt` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "Sınıflandırma sonucunun karışıklık matrisi \"seaborn\" kullanılarak görselleştirilir ve `results/figures/confusion_matrix.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "Giriş metinlerini ve sınıflandırma sonuçlarını göstermek için `results` altında etkileşimli bir \"Jupyter Notebook\" oluşturulur.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Jupyter Notebook, transfer öğreniminin nasıl uygulandığını ve model performansı üzerindeki etkisini açıklamalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Karışıklık matrisi görselleştirmesi, doğru ve yanlış sınıflandırılmış örnekler arasında net bir ayrım yapmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Sistem, yeni verilerle \"BERT\" modelinin kolayca yeniden eğitilmesine izin vermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"AG News\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027050000000000004,
+                "inference_time": 2.0258383750915527,
+                "input_tokens": 754,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0031950000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"AG News\" veri kümesi `src/data_loader.py` içinde yüklenmiş olsa da, bazı satırların atlandığı belirtilmiştir. Bu durum, veri bütünlüğünü etkileyebilir ve yükleme işleminin tam olarak başarılı olmadığını gösterir. Adım 47'deki uyarı, bu eksikliği açıkça ortaya koymaktadır."
+                ]
+            },
+            "total_time": 12.964255094528198
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veri ön işleme `src/data_loader.py` içinde gerçekleştirilir, gürültü giderme ve tokenizasyon dahil.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033950000000000004,
+                "inference_time": 4.054035663604736,
+                "input_tokens": 798,
+                "output_tokens": 140,
+                "accumulated_cost": 0.006670000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Veri ön işleme `src/data_loader.py` içinde gerçekleştirilmiş ve tokenizasyon işlemi başarıyla tamamlanmış olsa da, gürültü giderme sırasında \"Beklenmeyen veri formatı tespit edildi, varsayılan ayarlar kullanılacak\" uyarısı alınmıştır. Bu, gürültü giderme işleminin beklenmeyen veri formatlarıyla tam uyumlu çalışmadığını ve potansiyel veri kaybı veya uyumsuzluk riskini gösterir. Dolayısıyla, gürültü giderme işleminin gereksinimleri tam olarak karşılamadığı sonucuna varılmıştır."
+                ]
+            },
+            "total_time": 13.091643571853638
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"BERT\" modeli metin sınıflandırması için uygulanır ve parametreler `models/saved_models/` altında kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002975,
+                "inference_time": 2.8197872638702393,
+                "input_tokens": 762,
+                "output_tokens": 107,
+                "accumulated_cost": 0.009775,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"BERT\" modelinin metin sınıflandırması için başarıyla uygulandığı ve model parametrelerinin `models/saved_models/` dizinine kaydedildiği belirtilmiştir. Adım 45'te modelin eğitimi sırasında herhangi bir hata veya uyarı mesajı kaydedilmemiştir ve adım 47'de parametrelerin kaydedilmesi sırasında da sorun yaşanmamıştır. Bu, gereksinimin tamamen karşılandığını gösterir."
+                ]
+            },
+            "total_time": 11.951726198196411
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Sınıflandırma sonuçları `results/results.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025475000000000003,
+                "inference_time": 2.2575483322143555,
+                "input_tokens": 699,
+                "output_tokens": 80,
+                "accumulated_cost": 0.0125175,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Sınıflandırma sonuçlarının `results/results.txt` dosyasına kaydedildiği belirtilmiştir. Adım 46'da, dosyaya yazma işleminin başarıyla tamamlandığı ve \"Sonuçlar başarıyla kaydedildi\" mesajının alındığı ifade edilmiştir. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 9.180371522903442
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Sınıflandırma sonucunun karışıklık matrisi \"seaborn\" kullanılarak görselleştirilir ve `results/figures/confusion_matrix.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026175,
+                "inference_time": 2.01615047454834,
+                "input_tokens": 771,
+                "output_tokens": 69,
+                "accumulated_cost": 0.015345000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgilerine göre, `results/figures/confusion_matrix.png` dosyası mevcut değil. Çevresel geri bildirim, dosyanın başarıyla kaydedildiğini belirtse de, dosya sisteminde bulunamaması, gereksinimin karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 7.693104982376099
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Giriş metinlerini ve sınıflandırma sonuçlarını göstermek için `results` altında etkileşimli bir \"Jupyter Notebook\" oluşturulur.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033125000000000003,
+                "inference_time": 2.505779981613159,
+                "input_tokens": 829,
+                "output_tokens": 124,
+                "accumulated_cost": 0.018985000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Giriş metinlerini ve sınıflandırma sonuçlarını göstermek için `results` altında etkileşimli bir \"Jupyter Notebook\" oluşturulması gerekmektedir. Ancak, proje bilgilerine göre, \"Jupyter Notebook\" oluşturulmaya çalışıldığında \"Kernel Error\" ve \"Missing Module\" hataları alınmış ve \"Permission Denied\" hatası nedeniyle dosya kaydedilememiştir. Bu sorunlar, notebook'un başarıyla oluşturulup çalıştırılamadığını ve dolayısıyla gereksinimin karşılanmadığını göstermektedir."
+                ]
+            },
+            "total_time": 14.589451313018799
+        }
+    ]
+}

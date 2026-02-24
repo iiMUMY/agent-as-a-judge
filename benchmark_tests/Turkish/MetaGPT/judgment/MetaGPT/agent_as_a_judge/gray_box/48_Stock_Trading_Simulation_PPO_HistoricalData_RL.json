@@ -1,0 +1,234 @@
+{
+    "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+    "query": "Merhaba! Proximal Policy Optimization (PPO) algoritmasını kullanarak bir hisse senedi ticaret ajanı geliştirmekle ilgileniyorum. Fikir, eğitim ve test için tarihsel piyasa verilerini kullanmak. Bir hisse senedi ticaret simülasyon ortamı `src/env.py` içinde uygulanmalı. Proximal Policy Optimization (PPO) algoritması `src/train.py` içinde uygulanmalı. Eğitilmiş ajanı `models/saved_models/` altında kaydedin. Tüm ticaret kararlarını `results/trade_decisions.txt` içinde kaydedin ve toplam karı `results/metrics/total_profit.txt` içinde saklayın. Kar eğrisini görselleştirin ve `results/figures/profit_curve.png` olarak kaydedin. Ticaret stratejisi, kar ve risk analizini kapsayan bir rapor oluşturun ve `results/trading_strategy_report.md` olarak kaydedin. Kullanıcıların farklı parametreleri denemelerine ve simülasyonlar çalıştırmalarına olanak tanıyan Streamlit kullanarak `src/visualize.py` içinde etkileşimli bir araç uygulayın.",
+    "tags": [
+        "Financial Analysis",
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "Bir hisse senedi ticaret simülasyon ortamı `src/env.py` içinde uygulanır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Eğitim ve test için tarihsel piyasa verileri kullanılır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"Proximal Policy Optimization (PPO)\" algoritması `src/train.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "Ticaret kararları kaydedilir ve `results/trade_decisions.txt` olarak saklanır.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "Toplam kar `results/metrics/total_profit.txt` olarak saklanır.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "Kar eğrisi görselleştirilir ve `results/figures/profit_curve.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "Ticaret stratejisi, kar ve risk analizini içeren bir rapor oluşturulur ve `results/trading_strategy_report.md` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "Kullanıcıların farklı parametreleri denemelerine ve simülasyonlar çalıştırmalarına olanak tanıyan \"Streamlit\" kullanarak `src/visualize.py` içinde etkileşimli bir araç uygulanır.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Kar eğrisi görselleştirmesi, performansı etkileyen önemli ticaretleri veya olayları vurgulamalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Rapor, parametre ayarlamalarının ticaret sonucunu nasıl etkilediğine dair içgörüler içermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "Bir hisse senedi ticaret simülasyon ortamı `src/env.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003735,
+                "inference_time": 2.299268960952759,
+                "input_tokens": 894,
+                "output_tokens": 150,
+                "accumulated_cost": 0.0041925,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısında `src/env.py` dosyasının yüklendiği ve çalıştırıldığı belirtilmiş olsa da, dosyanın içeriği veya hisse senedi ticaret simülasyon ortamının gerçekten uygulanıp uygulanmadığı hakkında herhangi bir bilgi verilmemiştir. Yalnızca dosyanın yüklenmesi ve çalıştırılması sırasında bir \"DeprecationWarning\" uyarısı alındığı belirtilmiştir, ancak bu uyarı dosyanın içeriği veya işlevselliği hakkında bilgi sağlamaz. Bu nedenle, hisse senedi ticaret simülasyon ortamının gerçekten uygulanıp uygulanmadığını doğrulamak için yeterli kanıt yoktur."
+                ]
+            },
+            "total_time": 11.159976720809937
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Eğitim ve test için tarihsel piyasa verileri kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0034725000000000008,
+                "inference_time": 2.4346344470977783,
+                "input_tokens": 861,
+                "output_tokens": 132,
+                "accumulated_cost": 0.007485,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Eğitim ve test için tarihsel piyasa verilerinin kullanılması gereksinimi karşılanmamıştır. Proje yapısında ve dosya içeriklerinde, gerekli veri dosyalarının (örneğin, \"historical_prices.csv\" ve \"market_data.json\") mevcut olmadığı belirtilmiştir. Ayrıca, \"market_data_loader.py\" ve \"historical_data_processor.py\" dosyalarının çalıştırılması sırasında eksik veri noktaları ve beklenmedik veri formatı sorunları yaşandığı rapor edilmiştir. Bu durum, eğitim ve test setlerinin oluşturulmasını olumsuz etkilemektedir."
+                ]
+            },
+            "total_time": 10.91147494316101
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"Proximal Policy Optimization (PPO)\" algoritması `src/train.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00305,
+                "inference_time": 1.6674673557281494,
+                "input_tokens": 888,
+                "output_tokens": 83,
+                "accumulated_cost": 0.011537500000000001,
+                "satisfied": false,
+                "reason": [
+                    "< SATISFIED >: \"Proximal Policy Optimization (PPO)\" algoritmasının `src/train.py` içinde uygulandığı belirtilmiştir. Trajectory Evidence bölümünde, `src/train.py` dosyasında PPO algoritmasının başlatıldığı ve \"PPO training started\" mesajının alındığı açıkça ifade edilmiştir. Bu, algoritmanın dosya içinde uygulandığını doğrulamaktadır."
+                ]
+            },
+            "total_time": 9.084846258163452
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Ticaret kararları kaydedilir ve `results/trade_decisions.txt` olarak saklanır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002615,
+                "inference_time": 1.767589807510376,
+                "input_tokens": 738,
+                "output_tokens": 77,
+                "accumulated_cost": 0.014510000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Ticaret kararlarının `results/trade_decisions.txt` dosyasına kaydedildiği belirtilmiştir. Başlangıçta bir \"Permission denied\" hatası alınmış olsa da, bu sorun daha sonra çözülmüş ve dosya başarıyla güncellenmiştir. Bu, ticaret kararlarının belirtilen dosyada saklandığını doğrular."
+                ]
+            },
+            "total_time": 6.885242938995361
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Toplam kar `results/metrics/total_profit.txt` olarak saklanır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024275,
+                "inference_time": 1.5924735069274902,
+                "input_tokens": 703,
+                "output_tokens": 67,
+                "accumulated_cost": 0.0172225,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/metrics/total_profit.txt\" dosyasının hem kaydedildiği hem de yüklendiği belirtilmiştir. İşlem sırasında herhangi bir hata veya uyarı mesajı rapor edilmediği için toplam karın bu dosyada başarıyla saklandığı sonucuna varılabilir."
+                ]
+            },
+            "total_time": 6.466224670410156
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Kar eğrisi görselleştirilir ve `results/figures/profit_curve.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0026650000000000003,
+                "inference_time": 1.6628758907318115,
+                "input_tokens": 654,
+                "output_tokens": 103,
+                "accumulated_cost": 0.019377500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Kar eğrisinin görselleştirildiği ve `results/figures/profit_curve.png` olarak başarıyla kaydedildiği belirtilmiştir. Adım 45'te kar eğrisi görselleştirme sürecinin başlatıldığı ve herhangi bir hata olmadan başarıyla oluşturulduğu, adım 47'de ise dosyanın başarıyla kaydedildiği ve herhangi bir hata veya uyarı rapor edilmediği doğrulanmıştır."
+                ]
+            },
+            "total_time": 5.70766019821167
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Ticaret stratejisi, kar ve risk analizini içeren bir rapor oluşturulur ve `results/trading_strategy_report.md` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024775,
+                "inference_time": 1.4726266860961914,
+                "input_tokens": 719,
+                "output_tokens": 68,
+                "accumulated_cost": 0.0221275,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: `results/trading_strategy_report.md` dosyasının başarıyla oluşturulduğu ve içeriğinde herhangi bir hata bulunmadığı belirtilmiştir. Bu, ticaret stratejisi raporunun kar ve risk analizini içerecek şekilde oluşturulduğunu ve doğru bir şekilde kaydedildiğini gösterir."
+                ]
+            },
+            "total_time": 5.666835784912109
+        },
+        {
+            "requirement_index": 7,
+            "criteria": "Kullanıcıların farklı parametreleri denemelerine ve simülasyonlar çalıştırmalarına olanak tanıyan \"Streamlit\" kullanarak `src/visualize.py` içinde etkileşimli bir araç uygulanır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0035275000000000003,
+                "inference_time": 2.0997138023376465,
+                "input_tokens": 863,
+                "output_tokens": 137,
+                "accumulated_cost": 0.026035000000000003,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Streamlit\" kullanarak `src/visualize.py` içinde etkileşimli bir araç uygulanmıştır. Trajectory Evidence bölümünde, `src/visualize.py` dosyasının çalıştırılmasıyla Streamlit uygulamasının başlatıldığı ve kullanıcıların parametre girişi yaparak simülasyonları başlatabildiği belirtilmiştir. Bu, kullanıcıların farklı parametreleri denemelerine ve simülasyonlar çalıştırmalarına olanak tanıyan bir etkileşimli aracın başarıyla uygulandığını göstermektedir. Performans optimizasyonu önerisi, işlevselliği etkilememektedir."
+                ]
+            },
+            "total_time": 7.942874908447266
+        }
+    ]
+}

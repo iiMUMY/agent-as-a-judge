@@ -1,0 +1,224 @@
+{
+    "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+    "query": "Lojistik Regresyon modeli ve Pima Indians Diabetes veri setini kullanarak bir diyabet tahmin projesi kurun. Özellik ölçeklendirme ve veri standardizasyonunu `src/data_loader.py` içinde gerçekleştirin. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın ve doğruluk skorunu `results/metrics/accuracy_score.txt` dosyasına kaydedin. ROC eğrisini oluşturun ve `results/figures/roc_curve.png` dosyasına kaydedin. Modelin performansını sergilemek ve önemli özellikleri vurgulamak için Tableau veya Power BI kullanarak etkileşimli bir gösterge paneli oluşturun. Gösterge panelinin kullanıcı dostu olmasını sağlayın ve veri seti işleme ve görselleştirme oluşturma adımlarını belgeleyin. Geliştirme sırasında, sistem gereksiz engellemeleri önlemek için Tableau veya Power BI'ın otomatik olarak açılıp kapanmasını yönetmelidir.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Pima Indians Diabetes\" veri seti kullanılır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Özellik ölçeklendirme ve veri standardizasyonu `src/data_loader.py` içinde uygulanır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "\"Lojistik Regresyon\" modeli `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "Doğruluk skoru `results/metrics/accuracy_score.txt` dosyasına kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "ROC eğrisi oluşturulur ve `results/figures/roc_curve.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "Model performansını ve önemli özellikleri sergilemek için \"Tableau\" veya \"Power BI\" kullanılarak etkileşimli bir görselleştirme gösterge paneli oluşturulur.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Gösterge paneli, kullanıcıların modelin performansının farklı yönlerini keşfetmesine ve hangi özelliklerin tahminlere en çok katkıda bulunduğunu anlamasına olanak tanımalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Gösterge paneli, veri setinin nasıl işlendiğini ve görselleştirmelerin nasıl oluşturulduğunu açıkça göstermelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Geliştirme sırasında, sistem uzun süreli engelleme veya hareketsizlikten kaçınmak için \"Tableau\" veya \"Power BI\"'ı gerektiği gibi otomatik olarak açıp kapatmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Pima Indians Diabetes\" veri seti kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0034025,
+                "inference_time": 3.302997589111328,
+                "input_tokens": 929,
+                "output_tokens": 108,
+                "accumulated_cost": 0.0032000000000000006,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Pima Indians Diabetes\" veri setinin kullanıldığına dair adımların başarılı bir şekilde tamamlandığı belirtilmiş olsa da, dosya yapısında ve içerik kontrolünde veri setinin bulunduğu belirtilen dosya ve dizinlerin mevcut olmadığı görülmektedir. Bu durum, veri setinin gerçekten kullanılıp kullanılmadığına dair şüphe uyandırmaktadır. Dosya ve dizinlerin var olmaması, veri setinin kullanılmadığını veya erişilemediğini gösterir."
+                ]
+            },
+            "total_time": 13.25362491607666
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Özellik ölçeklendirme ve veri standardizasyonu `src/data_loader.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028000000000000004,
+                "inference_time": 1.9846165180206299,
+                "input_tokens": 844,
+                "output_tokens": 69,
+                "accumulated_cost": 0.006432500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyası mevcut değil, bu nedenle özellik ölçeklendirme ve veri standardizasyonunun bu dosya içinde uygulanıp uygulanmadığını doğrulamak mümkün değil. Dosyanın var olmadığına dair hata mesajı, bu gereksinimin karşılanmadığını gösteriyor."
+                ]
+            },
+            "total_time": 7.540496110916138
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"Lojistik Regresyon\" modeli `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026225000000000003,
+                "inference_time": 2.682769298553467,
+                "input_tokens": 709,
+                "output_tokens": 85,
+                "accumulated_cost": 0.009237500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Lojistik Regresyon\" modelinin `src/model.py` içinde uygulandığı belirtilmiş olsa da, ikinci çalıştırmada \"Veri seti bulunamadı, eğitim başarısız\" çıktısı, modelin işlevselliğini etkileyen bir sorun olduğunu gösteriyor. Bu, modelin doğru bir şekilde uygulanmadığını veya çalışmadığını gösterir."
+                ]
+            },
+            "total_time": 9.2503662109375
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031650000000000003,
+                "inference_time": 2.139479875564575,
+                "input_tokens": 870,
+                "output_tokens": 99,
+                "accumulated_cost": 0.012685000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/train.py` dosyasının var olmadığı belirtilmiştir, bu nedenle dosyanın içeriği incelenememektedir. Ancak, adım 45 ve 48'de `src/train.py` dosyasının çalıştırıldığı ve çapraz doğrulama işleminin başarıyla tamamlandığı belirtilmiştir. Yine de, dosyanın mevcut olmaması nedeniyle gereksinimin tam olarak karşılandığını doğrulamak mümkün değildir."
+                ]
+            },
+            "total_time": 9.05565881729126
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Doğruluk skoru `results/metrics/accuracy_score.txt` dosyasına kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0025175,
+                "inference_time": 1.6643743515014648,
+                "input_tokens": 679,
+                "output_tokens": 82,
+                "accumulated_cost": 0.015300000000000001,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Adım 47'de, `results/metrics/accuracy_score.txt` dosyasına doğruluk skoru başarıyla kaydedildiği belirtilmiştir. Önceki izin hatası çözülmüş ve dosya güncellenmiştir. Başka bir hata veya uyarı rapor edilmemiştir, bu da gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 6.642962217330933
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "ROC eğrisi oluşturulur ve `results/figures/roc_curve.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002445,
+                "inference_time": 2.9775493144989014,
+                "input_tokens": 682,
+                "output_tokens": 74,
+                "accumulated_cost": 0.017835,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Trajectory Evidence bölümünde belirtilen adımlar, ROC eğrisinin başarıyla oluşturulduğunu ve `results/figures/roc_curve.png` olarak kaydedildiğini göstermektedir. İşlem sırasında herhangi bir hata veya uyarı mesajı alınmadığı belirtilmiştir, bu da gereksinimin karşılandığını doğrular."
+                ]
+            },
+            "total_time": 7.231037855148315
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Model performansını ve önemli özellikleri sergilemek için \"Tableau\" veya \"Power BI\" kullanılarak etkileşimli bir görselleştirme gösterge paneli oluşturulur.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003975,
+                "inference_time": 2.4567224979400635,
+                "input_tokens": 1022,
+                "output_tokens": 142,
+                "accumulated_cost": 0.02154,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim karşılanmamıştır çünkü hem \"Tableau\" hem de \"Power BI\" ile etkileşimli gösterge panelleri oluşturulmaya çalışılmış, ancak her iki durumda da başarısızlıkla sonuçlanmıştır. \"Tableau\" için veri kaynağı bağlantı sorunu ve \"Power BI\" için eksik veri alanları nedeniyle gösterge panelleri oluşturulamamıştır. Ayrıca, ilgili dosyaların mevcut olmadığı belirtilmiştir. Bu durum, model performansını ve önemli özellikleri sergilemek için gerekli olan etkileşimli görselleştirme gösterge panellerinin oluşturulamadığını göstermektedir."
+                ]
+            },
+            "total_time": 12.235567331314087
+        }
+    ]
+}

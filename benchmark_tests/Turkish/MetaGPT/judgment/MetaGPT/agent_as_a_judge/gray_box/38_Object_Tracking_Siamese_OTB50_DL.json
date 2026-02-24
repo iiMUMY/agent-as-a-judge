@@ -1,0 +1,241 @@
+{
+    "name": "38_Object_Tracking_Siamese_OTB50_DL",
+    "query": "Siamese ağı ve OTB50 veri kümesini kullanarak nesne takibi için bir sistem oluşturmam gerekiyor. OTB50 veri kümesi `src/data_loader.py` içinde yüklenmelidir. Sistem, `src/data_loader.py` içinde gerçekleştirilen döndürme ve ölçekleme gibi veri artırma adımlarını içermelidir. Siamese ağı `src/model.py` içinde uygulanmalıdır. Öğrenme oranı ve yığın boyutu gibi hiperparametreler `src/train.py` içinde ayarlanmalıdır. Takip sonuçları `results/tracking_results.txt` olarak kaydedilmelidir. Takip sonuçlarını OpenCV ile görselleştir ve takip videolarını `results/videos/` altında kaydet. Ayrıca, veri ön işleme, model eğitimi ve değerlendirme sürecinin detaylarını içeren kapsamlı bir Markdown raporu oluştur ve `results/object_tracking_report.md` olarak kaydet. Sistem, esnek uygulama için yeni video dizilerini minimum ayarlamalarla işleyebilmelidir. Markdown raporu, farklı hiperparametrelerin takip performansı üzerindeki etkisini analiz eden bir bölüm içermelidir.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"OTB50\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Döndürme ve ölçekleme gibi veri artırma işlemleri `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"Siamese\" ağı `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Öğrenme oranı ve yığın boyutu gibi hiperparametreler `src/train.py` içinde ayarlanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Takip sonuçları `results/tracking_results.txt` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Takip sonuçları OpenCV ile görselleştirilir ve `results/videos/` içine kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Veri ön işleme, model eğitimi ve değerlendirme süreçlerini içeren detaylı bir Markdown belgesi oluşturulur ve `results/object_tracking_report.md` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                6
+            ],
+            "criteria": "Markdown raporu, farklı hiperparametrelerin takip performansı üzerindeki etkisini analiz eden bir bölüm içermelidir.",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Takip videoları yüksek çözünürlükte kaydedilmeli ve takip edilen nesneyi vurgulayan açıklamalar içermelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Sistem, esnek kullanım durumlarına olanak tanıyan, yeni video dizilerini minimum değişiklikle işleyebilme kapasitesine sahip olmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"OTB50\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031325,
+                "inference_time": 1.558614730834961,
+                "input_tokens": 817,
+                "output_tokens": 109,
+                "accumulated_cost": 0.0029975,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"OTB50\" veri kümesinin `src/data_loader.py` içinde yüklendiğine dair kanıt yoktur çünkü belirtilen dosya mevcut değildir. Proje yapısında veya dosya içeriğinde bu dosyanın varlığına dair bir kanıt sunulmamıştır. Trajectory Evidence, dosyanın çalıştırıldığını ve veri kümesinin yüklendiğini iddia etse de, bu bilgi dosyanın mevcut olmadığı gerçeğiyle çelişmektedir."
+                ]
+            },
+            "total_time": 7.453522443771362
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Döndürme ve ölçekleme gibi veri artırma işlemleri `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029475000000000005,
+                "inference_time": 1.861182451248169,
+                "input_tokens": 779,
+                "output_tokens": 100,
+                "accumulated_cost": 0.0062875000000000006,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, döndürme ve ölçekleme gibi veri artırma işlemlerinin `src/data_loader.py` içinde gerçekleştirilmesi gerektiğini belirtmektedir. Ancak, sağlanan bilgilerde yalnızca döndürme işlemiyle ilgili bir uyarıdan bahsedilmekte ve ölçekleme işlemlerinin gerçekleştirildiğine dair herhangi bir kanıt sunulmamaktadır. Bu nedenle, gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 6.934215068817139
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"Siamese\" ağı `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032175,
+                "inference_time": 2.088257312774658,
+                "input_tokens": 847,
+                "output_tokens": 110,
+                "accumulated_cost": 0.009665,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Siamese\" ağının `src/model.py` içinde uygulanması gereksinimi karşılanmamıştır çünkü belirtilen dosya mevcut değildir. Dosya yapısında `src/model.py` dosyasının var olmadığı açıkça belirtilmiştir ve bu nedenle gereksinim karşılanmamıştır. Çevresel geri bildirimler, dosyanın daha önce var olduğunu ve kullanıldığını gösterse de, mevcut durumda dosya bulunamadığı için gereksinim sağlanamamaktadır."
+                ]
+            },
+            "total_time": 6.919187784194946
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Öğrenme oranı ve yığın boyutu gibi hiperparametreler `src/train.py` içinde ayarlanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0027075000000000003,
+                "inference_time": 1.2442302703857422,
+                "input_tokens": 759,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0128275,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Hiperparametrelerin `src/train.py` içinde ayarlandığı belirtilmiş olsa da, yığın boyutunun başlangıçta ayarlanan değerden daha düşük bir değere indirildiği ve bu durumun eğitim sürecini etkileyebileceği belirtilmiştir. Bu, hiperparametrelerin ayarlanmasının tam olarak başarılı olmadığını gösterir."
+                ]
+            },
+            "total_time": 6.335788249969482
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Takip sonuçları `results/tracking_results.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024475,
+                "inference_time": 1.241137981414795,
+                "input_tokens": 679,
+                "output_tokens": 75,
+                "accumulated_cost": 0.0153875,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Trajectory Evidence bölümünde belirtilen adımlar, `results/tracking_results.txt` dosyasına yazma işleminin başlatıldığını, başarıyla tamamlandığını ve herhangi bir hata veya uyarı bildirilmediğini göstermektedir. Bu, takip sonuçlarının belirtilen dosyaya başarıyla kaydedildiğini doğrular."
+                ]
+            },
+            "total_time": 5.2406604290008545
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Takip sonuçları OpenCV ile görselleştirilir ve `results/videos/` içine kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0031450000000000002,
+                "inference_time": 1.9162750244140625,
+                "input_tokens": 806,
+                "output_tokens": 113,
+                "accumulated_cost": 0.0189175,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Takip sonuçlarının OpenCV ile görselleştirildiği belirtilmiş olsa da, `results/videos/` dizinine video kaydetme işlemi sırasında izin ve disk alanı sorunları yaşandığı açıkça belirtilmiştir. Bu sorunlar, dosyaların başarıyla kaydedilmesini engellemiştir. Özellikle, Step 50'de \"Error: Unable to save video to 'results/videos/'. Check directory permissions.\" ifadesi, video kaydetme işleminin başarısız olduğunu göstermektedir."
+                ]
+            },
+            "total_time": 7.5549585819244385
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "Veri ön işleme, model eğitimi ve değerlendirme süreçlerini içeren detaylı bir Markdown belgesi oluşturulur ve `results/object_tracking_report.md` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002915,
+                "inference_time": 1.720548391342163,
+                "input_tokens": 742,
+                "output_tokens": 106,
+                "accumulated_cost": 0.02182,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `results/object_tracking_report.md` dosyasının oluşturulduğunu ve güncellendiğini belirtse de, dosyanın içeriği hakkında herhangi bir bilgi verilmemiştir. Veri ön işleme, model eğitimi ve değerlendirme süreçlerini içeren detaylı bir Markdown belgesi oluşturulup oluşturulmadığına dair kanıt sunulmamıştır. Bu nedenle, gereksinimin karşılandığına dair yeterli kanıt yoktur."
+                ]
+            },
+            "total_time": 6.258459091186523
+        },
+        {
+            "requirement_index": 7,
+            "criteria": "Markdown raporu, farklı hiperparametrelerin takip performansı üzerindeki etkisini analiz eden bir bölüm içermelidir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030600000000000002,
+                "inference_time": 1.515058994293213,
+                "input_tokens": 860,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0254525,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Markdown raporunun hiperparametrelerin takip performansı üzerindeki etkisini analiz eden bir bölüm içerdiği belirtilmiş olsa da, analiz sırasında bazı hiperparametre değerlerinin eksik olduğu ve varsayılan değerlerin kullanıldığına dair bir uyarı alınmıştır. Bu durum, analiz sonuçlarının doğruluğunu etkileyebilir ve bu nedenle gereksinimin tam olarak karşılandığını söylemek mümkün değildir."
+                ]
+            },
+            "total_time": 8.349880456924438
+        }
+    ]
+}

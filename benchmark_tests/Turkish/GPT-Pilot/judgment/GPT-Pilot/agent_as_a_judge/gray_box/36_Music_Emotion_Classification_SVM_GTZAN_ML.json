@@ -1,0 +1,223 @@
+{
+    "name": "36_Music_Emotion_Classification_SVM_GTZAN_ML",
+    "query": "GTZAN veri kümesi kullanarak bir SVM modeli ile müzik duygu sınıflandırması için bir proje geliştirmeme yardım et. Proje, gürültü giderme ve normalizasyon için librosa kullanarak ses ön işleme, 13 katsayı ile MFCC özellik çıkarımı ve hiperparametre ayarlaması ile bir lineer SVM sınıflandırıcı içermelidir. Veri kümesi yükleme, ses ön işleme, gürültü giderme ve normalizasyon dahil, ve MFCC özellik çıkarımı `src/data_loader.py` içinde uygulanmalıdır. SVM sınıflandırıcıyı `src/model.py` içinde uygula. Sınıflandırma sonuçlarını `results/predictions.txt` dosyasına kaydet, ses spektrogramlarını librosa ile görselleştir (`results/figures/` içine kaydederek) ve `src/app.py` içinde Streamlit ile etkileşimli bir web sayfası oluştur, bu sayfa gerçek zamanlı ses dosyası yüklemelerine izin verir ve hem sınıflandırma sonuçlarını hem de `results/figures/` içindeki spektrogramları gösterir. Streamlit web sayfasının başlatılması ve sonlandırılmasının otomatik yönetimine dikkat ederek verimli kaynak yönetimini sağla.",
+    "tags": [
+        "Audio Processing",
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"GTZAN\" müzik duygusu `src/data_loader.py` içinde yüklendi.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Gürültü giderme ve normalizasyon dahil ses ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "MFCC özellik çıkarımı `src/data_loader.py` içinde uygulanır.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "\"SVM sınıflandırıcı\" `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "Sınıflandırma sonuçları `results/predictions.txt` dosyasına kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Ses spektrogramları \"librosa\" ile görselleştirilir ve `results/figures/` içine kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "\"Streamlit\" kullanarak `src/app.py` içinde etkileşimli bir web sayfası oluşturulur ve `results/figures/` içindeki sınıflandırma sonuçlarını ve spektrogramları gösterir.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "\"Streamlit\" web sayfası, kullanıcıların yeni ses dosyaları yüklemesine ve sınıflandırma sonuçlarını gerçek zamanlı olarak görmesine izin vermelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Spektrogram görselleştirmeleri, daha derin analiz için frekans aralığını ve zaman çözünürlüğünü ayarlama seçeneklerini içermelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Sistem, özellikle Streamlit web sayfasının başlatılması ve sonlandırılmasının yönetiminde verimli kaynak yönetimi gerçekleştirmelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"GTZAN\" müzik duygusu `src/data_loader.py` içinde yüklendi.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029275,
+                "inference_time": 1.9331107139587402,
+                "input_tokens": 839,
+                "output_tokens": 83,
+                "accumulated_cost": 0.0032025000000000005,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"GTZAN\" müzik duygusunun `src/data_loader.py` içinde yüklendiği iddiası, dosyanın mevcut olmaması nedeniyle doğrulanamıyor. Dosya yapısında `src/data_loader.py` dosyasının var olmadığı belirtilmiş ve içerik hatası alınmış. Bu nedenle, gereksinim karşılanmamıştır."
+                ]
+            },
+            "total_time": 10.745503664016724
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Gürültü giderme ve normalizasyon dahil ses ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032025000000000005,
+                "inference_time": 2.0636210441589355,
+                "input_tokens": 853,
+                "output_tokens": 107,
+                "accumulated_cost": 0.007102500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gürültü giderme ve normalizasyon işlevlerinin `src/data_loader.py` dosyasında başarıyla yüklendiği ve çalıştırıldığı belirtilmiş olsa da, \"Uyarı: Beklenmeyen veri formatı tespit edildi\" mesajı, bu işlevlerin beklenmeyen veri formatı nedeniyle tam olarak işlevsel olmayabileceğini gösteriyor. Bu durum, ses ön işlemenin güvenilirliğini etkileyebilir ve daha fazla araştırma gerektirir."
+                ]
+            },
+            "total_time": 12.685200214385986
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "MFCC özellik çıkarımı `src/data_loader.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002935,
+                "inference_time": 2.395841598510742,
+                "input_tokens": 782,
+                "output_tokens": 98,
+                "accumulated_cost": 0.010490000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısında herhangi bir dosya veya kod parçası gösterilmemiştir. Ancak, \"Trajectory Evidence\" bölümünde `src/data_loader.py` dosyasının MFCC özellik çıkarımı yaptığı belirtilmiştir. Bu bilgi, dosyanın gerçekten var olduğunu ve MFCC özellik çıkarımının uygulandığını ima etse de, doğrudan kanıt sunulmadığı için gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 11.355796575546265
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "\"SVM sınıflandırıcı\" `src/model.py` içinde uygulanır.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0029675000000000005,
+                "inference_time": 1.9052374362945557,
+                "input_tokens": 831,
+                "output_tokens": 89,
+                "accumulated_cost": 0.014142500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"SVM sınıflandırıcı\" `src/model.py` dosyasında uygulanmıştır. Adım 78'de SVM sınıflandırıcı eğitimi başlatılmış ve Adım 102'de SVM sınıflandırıcı ile tahmin yapılmıştır. Her iki işlem de başarıyla tamamlanmıştır, bu da SVM sınıflandırıcının dosyada uygulandığını göstermektedir."
+                ]
+            },
+            "total_time": 10.17218565940857
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Sınıflandırma sonuçları `results/predictions.txt` dosyasına kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0030350000000000004,
+                "inference_time": 2.220189094543457,
+                "input_tokens": 762,
+                "output_tokens": 113,
+                "accumulated_cost": 0.017385000000000005,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: Sınıflandırma sonuçlarının `results/predictions.txt` dosyasına kaydedildiği belirtilmiştir. Adım 45 ve 46'da dosyaya yazma işleminin başlatıldığı ve başarıyla tamamlandığı ifade edilmiştir. Çevresel geri bildirim de yazma işleminin başarıyla tamamlandığını doğrulamaktadır. Adım 48'de dosyaya erişim sağlanarak okunduğu belirtilmiştir, bu da sonuçların dosyada mevcut olduğunu gösterir."
+                ]
+            },
+            "total_time": 11.433871269226074
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Ses spektrogramları \"librosa\" ile görselleştirilir ve `results/figures/` içine kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003535,
+                "inference_time": 1.7114744186401367,
+                "input_tokens": 1114,
+                "output_tokens": 75,
+                "accumulated_cost": 0.019915000000000006,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Ses spektrogramlarının \"librosa\" ile görselleştirilip `results/figures/` dizinine kaydedildiği belirtilmiş olsa da, bu dizinde herhangi bir dosya bulunmamaktadır. Dosyaların var olmadığına dair hata mesajları, spektrogramların başarıyla kaydedilmediğini göstermektedir."
+                ]
+            },
+            "total_time": 11.724531888961792
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "\"Streamlit\" kullanarak `src/app.py` içinde etkileşimli bir web sayfası oluşturulur ve `results/figures/` içindeki sınıflandırma sonuçlarını ve spektrogramları gösterir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0037800000000000004,
+                "inference_time": 3.9045779705047607,
+                "input_tokens": 920,
+                "output_tokens": 148,
+                "accumulated_cost": 0.022940000000000006,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, \"Streamlit\" kullanarak `src/app.py` içinde etkileşimli bir web sayfası oluşturulması ve `results/figures/` içindeki sınıflandırma sonuçlarını ve spektrogramları göstermesi gerektiğini belirtmektedir. Ancak, `src/app.py` dosyası ve `results/figures/` dizini mevcut değil. Bu nedenle, belirtilen dosyaların ve dizinin var olmadığı ve dolayısıyla gereksinimin karşılanmadığı açıktır. Trajectory Evidence, dosyaların çalıştığını ve yüklendiğini belirtse de, bu kanıtlar mevcut dosya yapısıyla çelişmektedir."
+                ]
+            },
+            "total_time": 10.231585502624512
+        }
+    ]
+}

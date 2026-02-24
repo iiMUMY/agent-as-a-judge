@@ -1,0 +1,192 @@
+{
+    "name": "45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
+    "query": "Amazon Reviews 2023 veri kümesinin Elektronik alt kümesi ile bir matris faktorizasyon algoritması kullanarak bir ürün tavsiye sistemi kurmama yardımcı olabilir misiniz? `src/data_loader.py` içinde veri yükleme ve gürültü giderme ve normalizasyon dahil tüm veri ön işlemlerini yapmalısınız. Kullanıcı-öğe etkileşimlerini hesaplamak için bir gizli faktör modeli uygulayın ve uygulamayı `src/model.py` içinde kaydedin. Tavsiye sonuçlarını yazdırın ve `results/recommendation_results.txt` dosyasına kaydedin. Ardından, bu tavsiyeleri Plotly kütüphanesini kullanarak görselleştirin ve görselleştirmeyi `results/figures/recommendation_visualization.html` olarak kaydedin. Son olarak, veri ön işleme, model eğitimi ve sonuçları kapsayan bir analiz raporu oluşturun ve `results/recommendation_report.md` olarak kaydedilmelidir.",
+    "tags": [
+        "Recommender Systems"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Amazon Reviews 2023\" veri kümesinin \"Elektronik\" alt kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Gürültü giderme ve normalizasyon dahil veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "Kullanıcı-öğe etkileşimlerini hesaplamak için bir \"Gizli Faktör modeli\" `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                2,
+                3
+            ],
+            "criteria": "Tavsiye sonuçları `results/recommendation_results.txt` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                2,
+                3,
+                4
+            ],
+            "criteria": "Tavsiye sonuçları \"Plotly\" kullanılarak görselleştirilir ve `results/figures/recommendation_visualization.html` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                2,
+                3,
+                4
+            ],
+            "criteria": "Veri ön işleme, model eğitimi ve tavsiye sonuçlarını içeren bir analiz raporu oluşturulur ve `results/recommendation_report.md` olarak kaydedilir.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Farklı ön işleme adımlarının tavsiye doğruluğu üzerindeki etkisi analiz raporunda tartışılmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Görselleştirme, kullanıcıların farklı ürünler için tavsiye sonuçlarını keşfetmesine olanak tanıyan etkileşimli olmalıdır.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "Sistem, gelecekteki iyileştirmeler için ek kullanıcı davranış verileri veya ürün özelliklerini kolayca dahil edecek şekilde tasarlanmalıdır.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Amazon Reviews 2023\" veri kümesinin \"Elektronik\" alt kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029250000000000005,
+                "inference_time": 2.4227142333984375,
+                "input_tokens": 714,
+                "output_tokens": 114,
+                "accumulated_cost": 0.0028425000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"Amazon Reviews 2023\" veri kümesinin \"Elektronik\" alt kümesi `src/data_loader.py` içinde yüklenmeye çalışılmış ancak ilk denemede hata alınmıştır. İkinci denemede yükleme başarılı olsa da, proje yapısında herhangi bir dosya veya kod yapısı gösterilmemiştir. Bu nedenle, veri kümesinin yüklenmesiyle ilgili kanıtlar eksiktir ve gereksinim tam olarak karşılanmamıştır."
+                ]
+            },
+            "total_time": 9.498403310775757
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Gürültü giderme ve normalizasyon dahil veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029250000000000005,
+                "inference_time": 1.5781753063201904,
+                "input_tokens": 762,
+                "output_tokens": 102,
+                "accumulated_cost": 0.006072500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, `src/data_loader.py` dosyasında gürültü giderme işleminin gerçekleştirilmediğini gösteren bir hata mesajı nedeniyle karşılanmamıştır. Adım 7'de \"Gürültü giderme modülü bulunamadı\" hatası, bu işlevin eksik olduğunu belirtmektedir. Normalizasyon işlemi tamamlanmış olsa da, gürültü giderme işlemi gerçekleştirilmemiştir."
+                ]
+            },
+            "total_time": 6.162698268890381
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "Kullanıcı-öğe etkileşimlerini hesaplamak için bir \"Gizli Faktör modeli\" `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.002725,
+                "inference_time": 1.677187204360962,
+                "input_tokens": 774,
+                "output_tokens": 79,
+                "accumulated_cost": 0.008717500000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/model.py` dosyasının mevcut olmadığı belirtilmiştir. Dosya yoksa, Gizli Faktör modelinin bu dosya içinde uygulanmış olması mümkün değildir. Bu nedenle, kullanıcı-öğe etkileşimlerini hesaplamak için bir Gizli Faktör modelinin `src/model.py` içinde uygulanması gereksinimi karşılanmamıştır."
+                ]
+            },
+            "total_time": 6.8500893115997314
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Tavsiye sonuçları `results/recommendation_results.txt` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0024275000000000004,
+                "inference_time": 1.4681777954101562,
+                "input_tokens": 639,
+                "output_tokens": 83,
+                "accumulated_cost": 0.010982500000000003,
+                "satisfied": false,
+                "reason": [
+                    "< SATISFIED >: `results/recommendation_results.txt` dosyasının başarıyla kaydedildiği belirtilmiştir. Step 47'de, önceki izin hatasının ardından dosyanın başarıyla kaydedildiği ve başka bir hata veya uyarı bildirilmediği ifade edilmiştir. Bu, tavsiye sonuçlarının belirtilen dosya olarak kaydedildiğini gösterir."
+                ]
+            },
+            "total_time": 10.91854739189148
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Tavsiye sonuçları \"Plotly\" kullanılarak görselleştirilir ve `results/figures/recommendation_visualization.html` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0024100000000000002,
+                "inference_time": 2.1736812591552734,
+                "input_tokens": 708,
+                "output_tokens": 64,
+                "accumulated_cost": 0.013462500000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is satisfied as the evidence from the trajectory indicates that the recommendation results were visualized using Plotly and successfully saved as `results/figures/recommendation_visualization.html`. There were no error messages or warnings during this process, confirming the successful creation and saving of the file."
+                ]
+            },
+            "total_time": 6.276522636413574
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Veri ön işleme, model eğitimi ve tavsiye sonuçlarını içeren bir analiz raporu oluşturulur ve `results/recommendation_report.md` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030875,
+                "inference_time": 2.6759278774261475,
+                "input_tokens": 767,
+                "output_tokens": 117,
+                "accumulated_cost": 0.016645000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje bilgileri, `results/recommendation_report.md` dosyasının başarıyla oluşturulduğunu, veri yazıldığını ve kaydedildiğini gösteriyor. Ancak, bu dosyanın içeriği hakkında herhangi bir bilgi verilmemiştir. Veri ön işleme, model eğitimi ve tavsiye sonuçlarını içeren bir analiz raporunun gerçekten oluşturulup oluşturulmadığına dair kanıt yoktur. Bu nedenle, gereksinimin karşılandığını doğrulamak için yeterli bilgi bulunmamaktadır."
+                ]
+            },
+            "total_time": 7.894472599029541
+        }
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "name": "10_Face_Recognition_FaceNet_LFW_DL",
+    "query": "FaceNet modeli ve LFW veri kümesi kullanarak bir PyTorch yüz tanıma projesi oluşturmama yardım et. Veri kümesini `src/model.py` içinde yükle. Modeli Hugging Face'ten al (https://huggingface.co/py-feat/facenet adresinde bulabilirsin) ve `models/saved_models/` içinde kaydet. Verilerin `src/data_loader.py` içinde yüz görüntülerinin standartlaştırılmasını sağlamak için ön işlenmiş olduğundan emin ol. Sistemin performansını artırmak için `src/model.py` içinde yüz gömme işlemlerini kullan. Tanıma doğruluğunu yazdır ve `results/metrics/recognition_accuracy.txt` dosyasına kaydet. Ardından, gömme sonuçlarını görselleştir ve `results/figures/embedding_visualization.png` olarak kaydet. Model sorunsuz yüklenmeli, bir şeyler ters giderse hata yönetimi olmalı. Görselleştirmeler, gömmelerin farklı yüz özelliklerini nasıl temsil ettiğini kolayca göstermeli.",
+    "tags": [
+        "Computer Vision",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"LFW\" (Labeled Faces in the Wild) veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Yüz görüntülerinin veri hizalaması ve standartlaştırılması `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"FaceNet\" modeli \"PyTorch\" içinde kullanılır, [Hugging Face](https://huggingface.co/py-feat/facenet) adresinden yüklenir. Model models/saved_models/ içinde kaydedilir.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Yüz gömme işlemleri `src/model.py` içinde kullanılır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Tanıma doğruluğu yazdırılır ve `results/metrics/recognition_accuracy.txt` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Gömme sonuçları görselleştirilir ve `results/figures/embedding_visualization.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Model yükleme süreci sorunsuz olmalı, model yüklenemezse herhangi bir sorun net bir şekilde ele alınmalı.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Gömme görselleştirmeleri net olmalı ve farklı yüz özelliklerini etkili bir şekilde vurgulamalı.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": false,
+    "is_web_navigation_needed": true,
+    "hint": "The page https://huggingface.co/py-feat/facenet provides guidance on how to use FaceNet; however, Hugging Face does not currently offer a model entry for direct use.",
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"LFW\" (Labeled Faces in the Wild) veri kümesi `src/data_loader.py` içinde yüklenir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0029225,
+                "inference_time": 3.015753746032715,
+                "input_tokens": 817,
+                "output_tokens": 88,
+                "accumulated_cost": 0.0036150000000000006,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"src/data_loader.py\" dosyası çalıştırıldığında LFW veri kümesi yüklenmiş olsa da, bazı dosyaların eksik olduğu ve bu eksikliklerin veri işleme sürecini etkileyebileceği belirtilmiştir. Bu durum, veri kümesinin tam olarak yüklenemediğini ve dolayısıyla gereksinimin tam olarak karşılanmadığını gösterir."
+                ]
+            },
+            "total_time": 13.66621732711792
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Yüz görüntülerinin veri hizalaması ve standartlaştırılması `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030625,
+                "inference_time": 2.8370518684387207,
+                "input_tokens": 793,
+                "output_tokens": 108,
+                "accumulated_cost": 0.007075000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Yüz görüntülerinin veri hizalaması ve standartlaştırılması `src/data_loader.py` içinde gerçekleştirilmiş gibi görünse de, ilk çalıştırmada \"Beklenmeyen veri formatı\" hatası alınmıştır. Bu hata, veri hizalaması ve standartlaştırma işlemlerinin güvenilirliğini sorgulatmaktadır. Her ne kadar sonraki çalıştırmada sorun çözülmüş gibi görünse de, ilk hata bu gereksinimin tam olarak karşılanmadığını göstermektedir."
+                ]
+            },
+            "total_time": 10.916335821151733
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"FaceNet\" modeli \"PyTorch\" içinde kullanılır, [Hugging Face](https://huggingface.co/py-feat/facenet) adresinden yüklenir. Model models/saved_models/ içinde kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0035975,
+                "inference_time": 2.3145899772644043,
+                "input_tokens": 911,
+                "output_tokens": 132,
+                "accumulated_cost": 0.010420000000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Proje yapısında ve dosya içeriğinde belirtilen dosyalar mevcut değil. \"project/models/saved_models/facenet_pytorch_model.pt\" ve \"project/models/facenet.py\" dosyalarının var olmadığı belirtilmiş. Bu, modelin belirtilen dizine kaydedilmediğini ve dolayısıyla gereksinimin karşılanmadığını gösterir. Çevresel geri bildirimde modelin başarıyla indirildiği ve kaydedildiği belirtilse de, dosya sisteminde bu dosyaların bulunmaması gereksinimin karşılanmadığını kanıtlar."
+                ]
+            },
+            "total_time": 12.62510085105896
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Yüz gömme işlemleri `src/model.py` içinde kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030075,
+                "inference_time": 1.4339237213134766,
+                "input_tokens": 955,
+                "output_tokens": 62,
+                "accumulated_cost": 0.014527500000000002,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/model.py` dosyası mevcut değil, bu nedenle yüz gömme işlemlerinin bu dosya içinde kullanıldığı doğrulanamıyor. Proje yapısında veya dosya içeriğinde bu işlemlerin varlığına dair kanıt bulunmuyor."
+                ]
+            },
+            "total_time": 15.66810941696167
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "Tanıma doğruluğu yazdırılır ve `results/metrics/recognition_accuracy.txt` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0028175000000000006,
+                "inference_time": 1.6143953800201416,
+                "input_tokens": 779,
+                "output_tokens": 87,
+                "accumulated_cost": 0.016670000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gereksinim, tanıma doğruluğunun `results/metrics/recognition_accuracy.txt` dosyasına kaydedilmesi gerektiğini belirtmektedir. Ancak, belirtilen dosya mevcut değildir ve bu nedenle gereksinim karşılanmamıştır. Proje yapısında veya dosya içeriğinde bu dosyanın varlığına dair bir kanıt bulunmamaktadır."
+                ]
+            },
+            "total_time": 7.911627769470215
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Gömme sonuçları görselleştirilir ve `results/figures/embedding_visualization.png` olarak kaydedilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0025425000000000005,
+                "inference_time": 1.6533844470977783,
+                "input_tokens": 737,
+                "output_tokens": 70,
+                "accumulated_cost": 0.018810000000000004,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: Gömme sonuçlarının `results/figures/embedding_visualization.png` olarak kaydedildiği iddia edilse de, dosya mevcut değil. Dosya yapısında veya içerik kontrolünde bu dosyanın var olmadığı belirtilmiştir. Bu nedenle, gereksinim karşılanmamıştır."
+                ]
+            },
+            "total_time": 6.835137844085693
+        }
+    ]
+}

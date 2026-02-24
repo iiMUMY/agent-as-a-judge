@@ -1,0 +1,190 @@
+{
+    "name": "11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+    "query": "Merhaba. Boston Housing veri kümesi üzerinde Lineer Regresyon modeli kullanarak bir ev fiyat tahmin projesi kurun. Veri kümesini `from datasets import load_dataset` ve `ds = load_dataset(\"~/mrseba/boston_house_price\")` kullanarak `src/data_loader.py` içinde yükleyin. Özellik ölçeklendirme ve veri standardizasyonunun `src/data_loader.py` içinde gerçekleştirildiğinden emin olun. Lineer Regresyon modelini `src/model.py` içinde uygulayın. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın. Ortalama Kare Hata (MSE), Ortalama Mutlak Hata (MAE) ve $R^2$ skorunu yazdırın ve `results/metrics/metrics.txt` altında kaydedin. Tahmin edilen ve gerçek değerler arasındaki karşılaştırmayı görselleştirin ve sonucu `results/figures/prediction_vs_actual.png` olarak kaydedin. Görselleştirmeler modelin doğruluğunu açıkça göstermelidir (doğru yapılırsa iyi olmalıdır).",
+    "tags": [
+        "Financial Analysis",
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Boston Housing\" veri kümesi `from datasets import load_dataset` ve `ds = load_dataset(\"mrseba/boston_house_price\")` kullanılarak `src/data_loader.py` içinde kullanılır.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Özellik ölçeklendirme ve veri standardizasyonu `src/data_loader.py` içinde gerçekleştirilir.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"Lineer Regresyon\" modeli `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "Modeli değerlendirmek için `src/train.py` içinde \"çapraz doğrulama\" kullanılır.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "\"Ortalama Kare Hata (MSE),\" \"Ortalama Mutlak Hata (MAE),\" ve \"R^2 skoru\" yazdırılır ve `results/metrics/metrics.txt` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Tahmin edilen ve gerçek değerlerin karşılaştırması görselleştirilir ve `results/figures/prediction_vs_actual.png` olarak kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Veri kümesi sağlanan `load_dataset` kodu kullanılarak sorunsuz yüklenmelidir ve sorun çıkarsa diğer yöntemler denenmelidir.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Görselleştirmeler, tahmin edilen ve gerçek değerler arasındaki farkları vurgulayarak modelin doğruluğunu açıkça göstermelidir.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "hint": "`ds = load_dataset(\"~/mrseba/boston_house_price\")` in the query is wrong, and it should be `ds = load_dataset(\"mrseba/boston_house_price\")`. We leave it here to check the self-debugging skill of the agents.",
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Boston Housing\" veri kümesi `from datasets import load_dataset` ve `ds = load_dataset(\"mrseba/boston_house_price\")` kullanılarak `src/data_loader.py` içinde kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0032900000000000004,
+                "inference_time": 1.9215116500854492,
+                "input_tokens": 876,
+                "output_tokens": 110,
+                "accumulated_cost": 0.0039375,
+                "satisfied": false,
+                "reason": [
+                    "< SATISFIED >: \"Boston Housing\" veri kümesi, `src/data_loader.py` dosyasında `from datasets import load_dataset` ve `ds = load_dataset(\"mrseba/boston_house_price\")` kullanılarak başarıyla yüklenmiştir. İlk denemede hata alınmış olsa da, ikinci denemede veri kümesi başarıyla yüklenmiş ve \"Dataset 'mrseba/boston_house_price' loaded successfully.\" mesajı alınmıştır. Bu, gereksinimin karşılandığını gösterir."
+                ]
+            },
+            "total_time": 10.297099590301514
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Özellik ölçeklendirme ve veri standardizasyonu `src/data_loader.py` içinde gerçekleştirilir.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.003135,
+                "inference_time": 2.006486177444458,
+                "input_tokens": 838,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0072125,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: `src/data_loader.py` dosyası mevcut değil, bu nedenle özellik ölçeklendirme ve veri standardizasyonunun bu dosya içinde gerçekleştirildiğini doğrulamak mümkün değil. Ayrıca, dosyanın içeriği hakkında herhangi bir bilgi sağlanmamış. Trajektori kanıtları, dosyanın çalıştırıldığını ve bazı işlemlerin yapıldığını gösterse de, dosyanın var olmaması nedeniyle bu gereksinim karşılanmamıştır."
+                ]
+            },
+            "total_time": 7.676127195358276
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "\"Lineer Regresyon\" modeli `src/model.py` içinde uygulanır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0030350000000000004,
+                "inference_time": 1.4818663597106934,
+                "input_tokens": 914,
+                "output_tokens": 75,
+                "accumulated_cost": 0.011015,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: \"Lineer Regresyon\" modelinin `src/model.py` içinde uygulanıp uygulanmadığını değerlendirmek için dosyanın içeriğine erişim gereklidir. Ancak, belirtilen dosya mevcut değil ve içeriği incelenemiyor. Bu nedenle, gereksinimin karşılandığını doğrulamak mümkün değil."
+                ]
+            },
+            "total_time": 8.44510793685913
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "Modeli değerlendirmek için `src/train.py` içinde \"çapraz doğrulama\" kullanılır.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0026650000000000003,
+                "inference_time": 2.1365509033203125,
+                "input_tokens": 754,
+                "output_tokens": 78,
+                "accumulated_cost": 0.013550000000000001,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is not satisfied because the file `src/train.py` does not exist in the specified directory, as indicated by the error message. Without the file, it is impossible to confirm that cross-validation is implemented within it. The trajectory evidence suggests that cross-validation was executed successfully, but this cannot be verified due to the absence of the actual file content."
+                ]
+            },
+            "total_time": 6.853980302810669
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "\"Ortalama Kare Hata (MSE),\" \"Ortalama Mutlak Hata (MAE),\" ve \"R^2 skoru\" yazdırılır ve `results/metrics/metrics.txt` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00287,
+                "inference_time": 1.7013757228851318,
+                "input_tokens": 744,
+                "output_tokens": 101,
+                "accumulated_cost": 0.016460000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"Ortalama Kare Hata (MSE),\" \"Ortalama Mutlak Hata (MAE),\" ve \"R^2 skoru\" hesaplanmış ve `results/metrics/metrics.txt` dosyasına yazdırılmıştır. Adım 45 ve 46'da belirtilen çevresel geri bildirim, bu işlemlerin sorunsuz bir şekilde tamamlandığını ve dosyanın başarıyla kaydedildiğini doğrulamaktadır."
+                ]
+            },
+            "total_time": 6.305910110473633
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "Tahmin edilen ve gerçek değerlerin karşılaştırması görselleştirilir ve `results/figures/prediction_vs_actual.png` olarak kaydedilir.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.002585,
+                "inference_time": 1.5744516849517822,
+                "input_tokens": 678,
+                "output_tokens": 89,
+                "accumulated_cost": 0.018975000000000002,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: \"results/figures/prediction_vs_actual.png\" dosyasının başarıyla kaydedildiği belirtilmiştir. Çevresel geri bildirimde herhangi bir hata veya uyarı mesajı olmadığı, işlemin başarılı olduğu ifade edilmiştir. Bu, tahmin edilen ve gerçek değerlerin karşılaştırmasının görselleştirildiğini ve belirtilen dosya yoluna kaydedildiğini gösterir."
+                ]
+            },
+            "total_time": 5.650511980056763
+        }
+    ]
+}
