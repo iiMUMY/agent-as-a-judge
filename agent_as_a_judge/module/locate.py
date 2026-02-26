@@ -28,11 +28,12 @@ class DevLocate:
     def _initialize_llm(self) -> LLM:
         model = os.getenv("DEFAULT_LLM")
         api_key = os.getenv("OPENAI_API_KEY")
+        base_url = os.getenv("OPENAI_BASE_URL")
         if not model or not api_key:
             raise ValueError(
                 "DEFAULT_LLM or OPENAI_API_KEY not found in environment variables"
             )
-        return LLM(model=model, api_key=api_key)
+        return LLM(model=model, api_key=api_key, base_url=base_url)
 
     def locate_file(self, criteria: str, workspace_info: str) -> dict:
         system_prompt = get_system_prompt_locate(language=self.language)

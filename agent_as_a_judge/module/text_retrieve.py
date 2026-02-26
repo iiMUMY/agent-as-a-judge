@@ -46,7 +46,9 @@ class DevTextRetrieve:
         self.embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
         self.text_embeddings = None
         self.llm = LLM(
-            model=os.getenv("DEFAULT_LLM"), api_key=os.getenv("OPENAI_API_KEY")
+            model=os.getenv("DEFAULT_LLM"),
+            api_key=os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("OPENAI_BASE_URL"),
         )
 
     @property

@@ -34,7 +34,8 @@ class DevAsk:
         try:
             model = os.getenv("DEFAULT_LLM")
             api_key = os.getenv("OPENAI_API_KEY")
-            return LLM(model=model, api_key=api_key)
+            base_url = os.getenv("OPENAI_BASE_URL")
+            return LLM(model=model, api_key=api_key, base_url=base_url)
         except KeyError as e:
             logging.error(f"Missing environment variable: {e}")
             raise

@@ -22,7 +22,9 @@ class Planning:
     def __init__(self, language: str = "English"):
         self.language = language
         self.llm = LLM(
-            model=os.getenv("DEFAULT_LLM"), api_key=os.getenv("OPENAI_API_KEY")
+            model=os.getenv("DEFAULT_LLM"),
+            api_key=os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("OPENAI_BASE_URL"),
         )
 
     def generate_plan(self, criteria: str) -> dict:

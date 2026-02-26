@@ -59,7 +59,9 @@ class JudgeAgent:
         self.config = config
 
         self.llm = LLM(
-            model=os.getenv("DEFAULT_LLM"), api_key=os.getenv("OPENAI_API_KEY")
+            model=os.getenv("DEFAULT_LLM"),
+            api_key=os.getenv("OPENAI_API_KEY"),
+            base_url=os.getenv("OPENAI_BASE_URL"),
         )
 
         # Paths for Judge-specific directories and files

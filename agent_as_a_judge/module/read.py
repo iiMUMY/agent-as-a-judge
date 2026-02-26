@@ -322,7 +322,7 @@ class DevRead:
             llm_instance = LLM(
                 model=os.getenv("DEFAULT_LLM"),
                 api_key=os.getenv("OPENAI_API_KEY"),
-                base_url="https://api.openai.com/v1",
+                base_url=os.getenv("OPENAI_BASE_URL"),
             )
 
             if task is None:
@@ -373,7 +373,9 @@ class DevRead:
             total_inference_time = 0.0
 
             llm_instance = LLM(
-                model=os.getenv("DEFAULT_LLM"), api_key=os.getenv("OPENAI_API_KEY")
+                model=os.getenv("DEFAULT_LLM"),
+                api_key=os.getenv("OPENAI_API_KEY"),
+                base_url=os.getenv("OPENAI_BASE_URL"),
             )
 
             while video.isOpened():
