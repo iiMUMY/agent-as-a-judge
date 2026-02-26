@@ -274,18 +274,16 @@ class JudgeAgent:
 
             elif info_type == "read" and related_files:
                 for file_path in related_files:
-                    normalized_path = Path(file_path)
-                    if (
-                        os.name == "nt"
-                        and not normalized_path.exists()
-                        and str(file_path).startswith("/")
-                    ):
-                        normalized_path = Path(str(file_path).lstrip("/"))
+                    normalized_path = self._resolve_located_path(str(file_path))
+                    if str(normalized_path) != str(file_path) and normalized_path.exists():
+                        logging.info(
+                            f"Resolved located path '{file_path}' to existing file '{normalized_path}'."
+                        )
 
                     content, llm_stats = self.aaaj_read.read(normalized_path)
-                    combined_evidence += f">>> [Key Evidence] Content of Files:\n\nContent of {file_path}:\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
+                    combined_evidence += f">>> [Key Evidence] Content of Files:\n\nContent of {file_path} (resolved as {normalized_path}):\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
                     logging.info(
-                        f">>> [Key Evidence] Content of Files:\n\nContent of {file_path}:\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
+                        f">>> [Key Evidence] Content of Files:\n\nContent of {file_path} (resolved as {normalized_path}):\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
                     )
                     if llm_stats:
                         total_llm_stats.update(llm_stats)
@@ -444,6 +442,84 @@ class JudgeAgent:
     def locate_file(self, criteria: str, workspace_info: str) -> dict:
 
         return self.aaaj_locate.locate_file(criteria, workspace_info)
+
+    def _get_workspace_files(self) -> list[Path]:
+        if hasattr(self, "_workspace_files"):
+            return self._workspace_files
+
+        files: list[Path] = []
+        for root, dirs, filenames in os.walk(self.workspace):
+            dirs[:] = [
+                d
+                for d in dirs
+                if not any(excluded in d for excluded in self.config.exclude_dirs)
+            ]
+            for filename in filenames:
+                if filename.startswith(".") or filename in self.config.exclude_files:
+                    continue
+                files.append(Path(root) / filename)
+
+        self._workspace_files = files
+        return files
+
+    def _resolve_located_path(self, located_path: str) -> Path:
+        raw = str(located_path).strip().strip("`").strip()
+        if not raw:
+            return Path(located_path)
+
+        direct_candidates = [Path(raw)]
+        if os.name == "nt" and raw.startswith("/"):
+            direct_candidates.append(Path(raw.lstrip("/")))
+        if raw.startswith("./"):
+            direct_candidates.append(self.workspace / Path(raw[2:]))
+
+        for candidate in direct_candidates:
+            if candidate.exists():
+                return candidate
+
+        raw_posix = raw.replace("\\", "/")
+        anchor_dirs = ["/src/", "/results/", "/models/", "/data/", "/tests/", "/scripts/"]
+        for anchor in anchor_dirs:
+            idx = raw_posix.lower().find(anchor)
+            if idx != -1:
+                rel = raw_posix[idx + 1 :]
+                candidate = self.workspace / Path(rel)
+                if candidate.exists():
+                    return candidate
+
+        workspace_files = self._get_workspace_files()
+        if not workspace_files:
+            return Path(raw)
+
+        basename = Path(raw_posix).name.lower()
+        if basename:
+            basename_matches = [f for f in workspace_files if f.name.lower() == basename]
+            if len(basename_matches) == 1:
+                return basename_matches[0]
+            if len(basename_matches) > 1:
+                raw_parts = [p.lower() for p in raw_posix.split("/") if p and p != "."]
+
+                def suffix_score(path: Path) -> int:
+                    rel_parts = [
+                        p.lower() for p in path.relative_to(self.workspace).as_posix().split("/")
+                    ]
+                    score = 0
+                    i = 1
+                    while i <= min(len(raw_parts), len(rel_parts)):
+                        if raw_parts[-i] == rel_parts[-i]:
+                            score += 1
+                            i += 1
+                        else:
+                            break
+                    return score
+
+                return sorted(
+                    basename_matches,
+                    key=lambda p: (suffix_score(p), -len(p.as_posix())),
+                    reverse=True,
+                )[0]
+
+        return Path(raw)
 
     def display_judgment(
         self, criteria: str, satisfied: bool, reason: str, logger: logging.Logger

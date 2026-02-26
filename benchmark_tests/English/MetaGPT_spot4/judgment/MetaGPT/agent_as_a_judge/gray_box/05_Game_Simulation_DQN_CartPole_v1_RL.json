@@ -1,0 +1,155 @@
+{
+    "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+    "query": "Create a reliable system to train a DQN agent using PyTorch in an OpenAI Gym environment such as CartPole-v1. Implement DQN using PyTorch in `src/model.py`. The environment should be instantiated in the main file, `src/main.py`. Handle any dimension mismatches between DQN and the environment (like would happen if the Gym environment ID were changed) by logging an error. Also please log the return after each episode to `results/metrics/` and update it after each new episode finishes. Save the final return over episode curve as `results/figures/return_over_time.png` and the final trained model as `models/saved_models/dqn_model.pt`. If possible, add annotations to the return over episode curve to showcase key milestones.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"DQN\" algorithm is implemented using PyTorch and saved in `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "An \"OpenAI Gym\" environment is instantiated in `src/main.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "The return over time curve is plotted, recording the return of each episode, and saved as `results/figures/reward_over_time.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "The trained model is saved as `models/saved_models/dqn_model.pt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "The return for each episode is logged to `results/metrics/` and updated after each episode finishes.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The system should handle dimension mismatches, logging the issues for easy debugging.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The return over episode curve has key milestones annotated.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"DQN\" algorithm is implemented using PyTorch and saved in `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.00321,
+                "inference_time": 2.7193286418914795,
+                "input_tokens": 932,
+                "output_tokens": 88,
+                "accumulated_cost": 0.00248,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"DQN\" algorithm should be implemented using PyTorch and saved in `src/model.py`. However, the content of `src/model.py` is not available as the file does not exist according to the provided evidence. Without access to the file's content, it is impossible to verify the implementation of the DQN algorithm using PyTorch. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 10.204485654830933
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "An \"OpenAI Gym\" environment is instantiated in `src/main.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0033450000000000003,
+                "inference_time": 2.870292901992798,
+                "input_tokens": 858,
+                "output_tokens": 120,
+                "accumulated_cost": 0.00498,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The provided information indicates that there was an attempt to instantiate an \"OpenAI Gym\" environment in `src/main.py`, as evidenced by the error message logged during Step 45. However, there is no direct evidence or code snippet provided from `src/main.py` that confirms the successful instantiation of the environment. The trajectory evidence only shows that the error was resolved by installing the 'gym' module, but it does not explicitly confirm that the environment was instantiated in the code. Therefore, without direct evidence from the code, the requirement cannot be considered fully satisfied."
+                ]
+            },
+            "total_time": 9.563360452651978
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "The return over time curve is plotted, recording the return of each episode, and saved as `results/figures/reward_over_time.png`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.00333,
+                "inference_time": 3.459887742996216,
+                "input_tokens": 868,
+                "output_tokens": 116,
+                "accumulated_cost": 0.007425,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement is fully met as evidenced by the project structure and trajectory steps. The project structure includes a file named `reward_over_time.png` located in the `results/figures` directory, indicating that the plot was saved as required. Additionally, the trajectory evidence from Step 45 confirms that the script executed a function to plot the return over time curve, recording the return of each episode, and successfully saved the plot without errors. Step 47 further verifies the integrity and correctness of the saved plot, confirming that it correctly represents the intended data."
+                ]
+            },
+            "total_time": 7.813764333724976
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "The trained model is saved as `models/saved_models/dqn_model.pt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0029075000000000004,
+                "inference_time": 1.9978232383728027,
+                "input_tokens": 799,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0094775,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the trained model is saved as `models/saved_models/dqn_model.pt` is fully met. The project structure clearly shows the presence of the file `dqn_model.pt` in the `models/saved_models` directory. Additionally, the trajectory evidence confirms that the model was successfully saved at Step 45 and subsequently loaded without issues at Step 47, indicating that the file is correctly named and functional."
+                ]
+            },
+            "total_time": 6.171499967575073
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "The return for each episode is logged to `results/metrics/` and updated after each episode finishes.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0034175000000000004,
+                "inference_time": 3.9762704372406006,
+                "input_tokens": 927,
+                "output_tokens": 110,
+                "accumulated_cost": 0.0118525,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement states that the return for each episode should be logged to `results/metrics/` and updated after each episode finishes. However, the provided evidence indicates that the `results/metrics/` directory does not exist, as shown by the error message when attempting to access its contents. Although the trajectory evidence suggests that the logging mechanism is functioning correctly, the absence of the `results/metrics/` directory contradicts the requirement that the returns are being logged there. Therefore, the requirement is not fully met."
+                ]
+            },
+            "total_time": 8.919530630111694
+        }
+    ]
+}
