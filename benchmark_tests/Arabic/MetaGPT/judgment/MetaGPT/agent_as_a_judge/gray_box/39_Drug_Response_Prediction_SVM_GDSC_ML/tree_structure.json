@@ -1,9 +1,14 @@
 {
     "workspace": "benchmark_tests\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\39_Drug_Response_Prediction_SVM_GDSC_ML",
     "tree_structure": {
-        ".": {},
+        ".": {
+            "gdsc_dataset.csv": null
+        },
         "results": {
-            "drug_response_prediction_report.pdf": null
+            "drug_response_prediction_report.md": null,
+            "drug_response_prediction_report.pdf": null,
+            "performance.txt": null,
+            "rmse_scores.png": null
         },
         "results\\figures": {},
         "results\\metrics": {

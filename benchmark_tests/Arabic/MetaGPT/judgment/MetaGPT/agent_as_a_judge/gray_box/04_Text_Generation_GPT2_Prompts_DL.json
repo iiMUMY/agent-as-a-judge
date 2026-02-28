@@ -83,16 +83,16 @@
             "satisfied": false,
             "llm_stats": {
                 "cost": 0.0,
-                "inference_time": 1.2992925643920898,
-                "input_tokens": 885,
-                "output_tokens": 79,
+                "inference_time": 1.3525140285491943,
+                "input_tokens": 778,
+                "output_tokens": 66,
                 "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: على الرغم من أن هناك محاولة لتنزيل نموذج \"GPT-2\" المدرب مسبقًا، إلا أن هناك خطأ حدث أثناء محاولة حفظ النموذج في `models/saved_models/` بسبب عدم كفاية مساحة القرص. هذا يعني أن النموذج لم يتم تخزينه بنجاح، مما يجعل المعيار غير محقق."
+                    "<UNSATISFIED>: لم يتم تحقيق المعيار لأن هناك خطأ مسجل يشير إلى عدم كفاية مساحة القرص، مما قد يمنع حفظ النموذج بنجاح في `models/saved_models/`. هذا يشير إلى أن النموذج ربما لم يتم تخزينه كما هو مطلوب."
                 ]
             },
-            "total_time": 5.038302183151245
+            "total_time": 5.98123574256897
         },
         {
             "requirement_index": 1,
@@ -100,16 +100,16 @@
             "satisfied": false,
             "llm_stats": {
                 "cost": 0.0,
-                "inference_time": 1.3587274551391602,
-                "input_tokens": 791,
-                "output_tokens": 65,
+                "inference_time": 2.0557262897491455,
+                "input_tokens": 745,
+                "output_tokens": 75,
                 "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: The requirement is not satisfied because the content of the `data/prompt.txt` file is shown as `('placeholder\\r\\n', None)`, which indicates that it contains a placeholder rather than actual prompts. There is no evidence that meaningful prompts are being read and fed into the model."
+                    "<UNSATISFIED>: لم يتم تحقيق المتطلب لأن هناك خطأ مسجل يشير إلى أن الملف `data/prompt.txt` لم يتم العثور عليه في المسار المحدد. هذا يعني أن الموجهات لا يمكن قراءتها من الملف وتغذيتها إلى النموذج، مما يؤثر على تنفيذ المهام التي تعتمد على هذه الموجهات."
                 ]
             },
-            "total_time": 3.071582317352295
+            "total_time": 6.157261848449707
         },
         {
             "requirement_index": 2,
@@ -117,16 +117,16 @@
             "satisfied": false,
             "llm_stats": {
                 "cost": 0.0,
-                "inference_time": 1.2147562503814697,
-                "input_tokens": 810,
-                "output_tokens": 61,
+                "inference_time": 1.5479459762573242,
+                "input_tokens": 730,
+                "output_tokens": 65,
                 "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: The content of the file `generated_text.txt` is `('placeholder\\r\\n', None)`, which does not provide any evidence of text generation or its length. Therefore, it cannot be determined if the generated text meets the specified maximum length of 200 characters."
+                    "<UNSATISFIED>: لا توجد أدلة محددة في المعلومات المتاحة تشير إلى أن طول التوليد تم تحديده بحد أقصى 200 حرف. لا يوجد ذكر لأي إعدادات أو تكوينات تتعلق بطول التوليد في هيكل المشروع أو في خطوات المسار المقدمة."
                 ]
             },
-            "total_time": 3.574479818344116
+            "total_time": 5.686871767044067
         },
         {
             "requirement_index": 3,
@@ -134,16 +134,16 @@
             "satisfied": false,
             "llm_stats": {
                 "cost": 0.0,
-                "inference_time": 1.372795581817627,
-                "input_tokens": 876,
-                "output_tokens": 94,
+                "inference_time": 1.3959808349609375,
+                "input_tokens": 906,
+                "output_tokens": 91,
                 "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن وظيفة `clean_text()` تم تنفيذها لإزالة المسافات الزائدة وتصحيح الأخطاء الإملائية الشائعة. ومع ذلك، لا يوجد دليل مباشر في محتوى الملف `generated_text.txt` الذي يحتوي فقط على ('placeholder\\r\\n', None) يشير إلى أن النص قد تم تنظيفه بالفعل. لا يوجد نص فعلي تم تنظيفه أو أي تفاصيل حول نتائج عملية التنظيف."
+                    "<UNSATISFIED>: لا يوجد دليل واضح في المعلومات المقدمة على تنفيذ معالجة لاحقة لتنظيف النص، مثل إزالة المسافات الزائدة أو تصحيح الأخطاء الإملائية الشائعة. محتوى ملف `generated_text.txt` يحتوي فقط على نص \"placeholder\" مما يشير إلى عدم وجود نص فعلي تم معالجته. بالإضافة إلى ذلك، لا توجد تفاصيل حول تنفيذ عمليات تنظيف النص في الملفات أو الخطوات المذكورة."
                 ]
             },
-            "total_time": 3.8953194618225098
+            "total_time": 5.318939447402954
         },
         {
             "requirement_index": 4,
@@ -151,16 +151,16 @@
             "satisfied": false,
             "llm_stats": {
                 "cost": 0.0,
-                "inference_time": 1.1748876571655273,
-                "input_tokens": 849,
-                "output_tokens": 74,
+                "inference_time": 2.634028911590576,
+                "input_tokens": 883,
+                "output_tokens": 63,
                 "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: على الرغم من أن الملف `results/generated_text.txt` تم حفظه بنجاح دون أي أخطاء أو تحذيرات، إلا أن محتوى الملف هو مجرد نص \"placeholder\" وليس نصًا مولدًا فعليًا. هذا يشير إلى أن النص المولد لم يتم حفظه بشكل صحيح في الملف كما هو مطلوب."
+                    "<UNSATISFIED>: على الرغم من أن الملف `results/generated_text.txt` تم إنشاؤه وحفظه بنجاح، إلا أن محتواه هو مجرد نص \"placeholder\" وليس النص المولد المتوقع. لا يوجد دليل على أن النص المولد الفعلي تم حفظه في الملف."
                 ]
             },
-            "total_time": 3.4399304389953613
+            "total_time": 4.79482889175415
         }
     ]
 }

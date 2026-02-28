@@ -1,7 +1,20 @@
 {
     "workspace": "benchmark_tests\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\55_SQLite_Database_Viewer_and_Analyzer_App",
     "tree_structure": {
-        ".": {},
+        ".": {
+            "app": null,
+            "app_id": null,
+            "content": null,
+            "development_plan": null,
+            "development_planning": null,
+            "development_steps": null,
+            "llm_response": null,
+            "messages": null,
+            "prompt_data": null,
+            "prompt_path": null,
+            "role": null,
+            "text": null
+        },
         "development": {},
         "development\\task": {
             "breakdown.prompt": null
