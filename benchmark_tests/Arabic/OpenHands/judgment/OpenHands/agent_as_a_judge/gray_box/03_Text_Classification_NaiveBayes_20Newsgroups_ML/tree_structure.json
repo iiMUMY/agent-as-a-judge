@@ -1,4 +1,18 @@
 {
     "workspace": "benchmark_tests\\Arabic\\OpenHands\\workspaces\\OpenHands\\03_Text_Classification_NaiveBayes_20Newsgroups_ML",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "wordcloud_after.png": null,
+            "wordcloud_before.png": null
+        },
+        "results\\metrics": {
+            "performance.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
 }

@@ -192,238 +192,238 @@
             "criteria": "يتم تنفيذ الواجهة الأمامية في `src/frontend.py` وتسمح للمستخدمين بتحميل قاعدة بيانات SQLite جديدة أو اختيار واحدة مخزنة مسبقًا من `src/cache.py`. يجب حفظ الملف المختار وأن يكون متاحًا للاستخدام المستقبلي.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0033150000000000002,
-                "inference_time": 2.39125394821167,
-                "input_tokens": 942,
-                "output_tokens": 96,
-                "accumulated_cost": 0.0022800000000000003,
+                "cost": 0.0,
+                "inference_time": 2.435196876525879,
+                "input_tokens": 1603,
+                "output_tokens": 122,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: The requirement is not met because the files `src/frontend.py` and `src/cache.py` do not exist, as indicated by the error messages. Additionally, the trajectory evidence highlights issues: an error in `src/frontend.py` due to a missing dependency for database connection, and a warning in `src/cache.py` about potential data inconsistency. These issues suggest that the functionality to upload or select a database is not implemented or functioning correctly."
+                    "<UNSATISFIED>: The requirement is not fully met. The `src/frontend.py` is supposed to allow users to upload a new SQLite database or select a previously cached one from `src/cache.py`. However, the trajectory evidence indicates issues with both functionalities. In Step 14, an error occurs when attempting to upload a new SQLite database, indicating a problem with file format support. In Step 18, a warning is logged when selecting a cached database, suggesting issues with file integrity or the saving process. These issues prevent the frontend from reliably allowing users to upload or select databases as required."
                 ]
             },
-            "total_time": 8.835958480834961
+            "total_time": 7.305562973022461
         },
         {
             "requirement_index": 1,
             "criteria": "عند تحميل قاعدة بيانات جديدة، يمكن للمستخدمين تعيين اسم لها، ويتم إرسال الملف إلى الخلفية (`src/backend.py`) وتخزينه للاستخدام المستقبلي.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0025775000000000004,
-                "inference_time": 1.6309492588043213,
-                "input_tokens": 775,
-                "output_tokens": 64,
-                "accumulated_cost": 0.004562500000000001,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.6430015563964844,
+                "input_tokens": 1299,
+                "output_tokens": 116,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحميل قاعدة بيانات جديدة بنجاح وتم تعيين اسم لها من قبل المستخدم كما هو موضح في الخطوة الأخيرة المتعلقة بـ `src/backend.py`. لم تكن هناك أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن الوظيفة تعمل كما هو متوقع."
+                    "<UNSATISFIED>: The requirement is not fully met. The `src/backend.py` file is intended to handle the uploading and storing of a new database file, but there are issues preventing this functionality from working correctly. Specifically, there is a permission issue that prevents writing to the designated storage directory, as noted in Step 1 of the trajectory evidence. Additionally, there is a warning about the naming convention of the database file, which could lead to retrieval or identification issues, as mentioned in Step 2. These problems need to be resolved to satisfy the requirement."
                 ]
             },
-            "total_time": 6.829399824142456
+            "total_time": 6.18029522895813
         },
         {
             "requirement_index": 2,
             "criteria": "يتم تخزين قواعد البيانات التي تم تحميلها مسبقًا في `src/cache.py` ويمكن اختيارها دون إعادة التحميل.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.00277,
-                "inference_time": 1.6559507846832275,
-                "input_tokens": 808,
-                "output_tokens": 75,
-                "accumulated_cost": 0.00659,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.3825271129608154,
+                "input_tokens": 1268,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن تأكيد أن قواعد البيانات التي تم تحميلها مسبقًا مخزنة في `src/cache.py` ويمكن اختيارها دون إعادة التحميل، حيث أن الملف `src/cache.py` غير موجود وفقًا للمعلومات المقدمة. بالإضافة إلى ذلك، لا يوجد دليل مباشر على أن قواعد البيانات يمكن اختيارها دون إعادة التحميل."
+                    "<SATISFIED>: The requirement is satisfied as evidenced by the content of `src/cache.py`, which includes a requirement criterion stating that previously uploaded databases are cached and can be selected without re-uploading. Additionally, the trajectory evidence confirms that the issue with cached databases not being available for quick loading due to version incompatibility was resolved, ensuring that cached databases can now be selected without re-uploading."
                 ]
             },
-            "total_time": 8.101509094238281
+            "total_time": 4.249616384506226
         },
         {
             "requirement_index": 3,
             "criteria": "بمجرد تحميل قاعدة بيانات أو اختيارها، يمكن للمستخدم عرض قائمة بنماذج أو تطبيقات الذكاء الاصطناعي من جدول `app` داخل قاعدة البيانات.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0029950000000000003,
-                "inference_time": 1.396352767944336,
-                "input_tokens": 778,
-                "output_tokens": 105,
-                "accumulated_cost": 0.008945000000000002,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.8049254417419434,
+                "input_tokens": 1137,
+                "output_tokens": 72,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحقيق المعيار المحدد حيث تم تنفيذ استعلام لاستخراج قائمة بنماذج أو تطبيقات الذكاء الاصطناعي من جدول `app` بنجاح، ولم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية. بالإضافة إلى ذلك، تم عرض قائمة النماذج أو التطبيقات المستخرجة على واجهة المستخدم دون أي مشكلات، مما يدل على أن البيانات تم استرجاعها ومعالجتها بشكل صحيح لعرضها."
+                    "<UNSATISFIED>: The requirement is not met because, according to the trajectory evidence, there is an error logged indicating a missing column in the `app` table schema. This error suggests that the table structure is not up-to-date with the application's expectations, which impacts the functionality of listing AI models or applications from the `app` table."
                 ]
             },
-            "total_time": 7.506206274032593
+            "total_time": 4.981420278549194
         },
         {
             "requirement_index": 4,
             "criteria": "يمكن للمستخدمين اختيار تطبيق وعرض مهام تطويره من جدول `development_planning`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0030800000000000003,
-                "inference_time": 2.789902925491333,
-                "input_tokens": 780,
-                "output_tokens": 113,
-                "accumulated_cost": 0.011225000000000002,
+                "cost": 0.0,
+                "inference_time": 1.5631959438323975,
+                "input_tokens": 1075,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن للمستخدمين اختيار تطبيق وعرض مهام تطويره من جدول `development_planning` بسبب وجود خطأ أثناء محاولة الوصول إلى الجدول، حيث أشار الخطأ إلى عمود مفقود مما يشير إلى عدم تطابق في المخطط أو هجرة غير مكتملة. بالإضافة إلى ذلك، تم تسجيل تحذير يتعلق باستخدام طرق مهملة في عملية استرجاع البيانات، مما قد يؤدي إلى مشاكل توافق مستقبلية. هذه القضايا تؤثر على القدرة على عرض مهام التطوير بنجاح."
+                    "<UNSATISFIED>: The requirement is not met because there is an error related to accessing the `development_planning` table, specifically a missing column, which affects the ability to correctly display development tasks. Additionally, the use of deprecated methods for database queries in `development_planning_handler.py` could lead to compatibility issues, further impacting the functionality."
                 ]
             },
-            "total_time": 7.81868839263916
+            "total_time": 3.718153953552246
         },
         {
             "requirement_index": 5,
             "criteria": "بعد اختيار مهمة، يمكن للمستخدمين عرض جميع خطوات التطوير المرتبطة، والتي يتم عرضها على الواجهة الأمامية المنفذة في `src/frontend_render.py`.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.002625,
-                "inference_time": 2.514345169067383,
-                "input_tokens": 726,
+                "cost": 0.0,
+                "inference_time": 1.3116657733917236,
+                "input_tokens": 1381,
                 "output_tokens": 81,
-                "accumulated_cost": 0.013127500000000002,
-                "satisfied": false,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: لا توجد أدلة كافية في المعلومات المقدمة تشير إلى أن المستخدمين يمكنهم عرض جميع خطوات التطوير المرتبطة على الواجهة الأمامية المنفذة في `src/frontend_render.py`. المعلومات المتاحة تشير فقط إلى تحميل وتنفيذ الملف بنجاح، ولكنها لا تقدم تفاصيل حول عرض خطوات التطوير أو كيفية تحقيق ذلك في الواجهة الأمامية."
+                    "<SATISFIED>: The requirement is satisfied as the `src/frontend_render.py` file is implemented to display all associated development steps on the frontend. The content of the file includes a list of requirement criteria that specifically mentions the display of development steps. Additionally, the successful loading of the file without errors, as noted in the trajectory evidence, indicates that the frontend is correctly implemented for this purpose."
                 ]
             },
-            "total_time": 7.225201368331909
+            "total_time": 4.163814306259155
         },
         {
             "requirement_index": 6,
             "criteria": "يؤدي اختيار خطوة تطوير إلى عرض بيانات مفصلة تتضمن `prompt_path`، `messages`، `llm_response`، و`prompt_data`، مع عرضها بشكل مناسب على الواجهة الأمامية (`src/frontend_render.py`).",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0032975,
-                "inference_time": 4.9300737380981445,
-                "input_tokens": 783,
-                "output_tokens": 134,
-                "accumulated_cost": 0.015322500000000003,
+                "cost": 0.0,
+                "inference_time": 1.3020670413970947,
+                "input_tokens": 1837,
+                "output_tokens": 108,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: المعيار غير محقق بالكامل. تشير الأدلة إلى وجود تحذير في الخطوة 45 حول عدم تطابق محتمل في بنية البيانات المتوقعة لـ `prompt_data`، مما قد يؤدي إلى مشاكل في العرض على الواجهة الأمامية. بالإضافة إلى ذلك، في الخطوة 47، تم تسجيل خطأ يتعلق بعدم تنسيق `llm_response` بشكل صحيح، مما تسبب في فشل عرض الاستجابة على واجهة المستخدم. هذه المشاكل تشير إلى أن البيانات لا تُعرض بشكل مناسب على الواجهة الأمامية، وهناك حاجة لتحسين التحقق من الصحة أو معالجة الأخطاء في منطق العرض."
+                    "<UNSATISFIED>: The requirement is not fully met. The evidence indicates issues with the implementation in `src/frontend_render.py`. Specifically, there is a warning about a potential mismatch in the expected data structure for `prompt_data`, which could lead to incorrect or incomplete information being displayed. Additionally, an error occurred while rendering `llm_response` due to a missing key in the `messages` dictionary, which could prevent proper display of responses. These issues suggest that the detailed data is not being displayed appropriately on the frontend."
                 ]
             },
-            "total_time": 10.350518941879272
+            "total_time": 4.508063793182373
         },
         {
             "requirement_index": 7,
             "criteria": "في `src/backend_logic.py`، يتم استرجاع جميع خطوات التطوير من جدول `development_steps` وتجميعها حسب مهمة التطوير باستخدام حقل `prompt_path` الذي يبدأ بـ `development/task/breakdown.prompt`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0028000000000000004,
-                "inference_time": 2.0299277305603027,
-                "input_tokens": 768,
-                "output_tokens": 88,
-                "accumulated_cost": 0.0175625,
+                "cost": 0.0,
+                "inference_time": 1.5177888870239258,
+                "input_tokens": 1262,
+                "output_tokens": 96,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا توجد أدلة محددة في المعلومات المقدمة تشير إلى أن `src/backend_logic.py` يقوم بتجميع خطوات التطوير حسب مهمة التطوير باستخدام حقل `prompt_path` الذي يبدأ بـ `development/task/breakdown.prompt`. المعلومات المتاحة تشير فقط إلى أن الملف يعمل بشكل صحيح دون أخطاء، ولكنها لا تقدم تفاصيل حول كيفية تجميع البيانات أو استخدام حقل `prompt_path`."
+                    "<UNSATISFIED>: The content of `src/backend_logic.py` provided does not show any implementation of retrieving development steps from the `development_steps` table or grouping them by development task using the `prompt_path` field. The file content only includes a function `requirement_notes()` that returns a string of requirement criteria and a `main()` function that returns a status and notes. There is no evidence of database interaction or data processing as required by the criterion."
                 ]
             },
-            "total_time": 6.521005630493164
+            "total_time": 5.271451711654663
         },
         {
             "requirement_index": 8,
             "criteria": "يتم عرض مصفوفة `messages` على الواجهة الأمامية (`src/frontend_render.py`)، حيث يتم عرض `content` في حقل نص كبير و`role` كعلامة لكل رسالة.",
             "satisfied": true,
             "llm_stats": {
-                "cost": 0.0026950000000000003,
-                "inference_time": 1.5549066066741943,
-                "input_tokens": 766,
-                "output_tokens": 78,
-                "accumulated_cost": 0.01981,
+                "cost": 0.0,
+                "inference_time": 1.7131736278533936,
+                "input_tokens": 1397,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0,
                 "satisfied": true,
                 "reason": [
-                    "<SATISFIED>: تم تنفيذ `src/frontend_render.py` بنجاح حيث تم عرض مصفوفة `messages` على الواجهة الأمامية دون أي أخطاء أو تحذيرات، مما يشير إلى أن الوظيفة تعمل كما هو متوقع. على الرغم من وجود تحذير بسيط حول توافق المكتبات، إلا أنه لم يؤثر على عرض `messages`."
+                    "<SATISFIED>: The requirement is satisfied as the evidence indicates that the `messages` array is successfully displayed on the frontend. The trajectory evidence confirms that the `messages` were rendered without errors, and the implementation in `src/frontend_render.py` is designed to meet the requirement criteria, which includes displaying `content` in a large text field and `role` as a label for each message."
                 ]
             },
-            "total_time": 7.03983736038208
+            "total_time": 5.3697144985198975
         },
         {
             "requirement_index": 9,
             "criteria": "يتم عرض كائن `llm_response` مع مفتاح `text` في منطقة نص لاستيعاب السلاسل الطويلة المحتملة على الواجهة الأمامية (`src/frontend_render.py`).",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.00289,
-                "inference_time": 2.2300705909729004,
-                "input_tokens": 840,
-                "output_tokens": 79,
-                "accumulated_cost": 0.022062500000000002,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.4887409210205078,
+                "input_tokens": 1377,
+                "output_tokens": 77,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن تأكيد تحقيق المعيار لأن الملف `src/frontend_render.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من الكود الفعلي الذي يعرض كائن `llm_response` مع مفتاح `text`."
+                    "<SATISFIED>: The requirement is satisfied as the evidence indicates that the `llm_response` object with the `text` key is displayed in a text area on the frontend. The content of `src/frontend_render.py` includes a requirement criterion specifically stating this functionality, and the trajectory evidence confirms that the file was executed without errors, suggesting that the implementation is functioning correctly."
                 ]
             },
-            "total_time": 6.268564462661743
+            "total_time": 4.28741979598999
         },
         {
             "requirement_index": 10,
             "criteria": "يتم عرض كائن `prompt_data` مع أزواج المفتاح والقيمة الخاصة به في تنسيق مناسب على الواجهة الأمامية (`src/frontend_render.py`).",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0030225000000000004,
-                "inference_time": 2.343571186065674,
-                "input_tokens": 853,
-                "output_tokens": 89,
-                "accumulated_cost": 0.024300000000000002,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.5503339767456055,
+                "input_tokens": 1396,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: The requirement is not met because the file `src/frontend_render.py` does not exist, as indicated by the error message. Additionally, the trajectory evidence highlights issues with the rendering logic, such as a potential mismatch in data format and a missing key in `prompt_data`, which suggests that the frontend rendering logic is not handling all data scenarios correctly. This could lead to incorrect or incomplete display of key-value pairs."
+                    "<SATISFIED>: The requirement that the `prompt_data` object is displayed with its key-value pairs in an appropriate format on the frontend is satisfied. The content of `src/frontend_render.py` includes a requirement criterion specifically stating that `prompt_data` should be rendered appropriately on the frontend. Additionally, the trajectory evidence indicates that `src/frontend_render.py` was executed successfully without errors, confirming that the functionality works as expected."
                 ]
             },
-            "total_time": 8.981646299362183
+            "total_time": 6.237277269363403
         },
         {
             "requirement_index": 11,
             "criteria": "تتبع قاعدة بيانات SQLite الهيكل المحدد مع جداول `app`، `development_planning`، و`development_steps`، كما هو موضح في استعلام المشروع.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0025375000000000003,
-                "inference_time": 1.1326217651367188,
-                "input_tokens": 763,
-                "output_tokens": 63,
-                "accumulated_cost": 0.026505,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.7430419921875,
+                "input_tokens": 1005,
+                "output_tokens": 97,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحميل جداول `app`، `development_planning`، و`development_steps` بنجاح أثناء تنفيذ استعلامات قاعدة البيانات دون أي أخطاء أو تحذيرات، مما يشير إلى أن الهيكل المحدد للجداول يتماشى مع متطلبات المشروع."
+                    "<UNSATISFIED>: The requirement is not fully met. While the `development_planning` table was successfully created and populated with initial data, there was an error encountered during the creation of the `development_steps` table due to a syntax issue in the SQL statement. This error affects the proper creation and functionality of the `development_steps` table within the database. There is no specific evidence provided regarding the creation of the `app` table, so its status is unclear."
                 ]
             },
-            "total_time": 7.697308540344238
+            "total_time": 5.7883946895599365
         },
         {
             "requirement_index": 12,
             "criteria": "كل تطبيق في جدول `app` يحتوي على مهام تطوير متعددة مخزنة كمصفوفة تحت مفتاح `development_plan` في جدول `development_planning`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0030025000000000004,
-                "inference_time": 1.4797608852386475,
-                "input_tokens": 785,
-                "output_tokens": 104,
-                "accumulated_cost": 0.0289125,
+                "cost": 0.0,
+                "inference_time": 1.8366992473602295,
+                "input_tokens": 1340,
+                "output_tokens": 103,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: الأدلة المقدمة تشير إلى وجود تحذير بشأن عدم توافق نوع البيانات في مفتاح `development_plan`، بالإضافة إلى خطأ في عملية الربط بين التطبيقات والمهام في `development_plan`. هذه المشاكل تشير إلى أن تكامل البيانات بين الجداول قد لا يكون دقيقًا، مما يؤثر على دقة المهام المرتبطة بكل تطبيق. لا يوجد دليل واضح على أن كل تطبيق يحتوي على مهام تطوير متعددة مخزنة كمصفوفة بشكل صحيح."
+                    "<UNSATISFIED>: The evidence indicates issues with the implementation of the requirement. Specifically, there is a warning about a potential mismatch in data types for the `development_plan` array, which could lead to problems in storing or retrieving development tasks correctly. Additionally, an error related to a foreign key constraint violation between the `app` table and the `development_planning` table suggests that the relationship between applications and their development plans is not functioning as intended. These issues prevent the requirement from being fully satisfied."
                 ]
             },
-            "total_time": 9.82592511177063
+            "total_time": 4.741248607635498
         },
         {
             "requirement_index": 13,
             "criteria": "تحتوي كل مهمة تطوير على العديد من خطوات التطوير المخزنة في جدول `development_steps` ومرتبطة بجدول `app` باستخدام حقل `app_id`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0028450000000000003,
-                "inference_time": 1.6845898628234863,
-                "input_tokens": 770,
-                "output_tokens": 92,
-                "accumulated_cost": 0.031185,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 2.010092258453369,
+                "input_tokens": 1325,
+                "output_tokens": 94,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: المعيار محقق بالكامل. الأدلة المقدمة تشير إلى أن جدول `development_steps` مرتبط بجدول `app` باستخدام حقل `app_id`، وتم تنفيذ عملية الربط بنجاح دون أي أخطاء أو تحذيرات. هذا يدل على أن كل مهمة تطوير تحتوي على العديد من خطوات التطوير المخزنة بشكل صحيح في جدول `development_steps` ومرتبطة بجدول `app`."
+                    "<UNSATISFIED>: The requirement is not met because there is a warning about a potential mismatch in the `app_id` field type, which could lead to issues in linking with the `app` table. Additionally, there is an error due to a missing foreign key constraint on the `app_id` field in the `development_steps` table. This prevents proper association of development steps with their respective applications, impacting the data relationship integrity between the two tables."
                 ]
             },
-            "total_time": 8.776873111724854
+            "total_time": 4.824517250061035
         }
     ]
 }
