@@ -95,119 +95,119 @@
             "criteria": "\"Titanic\" hayatta kalma tahmin veri seti `src/data_loader.py` içinde yüklenir.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0029225,
-                "inference_time": 1.492311716079712,
-                "input_tokens": 885,
-                "output_tokens": 71,
-                "accumulated_cost": 0.00351,
+                "cost": 0.0,
+                "inference_time": 1.9331598281860352,
+                "input_tokens": 943,
+                "output_tokens": 97,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: \"src/data_loader.py\" dosyası mevcut değil ve bu nedenle Titanic hayatta kalma tahmin veri setinin bu dosya içinde yüklendiğini doğrulamak mümkün değil. Proje yapısında veya dosya içeriğinde bu işlevselliği destekleyen bir kanıt bulunmamaktadır."
+                    "<UNSATISFIED>: \"src/data_loader.py\" dosyası Titanic veri setini yüklemeye çalışırken başlangıçta \"FileNotFoundError: Titanic dataset file not found.\" hatası alındı. Her ne kadar bu hata daha sonra giderilmiş ve veri seti başarıyla yüklenmiş olsa da, ilk denemede veri seti yüklenememiştir. Bu durum, gereksinimin tam olarak karşılanmadığını gösterir."
                 ]
             },
-            "total_time": 10.526171445846558
+            "total_time": 7.497674226760864
         },
         {
             "requirement_index": 1,
             "criteria": "Hayatta kalma tahmini için bir \"Random Forest sınıflandırıcısı\" eğitilir.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0030725000000000006,
-                "inference_time": 2.7463715076446533,
-                "input_tokens": 745,
-                "output_tokens": 121,
-                "accumulated_cost": 0.006562500000000001,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 2.7100844383239746,
+                "input_tokens": 1599,
+                "output_tokens": 116,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: \"Random Forest sınıflandırıcısı\" eğitimi için gerekli adımların tamamlandığı belirtilmiştir. Step 45'te eğitim verilerinin başarıyla yüklendiği ve uygun formatta olduğu, Step 47'de model eğitiminin başarıyla tamamlandığı ve doğruluk skorunun 0.85 olduğu, Step 49'da ise modelin 'random_forest_model.pkl' olarak kaydedildiği belirtilmiştir. Bu bilgiler, sınıflandırıcının başarıyla eğitildiğini ve kaydedildiğini göstermektedir."
+                    "<UNSATISFIED>: Proje bilgilerinde \"Random Forest sınıflandırıcısı\" eğitiminin başlatıldığı ve tamamlandığı belirtilmiş olsa da, bu süreçle ilgili doğrudan bir kod veya dosya içeriği sağlanmamıştır. Ayrıca, modelin kaydedilmesi sırasında disk alanı yetersizliği nedeniyle hata oluştuğu belirtilmiştir, bu da modelin başarıyla kaydedilmesini engelleyebilir. Bu nedenle, gereksinimin tam olarak karşılandığına dair yeterli kanıt bulunmamaktadır."
                 ]
             },
-            "total_time": 12.186493635177612
+            "total_time": 8.918840408325195
         },
         {
             "requirement_index": 2,
             "criteria": "Model tahmin açıklaması için \"LIME\" kullanılır ve `src/visualize.py` içinde uygulanır.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0031300000000000004,
-                "inference_time": 3.026872396469116,
-                "input_tokens": 848,
-                "output_tokens": 101,
-                "accumulated_cost": 0.0098525,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.5806362628936768,
+                "input_tokens": 1118,
+                "output_tokens": 114,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: Gereksinim, \"LIME\" kullanılarak model tahmin açıklamasının `src/visualize.py` içinde uygulanmasını içeriyor. Ancak, belirtilen dosya mevcut değil ve bu nedenle gereksinimin karşılandığını doğrulamak mümkün değil. Trajektori kanıtları, dosyanın daha önce çalıştırıldığını gösterse de, dosyanın şu anki yokluğu gereksinimin karşılanmadığını gösterir."
+                    "<SATISFIED>: Gereksinim, \"LIME\" model tahmin açıklamasının `src/visualize.py` dosyasında kullanılması ve uygulanmasıdır. Dosya içeriği, LIME'ın model tahmin açıklaması için kullanıldığını belirtmektedir. Ayrıca, adım 45 ve 47'deki çevresel geri bildirimler, LIME açıklamasının başarıyla başlatıldığını ve tamamlandığını doğrulamaktadır. Bu kanıtlar, gereksinimin karşılandığını gösterir."
                 ]
             },
-            "total_time": 10.223750114440918
+            "total_time": 6.699050664901733
         },
         {
             "requirement_index": 3,
             "criteria": "Model tahmin açıklama raporu oluşturulur ve `results/model_explanation.md` olarak kaydedilir.",
             "satisfied": true,
             "llm_stats": {
-                "cost": 0.002605,
-                "inference_time": 2.9971911907196045,
-                "input_tokens": 714,
-                "output_tokens": 82,
-                "accumulated_cost": 0.0126575,
+                "cost": 0.0,
+                "inference_time": 2.3093786239624023,
+                "input_tokens": 788,
+                "output_tokens": 89,
+                "accumulated_cost": 0.0,
                 "satisfied": true,
                 "reason": [
-                    "<SATISFIED>: Model tahmin açıklama raporunun oluşturulması ve `results/model_explanation.md` dosyasının kaydedilmesi sırasında herhangi bir hata veya uyarı mesajı rapor edilmemiştir. Çevresel geri bildirim, dosyanın başarıyla kaydedildiğini doğrulamaktadır. Bu, gereksinimin karşılandığını gösterir."
+                    "<SATISFIED>: `results/model_explanation.md` dosyasının başarıyla oluşturulduğu ve kaydedildiği belirtilmiştir. Adım 45 ve 46'da, dosyanın oluşturulması sırasında herhangi bir hata veya uyarı mesajı alınmadığı ve \"Dosya başarıyla kaydedildi\" mesajının alındığı ifade edilmiştir. Bu, gereksinimin karşılandığını gösterir."
                 ]
             },
-            "total_time": 10.011025190353394
+            "total_time": 5.152683973312378
         },
         {
             "requirement_index": 4,
             "criteria": "Özellik önem grafiği `results/figures/feature_importance.png` olarak kaydedilir.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0024075,
-                "inference_time": 1.358388900756836,
-                "input_tokens": 695,
-                "output_tokens": 67,
-                "accumulated_cost": 0.0153125,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.6221039295196533,
+                "input_tokens": 1096,
+                "output_tokens": 96,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: \"results/figures/feature_importance.png\" dosyasının başarıyla kaydedildiği ve erişilebilir olduğu belirtilmiştir. Adım 45 ve 46'da dosyanın kaydedilmesi ve varlığının kontrol edilmesi, gereksinimin karşılandığını gösteriyor."
+                    "<UNSATISFIED>: Özellik önem grafiği `results/figures/feature_importance.png` olarak kaydedilmiş gibi görünse de, dosya içeriği okunmaya çalışıldığında bir hata mesajı alınıyor. Bu hata, dosyanın geçersiz bir görüntü formatında olduğunu ve dolayısıyla düzgün bir şekilde kaydedilmediğini gösteriyor. Bu nedenle, gereksinim tam olarak karşılanmamış."
                 ]
             },
-            "total_time": 6.996342182159424
+            "total_time": 5.045335531234741
         },
         {
             "requirement_index": 5,
             "criteria": "Farklı özelliklerin tahminler üzerindeki etkisini gösteren etkileşimli bir rapor \"Dash\" veya \"Bokeh\" kullanılarak oluşturulur ve `src/report.py` içinde uygulanır.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0028875000000000003,
-                "inference_time": 1.9619829654693604,
-                "input_tokens": 703,
-                "output_tokens": 113,
-                "accumulated_cost": 0.0180025,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 2.4905669689178467,
+                "input_tokens": 1169,
+                "output_tokens": 121,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: Gereksinim, \"Dash\" veya \"Bokeh\" kullanılarak etkileşimli bir rapor oluşturulmasını içeriyor. Ancak, `src/report.py` dosyasının çalıştırılması sırasında bu kütüphanelerin yüklenemediği ve rapor oluşturma işleminin başarısız olduğu belirtilmiştir. Bu durum, kütüphane bağımlılıklarının eksik veya uyumsuz olabileceğini gösteriyor ve dolayısıyla gereksinim karşılanmamış."
+                    "<SATISFIED>: Gereksinim, \"src/report.py\" dosyasında \"Dash\" veya \"Bokeh\" kullanılarak etkileşimli bir rapor oluşturulması ve uygulanması olarak belirtilmiştir. Dosya içeriği, \"Bokeh\" ve \"Dash\" anahtar kelimelerini içeriyor ve çevresel geri bildirim, \"Dash uygulaması başlatıldı\" ve \"Bokeh grafikleri güncellendi\" mesajlarını doğruluyor. Bu, etkileşimli raporun başarıyla oluşturulduğunu ve çalıştığını gösterir."
                 ]
             },
-            "total_time": 8.76577115058899
+            "total_time": 7.527845621109009
         },
         {
             "requirement_index": 6,
             "criteria": "Eğitilmiş model `models/saved_models/` altında kaydedilir.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0032375,
-                "inference_time": 2.715533494949341,
-                "input_tokens": 867,
-                "output_tokens": 107,
-                "accumulated_cost": 0.021442500000000003,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.9061830043792725,
+                "input_tokens": 896,
+                "output_tokens": 63,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: Proje yapısı ve dosya içeriği kanıtları, `models/saved_models/` dizini altında herhangi bir model dosyasının mevcut olmadığını gösteriyor. Özellikle, `model_name` dosyasının var olmadığı belirtilmiş. Trajektori kanıtları, `model_v1.h5` ve `model_v2.h5` dosyalarının kaydedildiğini belirtse de, mevcut dosya yapısı bu dosyaların varlığını doğrulamıyor."
+                    "<SATISFIED>: Modelin `models/saved_models/` dizinine başarıyla kaydedildiği belirtilmiştir. Adım 45'te \"Model successfully saved to models/saved_models/model_v1.h5\" çıktısı, modelin doğru dizine kaydedildiğini doğrulamaktadır."
                 ]
             },
-            "total_time": 13.054758310317993
+            "total_time": 5.643108367919922
         }
     ]
 }

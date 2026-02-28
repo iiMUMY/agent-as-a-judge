@@ -1,4 +1,15 @@
 {
     "workspace": "benchmark_tests\\Turkish\\GPT-Pilot\\workspaces\\GPT-Pilot\\36_Music_Emotion_Classification_SVM_GTZAN_ML",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "predictions.txt": null
+        },
+        "results\\figures": {},
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
 }

@@ -73,87 +73,87 @@
         {
             "requirement_index": 0,
             "criteria": "\"20 Newsgroups\" veri kümesi `src/data_loader.py` içinde kullanılır.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.002975,
-                "inference_time": 3.3367178440093994,
-                "input_tokens": 750,
-                "output_tokens": 110,
-                "accumulated_cost": 0.0031275,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 2.5523338317871094,
+                "input_tokens": 1206,
+                "output_tokens": 109,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: Proje yapısı bilgilerine göre, \"20 Newsgroups\" veri kümesinin `src/data_loader.py` içinde kullanıldığına dair doğrudan bir kanıt yoktur. Her ne kadar dosya çalıştırıldığında veri kümesinin yüklendiği belirtilse de, proje yapısında veya kodda bu kullanımın detayları veya doğruluğu hakkında bilgi verilmemiştir. Bu nedenle, gereksinimin karşılandığına dair kesin bir kanıt sunulmamıştır."
+                    "<SATISFIED>: \"20 Newsgroups\" veri kümesinin `src/data_loader.py` içinde kullanıldığı gereksinimi karşılanmıştır. Kod içeriğinde, `load_dataset()` fonksiyonu \"20 Newsgroups\" veri kümesini yüklediğini belirten bir çıktı döndürmektedir. Ayrıca, adım 45 ve adım 49'da veri kümesinin başarıyla yüklendiği belirtilmiştir. Bu kanıtlar, gereksinimin karşılandığını doğrulamaktadır."
                 ]
             },
-            "total_time": 11.190751314163208
+            "total_time": 8.295356273651123
         },
         {
             "requirement_index": 1,
             "criteria": "Veri ön işleme yapılır, durak kelimeleri, noktalama işaretleri ve özel karakterlerin kaldırılması dahil. Sınıflandırıcıyı eğitmeden önce ve sonra kelime bulutları görselleştirilir ve `results/figures/wordcloud_before.png` ve `results/figures/wordcloud_after.png` olarak kaydedilir.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0033925000000000005,
-                "inference_time": 2.0442042350769043,
-                "input_tokens": 857,
-                "output_tokens": 125,
-                "accumulated_cost": 0.006137500000000001,
+                "cost": 0.0,
+                "inference_time": 2.671966075897217,
+                "input_tokens": 1286,
+                "output_tokens": 140,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: Gereksinim, kelime bulutlarının `results/figures/wordcloud_before.png` ve `results/figures/wordcloud_after.png` olarak kaydedilmesini içeriyor. Ancak, her iki dosya da mevcut değil ve bu nedenle görselleştirmeler kaydedilmemiş. Ayrıca, `wordcloud_after.png` dosyası için bir uyarı mesajı alınmış, bu da görselleştirmenin işlevselliğini etkileyebilir. Bu durum, gereksinimin tam olarak karşılanmadığını gösteriyor."
+                    "<UNSATISFIED>: Gereksinim, kelime bulutlarının görselleştirilmesi ve `results/figures/wordcloud_before.png` ile `results/figures/wordcloud_after.png` olarak kaydedilmesi gerektiğini belirtmektedir. Ancak, her iki dosya da okunamıyor ve hata mesajları içeriyor. `wordcloud_before.png` ve `wordcloud_after.png` dosyaları için \"Invalid image data\" ve \"You uploaded an unsupported image\" hataları rapor edilmiştir. Bu durum, kelime bulutlarının başarıyla oluşturulup kaydedilmediğini doğrulamayı imkansız hale getiriyor."
                 ]
             },
-            "total_time": 8.358867645263672
+            "total_time": 6.800345420837402
         },
         {
             "requirement_index": 2,
             "criteria": "\"TF-IDF\" özellikleri `src/data_loader.py` içinde verileri yüklerken kullanılır.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.002925,
-                "inference_time": 2.3011817932128906,
-                "input_tokens": 738,
-                "output_tokens": 108,
-                "accumulated_cost": 0.0091725,
+                "cost": 0.0,
+                "inference_time": 2.250831365585327,
+                "input_tokens": 1196,
+                "output_tokens": 107,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: \"TF-IDF\" özelliklerinin `src/data_loader.py` içinde verileri yüklerken kullanıldığı belirtilmiş olsa da, Step 47'de \"Veri yükleme sırasında bellek sınırı aşıldı\" uyarısı alındığı ve TF-IDF özelliklerinin yüklenemediği belirtilmiştir. Bu durum, TF-IDF özelliklerinin her zaman başarılı bir şekilde yüklenemediğini ve dolayısıyla gereksinimin tam olarak karşılanmadığını göstermektedir."
+                    "<UNSATISFIED>: The requirement states that \"TF-IDF\" features should be used when loading the data in `src/data_loader.py`. However, the provided content of `data_loader.py` does not show any implementation or code that explicitly uses TF-IDF features. The file contains placeholders and requirement notes, but no actual code for loading data with TF-IDF features. The trajectory evidence mentions successful loading of TF-IDF features, but without corresponding code in `data_loader.py`, this requirement is not fully satisfied."
                 ]
             },
-            "total_time": 10.247899055480957
+            "total_time": 5.869560480117798
         },
         {
             "requirement_index": 3,
             "criteria": "\"Naive Bayes sınıflandırıcısı\" `src/model.py` içinde uygulanır.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0031375,
-                "inference_time": 2.017737865447998,
-                "input_tokens": 847,
-                "output_tokens": 102,
-                "accumulated_cost": 0.0124425,
+                "cost": 0.0,
+                "inference_time": 2.1883809566497803,
+                "input_tokens": 1113,
+                "output_tokens": 132,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: \"Naive Bayes sınıflandırıcısı\" `src/model.py` içinde uygulanır gereksinimi karşılanmamıştır. Dosya yapısında `src/model.py` dosyasının var olmadığı belirtilmiştir. Ayrıca, dosya içeriği sorgulandığında dosyanın mevcut olmadığına dair bir hata mesajı alınmıştır. Bu nedenle, Naive Bayes sınıflandırıcısının bu dosyada uygulandığını doğrulamak mümkün değildir."
+                    "<UNSATISFIED>: \"Naive Bayes sınıflandırıcısı\" `src/model.py` içinde uygulanmamış gibi görünüyor. Dosya içeriği, bir modelin yer tutucu olarak döndürüldüğünü ve Naive Bayes sınıflandırıcısının açıkça tanımlanmadığını gösteriyor. Ayrıca, dosya çalıştırıldığında \"Naive Bayes model initialized successfully\" çıktısı alınmış olsa da, bu sadece bir başlatma mesajı ve modelin gerçek bir Naive Bayes sınıflandırıcısı olarak işlev gördüğüne dair kanıt sunmuyor."
                 ]
             },
-            "total_time": 9.313166618347168
+            "total_time": 5.369389295578003
         },
         {
             "requirement_index": 4,
             "criteria": "Doğruluk, geri çağırma ve \"F1-skora\" dahil bir performans raporu yazdırılır ve `results/metrics/performance.txt` olarak kaydedilir.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.00271,
-                "inference_time": 1.8200407028198242,
-                "input_tokens": 756,
-                "output_tokens": 82,
-                "accumulated_cost": 0.01549,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 2.491962432861328,
+                "input_tokens": 997,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: \"results/metrics/performance.txt\" dosyasına performans raporunun başarıyla yazdırıldığı ve içeriğinde doğruluk, geri çağırma ve F1-skora değerlerinin bulunduğu belirtilmiştir. \"Dosya başarıyla kaydedildi\" ve \"Değerler başarıyla yazıldı\" mesajları, gereksinimin karşılandığını göstermektedir."
+                    "<UNSATISFIED>: Performans raporunun doğruluk, geri çağırma ve F1-skora dahil olacak şekilde yazdırılması ve `results/metrics/performance.txt` dosyasına kaydedilmesi gerekmektedir. Ancak, dosya içeriği yalnızca bir 'placeholder' içermektedir ve dosyanın kaydedilmesi sırasında dizinin bulunamaması nedeniyle bir hata oluşmuştur. Bu durum, performans raporunun başarıyla kaydedilmediğini göstermektedir."
                 ]
             },
-            "total_time": 7.9172563552856445
+            "total_time": 7.383563756942749
         }
     ]
 }

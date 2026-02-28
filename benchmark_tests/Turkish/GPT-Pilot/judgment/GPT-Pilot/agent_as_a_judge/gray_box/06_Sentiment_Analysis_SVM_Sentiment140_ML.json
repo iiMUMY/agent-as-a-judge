@@ -77,85 +77,85 @@
             "criteria": "\"Sentiment140\" veri kümesi, \"Hugging Face\"ten temin edilerek `src/data_loader.py` içinde elde edilir.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0032925000000000003,
-                "inference_time": 2.706831693649292,
-                "input_tokens": 849,
-                "output_tokens": 117,
-                "accumulated_cost": 0.003235,
+                "cost": 0.0,
+                "inference_time": 2.4170210361480713,
+                "input_tokens": 896,
+                "output_tokens": 100,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: \"Sentiment140\" veri kümesinin \"Hugging Face\"ten temin edilmesi ve `src/data_loader.py` içinde elde edilmesi gereksinimi karşılanmamıştır. Proje yapısında `src/data_loader.py` dosyası mevcut değildir ve bu dosyanın içeriği erişilememektedir. Ayrıca, dosya çalıştırıldığında ağ bağlantısı sorunları nedeniyle veri kümesinin indirilemediği belirtilmiştir. Bu durum, veri kümesinin başarıyla yüklenmesini engellemektedir."
+                    "<UNSATISFIED>: \"Sentiment140\" veri kümesi, \"Hugging Face\"ten `src/data_loader.py` dosyası kullanılarak ilk çalıştırmada başarıyla yüklenmiş olsa da, sonraki çalıştırmada \"Connection Timeout\" hatası nedeniyle yüklenememiştir. Bu durum, veri kümesinin süreklilikle temin edilemediğini ve dolayısıyla gereksinimin tam olarak karşılanmadığını göstermektedir."
                 ]
             },
-            "total_time": 11.954573392868042
+            "total_time": 8.14439082145691
         },
         {
             "requirement_index": 1,
             "criteria": "Veri kümesi temizlenir, duraklama kelimeleri, noktalama işaretleri ve özel karakterler kaldırılır, hepsi `src/data_loader.py` içinde.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0033875000000000003,
-                "inference_time": 2.8110570907592773,
-                "input_tokens": 871,
-                "output_tokens": 121,
-                "accumulated_cost": 0.0065975,
+                "cost": 0.0,
+                "inference_time": 1.4773259162902832,
+                "input_tokens": 807,
+                "output_tokens": 91,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: Gereksinim, `src/data_loader.py` dosyasının var olmaması nedeniyle karşılanmamıştır. Dosya içeriği mevcut olmadığından, veri kümesinin temizlenip temizlenmediği, duraklama kelimeleri, noktalama işaretleri ve özel karakterlerin kaldırılıp kaldırılmadığı doğrulanamamaktadır. Trajectory Evidence, dosyanın çalıştırıldığını ve bazı işlemlerin tamamlandığını belirtse de, dosyanın mevcut olmaması bu işlemlerin doğrulanmasını engellemektedir."
+                    "<UNSATISFIED>: Gereksinim, veri kümesindeki tüm özel karakterlerin kaldırılmasını içeriyordu. Ancak, Step 49'da \"Bazı özel karakterler tanınmadı ve kaldırılmadı\" uyarısı alındı. Bu, `src/data_loader.py` dosyasının işlevselliğini etkileyebilir ve gereksinimin tam olarak karşılanmadığını gösterir."
                 ]
             },
-            "total_time": 10.730048179626465
+            "total_time": 5.586128234863281
         },
         {
             "requirement_index": 2,
             "criteria": "Metni vektörlere dönüştürmek için \"Word2Vec\" veya \"GloVe\" kelime gömme yöntemleri `src/data_loader.py` içinde kullanılır.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0034675,
-                "inference_time": 2.4255881309509277,
-                "input_tokens": 947,
-                "output_tokens": 110,
-                "accumulated_cost": 0.0104425,
+                "cost": 0.0,
+                "inference_time": 2.221933603286743,
+                "input_tokens": 1218,
+                "output_tokens": 119,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: Gereksinim, \"Word2Vec\" veya \"GloVe\" kelime gömme yöntemlerinin `src/data_loader.py` dosyasında kullanılması gerektiğini belirtmektedir. Ancak, dosya mevcut değil ve çalıştırma sırasında \"Word2Vec\" için uyumluluk uyarısı ve \"GloVe\" için eksik bağımlılık hatası alınmıştır. Bu durum, dosyanın işlevselliğini etkileyerek gereksinimin karşılanmadığını gösterir."
+                    "<UNSATISFIED>: Gereksinim, \"Word2Vec\" veya \"GloVe\" kelime gömme yöntemlerinin `src/data_loader.py` içinde kullanılmasıdır. Kodda bu yöntemlerin kullanıldığına dair doğrudan bir kanıt yoktur. Trajectory Evidence bölümünde, Word2Vec modelinin başarıyla yüklendiği belirtilmiş olsa da, GloVe vektörlerinin bellek yetersizliği nedeniyle yüklenemediği belirtilmiştir. Bu durum, gereksinimin tam olarak karşılanmadığını gösterir."
                 ]
             },
-            "total_time": 11.26035737991333
+            "total_time": 6.264504432678223
         },
         {
             "requirement_index": 3,
             "criteria": "\"SVM sınıflandırıcı\" `src/model.py` içinde uygulanır ve eğitilir.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0029600000000000004,
-                "inference_time": 2.6526246070861816,
-                "input_tokens": 832,
-                "output_tokens": 88,
-                "accumulated_cost": 0.013605,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.8512017726898193,
+                "input_tokens": 1099,
+                "output_tokens": 105,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: \"src/model.py\" dosyasının mevcut olmadığı belirtilmiştir, bu nedenle dosya içeriği incelenememektedir. Ancak, adımların çıktıları, SVM sınıflandırıcısının eğitiminin başlatıldığını ve tamamlandığını gösterse de, dosyanın var olmaması nedeniyle bu gereksinimin tam olarak karşılandığını doğrulamak mümkün değildir."
+                    "<SATISFIED>: \"SVM sınıflandırıcı\" `src/model.py` içinde uygulanır ve eğitilir gereksinimi karşılanmıştır. Dosya içeriği ve çevresel geri bildirimler, SVM sınıflandırıcısının başarıyla yüklendiğini, eğitildiğini ve %92 doğrulukla çalıştığını göstermektedir. Ayrıca, dosya başarıyla kaydedilmiştir, bu da işlemlerin sorunsuz gerçekleştiğini doğrular."
                 ]
             },
-            "total_time": 9.155079364776611
+            "total_time": 7.052961111068726
         },
         {
             "requirement_index": 4,
             "criteria": "Doğruluk skoru yazdırılır ve `results/metrics/accuracy_score.txt` olarak kaydedilir.",
             "satisfied": true,
             "llm_stats": {
-                "cost": 0.0023125000000000003,
-                "inference_time": 1.4520304203033447,
-                "input_tokens": 625,
-                "output_tokens": 75,
-                "accumulated_cost": 0.015735,
+                "cost": 0.0,
+                "inference_time": 1.3569538593292236,
+                "input_tokens": 697,
+                "output_tokens": 98,
+                "accumulated_cost": 0.0,
                 "satisfied": true,
                 "reason": [
-                    "<SATISFIED>: Doğruluk skoru hesaplanmış ve `results/metrics/accuracy_score.txt` dosyasına başarıyla kaydedilmiştir. Çevresel geri bildirimde, işlem sırasında herhangi bir hata veya uyarı mesajı rapor edilmediği belirtilmiştir, bu da gereksinimin karşılandığını gösterir."
+                    "<SATISFIED>: Gereksinim, doğruluk skorunun `results/metrics/accuracy_score.txt` dosyasına kaydedilmesi olarak belirtilmiştir. Proje yapısında bu dosyanın varlığı doğrulanmıştır ve çevresel geri bildirimde, dosyanın başarıyla kaydedildiği ve herhangi bir hata veya uyarı mesajı rapor edilmediği belirtilmiştir. Bu, gereksinimin karşılandığını gösterir."
                 ]
             },
-            "total_time": 6.302763223648071
+            "total_time": 3.6627790927886963
         }
     ]
 }
