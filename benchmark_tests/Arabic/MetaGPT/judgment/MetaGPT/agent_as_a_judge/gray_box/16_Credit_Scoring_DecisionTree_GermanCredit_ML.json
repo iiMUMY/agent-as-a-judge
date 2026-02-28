@@ -100,119 +100,119 @@
             "criteria": "تحميل مجموعة البيانات \"German Credit\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) في ملف `src/data_loader.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027525,
-                "inference_time": 1.6153295040130615,
-                "input_tokens": 837,
-                "output_tokens": 66,
-                "accumulated_cost": 0.0021275,
+                "cost": 0.0,
+                "inference_time": 1.272306203842163,
+                "input_tokens": 972,
+                "output_tokens": 71,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يوجد دليل على وجود الملف `src/data_loader.py` في بنية المشروع، حيث تم الإبلاغ عن عدم وجوده. بالإضافة إلى ذلك، لا يوجد دليل مباشر على أن تحميل مجموعة البيانات \"German Credit\" يتم في هذا الملف، حيث أن محتوى الملف غير متاح للتحقق."
+                    "<UNSATISFIED>: لا يوجد دليل في محتوى ملف `src/data_loader.py` يشير إلى وجود كود لتحميل مجموعة البيانات \"German Credit\" أو لتنزيلها من الرابط المحدد. المحتوى الحالي للملف هو مجرد نص تلقائي التوليد ولا يحتوي على أي كود فعلي لتحقيق هذا المتطلب."
                 ]
             },
-            "total_time": 11.88616681098938
+            "total_time": 5.102971076965332
         },
         {
             "requirement_index": 1,
             "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0035900000000000003,
-                "inference_time": 2.882002592086792,
-                "input_tokens": 876,
-                "output_tokens": 140,
-                "accumulated_cost": 0.004655,
+                "cost": 0.0,
+                "inference_time": 1.2218070030212402,
+                "input_tokens": 975,
+                "output_tokens": 70,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن اعتبار معالجة البيانات المسبقة في `src/data_loader.py` قد تم تنفيذها بشكل كامل. أولاً، الملف `src/data_loader.py` غير موجود، مما يعني عدم وجود دليل على تنفيذ معالجة البيانات المسبقة. ثانياً، تشير الأدلة المرجعية إلى وجود تحذير بشأن القيم المفقودة في العمود 'age'، حيث يتم استخدام القيمة الافتراضية 0، وهو ما قد لا يكون مناسبًا لجميع الحالات. بالإضافة إلى ذلك، هناك خطأ في ترميز العمود 'gender' بسبب وجود قيم غير معروفة، مما يشير إلى أن ترميز الميزات لم يتم التعامل معه بشكل صحيح."
+                    "<UNSATISFIED>: لا يوجد دليل مباشر في محتوى ملف `src/data_loader.py` على تنفيذ معالجة البيانات المسبقة، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات. المحتوى المتاح للملف هو مجرد تعليق تلقائي ولا يحتوي على أي كود فعلي يوضح تنفيذ هذه العمليات."
                 ]
             },
-            "total_time": 8.01920223236084
+            "total_time": 3.3498997688293457
         },
         {
             "requirement_index": 2,
             "criteria": "يتم تنفيذ مصنف \"Decision Tree\" في `src/model.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0029100000000000003,
-                "inference_time": 2.273839235305786,
-                "input_tokens": 832,
-                "output_tokens": 83,
-                "accumulated_cost": 0.006922500000000001,
+                "cost": 0.0,
+                "inference_time": 1.9143428802490234,
+                "input_tokens": 963,
+                "output_tokens": 89,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن اعتبار مصنف \"Decision Tree\" منفذا في `src/model.py` لأن الملف المذكور غير موجود، كما هو موضح في الدليل الذي يشير إلى خطأ في محاولة الوصول إلى الملف. بالإضافة إلى ذلك، تم تسجيل تحذير بشأن عدم تطابق الأبعاد وخطأ في حفظ النموذج، مما يشير إلى مشاكل في تنفيذ النموذج."
+                    "<UNSATISFIED>: لا يوجد دليل على تنفيذ مصنف \"Decision Tree\" في `src/model.py`. محتوى الملف يظهر فقط كتعليق تلقائي بدون أي كود فعلي. بالإضافة إلى ذلك، تشير الخطوات ذات الصلة إلى وجود تحذيرات وأخطاء أثناء التنفيذ، مما يشير إلى أن النموذج قد لا يكون قد تم تنفيذه بشكل صحيح أو لم يتم حفظه بنجاح."
                 ]
             },
-            "total_time": 8.592698812484741
+            "total_time": 4.017578125
         },
         {
             "requirement_index": 3,
             "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0028775000000000003,
-                "inference_time": 2.166163682937622,
-                "input_tokens": 835,
-                "output_tokens": 79,
-                "accumulated_cost": 0.0091675,
+                "cost": 0.0,
+                "inference_time": 1.1032745838165283,
+                "input_tokens": 933,
+                "output_tokens": 73,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن تأكيد استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py` لأن الملف غير موجود فعليًا وفقًا للمعلومات المقدمة. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح، إلا أن عدم وجود الملف يجعل من المستحيل التحقق من محتواه أو تأكيد استخدام التحقق المتقاطع."
+                    "<UNSATISFIED>: لا يوجد دليل مباشر في محتوى `src/train.py` يشير إلى استخدام التحقق المتقاطع لتقييم النموذج. المعلومات المتوفرة تشير فقط إلى أن الملف تم تحميله وتنفيذه بنجاح، ولكن لا توجد تفاصيل حول محتوى الكود الفعلي أو كيفية تنفيذ التحقق المتقاطع."
                 ]
             },
-            "total_time": 8.063854217529297
+            "total_time": 3.356982707977295
         },
         {
             "requirement_index": 4,
             "criteria": "يتم تصور أهمية الميزات في `results/figures/feature_importances.png`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0024950000000000003,
-                "inference_time": 2.6568305492401123,
-                "input_tokens": 718,
-                "output_tokens": 70,
-                "accumulated_cost": 0.010762500000000001,
+                "cost": 0.0,
+                "inference_time": 1.4733104705810547,
+                "input_tokens": 981,
+                "output_tokens": 63,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: الملف `results/figures/feature_importances.png` غير موجود، كما هو موضح في رسالة الخطأ التي تشير إلى عدم وجود الملف. على الرغم من أن الخطوات ذات الصلة تشير إلى تحميل الملف بنجاح، إلا أن الأدلة الحالية لا تدعم وجود الملف أو تصور أهمية الميزات."
+                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا لأن محتوى الملف `feature_importances.png` غير قابل للقراءة بسبب خطأ في البيانات. الرسالة تشير إلى وجود خطأ في قراءة ملف الصورة، مما يعني أن تصور أهمية الميزات غير متاح للتحقق."
                 ]
             },
-            "total_time": 6.304593801498413
+            "total_time": 3.962867498397827
         },
         {
             "requirement_index": 5,
             "criteria": "يتم إنشاء تقرير تصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\"، وحفظه كـ `results/metrics/classification_report.txt`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0030075,
-                "inference_time": 2.8966288566589355,
-                "input_tokens": 847,
-                "output_tokens": 89,
-                "accumulated_cost": 0.012965,
+                "cost": 0.0,
+                "inference_time": 1.9558558464050293,
+                "input_tokens": 995,
+                "output_tokens": 129,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لم يتم إنشاء تقرير التصنيف وحفظه كـ `results/metrics/classification_report.txt`. الدليل يشير إلى أن محاولة حفظ التقرير فشلت بسبب عدم وجود الدليل `results/metrics/`. على الرغم من أن حساب \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" تم بنجاح، إلا أن التقرير لم يتم حفظه بسبب هذا الخطأ."
+                    "<UNSATISFIED>: على الرغم من أن الحسابات الخاصة بمقاييس \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" قد تمت بنجاح، إلا أن تقرير التصنيف لم يتم حفظه بنجاح في `results/metrics/classification_report.txt`. الدليل يشير إلى أن الدليل `results/metrics/` غير موجود، مما أدى إلى فشل عملية الحفظ. بالإضافة إلى ذلك، محتوى الملف `classification_report.txt` يحتوي فقط على ('placeholder\\r\\n', None)، مما يدل على أن التقرير لم يتم إنشاؤه أو حفظه بشكل صحيح."
                 ]
             },
-            "total_time": 7.2596142292022705
+            "total_time": 4.500880241394043
         },
         {
             "requirement_index": 6,
             "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.003,
-                "inference_time": 2.6153173446655273,
-                "input_tokens": 820,
-                "output_tokens": 95,
-                "accumulated_cost": 0.015095,
+                "cost": 0.0,
+                "inference_time": 1.1118874549865723,
+                "input_tokens": 919,
+                "output_tokens": 52,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لم يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md` بنجاح. الدليل يشير إلى أن الملف `results/report.md` غير موجود، مما يعني أن عملية الحفظ لم تكتمل كما هو مطلوب. على الرغم من أن الدليل `results` تم إنشاؤه لاحقًا، إلا أنه لا يوجد دليل على أن الملف تم حفظه بنجاح بعد ذلك."
+                    "<UNSATISFIED>: على الرغم من أن النظام تمكن من حفظ ملف Markdown في `results/report.md` بعد حل مشكلة الدليل، إلا أن محتوى الملف هو مجرد عنصر نائب ('placeholder', None) ولا يحتوي على النتائج والتصورات المطلوبة."
                 ]
             },
-            "total_time": 7.790409088134766
+            "total_time": 3.433298349380493
         }
     ]
 }

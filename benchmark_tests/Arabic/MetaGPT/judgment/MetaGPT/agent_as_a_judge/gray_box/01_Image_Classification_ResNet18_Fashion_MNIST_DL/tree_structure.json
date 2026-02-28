@@ -1,4 +1,13 @@
 {
     "workspace": "benchmark_tests\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\01_Image_Classification_ResNet18_Fashion_MNIST_DL",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
 }

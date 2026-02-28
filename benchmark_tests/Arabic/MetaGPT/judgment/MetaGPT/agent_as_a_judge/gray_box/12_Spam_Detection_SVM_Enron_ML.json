@@ -102,119 +102,119 @@
             "criteria": "يتم تحميل مجموعة البيانات \"Enron-Spam\" في `src/data_loader.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.002645,
-                "inference_time": 2.2314000129699707,
-                "input_tokens": 750,
-                "output_tokens": 77,
-                "accumulated_cost": 0.001585,
+                "cost": 0.0,
+                "inference_time": 1.6863429546356201,
+                "input_tokens": 949,
+                "output_tokens": 108,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن الخطوات المرجعية تشير إلى تحميل ناجح لمجموعة البيانات \"Enron-Spam\"، إلا أن عدم وجود الملف المذكور يعني أن المتطلب غير محقق بناءً على الأدلة المتاحة."
+                    "<UNSATISFIED>: لا يوجد دليل واضح في محتوى الملف `src/data_loader.py` يشير إلى تنفيذ فعلي لتحميل مجموعة البيانات \"Enron-Spam\". المحتوى الحالي للملف هو مجرد تعليق تلقائي ولا يحتوي على أي كود برمجي فعلي لتحقيق هذا المتطلب. على الرغم من أن الخطوات في المسار تشير إلى أن التحميل تم بنجاح، إلا أن غياب الكود الفعلي في الملف يجعل المتطلب غير محقق بناءً على الأدلة المتاحة."
                 ]
             },
-            "total_time": 7.972484111785889
+            "total_time": 6.624230146408081
         },
         {
             "requirement_index": 1,
             "criteria": "يتم تنفيذ معالجة النصوص المسبقة، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم في `src/data_loader.py`.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0029775,
-                "inference_time": 2.322206974029541,
-                "input_tokens": 815,
-                "output_tokens": 94,
-                "accumulated_cost": 0.00425,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.5211834907531738,
+                "input_tokens": 972,
+                "output_tokens": 76,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: على الرغم من أن `src/data_loader.py` قد تم تعديله بنجاح لتنفيذ معالجة النصوص المسبقة، إلا أن هناك تحذيرًا في الخطوة الأخيرة يشير إلى عدم القدرة على تحميل مكتبة معينة مطلوبة لهذه العملية. هذا التحذير قد يؤثر على قدرة البرنامج على إزالة الكلمات التوقف وعلامات الترقيم بشكل صحيح، مما يعني أن المتطلب لم يتحقق بالكامل."
+                    "<SATISFIED>: تم تنفيذ معالجة النصوص المسبقة بنجاح في `src/data_loader.py`، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم، كما هو موضح في خطوات المسار ذات الصلة. لم يتم الإبلاغ عن أي أخطاء أثناء التنفيذ، مما يشير إلى أن الوظيفة تعمل كما هو متوقع."
                 ]
             },
-            "total_time": 8.483747720718384
+            "total_time": 5.043827533721924
         },
         {
             "requirement_index": 2,
             "criteria": "يتم استخدام ميزات \"TF-IDF\" في `src/data_loader.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027600000000000003,
-                "inference_time": 2.117297887802124,
-                "input_tokens": 776,
-                "output_tokens": 82,
-                "accumulated_cost": 0.0066725000000000005,
+                "cost": 0.0,
+                "inference_time": 1.4073922634124756,
+                "input_tokens": 955,
+                "output_tokens": 98,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يوجد دليل مباشر في المعلومات المقدمة يشير إلى أن ميزات \"TF-IDF\" يتم استخدامها بالفعل في `src/data_loader.py`. بينما تم ذكر تحذير حول عدم توافق إصدار مكتبة `scikit-learn` المستخدمة في حساب ميزات \"TF-IDF\"، إلا أن هذا لا يؤكد أن \"TF-IDF\" يتم استخدامها في الكود."
+                    "<UNSATISFIED>: لا يوجد دليل في محتوى `src/data_loader.py` يشير إلى استخدام ميزات \"TF-IDF\". الملف يحتوي فقط على تعليق تلقائي ولا يظهر أي كود فعلي يتعلق بحساب أو استخدام \"TF-IDF\". بالإضافة إلى ذلك، التحذير المذكور في خطوات المسار يشير إلى مشكلة محتملة في حساب \"TF-IDF\"، لكنه لا يؤكد أن \"TF-IDF\" يتم استخدامه بالفعل في الكود."
                 ]
             },
-            "total_time": 8.085239171981812
+            "total_time": 4.264587163925171
         },
         {
             "requirement_index": 3,
             "criteria": "يتم تنفيذ \"SVM classifier\" في `src/model.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027400000000000002,
-                "inference_time": 2.2958555221557617,
-                "input_tokens": 812,
-                "output_tokens": 71,
-                "accumulated_cost": 0.0090275,
+                "cost": 0.0,
+                "inference_time": 1.879781723022461,
+                "input_tokens": 919,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: The requirement that the \"SVM classifier\" is implemented in `src/model.py` is not satisfied. The evidence indicates that the file `src/model.py` does not exist, as shown by the error message. Additionally, the trajectory evidence mentions issues during execution, but without the file, the implementation cannot be verified."
+                    "<UNSATISFIED>: لا يوجد دليل واضح في محتوى الملف `src/model.py` على تنفيذ \"SVM classifier\". المحتوى الحالي للملف هو مجرد تعليق تلقائي ولا يحتوي على أي كود فعلي يشير إلى تنفيذ المصنف. بالإضافة إلى ذلك، لا توجد تفاصيل إضافية في الأدلة المقدمة تشير إلى وجود كود فعلي للمصنف في هذا الملف."
                 ]
             },
-            "total_time": 9.802335500717163
+            "total_time": 4.27298378944397
         },
         {
             "requirement_index": 4,
             "criteria": "يتم ضبط المعلمات الفائقة باستخدام \"GridSearchCV\" في `src/train.py`.",
             "satisfied": true,
             "llm_stats": {
-                "cost": 0.0027225,
-                "inference_time": 1.7766871452331543,
-                "input_tokens": 785,
-                "output_tokens": 76,
-                "accumulated_cost": 0.0114975,
+                "cost": 0.0,
+                "inference_time": 1.1139662265777588,
+                "input_tokens": 925,
+                "output_tokens": 62,
+                "accumulated_cost": 0.0,
                 "satisfied": true,
                 "reason": [
-                    "<SATISFIED>: تم تحقيق المعيار المحدد حيث تم تنفيذ `GridSearchCV` في `src/train.py` لضبط المعلمات الفائقة للنموذج بنجاح. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن التنفيذ كان ناجحًا وأن الملف كان جاهزًا للاستخدام."
+                    "<SATISFIED>: تم الإشارة إلى أن `GridSearchCV` تم تنفيذه في `src/train.py` لضبط المعلمات الفائقة، ولم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن التنفيذ كان ناجحًا."
                 ]
             },
-            "total_time": 7.79988169670105
+            "total_time": 3.959895610809326
         },
         {
             "requirement_index": 5,
             "criteria": "يتم حفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027500000000000003,
-                "inference_time": 2.2991044521331787,
-                "input_tokens": 752,
-                "output_tokens": 87,
-                "accumulated_cost": 0.013692500000000002,
+                "cost": 0.0,
+                "inference_time": 1.260329008102417,
+                "input_tokens": 1038,
+                "output_tokens": 84,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يوجد دليل مباشر في المعلومات المقدمة يؤكد أن مصفوفة الالتباس تم حفظها بنجاح كـ `results/figures/confusion_matrix.png`. على الرغم من أن هناك إشارة إلى أن الدليل تم إنشاؤه بنجاح في خطوة لاحقة، إلا أنه لا يوجد تأكيد صريح على أن عملية الحفظ تمت بنجاح في النهاية."
+                    "<UNSATISFIED>: على الرغم من أن الدليل يشير إلى محاولة حفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`، إلا أن محتوى الملف يظهر خطأ في قراءة الصورة، مما يشير إلى أن الملف المحفوظ غير صالح أو تالف. هذا يعني أن المصفوفة لم تُحفظ بشكل صحيح كملف صورة صالح."
                 ]
             },
-            "total_time": 7.0614635944366455
+            "total_time": 4.2712180614471436
         },
         {
             "requirement_index": 6,
             "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" والشكل `results/figures/confusion_matrix.png`، كـ `results/classification_report.pdf`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027325000000000006,
-                "inference_time": 2.180828094482422,
-                "input_tokens": 745,
-                "output_tokens": 87,
-                "accumulated_cost": 0.015665000000000002,
+                "cost": 0.0,
+                "inference_time": 1.5446600914001465,
+                "input_tokens": 1165,
+                "output_tokens": 90,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لم يتم تحقيق المتطلب لأن هناك خطأ تم الإبلاغ عنه عند محاولة حفظ تقرير التصنيف كملف `results/classification_report.pdf`. يشير هذا إلى أن التقرير لم يتم حفظه بنجاح. بالإضافة إلى ذلك، هناك تحذير بشأن عدم توافق الأبعاد عند إنشاء الشكل `results/figures/confusion_matrix.png`، مما قد يؤثر على دقة الشكل النهائي."
+                    "<UNSATISFIED>: لم يتم حفظ تقرير التصنيف بنجاح كملف `results/classification_report.pdf`، حيث يظهر خطأ في قراءة الملف بسبب كونه فارغًا. بالإضافة إلى ذلك، لم يتم إنشاء الشكل `results/figures/confusion_matrix.png` بنجاح، حيث يظهر خطأ في قراءة الصورة بسبب تحميل صورة غير مدعومة. هذه الأدلة تشير إلى أن المتطلب لم يتحقق."
                 ]
             },
-            "total_time": 8.845843315124512
+            "total_time": 4.790867567062378
         }
     ]
 }

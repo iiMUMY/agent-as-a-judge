@@ -97,121 +97,121 @@
         {
             "requirement_index": 0,
             "criteria": "يتم تحميل مجموعة البيانات \"Kaggle Car Prices\" في `src/data_loader.py`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0023950000000000004,
-                "inference_time": 1.139869213104248,
-                "input_tokens": 730,
-                "output_tokens": 57,
-                "accumulated_cost": 0.0020475,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.8712801933288574,
+                "input_tokens": 896,
+                "output_tokens": 100,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحميل مجموعة البيانات \"Kaggle Car Prices\" بنجاح في `src/data_loader.py`، حيث لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية التحميل، مما يشير إلى أن العملية تمت بنجاح."
+                    "<UNSATISFIED>: لا يوجد دليل واضح في محتوى ملف `data_loader.py` يشير إلى أن مجموعة البيانات \"Kaggle Car Prices\" يتم تحميلها. المحتوى الحالي للملف هو مجرد تعليق تلقائي ولا يحتوي على أي كود فعلي لتحميل البيانات. على الرغم من أن خطوات التنفيذ تشير إلى أن تحميل البيانات تم بنجاح، إلا أن هذا لا يكفي كدليل على أن الكود في `data_loader.py` يقوم بذلك بالفعل."
                 ]
             },
-            "total_time": 7.608602046966553
+            "total_time": 6.771432876586914
         },
         {
             "requirement_index": 1,
             "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027050000000000004,
-                "inference_time": 1.918543815612793,
-                "input_tokens": 798,
-                "output_tokens": 71,
-                "accumulated_cost": 0.0040225,
+                "cost": 0.0,
+                "inference_time": 1.5844736099243164,
+                "input_tokens": 957,
+                "output_tokens": 94,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن اعتبار المتطلب محققًا لأن الملف `src/data_loader.py` غير موجود وفقًا للمعلومات المقدمة. على الرغم من أن هناك إشارة إلى تنفيذ الملف بنجاح في الخطوات السابقة، إلا أن عدم وجود الملف فعليًا يعني عدم القدرة على التحقق من تنفيذ اختيار الميزات فيه."
+                    "<UNSATISFIED>: لا يوجد دليل في محتوى `src/data_loader.py` يشير إلى تنفيذ اختيار الميزات. الملف يحتوي فقط على تعليق تلقائي ولا يظهر أي كود فعلي لاختيار الميزات. بالإضافة إلى ذلك، تشير خطوات المسار إلى وجود تحذيرات وأخطاء تتعلق بعدم توافق الميزات وعدم القدرة على الوصول إلى البيانات المطلوبة، مما يشير إلى أن اختيار الميزات لم يتم تنفيذه بنجاح."
                 ]
             },
-            "total_time": 7.061254978179932
+            "total_time": 4.272285223007202
         },
         {
             "requirement_index": 2,
             "criteria": "يتم استخدام نموذج الانحدار \"Random Forest\" في `src/model.py`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.00243,
-                "inference_time": 1.7182011604309082,
-                "input_tokens": 740,
-                "output_tokens": 58,
-                "accumulated_cost": 0.006185,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.2518258094787598,
+                "input_tokens": 982,
+                "output_tokens": 60,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تأكيد استخدام نموذج الانحدار \"Random Forest\" في `src/model.py` بناءً على المعلومات المقدمة في \"Trajectory Evidence\"، حيث تم تنفيذ النموذج بنجاح دون أي أخطاء أو تحذيرات تتعلق بالنموذج نفسه."
+                    "<UNSATISFIED>: لا يوجد دليل واضح في محتوى `src/model.py` على استخدام نموذج الانحدار \"Random Forest\". المحتوى الحالي للملف هو مجرد نص تلقائي التوليد ولا يحتوي على أي كود فعلي يشير إلى استخدام نموذج \"Random Forest\"."
                 ]
             },
-            "total_time": 7.674103021621704
+            "total_time": 4.344787836074829
         },
         {
             "requirement_index": 3,
             "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0024300000000000003,
-                "inference_time": 1.1362762451171875,
-                "input_tokens": 728,
-                "output_tokens": 61,
-                "accumulated_cost": 0.00822,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.916147232055664,
+                "input_tokens": 932,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تنفيذ `src/train.py` بنجاح باستخدام التحقق المتقاطع لتقييم النموذج، ولم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء هذه العملية، مما يشير إلى أن التحقق المتقاطع تم تنفيذه بنجاح."
+                    "<UNSATISFIED>: لا يوجد دليل مباشر في محتوى `src/train.py` يشير إلى استخدام التحقق المتقاطع لتقييم النموذج. المحتوى المتاح للملف هو مجرد نص تلقائي التوليد ولا يحتوي على أي كود فعلي يوضح تنفيذ التحقق المتقاطع. على الرغم من أن الخطوات ذات الصلة تشير إلى تنفيذ ناجح، إلا أن عدم وجود كود فعلي في الملف يجعل من المستحيل تأكيد استخدام التحقق المتقاطع."
                 ]
             },
-            "total_time": 6.805807828903198
+            "total_time": 4.263699531555176
         },
         {
             "requirement_index": 4,
             "criteria": "يتم حفظ درجة \"R-squared\" و\"Mean Squared Error (MSE)\" و\"Mean Absolute Error (MAE)\" في `results/metrics/results/metrics.txt`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0028375,
-                "inference_time": 1.9959542751312256,
-                "input_tokens": 815,
-                "output_tokens": 80,
-                "accumulated_cost": 0.010185,
+                "cost": 0.0,
+                "inference_time": 1.1406605243682861,
+                "input_tokens": 973,
+                "output_tokens": 85,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يمكن اعتبار المعيار محققًا لأن الملف `results/metrics/results/metrics.txt` غير موجود، كما هو موضح في الدليل الرئيسي. على الرغم من أن خطوات المسار تشير إلى أن القيم قد تم حفظها بنجاح، إلا أن عدم وجود الملف الفعلي يعني أن المخرجات المطلوبة غير متوفرة للتحقق."
+                    "<UNSATISFIED>: The content of `results/metrics/results/metrics.txt` is shown as `('placeholder\\r\\n', None)`, which indicates that the file does not contain the required metrics such as \"R-squared\", \"Mean Squared Error (MSE)\", or \"Mean Absolute Error (MAE)\". Therefore, the requirement to save these specific metrics in the file is not met."
                 ]
             },
-            "total_time": 5.402745723724365
+            "total_time": 4.086835622787476
         },
         {
             "requirement_index": 5,
             "criteria": "يتم تصور أهمية الميزات وحفظها كـ `results/figures/feature_importance.png`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.00272,
-                "inference_time": 5.390463352203369,
-                "input_tokens": 740,
-                "output_tokens": 87,
-                "accumulated_cost": 0.01232,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.5498359203338623,
+                "input_tokens": 1097,
+                "output_tokens": 86,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحقيق المعيار حيث تم حفظ أهمية الميزات بنجاح كملف `results/figures/feature_importance.png` بعد إنشاء الدليل المفقود. تم حل المشكلة الأولية المتعلقة بعدم وجود الدليل، وتمت عملية الحفظ دون أي أخطاء أو تحذيرات إضافية، مما يشير إلى أن الملف تم حفظه بنجاح في الموقع المحدد."
+                    "<UNSATISFIED>: على الرغم من أن خطوات التنفيذ تشير إلى أن عملية توليد وحفظ تصور أهمية الميزات تمت بنجاح، إلا أن محاولة قراءة الملف `feature_importance.png` نتجت عن خطأ يشير إلى أن بيانات الصورة غير صالحة. هذا يعني أن الملف المحفوظ قد يكون تالفًا أو غير قابل للقراءة، مما يجعل المعيار غير محقق."
                 ]
             },
-            "total_time": 9.149500846862793
+            "total_time": 4.475717782974243
         },
         {
             "requirement_index": 6,
             "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه كـ `results/report.md`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0030150000000000003,
-                "inference_time": 3.025775194168091,
-                "input_tokens": 814,
-                "output_tokens": 98,
-                "accumulated_cost": 0.0143425,
+                "cost": 0.0,
+                "inference_time": 0.9415223598480225,
+                "input_tokens": 919,
+                "output_tokens": 36,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: الدليل المتاح يشير إلى أن ملف `results/report.md` لم يتم إنشاؤه بنجاح في البداية بسبب عدم وجود الدليل `results/`. على الرغم من أنه تم إنشاء الدليل لاحقًا وتم حفظ الملف بنجاح، إلا أن المحتوى الحالي للملف غير موجود أو غير متاح، مما يعني أن المعيار الخاص بإنشاء ملف Markdown يحتوي على النتائج والتصورات لم يتم تحقيقه بالكامل."
+                    "<UNSATISFIED>: الملف `results/report.md` موجود، ولكن محتواه هو مجرد عنصر نائب ('placeholder', None) ولا يحتوي على النتائج والتصورات المطلوبة."
                 ]
             },
-            "total_time": 8.64893388748169
+            "total_time": 3.4844350814819336
         }
     ]
 }

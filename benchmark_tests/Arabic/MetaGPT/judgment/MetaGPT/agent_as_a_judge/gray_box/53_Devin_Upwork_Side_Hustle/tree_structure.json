@@ -1,4 +1,16 @@
 {
     "workspace": "benchmark_tests\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\53_Devin_Upwork_Side_Hustle",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {},
+        "results\\figures": {},
+        "results\\metrics": {
+            "model_performance_report.txt": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
 }
