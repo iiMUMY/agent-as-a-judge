@@ -1,4 +1,11 @@
 {
     "workspace": "benchmark_tests\\Turkish\\MetaGPT\\workspaces\\MetaGPT\\04_Text_Generation_GPT2_Prompts_DL",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "generated_text.txt": null
+        }
+    }
 }
