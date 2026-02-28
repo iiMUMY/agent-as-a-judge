@@ -1,4 +1,16 @@
 {
     "workspace": "benchmark_tests\\Arabic\\GPT-Pilot\\workspaces\\GPT-Pilot\\33_Object_Detection_YOLOv3_COCO_DL",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {},
+        "results\\metrics": {
+            "model_performance.txt": null
+        },
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
 }

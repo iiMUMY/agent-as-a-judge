@@ -84,104 +84,104 @@
         {
             "requirement_index": 0,
             "criteria": "يتم استخدام النموذج المدرب مسبقًا \"Show and Tell\".",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0026625,
-                "inference_time": 1.719871997833252,
-                "input_tokens": 761,
-                "output_tokens": 76,
-                "accumulated_cost": 0.0022975,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.6206436157226562,
+                "input_tokens": 949,
+                "output_tokens": 74,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: لم يتم استخدام النموذج المدرب مسبقًا \"Show and Tell\" بنجاح. تشير الأدلة إلى وجود تحذير بشأن التبعيات المفقودة أو غير المتوافقة، بالإضافة إلى خطأ أثناء محاولة تنفيذ النموذج بسبب عدم القدرة على الوصول إلى الملفات الضرورية. هذه المشاكل تمنع استخدام النموذج بشكل صحيح."
+                    "<SATISFIED>: النموذج المدرب مسبقًا \"Show and Tell\" يتم استخدامه كما هو موضح في الأدلة المتاحة. تم تحميل النموذج بنجاح دون أي أخطاء أو تحذيرات، وتم حفظ نتائج النموذج في ملف الإخراج المحدد، مما يشير إلى أن النموذج يعمل بشكل صحيح في المشروع."
                 ]
             },
-            "total_time": 8.594750881195068
+            "total_time": 6.60885214805603
         },
         {
             "requirement_index": 1,
             "criteria": "يتم تحميل مجموعة البيانات \"Flickr8k\"، التي يمكن تنزيلها من [هذا الرابط](https://huggingface.co/datasets/jxie/flickr8k)، في `src/data_loader.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0029250000000000005,
-                "inference_time": 1.6806364059448242,
-                "input_tokens": 886,
-                "output_tokens": 71,
-                "accumulated_cost": 0.004845,
+                "cost": 0.0,
+                "inference_time": 2.6370368003845215,
+                "input_tokens": 1175,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: لا يوجد دليل على وجود الملف `src/data_loader.py` في بنية المشروع، حيث تم الإبلاغ عن عدم وجوده. على الرغم من أن خطوات المسار تشير إلى تنفيذ ناجح سابق للملف، إلا أن عدم وجود الملف فعليًا في بنية المشروع الحالية يعني أن المتطلب غير محقق."
+                    "<UNSATISFIED>: The `src/data_loader.py` file contains a placeholder function `load_dataset()` that returns a dictionary indicating the dataset is \"loaded\" and includes requirement notes. However, there is no actual implementation or evidence of the \"Flickr8k\" dataset being loaded from the specified link. The function does not demonstrate any real data loading process or interaction with the dataset source."
                 ]
             },
-            "total_time": 8.707421779632568
+            "total_time": 5.047971248626709
         },
         {
             "requirement_index": 2,
             "criteria": "يتم تنفيذ آلية الانتباه في `src/model.py`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.002705,
-                "inference_time": 0.9977171421051025,
-                "input_tokens": 822,
-                "output_tokens": 65,
-                "accumulated_cost": 0.00708,
+                "cost": 0.0,
+                "inference_time": 1.848595380783081,
+                "input_tokens": 1096,
+                "output_tokens": 95,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: الملف `src/model.py` غير موجود في المسار المحدد، مما يعني أنه لا يمكن تنفيذ آلية الانتباه فيه. بالإضافة إلى ذلك، تم تسجيل خطأ في دالة الانتباه في الخطوات السابقة، مما يشير إلى أن التنفيذ لم يكن ناجحًا."
+                    "<UNSATISFIED>: لا يوجد دليل واضح في محتوى `src/model.py` على تنفيذ آلية الانتباه. النص المتاح يشير فقط إلى وجود معيار يتطلب تنفيذ آلية الانتباه، ولكن لا يوجد كود فعلي يوضح تنفيذها. بالإضافة إلى ذلك، تم تسجيل خطأ في دالة الانتباه بسبب عدم توافق نوع البيانات المدخلة، مما يشير إلى أن التنفيذ قد يكون غير مكتمل أو غير صحيح."
                 ]
             },
-            "total_time": 9.09602975845337
+            "total_time": 4.2640700340271
         },
         {
             "requirement_index": 3,
             "criteria": "يتم حفظ الأوصاف المولدة للصور النموذجية في `results/metrics/generated_descriptions.txt`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.00286,
-                "inference_time": 1.4032039642333984,
-                "input_tokens": 772,
-                "output_tokens": 93,
-                "accumulated_cost": 0.00932,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.4740300178527832,
+                "input_tokens": 951,
+                "output_tokens": 80,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحقيق المعيار المحدد حيث تم حفظ الأوصاف المولدة للصور النموذجية بنجاح في الملف `results/metrics/generated_descriptions.txt` كما هو موضح في الخطوة 1 من الأدلة المقدمة. لم تكن هناك أي أخطاء أو تحذيرات أثناء عملية الحفظ، وتم الوصول إلى الملف بنجاح في خطوة لاحقة، مما يؤكد توفره للاستخدام في المشروع."
+                    "<UNSATISFIED>: على الرغم من أن الملف `results/metrics/generated_descriptions.txt` تم حفظه بنجاح وتم الوصول إليه بدون أخطاء، إلا أن محتواه الحالي هو مجرد نص \"placeholder\" وليس الأوصاف المولدة للصور النموذجية. هذا يشير إلى أن الأوصاف الفعلية لم تُحفظ في الملف كما هو مطلوب."
                 ]
             },
-            "total_time": 6.447735071182251
+            "total_time": 4.4956066608428955
         },
         {
             "requirement_index": 4,
             "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/show_and_tell_model.pt`.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0026950000000000003,
-                "inference_time": 2.125662326812744,
-                "input_tokens": 758,
-                "output_tokens": 80,
-                "accumulated_cost": 0.0114925,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.6206881999969482,
+                "input_tokens": 1016,
+                "output_tokens": 90,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: تم تحقيق المعيار حيث تم حفظ النموذج المدرب كـ `models/saved_models/show_and_tell_model.pt` بنجاح كما هو موضح في الخطوة 1 من الأدلة المقدمة. لم يتم الإبلاغ عن أي أخطاء أو تحذيرات أثناء عملية الحفظ، مما يشير إلى أن النموذج تم حفظه بشكل صحيح."
+                    "<UNSATISFIED>: على الرغم من أن الملف `models/saved_models/show_and_tell_model.pt` موجود وتم تحميله بنجاح في خطوة سابقة، إلا أن هناك خطأ مسجل يشير إلى عدم كفاية الأذونات لحفظ النموذج في الدليل المستهدف. هذا يشير إلى أن عملية الحفظ قد لا تكون قد تمت بنجاح، مما يعني أن المتطلب غير محقق بالكامل."
                 ]
             },
-            "total_time": 5.747351408004761
+            "total_time": 4.087098121643066
         },
         {
             "requirement_index": 5,
             "criteria": "يتم حفظ تصور أوزان الانتباه كـ `results/figures/attention_weights.png`.",
             "satisfied": false,
             "llm_stats": {
-                "cost": 0.0029625000000000003,
-                "inference_time": 1.6673777103424072,
-                "input_tokens": 857,
-                "output_tokens": 82,
-                "accumulated_cost": 0.0138775,
+                "cost": 0.0,
+                "inference_time": 1.2506580352783203,
+                "input_tokens": 1033,
+                "output_tokens": 81,
+                "accumulated_cost": 0.0,
                 "satisfied": false,
                 "reason": [
-                    "<UNSATISFIED>: الدليل الرئيسي يشير إلى أن الملف `attention_weights.png` غير موجود في المسار المحدد، مما يعني أن تصور أوزان الانتباه لم يتم حفظه بنجاح في الموقع المطلوب. على الرغم من أن الخطوات اللاحقة تشير إلى أن المشكلة قد تم حلها، إلا أن الأدلة المقدمة لا تؤكد وجود الملف في النهاية."
+                    "<UNSATISFIED>: على الرغم من أن الدليل يشير إلى أن محاولة الحفظ الثانية تمت بنجاح، إلا أن محتوى الملف `attention_weights.png` يظهر خطأ في قراءة الصورة، مما يشير إلى أن البيانات المحفوظة غير صالحة. هذا يعني أن تصور أوزان الانتباه لم يتم حفظه بشكل صحيح كملف صورة صالح."
                 ]
             },
-            "total_time": 8.152525901794434
+            "total_time": 4.1532111167907715
         }
     ]
 }
