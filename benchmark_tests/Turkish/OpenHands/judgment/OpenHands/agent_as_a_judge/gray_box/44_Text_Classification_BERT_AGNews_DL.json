@@ -85,104 +85,104 @@
         {
             "requirement_index": 0,
             "criteria": "\"AG News\" veri kümesi `src/data_loader.py` içinde yüklenir.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0030375000000000003,
-                "inference_time": 2.033778667449951,
-                "input_tokens": 799,
-                "output_tokens": 104,
-                "accumulated_cost": 0.0035550000000000004,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.4375860691070557,
+                "input_tokens": 1123,
+                "output_tokens": 96,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: İlk çalıştırmada \"AG News\" veri kümesi yüklenmeye çalışıldığında \"FileNotFoundError\" hatası alındı. İkinci çalıştırmada hata çözülmüş gibi görünse de, bu durumun nasıl düzeltildiğine dair net bir kanıt veya açıklama bulunmuyor. Bu nedenle, veri kümesinin yüklenmesiyle ilgili işlevselliğin güvenilir bir şekilde sağlandığına dair kesin bir kanıt yoktur."
+                    "<SATISFIED>: \"AG News\" veri kümesinin `src/data_loader.py` içinde yüklendiği gereksinimi karşılanmıştır. Kodda `load_dataset()` fonksiyonu, veri kümesinin yüklendiğini belirten bir çıktı döndürmektedir. Ayrıca, adım 45'te \"AG News veri kümesi başarıyla yüklendi\" çıktısı, yükleme işleminin gerçekleştiğini doğrulamaktadır."
                 ]
             },
-            "total_time": 9.610362768173218
+            "total_time": 7.677081823348999
         },
         {
             "requirement_index": 1,
             "criteria": "Veri ön işleme `src/data_loader.py` içinde gerçekleştirilir, gürültü giderme ve tokenizasyon dahil.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0035525000000000005,
-                "inference_time": 3.2446091175079346,
-                "input_tokens": 797,
-                "output_tokens": 156,
-                "accumulated_cost": 0.006950000000000001,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.558316946029663,
+                "input_tokens": 941,
+                "output_tokens": 84,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: Proje yapısı hakkında verilen bilgilerde, `src/data_loader.py` dosyasının çalıştırıldığı ve veri yükleme işleminin başlatıldığı belirtilmiştir. Ayrıca, gürültü giderme sırasında bir uyarı alınmış ve tokenizasyon işleminin başarıyla tamamlandığı ifade edilmiştir. Ancak, veri ön işleme işlemlerinin (gürültü giderme ve tokenizasyon dahil) `src/data_loader.py` içinde gerçekleştirildiğine dair doğrudan bir kanıt sunulmamıştır. Özellikle, gürültü giderme işleminin başarılı bir şekilde tamamlandığına dair kesin bir bilgi verilmemiştir. Bu nedenle, gereksinim tam olarak karşılanmamıştır."
+                    "<SATISFIED>: Veri ön işleme `src/data_loader.py` dosyasında gerçekleştirilmiştir. Trajectory Evidence bölümünde, \"Tokenization process started\" ve \"Noise reduction completed\" mesajları, tokenizasyon ve gürültü giderme işlemlerinin başarıyla başladığını ve tamamlandığını göstermektedir. Bu, veri ön işlemenin belirtilen dosyada gerçekleştirildiğini doğrular."
                 ]
             },
-            "total_time": 10.72669243812561
+            "total_time": 6.287160158157349
         },
         {
             "requirement_index": 2,
             "criteria": "\"BERT\" modeli metin sınıflandırması için uygulanır ve parametreler `models/saved_models/` altında kaydedilir.",
             "satisfied": true,
             "llm_stats": {
-                "cost": 0.0028000000000000004,
-                "inference_time": 2.781853675842285,
-                "input_tokens": 760,
-                "output_tokens": 90,
-                "accumulated_cost": 0.010055000000000001,
+                "cost": 0.0,
+                "inference_time": 1.6386804580688477,
+                "input_tokens": 824,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0,
                 "satisfied": true,
                 "reason": [
-                    "<SATISFIED>: \"BERT\" modelinin metin sınıflandırması için başarıyla uygulandığı ve model parametrelerinin `models/saved_models/` dizinine kaydedildiği belirtilmiştir. Eğitim sırasında ve parametrelerin kaydedilmesi esnasında herhangi bir hata veya uyarı mesajı alınmadığı, dolayısıyla işlemlerin sorunsuz bir şekilde tamamlandığı kanıtlanmıştır."
+                    "<SATISFIED>: \"BERT\" modelinin metin sınıflandırması için başarıyla yüklendiği ve model parametrelerinin `models/saved_models/` dizininden alındığı belirtilmiştir. Ayrıca, model eğitiminin tamamlandığı ve parametrelerin aynı dizine başarıyla kaydedildiği ifade edilmiştir. Bu bilgiler, gereksinimin karşılandığını doğrulamaktadır."
                 ]
             },
-            "total_time": 16.327097415924072
+            "total_time": 4.790337562561035
         },
         {
             "requirement_index": 3,
             "criteria": "Sınıflandırma sonuçları `results/results.txt` olarak kaydedilir.",
-            "satisfied": false,
+            "satisfied": true,
             "llm_stats": {
-                "cost": 0.0024950000000000003,
-                "inference_time": 1.2047820091247559,
-                "input_tokens": 770,
-                "output_tokens": 57,
-                "accumulated_cost": 0.012807500000000001,
-                "satisfied": false,
+                "cost": 0.0,
+                "inference_time": 1.5800375938415527,
+                "input_tokens": 775,
+                "output_tokens": 74,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
                 "reason": [
-                    "<UNSATISFIED>: \"results/results.txt\" dosyasının içeriği kontrol edildiğinde, dosyanın mevcut olmadığı ve bu nedenle sınıflandırma sonuçlarının kaydedilmediği belirtilmiştir. Bu, gereksinimin karşılanmadığını gösterir."
+                    "<SATISFIED>: Sınıflandırma sonuçlarının `results/results.txt` dosyasına kaydedildiği belirtilmiştir. Adım 47'de yazma işlemi başarıyla tamamlanmış ve herhangi bir hata veya uyarı bildirilmemiştir. Bu, dosyanın işlevselliğinin sağlandığını gösterir."
                 ]
             },
-            "total_time": 10.170514345169067
+            "total_time": 5.190582036972046
         },
         {
             "requirement_index": 4,
             "criteria": "Sınıflandırma sonucunun karışıklık matrisi \"seaborn\" kullanılarak görselleştirilir ve `results/figures/confusion_matrix.png` olarak kaydedilir.",
             "satisfied": true,
             "llm_stats": {
-                "cost": 0.002955,
-                "inference_time": 2.1620893478393555,
-                "input_tokens": 738,
-                "output_tokens": 111,
-                "accumulated_cost": 0.015735000000000002,
+                "cost": 0.0,
+                "inference_time": 1.5542607307434082,
+                "input_tokens": 837,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
                 "satisfied": true,
                 "reason": [
-                    "<SATISFIED>: Gereksinim, \"confusion_matrix\" fonksiyonunun çağrılması ve \"seaborn\" kullanılarak görselleştirme işleminin başlatılması ile karşılanmıştır. Ayrıca, görselleştirme sonucu başarıyla `results/figures/confusion_matrix.png` dosyasına kaydedilmiştir. Çevresel geri bildirimde herhangi bir hata veya uyarı mesajı bulunmadığı belirtilmiştir, bu da işlemin başarılı bir şekilde tamamlandığını göstermektedir."
+                    "<SATISFIED>: Gereksinim tamamen karşılanmıştır. Proje yapısında `results/figures/confusion_matrix.png` dosyasının varlığı, karışıklık matrisinin başarıyla görselleştirildiğini ve kaydedildiğini gösterir. Ayrıca, çevresel geri bildirimde `seaborn` kütüphanesinin başarıyla kullanıldığı ve dosyanın herhangi bir hata veya uyarı olmadan kaydedildiği belirtilmiştir."
                 ]
             },
-            "total_time": 6.447384357452393
+            "total_time": 4.381680965423584
         },
         {
             "requirement_index": 5,
             "criteria": "Giriş metinlerini ve sınıflandırma sonuçlarını göstermek için `results` altında etkileşimli bir \"Jupyter Notebook\" oluşturulur.",
-            "satisfied": true,
+            "satisfied": false,
             "llm_stats": {
-                "cost": 0.0027525,
-                "inference_time": 1.6987438201904297,
-                "input_tokens": 721,
-                "output_tokens": 95,
-                "accumulated_cost": 0.018555000000000002,
-                "satisfied": true,
+                "cost": 0.0,
+                "inference_time": 1.8672173023223877,
+                "input_tokens": 807,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
                 "reason": [
-                    "<SATISFIED>: \"Jupyter Notebook\"un `results` dizini altında başarıyla oluşturulduğu ve çalıştırıldığı belirtilmiştir. Herhangi bir hata veya uyarı mesajı rapor edilmediği için notebook'un işlevselliğini etkileyen bir sorun olmadığı anlaşılmaktadır. Bu, giriş metinlerini ve sınıflandırma sonuçlarını göstermek için etkileşimli bir notebook oluşturma gereksinimini karşılamaktadır."
+                    "<UNSATISFIED>: Proje yapısında \"results\" dizini altında bir Jupyter Notebook'un varlığına dair herhangi bir kanıt bulunmamaktadır. Ayrıca, \"results\" dizini altında dosya kaydetme işlemi sırasında \"Permission Denied\" hatası alındığı belirtilmiş ve bu hata daha sonra çözülmüş olsa da, Jupyter Notebook'un oluşturulduğuna dair kesin bir kanıt sunulmamıştır. Bu nedenle, gereksinim karşılanmamıştır."
                 ]
             },
-            "total_time": 7.161904811859131
+            "total_time": 3.8298380374908447
         }
     ]
 }

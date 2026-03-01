@@ -1,4 +1,17 @@
 {
     "workspace": "benchmark_tests\\Turkish\\OpenHands\\workspaces\\OpenHands\\45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "recommendation_report.md": null,
+            "recommendation_results.txt": null
+        },
+        "results\\figures": {
+            "recommendation_visualization.html": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
 }

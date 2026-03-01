@@ -10,6 +10,10 @@
             "performance.txt": null,
             "rmse_scores.png": null
         },
+        "results\\figures": {},
+        "results\\metrics": {
+            "performance.txt": null
+        },
         "src": {
             "data_loader.py": null,
             "model.py": null,

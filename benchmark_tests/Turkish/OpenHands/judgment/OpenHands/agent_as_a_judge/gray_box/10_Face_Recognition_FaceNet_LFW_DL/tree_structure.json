@@ -1,4 +1,17 @@
 {
     "workspace": "benchmark_tests\\Turkish\\OpenHands\\workspaces\\OpenHands\\10_Face_Recognition_FaceNet_LFW_DL",
-    "tree_structure": {}
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "embedding_visualization.png": null
+        },
+        "results\\metrics": {
+            "recognition_accuracy.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
 }
