@@ -1,0 +1,80 @@
+{
+  "name": "09_Recommendation_System_NCF_MovieLens_ML",
+  "query": "帮助我开发一个系统，通过使用神经协同过滤（NCF）方法，根据用户评分从MovieLens数据集推荐电影。首先，在`src/data_loader.py`中加载数据集并将其拆分为训练集和测试集。接下来，在`src/model.py`中实现NCF方法和矩阵分解基线。使用这些方法，打印一个测试用户的前10个推荐示例，使用NCF方法和基线，并将它们保存到`results/metrics/top_10_recommendations.txt`。如果这些示例推荐对于测试用户有意义，那就更好了。使用RMSE、MAE等评估系统性能，并将评估结果保存到`results/metrics/evaluation_metrics.txt`。尝试确保有健壮的路径处理，以便在保存文件时能够处理缺失目录等情况。",
+  "tags": [
+    "Recommender Systems",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"神经协同过滤（NCF）\"算法在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"MovieLens\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "数据在`src/data_loader.py`中拆分为训练集和测试集。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "矩阵分解基线在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "测试用户的前10个推荐在\"NCF\"方法和基线下保存到`results/metrics/top_10_recommendations.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "推荐系统性能进行评估，包括\"RMSE\"和\"MAE\"，结果保存为`results/metrics/evaluation_metrics.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "实现了健壮的路径处理，以处理诸如缺失目录之类的问题。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "前10个推荐应清晰且与样本用户的偏好相关。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

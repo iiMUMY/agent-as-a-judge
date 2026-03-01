@@ -1,0 +1,88 @@
+{
+  "name": "45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
+  "query": "你能帮我使用矩阵分解算法和亚马逊评论2023数据集的电子产品子集建立一个产品推荐系统吗？你需要处理数据加载和所有的数据预处理，包括在`src/data_loader.py`中进行噪声去除和归一化。应用潜在因子模型计算用户-商品交互，并将实现保存到`src/model.py`中。打印并保存推荐结果到`results/recommendation_results.txt`。然后使用Plotly库可视化这些推荐，并将可视化结果保存为`results/figures/recommendation_visualization.html`。最后，生成一份涵盖数据预处理、模型训练和结果的分析报告，保存为`results/recommendation_report.md`。",
+  "tags": [
+    "Recommender Systems"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Amazon Reviews 2023\"数据集的\"Electronics\"子集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行数据预处理，包括噪声去除和归一化。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现计算用户-商品交互的\"潜在因子模型\"。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2,
+        3
+      ],
+      "criteria": "推荐结果保存为`results/recommendation_results.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "criteria": "使用\"Plotly\"可视化推荐结果，并保存为`results/figures/recommendation_visualization.html`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "criteria": "生成包含数据预处理、模型训练和推荐结果的分析报告，并保存为`results/recommendation_report.md`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "分析报告中应讨论不同预处理步骤对推荐准确性的影响。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "可视化应是交互式的，允许用户探索不同产品的推荐结果。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "系统设计应易于整合额外的用户行为数据或产品特征以便未来改进。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

@@ -1,0 +1,69 @@
+{
+  "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+  "query": "创建一个可靠的系统，在OpenAI Gym环境（如CartPole-v1）中使用PyTorch训练DQN代理。在`src/model.py`中使用PyTorch实现DQN。环境应在主文件`src/main.py`中实例化。处理DQN与环境之间的任何维度不匹配（例如，如果Gym环境ID更改时可能发生的情况），通过记录错误来处理。此外，请在每个episode后将返回值记录到`results/metrics/`，并在每个新episode完成后更新它。将最终的episode返回曲线保存为`results/figures/return_over_time.png`，并将最终训练的模型保存为`models/saved_models/dqn_model.pt`。如果可能，请在episode返回曲线上添加注释以展示关键里程碑。",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用PyTorch实现的\"DQN\"算法并保存在`src/model.py`中。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "在`src/main.py`中实例化一个\"OpenAI Gym\"环境。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "绘制时间返回曲线，记录每个episode的返回，并保存为`results/figures/reward_over_time.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "训练后的模型保存为`models/saved_models/dqn_model.pt`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "每个episode的返回记录到`results/metrics/`，并在每个episode完成后更新。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "系统应处理维度不匹配，记录问题以便于调试。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "episode返回曲线有关键里程碑的注释。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

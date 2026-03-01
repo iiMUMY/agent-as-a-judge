@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\Chinese\\GPT-Pilot\\workspaces\\GPT-Pilot\\21_Iris_Classification_SVM_Iris_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "confusion_matrix.png": null
+        },
+        "results\\metrics": {
+            "classification_accuracy.txt": null
+        },
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

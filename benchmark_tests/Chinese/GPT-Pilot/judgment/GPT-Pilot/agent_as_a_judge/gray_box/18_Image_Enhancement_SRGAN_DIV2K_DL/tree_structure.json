@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\Chinese\\GPT-Pilot\\workspaces\\GPT-Pilot\\18_Image_Enhancement_SRGAN_DIV2K_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "report.md": null
+        },
+        "results\\figures": {
+            "enhanced_comparison.png": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}
