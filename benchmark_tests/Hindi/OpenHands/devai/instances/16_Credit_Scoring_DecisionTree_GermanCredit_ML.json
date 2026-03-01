@@ -1,0 +1,97 @@
+{
+  "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+  "query": "मुझे जर्मन क्रेडिट डेटासेट का उपयोग करके क्रेडिट स्कोर की भविष्यवाणी करने के लिए एक प्रणाली विकसित करने में मदद करें, जिसे [इस लिंक](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) से डाउनलोड किया जा सकता है। डेटासेट को लोड करें और इसे पूर्व-प्रसंस्करण करें, जिसमें गायब मानों को संभालना और फीचर एन्कोडिंग शामिल है, `src/data_loader.py` में। `src/model.py` में लागू किए गए निर्णय वृक्ष वर्गीकरण का उपयोग करें और `src/train.py` में मॉडल का मूल्यांकन करने के लिए क्रॉस-मान्यकरण का उपयोग करें। फीचर महत्व को `results/figures/feature_importances.png` में विज़ुअलाइज़ करें। एक वर्गीकरण रिपोर्ट उत्पन्न करें, जिसमें प्रिसिजन, रिकॉल और F1-स्कोर शामिल हों, और इसे `results/metrics/classification_report.txt` में सहेजें। परिणाम और विज़ुअलाइज़ेशन के साथ एक मार्कडाउन रिपोर्ट बनाएं और इसे `results/report.md` में सहेजें। डेटासेट को उचित त्रुटि हैंडलिंग के साथ आसानी से लोड होना चाहिए, और मार्कडाउन रिपोर्ट को आसान समीक्षा के लिए अच्छी तरह से संगठित किया जाना चाहिए।",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"German Credit\" डेटासेट को लोड करें, संभावित रूप से इसे [इस लिंक](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) से `src/data_loader.py` फ़ाइल में डाउनलोड करें।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "डेटा पूर्व-प्रसंस्करण `src/data_loader.py` में किया जाता है, जिसमें गायब मानों को संभालना और फीचर एन्कोडिंग शामिल है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Decision Tree\" वर्गीकरण `src/model.py` में लागू किया गया है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "मॉडल का मूल्यांकन करने के लिए `src/train.py` में क्रॉस-मान्यकरण का उपयोग किया जाता है।",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "फीचर महत्व को `results/figures/feature_importances.png` में विज़ुअलाइज़ किया जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "एक वर्गीकरण रिपोर्ट, जिसमें \"प्रिसिजन,\" \"रिकॉल,\" और \"F1-score\" शामिल हैं, उत्पन्न की जाती है और `results/metrics/classification_report.txt` के रूप में सहेजी जाती है।",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "परिणाम और विज़ुअलाइज़ेशन युक्त एक मार्कडाउन फ़ाइल उत्पन्न की जाती है और `results/report.md` में सहेजी जाती है।",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "डेटासेट को आसानी से लोड होना चाहिए, यदि डाउनलोड के दौरान कोई समस्या आती है तो स्पष्ट त्रुटि हैंडलिंग होनी चाहिए।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "मार्कडाउन रिपोर्ट को अच्छी तरह से संगठित किया जाना चाहिए, जिससे सभी परिणाम और विज़ुअलाइज़ेशन की समीक्षा करना आसान हो।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Hindi"
+}
