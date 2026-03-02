@@ -1,0 +1,91 @@
+{
+  "name": "46_Speech_Recognition_DeepSpeech_LibriSpeech_DL",
+  "query": "我想使用DeepSpeech库和LibriSpeech数据集开发一个语音识别系统。你能在`src/data_loader.py`中实现数据加载和音频预处理，包括降噪和归一化吗？在`src/train.py`中调整学习率和批量大小等超参数。请将识别结果保存在`results/recognition_results.txt`中。接下来，创建音频处理阶段（如波形和频谱图）的可视化，并将其保存为`results/figures/audio_visualization.png`。生成一份关于识别准确性、错误分析和未来改进建议的详细报告，并将其保存为`results/recognition_report.md`。另外，记录DeepSpeech的设置过程，并提供常见安装问题的提示，参考[DeepSpeech文档](https://deepspeech.readthedocs.io/en/r0.9/)。将最终模型保存在`models/saved_models/`中。提前感谢！",
+  "tags": [
+    "Audio Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"LibriSpeech\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "音频预处理，包括降噪和归一化，在`src/data_loader.py`中进行。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "在`src/train.py`中调整学习率和批量大小等超参数。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "将语音识别模型保存在`models/saved_models/`中。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "识别结果保存在`results/recognition_results.txt`中。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "生成音频处理的可视化，如波形和频谱图，并保存在`results/figures/audio_visualization.png`中。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "生成包含识别准确性、错误分析和未来改进建议的报告，并保存在`results/recognition_report.md`中。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "应详细记录\"DeepSpeech\"库的安装过程，并提供故障排除提示，以防库安装失败。参考[DeepSpeech文档](https://deepspeech.readthedocs.io/en/r0.9/)获取指导。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "可视化应清晰地展示音频处理的各个阶段，便于解释预处理的效果。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "报告应包括对替代模型或方法的建议，以防\"DeepSpeech\"库难以实现。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Chinese"
+}
