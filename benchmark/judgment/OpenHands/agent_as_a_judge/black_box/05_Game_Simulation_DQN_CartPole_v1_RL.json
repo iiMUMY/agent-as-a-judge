@@ -1,0 +1,170 @@
+{
+    "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+    "query": "Create a reliable system to train a DQN agent using PyTorch in an OpenAI Gym environment such as CartPole-v1. Implement DQN using PyTorch in `src/model.py`. The environment should be instantiated in the main file, `src/main.py`. Handle any dimension mismatches between DQN and the environment (like would happen if the Gym environment ID were changed) by logging an error. Also please log the return after each episode to `results/metrics/` and update it after each new episode finishes. Save the final return over episode curve as `results/figures/return_over_time.png` and the final trained model as `models/saved_models/dqn_model.pt`. If possible, add annotations to the return over episode curve to showcase key milestones.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "The \"DQN\" algorithm is implemented using PyTorch and saved in `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "An \"OpenAI Gym\" environment is instantiated in `src/main.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "The return over time curve is plotted, recording the return of each episode, and saved as `results/figures/reward_over_time.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "The trained model is saved as `models/saved_models/dqn_model.pt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "The return for each episode is logged to `results/metrics/` and updated after each episode finishes.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "The system should handle dimension mismatches, logging the issues for easy debugging.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "The return over episode curve has key milestones annotated.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "The \"DQN\" algorithm is implemented using PyTorch and saved in `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.004132500000000001,
+                "inference_time": 3.6764345169067383,
+                "input_tokens": 1177,
+                "output_tokens": 119,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>\nConfidence: 0.55\nJustification: The workspace provided is completely empty, with no files or directories present, including the absence of a `src/model.py` file. This lack of evidence makes it impossible to verify the implementation of the \"DQN\" algorithm using PyTorch. The absence of any files or code in the workspace leads to the conclusion that the requirement is not met. Given the empty workspace, the confidence level is set at 0.55, reflecting the moderate certainty that comes from the complete lack of evidence for the required implementation."
+                ],
+                "confidence": 0.55,
+                "confidence_scores": [
+                    0.55
+                ]
+            },
+            "total_time": 6.3555567264556885
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "An \"OpenAI Gym\" environment is instantiated in `src/main.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0041525,
+                "inference_time": 5.502861499786377,
+                "input_tokens": 1173,
+                "output_tokens": 122,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>\nConfidence: 0.55\nJustification: The workspace provided is completely empty, with a total node count of zero, indicating that there are no files or directories present, including `src/main.py`. Without any files in the workspace, it is impossible to verify whether an \"OpenAI Gym\" environment is instantiated in `src/main.py`. The absence of any evidence makes it highly unlikely that the requirement is met. However, due to the lack of any files to inspect, the confidence level is moderate, as there is no direct evidence to confirm or deny the implementation."
+                ],
+                "confidence": 0.55,
+                "confidence_scores": [
+                    0.55
+                ]
+            },
+            "total_time": 8.49732518196106
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "The return over time curve is plotted, recording the return of each episode, and saved as `results/figures/reward_over_time.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.004347500000000001,
+                "inference_time": 4.146525859832764,
+                "input_tokens": 1187,
+                "output_tokens": 138,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>\nConfidence: 0.55\nJustification: The workspace provided is completely empty, with a total node count of zero, indicating that there are no files or directories present. Consequently, there is no evidence of any code or output files, including the specific file `results/figures/reward_over_time.png` that is required to satisfy the criterion. The absence of any project structure or files makes it impossible to verify the implementation or existence of the return over time curve plot. Given the lack of any evidence, the confidence level is set at 0.55, reflecting the default range for an empty workspace with a requirement for a specific output file."
+                ],
+                "confidence": 0.55,
+                "confidence_scores": [
+                    0.55
+                ]
+            },
+            "total_time": 5.3627707958221436
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "The trained model is saved as `models/saved_models/dqn_model.pt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.004105,
+                "inference_time": 10.24213695526123,
+                "input_tokens": 1174,
+                "output_tokens": 117,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>\nConfidence: 0.55\nJustification: The workspace provided is completely empty, with a total node count of zero, indicating that there are no files or directories present. Consequently, there is no evidence of the trained model being saved as `models/saved_models/dqn_model.pt`. The absence of any files or directories makes it impossible to verify the existence of the specified model file. Given the lack of any evidence, the confidence level is set at 0.55, reflecting the default range for simple file existence requirements in an empty workspace."
+                ],
+                "confidence": 0.55,
+                "confidence_scores": [
+                    0.55
+                ]
+            },
+            "total_time": 11.50795602798462
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "The return for each episode is logged to `results/metrics/` and updated after each episode finishes.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.004360000000000001,
+                "inference_time": 7.280738830566406,
+                "input_tokens": 1252,
+                "output_tokens": 123,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>\nConfidence: 0.95\nJustification: The requirement specifies that the return for each episode should be logged to `results/metrics/` and updated after each episode finishes. However, the workspace is empty, and there is a specific error indicating that the directory `results/metrics/` does not exist. This absence of the required directory and any files within it provides definitive proof that the logging functionality is not implemented as required. The confidence level is high because the evidence clearly shows the non-existence of the necessary directory and files, which are crucial for fulfilling the requirement."
+                ],
+                "confidence": 0.95,
+                "confidence_scores": [
+                    0.95
+                ]
+            },
+            "total_time": 8.453055143356323
+        }
+    ]
+}

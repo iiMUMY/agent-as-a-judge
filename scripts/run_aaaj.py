@@ -8,7 +8,7 @@ from agent_as_a_judge.agent import JudgeAgent
 from agent_as_a_judge.config import AgentConfig
 
 
-def main(agent_config: AgentConfig, logger: logging.Logger):
+def main(agent_config: AgentConfig, logger: logging.Logger, task_number: int = None):
 
     def extract_number_from_filename(filename: str) -> int:
         match = re.search(r"(\d+)", filename)
@@ -18,6 +18,14 @@ def main(agent_config: AgentConfig, logger: logging.Logger):
         list(agent_config.instance_dir.glob("*.json")),
         key=lambda f: extract_number_from_filename(f.stem),
     )
+    
+    # Filter for specific task if requested
+    if task_number is not None:
+        instance_files = [f for f in instance_files if extract_number_from_filename(f.stem) == task_number]
+        if not instance_files:
+            logger.error(f"Task number {task_number} not found!")
+            return
+        logger.info(f"Running specific task: {task_number}")
 
     logger.info(f"Total instances found: {len(instance_files)}")
 
@@ -117,6 +125,11 @@ def parse_arguments():
         type=str,
         help="Path to the trajectory directory, if available",
     )
+    parser.add_argument(
+        "--task_number",
+        type=int,
+        help="Specific task number to run (e.g., 39 for task 39). If not specified, runs all tasks.",
+    )
 
     return parser.parse_args()
 
@@ -152,4 +165,5 @@ if __name__ == "__main__":
     main(
         agent_config=agent_config,
         logger=logger,
+        task_number=args.task_number,
     )

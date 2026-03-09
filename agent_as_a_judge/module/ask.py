@@ -46,7 +46,7 @@ class DevAsk:
         critical_threshold: float = 0.5,
     ) -> dict:
         total_llm_stats = self._initialize_llm_stats()
-        responses, judges = self._collect_judgments(
+        responses, judges, confidences = self._collect_judgments(
             criteria, evidence, majority_vote, total_llm_stats
         )
 
@@ -54,7 +54,15 @@ class DevAsk:
         total_judges = len(judges)
         majority_judge = (satisfied_count / total_judges) >= critical_threshold
 
-        total_llm_stats.update({"satisfied": majority_judge, "reason": responses})
+        # Calculate average confidence
+        avg_confidence = sum(confidences) / len(confidences) if confidences else 0.5
+
+        total_llm_stats.update({
+            "satisfied": majority_judge,
+            "reason": responses,
+            "confidence": round(avg_confidence, 3),
+            "confidence_scores": [round(c, 3) for c in confidences],
+        })
         return total_llm_stats
 
     def _collect_judgments(
@@ -69,21 +77,53 @@ class DevAsk:
 
         responses = []
         judges = []
+        confidences = []
 
         for _ in range(majority_vote):
             result = self.llm._llm_inference(messages)
-            responses.append(result["llm_response"])
-            judges.append(self._parse_judge(result["llm_response"]))
+            response_text = result["llm_response"].strip()
+            responses.append(response_text)
+            judges.append(self._parse_judge(response_text))
+            confidences.append(self._parse_confidence(response_text))
 
             self._update_llm_stats(llm_stats, result)
 
-        return responses, judges
+        return responses, judges, confidences
 
     @staticmethod
     def _parse_judge(response: str) -> str:
         if "<SATISFIED>" in response:
             return "<SATISFIED>"
         return "<UNSATISFIED>"
+    
+    @staticmethod
+    def _parse_confidence(response: str) -> float:
+        """Extract confidence score from the response."""
+        import re
+        # Look for patterns like "Confidence: 0.8" or "confidence: 0.95" or "Confidence of 0.75"
+        patterns = [
+            r'[Cc]onfidence[:\s]+([0-9]*\.?[0-9]+)',
+            r'[Cc]onfidence\s+of\s+([0-9]*\.?[0-9]+)',
+            r'[Cc]ertainty[:\s]+([0-9]*\.?[0-9]+)'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, response)
+            if match:
+                try:
+                    confidence = float(match.group(1))
+                    # Ensure confidence is in valid range
+                    return max(0.0, min(1.0, confidence))
+                except ValueError:
+                    continue
+        
+        # Default based on judgment type
+        if "<SATISFIED>" in response:
+            # If satisfied but no confidence given, assume moderate-high (likely found something)
+            return 0.65
+        else:
+            # If unsatisfied but no confidence given, assume moderate (absence of evidence)
+            return 0.55
 
     @staticmethod
     def _initialize_llm_stats() -> dict:
