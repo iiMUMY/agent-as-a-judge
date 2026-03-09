@@ -176,3 +176,9 @@ Dockerfile
 
 # Ignore all judge files
 */judge/
+
+# Documentation / reports
+CONFIDENCE_CALIBRATION*.md
+CONFIDENCE_CALIBRATION*.tex
+EXPERIMENTAL_RESULTS.md
+PROJECT_STATUS.md
