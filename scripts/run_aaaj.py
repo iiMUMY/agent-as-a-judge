@@ -1,6 +1,7 @@
 import re
 import argparse
 import logging
+import os
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -124,6 +125,15 @@ def parse_arguments():
         choices=["English", "Arabic", "Turkish", "Chinese", "Hindi"],
         help="Language for prompts and judgments",
     )
+    parser.add_argument(
+        "--llm_model",
+        type=str,
+        default=None,
+        help=(
+            "Optional model override (e.g., openrouter/openai/gpt-4o-2024-08-06). "
+            "If set, it overrides DEFAULT_LLM for this run only."
+        ),
+    )
 
     return parser.parse_args()
 
@@ -134,6 +144,11 @@ if __name__ == "__main__":
     logger = logging.getLogger(__name__)
     logging.basicConfig(level=logging.INFO)
     args = parse_arguments()
+    if args.llm_model:
+        os.environ["DEFAULT_LLM"] = args.llm_model
+        logger.info(f"Overriding DEFAULT_LLM with --llm_model={args.llm_model}")
+    else:
+        logger.info(f"Using DEFAULT_LLM={os.getenv('DEFAULT_LLM')}")
 
     benchmark_dir = Path(args.benchmark_dir)
     instance_dir = benchmark_dir / "devai/instances"

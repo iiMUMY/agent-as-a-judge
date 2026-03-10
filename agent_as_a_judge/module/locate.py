@@ -6,6 +6,7 @@ import os
 import time
 import warnings
 import logging
+import re
 from dotenv import load_dotenv
 from rich.logging import RichHandler
 from agent_as_a_judge.llm.provider import LLM
@@ -56,16 +57,40 @@ class DevLocate:
         }
 
     def _parse_locate(self, response: str) -> list:
+        # Be permissive across model styles (bullets, markdown, backticks, prose).
         file_paths = []
+        seen = set()
+
         for line in response.splitlines():
-            cleaned_line = line.strip()
+            cleaned_line = line.strip().strip("-*").strip()
+            if not cleaned_line:
+                continue
 
             if "$" in cleaned_line:
-                file_paths.extend(self._extract_delimited_paths(cleaned_line))
-            elif cleaned_line.startswith("/") or cleaned_line.startswith("."):
-                file_paths.append(cleaned_line)
+                for path in self._extract_delimited_paths(cleaned_line):
+                    if path not in seen:
+                        seen.add(path)
+                        file_paths.append(path)
+                continue
 
-        return file_paths if file_paths else []
+            if cleaned_line.startswith("/") or cleaned_line.startswith("."):
+                candidate = cleaned_line.split()[0].strip("`'\",.;:()[]{}")
+                if candidate not in seen:
+                    seen.add(candidate)
+                    file_paths.append(candidate)
+
+            # Also extract paths embedded in markdown/prose.
+            for candidate in re.findall(
+                r"(?:^|[\s`'\"(])((?:\.{1,2}/|/)?(?:[\w\-. ]+/)*[\w\-. ]+\.(?:py|json|yaml|yml|txt|md|csv|png|jpg|jpeg|gif|pt|pth|npy|npz|pkl|ckpt))(?:$|[\s`'\"),.;:])",
+                cleaned_line,
+            ):
+                normalized = candidate.strip().strip("`'\",.;:()[]{}")
+                if normalized and (normalized.startswith("/") or normalized.startswith(".")):
+                    if normalized not in seen:
+                        seen.add(normalized)
+                        file_paths.append(normalized)
+
+        return file_paths
 
     def _extract_delimited_paths(self, line: str) -> list:
         return [

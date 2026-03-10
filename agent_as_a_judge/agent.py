@@ -4,6 +4,7 @@ import time
 import json
 import pickle
 import logging
+import re
 from pathlib import Path
 from dataclasses import dataclass
 from rich.logging import RichHandler
@@ -274,10 +275,20 @@ class JudgeAgent:
                     f">>> [Reference] Located Files:\n\n{locate_result['file_paths']}\n\n"
                 )
 
-            elif info_type == "read" and related_files:
-                for file_path in related_files:
+            elif info_type == "read":
+                files_to_read = list(related_files)
+                if not files_to_read:
+                    files_to_read = self._infer_candidate_files_from_criteria(criteria)
+                    if files_to_read:
+                        logging.info(
+                            f"No files located by LLM; using criteria-derived fallback files: {files_to_read}"
+                        )
+
+                for file_path in files_to_read:
                     normalized_path = self._resolve_located_path(str(file_path))
-                    if str(normalized_path) != str(file_path) and normalized_path.exists():
+                    if not normalized_path.exists():
+                        continue
+                    if str(normalized_path) != str(file_path):
                         logging.info(
                             f"Resolved located path '{file_path}' to existing file '{normalized_path}'."
                         )
@@ -444,6 +455,47 @@ class JudgeAgent:
     def locate_file(self, criteria: str, workspace_info: str) -> dict:
 
         return self.aaaj_locate.locate_file(criteria, workspace_info)
+
+    def _extract_backtick_paths(self, text: str) -> list[str]:
+        candidates: list[str] = []
+        for token in re.findall(r"`([^`]+)`", text):
+            cleaned = token.strip()
+            if "/" in cleaned or "\\" in cleaned:
+                candidates.append(cleaned)
+        return candidates
+
+    def _infer_candidate_files_from_criteria(self, criteria: str) -> list[str]:
+        ordered_candidates: list[str] = []
+
+        # Prefer explicitly mentioned files in requirement text.
+        for rel_path in self._extract_backtick_paths(criteria):
+            normalized = rel_path.replace("\\", "/").strip("./")
+            candidate = self.workspace / Path(normalized)
+            if candidate.exists() and candidate.is_file():
+                ordered_candidates.append(str(candidate))
+
+        # If nothing explicit, use common source files as a lightweight fallback.
+        if not ordered_candidates:
+            common_rel = [
+                "src/data_loader.py",
+                "src/model.py",
+                "src/train.py",
+                "src/main.py",
+                "main.py",
+            ]
+            for rel in common_rel:
+                candidate = self.workspace / Path(rel)
+                if candidate.exists() and candidate.is_file():
+                    ordered_candidates.append(str(candidate))
+
+        # De-duplicate while preserving order.
+        seen = set()
+        deduped = []
+        for item in ordered_candidates:
+            if item not in seen:
+                seen.add(item)
+                deduped.append(item)
+        return deduped[:5]
 
     def _get_workspace_files(self) -> list[Path]:
         if hasattr(self, "_workspace_files"):
