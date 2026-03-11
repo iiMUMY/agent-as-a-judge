@@ -1,0 +1,88 @@
+{
+  "name": "31_Cancer_Prediction_SVM_BreastCancer_ML",
+  "query": "SVM modeli kullanarak Breast Cancer Wisconsin veri seti ile meme kanseri tahmini için bir proje oluşturmama yardımcı olabilir misiniz? Veri setini yükleyin ve önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapın. Kanser tahmini için SVM sınıflandırıcısını `src/model.py` içinde uygulayın. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın. Karışıklık matrisini `results/figures/confusion_matrix.png` olarak kaydedin. Veri ön işleme, model eğitimi ve değerlendirme sürecini belgeleyen ayrıntılı bir rapor hazırlayın. Rapor, özellik seçimi sürecini kapsamalı ve performans metriklerinin net bir ısı haritasını içermelidir. Raporu `results/metrics/breast_cancer_prediction_report.pdf` olarak kaydedin.",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Breast Cancer Wisconsin\" veri seti kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Kanser tahmini için \"SVM sınıflandırıcısı\" kullanılır ve `src/model.py` içinde uygulanmalıdır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Karışıklık matrisi yazdırılır ve `results/figures/confusion_matrix.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Veri ön işleme, model eğitimi ve değerlendirme sürecini içeren ayrıntılı bir rapor oluşturulur ve `results/metrics/breast_cancer_prediction_report.pdf` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Özellik seçimi süreci raporda iyi belgelenmeli ve belirli özelliklerin neden seçildiği açıklanmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Isı haritası, kesinlik, geri çağırma ve F1-skoru gibi farklı performans metriklerini net bir şekilde ayırt etmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Rapor, modelin performansı ve iyileştirme potansiyel alanları hakkında bir tartışma içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

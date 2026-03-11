@@ -1,0 +1,113 @@
+{
+    "name": "50_Math_Problem_Solving_Transformer_DeepMindMath_DL",
+    "query": "مرحبًا! أحتاج إلى مساعدة في مشروع يستخدم نموذج Transformer لحل مسائل الرياضيات من مجموعة بيانات DeepMind Mathematics. يرجى تحميل مجموعة البيانات ومعالجتها مسبقًا في `src/data_loader.py`. يجب أن تقوم المعالجة المسبقة بتحليل وتوحيد التعبيرات الرياضية بطريقة متسقة نحويًا حتى يتمكن النموذج من معالجتها بسهولة. قم بتنفيذ Transformer في `src/model.py`. أيضًا، قم بضبط المعاملات الفائقة مثل معدل التعلم وحجم الدفعة في `src/train.py`، واحفظ منحنى فقدان التدريب في `results/figures/training_loss_curve.png`. قم بأخذ عينات وحفظ بعض الحلول التي يولدها Transformer في `results/sample_solutions.txt`. باستخدام النموذج الخاص بك، قم بإنشاء أداة تفاعلية بسيطة باستخدام Gradio أو Streamlit في `src/interface.py` التي يمكنها حل مختلف المسائل الرياضية المقدمة من المستخدم. أخيرًا، قم بإنشاء تقرير حول كيفية أداء النموذج مع أنواع مختلفة من المسائل، بما في ذلك دقة النموذج، وتحليل الأخطاء، واقتراحات للتحسين المستقبلي. احفظه كـ `results/metrics/model_report.md`. شكرًا مقدمًا!",
+    "tags": [
+        "Natural Language Processing"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة بيانات DeepMind Mathematics في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة بما في ذلك تحليل وتوحيد التعبيرات الرياضية في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"Transformer\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم ضبط معلمات مثل معدل التعلم وحجم الدفعة في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ منحنى خسارة تدريب النموذج كـ `results/figures/training_loss_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ بعض الحلول التي تم إنشاؤها بواسطة Transformer في `results/sample_solutions.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء أداة تفاعلية تسمح للمستخدمين بإدخال مسائل رياضية والحصول على حلول باستخدام \"Gradio\" أو \"Streamlit\" في `src/interface.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير يحتوي على دقة النموذج وتحليل الأخطاء واقتراحات التحسين المستقبلية، ويتم حفظه كـ `results/metrics/model_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تضمن خطوة المعالجة المسبقة أن التعبيرات الرياضية موحدة بطريقة تجعلها سهلة المعالجة بواسطة النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون الأداة التفاعلية قادرة على التعامل مع مجموعة واسعة من أنواع المسائل الرياضية.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يوفر التقرير رؤى حول كيفية تعامل النموذج مع أنواع مختلفة من المسائل الرياضية، مع تحديد نقاط القوة المحددة ومجالات التحسين.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

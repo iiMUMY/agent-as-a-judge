@@ -1,0 +1,76 @@
+{
+  "name": "08_Robot_Control_PPO_PyBullet_RL",
+  "query": "मैं एक परियोजना को लागू करने की कोशिश कर रहा हूँ जो PyBullet सिमुलेशन वातावरण में PPO एल्गोरिदम के माध्यम से रोबोटिक आर्म नियंत्रण का अन्वेषण करती है। PyBullet सिम्युलेटर को आयात किया जाना चाहिए और संबंधित रोबोटिक्स वातावरण को `src/env.py` में लोड किया जाना चाहिए। PPO एल्गोरिदम को `src/train.py` में लागू किया जाना चाहिए। परियोजना को रोबोट की अंतिम स्थिति का सावधानीपूर्वक दस्तावेज़ीकरण करना चाहिए, इसे प्रिंट और `data/final_position.txt` के रूप में सहेजना चाहिए। प्रशिक्षण रिटर्न प्रक्षेपवक्र को ग्राफ किया जाना चाहिए और `results/figures/training_returns.png` के रूप में सहेजा जाना चाहिए। रोबोट की गति का एक नमूना दृश्यीकृत किया जाना चाहिए और `results/figures/robot_motion.gif` के रूप में सहेजा जाना चाहिए। `src/env.py` में विस्तृत वातावरण सेटअप और इनाम संरचना का विवरण प्रदान किया जाना चाहिए। कृपया सुनिश्चित करें कि PyBullet में URDF फाइलों को लोड करने में किसी भी समस्या को स्पष्ट रूप से संभाला और दस्तावेज़ीकृत किया गया है, डिबगिंग के लिए स्पष्ट त्रुटि संदेश या लॉगिंग प्रदान करते हुए।",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"PyBullet\" सिम्युलेटर का उपयोग `src/env.py` में किया जाता है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"PPO\" एल्गोरिदम का उपयोग `src/train.py` में किया जाता है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "विस्तृत वातावरण सेटअप और इनाम संरचना का विवरण `src/env.py` में प्रदान किया गया है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "रोबोट की अंतिम स्थिति को प्रिंट और `data/final_position.txt` के रूप में सहेजा जाता है।",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "समय के साथ प्रशिक्षण रिटर्न वक्र को रिकॉर्ड और `results/figures/training_returns.png` के रूप में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "रोबोट की गति का एक नमूना दृश्यीकृत और `results/figures/robot_motion.gif` के रूप में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "सिस्टम को PyBullet में URDF फाइलों को लोड करने में संभावित समस्याओं को प्रभावी ढंग से संभालना चाहिए, डिबगिंग के लिए स्पष्ट त्रुटि संदेश या लॉगिंग प्रदान करते हुए।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

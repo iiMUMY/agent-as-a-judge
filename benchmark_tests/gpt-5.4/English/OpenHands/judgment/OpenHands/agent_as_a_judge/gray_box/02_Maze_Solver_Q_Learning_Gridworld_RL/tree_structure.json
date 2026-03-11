@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gpt-5.4\\English\\OpenHands\\workspaces\\OpenHands\\02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "q_learning_model.npy": null
+        },
+        "results": {},
+        "results\\figures": {
+            "learning_curve.png": null,
+            "path_changes.gif": null
+        },
+        "src": {
+            "env.py": null,
+            "train.py": null
+        }
+    }
+}

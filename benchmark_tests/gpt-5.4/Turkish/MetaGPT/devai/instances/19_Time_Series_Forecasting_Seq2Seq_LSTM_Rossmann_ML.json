@@ -1,0 +1,88 @@
+{
+  "name": "19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+  "query": "Rossmann Mağaza Satışları veri kümesine dayalı bir LSTM tabanlı sıralama-sıralama modeli kullanarak bir satış tahmin sistemi geliştirin, Kaggle'dan [buradan](https://www.kaggle.com/c/rossmann-store-sales/data) indirip `src/data_loader.py` içinde yükleyin. Verileri eğitim ve test setlerine ayırın ve `src/data_loader.py` içinde kaydedin. `LSTM` tabanlı bir sıralama-sıralama modeli uygulayın ve eğitilmiş modeli `models/saved_models/` dizini altında kaydedin. Tahmin sonuçlarını `results/figures/forecast_results.png` olarak kaydedin. Tahmin edilen ve gerçek değerler arasındaki karşılaştırma grafiğini `results/figures/comparison_plot.png` olarak kaydedin. Tahmin sonuçlarını ve karşılaştırma grafiklerini içeren, farklı tahmin ufuklarını keşfetmek için bazı etkileşimli unsurlar içeren bir HTML raporu oluşturun ve `results/report.html` olarak kaydedin. Modelin satış verilerindeki mevsimsel eğilimleri yakalayacak şekilde ayarlandığından emin olun.",
+  "tags": [
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Rossmann Mağaza Satışları\" veri kümesi kullanılır, potansiyel olarak Kaggle'dan [bu bağlantıdan](https://www.kaggle.com/c/rossmann-store-sales/data) indirilir ve `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veriler eğitim ve test setlerine ayrılır ve `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"LSTM\" tabanlı bir sıralama-sıralama modeli kullanılır. Lütfen eğitilmiş modeli `models/saved_models/` dizini altında kaydedin.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Tahmin sonuçları çizilir ve `results/figures/forecast_results.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Tahmin edilen ve gerçek değerlerin karşılaştırma grafiği `results/figures/comparison_plot.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Tahmin sonuçlarını ve karşılaştırma grafiklerini içeren bir HTML raporu oluşturulur ve `results/report.html` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        5
+      ],
+      "criteria": "HTML raporu, kullanıcıların farklı tahmin ufuklarını keşfetmelerine olanak tanıyan etkileşimli unsurlar içermelidir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Model, satış verilerindeki mevsimsel eğilimleri daha doğru tahmin için yakalayacak şekilde ayarlanmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Turkish"
+}

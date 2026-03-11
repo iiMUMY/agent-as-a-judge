@@ -1,0 +1,95 @@
+{
+    "name": "27_Image_Generation_DCGAN_MNIST_DL",
+    "query": "أحتاج إلى إنشاء نظام لتوليد الصور باستخدام نموذج DCGAN مع مجموعة بيانات MNIST. قم بتحميل مجموعة بيانات MNIST في `src/data_loader.py` وطبق نموذج DCGAN في `src/model.py`. يجب أن يضمن النظام استخدام بنية DCGAN الصحيحة، وحفظ الصور المولدة في `results/figures/`، ومراقبة تدريب النموذج بتسجيل خسارة التدريب تحت `results/metrics/` والصور المولدة تحت `results/figures/`، وإجراء بحث عن المعلمات الفائقة على معلمات التوليد مثل أبعاد متجه الضوضاء ومعدل التعلم في `src/train.py` لتحسين الأداء. بالإضافة إلى ذلك، قم بإنشاء وحفظ رسوم متحركة GIF للصور المولدة في `results/figures/generated_images.gif`، وعرض عملية التدريب والنتائج في دفتر Jupyter Notebook منظم بشكل جيد، وتحويل الدفتر إلى تقرير PDF مصقول محفوظ كـ `results/training_report.pdf`. يجب توثيق بنية نموذج DCGAN بوضوح في الدفتر لتجنب الخلط مع أنواع أخرى من GAN.",
+    "tags": [
+        "Computer Vision",
+        "Generative Models"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"MNIST\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"DCGAN\"، وليس GAN القياسي، في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم حفظ الصور المولدة في المجلد المحدد `results/figures/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم مراقبة تدريب النموذج عن طريق تسجيل خسارة التدريب المحفوظة تحت `results/metrics/`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تنفيذ طريقة بحث عن المعاملات الفائقة للبحث عن معلمات مثل أبعاد متجه الضوضاء ومعدل التعلم في `src/train.py` لتحسين أداء النموذج.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء وحفظ صورة متحركة بصيغة GIF للصور المولدة كـ `results/figures/generated_images.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم تقديم عملية التدريب والنتائج في دفتر Jupyter، وتحويلها إلى تقرير PDF، وحفظها كـ `results/training_report.pdf`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب توثيق بنية نموذج DCGAN بوضوح في الدفتر لتجنب الخلط مع أنواع أخرى من GAN.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون تقرير PDF منظمًا بشكل جيد، مع أقسام واضحة لبنية النموذج، عملية التدريب، النتائج، والتحسينات المستقبلية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "hint": "Saving figures is mentioned twice, i.e., once in requirement 2 and once in requirement 3.",
+    "language": "Arabic"
+}

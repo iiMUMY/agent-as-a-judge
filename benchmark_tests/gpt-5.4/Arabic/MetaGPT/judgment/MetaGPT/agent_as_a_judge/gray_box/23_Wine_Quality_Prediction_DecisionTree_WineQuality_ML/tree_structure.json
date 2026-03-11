@@ -1,0 +1,20 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gpt-5.4\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "report.pdf": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "results\\metrics": {
+            "mean_squared_error.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

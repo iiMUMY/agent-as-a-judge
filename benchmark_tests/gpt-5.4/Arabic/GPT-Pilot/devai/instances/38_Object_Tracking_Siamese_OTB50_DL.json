@@ -1,0 +1,103 @@
+{
+    "name": "38_Object_Tracking_Siamese_OTB50_DL",
+    "query": "أحتاج إلى إنشاء نظام لتتبع الأجسام باستخدام شبكة Siamese ومجموعة بيانات OTB50. يجب تحميل مجموعة بيانات OTB50 في `src/data_loader.py`. يجب أن يتضمن النظام خطوات تعزيز البيانات مثل الدوران والتحجيم، ويتم تنفيذها في `src/data_loader.py`. قم بتنفيذ شبكة Siamese في `src/model.py`. يجب ضبط المعاملات الفائقة، مثل معدل التعلم وحجم الدفعة، في `src/train.py`. يجب حفظ نتائج التتبع كـ `results/tracking_results.txt`. قم بتصور نتائج التتبع باستخدام OpenCV واحفظ مقاطع الفيديو الخاصة بالتتبع تحت `results/videos/`. بالإضافة إلى ذلك، قم بإنشاء تقرير Markdown شامل يتضمن تفاصيل معالجة البيانات وتدريب النموذج وعملية التقييم واحفظه كـ `results/object_tracking_report.md`. تأكد من أن النظام يمكنه معالجة تسلسلات الفيديو الجديدة مع تعديلات طفيفة لتطبيق مرن. يجب أن يتضمن تقرير Markdown قسمًا يحلل تأثير المعاملات الفائقة المختلفة على أداء التتبع.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"OTB50\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ تعزيز البيانات، مثل الدوران والتحجيم، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ شبكة \"Siamese\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم ضبط المعاملات الفائقة، مثل معدل التعلم وحجم الدفعة، في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التتبع كـ `results/tracking_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور نتائج التتبع باستخدام OpenCV وحفظها في `results/videos/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء وحفظ وثيقة Markdown مفصلة تحتوي على عمليات معالجة البيانات المسبقة وتدريب النموذج وتقييمه كـ `results/object_tracking_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                6
+            ],
+            "criteria": "يجب أن تتضمن تقرير Markdown قسمًا يحلل تأثير المعاملات الفائقة المختلفة على أداء التتبع.",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب حفظ مقاطع الفيديو الخاصة بالتتبع بدقة عالية وأن تتضمن تعليقات توضيحية تبرز الجسم المتتبع.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "تأكد من أن النظام قادر على معالجة تسلسلات الفيديو الجديدة مع تعديلات طفيفة، مما يسمح بحالات استخدام مرنة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

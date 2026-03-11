@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\gpt-5.4\\Turkish\\OpenHands\\workspaces\\OpenHands\\28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "predictions.txt": null,
+            "report.pdf": null
+        },
+        "results\\figures": {
+            "prediction_interactive.html": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

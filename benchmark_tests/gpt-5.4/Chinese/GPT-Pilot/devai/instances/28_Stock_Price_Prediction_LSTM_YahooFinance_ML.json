@@ -1,0 +1,83 @@
+{
+  "name": "28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+  "query": "你能帮我使用LSTM模型和Yahoo Finance数据集构建一个股票价格预测系统吗？请清理数据，包括处理缺失值和异常值，并使用时间窗口将时间序列数据转换为监督学习问题。LSTM模型应在`src/model.py`中实现，数据集的加载、清理和转换应在`src/data_loader.py`中实现。将预测结果保存到`results/predictions.txt`，并使用Plotly生成和保存预测结果的交互式图表到`results/figures/prediction_interactive.html`。创建一个包含模型架构可视化、训练过程和预测结果的Jupyter Notebook，并将其保存为PDF报告在`results/report.pdf`。",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"LSTM\"模型在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Yahoo Finance\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "数据清理，包括处理缺失值和异常值，在`src/data_loader.py`中执行。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2
+      ],
+      "criteria": "使用时间窗口将时间序列数据转换为监督学习问题。请将实现保存到`src/data_loader.py`。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "预测结果保存在`results/predictions.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "使用\"Plotly\"生成预测结果的交互式图表，并保存在`results/figures/prediction_interactive.html`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "创建一个包含模型架构可视化、训练过程和预测结果的Jupyter Notebook，并将其保存为PDF报告在`results/report.pdf`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

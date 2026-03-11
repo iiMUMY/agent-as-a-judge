@@ -1,0 +1,16 @@
+{
+    "workspace": "benchmark_tests\\gpt-5.4\\Hindi\\OpenHands\\workspaces\\OpenHands\\33_Object_Detection_YOLOv3_COCO_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {},
+        "results\\metrics": {
+            "model_performance.txt": null
+        },
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

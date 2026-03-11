@@ -1,0 +1,83 @@
+{
+  "name": "15_Image_Captioning_ShowAndTell_Flickr8k_DL",
+  "query": "यह मेरा वर्तमान PyTorch प्रोजेक्ट है: Show and Tell मॉडल का उपयोग करके एक स्वचालित छवि कैप्शनिंग सिस्टम विकसित करें। यहाँ मैंने एक रिपॉजिटरी पाई है जो आपकी मदद कर सकती है: https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning। Flickr8k डेटासेट का उपयोग करें, इसे [इस लिंक](https://huggingface.co/datasets/jxie/flickr8k) से डाउनलोड करें और `src/data_loader.py` में लोड करें। सिस्टम को नमूना छवियों के विवरण उत्पन्न करने चाहिए और उन्हें `results/metrics/generated_descriptions.txt` में सहेजना चाहिए। एक ध्यान तंत्र `src/model.py` में लागू किया जाना चाहिए। पूर्व-प्रशिक्षित मॉडल को `models/saved_models/show_and_tell_model.pt` के रूप में सहेजें। ध्यान वज़न को विज़ुअलाइज़ करें और इसे `results/figures/attention_weights.png` में सहेजें। डेटासेट को आसानी से लोड होना चाहिए, यदि कोई समस्या आती है तो उचित त्रुटि प्रबंधन के साथ। आदर्श रूप से, ध्यान तंत्र को स्पष्ट रूप से उन छवि क्षेत्रों को उजागर करना चाहिए जो कैप्शन उत्पन्न करने में सबसे अधिक प्रभावशाली हैं।",
+  "tags": [
+    "Computer Vision",
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "पूर्व-प्रशिक्षित \"Show and Tell\" मॉडल का उपयोग किया जाता है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Flickr8k\" डेटासेट, जिसे [इस लिंक](https://huggingface.co/datasets/jxie/flickr8k) से डाउनलोड किया जा सकता है, `src/data_loader.py` में लोड किया जाता है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "ध्यान तंत्र `src/model.py` में लागू किया जाता है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "नमूना छवियों के उत्पन्न विवरण `results/metrics/generated_descriptions.txt` में सहेजे जाते हैं।",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "प्रशिक्षित मॉडल को `models/saved_models/show_and_tell_model.pt` के रूप में सहेजा जाता है।",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "ध्यान वज़न का विज़ुअलाइज़ेशन `results/figures/attention_weights.png` में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "डेटासेट को आसानी से लोड होना चाहिए, यदि डाउनलोड के दौरान कोई समस्या आती है तो स्पष्ट त्रुटि प्रबंधन के साथ।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "ध्यान तंत्र को स्पष्ट रूप से उन छवि क्षेत्रों को उजागर करना चाहिए जो उत्पन्न कैप्शन में सबसे अधिक योगदान करते हैं।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Hindi"
+}

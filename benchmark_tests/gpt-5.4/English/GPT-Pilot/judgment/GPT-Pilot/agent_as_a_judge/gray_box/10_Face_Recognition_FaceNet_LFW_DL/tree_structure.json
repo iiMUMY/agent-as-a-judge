@@ -1,0 +1,17 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gpt-5.4\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\10_Face_Recognition_FaceNet_LFW_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "embedding_visualization.png": null
+        },
+        "results\\metrics": {
+            "recognition_accuracy.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

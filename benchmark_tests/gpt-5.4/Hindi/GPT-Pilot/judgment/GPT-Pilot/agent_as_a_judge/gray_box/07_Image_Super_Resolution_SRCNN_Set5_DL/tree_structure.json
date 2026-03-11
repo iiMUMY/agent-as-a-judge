@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_tests\\gpt-5.4\\Hindi\\GPT-Pilot\\workspaces\\GPT-Pilot\\07_Image_Super_Resolution_SRCNN_Set5_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "super_resolution_compare.png": null,
+            "super_resolution_results.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

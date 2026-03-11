@@ -1,0 +1,71 @@
+{
+    "name": "07_Image_Super_Resolution_SRCNN_Set5_DL",
+    "query": "مرحبًا، أحتاج إلى إنشاء مشروع لتحسين دقة الصور باستخدام نموذج SRCNN مع مجموعة البيانات Set5 (متوفرة من `https://huggingface.co/datasets/eugenesiow/Set5`). قم بتحميل مجموعة البيانات في `src/data_loader.py`. عند تحميل البيانات، قم بتضمين خطوات معالجة الصور المسبقة مثل تغيير الحجم والتطبيع، وكل ذلك في `src/data_loader.py`. يجب تحميل واستخدام نموذج SRCNN في `src/model.py`. احفظ 5 مجموعات من صور المقارنة، مع تكبير التفاصيل، كـ `results/figures/super_resolution_compare.png`، ونتائج تحسين الدقة كـ `results/figures/super_resolution_results.png`. يجب أن تكون الصور المولدة عالية الجودة وتظهر التحسينات بوضوح.",
+    "tags": [
+        "Computer Vision",
+        "Generative Models"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Set5\" (المتاحة من \"Hugging Face\") في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة الصور المسبقة، بما في ذلك تغيير الحجم والتطبيع، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم استخدام نموذج \"SRCNN\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ خمس مجموعات من صور المقارنة، مع تفاصيل مكبرة، ويتم حفظها كـ `results/figures/super_resolution_compare.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ نتائج الدقة الفائقة كـ `results/figures/super_resolution_results.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن ينتج المشروع صورًا عالية الجودة وواضحة لتحسين الدقة مع مقارنات تفصيلية.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب تضمين صور الإخراج المنظمة بشكل جيد، مع تسليط الضوء على التحسينات الرئيسية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic"
+}

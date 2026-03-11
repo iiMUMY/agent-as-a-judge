@@ -47,7 +47,8 @@ class DevLocate:
         ]
 
         llm_stats = self._llm_inference(messages)
-        file_paths = self._parse_locate(llm_stats["llm_response"].strip())
+        raw_response = llm_stats.get("llm_response") or ""
+        file_paths = self._parse_locate(raw_response.strip())
 
         logging.info(f"Located file paths: {file_paths}")
 
@@ -107,7 +108,9 @@ class DevLocate:
         )
         inference_time = time.time() - start_time
 
-        llm_response = response.choices[0].message["content"]
+        llm_response = response.choices[0].message.get("content")
+        if llm_response is None:
+            llm_response = ""
         input_token = response.usage.prompt_tokens
         output_token = response.usage.completion_tokens
 

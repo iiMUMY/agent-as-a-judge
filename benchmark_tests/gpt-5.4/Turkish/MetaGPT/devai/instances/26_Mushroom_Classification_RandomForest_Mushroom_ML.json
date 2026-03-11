@@ -1,0 +1,95 @@
+{
+  "name": "26_Mushroom_Classification_RandomForest_Mushroom_ML",
+  "query": "UCI Mushroom veri kümesi üzerinde bir Random Forest modeli kullanarak bir mantar sınıflandırma sistemi geliştirin. Veri kümesini `src/data_loader.py` dosyasında yükleyin. Özellik mühendisliği, özellik kodlama ve özellik seçimi dahil olmak üzere eksik veri işleme işlemlerinin model eğitimi öncesinde `src/data_loader.py` dosyasında tamamlandığından emin olun. İşlenmiş veri kümesi üzerinde `src/train.py` dosyasında Random Forest sınıflandırıcısını eğitin. Sınıflandırma sonuçlarını `results/classification_results.txt` olarak kaydedin. Özellik önemini `results/figures/feature_importance.png` olarak görselleştirin ve kaydedin, görselleştirmenin en etkili özellikleri net bir şekilde vurguladığından emin olun. Sınıflandırma sonuçlarını ve model performansını sergilemek için Streamlit kullanarak `src/app.py` dosyasında etkileşimli bir web sayfası oluşturun. Streamlit web sayfası, modelin performansına genel bir bakış sağlamalı ve kullanıcıların sınıflandırma sonuçlarıyla etkileşimde bulunmasına olanak tanımalıdır. Sistem, Streamlit görselleştirmesinin başlangıcını ve sonunu düzgün bir şekilde yönetmelidir.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI Mushroom\" veri kümesi `src/data_loader.py` dosyasında yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik mühendisliği, özellik kodlama ve özellik seçimi dahil olmak üzere `src/data_loader.py` dosyasında gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Eksik veriler işlenir ve veri kümesinin eğitim öncesinde temiz olduğundan emin olunur `src/data_loader.py` dosyasında.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "İşlenmiş veri kümesi üzerinde `src/train.py` dosyasında bir Random Forest sınıflandırıcısı eğitilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Sınıflandırma sonuçları `results/classification_results.txt` dosyasında kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Özellik önemi görselleştirilir ve `results/figures/feature_importance.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Sınıflandırma sonuçlarını ve model performansını sergilemek için \"Streamlit\" kullanarak `src/app.py` dosyasında etkileşimli bir web sayfası oluşturulur.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Özellik önemi görselleştirmesi, en etkili özellikleri net bir şekilde vurgulamalı ve yorumlamayı kolaylaştırmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Streamlit web sayfası, modelin performansına genel bir bakış sağlamalı ve kullanıcıların sınıflandırma sonuçlarıyla etkileşimde bulunmasına olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, Streamlit görselleştirmenin başlangıcını ve sonunu düzgün bir şekilde yönetir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

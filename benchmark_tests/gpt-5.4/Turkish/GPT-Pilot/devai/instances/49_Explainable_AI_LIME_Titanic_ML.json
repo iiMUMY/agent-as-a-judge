@@ -1,0 +1,92 @@
+{
+  "name": "49_Explainable_AI_LIME_Titanic_ML",
+  "query": "Merhaba! LIME kullanarak model tahminlerini açıklayan bir proje oluşturmak istiyorum, özellikle Titanic hayatta kalma tahmin veri seti ile. İlk olarak, veri setini `src/data_loader.py` içinde yükleyin. Ardından, bir Random Forest sınıflandırıcısı eğitin ve `models/saved_models/` altında kaydedin. Son olarak, Random Forest sınıflandırıcısının tahminlerini açıklamak için LIME kullanın ve bunu `src/visualize.py` içinde uygulayın. Açıklamaları içeren bir rapor oluşturun ve `results/model_explanation.md` olarak kaydedin. Rapor, kullanıcıların farklı özelliklerin modelin tahminlerini nasıl etkilediğini keşfetmelerini sağlamak için Dash veya Bokeh ile oluşturulmalı ve `src/report.py` içinde uygulanmalıdır. Açıklama, teknik olmayan kişiler için net ve anlaşılır olmalıdır. Ayrıca, `results/figures/feature_importance.png` içinde iyi etiketlenmiş, sezgisel bir özellik önem grafiği kaydedin. Teşekkürler!",
+  "tags": [
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Titanic\" hayatta kalma tahmin veri seti `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Hayatta kalma tahmini için bir \"Random Forest sınıflandırıcısı\" eğitilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Model tahmin açıklaması için \"LIME\" kullanılır ve `src/visualize.py` içinde uygulanır.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Model tahmin açıklama raporu oluşturulur ve `results/model_explanation.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Özellik önem grafiği `results/figures/feature_importance.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "criteria": "Farklı özelliklerin tahminler üzerindeki etkisini gösteren etkileşimli bir rapor \"Dash\" veya \"Bokeh\" kullanılarak oluşturulur ve `src/report.py` içinde uygulanır.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Eğitilmiş model `models/saved_models/` altında kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Açıklama raporu, derin teknik bilgiye sahip olmayanlar için bile anlaşılır olacak şekilde açık ve erişilebilir bir tarzda yazılmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Özellik önem grafiği, net etiketler ve açıklamalarla görsel olarak sezgisel olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

@@ -1,0 +1,83 @@
+{
+  "name": "15_Image_Captioning_ShowAndTell_Flickr8k_DL",
+  "query": "这是我当前的PyTorch项目：使用Show and Tell模型开发一个自动图像字幕生成系统。这里我找到一个可以指导你的仓库：https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning。使用Flickr8k数据集，从[这个链接](https://huggingface.co/datasets/jxie/flickr8k)下载并在`src/data_loader.py`中加载。系统应生成样本图像的描述并将其保存到`results/metrics/generated_descriptions.txt`。必须在`src/model.py`中实现注意力机制。将预训练模型保存为`models/saved_models/show_and_tell_model.pt`。可视化注意力权重并将其保存到`results/figures/attention_weights.png`。数据集应顺利加载，如果出现任何问题，应进行适当的错误处理。理想情况下，注意力机制应清晰地突出在生成字幕时最具影响力的图像区域。",
+  "tags": [
+    "Computer Vision",
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用预训练的\"Show and Tell\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Flickr8k\"数据集，可能从[这个链接](https://huggingface.co/datasets/jxie/flickr8k)下载，在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "在`src/model.py`中实现注意力机制。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "生成的样本图像描述保存在`results/metrics/generated_descriptions.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "训练好的模型保存为`models/saved_models/show_and_tell_model.pt`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "注意力权重的可视化保存在`results/figures/attention_weights.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "数据集应顺利加载，如果在下载过程中出现任何问题，应进行清晰的错误处理。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "注意力机制应清晰地突出对生成字幕贡献最大的图像区域。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Chinese"
+}

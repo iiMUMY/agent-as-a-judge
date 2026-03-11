@@ -1,0 +1,95 @@
+{
+    "name": "26_Mushroom_Classification_RandomForest_Mushroom_ML",
+    "query": "تطوير نظام لتصنيف الفطر باستخدام نموذج Random Forest على مجموعة بيانات UCI Mushroom. قم بتحميل مجموعة البيانات في ملف `src/data_loader.py`. تأكد من إتمام هندسة الميزات، بما في ذلك ترميز الميزات واختيار الميزات، ومعالجة البيانات المفقودة في `src/data_loader.py` قبل تدريب النموذج. قم بتدريب مصنف Random Forest على مجموعة البيانات المعالجة في `src/train.py`. احفظ نتائج التصنيف في `results/classification_results.txt`. قم بتصور وحفظ أهمية الميزات كـ `results/figures/feature_importance.png`، مع التأكد من أن التصور يبرز بوضوح الميزات الأكثر تأثيرًا. أنشئ صفحة ويب تفاعلية في `src/app.py` باستخدام Streamlit لعرض نتائج التصنيف وأداء النموذج. يجب أن توفر صفحة الويب Streamlit نظرة عامة على أداء النموذج وتسمح للمستخدمين بالتفاعل مع نتائج التصنيف. يجب أن يدير النظام بداية ونهاية عرض Streamlit بشكل صحيح.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"UCI Mushroom\" في ملف `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك ترميز الميزات واختيار الميزات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم التعامل مع البيانات المفقودة لضمان نظافة مجموعة البيانات قبل التدريب في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تدريب مصنف الغابة العشوائية على مجموعة البيانات المعالجة في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التصنيف في `results/classification_results.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم تصور أهمية الميزات وحفظها كـ `results/figures/feature_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء صفحة ويب تفاعلية في `src/app.py` باستخدام \"Streamlit\" لعرض نتائج التصنيف وأداء النموذج.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يبرز تصور أهمية الميزات بوضوح الميزات الأكثر تأثيرًا، مما يسهل تفسيرها.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن توفر صفحة الويب Streamlit نظرة عامة على أداء النموذج وتسمح للمستخدمين بالتفاعل مع نتائج التصنيف.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يدير النظام بداية ونهاية عرض Streamlit بشكل صحيح.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

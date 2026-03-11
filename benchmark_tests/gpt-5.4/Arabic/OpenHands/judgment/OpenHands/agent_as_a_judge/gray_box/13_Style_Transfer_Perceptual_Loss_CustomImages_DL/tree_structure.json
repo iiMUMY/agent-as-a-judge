@@ -1,0 +1,15 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gpt-5.4\\Arabic\\OpenHands\\workspaces\\OpenHands\\13_Style_Transfer_Perceptual_Loss_CustomImages_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "processing_time.txt": null
+        },
+        "results\\figures": {
+            "intermediate_results.png": null
+        },
+        "src": {
+            "model.py": null
+        }
+    }
+}

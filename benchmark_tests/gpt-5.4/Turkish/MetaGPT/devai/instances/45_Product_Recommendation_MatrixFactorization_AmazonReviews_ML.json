@@ -1,0 +1,88 @@
+{
+  "name": "45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
+  "query": "Amazon Reviews 2023 veri kümesinin Elektronik alt kümesi ile bir matris faktorizasyon algoritması kullanarak bir ürün tavsiye sistemi kurmama yardımcı olabilir misiniz? `src/data_loader.py` içinde veri yükleme ve gürültü giderme ve normalizasyon dahil tüm veri ön işlemlerini yapmalısınız. Kullanıcı-öğe etkileşimlerini hesaplamak için bir gizli faktör modeli uygulayın ve uygulamayı `src/model.py` içinde kaydedin. Tavsiye sonuçlarını yazdırın ve `results/recommendation_results.txt` dosyasına kaydedin. Ardından, bu tavsiyeleri Plotly kütüphanesini kullanarak görselleştirin ve görselleştirmeyi `results/figures/recommendation_visualization.html` olarak kaydedin. Son olarak, veri ön işleme, model eğitimi ve sonuçları kapsayan bir analiz raporu oluşturun ve `results/recommendation_report.md` olarak kaydedilmelidir.",
+  "tags": [
+    "Recommender Systems"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Amazon Reviews 2023\" veri kümesinin \"Elektronik\" alt kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Gürültü giderme ve normalizasyon dahil veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Kullanıcı-öğe etkileşimlerini hesaplamak için bir \"Gizli Faktör modeli\" `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2,
+        3
+      ],
+      "criteria": "Tavsiye sonuçları `results/recommendation_results.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Tavsiye sonuçları \"Plotly\" kullanılarak görselleştirilir ve `results/figures/recommendation_visualization.html` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Veri ön işleme, model eğitimi ve tavsiye sonuçlarını içeren bir analiz raporu oluşturulur ve `results/recommendation_report.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Farklı ön işleme adımlarının tavsiye doğruluğu üzerindeki etkisi analiz raporunda tartışılmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Görselleştirme, kullanıcıların farklı ürünler için tavsiye sonuçlarını keşfetmesine olanak tanıyan etkileşimli olmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, gelecekteki iyileştirmeler için ek kullanıcı davranış verileri veya ürün özelliklerini kolayca dahil edecek şekilde tasarlanmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

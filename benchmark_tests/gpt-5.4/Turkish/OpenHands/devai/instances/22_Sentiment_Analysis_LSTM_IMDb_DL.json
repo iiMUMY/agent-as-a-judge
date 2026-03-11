@@ -1,0 +1,89 @@
+{
+  "name": "22_Sentiment_Analysis_LSTM_IMDb_DL",
+  "query": "IMDb veri kümesini ve bir LSTM modeli kullanarak bir duygu analizi projesi kurmama yardımcı olabilir misiniz? Lütfen `src/data_loader.py` içinde veri temizleme işlemini uygulayın, durak kelimelerin ve noktalamanın kaldırılması dahil. Metni sayısal bir formata dönüştürmek için kelime gömmeleri kullanın ve bu gömmeleri `models/saved_models/` altında kaydedin. Daha sonra bu gömmeleri `src/model.py` içinde uygulanacak bir LSTM modelinin girdisi olarak kullanın. Sınıflandırma raporunu `results/metrics/classification_report.txt` dosyasına kaydedin. Model mimarisi ve eğitim sürecinin görselleştirildiği bir Jupyter Notebook oluşturun ve `results/report.ipynb` olarak kaydedin. Ayrıca, eğitim kaybı ve doğruluk eğrilerini `results/figures/training_curves.png` dosyasına kaydedin. Model performansını artırmak için önceden eğitilmiş gömmeler (örneğin, Word2Vec veya GloVe) tercih edilir.",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"IMDb\" film incelemeleri veri kümesi kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri temizleme `src/data_loader.py` içinde uygulanır, durak kelimelerin ve noktalamanın kaldırılması dahil.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Metni sayısal formata dönüştürmek için kelime gömmeleri kullanılır ve `models/saved_models/` altında kaydedilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Duygu analizi için bir \"LSTM\" modeli kullanılır ve `src/model.py` içinde uygulanmalıdır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Bir sınıflandırma raporu `results/metrics/classification_report.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Model mimarisi ve eğitim süreci görselleştirmesini içeren bir Jupyter Notebook oluşturulur ve `results/report.ipynb` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Eğitim kaybı ve doğruluk eğrileri oluşturulur ve `results/figures/training_curves.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Kelime gömmeleri, mevcut anlamsal bilgiden yararlanmak için önceden eğitilmiş olmalıdır (örneğin, Word2Vec veya GloVe).",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Jupyter Notebook iyi belgelenmiş olmalı, böylece başkalarının model mimarisini ve eğitim sürecini anlaması kolay olur.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}
