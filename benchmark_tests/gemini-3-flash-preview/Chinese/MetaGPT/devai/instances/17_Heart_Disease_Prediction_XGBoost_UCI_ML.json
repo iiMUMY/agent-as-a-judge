@@ -1,0 +1,114 @@
+{
+  "name": "17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+  "query": "创建一个项目，使用XGBoost模型预测心脏病，使用UCI心脏病数据集，该数据集可以从[此链接](https://archive.ics.uci.edu/dataset/45/heart+disease)下载。在`src/data_loader.py`中加载数据集。在`src/data_loader.py`中实现特征选择和数据标准化。使用SHAP值解释特征重要性，并将结果保存为`results/figures/shap_importance.png`。在`src/model.py`中实现XGBoost模型。然后，使用SHAP值解释特征重要性，并将结果保存为`results/shap_importance.png`。将ROC曲线保存到`results/figures/roc_curve.png`。最后，生成一个包含所有结果和可视化的HTML报告，并将其保存为`results/report.html`。确保SHAP可视化清晰地突出显示最具影响力的特征。包括与其他模型（如Logistic Regression）的性能比较，以验证XGBoost模型的稳健性。将XGBoost模型保存在`models/saved_models/`下。",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"UCI心脏病\"数据集，可能从[此链接](https://archive.ics.uci.edu/dataset/45/heart+disease)下载。在`src/data_loader.py`中加载数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中实现特征选择。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中实现数据标准化，确保特征值在同一范围内。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现\"XGBoost\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "使用\"SHAP\"值进行特征重要性解释，结果保存为`results/figures/shap_importance.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "ROC曲线保存为`results/figures/roc_curve.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "生成包含结果和可视化的HTML报告，保存为`results/report.html`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "包括与其他模型（例如Logistic Regression）的性能比较，以验证XGBoost模型的稳健性。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 8,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "将XGBoost模型保存在`models/saved_models/`下。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "SHAP可视化应清晰并突出显示最具影响力的特征，使结果易于解释。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Chinese"
+}

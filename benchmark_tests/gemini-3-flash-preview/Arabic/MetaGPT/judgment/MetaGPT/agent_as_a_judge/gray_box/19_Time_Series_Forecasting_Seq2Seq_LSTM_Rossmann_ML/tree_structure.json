@@ -1,0 +1,18 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Arabic\\MetaGPT\\workspaces\\MetaGPT\\19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "report.html": null
+        },
+        "results\\figures": {
+            "comparison_plot.png": null,
+            "forecast_results.png": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}

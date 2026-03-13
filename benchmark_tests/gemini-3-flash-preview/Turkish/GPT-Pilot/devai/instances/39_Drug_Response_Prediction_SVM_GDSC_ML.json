@@ -1,0 +1,103 @@
+{
+  "name": "39_Drug_Response_Prediction_SVM_GDSC_ML",
+  "query": "GDSC veri kümesini kullanarak bir Destek Vektör Makinesi (SVM) regresörü ile ilaç yanıtını tahmin eden bir sistem geliştirin. Veri kümesini yükleyin ve `src/data_loader.py` içinde anahtar özellikleri belirlemek için özellik seçimi yapın. SVM regresörünü `src/model.py` içinde uygulayın. Modelin performansını değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın. Performans sonuçlarını `results/metrics/performance.txt` dosyasına kaydedin. Regresyon sonuçlarını seaborn kullanarak görselleştirin ve `results/figures/` altında kaydedin. Ardından, veri ön işleme, model eğitimi, değerlendirme süreci ve görselleştirmeyi içeren bir rapor oluşturun. Raporu `results/drug_response_prediction_report.pdf` olarak kaydedin. Rapor, özellik seçiminin modelin performansını nasıl etkilediğini vurgulamalı ve regresyon sonuçlarının görselleştirilmesi, seçilen özellikler ile tahmin edilen ilaç yanıtı arasındaki ilişkiyi açıkça göstermelidir. Sistem, ek veri kümeleri veya yeni özellikler eklemek için kolayca genişletilebilir şekilde tasarlanmalıdır.",
+  "tags": [
+    "Medical Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"GDSC\" ilaç yanıtı veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"SVM regresörü\" `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Performans sonuçları `results/metrics/performance.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Regresyon sonuçları \"seaborn\" kullanılarak görselleştirilir ve `results/figures/` konumuna kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Veri ön işleme, model eğitimi, değerlendirme süreci ve regresyon sonuçlarının görselleştirilmesini içeren bir rapor oluşturulur ve `results/drug_response_prediction_report.pdf` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Rapor, özellik seçiminin modelin performansını nasıl etkilediğini vurgulamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Regresyon sonuçlarının görselleştirilmesi, seçilen özellikler ile tahmin edilen ilaç yanıtı arasındaki ilişkiyi açıkça göstermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, ek veri kümeleri veya yeni özellikler eklemek için önemli bir yeniden çalışma gerektirmeden kolayca genişletilebilir olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

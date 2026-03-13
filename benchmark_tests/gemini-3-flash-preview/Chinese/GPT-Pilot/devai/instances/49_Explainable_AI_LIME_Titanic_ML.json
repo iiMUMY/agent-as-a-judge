@@ -1,0 +1,92 @@
+{
+  "name": "49_Explainable_AI_LIME_Titanic_ML",
+  "query": "你好！我正在寻找创建一个项目，使用LIME解释模型预测，特别是使用泰坦尼克号生存预测数据集。首先，在`src/data_loader.py`中加载数据集。然后，训练一个随机森林分类器并将其保存在`models/saved_models/`下。最后，使用LIME解释随机森林分类器的预测，并在`src/visualize.py`中实现。生成一份包含解释的报告，并将其保存为`results/model_explanation.md`。报告应使用Dash或Bokeh构建，并在`src/report.py`中实现，以便用户可以探索不同特征如何影响模型的预测。解释应清晰易懂，适合非技术人员。此外，保存一个标注良好的直观特征重要性图，保存在`results/figures/feature_importance.png`。谢谢！",
+  "tags": [
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载“泰坦尼克号”生存预测数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "训练一个用于生存预测的“随机森林分类器”。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "使用“LIME”进行模型预测解释，并在`src/visualize.py`中实现。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "生成一份模型预测解释报告，并保存为`results/model_explanation.md`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "保存一个特征重要性图，路径为`results/figures/feature_importance.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "criteria": "使用“Dash”或“Bokeh”创建一个展示不同特征对预测影响的交互式报告，并在`src/report.py`中实现。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "将训练好的模型保存在`models/saved_models/`下。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "解释报告应以清晰易懂的风格撰写，使其即使对于没有深厚技术背景的人也能理解。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "特征重要性图应直观，具有清晰的标签和描述。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

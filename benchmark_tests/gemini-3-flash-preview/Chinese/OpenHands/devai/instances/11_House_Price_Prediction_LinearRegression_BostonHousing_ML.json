@@ -1,0 +1,86 @@
+{
+  "name": "11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+  "query": "你好。使用线性回归模型在波士顿房价数据集上建立一个房价预测项目。在`src/data_loader.py`中使用`from datasets import load_dataset`和`ds = load_dataset(\"~/mrseba/boston_house_price\")`加载数据集。确保在`src/data_loader.py`中执行特征缩放和数据标准化。在`src/model.py`中实现线性回归模型。在`src/train.py`中使用交叉验证来评估模型。打印均方误差（MSE）、平均绝对误差（MAE）和$R^2$分数，并将它们保存在`results/metrics/metrics.txt`中。可视化预测值与实际值的比较，并将结果保存为`results/figures/prediction_vs_actual.png`。可视化应清晰展示模型的准确性（如果做得好，应该是不错的）。",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中使用`from datasets import load_dataset`和`ds = load_dataset(\"mrseba/boston_house_price\")`来使用\"波士顿房价\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中执行特征缩放和数据标准化。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现\"线性回归\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中使用\"交叉验证\"来评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "打印\"均方误差（MSE）\"、\"平均绝对误差（MAE）\"和\"R^2分数\"，并保存为`results/metrics/metrics.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "预测值与实际值的比较可视化并保存为`results/figures/prediction_vs_actual.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "数据集应使用提供的`load_dataset`代码顺利加载，如果出现问题，应尝试其他方法。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "可视化应通过突出显示预测值与实际值之间的差异来清晰展示模型的准确性。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "`ds = load_dataset(\"~/mrseba/boston_house_price\")` in the query is wrong, and it should be `ds = load_dataset(\"mrseba/boston_house_price\")`. We leave it here to check the self-debugging skill of the agents.",
+  "language": "Chinese"
+}

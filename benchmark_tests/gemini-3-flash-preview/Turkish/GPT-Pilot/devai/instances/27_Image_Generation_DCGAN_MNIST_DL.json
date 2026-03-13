@@ -1,0 +1,95 @@
+{
+  "name": "27_Image_Generation_DCGAN_MNIST_DL",
+  "query": "MNIST veri kümesi kullanılarak bir DCGAN modeli ile görüntü oluşturma sistemi oluşturmam gerekiyor. MNIST veri kümesini `src/data_loader.py` içinde yükleyin ve DCGAN modelini `src/model.py` içinde uygulayın. Sistem, doğru DCGAN mimarisinin kullanılmasını sağlamalı, oluşturulan görüntüleri `results/figures/` içine kaydetmeli, model eğitimi sırasında eğitim kaybını `results/metrics/` altında ve oluşturulan görüntüleri `results/figures/` altında kaydederek izlemeli ve performansı artırmak için `src/train.py` içinde gürültü vektör boyutları ve öğrenme oranı gibi üretim parametreleri üzerinde bir hiperparametre araması yapmalıdır. Ayrıca, oluşturulan görüntülerin bir GIF animasyonunu `results/figures/generated_images.gif` olarak oluşturun ve kaydedin, eğitim sürecini ve sonuçlarını iyi yapılandırılmış bir Jupyter Notebook'ta sunun ve Notebook'u `results/training_report.pdf` olarak kaydedilen cilalı bir PDF raporuna dönüştürün. DCGAN model mimarisi, diğer GAN varyantlarıyla karışıklığı önlemek için Notebook'ta açıkça belgelenmelidir.",
+  "tags": [
+    "Computer Vision",
+    "Generative Models"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"MNIST\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"DCGAN\" modeli, standart bir GAN değil, `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Oluşturulan görüntüler belirtilen `results/figures/` klasörüne kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Model eğitimi, `results/metrics/` altında kaydedilen eğitim kaybı ile izlenir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Model performansını artırmak için gürültü vektör boyutları ve öğrenme oranı gibi parametreleri aramak için bir hiperparametre arama yöntemi `src/train.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Oluşturulan görüntülerin bir GIF animasyonu oluşturulur ve `results/figures/generated_images.gif` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Eğitim süreci ve sonuçlar bir Jupyter Notebook'ta sunulur, PDF raporuna dönüştürülür ve `results/training_report.pdf` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "DCGAN model mimarisi, diğer GAN varyantlarıyla karışıklığı önlemek için Notebook'ta açıkça belgelenmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "PDF raporu, model mimarisi, eğitim süreci, sonuçlar ve gelecekteki iyileştirmeler için net bölümlerle iyi yapılandırılmış olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "Saving figures is mentioned twice, i.e., once in requirement 2 and once in requirement 3.",
+  "language": "Turkish"
+}

@@ -1,0 +1,95 @@
+{
+  "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+  "query": "Telco Customer Churn veri kümesini kullanarak müşteri kaybını tahmin eden bir sistem geliştirmeme yardım et, potansiyel olarak [bu bağlantıdan](https://huggingface.co/datasets/scikit-learn/churn-prediction) indirilebilir. Veri kümesini `src/data_loader.py` içinde yükle. Proje, özellik seçimi ve ölçeklendirme gibi özellik mühendisliğini içermeli ve dengesiz verileri `src/data_loader.py` içinde uygulanan aşırı örnekleme veya az örnekleme teknikleriyle ele almalıdır. Bunun tam detayları sizin kararınıza bırakılmıştır. `src/model.py` içinde bir Lojistik Regresyon modeli uygula ve modeli eğitirken `src/train.py` içinde çapraz doğrulama yap. Son olarak, sınıflandırma raporunu (kesinlik, geri çağırma ve F1-skoru dahil) `results/metrics/classification_report.txt` dosyasına yazdır ve kaydet, ve bir ROC eğrisini `results/figures/roc_curve.png` dosyasına kaydet. Veri kümesinin uygun hata yönetimi ile sorunsuz bir şekilde yüklendiğinden emin ol. Özellik mühendisliği, en alakalı özellikleri titizlikle seçmelidir.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Telco Customer Churn\" veri kümesi kullanılır, potansiyel olarak [bu bağlantıdan](https://huggingface.co/datasets/scikit-learn/churn-prediction) indirilebilir. Veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik mühendisliği, özellik seçimi ve ölçeklendirme dahil, `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Dengesiz veriler, `src/data_loader.py` içinde aşırı örnekleme veya az örnekleme teknikleri kullanılarak ele alınır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"Lojistik Regresyon\" modeli `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "\"Kesinlik,\" \"geri çağırma,\" ve \"F1-skoru\" dahil bir sınıflandırma raporu `results/metrics/classification_report.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "\"ROC eğrisi\" `results/figures/roc_curve.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Veri kümesi sorunsuz bir şekilde yüklenmeli, indirme sırasında sorun çıkarsa uygun hata yönetimi yapılmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Özellik mühendisliği süreci titiz olmalı, model için en alakalı özelliklerin seçildiğinden emin olunmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Turkish"
+}

@@ -1,0 +1,92 @@
+{
+  "name": "21_Iris_Classification_SVM_Iris_ML",
+  "query": "İris türlerini sınıflandırmak için İris veri kümesini kullanarak `src/model.py` içinde uygulanmış bir Destek Vektör Makinesi (SVM) sınıflandırıcısı ile bir proje talep ediyorum. Proje, verileri standartlaştırmalı ve `src/data_loader.py` içinde özellik seçimi yapmalıdır. Sınıflandırma doğruluğunu belgeleyip `results/metrics/classification_accuracy.txt` olarak kaydedecek ve bir karışıklık matrisi oluşturup `results/figures/confusion_matrix.png` olarak kaydedecektir. Ayrıca, sınıflandırma sonuçlarını ve model performansını sergilemek için `src/app.py` içinde Streamlit kullanarak etkileşimli bir web uygulaması oluşturacak ve figürleri `results/figures/` içinde saklayacaktır. Web sayfası kullanıcı dostu olmalı ve kullanıcıların SVM sınıflandırıcısının nasıl çalıştığını anlamalarına yardımcı olacak kısa bir model açıklaması içermelidir.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Iris\" veri kümesi kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veriler, `src/data_loader.py` içinde özellik değerlerinin aynı aralıkta olmasını sağlamak için standartlaştırılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik seçimi, `src/data_loader.py` içinde önemli özellikleri belirlemek için yapılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"SVM sınıflandırıcısı\" `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Sınıflandırma doğruluğu `results/metrics/classification_accuracy.txt` içinde kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Bir karışıklık matrisi oluşturulur ve `results/figures/confusion_matrix.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Etkileşimli bir web uygulaması `src/app.py` içinde \"Streamlit\" kullanılarak oluşturulur ve sınıflandırma sonuçları ile model performansı `results/figures/` içinde sergilenir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Streamlit web sayfası kullanıcı dostu olmalı ve kullanıcıların modelin performansının farklı yönlerini kolayca keşfetmelerine olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Web sayfasında kısa bir model açıklaması bulunmalı, kullanıcıların SVM sınıflandırıcısının nasıl çalıştığını anlamalarına yardımcı olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

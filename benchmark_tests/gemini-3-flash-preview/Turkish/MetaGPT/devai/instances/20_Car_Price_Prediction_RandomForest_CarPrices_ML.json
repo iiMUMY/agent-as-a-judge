@@ -1,0 +1,96 @@
+{
+  "name": "20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+  "query": "Kaggle Car Prices veri kümesi kullanılarak Random Forest modeli ile bir araba fiyat tahmin projesi oluşturmama yardımcı olabilir misiniz? Veri kümesini yükleyin ve önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapın. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın. R-kare skoru, Ortalama Kare Hata (MSE) ve Ortalama Mutlak Hata (MAE) değerlerini `results/metrics/results/metrics.txt` dosyasına kaydedin. Özellik önemini görselleştirin ve `results/figures/feature_importance.png` dosyasına kaydedin. Seçilen özelliklerin araba fiyat tahminlerine nasıl katkıda bulunduğuna dair içgörüler içeren bir Markdown raporu oluşturun. Raporu `results/report.md` olarak kaydedin.",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Car Prices\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Random Forest\" regresyon modeli `src/model.py` içinde kullanılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"R-kare\" skoru, \"Ortalama Kare Hata (MSE)\" ve \"Ortalama Mutlak Hata (MAE)\" `results/metrics/results/metrics.txt` dosyasına kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Özellik önemleri görselleştirilir ve `results/figures/feature_importance.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Sonuçlar ve görselleştirmeler içeren bir Markdown dosyası oluşturulur ve `results/report.md` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Özellik seçimi süreci kapsamlı olmalı ve modelde yalnızca en ilgili özelliklerin kullanıldığından emin olunmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdown raporu, seçilen özelliklerin araba fiyat tahminlerine nasıl katkıda bulunduğuna dair net içgörüler sağlamalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

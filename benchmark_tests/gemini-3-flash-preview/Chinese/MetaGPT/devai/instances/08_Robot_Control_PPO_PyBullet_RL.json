@@ -1,0 +1,76 @@
+{
+  "name": "08_Robot_Control_PPO_PyBullet_RL",
+  "query": "我正在寻求实施一个项目，该项目通过在PyBullet模拟环境中使用PPO算法探索机器人手臂控制。应该导入PyBullet模拟器，并在`src/env.py`中加载相关的机器人环境。PPO算法应在`src/train.py`中实现。项目应详细记录机器人的最终位置，并将其打印和保存为`data/final_position.txt`。训练返回轨迹应绘制并保存为`results/figures/training_returns.png`。机器人的运动样本应可视化并保存为`results/figures/robot_motion.gif`。应在`src/env.py`中提供详细的环境设置和奖励结构描述。请确保清楚处理和记录在PyBullet中加载URDF文件的任何问题，提供清晰的错误信息或日志以进行调试。",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/env.py`中使用\"PyBullet\"模拟器。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "在`src/train.py`中使用\"PPO\"算法。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/env.py`中提供详细的环境设置和奖励结构描述。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "机器人的最终位置被打印并保存为`data/final_position.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "训练返回随时间变化的曲线被记录并保存为`results/figures/training_returns.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "机器人的运动样本被可视化并保存为`results/figures/robot_motion.gif`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "系统应有效处理在PyBullet中加载URDF文件的潜在问题，提供清晰的错误信息或日志以进行调试。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

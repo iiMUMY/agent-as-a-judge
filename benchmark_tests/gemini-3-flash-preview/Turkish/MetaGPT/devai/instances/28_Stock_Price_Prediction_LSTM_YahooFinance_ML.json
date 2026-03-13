@@ -1,0 +1,83 @@
+{
+  "name": "28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+  "query": "Bana bir LSTM modeli ve Yahoo Finance veri seti kullanarak bir hisse senedi fiyat tahmin sistemi oluşturmamda yardımcı olabilir misiniz? Lütfen eksik değerler ve aykırı değerlerin ele alınması dahil olmak üzere verileri temizleyin ve zaman serisi verilerini denetimli bir öğrenme problemine dönüştürmek için bir zaman penceresi kullanın. LSTM modeli `src/model.py` içinde uygulanmalı ve veri seti yükleme, temizleme ve dönüştürme `src/data_loader.py` içinde uygulanmalıdır. Tahmin sonuçlarını `results/predictions.txt` dosyasına kaydedin ve tahmin sonuçlarının etkileşimli grafiklerini Plotly kullanarak `results/figures/prediction_interactive.html` dosyasında oluşturun ve kaydedin. Model mimarisi görselleştirmesi, eğitim süreci ve tahmin sonuçları içeren bir Jupyter Notebook oluşturun ve bunu `results/report.pdf` olarak bir PDF raporu olarak kaydedin.",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"LSTM\" modeli `src/model.py` içinde uygulanmıştır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Yahoo Finance\" veri seti `src/data_loader.py` içinde yüklenmiştir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Eksik değerler ve aykırı değerlerin ele alınması dahil olmak üzere veri temizleme `src/data_loader.py` içinde gerçekleştirilmiştir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2
+      ],
+      "criteria": "Zaman serisi verilerini denetimli bir öğrenme problemine dönüştürmek için bir zaman penceresi kullanılmıştır. Lütfen uygulamayı `src/data_loader.py` içinde kaydedin.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Tahmin sonuçları `results/predictions.txt` dosyasında kaydedilmiştir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Tahmin sonuçlarının etkileşimli grafikleri \"Plotly\" kullanılarak oluşturulmuş ve `results/figures/prediction_interactive.html` dosyasında kaydedilmiştir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Model mimarisi görselleştirmesi, eğitim süreci ve tahmin sonuçlarını içeren bir Jupyter Notebook oluşturulmuş ve `results/report.pdf` olarak PDF raporu olarak kaydedilmiştir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

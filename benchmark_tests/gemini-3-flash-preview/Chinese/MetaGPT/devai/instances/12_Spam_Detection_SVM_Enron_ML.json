@@ -1,0 +1,99 @@
+{
+  "name": "12_Spam_Detection_SVM_Enron_ML",
+  "query": "你好。我需要你构建一个项目，使用支持向量机（SVM）分类器在Enron-Spam数据集上检测垃圾邮件。项目应通过去除停用词和标点符号来预处理文本，使用TF-IDF特征，使用GridSearchCV进行超参数调优，并将混淆矩阵保存到`results/figures/confusion_matrix.png`。我还需要编写并保存一份综合报告，包括精确率、召回率、F1分数和混淆矩阵（生成为`results/figures/confusion_matrix.png`），保存在`results/classification_report.pdf`下。Enron-Spam数据集应在`src/data_loader.py`中加载。文本预处理，包括去除停用词和标点符号，以及计算TF-IDF特征，应在`src/data_loader.py`中执行。SVM分类器应在`src/model.py`中实现。超参数调优应在`src/train.py`中使用GridSearchCV进行。如果文本预处理步骤能够优化以高效处理大量电子邮件，将会很有帮助。",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Enron-Spam\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "文本预处理在`src/data_loader.py`中执行，包括去除停用词和标点符号。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "\"TF-IDF\"特征在`src/data_loader.py`中使用。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"SVM分类器\"在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "超参数调优在`src/train.py`中使用\"GridSearchCV\"进行。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "混淆矩阵保存为`results/figures/confusion_matrix.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "分类报告，包括\"精确率\"、\"召回率\"、\"F1分数\"和图`results/figures/confusion_matrix.png`，保存为`results/classification_report.pdf`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "文本预处理步骤应优化以高效处理大量电子邮件。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "分类报告应是综合的。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

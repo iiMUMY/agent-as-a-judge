@@ -1,0 +1,189 @@
+{
+  "name": "55_SQLite_Database_Viewer_and_Analyzer_App",
+  "query": "Kullanıcıların bir SQLite veritabanında depolanan yapay zeka geliştirme verilerini görüntülemesine ve analiz etmesine olanak tanıyan bir uygulama oluşturmak istiyorum. Ön uçta (`src/frontend.py`'de uygulanmıştır), kullanıcı cihazlarından bir dosya seçerek yapay zeka modeli eğitim günlüklerini veya istem-yanıt verilerini içeren yeni bir SQLite veritabanı yüklemeli veya `src/cache.py`'de önbelleğe alınmış daha önce yüklenmiş bir veritabanını seçmelidir. Bu şekilde, kullanıcı veritabanını analiz etmek istediğinde her seferinde yüklemek zorunda kalmayacaktır. Yeni bir veritabanı yüklendiğinde, kullanıcı ona bir ad verebilir ve dosya arka uca (`src/backend.py`) gönderilir ve gelecekteki kullanım için saklanır. Veritabanı yüklendikten sonra, kullanıcılar onunla etkileşimde bulunabilir. Kullanıcı, `app` tablosundan bir yapay zeka modeli veya uygulama listesi görmelidir. Bir uygulama seçebilmeli ve `development_planning` tablosundan geliştirme görevlerini görüntüleyebilmelidir. Bir görev seçildikten sonra, onunla ilişkili tüm geliştirme adımlarını görüntüleyebilirler. Son olarak, bir adım seçildiğinde, `prompt_path`, `messages`, `llm_response` ve `prompt_data` gibi ayrıntılı veriler görüntülenir ve uygun bilgiler ön uçta (`src/frontend_render.py`'de) işlenir.\nSQLite veritabanı her zaman şu yapıyı takip edecektir: `app` tablosu, veritabanında depolanan tüm uygulamaları içerir. Her uygulamanın, `development_planning` tablosunda `development_plan` anahtarı altında bir dizi olarak depolanan birden fazla geliştirme görevi vardır. Her dizi öğesi, üç anahtar-değer çifti içeren bir JSON nesnesidir: `description`, `user_review_goal` ve `programming_goal`. Her geliştirme görevi, `development_steps` tablosunda depolanan ve `app_id` alanı kullanılarak `app` tablosuna bağlanan birçok geliştirme adımı içerir.\nZorluk, geliştirme görevi ile geliştirme adımı arasında doğrudan bir bağlantı olmamasıdır. Bu nedenle, `src/backend_logic.py`'de, tüm geliştirme adımlarının alınması ve ardından `prompt_path` alanına göre bölünmesi gerekir. Her geliştirme görevi, `prompt_path` değeri `development/task/breakdown.prompt` ile başlar, bu nedenle geliştirme adımları, adımlar listesinin daha küçük listelere bölünmesiyle gruplandırılabilir, burada her biri `prompt_path` değeri `development/task/breakdown.prompt` olan adımla başlar. Bu, her görev için doğru geliştirme adımları setini verecektir.\nHer geliştirme adımı, ön uçta (`src/frontend_render.py`'de) görüntülenmesi gereken aşağıdaki değerlere sahiptir:\n- `prompt_path`: bir dize.\n- `messages`: JSON nesnelerinin bir dizisi.\n- `llm_response`: bir JSON nesnesi.\n- `prompt_data`: bir JSON nesnesi.\n`messages` dizisi her zaman `content` ve `role` anahtarlarına sahip JSON nesneleri içerecektir. Ön uçta `content` büyük bir metin alanında, `role` ise bir etiket olarak gösterilmelidir. `llm_response` nesnesi her zaman bir `text` anahtarına sahip olacak ve potansiyel olarak uzun dizeleri göstermek için bir metin alanı olarak görüntülenmelidir. `prompt_data` nesnesi çeşitli anahtar-değer çiftlerine sahip olabilir ve her biri kullanıcıya uygun bir formatta gösterilmelidir.",
+  "tags": [
+    "Other"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Ön uç `src/frontend.py`'de uygulanmıştır ve kullanıcılara yeni bir SQLite veritabanı yükleme veya `src/cache.py`'den önceden önbelleğe alınmış birini seçme olanağı tanır. Seçilen dosya kaydedilmeli ve gelecekteki kullanım için erişilebilir olmalıdır.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Yeni bir veritabanı yüklendiğinde, kullanıcılar ona bir ad verebilir ve dosya arka uca (`src/backend.py`) gönderilir ve gelecekteki kullanım için saklanır.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Önceden yüklenmiş veritabanları `src/cache.py`'de önbelleğe alınır ve yeniden yüklemeye gerek kalmadan seçilebilir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Bir veritabanı yüklendikten veya seçildikten sonra, kullanıcı veritabanındaki `app` tablosundan bir yapay zeka modeli veya uygulama listesi görebilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Kullanıcılar bir uygulama seçebilir ve `development_planning` tablosundan geliştirme görevlerini görüntüleyebilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Bir görev seçildikten sonra, kullanıcılar ilişkili tüm geliştirme adımlarını görüntüleyebilir, bu adımlar `src/frontend_render.py`'de uygulanan ön uçta gösterilir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Bir geliştirme adımı seçildiğinde, `prompt_path`, `messages`, `llm_response` ve `prompt_data` gibi ayrıntılı veriler, ön uçta (`src/frontend_render.py`) uygun şekilde işlenir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [],
+      "criteria": "`src/backend_logic.py`'de, `development_steps` tablosundan tüm geliştirme adımlarını alın ve `prompt_path` alanı `development/task/breakdown.prompt` ile başlayan geliştirme görevine göre gruplandırın.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 8,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "criteria": "`messages` dizisi ön uçta (`src/frontend_render.py`) gösterilir, her mesaj için `content` büyük bir metin alanında ve `role` bir etiket olarak gösterilir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 9,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "criteria": "`llm_response` nesnesi `text` anahtarı ile birlikte, potansiyel olarak uzun dizeleri barındırmak için ön uçta (`src/frontend_render.py`) bir metin alanında gösterilir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 10,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "criteria": "`prompt_data` nesnesi, anahtar-değer çiftleri uygun bir formatta kullanıcıya sunularak ön uçta (`src/frontend_render.py`) gösterilir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 11,
+      "prerequisites": [],
+      "criteria": "SQLite veritabanı, proje sorgusunda açıklandığı gibi `app`, `development_planning` ve `development_steps` tablolarıyla belirtilen yapıyı takip eder.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 12,
+      "prerequisites": [
+        11
+      ],
+      "criteria": "`app` tablosundaki her uygulama, `development_planning` tablosunda `development_plan` anahtarı altında bir dizi olarak depolanan birden fazla geliştirme görevine sahiptir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 13,
+      "prerequisites": [
+        11
+      ],
+      "criteria": "Her geliştirme görevi, `development_steps` tablosunda depolanan ve `app_id` alanı kullanılarak `app` tablosuna bağlanan birçok geliştirme adımı içerir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ön uç arayüzü, kullanıcıların uygulamalar, görevler ve adımlar arasında sorunsuz bir şekilde gezinmesini sağlayarak veritabanı ile kolay etkileşim sağlamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Sistem, büyük veri kümeleriyle performansın korunmasını sağlayarak büyük SQLite veritabanlarını verimli bir şekilde ele almalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Bilgiler, kullanıcı etkileşimini kolaylaştıracak şekilde sezgisel ve kullanıcı dostu bir şekilde ön uçta işlenmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 3,
+      "criteria": "Geliştirme adımlarının gruplandırılması, `src/backend_logic.py`'de uygulanan mantığa göre her görev için doğru adım setini doğru bir şekilde yansıtmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "resource": "https://github.com/Pythagora-io/gpt-pilot/wiki/How-to-write-a-good-initial-project-description",
+  "language": "Turkish"
+}

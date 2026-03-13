@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Chinese\\GPT-Pilot\\workspaces\\GPT-Pilot\\17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "report.html": null
+        },
+        "results\\figures": {
+            "roc_curve.png": null,
+            "shap_importance.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

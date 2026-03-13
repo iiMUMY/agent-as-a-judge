@@ -1,0 +1,21 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Chinese\\MetaGPT\\workspaces\\MetaGPT\\22_Sentiment_Analysis_LSTM_IMDb_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "report.ipynb": null
+        },
+        "results\\figures": {
+            "training_curves.png": null
+        },
+        "results\\metrics": {
+            "classification_report.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

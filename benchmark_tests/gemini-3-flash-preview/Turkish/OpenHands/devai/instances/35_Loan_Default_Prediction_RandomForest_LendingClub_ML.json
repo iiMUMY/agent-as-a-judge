@@ -1,0 +1,91 @@
+{
+  "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+  "query": "Lending Club Loan veri kümesi ile bir Random Forest sınıflandırıcı kullanarak bir kredi temerrüt tahmin sistemi oluşturmama yardımcı olabilir misiniz? Veri kümesini yükleyerek, dengesiz verileri aşırı örnekleme veya az örnekleme teknikleri kullanarak ele alarak ve önemli özellikleri belirlemek için özellik seçimi yaparak başlayın, bunların hepsi `src/data_loader.py` içinde uygulanmıştır. Bir Random Forest modeli eğitin ve eğitilmiş modeli `models/saved_models/` içinde kaydedin. Özellik önemlerini `results/feature_importances.txt` olarak kaydedin ve ROC eğrisini matplotlib kullanarak `results/figures/roc_curve.png` olarak kaydedin. Son olarak, veri ön işleme adımlarını, model eğitimi ve değerlendirme sürecini özetleyen ayrıntılı bir Markdown raporu oluşturun ve bunu `results/loan_default_prediction_report.md` olarak kaydedin. Rapor, model performansı hakkında içgörüler ve potansiyel iyileştirmeler için öneriler içermelidir.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Lending Club Loan\" veri kümesi `src/data_loader.py` içinde yüklenmiştir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Dengesiz veriler aşırı örnekleme veya az örnekleme teknikleri kullanılarak ele alınır, `src/data_loader.py` içinde uygulanmıştır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Önemli özellikleri belirlemek için `src/data_loader.py` içinde özellik seçimi yapılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Kredi temerrüdünü tahmin etmek için bir \"Random Forest\" sınıflandırıcı uygulanır. Eğitilmiş modeli `models/saved_models/` içinde kaydedin.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Özellik önemleri `results/feature_importances.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "\"ROC eğrisi\" görselleştirilir ve \"matplotlib\" kullanılarak `results/figures/roc_curve.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "Veri ön işleme adımlarını, model eğitimi ve değerlendirme sürecini içeren bir Markdown raporu oluşturulur ve `results/loan_default_prediction_report.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Markdown raporu ayrıntılıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdown raporu, model performansı hakkında içgörüler ve potansiyel iyileştirmeler için öneriler içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

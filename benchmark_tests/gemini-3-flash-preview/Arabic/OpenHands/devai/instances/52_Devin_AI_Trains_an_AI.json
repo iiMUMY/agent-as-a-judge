@@ -1,0 +1,64 @@
+{
+    "name": "52_Devin_AI_Trains_an_AI",
+    "query": "هل يمكنك تحسين نموذج LLaMA بحجم 7B باستخدام `https://github.com/artidoro/qlora`؟ اتبع التعليمات في المستودع لتحسين نموذج LLaMA بحجم 7B واحفظه في models/saved_models/. تأكد من إعداد البيئة والاعتمادات اللازمة كما هو موضح في `src/env.py`. قم بتنزيل وتحضير مجموعات البيانات المطلوبة لتحسين النموذج كما هو محدد في `src/data_loader.py`. أكمل عملية التحسين، مع التأكد من ضبط جميع التكوينات بشكل صحيح وفقًا لـ qlora. احفظ النموذج المحسن وملخص التدريب، وقم بتخزينها في الدليل المحدد كـ results/metrics/finetuning_summary.txt.",
+    "tags": [
+        "Generative Models",
+        "Natural Language Processing"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم تنزيل المستودع من `https://github.com/artidoro/qlora`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "تم إعداد البيئة والمتطلبات اللازمة.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "اكتملت عملية التخصيص الدقيق، مع التأكد من ضبط جميع التكوينات بشكل صحيح وفقًا لـ \"qlora.\"",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "تم حفظ النموذج المخصص وملخص التدريب في `models/saved_models/`، وتخزينها في الدليل المحدد كـ `results/metrics/finetuning_summary.txt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تتضمن عملية التحسين خطوات التحقق لمراقبة الإفراط في التكيف أو المشكلات الأخرى.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب إنشاء تقرير مفصل عن عملية التحسين، بما في ذلك أي تحديات واجهتها وكيف تم التغلب عليها، وحفظه كـ `results/finetuning_summary.txt`.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "resource": "https://www.cognition.ai/blog/introducing-devin",
+    "language": "Arabic"
+}

@@ -1,0 +1,91 @@
+{
+  "name": "30_Image_Segmentation_UNet_PascalVOC_DL",
+  "query": "क्या आप मुझे Pascal VOC डेटासेट और PyTorch में लागू किए गए प्री-ट्रेंड U-Net मॉडल का उपयोग करके एक इमेज सेगमेंटेशन प्रोजेक्ट सेट अप करने में मदद कर सकते हैं? अतिरिक्त प्रशिक्षण की आवश्यकता नहीं है। डेटा ऑग्मेंटेशन लागू करें (जैसे, इमेज को फ्लिप और रोटेट करना), मूल्यांकन के लिए Dice गुणांक का उपयोग करें, सेगमेंटेड इमेज को `results/figures/` में सहेजें, सेगमेंटेशन से पहले और बाद की इमेज दिखाने वाला एक GIF एनीमेशन उत्पन्न करें और इसे `results/figures/segmentation_results.gif` में सहेजें, और मॉडल आर्किटेक्चर, प्रक्रिया, और सेगमेंटेशन परिणामों के साथ एक अच्छी तरह से प्रलेखित Jupyter Notebook बनाएं, इसे HTML रिपोर्ट में परिवर्तित करें (इसे `results/report.html` के रूप में सहेजें)।",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Pascal VOC\" डेटासेट का उपयोग `src/data_loader.py` में किया जाता है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "डेटा ऑग्मेंटेशन, जिसमें इमेज को फ्लिप और रोटेट करना शामिल है, `src/data_loader.py` में किया जाता है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "PyTorch से प्री-ट्रेंड \"U-Net\" मॉडल का उपयोग बिना अतिरिक्त प्रशिक्षण के किया जाता है और इसे `models/saved_models/` में सहेजा जाता है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"Dice गुणांक\" का उपयोग मूल्यांकन के लिए किया जाता है और इसे `results/metrics/` में सहेजा जाना चाहिए।",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "सेगमेंटेड इमेज को निर्दिष्ट फोल्डर `results/figures/` में सहेजा जाता है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        4
+      ],
+      "criteria": "सेगमेंटेशन से पहले और बाद की इमेज का GIF एनीमेशन उत्पन्न किया जाता है और इसे `results/figures/segmentation_results.gif` के रूप में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "एक Jupyter Notebook बनाई जाती है जिसमें मॉडल आर्किटेक्चर, प्री-ट्रेंड मॉडल को लागू करने की प्रक्रिया, और सेगमेंटेशन परिणाम शामिल होते हैं। इसे HTML रिपोर्ट में परिवर्तित किया जाता है और `results/report.html` के रूप में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook में प्रक्रिया के प्रत्येक चरण को समझाने वाले अच्छी तरह से प्रलेखित कोड स्निपेट शामिल होने चाहिए।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "GIF एनीमेशन को डेटासेट से विभिन्न इमेज पर सेगमेंटेशन से पहले और बाद के परिवर्तन को स्पष्ट रूप से दिखाना चाहिए।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

@@ -1,0 +1,15 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Turkish\\OpenHands\\workspaces\\OpenHands\\36_Music_Emotion_Classification_SVM_GTZAN_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "predictions.txt": null
+        },
+        "results\\figures": {},
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

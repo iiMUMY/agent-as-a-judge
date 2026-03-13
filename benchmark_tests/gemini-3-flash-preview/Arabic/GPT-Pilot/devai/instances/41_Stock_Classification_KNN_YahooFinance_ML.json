@@ -1,0 +1,93 @@
+{
+    "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+    "query": "تطوير نظام تصنيف الأسهم باستخدام نموذج KNN على مجموعة بيانات Yahoo Finance. يجب أن يحدد تنفيذك ما إذا كان سعر السهم المعطى سيرتفع أو ينخفض. ابدأ بتحميل مجموعة البيانات وإجراء هندسة الميزات، بما في ذلك توليد المؤشرات الفنية واختيار الميزات الأكثر صلة في `src/data_loader.py`. قم بتوحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`. طبق مصنف KNN لتصنيف الأسهم بناءً على الميزات المهندسة، واحفظ التنفيذ في `src/model.py`. بعد ذلك، احفظ نتائج التصنيف في `results/classification_results.txt`، وقم بتصور العلاقة بين المؤشرات الفنية ونتيجة التصنيف كخريطة حرارية باستخدام seaborn. احفظ الخريطة الحرارية كـ `results/figures/feature_correlation_heatmap.png`. أخيرًا، أنشئ دفتر Jupyter تفاعلي تحت `results/` يشرح العملية، ويعرض نتائج التصنيف، ويساعد في تسهيل التحديثات المستقبلية التي تقدم بيانات جديدة.",
+    "tags": [
+        "Classification",
+        "Financial Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Yahoo Finance\"، بما في ذلك تحميل البيانات وتحضيرها في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك توليد المؤشرات الفنية وإجراء اختيار الميزات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تطبيق \"KNN classifier\" لتصنيف الأسهم بناءً على الميزات المهندسة. يرجى حفظ التنفيذ في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التصنيف في `results/classification_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم حفظ خريطة حرارية تمثل الارتباطات بين المؤشرات الفنية ونتائج التصنيف كـ `results/figures/feature_correlation_heatmap.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم إنشاء \"Jupyter Notebook\" تفاعلي تحت `results/` لشرح العملية وعرض نتائج التصنيف.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتضمن دفتر Jupyter تفسيرات واضحة لكل خطوة، بما في ذلك هندسة الميزات وتقييم النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تسلط الخريطة الحرارية الضوء على المؤشرات الفنية الأكثر أهمية وتوفر رؤى حول علاقاتها.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يسمح النظام بتحديثات سهلة مع بيانات جديدة، مما يجعل الدفتر مرنًا للتحليل المستقبلي.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

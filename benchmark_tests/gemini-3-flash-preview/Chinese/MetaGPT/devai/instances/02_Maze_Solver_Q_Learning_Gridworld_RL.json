@@ -1,0 +1,70 @@
+{
+  "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+  "query": "你能帮我创建一个系统来使用Q学习算法解决迷宫式Gridworld任务吗？该系统应使用numpy来提高核心计算效率，并使用matplotlib进行可视化。Q学习算法应在`src/train.py`中实现，恰当命名的Gridworld环境应在`src/env.py`中实现，以便在实例化时可以指定网格大小和起始/结束位置。系统需要在训练期间记录学习曲线，跟踪情节及其对应的回报，并将其保存为`results/figures/learning_curve.png`。此外，我希望你能可视化并保存代理在每个情节中采取的路径到一个名为`results/figures/path_changes.gif`的文件中，并将训练好的模型保存为`models/saved_models/q_learning_model.npy`。在训练期间有某种实时反馈会很棒，比如看到进度或获得关于模型学习情况的更新。此外，如果可以，请尝试以一种易于修改或扩展的方式编写代码。",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/train.py`中使用\"Q学习\"算法。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "在`src/env.py`中定义\"Gridworld\"环境，用户可以指定网格大小和起始/结束位置。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "在训练期间记录学习曲线，并保存为`results/figures/learning_curve.png`。记录情节和回报。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "将学习到的模型保存为`models/saved_models/q_learning_model.npy`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "学习期间采取的路径被可视化并保存为`results/figures/path_changes.gif`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "在训练过程中应显示一些实时进度或反馈。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "代码应以易于修改或扩展的方式编写。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

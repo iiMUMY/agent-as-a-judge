@@ -1,0 +1,14 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\English\\OpenHands\\workspaces\\OpenHands\\06_Sentiment_Analysis_SVM_Sentiment140_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\metrics": {
+            "accuracy_score.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

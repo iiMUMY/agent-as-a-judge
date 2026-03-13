@@ -1,0 +1,113 @@
+{
+  "name": "50_Math_Problem_Solving_Transformer_DeepMindMath_DL",
+  "query": "你好！我需要帮助一个使用Transformer模型解决DeepMind Mathematics数据集中的数学问题的项目。请在`src/data_loader.py`中加载数据集并进行预处理。预处理应以语法一致的方式解析和标准化数学表达式，以便模型可以轻松处理它们。在`src/model.py`中实现Transformer。此外，在`src/train.py`中调整学习率和批量大小等超参数，并将训练损失曲线保存到`results/figures/training_loss_curve.png`。采样并保存一些Transformer生成的解决方案到`results/sample_solutions.txt`。使用你的模型，在`src/interface.py`中使用Gradio或Streamlit创建一个简单的交互工具，可以解决各种用户给定的数学问题。最后，生成一份关于模型在不同类型问题上的表现的报告，包括模型准确性、错误分析和未来改进建议。将其保存为`results/metrics/model_report.md`。提前感谢！",
+  "tags": [
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "DeepMind Mathematics数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行数据预处理，包括解析和标准化数学表达式。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现一个\"Transformer\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中调整学习率和批量大小等超参数。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "模型训练损失曲线保存为`results/figures/training_loss_curve.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "一些Transformer生成的解决方案保存在`results/sample_solutions.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "创建一个交互工具，允许用户输入数学问题并使用\"Gradio\"或\"Streamlit\"在`src/interface.py`中接收解决方案。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "生成一份包含模型准确性、错误分析和未来改进建议的报告，并保存为`results/metrics/model_report.md`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "预处理步骤应确保数学表达式以一种使模型易于处理的方式标准化。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "交互工具应能够处理各种类型的数学问题。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "报告应提供关于模型如何处理不同类型数学问题的见解，识别具体的优势和改进领域。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

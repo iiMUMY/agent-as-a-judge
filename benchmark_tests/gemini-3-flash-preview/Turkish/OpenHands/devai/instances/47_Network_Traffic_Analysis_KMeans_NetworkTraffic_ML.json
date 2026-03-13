@@ -1,0 +1,91 @@
+{
+  "name": "47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+  "query": "Kaggle'dan Network Intrusion veri seti (CIC-IDS-2017) kullanarak K-means kümeleme algoritması ile bir ağ trafiği analiz sistemi geliştirin. Veri setini yükleyin ve `src/data_loader.py` içinde veri değerlerinin aynı aralıkta olmasını sağlamak için standartlaştırın. K-means kümeleme algoritmasını `src/model.py` içinde uygulayın. Kümelemeleri siluet katsayısı ile değerlendirin ve değerlendirme sonuçlarını `results/metrics/` altında kaydedin. Kümeleme sonuçlarını `results/clustering_results.txt` olarak kaydedin. Kümeleme sonuçlarını görselleştirin ve görselleri `results/figures/network_traffic_visualization.png` olarak kaydedin. Kümeleme sonuçlarını keşfetmek için Dash veya Bokeh ile etkileşimli bir gösterge paneli oluşturun ve gösterge panelini `results/` altında kaydedin. Sistemin modüler olmasını sağlayın, böylece bir kullanıcı kümeleme algoritmasını hızlıca değiştirebilir.",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Kaggle'dan \"Network Intrusion veri seti (CIC-IDS-2017)\" `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri, `src/data_loader.py` içinde veri değerlerinin aynı aralıkta olmasını sağlamak için standartlaştırılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"K-means\" kümeleme algoritması `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"Siluet katsayısı\" değerlendirme için kullanılır. Değerlendirme sonuçları `results/metrics/` altında kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Kümeleme sonuçları yazdırılır ve `results/clustering_results.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Ağ trafiği kümeleme görselleştirilir ve `results/figures/network_traffic_visualization.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "\"Dash\" veya \"Bokeh\" kullanılarak etkileşimli bir gösterge paneli oluşturulur ve kümeleme sonuçlarını göstermek için `results/` altında kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Gösterge paneli, kullanıcıların belirli kümeleri ayrıntılı analiz için filtrelemesine ve derinlemesine incelemesine olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Görselleştirmeler, farklı kümeleri açıkça ayırt etmeli ve ağ trafiği verilerindeki desenleri kolayca tanımlamayı sağlamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Proje modüler olmalı, böylece bir kullanıcı kümeleme algoritmasını kolayca değiştirebilmelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

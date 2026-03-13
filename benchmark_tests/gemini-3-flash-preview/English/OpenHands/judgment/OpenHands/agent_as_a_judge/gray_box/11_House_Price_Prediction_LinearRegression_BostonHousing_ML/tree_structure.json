@@ -1,0 +1,21 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\English\\OpenHands\\workspaces\\OpenHands\\11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+    "tree_structure": {
+        ".": {},
+        "mrseba": {
+            "boston_house_price": null
+        },
+        "results": {},
+        "results\\figures": {
+            "prediction_vs_actual.png": null
+        },
+        "results\\metrics": {
+            "metrics.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

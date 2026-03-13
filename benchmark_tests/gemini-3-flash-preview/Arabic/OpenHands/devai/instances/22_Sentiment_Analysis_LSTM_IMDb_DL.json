@@ -1,0 +1,89 @@
+{
+    "name": "22_Sentiment_Analysis_LSTM_IMDb_DL",
+    "query": "هل يمكنك مساعدتي في إعداد مشروع لتحليل المشاعر باستخدام نموذج LSTM ومجموعة بيانات IMDb؟ يرجى تنفيذ تنظيف البيانات في `src/data_loader.py`، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم. استخدم تضمينات الكلمات لتحويل النص إلى صيغة رقمية واحفظ هذه التضمينات تحت `models/saved_models/`. ثم استخدم هذه التضمينات كمدخل لنموذج LSTM، والذي يجب تنفيذه في `src/model.py`. احفظ تقرير التصنيف في `results/metrics/classification_report.txt`. أنشئ دفتر Jupyter محفوظًا باسم `results/report.ipynb` مع تصور بنية النموذج وعملية التدريب. أيضًا، احفظ منحنيات خسارة التدريب والدقة في `results/figures/training_curves.png`. يفضل استخدام التضمينات المدربة مسبقًا (مثل Word2Vec أو GloVe) لتعزيز أداء النموذج.",
+    "tags": [
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة بيانات مراجعات الأفلام \"IMDb\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ تنظيف البيانات في `src/data_loader.py`، بما في ذلك إزالة الكلمات الشائعة وعلامات الترقيم.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "تُستخدم تمثيلات الكلمات لتحويل النص إلى صيغة رقمية ويتم حفظها تحت `models/saved_models/`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم استخدام نموذج \"LSTM\" لتحليل المشاعر ويجب تنفيذه في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ تقرير التصنيف كـ `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء دفتر Jupyter يحتوي على بنية النموذج وتصور عملية التدريب وحفظه كـ `results/report.ipynb`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء منحنيات خسارة التدريب والدقة وحفظها كـ `results/figures/training_curves.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون تضمينات الكلمات مدربة مسبقًا (مثل Word2Vec أو GloVe) للاستفادة من المعرفة الدلالية الموجودة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون دفتر Jupyter موثقًا جيدًا، مما يسهل على الآخرين فهم بنية النموذج وعملية التدريب.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

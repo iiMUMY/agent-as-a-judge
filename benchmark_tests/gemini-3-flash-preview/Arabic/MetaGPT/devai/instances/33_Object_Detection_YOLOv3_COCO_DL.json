@@ -1,0 +1,94 @@
+{
+    "name": "33_Object_Detection_YOLOv3_COCO_DL",
+    "query": "ساعدني في تطوير نظام لكشف الأجسام باستخدام نموذج YOLOv3 ومجموعة بيانات COCO. قم بتنزيل مجموعة البيانات ومعالجة الصور عن طريق تغيير الحجم والتطبيع في `src/data_loader.py`. قم بتنفيذ نموذج YOLOv3 واستخدم Non-Maximum Suppression (NMS) لتحسين النتائج في `src/model.py`. احفظ الأجسام المكتشفة في `results/figures/`، وأنشئ صفحة ويب تفاعلية باستخدام Streamlit في `src/app.py` لعرض نتائج الكشف. أخيرًا، قم بتقييم أداء النموذج، بما في ذلك المقاييس مثل mAP ووقت الاستدلال، واحفظ نتائج التقييم في `results/metrics/model_performance.txt`. يجب أن يدير النظام بشكل صحيح إطلاق وإنهاء تطبيق Streamlit لمنع استخدام الموارد غير الضروري.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنزيل مجموعة البيانات \"COCO\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك تغيير حجم الصور وتطبيعها، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"YOLOv3\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم تطبيق \"القمع غير الأقصى\" (NMS) لتحسين نتائج الكشف. يرجى تنفيذ ذلك في `src/model.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج الكشف في المجلد المحدد `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء صفحة ويب تفاعلية في `src/app.py` باستخدام \"Streamlit\" لعرض نتائج الكشف المحفوظة في `results/figures/`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج تقييم أداء النموذج في `results/metrics/model_performance.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون صفحة الويب \"Streamlit\" سهلة الاستخدام، مما يسمح للمستخدمين بتحميل وعرض صور جديدة للكشف بسهولة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يشمل تقييم الأداء مقاييس مثل mAP ووقت الاستدلال.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يدير النظام بشكل صحيح إطلاق وإنهاء تطبيق Streamlit.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

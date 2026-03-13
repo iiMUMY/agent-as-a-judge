@@ -1,0 +1,90 @@
+{
+    "name": "25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+    "query": "أبحث عن مشروع للتعرف على العواطف في الكلام باستخدام نموذج CNN-LSTM مع مجموعة بيانات RAVDESS، والتي يجب تنزيلها من Kaggle أو [هذا الرابط من Hugging Face](https://huggingface.co/datasets/xbgoose/ravdess). يجب أن يقوم المشروع بتحميل مجموعة البيانات وتنفيذ معالجة صوتية قوية (إزالة الضوضاء والتطبيع) واستخراج ميزات MFCC، يتم تنفيذها في `src/data_loader.py`. يجب تنفيذ نموذج CNN-LSTM في `src/model.py`. يجب حفظ دقة التعرف في `results/metrics/recognition_accuracy.txt`، ويجب إنشاء مصفوفة ارتباك وحفظها كـ `results/figures/confusion_matrix.png`. بالإضافة إلى ذلك، يجب إنشاء واجهة برمجة تطبيقات محلية سهلة الاستخدام باستخدام Flask للسماح للمستخدمين بتحميل ملفات الصوت والحصول على نتائج التعرف على العواطف، مع تضمين التنفيذ في `src/hci.py`.",
+    "tags": [
+        "Audio Processing",
+        "Classification"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"RAVDESS\" في `src/data_loader.py`، والتي يتم تنزيلها من Kaggle أو [هذا الرابط من Hugging Face](https://huggingface.co/datasets/xbgoose/ravdess).",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة الصوت المسبق، بما في ذلك إزالة الضوضاء والتطبيع، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تنفيذ استخراج ميزات MFCC في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"CNN-LSTM\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ دقة التعرف في `results/metrics/recognition_accuracy.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم توليد مصفوفة الالتباس وحفظها كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء واجهة برمجة تطبيقات محلية باستخدام \"Flask\" للسماح للمستخدمين بتحميل ملفات الصوت واستلام نتائج التعرف على العواطف. يجب تضمين التنفيذ في `src/hci.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون خطوة معالجة الصوت قوية، تقلل الضوضاء بشكل فعال مع الحفاظ على سلامة إشارات الكلام.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون واجهة برمجة التطبيقات المحلية سهلة الاستخدام، مع تعليمات واضحة لتحميل الملفات وتفسير النتائج.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic"
+}

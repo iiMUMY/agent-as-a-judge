@@ -1,0 +1,17 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Turkish\\OpenHands\\workspaces\\OpenHands\\47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "clustering_results.txt": null
+        },
+        "results\\figures": {
+            "network_traffic_visualization.png": null
+        },
+        "results\\metrics": {},
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

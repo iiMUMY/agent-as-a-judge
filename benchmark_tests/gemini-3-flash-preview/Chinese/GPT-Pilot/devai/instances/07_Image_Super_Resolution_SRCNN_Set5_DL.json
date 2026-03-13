@@ -1,0 +1,71 @@
+{
+  "name": "07_Image_Super_Resolution_SRCNN_Set5_DL",
+  "query": "你好，我需要使用SRCNN模型和Set5数据集（可从`https://huggingface.co/datasets/eugenesiow/Set5`获取）创建一个图像超分辨率项目。在`src/data_loader.py`中加载数据集。加载数据时，包括图像预处理步骤，如调整大小和归一化，全部在`src/data_loader.py`中进行。SRCNN模型应在`src/model.py`中加载和使用。保存5组比较图像，放大细节，作为`results/figures/super_resolution_compare.png`，以及超分辨率结果作为`results/figures/super_resolution_results.png`。生成的图像应为高质量，并清晰显示改进。",
+  "tags": [
+    "Computer Vision",
+    "Generative Models"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"Set5\"数据集（可从\"Hugging Face\"获取）。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行图像预处理，包括调整大小和归一化。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中使用\"SRCNN\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "保存五组比较图像，放大细节，并保存为`results/figures/super_resolution_compare.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "超分辨率结果保存为`results/figures/super_resolution_results.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "项目应生成高质量、清晰的超分辨率图像，并进行详细比较。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "应包括组织良好的输出图像，突出关键改进。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Chinese"
+}

@@ -1,0 +1,74 @@
+{
+  "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+  "query": "请帮助我使用来自 Hugging Face 的 Sentiment140 数据集构建一个推文情感分析系统。加载 Sentiment140 数据集，并在加载数据时，通过删除停用词、标点符号和特殊字符来清理数据，所有这些操作都在 `src/data_loader.py` 中完成。使用 Word2Vec 或 GloVe 进行文本向量化。这应该在 `src/data_loader.py` 中进行。接下来，在 `src/model.py` 中实现并训练一个 SVM 分类器。最后，将分类器的准确性报告写入 `results/metrics/accuracy_score.txt`。理想情况下，报告应该易于理解。",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在 `src/data_loader.py` 中获取来自 \"Hugging Face\" 的 \"Sentiment140\" 数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在 `src/data_loader.py` 中清理数据集，包括删除停用词、标点符号和特殊字符。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "在 `src/data_loader.py` 中使用 \"Word2Vec\" 或 \"GloVe\" 词嵌入将文本转换为向量。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在 `src/model.py` 中实现并训练一个 \"SVM 分类器\"。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "准确性分数被打印并保存为 `results/metrics/accuracy_score.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "数据集下载过程应可靠，并具有明确的错误处理。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "最终的准确性报告应简明易懂。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

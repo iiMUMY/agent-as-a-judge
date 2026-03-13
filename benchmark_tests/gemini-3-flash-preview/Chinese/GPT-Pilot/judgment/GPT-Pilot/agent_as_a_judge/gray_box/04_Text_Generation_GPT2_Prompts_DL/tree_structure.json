@@ -1,0 +1,11 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Chinese\\GPT-Pilot\\workspaces\\GPT-Pilot\\04_Text_Generation_GPT2_Prompts_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "generated_text.txt": null
+        }
+    }
+}

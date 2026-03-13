@@ -1,0 +1,91 @@
+{
+    "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+    "query": "هل يمكنك مساعدتي في بناء نظام لتوقع تعثر القروض باستخدام مصنف Random Forest مع مجموعة بيانات Lending Club Loan؟ ابدأ بتحميل مجموعة البيانات، ومعالجة البيانات غير المتوازنة باستخدام تقنيات زيادة أو تقليل العينة، وتنفيذ اختيار الميزات لتحديد الميزات الهامة، وكل ذلك يتم تنفيذه في `src/data_loader.py`. قم بتدريب نموذج Random Forest واحفظ النموذج المدرب في `models/saved_models/`. احفظ أهمية الميزات في `results/feature_importances.txt` واحفظ منحنى ROC كـ `results/figures/roc_curve.png` باستخدام matplotlib. أخيرًا، قم بإنشاء تقرير Markdown مفصل يلخص خطوات معالجة البيانات وتدريب النموذج وعملية التقييم، واحفظه كـ `results/loan_default_prediction_report.md`. يجب أن يتضمن التقرير رؤى حول أداء النموذج واقتراحات لتحسينات محتملة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Lending Club Loan\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة أو التقليل من العينة، ويتم تنفيذها في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                2
+            ],
+            "criteria": "يتم تنفيذ مصنف \"Random Forest\" للتنبؤ بتخلف القرض عن السداد. احفظ النموذج المدرب في `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ أهمية الميزات كـ `results/feature_importances.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم تصور \"منحنى ROC\" وحفظه باستخدام \"matplotlib\" في `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                5
+            ],
+            "criteria": "يتم إنشاء تقرير Markdown يحتوي على خطوات معالجة البيانات المسبقة، وتدريب النموذج، وعملية التقييم وحفظه كـ `results/loan_default_prediction_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "التقرير في Markdown مفصل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن التقرير في Markdown رؤى حول أداء النموذج واقتراحات لتحسينات محتملة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

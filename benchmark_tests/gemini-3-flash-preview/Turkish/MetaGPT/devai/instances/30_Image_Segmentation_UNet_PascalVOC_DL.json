@@ -1,0 +1,91 @@
+{
+  "name": "30_Image_Segmentation_UNet_PascalVOC_DL",
+  "query": "Pascal VOC veri kümesi ve PyTorch'ta uygulanmış önceden eğitilmiş bir U-Net modeli kullanarak bir görüntü segmentasyon projesi kurmama yardımcı olabilir misiniz? Ek eğitim gerekmez. Veri artırımı uygulayın (örneğin, görüntüleri çevirme ve döndürme), değerlendirme için Dice katsayısını kullanın, segmentlenmiş görüntüleri `results/figures/` dizinine kaydedin, segmentasyon öncesi ve sonrası görüntüleri gösteren bir GIF animasyonu oluşturup `results/figures/segmentation_results.gif` olarak kaydedin ve model mimarisi, süreç ve segmentasyon sonuçlarını içeren iyi belgelenmiş bir Jupyter Notebook oluşturun, bunu bir HTML raporuna dönüştürün (bunu `results/report.html` olarak kaydedin).",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Pascal VOC\" veri kümesi `src/data_loader.py` içinde kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Görüntüleri çevirme ve döndürme dahil veri artırımı `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "PyTorch'tan önceden eğitilmiş bir \"U-Net\" modeli ek eğitim olmadan kullanılır ve `models/saved_models/` içinde kaydedilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"Dice katsayısı\" değerlendirme için kullanılır ve `results/metrics/` içinde kaydedilmelidir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Segmentlenmiş görüntüler belirtilen `results/figures/` klasörüne kaydedilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        4
+      ],
+      "criteria": "Segmentasyon öncesi ve sonrası görüntülerin bir GIF animasyonu oluşturulur ve `results/figures/segmentation_results.gif` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Model mimarisi, önceden eğitilmiş modelin uygulanma süreci ve segmentasyon sonuçlarını içeren bir Jupyter Notebook oluşturulur. Bu, bir HTML raporuna dönüştürülür ve `results/report.html` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook, sürecin her adımını açıklayan iyi belgelenmiş kod parçacıkları içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "GIF animasyonu, veri kümesinden farklı görüntüler üzerinde segmentasyon öncesi ve sonrası değişiklikleri net bir şekilde göstermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

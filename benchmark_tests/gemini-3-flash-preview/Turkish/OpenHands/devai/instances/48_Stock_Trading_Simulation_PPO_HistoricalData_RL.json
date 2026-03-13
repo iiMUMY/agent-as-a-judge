@@ -1,0 +1,96 @@
+{
+  "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+  "query": "Merhaba! Proximal Policy Optimization (PPO) algoritmasını kullanarak bir hisse senedi ticaret ajanı geliştirmekle ilgileniyorum. Fikir, eğitim ve test için tarihsel piyasa verilerini kullanmak. Bir hisse senedi ticaret simülasyon ortamı `src/env.py` içinde uygulanmalı. Proximal Policy Optimization (PPO) algoritması `src/train.py` içinde uygulanmalı. Eğitilmiş ajanı `models/saved_models/` altında kaydedin. Tüm ticaret kararlarını `results/trade_decisions.txt` içinde kaydedin ve toplam karı `results/metrics/total_profit.txt` içinde saklayın. Kar eğrisini görselleştirin ve `results/figures/profit_curve.png` olarak kaydedin. Ticaret stratejisi, kar ve risk analizini kapsayan bir rapor oluşturun ve `results/trading_strategy_report.md` olarak kaydedin. Kullanıcıların farklı parametreleri denemelerine ve simülasyonlar çalıştırmalarına olanak tanıyan Streamlit kullanarak `src/visualize.py` içinde etkileşimli bir araç uygulayın.",
+  "tags": [
+    "Financial Analysis",
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Bir hisse senedi ticaret simülasyon ortamı `src/env.py` içinde uygulanır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Eğitim ve test için tarihsel piyasa verileri kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Proximal Policy Optimization (PPO)\" algoritması `src/train.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Ticaret kararları kaydedilir ve `results/trade_decisions.txt` olarak saklanır.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Toplam kar `results/metrics/total_profit.txt` olarak saklanır.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Kar eğrisi görselleştirilir ve `results/figures/profit_curve.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Ticaret stratejisi, kar ve risk analizini içeren bir rapor oluşturulur ve `results/trading_strategy_report.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Kullanıcıların farklı parametreleri denemelerine ve simülasyonlar çalıştırmalarına olanak tanıyan \"Streamlit\" kullanarak `src/visualize.py` içinde etkileşimli bir araç uygulanır.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Kar eğrisi görselleştirmesi, performansı etkileyen önemli ticaretleri veya olayları vurgulamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Rapor, parametre ayarlamalarının ticaret sonucunu nasıl etkilediğine dair içgörüler içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

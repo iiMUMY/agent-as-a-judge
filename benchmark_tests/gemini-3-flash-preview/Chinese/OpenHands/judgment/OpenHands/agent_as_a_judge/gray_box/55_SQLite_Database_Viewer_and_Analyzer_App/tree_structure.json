@@ -1,0 +1,30 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gemini-3-flash-preview\\Chinese\\OpenHands\\workspaces\\OpenHands\\55_SQLite_Database_Viewer_and_Analyzer_App",
+    "tree_structure": {
+        ".": {
+            "app": null,
+            "app_id": null,
+            "content": null,
+            "development_plan": null,
+            "development_planning": null,
+            "development_steps": null,
+            "llm_response": null,
+            "messages": null,
+            "prompt_data": null,
+            "prompt_path": null,
+            "role": null,
+            "text": null
+        },
+        "development": {},
+        "development\\task": {
+            "breakdown.prompt": null
+        },
+        "src": {
+            "backend.py": null,
+            "backend_logic.py": null,
+            "cache.py": null,
+            "frontend.py": null,
+            "frontend_render.py": null
+        }
+    }
+}

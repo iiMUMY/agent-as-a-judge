@@ -1,0 +1,90 @@
+{
+  "name": "25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+  "query": "我正在寻找一个使用CNN-LSTM模型和RAVDESS数据集的语音情感识别项目，该数据集应从Kaggle或[这个Hugging Face链接](https://huggingface.co/datasets/xbgoose/ravdess)下载。项目应加载数据集并执行稳健的音频预处理（去噪和归一化）以及MFCC特征提取，实现在`src/data_loader.py`中。CNN-LSTM模型应实现在`src/model.py`中。识别准确率应保存在`results/metrics/recognition_accuracy.txt`中，并生成混淆矩阵，保存为`results/figures/confusion_matrix.png`。此外，应使用Flask创建一个用户友好的本地API，允许用户上传音频文件并接收情感识别结果，实现在`src/hci.py`中。",
+  "tags": [
+    "Audio Processing",
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"RAVDESS\"数据集在`src/data_loader.py`中加载，从Kaggle或[这个Hugging Face链接](https://huggingface.co/datasets/xbgoose/ravdess)下载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "音频预处理，包括去噪和归一化，实现在`src/data_loader.py`中。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "MFCC特征提取实现在`src/data_loader.py`中。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"CNN-LSTM\"模型实现在`src/model.py`中。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "识别准确率保存在`results/metrics/recognition_accuracy.txt`中。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "混淆矩阵生成并保存为`results/figures/confusion_matrix.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "使用\"Flask\"创建一个本地API，允许用户上传音频文件并接收情感识别结果。实现应包含在`src/hci.py`中。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "音频预处理步骤应稳健，有效减少噪音，同时保持语音信号的完整性。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "本地API应用户友好，提供清晰的文件上传和结果解释说明。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Chinese"
+}
