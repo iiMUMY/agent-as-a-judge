@@ -1,0 +1,89 @@
+{
+  "name": "22_Sentiment_Analysis_LSTM_IMDb_DL",
+  "query": "क्या आप मुझे एक भावना विश्लेषण परियोजना सेट अप करने में मदद कर सकते हैं जिसमें एक LSTM मॉडल और IMDb डेटासेट का उपयोग किया गया हो? कृपया `src/data_loader.py` में डेटा सफाई लागू करें, जिसमें स्टॉप शब्द और विराम चिह्नों को हटाना शामिल है। टेक्स्ट को संख्यात्मक प्रारूप में बदलने के लिए शब्द एम्बेडिंग का उपयोग करें और इन एम्बेडिंग को `models/saved_models/` के तहत सहेजें। फिर इन एम्बेडिंग को एक LSTM मॉडल के इनपुट के रूप में उपयोग करें, जिसे `src/model.py` में लागू किया जाना चाहिए। वर्गीकरण रिपोर्ट को `results/metrics/classification_report.txt` में सहेजें। मॉडल आर्किटेक्चर और प्रशिक्षण प्रक्रिया को विज़ुअलाइज़ करते हुए एक Jupyter Notebook बनाएं और इसे `results/report.ipynb` के रूप में सहेजें। इसके अलावा, प्रशिक्षण हानि और सटीकता वक्रों को `results/figures/training_curves.png` में सहेजें। मॉडल प्रदर्शन को बढ़ाने के लिए पूर्व-प्रशिक्षित एम्बेडिंग (जैसे, Word2Vec या GloVe) पसंद की जाती हैं।",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"IMDb\" मूवी समीक्षाओं का डेटासेट उपयोग किया जाता है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "डेटा सफाई `src/data_loader.py` में लागू की जाती है, जिसमें स्टॉप शब्द और विराम चिह्नों को हटाना शामिल है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "शब्द एम्बेडिंग का उपयोग टेक्स्ट को संख्यात्मक प्रारूप में बदलने के लिए किया जाता है और `models/saved_models/` के तहत सहेजा जाता है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "भावना विश्लेषण के लिए \"LSTM\" मॉडल का उपयोग किया जाता है और इसे `src/model.py` में लागू किया जाना चाहिए।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "वर्गीकरण रिपोर्ट को `results/metrics/classification_report.txt` के रूप में सहेजा जाता है।",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "मॉडल आर्किटेक्चर और प्रशिक्षण प्रक्रिया के विज़ुअलाइज़ेशन के साथ एक Jupyter Notebook उत्पन्न किया जाता है और इसे `results/report.ipynb` के रूप में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "प्रशिक्षण हानि और सटीकता वक्र उत्पन्न किए जाते हैं और `results/figures/training_curves.png` में सहेजे जाते हैं।",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "शब्द एम्बेडिंग पूर्व-प्रशिक्षित होनी चाहिए (जैसे, Word2Vec या GloVe) ताकि मौजूदा अर्थ संबंधी ज्ञान का लाभ उठाया जा सके।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Jupyter Notebook को अच्छी तरह से प्रलेखित किया जाना चाहिए, जिससे अन्य लोगों के लिए मॉडल आर्किटेक्चर और प्रशिक्षण प्रक्रिया को समझना आसान हो।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

@@ -1,0 +1,18 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Arabic\\OpenHands\\workspaces\\OpenHands\\30_Image_Segmentation_UNet_PascalVOC_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "report.html": null
+        },
+        "results\\figures": {
+            "segmentation_results.gif": null
+        },
+        "results\\metrics": {},
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}

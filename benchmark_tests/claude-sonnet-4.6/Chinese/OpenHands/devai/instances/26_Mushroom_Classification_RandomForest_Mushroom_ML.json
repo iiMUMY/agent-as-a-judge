@@ -1,0 +1,95 @@
+{
+  "name": "26_Mushroom_Classification_RandomForest_Mushroom_ML",
+  "query": "使用随机森林模型在UCI Mushroom数据集上开发一个蘑菇分类系统。在`src/data_loader.py`文件中加载数据集。确保在`src/data_loader.py`中完成特征工程，包括特征编码和特征选择，以及缺失数据处理，然后再训练模型。在`src/train.py`中对处理后的数据集训练随机森林分类器。将分类结果保存为`results/classification_results.txt`。将特征重要性可视化并保存为`results/figures/feature_importance.png`，确保可视化清晰突出最具影响力的特征。使用Streamlit在`src/app.py`中创建一个交互式网页，以展示分类结果和模型性能。Streamlit网页应提供模型性能的概述，并允许用户与分类结果进行交互。系统应正确管理Streamlit可视化的开始和结束。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI Mushroom\"数据集在`src/data_loader.py`文件中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行特征工程，包括特征编码和特征选择。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "处理缺失数据以确保在`src/data_loader.py`中训练前数据集的清洁。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "在`src/train.py`中对处理后的数据集训练随机森林分类器。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "分类结果保存在`results/classification_results.txt`中。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "特征重要性可视化并保存为`results/figures/feature_importance.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "使用\"Streamlit\"在`src/app.py`中创建一个交互式网页，以展示分类结果和模型性能。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特征重要性可视化应清晰突出最具影响力的特征，便于解释。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Streamlit网页应提供模型性能的概述，并允许用户与分类结果进行交互。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "系统应正确管理Streamlit可视化的开始和结束。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

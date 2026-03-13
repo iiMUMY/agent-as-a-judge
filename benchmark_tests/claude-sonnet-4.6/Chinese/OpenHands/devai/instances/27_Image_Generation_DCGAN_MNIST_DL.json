@@ -1,0 +1,95 @@
+{
+  "name": "27_Image_Generation_DCGAN_MNIST_DL",
+  "query": "我需要使用DCGAN模型和MNIST数据集创建一个图像生成系统。在`src/data_loader.py`中加载MNIST数据集，并在`src/model.py`中实现DCGAN模型。系统应确保使用正确的DCGAN架构，将生成的图像保存到`results/figures/`，通过记录训练损失在`results/metrics/`和生成的图像在`results/figures/`下监控模型训练，并在`src/train.py`中对生成参数如噪声向量维度和学习率进行超参数搜索以提高性能。此外，创建并保存生成图像的GIF动画到`results/figures/generated_images.gif`，在结构良好的Jupyter Notebook中展示训练过程和结果，并将Notebook转换为精美的PDF报告，保存为`results/training_report.pdf`。DCGAN模型架构应在Notebook中清晰记录，以避免与其他GAN变体混淆。",
+  "tags": [
+    "Computer Vision",
+    "Generative Models"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"MNIST\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现\"DCGAN\"模型，而不是标准GAN。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "生成的图像保存到指定文件夹`results/figures/`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "通过记录训练损失在`results/metrics/`下监控模型训练。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "在`src/train.py`中实现超参数搜索方法，以搜索如噪声向量维度和学习率等参数，以提高模型性能。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "创建生成图像的GIF动画并保存为`results/figures/generated_images.gif`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "在Jupyter Notebook中展示训练过程和结果，并转换为PDF报告，保存为`results/training_report.pdf`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "DCGAN模型架构应在Notebook中清晰记录，以避免与其他GAN变体混淆。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "PDF报告应结构良好，包含模型架构、训练过程、结果和未来改进的清晰章节。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "Saving figures is mentioned twice, i.e., once in requirement 2 and once in requirement 3.",
+  "language": "Chinese"
+}

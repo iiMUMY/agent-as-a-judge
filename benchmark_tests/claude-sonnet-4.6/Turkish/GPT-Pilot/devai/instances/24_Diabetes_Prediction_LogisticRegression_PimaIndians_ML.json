@@ -1,0 +1,103 @@
+{
+  "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+  "query": "Lojistik Regresyon modeli ve Pima Indians Diabetes veri setini kullanarak bir diyabet tahmin projesi kurun. Özellik ölçeklendirme ve veri standardizasyonunu `src/data_loader.py` içinde gerçekleştirin. Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanın ve doğruluk skorunu `results/metrics/accuracy_score.txt` dosyasına kaydedin. ROC eğrisini oluşturun ve `results/figures/roc_curve.png` dosyasına kaydedin. Modelin performansını sergilemek ve önemli özellikleri vurgulamak için Tableau veya Power BI kullanarak etkileşimli bir gösterge paneli oluşturun. Gösterge panelinin kullanıcı dostu olmasını sağlayın ve veri seti işleme ve görselleştirme oluşturma adımlarını belgeleyin. Geliştirme sırasında, sistem gereksiz engellemeleri önlemek için Tableau veya Power BI'ın otomatik olarak açılıp kapanmasını yönetmelidir.",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Pima Indians Diabetes\" veri seti kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik ölçeklendirme ve veri standardizasyonu `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"Lojistik Regresyon\" modeli `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Modeli değerlendirmek için `src/train.py` içinde çapraz doğrulama kullanılır.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Doğruluk skoru `results/metrics/accuracy_score.txt` dosyasına kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "ROC eğrisi oluşturulur ve `results/figures/roc_curve.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Model performansını ve önemli özellikleri sergilemek için \"Tableau\" veya \"Power BI\" kullanılarak etkileşimli bir görselleştirme gösterge paneli oluşturulur.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Gösterge paneli, kullanıcıların modelin performansının farklı yönlerini keşfetmesine ve hangi özelliklerin tahminlere en çok katkıda bulunduğunu anlamasına olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Gösterge paneli, veri setinin nasıl işlendiğini ve görselleştirmelerin nasıl oluşturulduğunu açıkça göstermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Geliştirme sırasında, sistem uzun süreli engelleme veya hareketsizlikten kaçınmak için \"Tableau\" veya \"Power BI\"'ı gerektiği gibi otomatik olarak açıp kapatmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

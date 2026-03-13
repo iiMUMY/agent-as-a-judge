@@ -1,0 +1,91 @@
+{
+  "name": "47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+  "query": "使用K-means聚类算法开发一个网络流量分析系统，使用来自Kaggle的网络入侵数据集（CIC-IDS-2017）。在`src/data_loader.py`中加载数据集并标准化数据，以确保特征值在同一范围内。在`src/model.py`中实现K-means聚类算法。使用轮廓系数评估聚类，并将评估结果保存在`results/metrics/`下。将聚类结果保存为`results/clustering_results.txt`。可视化聚类结果并将可视化图保存为`results/figures/network_traffic_visualization.png`。使用Dash或Bokeh创建一个交互式仪表板以探索聚类结果，并将仪表板保存在`results/`下。确保系统是模块化的，以便用户可以快速更改聚类算法。",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "来自Kaggle的\"网络入侵数据集（CIC-IDS-2017）\"在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "数据在`src/data_loader.py`中标准化，以确保特征值在同一范围内。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"K-means\"聚类算法在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "使用\"轮廓系数\"进行评估。评估结果保存在`results/metrics/`下。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "聚类结果被打印并保存为`results/clustering_results.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "网络流量聚类被可视化并保存为`results/figures/network_traffic_visualization.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "使用\"Dash\"或\"Bokeh\"创建交互式仪表板以展示聚类结果，并保存在`results/`下。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "仪表板应允许用户过滤并深入特定聚类以进行详细分析。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "可视化应清晰区分不同的聚类，使识别网络流量数据中的模式变得容易。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "项目应是模块化的，允许用户轻松更换聚类算法。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

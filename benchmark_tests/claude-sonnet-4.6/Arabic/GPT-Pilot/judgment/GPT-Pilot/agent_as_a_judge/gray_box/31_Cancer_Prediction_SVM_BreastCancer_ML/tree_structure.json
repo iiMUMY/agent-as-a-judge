@@ -1,0 +1,18 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Arabic\\GPT-Pilot\\workspaces\\GPT-Pilot\\31_Cancer_Prediction_SVM_BreastCancer_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "confusion_matrix.png": null
+        },
+        "results\\metrics": {
+            "breast_cancer_prediction_report.pdf": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

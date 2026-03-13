@@ -1,0 +1,18 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Turkish\\MetaGPT\\workspaces\\MetaGPT\\24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "roc_curve.png": null
+        },
+        "results\\metrics": {
+            "accuracy_score.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

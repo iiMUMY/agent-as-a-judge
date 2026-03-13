@@ -1,0 +1,78 @@
+{
+  "name": "01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+  "query": "Merhaba! Fashion-MNIST veri kümesinden görüntüleri sınıflandırmak için PyTorch'ta ResNet-18 modelini kullanarak bir sistem kurmama yardımcı olabilir misiniz? Fashion-MNIST veri kümesi `src/data_loader.py` içinde yüklenmeli. Eğitim döngüsünde `src/train.py` içinde tqdm kütüphanesi ile eğitim ilerlemesini gösterecek bir sistem istiyorum ve modeli daha sağlam hale getirmek için `torchvision.transforms` ile (dönme ve ölçekleme gibi) bazı veri artırımları yapılmalı. Bu sonuncusu `src/data_loader.py` içinde uygulanmalı ve ResNet-18 modeli `src/model.py` içinde PyTorch'tan içe aktarılmalı. Eğitim tamamlandığında, lütfen eğitilmiş modeli `models/saved_models/` dizininde `fashionnet.pt` olarak kaydedin. Eğitim sürecinin mümkün olduğunca verimli olması harika olurdu. Ayrıca, kodu kolay anlaşılır ve kolay bakım yapılabilir bir tarzda yazmaya çalışın. Yapabilirseniz, model yorumlanabilirliği hakkında bazı içgörüler de eklemek harika olurdu, örneğin Grad-CAM veya benzeri bir şey kullanarak. Çok teşekkürler!",
+  "tags": [
+    "Classification",
+    "Computer Vision",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Fashion-MNIST\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri artırımı `torchvision.transforms` kullanılarak yapılır, dönme, ölçekleme vb. dahil. Uygulama `src/data_loader.py` içindedir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"ResNet-18\" modeli \"PyTorch\"'tan `src/model.py` içinde içe aktarılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Eğitim ilerlemesi ana eğitim döngüsünde `src/train.py` içinde \"tqdm\" kütüphanesi kullanılarak gösterilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Eğitilmiş model `models/saved_models/` dizininde `fashionnet.pt` dosya adı altında kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Kod, uygun yorumlarla açık, anlaşılır ve bakımı kolay bir tarzda yazılmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Eğitim süreci verimli olmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Model yorumlanabilirliği hakkında içgörüler sağlanmalıdır, örneğin görselleştirme için Grad-CAM gibi teknikler kullanılarak.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

@@ -1,0 +1,91 @@
+{
+  "name": "29_Financial_Time_Series_Prediction_LSTM_ML",
+  "query": "Bana, hisse senedi fiyatları veya Bitcoin fiyatları gibi gerçek dünya Finansal Analizi ile bir LSTM modeli kullanarak finansal zaman serisi tahmin sistemi kurmamda yardımcı olabilir misiniz? Öncelikle, `src/data_loader.py` içinde eksik değerler ve aykırı değerlerle ilgilenerek verileri temizlememiz gerekecek. Ardından, `src/data_loader.py` içinde bir zaman penceresi kullanarak zaman serisi verilerini denetimli öğrenme formatına dönüştürelim. Son olarak, tahmin için `src/model.py` içinde uygulanan bir LSTM modeli uygulayın. Tahminleri aldıktan sonra sonuçları `results/prediction_results.text` olarak kaydedin. Tahmin sonuçlarını görselleştiren etkileşimli bir gösterge tablosu oluşturun ve uygulamayı `src/dashboard.py` içinde kaydedin. Son olarak, model mimarisi, eğitim süreci ve performans analizini gösteren bir Markdown belgesi oluşturup `results/report.md` olarak kaydederseniz sevinirim. Sistem, kaynakları korumak için Dash uygulamasının başlangıç ve durdurma işlemlerini otomatik olarak yönetmelidir. Çok teşekkürler!",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Gerçek dünya finansal zaman serisi verileri (örneğin, \"hisse senedi fiyatları\" veya \"Bitcoin fiyatları\") `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri temizleme işlemi, eksik değerler ve aykırı değerlerin ele alınması dahil olmak üzere `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Zaman serisi verilerini denetimli öğrenme problemine dönüştürmek için bir zaman penceresi kullanılır. Lütfen bunu `src/data_loader.py` içinde uygulayın.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Finansal zaman serisi tahmini için bir \"LSTM\" modeli kullanılır ve `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Tahmin sonuçları `results/prediction_results.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Tahmin sonuçlarının etkileşimli bir görselleştirme gösterge tablosu \"Dash\" kullanılarak oluşturulur. Uygulama `src/visualize.py` içinde kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Model mimarisi, eğitim süreci ve performans analizini içeren bir Markdown belgesi oluşturulur ve `results/report.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "\"Dash\" gösterge tablosu, kullanıcıların tahmin sonuçlarıyla etkileşimde bulunmasına, farklı zaman dilimlerini keşfetmesine ve ayrıntılı analiz için belirli dönemlere yakınlaştırmasına olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Geliştirme sırasında, sistem gereksiz kaynak kullanımını önlemek için \"Dash\" uygulamasının başlangıç ve durdurma işlemlerini otomatik olarak yönetmelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

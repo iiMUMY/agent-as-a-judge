@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Turkish\\OpenHands\\workspaces\\OpenHands\\49_Explainable_AI_LIME_Titanic_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "model_explanation.md": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "report.py": null,
+            "visualize.py": null
+        }
+    }
+}

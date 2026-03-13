@@ -1,0 +1,88 @@
+{
+  "name": "42_Medical_Image_Classification_DenseNet121_ChestXray_DL",
+  "query": "Önceden eğitilmiş DenseNet-121 modeli ve Kaggle Chest X-ray veri setini kullanarak bir tıbbi görüntü sınıflandırma sistemi oluşturun. Veri setini yükleyip ön işleme yaparak ve veri artırımı (dönme, çeviri ve ölçekleme dahil) gerçekleştirerek `src/data_loader.py` içinde başlayın. Sınıflandırma için DenseNet-121 modelini uygulayın, doğruluğu kaydedin ve `results/metrics/classification_accuracy.txt` dosyasına kaydedin. Modeli ince ayarlayın ve `models/saved_models/chest_xray_densenet_model.pth` olarak kaydedin. Modelin karar verme sürecini görselleştirmek için Grad-CAM kullanın ve bu görselleştirmeleri `results/figures/grad_cam_visualizations.gif` olarak kaydedin. Son olarak, model mimarisi, eğitim süreci, veri artırma teknikleri ve sonuçların analizi hakkında belgeler içeren bir Markdown raporu oluşturun ve `results/medical_image_classification_report.md` olarak kaydedin. Ayrıca, sistemin esnek olması ve DenseNet-121'in bir insan kullanıcı tarafından kolayca daha fazla ince ayar yapılabilmesi de hoş olurdu.",
+  "tags": [
+    "Classification",
+    "Computer Vision",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Chest X-ray\" veri seti kullanılır, veri yükleme ve ön işleme `src/data_loader.py` içinde uygulanır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri artırımı yapılır, `src/data_loader.py` içinde görüntülerin döndürülmesi, çevrilmesi ve ölçeklenmesi dahil.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Önceden eğitilmiş \"DenseNet-121\" modeli ince ayarlanır ve `models/saved_models/` içinde kaydedilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Sınıflandırma doğruluğu yazdırılır ve `results/metrics/classification_accuracy.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "\"Grad-CAM\" model kararlarını görselleştirmek için kullanılır, görselleştirmeler `results/figures/grad_cam_visualizations.gif` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Model mimarisi, eğitim süreci, veri artırma ve sonuç analizi içeren bir \"Markdown\" raporu oluşturulur ve `results/medical_image_classification_report.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "\"Markdown\" raporu, veri artırmanın model performansı üzerindeki etkisini açıklayan bir bölüm içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "\"Grad-CAM\" görselleştirmeleri, modelin kararlarına en çok katkıda bulunan görüntü alanlarını açıkça vurgulamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, \"DenseNet-121\" modelinin daha fazla ince ayar yapılmasına olanak tanıyacak şekilde esnek olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "37_Lane_Detection_ResNet50_TuSimple_DL",
+  "query": "Bir şerit tespit sistemi geliştirin. `src/model.py` dosyasında PyTorch'tan standart önceden eğitilmiş ResNet-50 modelini içe aktararak başlayın. Test veri setimiz olarak TuSimple şerit tespit veri seti ile çalışacağız ve bu veri seti `src/data_loader.py` aracılığıyla yüklenmelidir. Ardından veri setini yükleyin ve ön işleme yapın, `src/data_loader.py` dosyasında rastgele kırpma, döndürme ve ölçekleme gibi veri artırma tekniklerini içeren işlemleri gerçekleştirin. Modeli ince ayarlayın ve tespit doğruluğunu `results/metrics/detection_accuracy.txt` dosyasına kaydedin ve eğitilmiş modeli `models/saved_models/lane_detection_model.pth` olarak kaydedin. Doğrulama için verilerin bir alt kümesini ayırın, bu `src/data_loader.py` dosyasında uygulanmıştır. Tespit sonuçlarını matplotlib kullanarak görselleştirin ve `results/figures/` dizinine kaydedin. Veri ön işleme, model eğitimi ve değerlendirme dahil olmak üzere tüm sürecin ayrıntılı bir raporunu oluşturun ve bunu `results/lane_detection_report.pdf` olarak kaydedin. Rapor ayrıca modelin eğriler veya zayıf aydınlatma gibi zorlu koşullar altındaki performansını da analiz etmelidir.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"TuSimple\" şerit tespit veri seti `src/data_loader.py` dosyasında yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Rastgele kırpma, döndürme ve ölçekleme dahil veri artırma işlemleri `src/data_loader.py` dosyasında gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Verilerin bir alt kümesi doğrulama için ayrılır ve `src/data_loader.py` dosyasında uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Önceden eğitilmiş \"ResNet-50\" modeli `src/model.py` dosyasında PyTorch'tan içe aktarılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"ResNet-50\" modelini ince ayarlayın ve `models/saved_models/lane_detection_model.pth` olarak kaydedin.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Tespit doğruluğu `results/metrics/detection_accuracy.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Tespit sonuçları \"matplotlib\" ile görselleştirilir ve `results/figures/` dizinine kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Veri ön işleme, model eğitimi ve değerlendirme sürecini içeren ayrıntılı bir rapor oluşturulur ve `results/lane_detection_report.pdf` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Rapor, modelin eğriler veya zayıf aydınlatma koşulları gibi zorlu senaryolardaki performans analizini içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Veri artırma adımları iyi belgelenmeli ve raporda artırılmış görüntü örnekleri dahil edilmelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

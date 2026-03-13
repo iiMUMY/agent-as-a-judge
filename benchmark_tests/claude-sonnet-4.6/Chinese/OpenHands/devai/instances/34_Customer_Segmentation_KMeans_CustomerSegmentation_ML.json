@@ -1,0 +1,89 @@
+{
+  "name": "34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+  "query": "我需要使用K-means聚类算法和Kaggle Customer Segmentation数据集创建一个客户细分系统。首先在`src/data_loader.py`中标准化数据，然后使用肘部法确定最佳聚类数，并将肘部图保存到`results/figures/elbow.jpg`。在`src/model.py`中实现K-means算法。将聚类中心保存到`results/metrics/cluster_centers.txt`。使用seaborn可视化细分结果，并将图保存为`results/figures/customer_segmentation.png`。创建一个交互式Dash仪表板，允许动态探索细分。",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"Kaggle Customer Segmentation\"数据集，包括在`src/data_loader.py`中的数据加载和准备。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "数据在`src/data_loader.py`中被标准化，以确保特征值在同一范围内。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "使用肘部法确定最佳聚类数。请将肘部图保存到`results/figures/elbow.jpg`。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现K-means聚类算法。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "聚类中心保存在`results/metrics/cluster_centers.txt`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "使用\"seaborn\"可视化客户细分，图表保存为`results/figures/customer_segmentation.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "使用\"Dash\"创建一个允许动态探索细分的交互式仪表板。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "肘部图清晰显示如何确定最佳聚类数。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": " 系统正确管理仪表板的启动和终止。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

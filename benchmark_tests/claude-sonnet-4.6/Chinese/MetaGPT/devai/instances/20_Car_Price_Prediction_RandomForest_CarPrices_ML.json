@@ -1,0 +1,96 @@
+{
+  "name": "20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+  "query": "你能帮我使用随机森林模型和Kaggle Car Prices数据集创建一个汽车价格预测项目吗？加载数据集并在`src/data_loader.py`中执行特征选择以识别重要特征。在`src/train.py`中使用交叉验证来评估模型。将R-squared分数、均方误差（MSE）和平均绝对误差（MAE）保存到`results/metrics/results/metrics.txt`。可视化特征重要性并将其保存到`results/figures/feature_importance.png`。生成一个Markdown报告，提供关于所选特征如何影响汽车价格预测的见解。将报告保存为`results/report.md`。",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Car Prices\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中实现特征选择以识别重要特征。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Random Forest\"回归模型在`src/model.py`中使用。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中使用交叉验证来评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"R-squared\"分数、\"均方误差（MSE）\"和\"平均绝对误差（MAE）\"保存在`results/metrics/results/metrics.txt`中。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "特征重要性被可视化并保存为`results/figures/feature_importance.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "生成包含结果和可视化的Markdown文件，并保存为`results/report.md`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特征选择过程应彻底，确保模型中仅使用最相关的特征。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdown报告应提供关于所选特征如何影响汽车价格预测的清晰见解。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

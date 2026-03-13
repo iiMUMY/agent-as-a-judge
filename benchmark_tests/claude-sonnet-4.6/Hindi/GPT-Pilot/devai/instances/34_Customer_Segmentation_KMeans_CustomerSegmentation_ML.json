@@ -1,0 +1,89 @@
+{
+  "name": "34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+  "query": "मुझे Kaggle Customer Segmentation डेटासेट का उपयोग करके K-means क्लस्टरिंग एल्गोरिदम के साथ एक ग्राहक विभाजन प्रणाली बनानी है। `src/data_loader.py` में डेटा को मानकीकृत करके शुरू करें, फिर क्लस्टरों की इष्टतम संख्या निर्धारित करने के लिए एल्बो विधि का उपयोग करें और एल्बो प्लॉट को `results/figures/elbow.jpg` में सहेजें। `src/model.py` में K-means एल्गोरिदम लागू करें। क्लस्टर केंद्रों को `results/metrics/cluster_centers.txt` में सहेजें। विभाजन परिणामों को seaborn का उपयोग करके दृश्यात्मक बनाएं और प्लॉट को `results/figures/customer_segmentation.png` के रूप में सहेजें। एक इंटरैक्टिव Dash डैशबोर्ड बनाएं जो सेगमेंट्स की गतिशील खोज की अनुमति देता है।",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Customer Segmentation\" डेटासेट का उपयोग किया जाता है, जिसमें डेटा लोडिंग और तैयारी `src/data_loader.py` में शामिल है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "डेटा को मानकीकृत किया जाता है ताकि फीचर मान एक ही रेंज में हों `src/data_loader.py` में।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "क्लस्टरों की इष्टतम संख्या निर्धारित करने के लिए एल्बो विधि का उपयोग किया जाता है। कृपया एल्बो प्लॉट को `results/figures/elbow.jpg` में सहेजें।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "K-means क्लस्टरिंग एल्गोरिदम `src/model.py` में लागू किया जाता है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "क्लस्टर केंद्रों को `results/metrics/cluster_centers.txt` में सहेजा जाता है।",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "ग्राहक विभाजन को \"seaborn\" का उपयोग करके दृश्यात्मक किया जाता है, प्लॉट को `results/figures/customer_segmentation.png` के रूप में सहेजा जाता है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "एक इंटरैक्टिव डैशबोर्ड जो सेगमेंट्स की गतिशील खोज की अनुमति देता है, \"Dash\" का उपयोग करके बनाया जाता है।",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "एल्बो प्लॉट स्पष्ट रूप से दिखाता है कि क्लस्टरों की इष्टतम संख्या कैसे निर्धारित की जाती है।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "सिस्टम डैशबोर्ड के लॉन्च और समाप्ति को सही ढंग से प्रबंधित करता है।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

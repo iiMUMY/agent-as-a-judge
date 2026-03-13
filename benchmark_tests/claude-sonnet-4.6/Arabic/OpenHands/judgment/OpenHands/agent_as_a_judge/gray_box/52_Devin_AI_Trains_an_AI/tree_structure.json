@@ -1,0 +1,16 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Arabic\\OpenHands\\workspaces\\OpenHands\\52_Devin_AI_Trains_an_AI",
+    "tree_structure": {
+        ".": {},
+        "github.com": {},
+        "github.com\\artidoro": {
+            "qlora": null
+        },
+        "models": {},
+        "models\\saved_models": {},
+        "results": {},
+        "results\\metrics": {
+            "finetuning_summary.txt": null
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Turkish\\GPT-Pilot\\workspaces\\GPT-Pilot\\40_Text_Summarization_BART_CNNDailyMail_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "summary_results.txt": null,
+            "text_summarization_report.pdf": null
+        },
+        "results\\figures": {
+            "summary_length_distribution.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "visualize.py": null
+        }
+    }
+}

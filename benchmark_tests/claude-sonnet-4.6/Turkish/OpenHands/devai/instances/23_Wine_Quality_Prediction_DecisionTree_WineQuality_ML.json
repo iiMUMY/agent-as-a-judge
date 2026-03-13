@@ -1,0 +1,98 @@
+{
+  "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+  "query": "UCI'den Wine Quality veri kümesi ile bir Karar Ağacı modeli kullanarak bir şarap kalitesi tahmin sistemi oluşturun. Eksik değerlerin işlenmesi ve özellik ölçeklendirme dahil olmak üzere verileri `src/data_loader.py` içinde ön işleyin. Modeli `src/train.py` içinde çapraz doğrulama ile değerlendirin. Karar Ağacı regresyon modelini `src/model.py` içinde uygulayın. Ortalama kare hatayı `results/metrics/mean_squared_error.txt` olarak kaydedin. Özellik önemini görselleştirin ve `results/figures/feature_importance.png` olarak kaydedin. Sonuçlar ve görselleştirmeler içeren bir Jupyter Notebook oluşturun ve gözlemlerinizi özetleyin. Notebook, tekrarlanabilirliği sağlamak için ön işleme adımlarını ayrıntılı bir şekilde belgelemelidir. Notebook'u bir PDF raporuna dönüştürün ve `results/report.pdf` olarak kaydedin. PDF raporu ayrıca modelin potansiyel iyileştirmeleri hakkında kısa bir tartışma içermelidir.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI\"den \"Wine Quality\" veri kümesi kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Eksik değerlerin işlenmesi ve özellik ölçeklendirme dahil olmak üzere veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Karar Ağacı\" regresyon modeli `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Model `src/train.py` içinde çapraz doğrulama ile değerlendirilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Ortalama Kare Hata (MSE) `results/metrics/mean_squared_error.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Özellik önem grafiği oluşturulur ve `results/figures/feature_importance.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Ön işleme adımları, sonuçlar ve görselleştirmeler içeren bir Jupyter Notebook oluşturulur ve gözlemler özetlenir. Notebook, bir PDF raporuna dönüştürülür ve `results/report.pdf` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Özellik önem grafiği, en etkili özellikleri net bir şekilde vurgulamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Son PDF raporu, modelin potansiyel iyileştirmeleri hakkında kısa bir tartışma içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

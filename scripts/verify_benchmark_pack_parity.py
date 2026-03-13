@@ -1,4 +1,5 @@
 import hashlib
+import argparse
 from pathlib import Path
 
 
@@ -15,9 +16,14 @@ def digest_files(paths: list[Path]) -> str:
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--source_pack", default="gpt-4o")
+    parser.add_argument("--target_pack", default="gpt-5.4")
+    args = parser.parse_args()
+
     root = Path("benchmark_tests")
-    source_pack = "gpt-4o"
-    target_pack = "gpt-5.4"
+    source_pack = args.source_pack
+    target_pack = args.target_pack
 
     all_ok = True
     for language in LANGUAGES:

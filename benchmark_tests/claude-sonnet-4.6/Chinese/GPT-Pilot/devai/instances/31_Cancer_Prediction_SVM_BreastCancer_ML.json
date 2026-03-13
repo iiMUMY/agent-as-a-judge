@@ -1,0 +1,88 @@
+{
+  "name": "31_Cancer_Prediction_SVM_BreastCancer_ML",
+  "query": "你能帮我创建一个使用SVM模型和Breast Cancer Wisconsin数据集进行乳腺癌预测的项目吗？加载数据集并在`src/data_loader.py`中执行特征选择以识别重要特征。在`src/model.py`中实现用于癌症预测的SVM分类器。在`src/train.py`中使用交叉验证来评估模型。将混淆矩阵保存为`results/figures/confusion_matrix.png`。编写一份详细的报告，记录从数据预处理到模型训练和评估的整个过程。报告应涵盖特征选择过程，并包含性能指标的清晰热图。将报告保存为`results/metrics/breast_cancer_prediction_report.pdf`。",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"Breast Cancer Wisconsin\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中执行特征选择以识别重要特征。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "使用\"SVM分类器\"进行癌症预测，并应在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中使用交叉验证来评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "打印并保存混淆矩阵为`results/figures/confusion_matrix.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "创建一份包含数据预处理、模型训练和评估过程的详细报告，并保存为`results/metrics/breast_cancer_prediction_report.pdf`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "报告中应详细记录特征选择过程，解释为何选择某些特征。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "热图应清晰区分不同的性能指标，如精确度、召回率和F1-score。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "报告应包括对模型性能的讨论和潜在改进领域。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

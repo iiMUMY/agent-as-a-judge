@@ -1,0 +1,88 @@
+{
+    "name": "42_Medical_Image_Classification_DenseNet121_ChestXray_DL",
+    "query": "إنشاء نظام لتصنيف الصور الطبية باستخدام نموذج DenseNet-121 المدرب مسبقًا ومجموعة بيانات Kaggle Chest X-ray. ابدأ بتحميل ومعالجة مجموعة البيانات وأداء تعزيز البيانات (بما في ذلك الدوران، الترجمة، والتحجيم) في `src/data_loader.py`. طبق نموذج DenseNet-121 للتصنيف، سجل الدقة واحفظها في `results/metrics/classification_accuracy.txt`. قم بضبط النموذج وحفظه كـ `models/saved_models/chest_xray_densenet_model.pth`. استخدم Grad-CAM لتصور عملية اتخاذ القرار للنموذج واحفظ هذه التصورات كـ `results/figures/grad_cam_visualizations.gif`. أخيرًا، أنشئ تقرير Markdown يوثق بنية النموذج، عملية التدريب، تقنيات تعزيز البيانات، وتحليل النتائج، واحفظه كـ `results/medical_image_classification_report.md`. سيكون من الجيد أيضًا أن يكون النظام مرنًا بحيث يمكن ضبط DenseNet-121 بسهولة أكبر بواسطة مستخدم بشري.",
+    "tags": [
+        "Classification",
+        "Computer Vision",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Kaggle Chest X-ray\"، مع تحميل البيانات ومعالجتها مسبقًا في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ زيادة البيانات، بما في ذلك التدوير والترجمة وتغيير حجم الصور في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تحسين النموذج المدرب مسبقًا \"DenseNet-121\" وحفظه في `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم طباعة دقة التصنيف وحفظها كـ `results/metrics/classification_accuracy.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم استخدام \"Grad-CAM\" لتصور قرارات النموذج، وحفظ التصورات كـ `results/figures/grad_cam_visualizations.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء تقرير \"Markdown\" يحتوي على بنية النموذج وعملية التدريب وزيادة البيانات وتحليل النتائج، وحفظه كـ `results/medical_image_classification_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتضمن تقرير \"Markdown\" قسمًا يشرح تأثير تعزيز البيانات على أداء النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تبرز تصورات \"Grad-CAM\" بوضوح المناطق في الصور التي ساهمت بشكل أكبر في قرارات النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يكون النظام مرنًا للسماح بمزيد من ضبط نموذج \"DenseNet-121\".",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

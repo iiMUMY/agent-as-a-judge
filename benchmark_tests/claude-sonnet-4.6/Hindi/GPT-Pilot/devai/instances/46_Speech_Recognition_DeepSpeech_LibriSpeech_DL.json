@@ -1,0 +1,91 @@
+{
+  "name": "46_Speech_Recognition_DeepSpeech_LibriSpeech_DL",
+  "query": "मैं DeepSpeech लाइब्रेरी और LibriSpeech डेटासेट का उपयोग करके एक स्पीच रिकग्निशन सिस्टम विकसित करना चाहता हूँ। क्या आप मेरे लिए डेटा लोडिंग और ऑडियो प्रीप्रोसेसिंग, जिसमें शोर में कमी और सामान्यीकरण शामिल है, `src/data_loader.py` में लागू कर सकते हैं? कृपया `src/train.py` में लर्निंग रेट और बैच साइज जैसे हाइपरपैरामीटर्स को ट्यून करें। कृपया पहचान के परिणामों को `results/recognition_results.txt` में सहेजें। इसके बाद, ऑडियो प्रोसेसिंग चरणों (जैसे वेवफॉर्म और स्पेक्ट्रोग्राम) के विज़ुअलाइज़ेशन बनाएं और उन्हें `results/figures/audio_visualization.png` के रूप में सहेजें। पहचान सटीकता, त्रुटि विश्लेषण, और भविष्य के सुधारों के सुझावों पर एक विस्तृत रिपोर्ट उत्पन्न करें, और इसे `results/recognition_report.md` के रूप में सहेजें। इसके अतिरिक्त, DeepSpeech की सेटअप प्रक्रिया का दस्तावेजीकरण करें, सामान्य इंस्टॉलेशन समस्याओं के लिए सुझावों के साथ, [DeepSpeech दस्तावेज़ीकरण](https://deepspeech.readthedocs.io/en/r0.9/) को संदर्भ के रूप में उपयोग करें। अंतिम मॉडल को `models/saved_models/` में सहेजें। पहले से धन्यवाद!",
+  "tags": [
+    "Audio Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"LibriSpeech\" डेटासेट को `src/data_loader.py` में लोड किया गया है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "ऑडियो प्रीप्रोसेसिंग, जिसमें शोर में कमी और सामान्यीकरण शामिल है, `src/data_loader.py` में किया गया है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "लर्निंग रेट और बैच साइज जैसे हाइपरपैरामीटर्स को `src/train.py` में ट्यून किया गया है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "स्पीच रिकग्निशन मॉडल को `models/saved_models/` में सहेजा गया है।",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "पहचान के परिणामों को `results/recognition_results.txt` के रूप में सहेजा गया है।",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "ऑडियो प्रोसेसिंग के विज़ुअलाइज़ेशन, जैसे वेवफॉर्म और स्पेक्ट्रोग्राम, उत्पन्न किए गए हैं और `results/figures/audio_visualization.png` के रूप में सहेजे गए हैं।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "पहचान सटीकता, त्रुटि विश्लेषण, और भविष्य के सुधारों के सुझावों वाली एक रिपोर्ट उत्पन्न की गई है और `results/recognition_report.md` के रूप में सहेजी गई है।",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "\"DeepSpeech\" लाइब्रेरी की इंस्टॉलेशन प्रक्रिया को अच्छी तरह से दस्तावेजीकृत किया जाना चाहिए, यदि लाइब्रेरी इंस्टॉल करने में विफल होती है तो समस्या निवारण सुझावों के साथ। मार्गदर्शन के लिए [DeepSpeech दस्तावेज़ीकरण](https://deepspeech.readthedocs.io/en/r0.9/) का संदर्भ लें।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "विज़ुअलाइज़ेशन को ऑडियो प्रोसेसिंग के चरणों को स्पष्ट रूप से चित्रित करना चाहिए, जिससे प्रीप्रोसेसिंग के प्रभावों को समझना आसान हो।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "रिपोर्ट में वैकल्पिक मॉडल या दृष्टिकोणों के लिए सिफारिशें शामिल होनी चाहिए यदि \"DeepSpeech\" लाइब्रेरी को लागू करना चुनौतीपूर्ण साबित होता है।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Hindi"
+}

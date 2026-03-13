@@ -1,0 +1,99 @@
+{
+    "name": "12_Spam_Detection_SVM_Enron_ML",
+    "query": "مرحبًا. أحتاج منك بناء مشروع لاكتشاف رسائل البريد الإلكتروني العشوائية باستخدام المصنف Support Vector Machine (SVM) على مجموعة بيانات Enron-Spam. يجب أن يقوم المشروع بتهيئة النص عن طريق إزالة الكلمات التوقف وعلامات الترقيم، واستخدام ميزات TF-IDF، وإجراء ضبط للمعلمات الفائقة باستخدام GridSearchCV، وحفظ مصفوفة الالتباس في `results/figures/confusion_matrix.png`. كما أحتاج إلى كتابة وحفظ تقرير شامل، يتضمن الدقة والاسترجاع وF1-score ومصفوفة الالتباس (التي سيتم إنشاؤها كـ `results/figures/confusion_matrix.png`)، تحت `results/classification_report.pdf`. يجب تحميل مجموعة بيانات Enron-Spam في `src/data_loader.py`. يجب أن يتم تهيئة النص، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم وحساب ميزات TF-IDF، في `src/data_loader.py`. يجب تنفيذ المصنف SVM في `src/model.py`. يجب إجراء ضبط المعلمات الفائقة باستخدام GridSearchCV في `src/train.py`. سيكون من المفيد إذا تم تحسين خطوة تهيئة النص للتعامل مع عدد كبير من رسائل البريد الإلكتروني بكفاءة.",
+    "tags": [
+        "Classification",
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Enron-Spam\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة النصوص المسبقة، بما في ذلك إزالة الكلمات التوقف وعلامات الترقيم في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام ميزات \"TF-IDF\" في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ \"SVM classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم ضبط المعلمات الفائقة باستخدام \"GridSearchCV\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\" والشكل `results/figures/confusion_matrix.png`، كـ `results/classification_report.pdf`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب تحسين خطوة تهيئة النص للتعامل مع عدد كبير من رسائل البريد الإلكتروني بكفاءة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التقرير التصنيفي شاملاً.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

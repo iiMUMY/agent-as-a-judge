@@ -1,0 +1,96 @@
+{
+    "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+    "query": "مرحبًا! أنا مهتم بتطوير وكيل لتداول الأسهم باستخدام خوارزمية تحسين السياسة القريبة (PPO). الفكرة هي استخدام بيانات السوق التاريخية للتدريب والاختبار. يجب تنفيذ بيئة محاكاة تداول الأسهم في `src/env.py`. يجب تنفيذ خوارزمية تحسين السياسة القريبة (PPO) في `src/train.py`. يرجى حفظ الوكيل المدرب تحت `models/saved_models/`. سجل جميع قرارات التداول في `results/trade_decisions.txt` واحفظ الربح الإجمالي في `results/metrics/total_profit.txt`. قم بتصور منحنى الربح واحفظه كـ `results/figures/profit_curve.png`. قم بإنشاء تقرير يغطي استراتيجية التداول والربح وتحليل المخاطر، واحفظه كـ `results/trading_strategy_report.md`. قم بتنفيذ أداة تفاعلية باستخدام Streamlit في `src/visualize.py` التي تسمح للمستخدمين بتجربة معلمات مختلفة وتشغيل المحاكاة.",
+    "tags": [
+        "Financial Analysis",
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم تنفيذ بيئة محاكاة تداول الأسهم في `src/env.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم استخدام بيانات السوق التاريخية للتدريب والاختبار.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "تم تنفيذ خوارزمية \"Proximal Policy Optimization (PPO)\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم تسجيل قرارات التداول وحفظها كـ `results/trade_decisions.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                3
+            ],
+            "criteria": "يتم حفظ إجمالي الربح كـ `results/metrics/total_profit.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم تصور منحنى الربح وحفظه كـ `results/figures/profit_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير يحتوي على استراتيجية التداول والربح وتحليل المخاطر وحفظه كـ `results/trading_strategy_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "تم تنفيذ أداة تفاعلية تسمح للمستخدمين بتجربة معلمات مختلفة وتشغيل المحاكاة باستخدام \"Streamlit\" في `src/visualize.py`.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يبرز تصور منحنى الربح التداولات أو الأحداث الهامة التي أثرت على الأداء.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن التقرير رؤى حول كيفية تأثير ضبط المعلمات على نتيجة التداول.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

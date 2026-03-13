@@ -1,0 +1,91 @@
+{
+  "name": "40_Text_Summarization_BART_CNNDailyMail_DL",
+  "query": "BART modeli ve CNN/Daily Mail veri kümesi kullanarak metin özetleme sistemi gerçekleştiren bir sistem geliştirin. `src/data_loader.py` içinde veri kümesini yükleyip hazırlayarak başlayın, ardından `src/data_loader.py` içinde HTML etiketlerini ve noktalama işaretlerini kaldırma gibi veri ön işleme işlemlerini gerçekleştirin. Metin özetleme için önceden eğitilmiş bir BART modelini `src/model.py` içinde içe aktararak özetler oluşturun. Oluşturulan özetleri `results/summaries.txt` dosyasına kaydedin. Bu özetlerin uzunluk dağılımını seaborn kullanarak görselleştirin ve görselleştirmeyi `results/figures/summary_length_distribution.png` dosyasına kaydedin. Ayrıca, kullanıcıların giriş metinlerini ve oluşturulan özetlerini görüntülemelerine olanak tanıyan `src/visualize.py` içinde etkileşimli bir Streamlit web sayfası uygulayın. Son olarak, veri ön işleme ve oluşturma sonuçlarını kapsayan bir rapor oluşturun ve `results/text_summarization_report.pdf` olarak kaydedin.",
+  "tags": [
+    "Generative Models",
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"CNN/Daily Mail\" haber veri kümesi kullanılır, `src/data_loader.py` içinde veri kümesinin yüklenmesi ve hazırlanması dahil.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri ön işleme `src/data_loader.py` içinde gerçekleştirilir, HTML etiketlerinin ve noktalama işaretlerinin kaldırılması dahil.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Metin özetleme için önceden eğitilmiş \"BART\" modeli `src/model.py` içinde içe aktarılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Oluşturulan özet sonuçları `results/summary_results.txt` dosyasına kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Oluşturulan özetlerin uzunluk dağılımı \"seaborn\" kullanılarak görselleştirilir ve grafik `results/figures/summary_length_distribution.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Giriş metinlerini ve oluşturulan özetlerini görüntülemek için \"Streamlit\" kullanılarak etkileşimli bir web sayfası oluşturulur ve `src/visualize.py` içinde uygulanır.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Veri ön işleme, model eğitimi ve oluşturma sonuçlarını kapsayan bir rapor oluşturulur ve `results/text_summarization_report.pdf` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Etkileşimli \"Streamlit\" web sayfası, kullanıcıların yeni metin girmesine ve gerçek zamanlı olarak özetler oluşturmasına olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Rapor, farklı hiperparametre ayarlarının modelin performansını nasıl etkilediğine dair bir tartışma içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Geliştirme sırasında, \"Streamlit\" uygulaması gereksiz kaynak kullanımını önlemek için verimli bir şekilde yönetilmelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

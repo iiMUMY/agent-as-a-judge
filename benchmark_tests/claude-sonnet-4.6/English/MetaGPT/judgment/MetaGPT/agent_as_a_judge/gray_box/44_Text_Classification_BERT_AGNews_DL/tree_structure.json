@@ -1,0 +1,17 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\English\\MetaGPT\\workspaces\\MetaGPT\\44_Text_Classification_BERT_AGNews_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "results.txt": null
+        },
+        "results\\figures": {
+            "confusion_matrix.png": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}

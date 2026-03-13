@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Chinese\\OpenHands\\workspaces\\OpenHands\\43_Social_Network_Analysis_GCN_Cora_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {},
+        "results\\figures": {
+            "citation_network_visualization.png": null
+        },
+        "results\\metrics": {
+            "node_classification_results.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "train.py": null
+        }
+    }
+}

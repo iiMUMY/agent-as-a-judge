@@ -1,0 +1,64 @@
+{
+  "name": "52_Devin_AI_Trains_an_AI",
+  "query": "你能使用`https://github.com/artidoro/qlora`微调一个7B LLaMA模型吗？按照仓库中的说明微调7B LLaMA模型并将其保存在models/saved_models/中。确保按照`src/env.py`中概述的设置必要的环境和依赖项。下载并准备微调模型所需的数据集，如`src/data_loader.py`中所指定。完成微调过程，确保所有配置都按照qlora正确设置。保存微调后的模型和训练摘要，将它们存储在指定目录中，作为results/metrics/finetuning_summary.txt。",
+  "tags": [
+    "Generative Models",
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "已下载`https://github.com/artidoro/qlora`上的仓库。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "已设置必要的环境和依赖项。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "微调过程已完成，确保所有配置都按照\"qlora\"正确设置。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "微调后的模型和训练摘要保存在`models/saved_models/`中，将它们存储在指定目录中，作为`results/metrics/finetuning_summary.txt`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "微调过程应包括验证步骤，以监控过拟合或其他问题。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "应生成关于微调过程的详细报告，包括遇到的任何挑战及其解决方法，并保存为`results/finetuning_summary.txt`。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "resource": "https://www.cognition.ai/blog/introducing-devin",
+  "language": "Chinese"
+}

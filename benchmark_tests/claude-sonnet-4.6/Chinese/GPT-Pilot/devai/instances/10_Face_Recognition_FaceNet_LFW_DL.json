@@ -1,0 +1,85 @@
+{
+  "name": "10_Face_Recognition_FaceNet_LFW_DL",
+  "query": "帮助我使用FaceNet模型和LFW数据集创建一个PyTorch人脸识别项目。在`src/model.py`中加载数据集。从Hugging Face获取模型（可以在https://huggingface.co/py-feat/facenet找到）并将其保存在`models/saved_models/`中。确保在`src/data_loader.py`中对数据进行预处理，以确保面部图像的标准化。在`src/model.py`中使用面部嵌入来提高系统性能。打印识别准确率并将其保存到`results/metrics/recognition_accuracy.txt`。接下来，可视化嵌入结果并将其保存为`results/figures/embedding_visualization.png`。模型应无问题地加载，理想情况下，如果出现问题，应进行一些错误处理。可视化应使人们容易看到嵌入如何表示不同的面部特征。",
+  "tags": [
+    "Computer Vision",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"LFW\"（Labeled Faces in the Wild）数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中执行面部图像的数据对齐和标准化。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "使用\"PyTorch\"中的\"FaceNet\"模型，从[Hugging Face](https://huggingface.co/py-feat/facenet)加载。将模型保存在models/saved_models/中。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在`src/model.py`中使用面部嵌入。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "打印识别准确率并保存为`results/metrics/recognition_accuracy.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "可视化嵌入结果并保存为`results/figures/embedding_visualization.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "模型加载过程应顺利，如果模型加载失败，应有明确的问题处理。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "嵌入可视化应清晰，并有效突出不同的面部特征。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "hint": "The page https://huggingface.co/py-feat/facenet provides guidance on how to use FaceNet; however, Hugging Face does not currently offer a model entry for direct use.",
+  "language": "Chinese"
+}

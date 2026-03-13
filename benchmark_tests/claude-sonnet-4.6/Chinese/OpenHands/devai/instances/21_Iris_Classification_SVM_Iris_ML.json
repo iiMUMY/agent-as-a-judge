@@ -1,0 +1,92 @@
+{
+  "name": "21_Iris_Classification_SVM_Iris_ML",
+  "query": "我请求一个项目，使用支持向量机（SVM）分类器和Iris数据集来分类鸢尾花物种，分类器在`src/model.py`中实现。项目应在`src/data_loader.py`中标准化数据并进行特征选择。它将记录分类准确性并保存为`results/metrics/classification_accuracy.txt`，生成并保存混淆矩阵为`results/figures/confusion_matrix.png`。此外，它将在`src/app.py`中使用Streamlit创建一个交互式Web应用程序，以展示分类结果和模型性能，图形存储在`results/figures/`中。网页应用户友好，并简要解释模型以帮助用户理解SVM分类器的工作原理。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"Iris\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中标准化数据以确保特征值在同一范围内。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行特征选择以识别重要特征。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"SVM分类器\"在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "分类准确性保存在`results/metrics/classification_accuracy.txt`中。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "生成混淆矩阵并保存为`results/figures/confusion_matrix.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "使用\"Streamlit\"创建交互式Web应用程序`src/app.py`，以展示分类结果和模型性能在results/figures/中。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Streamlit网页应用户友好，允许用户轻松探索模型性能的不同方面。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "网页上应包含简要的模型解释，帮助用户理解SVM分类器的工作原理。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

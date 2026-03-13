@@ -1,0 +1,75 @@
+{
+    "name": "53_Devin_Upwork_Side_Hustle",
+    "query": "مرحبًا، أبحث عن إجراء استدلالات باستخدام النماذج في هذا المستودع `https://github.com/mahdi65/roadDamageDetection2020`. يجب أن يقوم النظام بإجراء استدلالات باستخدام النماذج من المستودع وحفظ النتائج في `models/saved_models/`. يجب تنزيل البيانات النموذجية وتحضيرها لاختبار النماذج في `src/data_loader.py`. يجب إجراء الاستدلال باستخدام النماذج المقدمة على البيانات النموذجية في `models/saved_models/`. يجب إنشاء وحفظ الصور المرئية التي تعرض الاكتشافات التي قامت بها النماذج في دليل `results/figures/`. أيضًا، يجب إنشاء تقرير أداء بناءً على نتائج اكتشاف النموذج وحفظه كـ `results/metrics/model_performance_report.txt`.",
+    "tags": [
+        "Computer Vision"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تم إعداد المستودع في `https://github.com/mahdi65/roadDamageDetection2020`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "تم تنزيل البيانات النموذجية وتجهيزها لاختبار النماذج في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم إجراء الاستدلال باستخدام النماذج المقدمة على البيانات النموذجية في `models/saved_models/`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم إنشاء الصور المرئية التي تعرض الاكتشافات التي قامت بها النماذج وحفظها في دليل `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء تقرير أداء بناءً على نتائج اكتشاف النموذج وحفظه كـ `results/metrics/model_performance_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون الصور المرئية واضحة، مع تمييز الاكتشافات بدقة لتسهيل التفسير.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن تقرير الأداء ملخصًا لدقة الاكتشاف وأي مشاكل تم مواجهتها أثناء الاستدلال.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": false,
+    "is_web_navigation_needed": true,
+    "resource": "https://www.cognition.ai/blog/introducing-devin",
+    "language": "Arabic"
+}

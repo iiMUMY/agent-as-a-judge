@@ -1,0 +1,16 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Chinese\\MetaGPT\\workspaces\\MetaGPT\\38_Object_Tracking_Siamese_OTB50_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "object_tracking_report.md": null,
+            "tracking_results.txt": null
+        },
+        "results\\videos": {},
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

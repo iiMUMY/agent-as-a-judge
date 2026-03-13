@@ -1,0 +1,18 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\claude-sonnet-4.6\\Arabic\\GPT-Pilot\\workspaces\\GPT-Pilot\\35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "feature_importances.txt": null,
+            "loan_default_prediction_report.md": null
+        },
+        "results\\figures": {
+            "roc_curve.png": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}
