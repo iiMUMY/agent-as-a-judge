@@ -1,0 +1,89 @@
+{
+  "name": "32_Weather_Data_Analysis_LinearRegression_Weather_ML",
+  "query": "使用Kaggle的Weather数据集开发一个天气数据分析系统，使用线性回归模型。加载数据集并进行特征工程，包括特征选择和生成，并在`src/data_loader.py`中使用均值插补或插值处理缺失数据。然后，在线性回归模型中实现`src/model.py`。可视化并保存相关矩阵在`results/figures/correlation_matrix.png`中，并将预测结果以带置信区间的折线图形式保存在`results/figures/prediction_results.png`中。最后，创建一份详细报告，涵盖数据预处理、特征工程、模型训练和预测结果。将报告保存在`results/weather_analysis_report.pdf`中。特征工程过程应有详细记录。",
+  "tags": [
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"Kaggle Weather\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行特征工程，包括特征选择和生成。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "在`src/data_loader.py`中使用均值插补或插值处理缺失数据。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "使用\"线性回归\"模型进行天气数据分析，并在`src/model.py`中实现。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "相关矩阵保存为`results/figures/correlation_matrix.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "预测结果绘制并保存为带置信区间的折线图。图表保存为`results/figures/prediction_results.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "创建并保存一份详细报告，包含数据预处理、特征工程、模型训练和预测结果，保存为`results/weather_analysis_report.pdf`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特征工程过程应在报告中清晰记录，解释特征选择和生成的理由。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "报告应包括对相关矩阵的讨论，突出特征之间的任何有趣关系。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

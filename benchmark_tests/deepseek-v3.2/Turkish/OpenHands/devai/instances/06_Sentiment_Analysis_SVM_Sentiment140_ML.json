@@ -1,0 +1,74 @@
+{
+  "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+  "query": "Lütfen Hugging Face'ten temin edilebilen Sentiment140 veri kümesini kullanarak tweetler üzerinde duygu analizi yapacak bir sistem oluşturmama yardım edin. Sentiment140 veri kümesini yükleyin ve verileri yüklerken duraklama kelimelerini, noktalama işaretlerini ve özel karakterleri kaldırarak temizleyin, hepsi `src/data_loader.py` içinde. Metin vektörleştirme için Word2Vec veya GloVe kullanın. Bu işlem `src/data_loader.py` içinde gerçekleşmelidir. Ardından, `src/model.py` içinde bir SVM sınıflandırıcı uygulayın ve eğitin. Son olarak, sınıflandırıcının doğruluğuna ilişkin bir raporu `results/metrics/accuracy_score.txt` dosyasına yazın. İdeal olarak, rapor kolayca anlaşılabilir olmalıdır.",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Sentiment140\" veri kümesi, \"Hugging Face\"ten temin edilerek `src/data_loader.py` içinde elde edilir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri kümesi temizlenir, duraklama kelimeleri, noktalama işaretleri ve özel karakterler kaldırılır, hepsi `src/data_loader.py` içinde.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Metni vektörlere dönüştürmek için \"Word2Vec\" veya \"GloVe\" kelime gömme yöntemleri `src/data_loader.py` içinde kullanılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "\"SVM sınıflandırıcı\" `src/model.py` içinde uygulanır ve eğitilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Doğruluk skoru yazdırılır ve `results/metrics/accuracy_score.txt` olarak kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Veri kümesi indirme süreci güvenilir olmalı ve net hata yönetimi içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Nihai doğruluk raporu açık ve kolay anlaşılır olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

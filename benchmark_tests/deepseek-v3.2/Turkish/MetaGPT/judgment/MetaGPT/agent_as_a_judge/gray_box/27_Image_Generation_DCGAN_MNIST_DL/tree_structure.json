@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Turkish\\MetaGPT\\workspaces\\MetaGPT\\27_Image_Generation_DCGAN_MNIST_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "training_report.pdf": null
+        },
+        "results\\figures": {
+            "generated_images.gif": null
+        },
+        "results\\metrics": {},
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

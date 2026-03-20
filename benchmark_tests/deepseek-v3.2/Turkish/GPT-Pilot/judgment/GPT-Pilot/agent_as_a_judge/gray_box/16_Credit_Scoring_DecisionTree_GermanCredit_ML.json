@@ -1,0 +1,133 @@
+{
+    "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+    "query": "Alman Kredi veri setini kullanarak kredi skorlarını tahmin edecek bir sistem geliştirmeme yardım et, bu veri seti [bu bağlantıdan](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) indirilebilir. Veri setini yükle ve eksik değerlerin işlenmesi ve özellik kodlaması dahil olmak üzere ön işlemesini `src/data_loader.py` içinde yap. `src/model.py` içinde uygulanmış bir Karar Ağacı sınıflandırıcısı kullanarak modeli `src/train.py` içinde çapraz doğrulama ile değerlendir. Özellik önemlerini `results/figures/feature_importances.png` içinde görselleştir. Doğruluk, geri çağırma ve F1-skoru dahil olmak üzere bir sınıflandırma raporu oluştur ve `results/metrics/classification_report.txt` dosyasına kaydet. Sonuçlar ve görselleştirmelerle bir Markdown raporu oluştur ve `results/report.md` içinde kaydet. Veri seti düzgün bir şekilde yüklenmeli ve uygun hata yönetimi yapılmalı, Markdown raporu kolay inceleme için iyi organize edilmiş olmalı.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "\"Alman Kredi\" veri setini yükle, gerekirse [bu bağlantıdan](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) indirerek `src/data_loader.py` dosyasında.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "Veri ön işleme `src/data_loader.py` içinde yapılır, eksik değerlerin işlenmesi ve özellik kodlaması dahil.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "\"Karar Ağacı\" sınıflandırıcısı `src/model.py` içinde uygulanır.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "Model `src/train.py` içinde çapraz doğrulama ile değerlendirilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Özellik önemleri `results/figures/feature_importances.png` içinde görselleştirilir.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "Doğruluk, geri çağırma ve \"F1-skoru\" dahil olmak üzere bir sınıflandırma raporu oluşturulur ve `results/metrics/classification_report.txt` olarak kaydedilir.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "Sonuçlar ve görselleştirmeler içeren bir Markdown dosyası oluşturulur ve `results/report.md` içinde kaydedilir.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "Veri seti sorunsuz bir şekilde yüklenmeli, indirme sırasında herhangi bir sorun çıkarsa açık hata yönetimi yapılmalı.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "Markdown raporu iyi organize edilmiş olmalı, tüm sonuçları ve görselleştirmeleri kolayca incelemeyi sağlamalı.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Turkish",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "\"Alman Kredi\" veri setini yükle, gerekirse [bu bağlantıdan](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) indirerek `src/data_loader.py` dosyasında.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 87.36710929870605,
+                "input_tokens": 1495,
+                "output_tokens": 288,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>\n\nGerekçe: `src/data_loader.py` dosyasının içeriği incelendiğinde, dosyanın yalnızca bir \"minimal semantic implementation\" (minimal anlamsal uygulama) olduğu ve gerçek veri yükleme veya indirme mantığını içermediği görülmektedir. Kod, `load_dataset()` fonksiyonunda yalnızca sabit bir sözlük döndürmekte (`{\"dataset\": \"loaded\", \"notes\": requirement_notes()}`) ve `pandas.read_csv` veya dosya indirme (örneğin `urllib.request`) gibi gerçek bir veri seti yükleme işlemi gerçekleştirmemektedir. Trajectory Evidence'de belirtilen başarılı yükleme adımları, mevcut dosya içeriğiyle çelişmektedir; mevcut kod bu adımları yansıtmamaktadır. Dolayısıyla, veri setinin belirtilen dosyada yüklendiği veya indirildiği gereksinimi karşılanmamıştır."
+                ]
+            },
+            "total_time": 111.78391861915588
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "Veri ön işleme `src/data_loader.py` içinde yapılır, eksik değerlerin işlenmesi ve özellik kodlaması dahil.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 5.513871669769287,
+                "input_tokens": 1300,
+                "output_tokens": 163,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED> Veri ön işleme kodları `src/data_loader.py` içinde tanımlanmış değil. Dosya içeriği minimal placeholder işlevler (`load_dataset()` ve `build_transforms()`) ve kriter listesi ile doldurulmuş; eksik değer işleme ve özellik kodlaması için gerçek bir implementasyon bulunmamaktadır. Trajectory Evidence'deki mesaj (\"Eksik değerler işlenmiş...\") çalışma ortamından bildirilmiş olabilir ancak kod dosyasının gerçek içeriği bu gereksinimi karşılamaz."
+                ]
+            },
+            "total_time": 17.639097452163696
+        }
+    ]
+}

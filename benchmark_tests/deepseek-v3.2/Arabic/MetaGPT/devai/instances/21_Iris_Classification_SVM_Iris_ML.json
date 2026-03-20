@@ -1,0 +1,92 @@
+{
+    "name": "21_Iris_Classification_SVM_Iris_ML",
+    "query": "أطلب مشروعًا لتصنيف أنواع زهرة السوسن باستخدام مجموعة بيانات Iris مع مصنف آلة المتجهات الداعمة (SVM) المطبق في `src/model.py`. يجب أن يقوم المشروع بتوحيد البيانات وإجراء اختيار الميزات في `src/data_loader.py`. سيوثق دقة التصنيف ويحفظها كـ `results/metrics/classification_accuracy.txt`، وينشئ ويحفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`. سيقوم أيضًا بإنشاء تطبيق ويب تفاعلي في `src/app.py` باستخدام Streamlit لعرض نتائج التصنيف وأداء النموذج، مع تخزين الأشكال في `results/figures/`. يجب أن تكون صفحة الويب سهلة الاستخدام، مع شرح موجز للنموذج لمساعدة المستخدمين على فهم كيفية عمل مصنف SVM.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Iris\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توحيد البيانات لضمان أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ \"SVM classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ دقة التصنيف في `results/metrics/classification_accuracy.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء مصفوفة الالتباس وحفظها كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء تطبيق ويب تفاعلي `src/app.py` باستخدام \"Streamlit\" لعرض نتائج التصنيف وأداء النموذج في results/figures/.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون صفحة الويب Streamlit سهلة الاستخدام، مما يسمح للمستخدمين باستكشاف الجوانب المختلفة لأداء النموذج بسهولة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب تضمين شرح موجز للنموذج على صفحة الويب، لمساعدة المستخدمين على فهم كيفية عمل مصنف SVM.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

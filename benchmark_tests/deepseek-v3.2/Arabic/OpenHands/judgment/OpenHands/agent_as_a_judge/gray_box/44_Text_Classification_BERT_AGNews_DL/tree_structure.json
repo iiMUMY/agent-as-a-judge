@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Arabic\\OpenHands\\workspaces\\OpenHands\\44_Text_Classification_BERT_AGNews_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "results.txt": null
+        },
+        "results\\figures": {
+            "confusion_matrix.png": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}

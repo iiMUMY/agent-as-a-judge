@@ -1,0 +1,11 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Chinese\\MetaGPT\\workspaces\\MetaGPT\\51_Devin_AI_Software_Engineer_Plants_Secret_Messages_in_Images",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {},
+        "src": {
+            "visualize.py": null
+        }
+    }
+}

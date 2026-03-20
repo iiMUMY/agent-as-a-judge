@@ -1,0 +1,98 @@
+{
+  "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+  "query": "使用UCI的葡萄酒质量数据集构建一个使用决策树模型的葡萄酒质量预测系统。在`src/data_loader.py`中预处理数据，包括处理缺失值和特征缩放。在`src/train.py`中使用交叉验证评估模型。在`src/model.py`中实现决策树回归模型。将均方误差保存到`results/metrics/mean_squared_error.txt`中。可视化并保存特征重要性为`results/figures/feature_importance.png`。创建一个包含结果和可视化的Jupyter Notebook，并总结你的观察。Notebook应详细记录预处理步骤以确保可重复性。将Notebook转换为PDF报告并保存为`results/report.pdf`。PDF报告还应包括对模型潜在改进的简要讨论。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用来自\"UCI\"的\"葡萄酒质量\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行数据预处理，包括处理缺失值和特征缩放。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现\"决策树\"回归模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中使用交叉验证评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "将均方误差（MSE）保存到`results/metrics/mean_squared_error.txt`中。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "生成特征重要性图并保存为`results/figures/feature_importance.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "生成包含预处理步骤、结果和可视化的Jupyter Notebook，并总结观察。将Notebook转换为PDF报告并保存为`results/report.pdf`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特征重要性图应清晰突出最具影响力的特征。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "最终的PDF报告应包括对模型潜在改进的简要讨论。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

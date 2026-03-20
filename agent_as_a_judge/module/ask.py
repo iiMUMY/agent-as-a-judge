@@ -76,8 +76,11 @@ class DevAsk:
 
         for _ in range(majority_vote):
             result = self.llm._llm_inference(messages)
-            responses.append(result["llm_response"])
-            judges.append(self._parse_judge(result["llm_response"]))
+            response_text = result.get("llm_response") or ""
+            if not isinstance(response_text, str):
+                response_text = str(response_text)
+            responses.append(response_text)
+            judges.append(self._parse_judge(response_text))
 
             self._update_llm_stats(llm_stats, result)
 
@@ -85,6 +88,8 @@ class DevAsk:
 
     @staticmethod
     def _parse_judge(response: str) -> str:
+        if not response:
+            return "<UNSATISFIED>"
         if "<SATISFIED>" in response:
             return "<SATISFIED>"
         return "<UNSATISFIED>"
@@ -119,7 +124,10 @@ class DevAsk:
         ]
 
         result = self.llm._llm_inference(messages)
-        return result["llm_response"]
+        response_text = result.get("llm_response") or ""
+        if not isinstance(response_text, str):
+            response_text = str(response_text)
+        return response_text
 
 
 if __name__ == "__main__":

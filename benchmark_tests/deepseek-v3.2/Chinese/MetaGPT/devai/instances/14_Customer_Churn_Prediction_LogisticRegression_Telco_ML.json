@@ -1,0 +1,95 @@
+{
+  "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+  "query": "帮助我开发一个系统，使用Telco Customer Churn数据集预测客户流失，该数据集可以从[此链接](https://huggingface.co/datasets/scikit-learn/churn-prediction)下载。在`src/data_loader.py`中加载数据集。项目应包括特征工程，如特征选择和缩放，并在`src/data_loader.py`中使用过采样或欠采样技术处理不平衡数据。具体细节由您决定。在`src/model.py`中实现Logistic Regression模型，并在`src/train.py`中训练模型时进行交叉验证。最后，打印并保存分类报告（包括精确度、召回率和F1-score）到`results/metrics/classification_report.txt`，并保存ROC曲线到`results/figures/roc_curve.png`。确保数据集顺利加载并具有适当的错误处理。特征工程应彻底选择最相关的特征。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"Telco Customer Churn\"数据集，可以从[此链接](https://huggingface.co/datasets/scikit-learn/churn-prediction)下载。在`src/data_loader.py`中加载数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中实现特征工程，包括特征选择和缩放。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中使用过采样或欠采样技术处理不平衡数据。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现\"Logistic Regression\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "在`src/train.py`中使用交叉验证评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "将分类报告，包括\"精确度\"、\"召回率\"和\"F1-score\"，保存为`results/metrics/classification_report.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "将\"ROC曲线\"保存为`results/figures/roc_curve.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "数据集应顺利加载，如果下载过程中出现问题，应进行适当的错误处理。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "特征工程过程应彻底，确保为模型选择最相关的特征。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Chinese"
+}

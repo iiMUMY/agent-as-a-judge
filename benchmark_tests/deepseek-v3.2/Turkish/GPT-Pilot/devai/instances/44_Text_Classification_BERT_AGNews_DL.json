@@ -1,0 +1,84 @@
+{
+  "name": "44_Text_Classification_BERT_AGNews_DL",
+  "query": "Merhaba! Bana AG News veri kümesi üzerinde önceden eğitilmiş bir BERT modeli kullanarak bir metin sınıflandırma sistemi oluşturmamda yardımcı olabilir misin? `src/data_loader.py` içinde verileri yükleyip ön işleme ile başlayın (gürültüyü ne kadar kaldırabiliyorsanız kaldırın ve tokenizasyon yapın). Bu işlem tamamlandıktan sonra, lütfen BERT model parametrelerini `models/saved_models/` altında kaydedin. BERT modelini uygulayın ve sınıflandırma sonuçlarını `results/results.txt` dosyasına kaydedin. Ayrıca, sınıflandırma sonuçlarının karışıklık matrisini seaborn kullanarak görselleştirin ve `results/figures/confusion_matrix.png` olarak kaydedin. Son olarak, `results/` altında giriş metinlerini sınıflandırma sonuçlarıyla birlikte göstermek için etkileşimli bir Jupyter Notebook oluşturun. Not defterinin transfer öğreniminin nasıl kullanıldığını ve modelin performansı üzerindeki etkisini açıklaması harika olurdu. Aynı şekilde, veri kümesini değiştirmeyi ve BERT'i yeniden eğitmek için kodu içermeyi kolaylaştırırsanız iyi olur. Çok teşekkürler!",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"AG News\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri ön işleme `src/data_loader.py` içinde gerçekleştirilir, gürültü giderme ve tokenizasyon dahil.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"BERT\" modeli metin sınıflandırması için uygulanır ve parametreler `models/saved_models/` altında kaydedilir.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Sınıflandırma sonuçları `results/results.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Sınıflandırma sonucunun karışıklık matrisi \"seaborn\" kullanılarak görselleştirilir ve `results/figures/confusion_matrix.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Giriş metinlerini ve sınıflandırma sonuçlarını göstermek için `results` altında etkileşimli bir \"Jupyter Notebook\" oluşturulur.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook, transfer öğreniminin nasıl uygulandığını ve model performansı üzerindeki etkisini açıklamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Karışıklık matrisi görselleştirmesi, doğru ve yanlış sınıflandırılmış örnekler arasında net bir ayrım yapmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, yeni verilerle \"BERT\" modelinin kolayca yeniden eğitilmesine izin vermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

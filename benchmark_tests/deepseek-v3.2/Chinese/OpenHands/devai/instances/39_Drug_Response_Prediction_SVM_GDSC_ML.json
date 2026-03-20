@@ -1,0 +1,103 @@
+{
+  "name": "39_Drug_Response_Prediction_SVM_GDSC_ML",
+  "query": "开发一个系统，使用GDSC数据集和支持向量机（SVM）回归器预测药物反应。在`src/data_loader.py`中加载数据集并进行特征选择以识别关键特征。在`src/model.py`中实现SVM回归器。在`src/train.py`中使用交叉验证评估模型性能。将性能结果保存到`results/metrics/performance.txt`。使用seaborn可视化回归结果并将其保存到`results/figures/`下。接下来，创建一份报告，包括数据预处理、模型训练、评估过程和可视化。将报告保存为`results/drug_response_prediction_report.pdf`。报告应强调特征选择如何影响模型性能，回归结果的可视化应清晰地突出所选特征与预测药物反应之间的关系。确保系统设计易于扩展，以便整合其他数据集或新特征。",
+  "tags": [
+    "Medical Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"GDSC\"药物反应数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行特征选择以识别重要特征。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现\"SVM回归器\"。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中使用交叉验证评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "将性能结果保存为`results/metrics/performance.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "使用\"seaborn\"可视化回归结果，并保存到`results/figures/`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "创建并保存一份包含数据预处理、模型训练、评估过程和回归结果可视化的报告，保存为`results/drug_response_prediction_report.pdf`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "报告应强调特征选择如何影响模型性能。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "回归结果的可视化应清晰地突出所选特征与预测药物反应之间的关系。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "确保系统可以轻松扩展，以便整合其他数据集或新特征，而无需进行重大改动。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

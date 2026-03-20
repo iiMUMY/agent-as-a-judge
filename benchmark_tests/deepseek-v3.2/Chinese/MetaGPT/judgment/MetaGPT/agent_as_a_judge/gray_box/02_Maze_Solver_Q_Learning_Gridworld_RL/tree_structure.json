@@ -1,0 +1,19 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Chinese\\MetaGPT\\workspaces\\MetaGPT\\02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "q_learning_model.npy": null
+        },
+        "results": {},
+        "results\\figures": {
+            "learning_curve.png": null,
+            "path_changes.gif": null
+        },
+        "src": {
+            "env.py": null,
+            "train.py": null
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Chinese\\GPT-Pilot\\workspaces\\GPT-Pilot\\41_Stock_Classification_KNN_YahooFinance_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "classification_results.txt": null
+        },
+        "results\\figures": {
+            "feature_correlation_heatmap.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

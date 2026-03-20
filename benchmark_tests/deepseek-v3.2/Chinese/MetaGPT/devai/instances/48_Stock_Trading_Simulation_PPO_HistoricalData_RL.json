@@ -1,0 +1,96 @@
+{
+  "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+  "query": "你好！我有兴趣使用近端策略优化（PPO）算法开发一个股票交易代理。这个想法是使用历史市场数据进行训练和测试。应该在`src/env.py`中实现一个股票交易模拟环境。近端策略优化（PPO）算法应该在`src/train.py`中实现。请将训练好的代理保存在`models/saved_models/`下。将所有交易决策记录在`results/trade_decisions.txt`中，并将总利润保存在`results/metrics/total_profit.txt`中。将利润曲线可视化并保存为`results/figures/profit_curve.png`。生成一个涵盖交易策略、利润和风险分析的报告，并保存为`results/trading_strategy_report.md`。使用Streamlit在`src/visualize.py`中实现一个交互工具，允许用户尝试不同参数并运行模拟。",
+  "tags": [
+    "Financial Analysis",
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/env.py`中实现一个股票交易模拟环境。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "使用历史市场数据进行训练和测试。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "在`src/train.py`中实现“近端策略优化（PPO）”算法。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "交易决策被记录并保存为`results/trade_decisions.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "总利润保存在`results/metrics/total_profit.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "利润曲线被可视化并保存为`results/figures/profit_curve.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "生成一个包含交易策略、利润和风险分析的报告，并保存为`results/trading_strategy_report.md`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "在`src/visualize.py`中使用“Streamlit”实现一个交互工具，允许用户尝试不同参数并运行模拟。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "利润曲线可视化应突出显示影响表现的重大交易或事件。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "报告应包括关于参数调整如何影响交易结果的见解。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

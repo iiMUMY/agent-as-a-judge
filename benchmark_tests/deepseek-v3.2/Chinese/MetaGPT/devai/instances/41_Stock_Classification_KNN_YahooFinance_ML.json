@@ -1,0 +1,93 @@
+{
+  "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+  "query": "使用KNN模型开发一个股票分类系统，基于Yahoo Finance数据集。您的实现应决定给定股票的价格是上涨还是下跌。首先加载数据集并进行特征工程，包括生成技术指标和选择`src/data_loader.py`中最相关的特征。标准化数据以确保特征值在`src/data_loader.py`中处于同一范围内。应用KNN分类器根据工程特征对股票进行分类，并将实现保存在`src/model.py`中。接下来，将分类结果保存到`results/classification_results.txt`，并使用seaborn将技术指标与分类结果之间的相关性可视化为热图。将热图保存为`results/figures/feature_correlation_heatmap.png`。最后，在`results/`下创建一个交互式Jupyter Notebook，解释过程，展示分类结果，并帮助简化未来引入新数据的更新。",
+  "tags": [
+    "Classification",
+    "Financial Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"Yahoo Finance\"数据集，包括在`src/data_loader.py`中进行数据加载和准备。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "进行特征工程，包括在`src/data_loader.py`中生成技术指标和进行特征选择。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "数据在`src/data_loader.py`中被标准化，以确保特征值在同一范围内。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "应用\"KNN分类器\"根据工程特征对股票进行分类。请将实现保存在`src/model.py`中。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "分类结果保存在`results/classification_results.txt`中。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "表示技术指标与分类结果之间相关性的热图保存为`results/figures/feature_correlation_heatmap.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "在`results/`下创建一个交互式\"Jupyter Notebook\"以解释过程并展示分类结果。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook应包括每个步骤的清晰解释，包括特征工程和模型评估。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "相关性热图应突出最显著的技术指标，并提供其关系的见解。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "系统应允许轻松更新新数据，使笔记本在未来分析中保持灵活。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

@@ -1,0 +1,98 @@
+{
+    "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+    "query": "قم ببناء نظام لتوقع جودة النبيذ باستخدام نموذج شجرة القرار مع مجموعة بيانات جودة النبيذ من UCI. قم بتهيئة البيانات في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وتقييس الميزات. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`. قم بتنفيذ نموذج الانحدار لشجرة القرار في `src/model.py`. احفظ متوسط مربع الخطأ في `results/metrics/mean_squared_error.txt`. قم بتصور وحفظ أهمية الميزات كـ `results/figures/feature_importance.png`. أنشئ دفتر Jupyter مع النتائج والتصورات، ولخص ملاحظاتك. يجب أن يوثق الدفتر خطوات التهيئة بشكل شامل لضمان إمكانية إعادة الإنتاج. قم بتحويل الدفتر إلى تقرير PDF واحفظه كـ `results/report.pdf`. يجب أن يتضمن تقرير PDF أيضًا مناقشة موجزة حول التحسينات المحتملة للنموذج.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Wine Quality\" من \"UCI\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وتقييس الميزات.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج الانحدار \"Decision Tree\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ متوسط مربع الخطأ (MSE) في `results/metrics/mean_squared_error.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء وحفظ مخطط أهمية الميزات كـ `results/figures/feature_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء دفتر Jupyter يحتوي على خطوات المعالجة المسبقة والنتائج والتصورات مع تلخيص الملاحظات. يتم تحويل الدفتر إلى تقرير PDF وحفظه كـ `results/report.pdf`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يبرز مخطط أهمية الميزات بوضوح الميزات الأكثر تأثيرًا.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن التقرير النهائي بصيغة PDF مناقشة موجزة حول التحسينات المحتملة للنموذج.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

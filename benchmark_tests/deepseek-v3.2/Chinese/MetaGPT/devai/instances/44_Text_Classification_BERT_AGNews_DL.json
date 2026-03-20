@@ -1,0 +1,84 @@
+{
+  "name": "44_Text_Classification_BERT_AGNews_DL",
+  "query": "嗨！你能帮我使用预训练的BERT模型在AG News数据集上构建一个文本分类系统吗？首先在`src/data_loader.py`中加载和预处理数据（包括尽可能去除噪声和进行分词）。完成后，请将BERT模型参数保存在`models/saved_models/`下。应用BERT模型并将分类结果保存到`results/results.txt`。另外，使用seaborn可视化混淆矩阵并将其保存为`results/figures/confusion_matrix.png`。最后，创建一个交互式Jupyter Notebook，在`results/`下显示输入文本及其分类结果。如果笔记本能解释迁移学习的使用及其对模型性能的影响，那就太好了。同样，如果你的实现可以轻松替换数据集，包括重新训练BERT的代码，那就更好了。非常感谢！",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"AG News\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "数据预处理在`src/data_loader.py`中进行，包括噪声去除和分词。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"BERT\"模型用于文本分类，参数保存在`models/saved_models/`下。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "分类结果保存为`results/results.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "使用\"seaborn\"可视化分类结果的混淆矩阵，并保存为`results/figures/confusion_matrix.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "创建一个交互式\"Jupyter Notebook\"，在`results`下显示输入文本及其分类结果。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook应解释迁移学习的应用及其对模型性能的影响。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "混淆矩阵的可视化应清楚区分正确和错误分类的样本。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "系统应允许轻松使用新数据重新训练\"BERT\"模型。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

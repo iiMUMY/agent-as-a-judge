@@ -1,0 +1,79 @@
+{
+  "name": "04_Text_Generation_GPT2_Prompts_DL",
+  "query": "Lütfen önceden eğitilmiş bir GPT-2 modelini otomatik olarak indirip `models/saved_models/` içinde önbelleğe alarak bir metin üretim sistemi oluşturun. Sistem, `data/prompt.txt` adlı bir metin dosyasının mevcut içeriğini yükleyerek istemleri almalıdır; bu dosya, uygulamanızda yalnızca \"who are you?\" metnini içermelidir. `data/prompt.txt` dosyasını okurken karşılaştığınız yazım hatalarını otomatik olarak düzeltmelisiniz. Üretilen metnin maksimum 200 karakterle sınırlı olmasını sağlayın ve programınız üretilen metni `results/generated_text.txt` dosyasına kaydetmelidir. Ekstra boşlukları kaldırarak ve yaygın yazım hatalarını düzelterek üretilen metni temizlemek için son işlem uygulayın. Sistem, küçük yazım hataları olsa bile farklı giriş istemlerini verimli bir şekilde işleyebilirse ideal olur. Ayrıca, kaydedilen dosyada kullanıcı dostu bir çıktı formatı (belki zaman damgaları veya istem tanımlayıcıları ile) olması hoş olurdu.",
+  "tags": [
+    "Generative Models",
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Önceden eğitilmiş \"GPT-2\" modeli indirilir ve `models/saved_models/` içinde önbelleğe alınır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "İstemler `data/prompt.txt` adlı bir metin dosyasından okunur ve modele beslenir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Üretim uzunluğu maksimum 200 karakterle sınırlıdır.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Metni temizlemek için ekstra boşlukları kaldırma ve yaygın yazım hatalarını düzeltme dahil son işlem uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Üretilen metin `results/generated_text.txt` dosyasına kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Sistem, farklı giriş istemlerini verimli bir şekilde ele almalı ve küçük yazım hatalarını düzeltmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Sistem, metin üretimi sırasında minimum gecikme ile verimli çalışmalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Kaydedilen dosyada kullanıcı dostu bir çıktı formatı, belki zaman damgaları veya istem tanımlayıcıları ile kullanılmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "hint": "There is only one prompt to read. However, requirment 1 says \"Prompts\".",
+  "language": "Turkish"
+}

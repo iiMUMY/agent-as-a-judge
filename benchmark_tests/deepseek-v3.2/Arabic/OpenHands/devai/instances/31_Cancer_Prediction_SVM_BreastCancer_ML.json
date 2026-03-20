@@ -1,0 +1,88 @@
+{
+    "name": "31_Cancer_Prediction_SVM_BreastCancer_ML",
+    "query": "هل يمكنك مساعدتي في إنشاء مشروع لتوقع سرطان الثدي باستخدام نموذج SVM مع مجموعة بيانات Breast Cancer Wisconsin؟ قم بتحميل مجموعة البيانات وتنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`. قم بتنفيذ مصنف SVM لتوقع السرطان في `src/model.py`. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`. احفظ مصفوفة الالتباس كـ `results/figures/confusion_matrix.png`. قم بإعداد تقرير مفصل يوثق العملية بأكملها - من معالجة البيانات إلى تدريب النموذج وتقييمه. يجب أن يغطي التقرير عملية اختيار الميزات ويتضمن خريطة حرارية واضحة لمقاييس الأداء. احفظ التقرير كـ `results/metrics/breast_cancer_prediction_report.pdf`.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Breast Cancer Wisconsin\".",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم استخدام \"SVM classifier\" للتنبؤ بالسرطان ويجب تنفيذه في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة مصفوفة الالتباس وحفظها كـ `results/figures/confusion_matrix.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير مفصل يحتوي على معالجة البيانات المسبقة وتدريب النموذج وعملية التقييم وحفظه كـ `results/metrics/breast_cancer_prediction_report.pdf`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب توثيق عملية اختيار الميزات بشكل جيد في التقرير، موضحًا سبب اختيار ميزات معينة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تميز الخريطة الحرارية بوضوح بين مقاييس الأداء المختلفة، مثل الدقة والاسترجاع ودرجة F1.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب أن يتضمن التقرير مناقشة حول أداء النموذج والمجالات المحتملة للتحسين.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

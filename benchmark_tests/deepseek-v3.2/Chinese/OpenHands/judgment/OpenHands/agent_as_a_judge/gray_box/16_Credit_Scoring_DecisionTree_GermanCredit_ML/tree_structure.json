@@ -1,0 +1,20 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Chinese\\OpenHands\\workspaces\\OpenHands\\16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "report.md": null
+        },
+        "results\\figures": {
+            "feature_importances.png": null
+        },
+        "results\\metrics": {
+            "classification_report.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

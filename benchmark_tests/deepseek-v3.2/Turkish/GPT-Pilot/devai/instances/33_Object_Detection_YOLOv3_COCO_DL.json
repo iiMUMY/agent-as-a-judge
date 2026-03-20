@@ -1,0 +1,94 @@
+{
+  "name": "33_Object_Detection_YOLOv3_COCO_DL",
+  "query": "YOLOv3 modeli ve COCO veri kümesini kullanarak bir nesne algılama sistemi geliştirmeme yardım et. Veri kümesini indir ve `src/data_loader.py` içinde yeniden boyutlandırma ve normalizasyon yaparak görüntüleri ön işle. YOLOv3 modelini uygula ve sonuçları iyileştirmek için `src/model.py` içinde Non-Maximum Suppression (NMS) kullan. Algılanan nesneleri `results/figures/` içine kaydet ve algılama sonuçlarını göstermek için `src/app.py` içinde etkileşimli bir Streamlit web sayfası oluştur. Son olarak, mAP ve çıkarım süresi gibi metrikleri içeren modelin performansını değerlendir ve değerlendirme sonuçlarını `results/metrics/model_performance.txt` içine kaydet. Sistem, gereksiz kaynak kullanımını önlemek için Streamlit uygulamasının başlatılmasını ve sonlandırılmasını düzgün bir şekilde yönetmelidir.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"COCO\" veri kümesinin indirilmesi `src/data_loader.py` içinde uygulanmıştır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Görüntülerin yeniden boyutlandırılması ve normalizasyonu dahil veri ön işleme `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"YOLOv3\" modeli `src/model.py` içinde uygulanmıştır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Algılama sonuçlarını iyileştirmek için \"Non-Maximum Suppression\" (NMS) uygulanır. Lütfen bunu `src/model.py` içinde uygulayın.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Algılama sonuçları belirtilen `results/figures/` klasörüne kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "`src/app.py` içinde \"Streamlit\" kullanarak etkileşimli bir web sayfası oluşturulur ve `results/figures/` içinde kaydedilen algılama sonuçlarını gösterir.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Model performans değerlendirme sonuçları `results/metrics/model_performance.txt` içinde kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "\"Streamlit\" web sayfası kullanıcı dostu olmalı, kullanıcıların algılama için kolayca yeni görüntüler yüklemesine ve görüntülemesine olanak tanımalı.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Performans değerlendirmesi, mAP ve çıkarım süresi gibi metrikleri içerir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, Streamlit uygulamasının başlatılmasını ve sonlandırılmasını düzgün bir şekilde yönetmelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

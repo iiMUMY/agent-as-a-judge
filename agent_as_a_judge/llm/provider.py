@@ -128,7 +128,11 @@ class LLM:
         )
         inference_time = time.time() - start_time
 
-        llm_response = response.choices[0].message["content"]
+        llm_response = response.choices[0].message.get("content")
+        if llm_response is None:
+            llm_response = ""
+        elif not isinstance(llm_response, str):
+            llm_response = str(llm_response)
         input_token, output_token = (
             response.usage.prompt_tokens,
             response.usage.completion_tokens,

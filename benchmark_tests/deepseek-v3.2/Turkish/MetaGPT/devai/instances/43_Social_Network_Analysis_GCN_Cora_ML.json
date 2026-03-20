@@ -1,0 +1,92 @@
+{
+  "name": "43_Social_Network_Analysis_GCN_Cora_ML",
+  "query": "Merhaba! Cora atıf ağı veri kümesi ile bir GCN modeli kullanarak bir sosyal ağ analizi sistemi oluşturmama yardımcı olabilir misiniz? Öncelikle, veri kümesini `src/data_loader.py` içinde yükleyip ön işleme yapalım, normalizasyon ve gürültü giderme dahil. Ardından, düğümleri sınıflandırmak için GCN modelini uygulayın ve `src/train.py` içinde en iyi sonuçları elde etmek için öğrenme oranı ve gizli katman boyutu gibi hiperparametreleri ayarlayın. Modeli `models/saved_models/` altında kaydedin. Bunu yaptıktan sonra, düğüm sınıflandırma performansını `results/metrics/node_classification_results.txt` dosyasına kaydedin. Atıf ağı yapısını görselleştirin ve `results/figures/citation_network_visualization.png` olarak kaydedin. Son olarak, düğüm sınıflandırma sonuçlarını ve ağ görselleştirmesini `results/figures/` içinde sergilemek için D3.js veya Bokeh kullanarak etkileşimli bir ağ grafiği oluşturun. Ayrıca, uygulamanızın başka atıf veri kümelerine kolayca geçiş yapmasına izin vermesi harika olurdu. Yardımınız için çok teşekkürler!",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Cora atıf ağı\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri ön işleme, normalizasyon ve gürültü giderme dahil, `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Öğrenme oranı ve gizli katman boyutu gibi hiperparametreler `src/train.py` içinde modeli optimize etmek için ayarlanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Model `models/saved_models/` altında kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Düğüm sınıflandırma performansı `results/metrics/node_classification_results.txt` içinde kaydedilir.",
+      "category": "Performence Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Atıf ağı yapısı görselleştirilir ve `results/figures/citation_network_visualization.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4,
+        5
+      ],
+      "criteria": "Düğüm sınıflandırma sonuçlarını ve ağ görselleştirmesini `results/figures/` içinde sergilemek için \"D3.js\" veya \"Bokeh\" kullanılarak etkileşimli bir ağ grafiği oluşturulur.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Etkileşimli ağ grafiği, kullanıcıların bireysel düğümleri ve sınıflandırmalarını dinamik olarak keşfetmelerine olanak tanımalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Atıf ağı görselleştirmesi, farklı düğüm sınıflarını ve ilişkilerini net bir şekilde ayırt etmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, ek atıf veri kümelerini minimum değişiklikle işleyebilecek şekilde tasarlanmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

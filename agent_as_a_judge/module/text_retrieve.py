@@ -279,7 +279,9 @@ class DevTextRetrieve:
 
     def display_summary(self, llm_stats: Dict[str, Any]) -> str:
 
-        summary = llm_stats.get("llm_response", "")
+        summary = llm_stats.get("llm_response") or ""
+        if not isinstance(summary, str):
+            summary = str(summary)
         notice = "The following environment feedback is provided for reference only and does not serve as decisive evidence."
         panel = Panel(
             Text(notice + "\n\n" + summary),

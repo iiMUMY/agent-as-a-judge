@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\deepseek-v3.2\\English\\MetaGPT\\workspaces\\MetaGPT\\49_Explainable_AI_LIME_Titanic_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "model_explanation.md": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "report.py": null,
+            "visualize.py": null
+        }
+    }
+}

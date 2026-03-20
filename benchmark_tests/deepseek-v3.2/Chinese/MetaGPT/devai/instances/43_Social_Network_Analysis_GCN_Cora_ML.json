@@ -1,0 +1,92 @@
+{
+  "name": "43_Social_Network_Analysis_GCN_Cora_ML",
+  "query": "你好！你能帮我使用GCN模型和Cora引用网络数据集创建一个社交网络分析系统吗？首先，让我们在`src/data_loader.py`中加载和预处理数据集，包括归一化和去噪。然后，应用GCN模型对节点进行分类，并调整学习率和隐藏层大小等超参数，以在`src/train.py`中获得最佳结果。将模型保存在`models/saved_models/`下。完成后，请将节点分类性能保存到`results/metrics/node_classification_results.txt`。可视化引用网络结构并将其保存为`results/figures/citation_network_visualization.png`。最后，使用D3.js或Bokeh创建一个交互式网络图，以展示节点分类结果和网络可视化，保存在`results/figures/`中。如果你的实现能够让程序员轻松切换到其他引用数据集，那就太好了。非常感谢你的帮助！",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Cora引用网络\"数据集在`src/data_loader.py`中加载。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "数据预处理在`src/data_loader.py`中进行，包括归一化和去噪。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "在`src/train.py`中调整学习率和隐藏层大小等超参数以优化模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "模型保存在`models/saved_models/`下。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "节点分类性能保存在`results/metrics/node_classification_results.txt`。",
+      "category": "Performence Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "引用网络结构被可视化并保存为`results/figures/citation_network_visualization.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4,
+        5
+      ],
+      "criteria": "使用\"D3.js\"或\"Bokeh\"创建交互式网络图，以展示节点分类结果和网络可视化，保存在`results/figures/`中。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "交互式网络图应允许用户动态探索单个节点及其分类。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "引用网络可视化应清晰区分不同的节点类别和关系。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "系统应设计为能够以最小的修改处理其他引用数据集。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

@@ -1,0 +1,89 @@
+{
+  "name": "32_Weather_Data_Analysis_LinearRegression_Weather_ML",
+  "query": "Kaggle'dan alınan Weather veri kümesi üzerinde Lineer Regresyon modeli kullanarak bir hava durumu veri analizi sistemi geliştirin. Veri kümesini yükleyin ve özellik seçimi ve oluşturma dahil olmak üzere özellik mühendisliği yapın ve eksik verileri `src/data_loader.py` içinde ortalama atama veya enterpolasyon kullanarak ele alın. Ardından, Lineer Regresyon modeli `src/model.py` içinde uygulanmalıdır. Korelasyon matrisini `results/figures/correlation_matrix.png` olarak görselleştirin ve kaydedin ve tahmin sonuçlarını güven aralıklarıyla birlikte bir çizgi grafiği olarak `results/figures/prediction_results.png` içinde kaydedin. Son olarak, veri ön işleme, özellik mühendisliği, model eğitimi ve tahmin sonuçlarını kapsayan ayrıntılı bir rapor oluşturun. Raporu `results/weather_analysis_report.pdf` içinde kaydedin. Özellik mühendisliği süreci iyi belgelenmelidir.",
+  "tags": [
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Weather\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik mühendisliği, özellik seçimi ve oluşturma dahil olmak üzere `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Eksik veriler `src/data_loader.py` içinde ortalama atama veya enterpolasyon kullanılarak ele alınır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"Lineer Regresyon\" modeli hava durumu veri analizi için kullanılır ve `src/model.py` içinde uygulanmalıdır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Korelasyon matrisi `results/figures/correlation_matrix.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Tahmin sonuçları çizgi grafiği olarak çizilir ve güven aralıklarıyla birlikte kaydedilir. Grafik `results/figures/prediction_results.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "Veri ön işleme, özellik mühendisliği, model eğitimi ve tahmin sonuçlarını içeren ayrıntılı bir rapor oluşturulur ve `results/weather_analysis_report.pdf` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Özellik mühendisliği süreci, özellik seçimi ve oluşturmanın arkasındaki mantığı açıklayarak raporda açıkça belgelenmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Rapor, özellikler arasındaki ilginç ilişkileri vurgulayarak korelasyon matrisi üzerine bir tartışma içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

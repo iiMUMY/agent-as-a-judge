@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Hindi\\GPT-Pilot\\workspaces\\GPT-Pilot\\08_Robot_Control_PPO_PyBullet_RL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "robot_motion.gif": null,
+            "training_returns.png": null
+        },
+        "src": {
+            "env.py": null,
+            "train.py": null
+        }
+    }
+}

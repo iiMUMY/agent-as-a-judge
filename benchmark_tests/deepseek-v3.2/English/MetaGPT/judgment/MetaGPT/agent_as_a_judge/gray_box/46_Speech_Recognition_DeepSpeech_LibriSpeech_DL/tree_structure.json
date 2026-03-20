@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\deepseek-v3.2\\English\\MetaGPT\\workspaces\\MetaGPT\\46_Speech_Recognition_DeepSpeech_LibriSpeech_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "recognition_report.md": null,
+            "recognition_results.txt": null
+        },
+        "results\\figures": {
+            "audio_visualization.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "train.py": null
+        }
+    }
+}

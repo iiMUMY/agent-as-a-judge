@@ -1,0 +1,21 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\deepseek-v3.2\\English\\GPT-Pilot\\workspaces\\GPT-Pilot\\50_Math_Problem_Solving_Transformer_DeepMindMath_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "sample_solutions.txt": null
+        },
+        "results\\figures": {
+            "training_loss_curve.png": null
+        },
+        "results\\metrics": {
+            "model_report.md": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "interface.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

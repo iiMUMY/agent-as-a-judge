@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Turkish\\OpenHands\\workspaces\\OpenHands\\10_Face_Recognition_FaceNet_LFW_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "embedding_visualization.png": null
+        },
+        "results\\metrics": {
+            "recognition_accuracy.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

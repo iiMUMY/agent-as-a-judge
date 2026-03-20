@@ -1,0 +1,99 @@
+{
+  "name": "12_Spam_Detection_SVM_Enron_ML",
+  "query": "नमस्ते। मुझे एक प्रोजेक्ट बनाने की आवश्यकता है जो Enron-Spam डेटासेट पर Support Vector Machine (SVM) क्लासिफायर का उपयोग करके स्पैम ईमेल का पता लगाए। प्रोजेक्ट को स्टॉप वर्ड्स और विराम चिह्न हटाकर टेक्स्ट को पूर्व-प्रसंस्कृत करना चाहिए, TF-IDF फीचर्स का उपयोग करना चाहिए, GridSearchCV का उपयोग करके हाइपरपैरामीटर ट्यूनिंग करना चाहिए, और कन्फ्यूजन मैट्रिक्स को `results/figures/confusion_matrix.png` में सहेजना चाहिए। मुझे एक व्यापक रिपोर्ट भी लिखनी और सहेजनी है, जिसमें प्रिसिजन, रिकॉल, F1-स्कोर, और कन्फ्यूजन मैट्रिक्स (जो `results/figures/confusion_matrix.png` के रूप में उत्पन्न किया जाएगा) शामिल हो, जिसे `results/classification_report.pdf` के अंतर्गत सहेजा जाएगा। Enron-Spam डेटासेट को `src/data_loader.py` में लोड किया जाना चाहिए। टेक्स्ट पूर्व-प्रसंस्करण, जिसमें स्टॉप वर्ड्स और विराम चिह्न हटाना और TF-IDF फीचर्स की गणना शामिल है, `src/data_loader.py` में किया जाना चाहिए। SVM क्लासिफायर को `src/model.py` में लागू किया जाना चाहिए। हाइपरपैरामीटर ट्यूनिंग को `src/train.py` में GridSearchCV का उपयोग करके किया जाना चाहिए। यह सहायक होगा यदि टेक्स्ट पूर्व-प्रसंस्करण चरण को बड़ी संख्या में ईमेल को कुशलतापूर्वक संभालने के लिए अनुकूलित किया जाए।",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Enron-Spam\" डेटासेट को `src/data_loader.py` में लोड किया गया है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "टेक्स्ट पूर्व-प्रसंस्करण किया गया है, जिसमें `src/data_loader.py` में स्टॉप वर्ड्स और विराम चिह्न हटाना शामिल है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "\"TF-IDF\" फीचर्स का उपयोग `src/data_loader.py` में किया गया है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"SVM क्लासिफायर\" को `src/model.py` में लागू किया गया है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "हाइपरपैरामीटर ट्यूनिंग \"GridSearchCV\" का उपयोग करके `src/train.py` में किया गया है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "कन्फ्यूजन मैट्रिक्स को `results/figures/confusion_matrix.png` के रूप में सहेजा गया है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "एक वर्गीकरण रिपोर्ट, जिसमें \"प्रिसिजन,\" \"रिकॉल,\" \"F1-स्कोर,\" और चित्र `results/figures/confusion_matrix.png` शामिल हैं, को `results/classification_report.pdf` के रूप में सहेजा गया है।",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "टेक्स्ट पूर्व-प्रसंस्करण चरण को बड़ी संख्या में ईमेल को कुशलतापूर्वक संभालने के लिए अनुकूलित किया जाना चाहिए।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "वर्गीकरण रिपोर्ट व्यापक होनी चाहिए।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

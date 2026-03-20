@@ -1,0 +1,70 @@
+{
+  "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+  "query": "Bana Q-learning algoritmasını kullanarak labirent tarzı Gridworld görevlerini çözmek için bir sistem oluşturmamda yardımcı olabilir misiniz? Sistem, temel hesaplamaları daha verimli hale getirmek için numpy ve görselleştirmeler için matplotlib kullanmalıdır. Q-learning algoritması `src/train.py` içinde uygulanmalı ve uygun şekilde adlandırılmış Gridworld ortamı, başlatıldığında ızgara boyutunu ve başlangıç/bitiş pozisyonlarını belirleyebileceğiniz şekilde `src/env.py` içinde uygulanmalıdır. Sistem, eğitim sırasında öğrenme eğrisini kaydetmeli, bölümleri ve bunlara karşılık gelen getirileri izlemeli ve bunu `results/figures/learning_curve.png` olarak kaydetmelidir. Ayrıca, her bölümde ajan tarafından alınan yolları görselleştirip `results/figures/path_changes.gif` adlı bir dosyada kaydetmenizi ve eğitilmiş modeli `models/saved_models/q_learning_model.npy` olarak kaydetmenizi istiyorum. Eğitim sırasında, modelin nasıl öğrendiğine dair ilerlemeyi görmek veya güncellemeler almak gibi bir tür gerçek zamanlı geri bildirim almak harika olurdu. Ayrıca, mümkünse, kodu daha sonra kolayca değiştirmek veya genişletmek için yazmaya çalışın.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Q-learning\" algoritması `src/train.py` içinde kullanılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Gridworld\" ortamı, kullanıcıya ızgara boyutunu ve başlangıç/bitiş pozisyonlarını belirleme yeteneği ile `src/env.py` içinde tanımlanır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Öğrenme eğrileri eğitim sırasında kaydedilir ve `results/figures/learning_curve.png` olarak kaydedilir. Bölümler ve getiriler kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Öğrenilen model `models/saved_models/q_learning_model.npy` olarak kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Öğrenme sırasında alınan yollar görselleştirilir ve `results/figures/path_changes.gif` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Eğitim süreci sırasında bazı gerçek zamanlı ilerleme veya geri bildirim gösterilmelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Kod, daha sonra kolayca değiştirilip genişletilebilecek şekilde yazılmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

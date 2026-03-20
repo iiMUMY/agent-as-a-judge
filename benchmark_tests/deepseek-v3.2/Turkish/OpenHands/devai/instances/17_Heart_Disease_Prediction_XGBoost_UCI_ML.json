@@ -1,0 +1,114 @@
+{
+  "name": "17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+  "query": "UCI Heart Disease veri kümesini kullanarak, [bu bağlantıdan](https://archive.ics.uci.edu/dataset/45/heart+disease) indirilebilen bir XGBoost modeli ile kalp hastalığını tahmin edecek bir proje oluşturun. Veri kümesini `src/data_loader.py` içinde yükleyin. Özellik seçimi ve veri standardizasyonunu `src/data_loader.py` içinde uygulayın. Özellik önemini açıklamak için SHAP değerlerini kullanın ve sonuçları `results/figures/shap_importance.png` olarak kaydedin. XGBoost modelini `src/model.py` içinde uygulayın. Ardından, özellik önemini açıklamak için SHAP değerlerini kullanın ve sonuçları `results/shap_importance.png` olarak kaydedin. ROC eğrisini `results/figures/roc_curve.png` olarak kaydedin. Son olarak, tüm sonuçları ve görselleştirmeleri içeren bir HTML raporu oluşturun ve `results/report.html` olarak kaydedin. SHAP görselleştirmelerinin en etkili özellikleri net bir şekilde vurguladığından emin olun. XGBoost modelinin sağlamlığını doğrulamak için Lojistik Regresyon gibi başka bir modelle performans karşılaştırması yapın. XGBoost modelini `models/saved_models/` altında kaydedin.",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI Heart Disease\" veri kümesi kullanılır, [bu bağlantıdan](https://archive.ics.uci.edu/dataset/45/heart+disease) indirilebilir. Veri kümesini `src/data_loader.py` içinde yükleyin.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik seçimi `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik değerlerinin aynı aralıkta olmasını sağlayan veri standardizasyonu `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"XGBoost\" modeli `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Özellik önemini açıklamak için \"SHAP\" değerleri kullanılır, sonuçlar `results/figures/shap_importance.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "ROC eğrisi `results/figures/roc_curve.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Sonuçları ve görselleştirmeleri içeren bir HTML raporu oluşturulur, `results/report.html` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "XGBoost modelinin sağlamlığını doğrulamak için başka bir modelle (örneğin, Lojistik Regresyon) performans karşılaştırması yapılır.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 8,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "XGBoost modeli `models/saved_models/` altında kaydedilir.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "SHAP görselleştirmeleri net olmalı ve en etkili özellikleri vurgulamalı, sonuçların kolayca yorumlanmasını sağlamalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Turkish"
+}

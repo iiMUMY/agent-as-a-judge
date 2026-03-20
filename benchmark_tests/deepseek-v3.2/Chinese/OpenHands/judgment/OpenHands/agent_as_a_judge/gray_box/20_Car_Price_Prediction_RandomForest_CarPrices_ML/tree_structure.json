@@ -1,0 +1,21 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Chinese\\OpenHands\\workspaces\\OpenHands\\20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "report.md": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "results\\metrics": {},
+        "results\\metrics\\results": {
+            "metrics.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}
