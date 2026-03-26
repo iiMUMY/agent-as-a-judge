@@ -1,0 +1,103 @@
+{
+  "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+  "query": "使用Logistic Regression模型和Pima Indians Diabetes数据集建立一个糖尿病预测项目。在`src/data_loader.py`中执行特征缩放和数据标准化。在`src/train.py`中使用交叉验证评估模型，并将准确率分数保存到`results/metrics/accuracy_score.txt`。生成并保存ROC曲线到`results/figures/roc_curve.png`。使用Tableau或Power BI创建一个交互式仪表板来展示模型的性能并突出重要特征。确保仪表板用户友好，并记录数据集处理和可视化创建步骤。在开发过程中，系统应自动管理Tableau或Power BI的打开和关闭，以防止不必要的阻塞。",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "使用\"Pima Indians Diabetes\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中实现特征缩放和数据标准化。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "在`src/model.py`中实现一个\"Logistic Regression\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "在`src/train.py`中使用交叉验证评估模型。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "准确率分数保存在`results/metrics/accuracy_score.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "生成ROC曲线并保存为`results/figures/roc_curve.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "创建一个使用\"Tableau\"或\"Power BI\"的交互式可视化仪表板，以展示模型性能和重要特征。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "仪表板应允许用户探索模型性能的不同方面，并了解哪些特征对预测贡献最大。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "仪表板应清晰展示数据集的处理方式和可视化的创建过程。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "在开发过程中，系统应根据需要自动打开和关闭\"Tableau\"或\"Power BI\"，以避免长时间的阻塞或不活动。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

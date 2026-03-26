@@ -1,0 +1,72 @@
+{
+  "name": "03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+  "query": "请为20 Newsgroups数据集实现一个朴素贝叶斯分类器，并将其保存在名为`src/model.py`的文件中。数据集应在`src/data_loader.py`中加载。程序应处理数据预处理，包括去除停用词、标点符号和特殊字符。通过在训练分类器前后生成词云并将其保存为`results/figures/wordcloud_before.png`和`results/figures/wordcloud_after.png`来展示分类器的改进。请在`src/data_loader.py`中加载数据时计算并包含TF-IDF特征。最后，打印出性能报告（包括精度、召回率和F1-score）并将其保存为`results/metrics/performance.txt`。模型应易于解释，最终报告应结构清晰，便于审阅。",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"20 Newsgroups\"数据集在`src/data_loader.py`中使用。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "进行数据预处理，包括去除停用词、标点符号和特殊字符。在训练分类器前后可视化词云，并保存为`results/figures/wordcloud_before.png`和`results/figures/wordcloud_after.png`。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "在`src/data_loader.py`中加载数据时使用\"TF-IDF\"特征。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中实现一个\"朴素贝叶斯分类器\"。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "打印并保存性能报告，包括\"精度\"、\"召回率\"和\"F1-score\"，保存为`results/metrics/performance.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "模型应易于解释。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "最终报告应结构清晰，便于审阅。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "In the query, there is a missing word \"be\" after the word \"should\" in \"The dataset should loaded in `src/data_loader.py`\".",
+  "language": "Chinese"
+}

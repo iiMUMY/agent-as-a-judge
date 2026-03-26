@@ -1,0 +1,91 @@
+{
+  "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+  "query": "क्या आप मुझे Lending Club Loan डेटासेट का उपयोग करके एक लोन डिफॉल्ट प्रेडिक्शन सिस्टम बनाने में मदद कर सकते हैं, जिसमें Random Forest क्लासिफायर का उपयोग किया गया हो? डेटासेट लोड करने से शुरू करें, असंतुलित डेटा को ओवरसैंपलिंग या अंडरसैंपलिंग तकनीकों का उपयोग करके संभालें, और महत्वपूर्ण विशेषताओं की पहचान करने के लिए फीचर चयन करें, सभी को `src/data_loader.py` में लागू करें। एक Random Forest मॉडल को प्रशिक्षित करें और प्रशिक्षित मॉडल को `models/saved_models/` में सहेजें। फीचर इम्पोर्टेंस को `results/feature_importances.txt` में सहेजें और ROC कर्व को `results/figures/roc_curve.png` के रूप में matplotlib का उपयोग करके सहेजें। अंत में, डेटा प्रीप्रोसेसिंग चरणों, मॉडल प्रशिक्षण, और मूल्यांकन प्रक्रिया का सारांश देते हुए एक विस्तृत Markdown रिपोर्ट बनाएं और इसे `results/loan_default_prediction_report.md` के रूप में सहेजें। रिपोर्ट में मॉडल प्रदर्शन पर अंतर्दृष्टि और संभावित सुधारों के लिए सुझाव शामिल होने चाहिए।",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Lending Club Loan\" डेटासेट को `src/data_loader.py` में लोड किया गया है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "असंतुलित डेटा को ओवरसैंपलिंग या अंडरसैंपलिंग तकनीकों का उपयोग करके संभाला गया है, जो `src/data_loader.py` में लागू किया गया है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "महत्वपूर्ण विशेषताओं की पहचान करने के लिए फीचर चयन `src/data_loader.py` में किया गया है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "लोन डिफॉल्ट की भविष्यवाणी के लिए \"Random Forest\" क्लासिफायर लागू किया गया है। प्रशिक्षित मॉडल को `models/saved_models/` में सहेजें।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "फीचर इम्पोर्टेंस को `results/feature_importances.txt` के रूप में सहेजा गया है।",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "\"ROC कर्व\" को \"matplotlib\" का उपयोग करके विज़ुअलाइज़ और `results/figures/roc_curve.png` पर सहेजा गया है।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "डेटा प्रीप्रोसेसिंग चरणों, मॉडल प्रशिक्षण, और मूल्यांकन प्रक्रिया को शामिल करते हुए एक Markdown रिपोर्ट बनाई गई है और इसे `results/loan_default_prediction_report.md` के रूप में सहेजा गया है।",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Markdown रिपोर्ट विस्तृत है।",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdown रिपोर्ट में मॉडल प्रदर्शन पर अंतर्दृष्टि और संभावित सुधारों के लिए सुझाव शामिल होने चाहिए।",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

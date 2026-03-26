@@ -1,0 +1,19 @@
+{
+    "workspace": "benchmark_tests\\qwen3.5-9b\\Turkish\\MetaGPT\\workspaces\\MetaGPT\\17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "report.html": null
+        },
+        "results\\figures": {
+            "roc_curve.png": null,
+            "shap_importance.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

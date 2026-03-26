@@ -1,0 +1,88 @@
+{
+    "name": "19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+    "query": "تطوير نظام لتوقع المبيعات باستخدام نموذج تسلسل إلى تسلسل يعتمد على LSTM مع مجموعة بيانات مبيعات متاجر Rossmann، وتنزيلها من Kaggle [هنا](https://www.kaggle.com/c/rossmann-store-sales/data) وتحميلها في `src/data_loader.py`. قم بتقسيم البيانات إلى مجموعات تدريب واختبار واحفظها في `src/data_loader.py`. طبق نموذج تسلسل إلى تسلسل يعتمد على `LSTM` واحفظ النموذج المدرب في دليل `models/saved_models/`. احفظ نتائج التوقع كـ `results/figures/forecast_results.png`. احفظ رسم مقارنة بين القيم المتوقعة والفعلية في `results/figures/comparison_plot.png`. قم بإنشاء تقرير HTML يتضمن نتائج التوقع ورسوم المقارنة، مع بعض العناصر التفاعلية لاستكشاف آفاق التوقع المختلفة، واحفظه كـ `results/report.html`. تأكد من ضبط النموذج لالتقاط الاتجاهات الموسمية في بيانات المبيعات.",
+    "tags": [
+        "Supervised Learning",
+        "Time Series Forecasting"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Rossmann Store Sales\"، والتي يمكن تنزيلها من Kaggle [هذا الرابط](https://www.kaggle.com/c/rossmann-store-sales/data) وتحميلها في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تقسيم البيانات إلى مجموعات تدريب واختبار وتطبيقها في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم استخدام نموذج تسلسل إلى تسلسل يعتمد على \"LSTM\". يرجى حفظ النموذج المدرب في دليل `models/saved_models/`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم رسم نتائج التنبؤ وحفظها كـ `results/figures/forecast_results.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ رسم مقارنة للقيم المتوقعة مقابل الفعلية كـ `results/figures/comparison_plot.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير HTML يحتوي على نتائج التنبؤ ورسوم المقارنة وحفظه كـ `results/report.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                5
+            ],
+            "criteria": "يجب أن يتضمن تقرير HTML عناصر تفاعلية تسمح للمستخدمين باستكشاف آفاق التنبؤ المختلفة.",
+            "category": "Human Computer Interaction",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب ضبط النموذج لالتقاط الاتجاهات الموسمية في بيانات المبيعات لتحقيق توقعات أكثر دقة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": true,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic"
+}

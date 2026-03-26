@@ -1,0 +1,88 @@
+{
+    "name": "45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
+    "query": "هل يمكنك مساعدتي في إعداد نظام توصية للمنتجات باستخدام خوارزمية تحليل المصفوفة مع مجموعة فرعية من الإلكترونيات من مجموعة بيانات مراجعات أمازون 2023؟ يجب عليك التعامل مع تحميل البيانات وجميع معالجة البيانات المسبقة، بما في ذلك إزالة الضوضاء والتطبيع في `src/data_loader.py`. قم بتطبيق نموذج العوامل الكامنة لحساب تفاعلات المستخدم-المنتج واحفظ التنفيذ في `src/model.py`. اطبع واحفظ نتائج التوصية في `results/recommendation_results.txt`. ثم قم بتصور هذه التوصيات باستخدام مكتبة Plotly واحفظ التصور كـ `results/figures/recommendation_visualization.html`. أخيرًا، قم بإنشاء تقرير تحليل يغطي معالجة البيانات المسبقة، وتدريب النموذج، والنتائج، ويجب حفظه كـ `results/recommendation_report.md`.",
+    "tags": [
+        "Recommender Systems"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل الجزء \"Electronics\" من مجموعة البيانات \"Amazon Reviews 2023\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة، بما في ذلك إزالة الضوضاء والتطبيع في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ \"نموذج العوامل الكامنة\" لحساب تفاعلات المستخدم-العنصر في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التوصية كـ `results/recommendation_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم تصور نتائج التوصية باستخدام \"Plotly\" وحفظها كـ `results/figures/recommendation_visualization.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء تقرير تحليل يحتوي على معالجة البيانات المسبقة، وتدريب النموذج، ونتائج التوصية وحفظه كـ `results/recommendation_report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب مناقشة تأثير خطوات المعالجة المسبقة المختلفة على دقة التوصية في تقرير التحليل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التصور تفاعليًا، مما يسمح للمستخدمين باستكشاف نتائج التوصية لمنتجات مختلفة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "يجب تصميم النظام لدمج بيانات سلوك المستخدم الإضافية أو ميزات المنتج بسهولة للتحسينات المستقبلية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

@@ -1,0 +1,91 @@
+{
+  "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+  "query": "你能帮我使用随机森林分类器和Lending Club Loan数据集构建一个贷款违约预测系统吗？首先加载数据集，使用过采样或欠采样技术处理不平衡数据，并执行特征选择以识别重要特征，所有这些都在`src/data_loader.py`中实现。训练一个随机森林模型并将训练好的模型保存在`models/saved_models/`中。将特征重要性保存到`results/feature_importances.txt`，并使用matplotlib将ROC曲线保存为`results/figures/roc_curve.png`。最后，创建一个详细的Markdown报告，总结数据预处理步骤、模型训练和评估过程，并将其保存为`results/loan_default_prediction_report.md`。报告应包括对模型性能的见解和潜在改进的建议。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"Lending Club Loan\"数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "使用过采样或欠采样技术处理不平衡数据，在`src/data_loader.py`中实现。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中执行特征选择以识别重要特征。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "实现一个用于预测贷款违约的\"随机森林\"分类器。将训练好的模型保存在`models/saved_models/`中。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "将特征重要性保存为`results/feature_importances.txt`。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "使用\"matplotlib\"可视化并保存\"ROC曲线\"到`results/figures/roc_curve.png`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "创建一个包含数据预处理步骤、模型训练和评估过程的Markdown报告，并保存为`results/loan_default_prediction_report.md`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Markdown报告是详细的。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdown报告应包括对模型性能的见解和潜在改进的建议。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

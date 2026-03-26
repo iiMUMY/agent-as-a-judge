@@ -1,0 +1,11 @@
+{
+    "workspace": "benchmark_tests\\qwen3.5-9b\\Hindi\\OpenHands\\workspaces\\OpenHands\\04_Text_Generation_GPT2_Prompts_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "generated_text.txt": null
+        }
+    }
+}

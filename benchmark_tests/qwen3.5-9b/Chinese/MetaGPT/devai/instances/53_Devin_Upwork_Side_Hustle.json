@@ -1,0 +1,75 @@
+{
+  "name": "53_Devin_Upwork_Side_Hustle",
+  "query": "你好，我正在寻找使用此仓库中的模型进行推理的方法 `https://github.com/mahdi65/roadDamageDetection2020`。系统应使用仓库中的模型进行推理，并将结果保存到 `models/saved_models/`。应下载样本数据并准备好用于在 `src/data_loader.py` 中测试模型。应使用提供的模型对 `models/saved_models/` 中的样本数据进行推理。应生成显示模型检测结果的可视化图像，并将其保存到 `results/figures/` 目录中。此外，应生成基于模型检测结果的性能报告，并保存为 `results/metrics/model_performance_report.txt`。",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "`https://github.com/mahdi65/roadDamageDetection2020` 的仓库已设置。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "样本数据已下载并准备好用于在 `src/data_loader.py` 中测试模型。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "使用提供的模型对 `models/saved_models/` 中的样本数据进行了推理。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "生成了显示模型检测结果的可视化图像，并将其保存到 `results/figures/` 目录中。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "基于模型检测结果的性能报告已生成，并保存为 `results/metrics/model_performance_report.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "可视化图像应清晰，检测结果应准确突出，便于解释。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "性能报告应包括检测准确性的总结以及推理过程中遇到的任何问题。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "resource": "https://www.cognition.ai/blog/introducing-devin",
+  "language": "Chinese"
+}

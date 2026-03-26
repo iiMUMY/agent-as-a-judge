@@ -1,0 +1,83 @@
+{
+  "name": "28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+  "query": "क्या आप मेरी मदद कर सकते हैं एक स्टॉक मूल्य भविष्यवाणी प्रणाली बनाने में जो LSTM मॉडल और Yahoo Finance डेटासेट का उपयोग करती हो? कृपया डेटा को साफ करें, जिसमें गायब मान और बाहरी मानों को संभालना शामिल है, और समय श्रृंखला डेटा को एक सुपरवाइज्ड लर्निंग समस्या में बदलने के लिए एक समय विंडो का उपयोग करें। LSTM मॉडल को `src/model.py` में लागू किया जाना चाहिए, और डेटासेट लोडिंग, सफाई, और रूपांतरण को `src/data_loader.py` में लागू किया जाना चाहिए। भविष्यवाणी परिणामों को `results/predictions.txt` में सहेजें और भविष्यवाणी परिणामों के इंटरैक्टिव चार्ट्स को Plotly का उपयोग करके `results/figures/prediction_interactive.html` में उत्पन्न और सहेजें। मॉडल आर्किटेक्चर विज़ुअलाइज़ेशन, प्रशिक्षण प्रक्रिया, और भविष्यवाणी परिणामों के साथ एक Jupyter Notebook बनाएं और इसे PDF रिपोर्ट के रूप में `results/report.pdf` में सहेजें।",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"LSTM\" मॉडल को `src/model.py` में लागू किया गया है।",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Yahoo Finance\" डेटासेट को `src/data_loader.py` में लोड किया गया है।",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "डेटा सफाई, जिसमें गायब मान और बाहरी मानों को संभालना शामिल है, `src/data_loader.py` में की जाती है।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2
+      ],
+      "criteria": "समय श्रृंखला डेटा को एक सुपरवाइज्ड लर्निंग समस्या में बदलने के लिए एक समय विंडो का उपयोग किया जाता है। कृपया इसे `src/data_loader.py` में लागू करें।",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "भविष्यवाणी परिणामों को `results/predictions.txt` में सहेजा गया है।",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "भविष्यवाणी परिणामों के इंटरैक्टिव चार्ट्स \"Plotly\" का उपयोग करके उत्पन्न किए जाते हैं और `results/figures/prediction_interactive.html` में सहेजे जाते हैं।",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "मॉडल आर्किटेक्चर विज़ुअलाइज़ेशन, प्रशिक्षण प्रक्रिया, और भविष्यवाणी परिणामों के साथ एक Jupyter Notebook बनाई जाती है और इसे PDF रिपोर्ट के रूप में `results/report.pdf` में सहेजा जाता है।",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Hindi"
+}

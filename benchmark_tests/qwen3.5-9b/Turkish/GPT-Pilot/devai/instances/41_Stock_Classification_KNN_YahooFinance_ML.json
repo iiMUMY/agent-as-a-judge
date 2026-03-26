@@ -1,0 +1,93 @@
+{
+  "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+  "query": "Yahoo Finance veri kümesi üzerinde bir KNN modeli kullanarak bir hisse senedi sınıflandırma sistemi geliştirin. Uygulamanız, verilen bir hisse senedinin fiyatının artıp artmayacağına karar vermelidir. Veri kümesini yükleyerek ve teknik göstergeler oluşturarak ve `src/data_loader.py` içinde en alakalı özellikleri seçerek özellik mühendisliği yaparak başlayın. `src/data_loader.py` içinde veri standartlaştırarak özellik değerlerinin aynı aralıkta olmasını sağlayın. KNN sınıflandırıcısını, mühendislik yapılan özelliklere dayalı olarak hisse senetlerini sınıflandırmak için uygulayın ve uygulamayı `src/model.py` içinde kaydedin. Ardından, sınıflandırma sonuçlarını `results/classification_results.txt` dosyasına kaydedin ve teknik göstergeler ile sınıflandırma sonucu arasındaki korelasyonu seaborn kullanarak bir ısı haritası olarak görselleştirin. Isı haritasını `results/figures/feature_correlation_heatmap.png` olarak kaydedin. Son olarak, süreci açıklayan, sınıflandırma sonuçlarını sergileyen ve yeni verilerin tanıtıldığı gelecekteki güncellemeleri kolaylaştıracak bir etkileşimli Jupyter Notebook'u `results/` altında oluşturun.",
+  "tags": [
+    "Classification",
+    "Financial Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Yahoo Finance\" veri kümesi kullanılır, veri yükleme ve hazırlama `src/data_loader.py` içinde yapılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Özellik mühendisliği yapılır, teknik göstergeler oluşturulur ve `src/data_loader.py` içinde özellik seçimi yapılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Veri, `src/data_loader.py` içinde özellik değerlerinin aynı aralıkta olmasını sağlamak için standartlaştırılır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "\"KNN sınıflandırıcısı\" mühendislik yapılan özelliklere dayalı olarak hisse senetlerini sınıflandırmak için uygulanır. Lütfen uygulamayı `src/model.py` içinde kaydedin.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Sınıflandırma sonuçları `results/classification_results.txt` dosyasına kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Teknik göstergeler ile sınıflandırma sonuçları arasındaki korelasyonları temsil eden bir ısı haritası `results/figures/feature_correlation_heatmap.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Süreci açıklamak ve sınıflandırma sonuçlarını sergilemek için `results/` altında etkileşimli bir \"Jupyter Notebook\" oluşturulur.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook, her adımın, özellik mühendisliği ve model değerlendirmesi dahil, net açıklamalarını içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Korelasyon ısı haritası, en önemli teknik göstergeleri vurgulamalı ve bunların ilişkilerine dair içgörüler sağlamalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Sistem, yeni verilerle kolay güncellemeler yapılmasına izin vermeli, not defterini gelecekteki analizler için esnek hale getirmelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

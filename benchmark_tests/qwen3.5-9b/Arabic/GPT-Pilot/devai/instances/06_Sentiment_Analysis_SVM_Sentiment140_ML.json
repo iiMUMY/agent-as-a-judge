@@ -1,0 +1,74 @@
+{
+    "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+    "query": "يرجى مساعدتي في بناء نظام لتحليل المشاعر على التغريدات باستخدام مجموعة بيانات Sentiment140 المتاحة من Hugging Face. قم بتحميل مجموعة بيانات Sentiment140 وعند تحميل البيانات، قم بتنظيفها بإزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، كل ذلك في `src/data_loader.py`. استخدم Word2Vec أو GloVe لتوجيه النصوص. يجب أن يحدث هذا في `src/data_loader.py`. بعد ذلك، قم بتنفيذ وتدريب مصنف SVM في `src/model.py`. أخيرًا، اكتب تقريرًا عن دقة المصنف في `results/metrics/accuracy_score.txt`. من الناحية المثالية، يجب أن يكون التقرير سهل الفهم.",
+    "tags": [
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم الحصول على مجموعة البيانات \"Sentiment140\" المتاحة من \"Hugging Face\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنظيف مجموعة البيانات، بما في ذلك إزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، جميعها في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام تضمينات الكلمات، إما \"Word2Vec\" أو \"GloVe\"، لتحويل النص إلى متجهات في `src/data_loader.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم تنفيذ وتدريب \"SVM classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة وحفظ درجة الدقة كـ `results/metrics/accuracy_score.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون عملية تنزيل مجموعة البيانات موثوقة، مع معالجة واضحة للأخطاء.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التقرير النهائي للدقة بسيطًا وسهل الفهم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

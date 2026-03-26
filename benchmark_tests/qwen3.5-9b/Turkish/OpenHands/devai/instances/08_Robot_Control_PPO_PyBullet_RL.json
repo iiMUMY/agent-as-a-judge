@@ -1,0 +1,76 @@
+{
+  "name": "08_Robot_Control_PPO_PyBullet_RL",
+  "query": "PyBullet simülasyon ortamında PPO algoritması ile pekiştirmeli öğrenme yoluyla robot kolu kontrolünü araştıran bir proje uygulamak istiyorum. PyBullet simülatörü içe aktarılmalı ve ilgili bir robotik ortam `src/env.py` içinde yüklenmelidir. PPO algoritması `src/train.py` içinde uygulanmalıdır. Proje, robotun son konumunu titizlikle belgelemeli, bunu `data/final_position.txt` olarak yazdırmalı ve kaydetmelidir. Eğitim getiri eğrisi çizilmeli ve `results/figures/training_returns.png` olarak kaydedilmelidir. Robotun hareket örneği görselleştirilmeli ve `results/figures/robot_motion.gif` olarak kaydedilmelidir. Ayrıntılı bir ortam kurulumu ve ödül yapısı açıklaması `src/env.py` içinde sağlanmalıdır. PyBullet'te URDF dosyalarının yüklenmesiyle ilgili sorunların açıkça ele alındığından ve belgelenmiş olduğundan emin olun, hata ayıklama için net hata mesajları veya günlükler sağlayın.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"PyBullet\" simülatörü `src/env.py` içinde kullanılır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"PPO\" algoritması `src/train.py` içinde kullanılır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Ayrıntılı bir ortam kurulumu ve ödül yapısı açıklaması `src/env.py` içinde sağlanır.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Robotun son konumu yazdırılır ve `data/final_position.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Eğitim getiri eğrisi kaydedilir ve `results/figures/training_returns.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Robotun hareket örneği görselleştirilir ve `results/figures/robot_motion.gif` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Sistem, PyBullet'te URDF dosyalarının yüklenmesiyle ilgili potansiyel sorunları etkili bir şekilde ele almalı, hata ayıklama için net hata mesajları veya günlükler sağlamalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

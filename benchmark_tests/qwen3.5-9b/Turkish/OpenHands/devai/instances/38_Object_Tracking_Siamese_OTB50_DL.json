@@ -1,0 +1,103 @@
+{
+  "name": "38_Object_Tracking_Siamese_OTB50_DL",
+  "query": "Siamese ağı ve OTB50 veri kümesini kullanarak nesne takibi için bir sistem oluşturmam gerekiyor. OTB50 veri kümesi `src/data_loader.py` içinde yüklenmelidir. Sistem, `src/data_loader.py` içinde gerçekleştirilen döndürme ve ölçekleme gibi veri artırma adımlarını içermelidir. Siamese ağı `src/model.py` içinde uygulanmalıdır. Öğrenme oranı ve yığın boyutu gibi hiperparametreler `src/train.py` içinde ayarlanmalıdır. Takip sonuçları `results/tracking_results.txt` olarak kaydedilmelidir. Takip sonuçlarını OpenCV ile görselleştir ve takip videolarını `results/videos/` altında kaydet. Ayrıca, veri ön işleme, model eğitimi ve değerlendirme sürecinin detaylarını içeren kapsamlı bir Markdown raporu oluştur ve `results/object_tracking_report.md` olarak kaydet. Sistem, esnek uygulama için yeni video dizilerini minimum ayarlamalarla işleyebilmelidir. Markdown raporu, farklı hiperparametrelerin takip performansı üzerindeki etkisini analiz eden bir bölüm içermelidir.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"OTB50\" veri kümesi `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Döndürme ve ölçekleme gibi veri artırma işlemleri `src/data_loader.py` içinde gerçekleştirilir.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Siamese\" ağı `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Öğrenme oranı ve yığın boyutu gibi hiperparametreler `src/train.py` içinde ayarlanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Takip sonuçları `results/tracking_results.txt` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Takip sonuçları OpenCV ile görselleştirilir ve `results/videos/` içine kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Veri ön işleme, model eğitimi ve değerlendirme süreçlerini içeren detaylı bir Markdown belgesi oluşturulur ve `results/object_tracking_report.md` olarak kaydedilir.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        6
+      ],
+      "criteria": "Markdown raporu, farklı hiperparametrelerin takip performansı üzerindeki etkisini analiz eden bir bölüm içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Takip videoları yüksek çözünürlükte kaydedilmeli ve takip edilen nesneyi vurgulayan açıklamalar içermelidir.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Sistem, esnek kullanım durumlarına olanak tanıyan, yeni video dizilerini minimum değişiklikle işleyebilme kapasitesine sahip olmalıdır.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Turkish"
+}

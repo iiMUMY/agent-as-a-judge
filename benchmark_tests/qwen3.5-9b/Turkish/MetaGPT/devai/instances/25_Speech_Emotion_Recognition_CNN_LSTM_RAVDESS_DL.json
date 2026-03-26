@@ -1,0 +1,90 @@
+{
+  "name": "25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+  "query": "RAVDESS veri kümesini kullanarak CNN-LSTM modeli ile bir konuşma duygu tanıma projesi arıyorum, bu veri kümesi Kaggle'dan veya [bu Hugging Face bağlantısından](https://huggingface.co/datasets/xbgoose/ravdess) indirilmeli. Proje, veri kümesini yüklemeli ve sağlam bir ses ön işleme (gürültü giderme ve normalizasyon) ve MFCC özellik çıkarımı gerçekleştirmeli, `src/data_loader.py` içinde uygulanmalı. CNN-LSTM modeli `src/model.py` içinde uygulanmalı. Tanıma doğruluğu `results/metrics/recognition_accuracy.txt` dosyasına kaydedilmeli ve bir karışıklık matrisi oluşturulup `results/figures/confusion_matrix.png` olarak kaydedilmeli. Ayrıca, kullanıcıların ses dosyalarını yükleyip duygu tanıma sonuçlarını alabilmeleri için Flask kullanarak kullanıcı dostu bir yerel API oluşturulmalı ve uygulama `src/hci.py` içinde yer almalı.",
+  "tags": [
+    "Audio Processing",
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"RAVDESS\" veri kümesi, Kaggle'dan veya [bu Hugging Face bağlantısından](https://huggingface.co/datasets/xbgoose/ravdess) indirilen `src/data_loader.py` içinde yüklenir.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Gürültü giderme ve normalizasyon dahil ses ön işleme `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "MFCC özellik çıkarımı `src/data_loader.py` içinde uygulanır.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"CNN-LSTM\" modeli `src/model.py` içinde uygulanır.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Tanıma doğruluğu `results/metrics/recognition_accuracy.txt` dosyasına kaydedilir.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Karışıklık matrisi oluşturulup `results/figures/confusion_matrix.png` olarak kaydedilir.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Kullanıcıların ses dosyalarını yükleyip duygu tanıma sonuçlarını alabilmeleri için \"Flask\" kullanarak bir yerel API oluşturulur. Uygulama `src/hci.py` içinde yer almalıdır.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ses ön işleme adımı sağlam olmalı, gürültüyü etkili bir şekilde azaltırken konuşma sinyallerinin bütünlüğünü korumalıdır.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Yerel API kullanıcı dostu olmalı, dosya yükleme ve sonuçları yorumlama konusunda net talimatlar içermelidir.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Turkish"
+}

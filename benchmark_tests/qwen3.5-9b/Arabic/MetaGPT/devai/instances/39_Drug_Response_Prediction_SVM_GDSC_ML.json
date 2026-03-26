@@ -1,0 +1,103 @@
+{
+    "name": "39_Drug_Response_Prediction_SVM_GDSC_ML",
+    "query": "تطوير نظام للتنبؤ باستجابة الأدوية باستخدام مجموعة بيانات GDSC مع نموذج الانحدار Support Vector Machine (SVM). قم بتحميل مجموعة البيانات وتنفيذ اختيار الميزات لتحديد الميزات الرئيسية في `src/data_loader.py`. قم بتنفيذ نموذج الانحدار SVM في `src/model.py`. استخدم التحقق المتقاطع لتقييم أداء النموذج في `src/train.py`. احفظ نتائج الأداء في `results/metrics/performance.txt`. قم بتصور نتائج الانحدار باستخدام seaborn واحفظها تحت `results/figures/`. بعد ذلك، قم بإنشاء تقرير يتضمن معالجة البيانات، تدريب النموذج، عملية التقييم، والتصور. احفظ التقرير كـ `results/drug_response_prediction_report.pdf`. يجب أن يركز التقرير على كيفية تأثير اختيار الميزات على أداء النموذج، ويجب أن يبرز تصور نتائج الانحدار بوضوح العلاقة بين الميزات المختارة واستجابة الدواء المتوقعة. تأكد من تصميم النظام ليكون قابلاً للتوسيع بسهولة لدمج مجموعات بيانات إضافية أو ميزات جديدة.",
+    "tags": [
+        "Medical Analysis",
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة بيانات استجابة الأدوية \"GDSC\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات لتحديد الميزات المهمة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ \"SVM regressor\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج الأداء كـ `results/metrics/performance.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور نتائج الانحدار باستخدام \"seaborn\" وحفظها في `results/figures/`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء تقرير يحتوي على معالجة البيانات المسبقة، تدريب النموذج، عملية التقييم، وتصور نتائج الانحدار، ويتم حفظه كـ `results/drug_response_prediction_report.pdf`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يركز التقرير على كيفية تأثير اختيار الميزات على أداء النموذج.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يبرز تصور نتائج الانحدار بوضوح العلاقة بين الميزات المختارة واستجابة الدواء المتوقعة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 2,
+            "criteria": "تأكد من أن النظام يمكن تمديده بسهولة لدمج مجموعات بيانات إضافية أو ميزات جديدة دون إعادة عمل كبيرة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

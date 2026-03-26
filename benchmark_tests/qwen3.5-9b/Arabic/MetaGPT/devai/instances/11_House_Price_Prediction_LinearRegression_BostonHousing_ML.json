@@ -1,0 +1,86 @@
+{
+    "name": "11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+    "query": "مرحبًا. قم بإعداد مشروع لتوقع أسعار المنازل باستخدام نموذج الانحدار الخطي على مجموعة بيانات Boston Housing. قم بتحميل مجموعة البيانات باستخدام `from datasets import load_dataset` و `ds = load_dataset(\"~/mrseba/boston_house_price\")` في `src/data_loader.py`. تأكد من إجراء مقياس الميزات وتوحيد البيانات في `src/data_loader.py`. قم بتنفيذ نموذج الانحدار الخطي في `src/model.py`. استخدم التحقق المتقاطع لتقييم النموذج في `src/train.py`. اطبع خطأ المربعات المتوسطة (MSE)، وخطأ القيمة المطلقة المتوسطة (MAE)، ودرجة $R^2$، واحفظها تحت `results/metrics/metrics.txt`. قم بتصور المقارنة بين القيم المتوقعة والفعلية واحفظ النتيجة كـ `results/figures/prediction_vs_actual.png`. يجب أن توضح التصورات بوضوح دقة النموذج (والتي، إذا تم تنفيذها بشكل صحيح، يجب أن تكون جيدة).",
+    "tags": [
+        "Financial Analysis",
+        "Regression",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Boston Housing\" باستخدام `from datasets import load_dataset` و `ds = load_dataset(\"mrseba/boston_house_price\")` في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ مقياس الميزات وتوحيد البيانات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"Linear Regression\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام \"Cross-validation\" لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة \"Mean Squared Error (MSE)\", \"Mean Absolute Error (MAE)\", و \"R^2 score\"، وحفظها كـ `results/metrics/metrics.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور مقارنة القيم المتوقعة مقابل الفعلية وحفظها كـ `results/figures/prediction_vs_actual.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة باستخدام كود `load_dataset` المقدم، ويجب تجربة طرق أخرى إذا ظهرت مشاكل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن توضح التصورات بوضوح دقة النموذج من خلال تسليط الضوء على الفروقات بين القيم المتوقعة والفعلية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "hint": "`ds = load_dataset(\"~/mrseba/boston_house_price\")` in the query is wrong, and it should be `ds = load_dataset(\"mrseba/boston_house_price\")`. We leave it here to check the self-debugging skill of the agents.",
+    "language": "Arabic"
+}

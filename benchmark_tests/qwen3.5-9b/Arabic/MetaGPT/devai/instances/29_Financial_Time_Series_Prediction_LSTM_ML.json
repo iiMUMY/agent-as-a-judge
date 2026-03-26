@@ -1,0 +1,91 @@
+{
+    "name": "29_Financial_Time_Series_Prediction_LSTM_ML",
+    "query": "هل يمكنك مساعدتي في إعداد نظام لتوقع السلاسل الزمنية المالية باستخدام نموذج LSTM مع بعض التحليلات المالية الواقعية، مثل أسعار الأسهم أو أسعار البيتكوين؟ أولاً، سنحتاج إلى تنظيف البيانات، مع مراعاة أي قيم مفقودة أو شاذة في `src/data_loader.py`. ثم، دعنا نحول بيانات السلاسل الزمنية إلى تنسيق التعلم الخاضع للإشراف باستخدام نافذة زمنية في `src/data_loader.py`. أخيرًا، نطبق نموذج LSTM للتنبؤ، حيث يتم تنفيذ نموذج LSTM في `src/model.py`. بمجرد الحصول على التنبؤات، احفظ النتائج كـ `results/prediction_results.text`. أنشئ لوحة تحكم تفاعلية تعرض نتائج التنبؤ باستخدام Dash واحفظ التنفيذ في `src/dashboard.py`. أخيرًا، سأكون ممتنًا لوثيقة Markdown تعرض بنية النموذج، عملية التدريب، وتحليل الأداء، محفوظة كـ `results/report.md`. تأكد من أن النظام يدير بدء وإيقاف تطبيق Dash تلقائيًا لتوفير الموارد. شكرًا جزيلاً!",
+    "tags": [
+        "Financial Analysis",
+        "Supervised Learning",
+        "Time Series Forecasting"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل بعض بيانات السلاسل الزمنية المالية الواقعية (مثل \"أسعار الأسهم\" أو \"أسعار البيتكوين\") في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنظيف البيانات، بما في ذلك التعامل مع القيم المفقودة والقيم الشاذة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم استخدام نافذة زمنية لتحويل بيانات السلاسل الزمنية إلى مشكلة تعلم تحت إشراف. يرجى تنفيذ ذلك في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم استخدام نموذج \"LSTM\" لتوقع السلاسل الزمنية المالية ويتم تنفيذه في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نتائج التوقع كـ `results/prediction_results.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء لوحة تحكم تفاعلية لتصور نتائج التوقع باستخدام \"Dash\". يتم حفظ التنفيذ في `src/visualize.py`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء وثيقة Markdown تحتوي على بنية النموذج وعملية التدريب وتحليل الأداء، ويتم حفظها كـ `results/report.md`.",
+            "category": "Other",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تسمح لوحة التحكم \"Dash\" للمستخدمين بالتفاعل مع نتائج التنبؤ، مما يمكنهم من استكشاف أطر زمنية مختلفة والتكبير في فترات محددة لتحليل مفصل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "أثناء التطوير، يجب أن يدير النظام تلقائيًا بدء وإيقاف تطبيق \"Dash\" لمنع استخدام الموارد غير الضروري.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "37_Lane_Detection_ResNet50_TuSimple_DL",
+  "query": "开发一个车道检测系统。首先从PyTorch中导入标准的预训练ResNet-50模型到`src/model.py`。我们将在这里使用TuSimple车道检测数据集作为我们的测试数据集，该数据集应通过`src/data_loader.py`加载。然后加载和预处理数据集，包括在`src/data_loader.py`中进行数据增强技术，如随机裁剪、旋转和缩放。微调模型并将检测准确率保存到`results/metrics/detection_accuracy.txt`，并将训练好的模型保存为`models/saved_models/lane_detection_model.pth`。为验证划分一部分数据集，在`src/data_loader.py`中实现。使用matplotlib可视化检测结果并将其保存到`results/figures/`。创建整个过程的详细报告，包括数据预处理、模型训练和评估，并将其保存为`results/lane_detection_report.pdf`。报告还应分析模型在曲线或光线不足等挑战条件下的性能。",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "在`src/data_loader.py`中加载\"TuSimple\"车道检测数据集。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中进行数据增强，包括随机裁剪、旋转和缩放。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "在`src/data_loader.py`中实现数据集的一部分用于验证的划分。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "在`src/model.py`中从PyTorch导入预训练的\"ResNet-50\"模型。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "微调\"ResNet-50\"模型并将其保存为`models/saved_models/lane_detection_model.pth`。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "检测准确率保存为`results/metrics/detection_accuracy.txt`。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "使用\"matplotlib\"可视化检测结果并保存到`results/figures/`。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "创建包含数据预处理、模型训练和评估过程的详细报告，并保存为`results/lane_detection_report.pdf`。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "报告应包括对模型在曲线或光线不足等挑战场景下性能的分析。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "数据增强步骤应有详细记录，并在报告中包含增强图像的示例。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Chinese"
+}

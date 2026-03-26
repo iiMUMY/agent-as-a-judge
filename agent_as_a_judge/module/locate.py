@@ -46,9 +46,20 @@ class DevLocate:
             {"role": "user", "content": prompt},
         ]
 
-        llm_stats = self._llm_inference(messages)
-        raw_response = llm_stats.get("llm_response") or ""
-        file_paths = self._parse_locate(raw_response.strip())
+        try:
+            llm_stats = self._llm_inference(messages)
+            raw_response = llm_stats.get("llm_response") or ""
+            file_paths = self._parse_locate(raw_response.strip())
+        except Exception as e:
+            logging.error(f"Locate failed: {e}")
+            llm_stats = {
+                "llm_response": "",
+                "input_tokens": 0,
+                "output_tokens": 0,
+                "cost": 0.0,
+                "inference_time": 0.0,
+            }
+            file_paths = []
 
         logging.info(f"Located file paths: {file_paths}")
 

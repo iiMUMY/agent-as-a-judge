@@ -1,0 +1,21 @@
+{
+    "workspace": "benchmark_tests\\qwen3.5-9b\\English\\MetaGPT\\workspaces\\MetaGPT\\37_Lane_Detection_ResNet50_TuSimple_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "lane_detection_model.pth": null
+        },
+        "results": {
+            "lane_detection_report.pdf": null
+        },
+        "results\\figures": {},
+        "results\\metrics": {
+            "detection_accuracy.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

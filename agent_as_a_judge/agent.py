@@ -253,86 +253,100 @@ class JudgeAgent:
         )
 
         for info_type in workflow:
-            if info_type == "user_query" and user_query:
-                combined_evidence += (
-                    f">>> [Reference] Original User Query:\n\n{user_query}\n\n"
-                )
-                logging.info(
-                    f">>> [Reference] Original User Query:\n\n{user_query}\n\n"
-                )
+            try:
+                if info_type == "user_query" and user_query:
+                    combined_evidence += (
+                        f">>> [Reference] Original User Query:\n\n{user_query}\n\n"
+                    )
+                    logging.info(
+                        f">>> [Reference] Original User Query:\n\n{user_query}\n\n"
+                    )
 
-            elif info_type == "workspace":
-                combined_evidence += (
-                    f">>> [Key Evidence] Workspace Structure:\n\n{workspace_info}\n\n"
-                )
-                # logging.info(f">>> [Key Evidence] Workspace Structure:\n\n{workspace_info}\n\n")
+                elif info_type == "workspace":
+                    combined_evidence += (
+                        f">>> [Key Evidence] Workspace Structure:\n\n{workspace_info}\n\n"
+                    )
 
-            elif info_type == "locate":
-                locate_result = self.locate_file(criteria, workspace_info)
-                related_files = locate_result["file_paths"]
-                total_llm_stats.update(locate_result["llm_stats"])
-                logging.info(
-                    f">>> [Reference] Located Files:\n\n{locate_result['file_paths']}\n\n"
-                )
+                elif info_type == "locate":
+                    locate_result = self.locate_file(criteria, workspace_info)
+                    related_files = locate_result["file_paths"]
+                    total_llm_stats.update(locate_result["llm_stats"])
+                    logging.info(
+                        f">>> [Reference] Located Files:\n\n{locate_result['file_paths']}\n\n"
+                    )
 
-            elif info_type == "read":
-                files_to_read = list(related_files)
-                if not files_to_read:
-                    files_to_read = self._infer_candidate_files_from_criteria(criteria)
-                    if files_to_read:
+                elif info_type == "read":
+                    files_to_read = list(related_files)
+                    if not files_to_read:
+                        files_to_read = self._infer_candidate_files_from_criteria(criteria)
+                        if files_to_read:
+                            logging.info(
+                                f"No files located by LLM; using criteria-derived fallback files: {files_to_read}"
+                            )
+
+                    for file_path in files_to_read:
+                        normalized_path = self._resolve_located_path(str(file_path))
+                        if not normalized_path.exists():
+                            continue
+                        if str(normalized_path) != str(file_path):
+                            logging.info(
+                                f"Resolved located path '{file_path}' to existing file '{normalized_path}'."
+                            )
+
+                        content, llm_stats = self.aaaj_read.read(normalized_path)
+                        combined_evidence += f">>> [Key Evidence] Content of Files:\n\nContent of {file_path} (resolved as {normalized_path}):\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
                         logging.info(
-                            f"No files located by LLM; using criteria-derived fallback files: {files_to_read}"
+                            f">>> [Key Evidence] Content of Files:\n\nContent of {file_path} (resolved as {normalized_path}):\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
+                        )
+                        if llm_stats:
+                            total_llm_stats.update(llm_stats)
+
+                elif info_type == "search":
+                    search_list = self.aaaj_search.search(criteria, search_type="embedding")
+                    for search_context in search_list:
+                        combined_evidence += f">>> [Reference] Relevant Search Evidence:\n\n{self.aaaj_search.display(search_context)}\n\n"
+                        logging.info(
+                            f">>> [Reference] Relevant Search Evidence:\n\n{self.aaaj_search.display(search_context)}\n\n"
                         )
 
-                for file_path in files_to_read:
-                    normalized_path = self._resolve_located_path(str(file_path))
-                    if not normalized_path.exists():
-                        continue
-                    if str(normalized_path) != str(file_path):
+                elif info_type == "history":
+                    if self.aaaj_memory:
+                        historical_evidence = self.aaaj_memory.get_historical_evidence()
+                        combined_evidence += f">>> [Reference] Historical Judgments:\n\n{historical_evidence}\n\n"
                         logging.info(
-                            f"Resolved located path '{file_path}' to existing file '{normalized_path}'."
+                            f">>> [Reference] Historical Judgments:\n\n{historical_evidence}\n\n"
+                        )
+                    else:
+                        logging.warning(
+                            ">>> [Reference] No historical evidence available (aaaj_memory is None)"
                         )
 
-                    content, llm_stats = self.aaaj_read.read(normalized_path)
-                    combined_evidence += f">>> [Key Evidence] Content of Files:\n\nContent of {file_path} (resolved as {normalized_path}):\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
+                elif info_type == "trajectory":
+                    llm_trajectory_stats = self.aaaj_retrieve.llm_summary(criteria)
+                    combined_evidence += f">>> [Reference] Trajectory Evidence:\n\n{llm_trajectory_stats.get('trajectory_analysis', '')}\n\n"
                     logging.info(
-                        f">>> [Key Evidence] Content of Files:\n\nContent of {file_path} (resolved as {normalized_path}):\n```\n{truncate_string(content, model=self.llm.model_name, max_tokens=2000)}\n```\n"
+                        f">>> [Reference] Trajectory Evidence:\n\n{llm_trajectory_stats.get('trajectory_analysis', '')}\n\n"
                     )
-                    if llm_stats:
-                        total_llm_stats.update(llm_stats)
-
-            elif info_type == "search":
-                search_list = self.aaaj_search.search(criteria, search_type="embedding")
-                for search_context in search_list:
-                    combined_evidence += f">>> [Reference] Relevant Search Evidence:\n\n{self.aaaj_search.display(search_context)}\n\n"
-                    logging.info(
-                        f">>> [Reference] Relevant Search Evidence:\n\n{self.aaaj_search.display(search_context)}\n\n"
-                    )
-
-            elif info_type == "history":
-                if self.aaaj_memory:
-                    historical_evidence = self.aaaj_memory.get_historical_evidence()
-                    combined_evidence += f">>> [Reference] Historical Judgments:\n\n{historical_evidence}\n\n"
-                    logging.info(
-                        f">>> [Reference] Historical Judgments:\n\n{historical_evidence}\n\n"
-                    )
-                else:
-                    logging.warning(
-                        ">>> [Reference] No historical evidence available (aaaj_memory is None)"
-                    )
-
-            elif info_type == "trajectory":
-                llm_trajectory_stats = self.aaaj_retrieve.llm_summary(criteria)
-                combined_evidence += f">>> [Reference] Trajectory Evidence:\n\n{llm_trajectory_stats.get('trajectory_analysis', '')}\n\n"
-                logging.info(
-                    f">>> [Reference] Trajectory Evidence:\n\n{llm_trajectory_stats.get('trajectory_analysis', '')}\n\n"
-                )
-                total_llm_stats.update(llm_trajectory_stats)
+                    total_llm_stats.update(llm_trajectory_stats)
+            except Exception as e:
+                logging.error(f"Failed during workflow step '{info_type}': {e}")
+                combined_evidence += f">>> [Reference] Step Failure ({info_type}): {e}\n\n"
 
         combined_evidence = truncate_string(
             combined_evidence, model=self.llm.model_name
         )
-        check_llm_stats = self.aaaj_ask.check(criteria, combined_evidence)
+        try:
+            check_llm_stats = self.aaaj_ask.check(criteria, combined_evidence)
+        except Exception as e:
+            logging.error(f"Final requirement check failed: {e}")
+            check_llm_stats = {
+                "cost": 0.0,
+                "inference_time": 0.0,
+                "input_tokens": 0,
+                "output_tokens": 0,
+                "satisfied": False,
+                "reason": [f"<UNSATISFIED>: Final judgment step failed: {e}"],
+            }
         total_llm_stats.update(check_llm_stats)
         total_time = time.time() - start_time
 
