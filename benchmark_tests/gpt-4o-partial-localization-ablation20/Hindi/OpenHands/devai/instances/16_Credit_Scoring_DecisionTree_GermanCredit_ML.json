@@ -1,0 +1,97 @@
+{
+    "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+    "query": "ساعدني في تطوير نظام لتوقع درجات الائتمان باستخدام مجموعة بيانات الائتمان الألمانية، والتي يمكن تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data). قم بتحميل مجموعة البيانات ومعالجتها مسبقًا، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات، في `src/data_loader.py`. استخدم مصنف شجرة القرار المطبق في `src/model.py` مع التحقق المتقاطع لتقييم النموذج في `src/train.py`. قم بتصور أهمية الميزات في `results/figures/feature_importances.png`. قم بإنشاء تقرير تصنيف، بما في ذلك الدقة والاسترجاع ودرجة F1، واحفظه في `results/metrics/classification_report.txt`. أنشئ تقريرًا بتنسيق Markdown مع النتائج والتصورات واحفظه في `results/report.md`. يجب أن يتم تحميل مجموعة البيانات بسلاسة مع معالجة الأخطاء بشكل صحيح، ويجب أن يكون تقرير Markdown منظمًا بشكل جيد لسهولة المراجعة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تحميل مجموعة البيانات \"German Credit\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) في ملف `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ مصنف \"Decision Tree\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور أهمية الميزات في `results/figures/feature_importances.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء تقرير تصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\"، وحفظه كـ `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة، مع معالجة واضحة للأخطاء إذا ظهرت أي مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون تقرير Markdown منظمًا بشكل جيد، مما يسهل مراجعة جميع النتائج والتصورات.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic"
+}

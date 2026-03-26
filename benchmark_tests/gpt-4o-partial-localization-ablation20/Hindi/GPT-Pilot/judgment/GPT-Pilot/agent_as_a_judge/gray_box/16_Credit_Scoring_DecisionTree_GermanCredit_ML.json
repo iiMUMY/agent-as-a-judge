@@ -1,0 +1,218 @@
+{
+    "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+    "query": "ساعدني في تطوير نظام لتوقع درجات الائتمان باستخدام مجموعة بيانات الائتمان الألمانية، والتي يمكن تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data). قم بتحميل مجموعة البيانات ومعالجتها مسبقًا، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات، في `src/data_loader.py`. استخدم مصنف شجرة القرار المطبق في `src/model.py` مع التحقق المتقاطع لتقييم النموذج في `src/train.py`. قم بتصور أهمية الميزات في `results/figures/feature_importances.png`. قم بإنشاء تقرير تصنيف، بما في ذلك الدقة والاسترجاع ودرجة F1، واحفظه في `results/metrics/classification_report.txt`. أنشئ تقريرًا بتنسيق Markdown مع النتائج والتصورات واحفظه في `results/report.md`. يجب أن يتم تحميل مجموعة البيانات بسلاسة مع معالجة الأخطاء بشكل صحيح، ويجب أن يكون تقرير Markdown منظمًا بشكل جيد لسهولة المراجعة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "تحميل مجموعة البيانات \"German Credit\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) في ملف `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ مصنف \"Decision Tree\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                1,
+                2
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور أهمية الميزات في `results/figures/feature_importances.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم إنشاء تقرير تصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\"، وحفظه كـ `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة، مع معالجة واضحة للأخطاء إذا ظهرت أي مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون تقرير Markdown منظمًا بشكل جيد، مما يسهل مراجعة جميع النتائج والتصورات.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "تحميل مجموعة البيانات \"German Credit\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) في ملف `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.1743228435516357,
+                "input_tokens": 1266,
+                "output_tokens": 122,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"German Credit\" dataset should be loaded, with the possibility of downloading it from the provided link within the `src/data_loader.py` file. The content of `data_loader.py` includes a placeholder function `load_dataset()` that does not implement the actual logic for downloading or loading the dataset. Additionally, the trajectory evidence indicates that there were issues with downloading the dataset due to a warning about the URL or network connectivity and an error during the saving process. These issues suggest that the dataset is neither downloaded nor loaded successfully, failing to meet the requirement."
+                ]
+            },
+            "total_time": 9.583755731582642
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة البيانات المسبقة في `src/data_loader.py`، بما في ذلك التعامل مع القيم المفقودة وترميز الميزات.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.1584932804107666,
+                "input_tokens": 1267,
+                "output_tokens": 115,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The provided content of `src/data_loader.py` does not include any actual implementation for handling missing values or feature encoding. The file contains placeholder functions, such as `load_dataset()` and `build_transforms()`, which do not perform any real data preprocessing tasks. Although the trajectory evidence suggests that missing values were handled and features were encoded, the actual code in `data_loader.py` does not reflect these operations. Therefore, the requirement for data preprocessing, including handling missing values and feature encoding, is not met in the provided code."
+                ]
+            },
+            "total_time": 7.238967657089233
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ مصنف \"Decision Tree\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.4521660804748535,
+                "input_tokens": 1122,
+                "output_tokens": 106,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a \"Decision Tree\" classifier should be implemented in `src/model.py`. However, the content of `model.py` provided in the evidence does not show any implementation of a Decision Tree classifier. Instead, it contains a placeholder function `build_model()` that returns a string \"model placeholder\" and does not include any code related to a Decision Tree classifier. The evidence does not demonstrate that a Decision Tree model is actually implemented in the file, thus failing to meet the requirement."
+                ]
+            },
+            "total_time": 7.773284673690796
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 7.265451669692993,
+                "input_tokens": 1468,
+                "output_tokens": 115,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that cross-validation should be used to evaluate the model in `src/train.py`. However, the provided content of `train.py` does not include any implementation of cross-validation. The script contains a minimal training loop that simply iterates over a range of steps and accumulates a score, but there is no evidence of cross-validation being implemented or utilized within the code. Additionally, the environmental feedback mentions the initiation of cross-validation, but this is not supported by the actual code content provided. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 16.993072986602783
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور أهمية الميزات في `results/figures/feature_importances.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.0905869007110596,
+                "input_tokens": 1079,
+                "output_tokens": 119,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is to visualize feature importances in `results/figures/feature_importances.png`. However, the content of the file indicates an error in reading the image due to an unsupported format, as evidenced by the error message: \"You uploaded an unsupported image. Please make sure your image is valid.\" This suggests that the image file is not correctly formatted or accessible, preventing the visualization of feature importances. Despite the trajectory evidence indicating successful generation and loading, the error message directly contradicts this, showing that the visualization is not functioning as intended."
+                ]
+            },
+            "total_time": 6.557660818099976
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء تقرير تصنيف، بما في ذلك \"الدقة\" و\"الاسترجاع\" و\"درجة F1\"، وحفظه كـ `results/metrics/classification_report.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.7724311351776123,
+                "input_tokens": 1079,
+                "output_tokens": 127,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a classification report, including \"الدقة\" (accuracy), \"الاسترجاع\" (recall), and \"درجة F1\" (F1 score), should be generated and saved as `results/metrics/classification_report.txt`. However, the content of the `classification_report.txt` file is shown as `('placeholder\\r\\n', None)`, which indicates that the actual metrics are not present in the file. Despite the trajectory evidence suggesting that the report was generated and saved correctly, the actual content of the file does not meet the requirement of containing the specified metrics."
+                ]
+            },
+            "total_time": 7.044108152389526
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه في `results/report.md`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.6340723037719727,
+                "input_tokens": 1045,
+                "output_tokens": 92,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a Markdown file containing results and visualizations should be saved in `results/report.md`. However, the content of the file `report.md` is shown as `('placeholder', None)`, which indicates that the file does not contain the intended results and visualizations. The trajectory evidence confirms that the file was successfully saved, but the content does not meet the requirement of containing actual results and visualizations."
+                ]
+            },
+            "total_time": 6.759365797042847
+        }
+    ]
+}

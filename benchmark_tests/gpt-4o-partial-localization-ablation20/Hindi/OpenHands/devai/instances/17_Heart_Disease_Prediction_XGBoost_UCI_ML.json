@@ -1,0 +1,114 @@
+{
+    "name": "17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+    "query": "إنشاء مشروع للتنبؤ بأمراض القلب باستخدام نموذج XGBoost مع مجموعة بيانات UCI Heart Disease، والتي يمكن تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). قم بتحميل مجموعة البيانات في `src/data_loader.py`. نفذ اختيار الميزات وتوحيد البيانات في `src/data_loader.py`. استخدم قيم SHAP لشرح أهمية الميزات، واحفظ النتائج كـ `results/figures/shap_importance.png`. نفذ نموذج XGBoost في `src/model.py`. ثم استخدم قيم SHAP لشرح أهمية الميزات، واحفظ النتائج كـ `results/shap_importance.png`. احفظ منحنى ROC في `results/figures/roc_curve.png`. أخيرًا، قم بإنشاء تقرير HTML يحتوي على جميع النتائج والتصورات، واحفظه كـ `results/report.html`. تأكد من أن تصورات SHAP تبرز بوضوح الميزات الأكثر تأثيرًا. قم بتضمين مقارنة الأداء مع نموذج آخر، مثل الانحدار اللوجستي، للتحقق من قوة نموذج XGBoost. احفظ نموذج XGBoost تحت `models/saved_models/`.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"UCI Heart Disease\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ توحيد البيانات الذي يضمن أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"XGBoost\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "تُستخدم قيم \"SHAP\" لشرح أهمية الميزات، ويتم حفظ النتائج كـ `results/figures/shap_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ منحنى ROC كـ `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء تقرير HTML يحتوي على النتائج والمرئيات، ويتم حفظه كـ `results/report.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تضمين مقارنة الأداء مع نموذج آخر (مثل الانحدار اللوجستي) للتحقق من متانة نموذج XGBoost.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 8,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نموذج XGBoost تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون تصورات SHAP واضحة وتبرز الميزات الأكثر تأثيرًا، مما يجعل النتائج سهلة الفهم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic"
+}

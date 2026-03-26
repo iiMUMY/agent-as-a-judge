@@ -1,0 +1,157 @@
+{
+    "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+    "query": "هل يمكنك مساعدتي في إنشاء نظام لحل مهام Gridworld على شكل متاهة باستخدام خوارزمية Q-learning؟ يجب أن يستخدم النظام مكتبة numpy لجعل الحسابات الأساسية أكثر كفاءة وmatplotlib للتصورات. يجب تنفيذ خوارزمية Q-learning في `src/train.py`، ويجب تنفيذ بيئة Gridworld المسماة بشكل مناسب في `src/env.py` بطريقة يمكن فيها تحديد حجم الشبكة ومواقع البداية/النهاية عند إنشائها. يحتاج النظام إلى تسجيل منحنى التعلم أثناء التدريب، متتبعًا الحلقات والعوائد المقابلة لها، وحفظه كـ `results/figures/learning_curve.png`. بالإضافة إلى ذلك، أود منك تصور وحفظ المسارات التي اتخذها الوكيل في كل حلقة في ملف يسمى `results/figures/path_changes.gif`، وحفظ النموذج المدرب كـ `models/saved_models/q_learning_model.npy`. سيكون من الرائع الحصول على نوع من التغذية الراجعة في الوقت الحقيقي أثناء التدريب، مثل رؤية التقدم أو الحصول على تحديثات حول كيفية تعلم النموذج. أيضًا، إذا كان بإمكانك، يرجى محاولة كتابة الكود بطريقة يسهل تعديلها أو توسيعها لاحقًا.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية للمستخدم تحديد حجم الشبكة ومواقع البداية/النهاية.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تسجيل منحنيات التعلم أثناء التدريب، وحفظها كـ `results/figures/learning_curve.png`. يتم تسجيل الحلقات والعوائد.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ النموذج المتعلم كـ `models/saved_models/q_learning_model.npy`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تصور المسارات المتخذة أثناء التعلم وحفظها كـ `results/figures/path_changes.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب عرض بعض التقدم أو التغذية الراجعة في الوقت الحقيقي أثناء عملية التدريب.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب كتابة الكود بطريقة يسهل تعديلها أو توسيعها لاحقًا.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام خوارزمية \"Q-learning\" في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.8158037662506104,
+                "input_tokens": 1385,
+                "output_tokens": 123,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Q-learning\" algorithm should be used in `src/train.py`. However, the provided content of `train.py` does not contain any implementation of the Q-learning algorithm. The code includes a minimal training loop that simply increments a score by the step number, which does not reflect the Q-learning process. Additionally, there is no evidence of Q-learning specific operations such as updating Q-values, selecting actions based on a policy, or interacting with an environment. The file primarily focuses on creating placeholder artifact files and lacks the necessary components of a Q-learning algorithm."
+                ]
+            },
+            "total_time": 10.051726341247559
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تعريف بيئة \"Gridworld\" في `src/env.py` مع إمكانية للمستخدم تحديد حجم الشبكة ومواقع البداية/النهاية.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.7224760055541992,
+                "input_tokens": 1277,
+                "output_tokens": 110,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Gridworld\" environment should allow users to specify grid size and start/end positions. While the `Gridworld` class in `src/env.py` does include parameters for grid size, start, and end positions, the trajectory evidence indicates issues with user input handling. Specifically, a runtime error occurs when attempting to modify start and end positions, suggesting inadequate validation logic for user-defined positions. This impacts the functionality and does not fully satisfy the requirement for user customization of grid size and positions."
+                ]
+            },
+            "total_time": 8.159395456314087
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تسجيل منحنيات التعلم أثناء التدريب، وحفظها كـ `results/figures/learning_curve.png`. يتم تسجيل الحلقات والعوائد.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.6401889324188232,
+                "input_tokens": 1178,
+                "output_tokens": 107,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that learning curves should be recorded during training and saved as `results/figures/learning_curve.png`, with episodes and returns logged. Although the trajectory evidence suggests that the file was saved successfully and data logging occurred without issues, the content of the file indicates an error related to image parsing. The error message suggests that the image file is unsupported or invalid, which means the learning curve was not successfully recorded or saved in a usable format. Therefore, the requirement is not fully met."
+                ]
+            },
+            "total_time": 7.658928394317627
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ النموذج المتعلم كـ `models/saved_models/q_learning_model.npy`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.691452980041504,
+                "input_tokens": 1024,
+                "output_tokens": 88,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the learned model is saved as `models/saved_models/q_learning_model.npy` is fully met. The project structure clearly shows the presence of the file `q_learning_model.npy` within the `models/saved_models` directory. Additionally, the trajectory evidence confirms that the file was saved and loaded successfully without any errors or warnings, indicating that the model is stored correctly in the specified location."
+                ]
+            },
+            "total_time": 6.074026584625244
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور المسارات المتخذة أثناء التعلم وحفظها كـ `results/figures/path_changes.gif`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.490565538406372,
+                "input_tokens": 1030,
+                "output_tokens": 95,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the paths taken during learning should be visualized and saved as `results/figures/path_changes.gif`. However, the content of `path_changes.gif` is described as entirely blank, consisting of a solid white background with no visible objects, colors, or details. This indicates that the visualization of the learning paths is not present in the file, thus failing to meet the requirement of visualizing and saving the learning paths."
+                ]
+            },
+            "total_time": 7.029000997543335
+        }
+    ]
+}

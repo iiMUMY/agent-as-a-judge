@@ -1,0 +1,188 @@
+{
+    "name": "18_Image_Enhancement_SRGAN_DIV2K_DL",
+    "query": "أحتاج إلى إنشاء نظام لتحسين الصور باستخدام نموذج SRGAN (يمكنك الحصول على نموذج SRGAN مدرب مسبقًا [هنا](https://github.com/tensorlayer/srgan)) مع مجموعة بيانات DIV2K، والتي يمكن تنزيلها من [هذا الرابط](https://data.vision.ee.ethz.ch/cvl/DIV2K/). يجب تحميل مجموعة البيانات في ملف `src/data_loader.py`. يجب على النظام معالجة الصور مسبقًا، بما في ذلك تغيير الحجم والتطبيع، في `src/data_loader.py`. استخدم نموذجًا مدربًا مسبقًا محفوظًا تحت `models/saved_models/` لتوفير الوقت، واحفظ الصور المحسنة في دليل `results/figures/`. بالإضافة إلى ذلك، يجب على النظام تصور وحفظ المقارنة بين الصور الأصلية والمحسنة في `results/figures/enhanced_comparison.png`. أخيرًا، قم بإنشاء تقرير Markdown مع النتائج والتصورات على مجموعة متنوعة من العينات لعرض أداء النموذج على أنواع مختلفة من الصور، واحفظه كـ `results/report.md`. يجب أن يتضمن التقرير مقارنة مفصلة لأداء النموذج على هذه العينات المختارة، مع تسليط الضوء على الأماكن التي يتفوق فيها النموذج أو يواجه صعوبات.",
+    "tags": [
+        "Computer Vision",
+        "Generative Models"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"DIV2K\" في ملف `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم حفظ نموذج \"SRGAN\" المدرب مسبقًا تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة الصور المسبقة، بما في ذلك تغيير الحجم والتطبيع، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ الصور المحسنة في المجلد المحدد `results/figures/`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تصور مقارنة الصور الأصلية والمحسنة وحفظها كـ `results/figures/enhanced_comparison.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه كـ `results/report.md`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب اختيار مجموعة متنوعة من العينات لعرض أداء النموذج عبر أنواع مختلفة من الصور.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يتضمن تقرير Markdown مقارنة مفصلة لأداء النموذج على هذه العينات المختارة، مع تسليط الضوء على الأماكن التي يتفوق فيها النموذج أو يواجه صعوبات.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": false,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة البيانات \"DIV2K\" في ملف `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.5163772106170654,
+                "input_tokens": 1126,
+                "output_tokens": 102,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the \"DIV2K\" dataset is loaded in the `src/data_loader.py` file is satisfied. The code snippet from `data_loader.py` includes a function `load_dataset()` which returns a dictionary indicating that the dataset is \"loaded\". Additionally, the trajectory evidence confirms that the \"DIV2K\" dataset was successfully loaded during the execution of `src/data_loader.py`, resolving any initial issues. This demonstrates that the dataset loading functionality is implemented as required."
+                ]
+            },
+            "total_time": 8.878132343292236
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم حفظ نموذج \"SRGAN\" المدرب مسبقًا تحت `models/saved_models/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.50559663772583,
+                "input_tokens": 1181,
+                "output_tokens": 78,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the pre-trained \"SRGAN\" model is saved under `models/saved_models/` is satisfied. The trajectory evidence indicates that the system successfully saved the SRGAN model to the directory `models/saved_models/SRGAN` without any errors or warnings. This confirms that the model was saved correctly and the directory structure supports this operation."
+                ]
+            },
+            "total_time": 5.642248153686523
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ معالجة الصور المسبقة، بما في ذلك تغيير الحجم والتطبيع، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.4073338508605957,
+                "input_tokens": 1227,
+                "output_tokens": 143,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that image preprocessing, including resizing and normalization, should be implemented in `src/data_loader.py`. The provided code snippet from `data_loader.py` includes a placeholder function `build_transforms()` that mentions \"rotation\", \"scaling\", and \"normalization\" as part of data augmentation. However, there is no concrete implementation of these preprocessing steps within the code. Additionally, the trajectory evidence indicates that while resizing and normalization were attempted, there were issues with non-standard image dimensions and unsupported formats, suggesting incomplete or inadequate handling of these preprocessing tasks. Therefore, the requirement is not fully met as the actual implementation details for resizing and normalization are missing or insufficiently robust."
+                ]
+            },
+            "total_time": 8.299845218658447
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ الصور المحسنة في المجلد المحدد `results/figures/`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.216407060623169,
+                "input_tokens": 1103,
+                "output_tokens": 106,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that enhanced images should be saved in the `results/figures/` directory. However, the content of the file `enhanced_comparison.png` in this directory indicates an error related to an unsupported image format, suggesting that the image was not successfully saved or is not in a valid format. Although the trajectory evidence mentions that a permission issue was resolved, it does not confirm that the images were correctly saved in a valid format. Therefore, the requirement is not fully met."
+                ]
+            },
+            "total_time": 7.443494081497192
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تصور مقارنة الصور الأصلية والمحسنة وحفظها كـ `results/figures/enhanced_comparison.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.2013144493103027,
+                "input_tokens": 1149,
+                "output_tokens": 123,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the comparison of original and enhanced images should be visualized and saved as `results/figures/enhanced_comparison.png`. However, the content of the file indicates an error related to an unsupported image format, as evidenced by the error message: \"You uploaded an unsupported image. Please make sure your image is valid.\" This suggests that the image file is not valid or correctly formatted, contradicting the trajectory evidence that claims the file was saved and loaded successfully. Therefore, the requirement is not met as the image comparison is not properly visualized and saved."
+                ]
+            },
+            "total_time": 7.18526291847229
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم إنشاء ملف Markdown يحتوي على النتائج والتصورات وحفظه كـ `results/report.md`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.0861728191375732,
+                "input_tokens": 959,
+                "output_tokens": 80,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a Markdown file containing results and visualizations should be created and saved as `results/report.md`. However, the content of `report.md` is shown as `('placeholder', None)`, which indicates that it does not contain any actual results or visualizations. The file appears to be a placeholder rather than a completed report with the necessary content."
+                ]
+            },
+            "total_time": 5.37096905708313
+        }
+    ]
+}

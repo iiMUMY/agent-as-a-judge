@@ -1,0 +1,158 @@
+{
+    "name": "07_Image_Super_Resolution_SRCNN_Set5_DL",
+    "query": "مرحبًا، أحتاج إلى إنشاء مشروع لتحسين دقة الصور باستخدام نموذج SRCNN مع مجموعة البيانات Set5 (متوفرة من `https://huggingface.co/datasets/eugenesiow/Set5`). قم بتحميل مجموعة البيانات في `src/data_loader.py`. عند تحميل البيانات، قم بتضمين خطوات معالجة الصور المسبقة مثل تغيير الحجم والتطبيع، وكل ذلك في `src/data_loader.py`. يجب تحميل واستخدام نموذج SRCNN في `src/model.py`. احفظ 5 مجموعات من صور المقارنة، مع تكبير التفاصيل، كـ `results/figures/super_resolution_compare.png`، ونتائج تحسين الدقة كـ `results/figures/super_resolution_results.png`. يجب أن تكون الصور المولدة عالية الجودة وتظهر التحسينات بوضوح.",
+    "tags": [
+        "Computer Vision",
+        "Generative Models"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Set5\" (المتاحة من \"Hugging Face\") في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ معالجة الصور المسبقة، بما في ذلك تغيير الحجم والتطبيع، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [],
+            "criteria": "يتم استخدام نموذج \"SRCNN\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ خمس مجموعات من صور المقارنة، مع تفاصيل مكبرة، ويتم حفظها كـ `results/figures/super_resolution_compare.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ نتائج الدقة الفائقة كـ `results/figures/super_resolution_results.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن ينتج المشروع صورًا عالية الجودة وواضحة لتحسين الدقة مع مقارنات تفصيلية.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب تضمين صور الإخراج المنظمة بشكل جيد، مع تسليط الضوء على التحسينات الرئيسية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تحميل مجموعة البيانات \"Set5\" (المتاحة من \"Hugging Face\") في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.91210675239563,
+                "input_tokens": 1192,
+                "output_tokens": 144,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Set5\" dataset should be loaded from \"Hugging Face\" in `src/data_loader.py`. However, the provided code snippet from `data_loader.py` only contains a placeholder function `load_dataset()` that returns a dictionary with a string indicating the dataset is \"loaded\" and notes from `requirement_notes()`. There is no actual implementation or code evidence showing that the \"Set5\" dataset is being loaded from \"Hugging Face\". The function lacks any logic or code that would perform the dataset loading operation, such as using a library or API call to access \"Hugging Face\" and retrieve the \"Set5\" dataset."
+                ]
+            },
+            "total_time": 10.086691617965698
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ معالجة الصور المسبقة، بما في ذلك تغيير الحجم والتطبيع، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.3902997970581055,
+                "input_tokens": 1175,
+                "output_tokens": 136,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that image preprocessing, including resizing and normalization, should be implemented in `src/data_loader.py`. The provided code snippet from `data_loader.py` contains a placeholder function `build_transforms()` that lists \"rotation\", \"scaling\", and \"normalization\" as part of data augmentation, but it does not provide an actual implementation for resizing and normalization. Additionally, the trajectory evidence indicates that while normalization was completed successfully, there were issues with resizing due to non-standard image dimensions and unsupported image formats. This suggests that the resizing process is not robustly implemented or handled within the file. Therefore, the requirement is not fully met."
+                ]
+            },
+            "total_time": 8.05321478843689
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم استخدام نموذج \"SRCNN\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.3303849697113037,
+                "input_tokens": 1118,
+                "output_tokens": 128,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"SRCNN\" model should be used in `src/model.py`. However, the content of `model.py` does not show any implementation or import of the \"SRCNN\" model. Instead, it contains a placeholder function `build_model()` that returns a string \"model placeholder\" unless \"resnet-18\" is found in the keywords, which is unrelated to \"SRCNN\". Additionally, the trajectory evidence indicates issues with model execution, but it does not confirm the presence of an \"SRCNN\" model implementation in the code. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 6.506302833557129
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ خمس مجموعات من صور المقارنة، مع تفاصيل مكبرة، ويتم حفظها كـ `results/figures/super_resolution_compare.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.032428026199341,
+                "input_tokens": 1156,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that five sets of comparison images with magnified details should be saved as `results/figures/super_resolution_compare.png`. However, the content of the file indicates an error related to unsupported image format, preventing the image from being read or processed correctly. Despite the trajectory evidence suggesting successful saving of the file, the error message clearly shows that the image is invalid and cannot be used as intended. Therefore, the requirement is not met due to the image parsing error."
+                ]
+            },
+            "total_time": 7.78657603263855
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ نتائج الدقة الفائقة كـ `results/figures/super_resolution_results.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.000817060470581,
+                "input_tokens": 1132,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the super-resolution results should be saved as `results/figures/super_resolution_results.png`. However, the content of this file indicates an error message related to an unsupported image format, suggesting that the file does not contain valid super-resolution results. Despite the trajectory evidence indicating successful saving and access, the actual content of the file does not meet the requirement of containing the expected results."
+                ]
+            },
+            "total_time": 7.470105171203613
+        }
+    ]
+}

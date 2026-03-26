@@ -1,0 +1,269 @@
+{
+    "name": "17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+    "query": "إنشاء مشروع للتنبؤ بأمراض القلب باستخدام نموذج XGBoost مع مجموعة بيانات UCI Heart Disease، والتي يمكن تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). قم بتحميل مجموعة البيانات في `src/data_loader.py`. نفذ اختيار الميزات وتوحيد البيانات في `src/data_loader.py`. استخدم قيم SHAP لشرح أهمية الميزات، واحفظ النتائج كـ `results/figures/shap_importance.png`. نفذ نموذج XGBoost في `src/model.py`. ثم استخدم قيم SHAP لشرح أهمية الميزات، واحفظ النتائج كـ `results/shap_importance.png`. احفظ منحنى ROC في `results/figures/roc_curve.png`. أخيرًا، قم بإنشاء تقرير HTML يحتوي على جميع النتائج والتصورات، واحفظه كـ `results/report.html`. تأكد من أن تصورات SHAP تبرز بوضوح الميزات الأكثر تأثيرًا. قم بتضمين مقارنة الأداء مع نموذج آخر، مثل الانحدار اللوجستي، للتحقق من قوة نموذج XGBoost. احفظ نموذج XGBoost تحت `models/saved_models/`.",
+    "tags": [
+        "Classification",
+        "Medical Analysis",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"UCI Heart Disease\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ اختيار الميزات في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ توحيد البيانات الذي يضمن أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"XGBoost\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "تُستخدم قيم \"SHAP\" لشرح أهمية الميزات، ويتم حفظ النتائج كـ `results/figures/shap_importance.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ منحنى ROC كـ `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "criteria": "يتم إنشاء تقرير HTML يحتوي على النتائج والمرئيات، ويتم حفظه كـ `results/report.html`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 7,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تضمين مقارنة الأداء مع نموذج آخر (مثل الانحدار اللوجستي) للتحقق من متانة نموذج XGBoost.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 8,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ نموذج XGBoost تحت `models/saved_models/`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون تصورات SHAP واضحة وتبرز الميزات الأكثر تأثيرًا، مما يجعل النتائج سهلة الفهم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"UCI Heart Disease\"، مع إمكانية تنزيلها من [هذا الرابط](https://archive.ics.uci.edu/dataset/45/heart+disease). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.5823822021484375,
+                "input_tokens": 1329,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement specifies that the \"UCI Heart Disease\" dataset should be used and loaded in the `src/data_loader.py` file. The provided content of `data_loader.py` includes a function `load_dataset()` which is described as a \"Minimal dataset loader placeholder.\" Additionally, the trajectory evidence indicates that the dataset was successfully loaded without errors during the execution of `src/data_loader.py`, confirming that the dataset is accessed from the specified link. Therefore, the requirement is fully met."
+                ]
+            },
+            "total_time": 8.33518362045288
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ اختيار الميزات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.1184558868408203,
+                "input_tokens": 1218,
+                "output_tokens": 106,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The provided content of `src/data_loader.py` does not include any implementation of feature selection. The file contains a placeholder function `load_dataset()` and a placeholder for data augmentation `build_transforms()`, but there is no code related to feature selection. Additionally, the trajectory evidence indicates potential issues with deprecated functions and inefficiencies, which could further impact the functionality of feature selection if it were implemented. Therefore, the requirement for feature selection in `src/data_loader.py` is not met."
+                ]
+            },
+            "total_time": 5.269136190414429
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ توحيد البيانات الذي يضمن أن تكون قيم الميزات ضمن نفس النطاق في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.6769118309020996,
+                "input_tokens": 1232,
+                "output_tokens": 122,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that data standardization should be implemented in `src/data_loader.py` to ensure feature values are within the same range. The provided code snippet from `data_loader.py` includes a placeholder function `build_transforms()` that lists `\"normalization\"` as a part of data augmentation, but it does not provide an actual implementation of data standardization. Additionally, the trajectory evidence indicates a warning about potential discrepancies in feature scaling, suggesting that the normalization process may not be fully reliable or correctly implemented. Therefore, the requirement for data standardization is not fully met."
+                ]
+            },
+            "total_time": 6.425602912902832
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ نموذج \"XGBoost\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.594980478286743,
+                "input_tokens": 1185,
+                "output_tokens": 136,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"XGBoost\" model should be implemented in `src/model.py`. However, the content of `model.py` provided in the evidence does not show any implementation of the XGBoost model. Instead, it contains a placeholder function `build_model()` that returns a string \"model placeholder\" and checks for the presence of \"resnet-18\" in keywords, which is unrelated to XGBoost. Additionally, the trajectory evidence indicates that there were issues with missing dependencies and hyperparameter warnings, but no actual implementation details of XGBoost are provided in the code snippet. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 7.424520492553711
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "تُستخدم قيم \"SHAP\" لشرح أهمية الميزات، ويتم حفظ النتائج كـ `results/figures/shap_importance.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.0171895027160645,
+                "input_tokens": 1163,
+                "output_tokens": 110,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that SHAP values should be used to explain feature importance and the results should be saved as `results/figures/shap_importance.png`. Although the trajectory evidence indicates that the SHAP values were computed and saved successfully, the content of the file `shap_importance.png` shows an error message indicating that the image file is unsupported and invalid. This suggests that the file is not correctly formatted or usable, which does not fulfill the requirement of having a valid SHAP importance image saved."
+                ]
+            },
+            "total_time": 6.894835710525513
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ منحنى ROC كـ `results/figures/roc_curve.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.9009244441986084,
+                "input_tokens": 1141,
+                "output_tokens": 102,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the ROC curve should be saved as `results/figures/roc_curve.png`. However, the content of the file indicates an error related to reading the image file, suggesting that the file may not be a valid image. Despite the trajectory evidence indicating that the file was saved and loaded successfully, the error message suggests an issue with the file format or content, which does not satisfy the requirement of having a valid ROC curve image saved at the specified location."
+                ]
+            },
+            "total_time": 8.830106496810913
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم إنشاء تقرير HTML يحتوي على النتائج والمرئيات، ويتم حفظه كـ `results/report.html`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.551466464996338,
+                "input_tokens": 1001,
+                "output_tokens": 112,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an HTML report containing results and visualizations should be generated and saved as `results/report.html`. However, the content of the `report.html` file is shown as `('', None)`, indicating that it is empty or not properly populated with the expected results and visualizations. Additionally, the trajectory evidence mentions a warning about missing dependencies affecting visual elements and an error indicating missing data points in the visualizations. These issues suggest that the report does not meet the requirement of containing the necessary results and visualizations."
+                ]
+            },
+            "total_time": 7.429866790771484
+        },
+        {
+            "requirement_index": 7,
+            "criteria": "يتم تضمين مقارنة الأداء مع نموذج آخر (مثل الانحدار اللوجستي) للتحقق من متانة نموذج XGBoost.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.1160731315612793,
+                "input_tokens": 1608,
+                "output_tokens": 104,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement for performance comparison with another model, such as logistic regression, to verify the robustness of the XGBoost model is satisfied. The trajectory evidence indicates that the script `performance_comparison.py` was executed to compare the performance of the XGBoost model with a logistic regression model. The script successfully loaded the necessary datasets and models for comparison, and the results were saved to `comparison_results.csv` without any errors or warnings. This demonstrates that the performance comparison was conducted as required."
+                ]
+            },
+            "total_time": 8.334643125534058
+        },
+        {
+            "requirement_index": 8,
+            "criteria": "يتم حفظ نموذج XGBoost تحت `models/saved_models/`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.9197020530700684,
+                "input_tokens": 1581,
+                "output_tokens": 68,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the XGBoost model is saved under `models/saved_models/` is satisfied. The trajectory evidence explicitly states that the XGBoost model was saved in the directory `models/saved_models/` without any errors or warnings, confirming that the model was successfully saved in the specified location."
+                ]
+            },
+            "total_time": 7.227963924407959
+        }
+    ]
+}

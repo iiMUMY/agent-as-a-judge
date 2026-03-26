@@ -1,0 +1,180 @@
+{
+    "name": "08_Robot_Control_PPO_PyBullet_RL",
+    "query": "أسعى لتنفيذ مشروع يستكشف التحكم في الذراع الروبوتية عبر التعلم المعزز في بيئة محاكاة PyBullet باستخدام خوارزمية PPO. يجب استيراد محاكي PyBullet وتحميل بيئة الروبوتات ذات الصلة في `src/env.py`. يجب تنفيذ خوارزمية PPO في `src/train.py`. يجب توثيق الموقع النهائي للروبوت بدقة، وطباعته وحفظه كـ `data/final_position.txt`. يجب رسم مسار العائد التدريبي وحفظه كـ `results/figures/training_returns.png`. يجب تصور عينة من حركة الروبوت وحفظها كـ `results/figures/robot_motion.gif`. يجب تقديم وصف تفصيلي لإعداد البيئة وهيكل المكافآت في `src/env.py`. يرجى التأكد من معالجة وتوثيق أي مشاكل في تحميل ملفات URDF في PyBullet بوضوح، وتوفير رسائل خطأ واضحة أو تسجيلات للتصحيح.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام المحاكي \"PyBullet\" في `src/env.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم استخدام الخوارزمية \"PPO\" في `src/train.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم توفير وصف تفصيلي لإعداد البيئة وهيكل المكافآت في `src/env.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم طباعة وحفظ الموقع النهائي للروبوت كـ `data/final_position.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم تسجيل وحفظ منحنى العوائد التدريبية بمرور الوقت كـ `results/figures/training_returns.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم تصور عينة من حركة الروبوت وحفظها كـ `results/figures/robot_motion.gif`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب على النظام التعامل بفعالية مع المشاكل المحتملة في تحميل ملفات URDF في PyBullet، وتوفير رسائل خطأ واضحة أو تسجيلات للتصحيح.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام المحاكي \"PyBullet\" في `src/env.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.8597278594970703,
+                "input_tokens": 1186,
+                "output_tokens": 109,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"PyBullet\" simulator should be used in `src/env.py`. However, the provided content of `src/env.py` does not show any import or usage of the PyBullet simulator. The file contains a class `Gridworld` and some initialization code, but there is no evidence of PyBullet being integrated or utilized within this script. Additionally, the trajectory evidence indicates issues with PyBullet integration, suggesting that while attempts were made, the current implementation does not successfully incorporate PyBullet."
+                ]
+            },
+            "total_time": 10.093978881835938
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم استخدام الخوارزمية \"PPO\" في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.8863961696624756,
+                "input_tokens": 1327,
+                "output_tokens": 137,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"PPO\" algorithm should be used in `src/train.py`. However, upon reviewing the content of `train.py`, there is no implementation or mention of the \"PPO\" algorithm within the code. The file contains a minimal training loop that simply iterates over a range and accumulates a score, but it does not involve any PPO algorithm logic or related operations. Additionally, the presence of keywords \"PPO\" and \"ppo\" in the `REQUIREMENT_CRITERIA` and `KEYWORDS` lists does not constitute actual usage or implementation of the PPO algorithm. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 6.603360176086426
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم توفير وصف تفصيلي لإعداد البيئة وهيكل المكافآت في `src/env.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.8706140518188477,
+                "input_tokens": 1211,
+                "output_tokens": 134,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a detailed environment setup and reward structure description should be provided in `src/env.py`. However, the content of `src/env.py` does not include any detailed description of the environment setup or the reward structure. The file contains a class `Gridworld` with basic initialization parameters for grid size, start, and end positions, but lacks any detailed explanation or implementation of a reward structure. Additionally, the trajectory evidence indicates issues with the environment setup and reward structure, including a warning about a potential mismatch in environment setup parameters and an error related to the reward calculation. These issues further suggest that the requirement is not met."
+                ]
+            },
+            "total_time": 8.94084882736206
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم طباعة وحفظ الموقع النهائي للروبوت كـ `data/final_position.txt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.001047134399414,
+                "input_tokens": 1004,
+                "output_tokens": 93,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement to print and save the final position of the robot as `data/final_position.txt` is met. The trajectory evidence indicates that in Step 47, the file `data/final_position.txt` was successfully saved without errors, and in Step 49, the final position of the robot was printed and confirmed to match the saved data. This confirms that the final position was both printed and saved correctly, fulfilling the requirement."
+                ]
+            },
+            "total_time": 8.432027578353882
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تسجيل وحفظ منحنى العوائد التدريبية بمرور الوقت كـ `results/figures/training_returns.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.589322805404663,
+                "input_tokens": 1073,
+                "output_tokens": 102,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement is to record and save the training returns curve over time as `results/figures/training_returns.png`. However, the content of the file indicates an error related to image parsing, suggesting that the file is not a valid image. Despite the trajectory evidence stating that the file was saved and loaded successfully, the error message indicates that the image is unsupported and invalid, which means the requirement is not met as the file does not contain the expected training returns curve."
+                ]
+            },
+            "total_time": 6.935122013092041
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تصور عينة من حركة الروبوت وحفظها كـ `results/figures/robot_motion.gif`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.471224308013916,
+                "input_tokens": 1002,
+                "output_tokens": 88,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement to visualize a sample of the robot's motion and save it as `results/figures/robot_motion.gif` is satisfied. The project structure confirms the presence of the file `robot_motion.gif` in the specified directory. Additionally, the trajectory evidence indicates that the visualization process was executed successfully and the file was saved without any errors or warnings, suggesting that the visualization was correctly processed and rendered."
+                ]
+            },
+            "total_time": 6.769901752471924
+        }
+    ]
+}

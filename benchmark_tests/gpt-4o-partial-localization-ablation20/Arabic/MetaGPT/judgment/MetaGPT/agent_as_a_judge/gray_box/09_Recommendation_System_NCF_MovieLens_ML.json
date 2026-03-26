@@ -1,0 +1,184 @@
+{
+    "name": "09_Recommendation_System_NCF_MovieLens_ML",
+    "query": "ساعدني في تطوير نظام لتوصية الأفلام بناءً على تقييمات المستخدمين من مجموعة بيانات MovieLens باستخدام نهج التصفية التعاونية العصبية (NCF). أولاً، قم بتحميل مجموعة البيانات وقسمها إلى مجموعات تدريب واختبار في `src/data_loader.py`. بعد ذلك، قم بتنفيذ نهج NCF وخط أساس تحليل المصفوفة في `src/model.py`. باستخدام هذه النماذج، اطبع مثالاً لأفضل 10 توصيات لمستخدم اختبار باستخدام نهج NCF وخط الأساس واحفظها في `results/metrics/top_10_recommendations.txt`. سيكون من الجيد إذا كانت هذه التوصيات النموذجية ذات مغزى بالنظر إلى المستخدم الاختباري. قم بتقييم أداء النظام باستخدام RMSE، MAE، إلخ، واحفظ نتائج هذا التقييم في `results/metrics/evaluation_metrics.txt`. حاول التأكد من وجود معالجة قوية للمسارات يمكنها التعامل مع الدلائل المفقودة وما شابه عند حفظ الملفات.",
+    "tags": [
+        "Recommender Systems",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية \"Neural Collaborative Filtering (NCF)\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"MovieLens\" في 'src/data_loader.py'.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                1
+            ],
+            "criteria": "يتم تقسيم البيانات إلى مجموعات تدريب واختبار في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خط أساس تحليل المصفوفة في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم حفظ أفضل 10 توصيات لمستخدم اختبار تحت نهج \"NCF\" والخط الأساسي في `results/metrics/top_10_recommendations.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم تقييم أداء نظام التوصية، بما في ذلك باستخدام \"RMSE\" و\"MAE\"، ويتم حفظ النتائج كـ `results/metrics/evaluation_metrics.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "تم تنفيذ معالجة قوية للمسارات للتعامل مع أشياء مثل الدلائل المفقودة.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون أفضل 10 توصيات واضحة وذات صلة بتفضيلات المستخدم النموذجي.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تنفيذ خوارزمية \"Neural Collaborative Filtering (NCF)\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.573347330093384,
+                "input_tokens": 1246,
+                "output_tokens": 112,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Neural Collaborative Filtering (NCF)\" algorithm should be implemented in `src/model.py`. However, the content of `model.py` provided in the evidence does not show any actual implementation of the NCF algorithm. Instead, it contains a placeholder function `build_model()` that returns a string \"model placeholder\" and does not include any code related to NCF. Additionally, the file contains requirement notes and keywords but lacks the actual algorithmic implementation. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 10.508305072784424
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تحميل مجموعة البيانات \"MovieLens\" في 'src/data_loader.py'.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.106052875518799,
+                "input_tokens": 1466,
+                "output_tokens": 129,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"MovieLens\" dataset should be loaded in 'src/data_loader.py'. However, the provided content of 'src/data_loader.py' only includes a placeholder function `load_dataset()` that returns a dictionary with a string indicating the dataset is \"loaded\" and some requirement notes. There is no actual implementation or code that specifically loads the \"MovieLens\" dataset. Additionally, the trajectory evidence mentions a warning and a minor error related to data loading, but it does not confirm the successful and correct implementation of loading the \"MovieLens\" dataset. Therefore, the requirement is not fully met."
+                ]
+            },
+            "total_time": 6.881393671035767
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تقسيم البيانات إلى مجموعات تدريب واختبار في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 4.052963972091675,
+                "input_tokens": 1117,
+                "output_tokens": 145,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that data should be split into training and testing sets in `src/data_loader.py`. However, the provided content of `data_loader.py` does not include any implementation for data splitting. The file contains a placeholder function `load_dataset()` that returns a minimal dataset loader placeholder, but it does not perform any actual data splitting. Additionally, the trajectory evidence indicates that there was an attempt to split the data, but it resulted in a warning about dataset imbalance and an error due to a missing `pandas` dependency. These issues further confirm that the requirement is not met, as the necessary functionality for data splitting is not implemented or operational in the current state of the code."
+                ]
+            },
+            "total_time": 8.499565362930298
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ خط أساس تحليل المصفوفة في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.7954528331756592,
+                "input_tokens": 1154,
+                "output_tokens": 107,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a matrix factorization baseline should be implemented in `src/model.py`. However, the provided content of `model.py` does not show any implementation related to matrix factorization. The file contains a placeholder function `build_model()` that returns a string \"model placeholder\" and does not include any code related to matrix factorization. Additionally, the trajectory evidence mentions warnings related to matrix dimensions, but there is no concrete evidence of a matrix factorization baseline being implemented in the code."
+                ]
+            },
+            "total_time": 5.160365104675293
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ أفضل 10 توصيات لمستخدم اختبار تحت نهج \"NCF\" والخط الأساسي في `results/metrics/top_10_recommendations.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.6030125617980957,
+                "input_tokens": 975,
+                "output_tokens": 110,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the top 10 recommendations for a test user under the \"NCF\" approach and baseline should be saved in the file `results/metrics/top_10_recommendations.txt`. However, the content of this file is shown as `('placeholder\\r\\n', None)`, which indicates that the actual recommendations are not present. Despite the trajectory evidence suggesting that the recommendation generation and saving process completed successfully, the actual content of the file does not meet the requirement of containing the top 10 recommendations."
+                ]
+            },
+            "total_time": 8.329646587371826
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم تقييم أداء نظام التوصية، بما في ذلك باستخدام \"RMSE\" و\"MAE\"، ويتم حفظ النتائج كـ `results/metrics/evaluation_metrics.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.4432177543640137,
+                "input_tokens": 908,
+                "output_tokens": 122,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the performance of the recommendation system should be evaluated using \"RMSE\" and \"MAE\" metrics, and the results should be saved in `results/metrics/evaluation_metrics.txt`. Although the trajectory evidence indicates that the evaluation was executed using these metrics and the results were saved successfully, the content of `evaluation_metrics.txt` is shown as `('placeholder\\r\\n', None)`, which does not contain the actual RMSE and MAE values. Therefore, the requirement is not fully met as the expected evaluation results are not present in the specified file."
+                ]
+            },
+            "total_time": 7.581861257553101
+        }
+    ]
+}

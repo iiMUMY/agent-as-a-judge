@@ -1,0 +1,187 @@
+{
+    "name": "15_Image_Captioning_ShowAndTell_Flickr8k_DL",
+    "query": "هذا هو مشروعي الحالي باستخدام PyTorch: تطوير نظام تلقائي لوصف الصور باستخدام نموذج Show and Tell. هنا وجدت مستودع يمكن أن يرشدك: https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning. استخدم مجموعة البيانات Flickr8k، وقم بتنزيلها من [هذا الرابط](https://huggingface.co/datasets/jxie/flickr8k) وقم بتحميلها في `src/data_loader.py`. يجب أن يقوم النظام بتوليد أوصاف للصور النموذجية وحفظها في `results/metrics/generated_descriptions.txt`. يجب تنفيذ آلية الانتباه في `src/model.py`. احفظ النموذج المدرب مسبقًا كـ `models/saved_models/show_and_tell_model.pt`. قم بتصور أوزان الانتباه واحفظها في `results/figures/attention_weights.png`. يجب تحميل مجموعة البيانات بسلاسة، مع معالجة الأخطاء بشكل صحيح إذا ظهرت أي مشاكل. من الناحية المثالية، يجب أن تبرز آلية الانتباه بوضوح المناطق في الصورة التي لها التأثير الأكبر في توليد الأوصاف.",
+    "tags": [
+        "Computer Vision",
+        "Natural Language Processing"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام النموذج المدرب مسبقًا \"Show and Tell\".",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم تحميل مجموعة البيانات \"Flickr8k\"، التي يمكن تنزيلها من [هذا الرابط](https://huggingface.co/datasets/jxie/flickr8k)، في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تنفيذ آلية الانتباه في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ الأوصاف المولدة للصور النموذجية في `results/metrics/generated_descriptions.txt`.",
+            "category": "Other",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/show_and_tell_model.pt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم حفظ تصور أوزان الانتباه كـ `results/figures/attention_weights.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب تحميل مجموعة البيانات بسلاسة، مع معالجة الأخطاء بشكل واضح إذا ظهرت أي مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تبرز آلية الانتباه بوضوح المناطق في الصورة التي تساهم بشكل أكبر في الأوصاف المولدة.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام النموذج المدرب مسبقًا \"Show and Tell\".",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.5791654586791992,
+                "input_tokens": 1523,
+                "output_tokens": 86,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the pretrained \"Show and Tell\" model is used is satisfied. The project structure includes a file named `show_and_tell_model.pt` located in the `models/saved_models` directory, indicating the presence of the pretrained model. Additionally, the trajectory evidence confirms that the \"Show and Tell\" model was successfully loaded and executed without errors, demonstrating its use in the project."
+                ]
+            },
+            "total_time": 7.41643500328064
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تحميل مجموعة البيانات \"Flickr8k\"، التي يمكن تنزيلها من [هذا الرابط](https://huggingface.co/datasets/jxie/flickr8k)، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.5988337993621826,
+                "input_tokens": 1206,
+                "output_tokens": 136,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Flickr8k\" dataset should be loaded in `src/data_loader.py`. However, the provided code snippet from `data_loader.py` only contains a placeholder function `load_dataset()` that returns a dictionary with a string indicating the dataset is \"loaded\" and some requirement notes. There is no actual implementation or code that demonstrates the loading of the \"Flickr8k\" dataset from the specified link or any other source. The trajectory evidence confirms the execution of `data_loader.py` without errors, but it does not provide evidence of the actual dataset being loaded. Therefore, the requirement is not fully met."
+                ]
+            },
+            "total_time": 6.1843016147613525
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم تنفيذ آلية الانتباه في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.862654685974121,
+                "input_tokens": 1107,
+                "output_tokens": 109,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the attention mechanism should be implemented in `src/model.py`. However, the content of `model.py` provided does not show any implementation of an attention mechanism. The file contains a placeholder function `build_model()` and mentions a potential model import, but lacks any code related to attention mechanisms. Additionally, trajectory evidence indicates issues with the attention mechanism, including a warning about incorrect normalization and an error due to a missing dependency, further suggesting that the attention mechanism is not properly implemented or functional."
+                ]
+            },
+            "total_time": 5.640109539031982
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ الأوصاف المولدة للصور النموذجية في `results/metrics/generated_descriptions.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.5552260875701904,
+                "input_tokens": 1076,
+                "output_tokens": 87,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the generated descriptions for the sample images should be saved in `results/metrics/generated_descriptions.txt`. However, the content of this file is shown as `('placeholder\\r\\n', None)`, which indicates that the actual generated descriptions are not present. Instead, it contains a placeholder, suggesting that the descriptions were not properly generated or saved. Therefore, the requirement is not met."
+                ]
+            },
+            "total_time": 6.424262762069702
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/show_and_tell_model.pt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.905792474746704,
+                "input_tokens": 1084,
+                "output_tokens": 82,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the trained model is saved as `models/saved_models/show_and_tell_model.pt` is satisfied. The project structure clearly shows the presence of the file `show_and_tell_model.pt` in the specified directory. Additionally, the trajectory evidence confirms that the model was successfully saved without any errors or warnings, indicating that the file was created and stored as intended."
+                ]
+            },
+            "total_time": 7.508631706237793
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ تصور أوزان الانتباه كـ `results/figures/attention_weights.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.437861442565918,
+                "input_tokens": 1173,
+                "output_tokens": 88,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the attention weights visualization should be saved as `results/figures/attention_weights.png`. However, the content of the file indicates an error message related to an unsupported image format, suggesting that the file is not a valid image. Despite the trajectory evidence indicating successful saving and loading operations, the actual content of the file does not meet the requirement of being a valid visualization of attention weights."
+                ]
+            },
+            "total_time": 6.258555889129639
+        }
+    ]
+}

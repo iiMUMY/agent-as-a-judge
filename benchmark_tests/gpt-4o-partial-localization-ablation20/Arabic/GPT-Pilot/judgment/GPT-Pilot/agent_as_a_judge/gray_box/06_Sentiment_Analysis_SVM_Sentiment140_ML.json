@@ -1,0 +1,161 @@
+{
+    "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+    "query": "يرجى مساعدتي في بناء نظام لتحليل المشاعر على التغريدات باستخدام مجموعة بيانات Sentiment140 المتاحة من Hugging Face. قم بتحميل مجموعة بيانات Sentiment140 وعند تحميل البيانات، قم بتنظيفها بإزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، كل ذلك في `src/data_loader.py`. استخدم Word2Vec أو GloVe لتوجيه النصوص. يجب أن يحدث هذا في `src/data_loader.py`. بعد ذلك، قم بتنفيذ وتدريب مصنف SVM في `src/model.py`. أخيرًا، اكتب تقريرًا عن دقة المصنف في `results/metrics/accuracy_score.txt`. من الناحية المثالية، يجب أن يكون التقرير سهل الفهم.",
+    "tags": [
+        "Natural Language Processing",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم الحصول على مجموعة البيانات \"Sentiment140\" المتاحة من \"Hugging Face\" في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنظيف مجموعة البيانات، بما في ذلك إزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، جميعها في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم استخدام تضمينات الكلمات، إما \"Word2Vec\" أو \"GloVe\"، لتحويل النص إلى متجهات في `src/data_loader.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1,
+                2
+            ],
+            "criteria": "يتم تنفيذ وتدريب \"SVM classifier\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم طباعة وحفظ درجة الدقة كـ `results/metrics/accuracy_score.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن تكون عملية تنزيل مجموعة البيانات موثوقة، مع معالجة واضحة للأخطاء.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن يكون التقرير النهائي للدقة بسيطًا وسهل الفهم.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم الحصول على مجموعة البيانات \"Sentiment140\" المتاحة من \"Hugging Face\" في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.9249727725982666,
+                "input_tokens": 1239,
+                "output_tokens": 116,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"Sentiment140\" dataset should be obtained from \"Hugging Face\" in `src/data_loader.py`. However, the provided content of `data_loader.py` does not include any code that explicitly loads the \"Sentiment140\" dataset from Hugging Face. The function `load_dataset()` is a placeholder and only returns a dictionary with a \"dataset\" key set to \"loaded\" and notes from `requirement_notes()`. There is no implementation shown that interacts with Hugging Face to retrieve the dataset."
+                ]
+            },
+            "total_time": 9.554712295532227
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنظيف مجموعة البيانات، بما في ذلك إزالة كلمات التوقف وعلامات الترقيم والرموز الخاصة، جميعها في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.7657370567321777,
+                "input_tokens": 1266,
+                "output_tokens": 121,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the dataset should be cleaned by removing stop words, punctuation, and special characters within `src/data_loader.py`. While the trajectory evidence indicates that the dataset cleaning process was eventually successful after resolving an encoding issue, the provided content of `data_loader.py` does not explicitly show any implementation for cleaning the dataset, such as functions or code snippets that perform the removal of stop words, punctuation, and special characters. The file only contains placeholders and does not demonstrate the actual cleaning process. Therefore, based on the available evidence, the requirement is not fully met."
+                ]
+            },
+            "total_time": 7.180202484130859
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم استخدام تضمينات الكلمات، إما \"Word2Vec\" أو \"GloVe\"، لتحويل النص إلى متجهات في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.1375069618225098,
+                "input_tokens": 1291,
+                "output_tokens": 115,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that either \"Word2Vec\" or \"GloVe\" word embeddings should be used to convert text into vectors in `src/data_loader.py`. The trajectory evidence indicates that while the Word2Vec model was successfully loaded and used for text vectorization, there was a warning logged about the GloVe model file not being found, which suggests that GloVe embeddings were not used. The requirement is not fully satisfied because the use of GloVe embeddings was intended but not implemented due to the missing model file."
+                ]
+            },
+            "total_time": 8.457806825637817
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ وتدريب \"SVM classifier\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.7099838256835938,
+                "input_tokens": 1062,
+                "output_tokens": 137,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an \"SVM classifier\" should be implemented and trained in `src/model.py`. However, the content of `src/model.py` does not contain any code related to the implementation or training of an SVM classifier. The file includes a placeholder function `build_model()` that returns a string \"model placeholder\" and does not perform any operations related to SVM. Additionally, the keywords and requirement notes suggest the intention to implement an SVM classifier, but the actual code does not fulfill this requirement. The trajectory evidence indicates successful execution and training, but without the corresponding code in `src/model.py`, this cannot be verified."
+                ]
+            },
+            "total_time": 5.944571495056152
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم طباعة وحفظ درجة الدقة كـ `results/metrics/accuracy_score.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.1326956748962402,
+                "input_tokens": 940,
+                "output_tokens": 93,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the accuracy score should be printed and saved in the file `results/metrics/accuracy_score.txt`. However, the content of the file `accuracy_score.txt` is shown as `('placeholder\\r\\n', None)`, which indicates that the actual accuracy score is not present in the file. Instead, it contains a placeholder text. This does not fulfill the requirement of having the accuracy score printed and saved correctly."
+                ]
+            },
+            "total_time": 6.8426525592803955
+        }
+    ]
+}

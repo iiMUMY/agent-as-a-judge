@@ -1,0 +1,95 @@
+{
+    "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+    "query": "ساعدني في تطوير نظام للتنبؤ بتسرب العملاء باستخدام مجموعة بيانات Telco Customer Churn، والتي يمكن تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). قم بتحميل مجموعة البيانات في `src/data_loader.py`. يجب أن يتضمن المشروع هندسة الميزات، مثل اختيار الميزات وتوسيعها، والتعامل مع البيانات غير المتوازنة باستخدام تقنيات زيادة أو تقليل العينة المطبقة في `src/data_loader.py`. التفاصيل الدقيقة لهذا متروكة لك لتقررها. قم بتنفيذ نموذج الانحدار اللوجستي في `src/model.py` وأجرِ التحقق المتقاطع أثناء تدريب النموذج في `src/train.py`. أخيرًا، اطبع واحفظ تقرير التصنيف (بما في ذلك الدقة والاسترجاع ودرجة F1) في `results/metrics/classification_report.txt`، واحفظ منحنى ROC في `results/figures/roc_curve.png`. تأكد من تحميل مجموعة البيانات بسلاسة مع معالجة الأخطاء المناسبة. يجب أن تختار هندسة الميزات بدقة الميزات الأكثر صلة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Telco Customer Churn\"، مع إمكانية تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار الميزات وتقييسها، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة أو التقليل من العينة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"Logistic Regression\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاستدعاء\" و\"درجة F1\"، كملف `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ \"منحنى ROC\" كملف `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة، مع معالجة الأخطاء بشكل مناسب إذا ظهرت مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون عملية هندسة الميزات شاملة، مما يضمن اختيار الميزات الأكثر صلة للنموذج.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic"
+}

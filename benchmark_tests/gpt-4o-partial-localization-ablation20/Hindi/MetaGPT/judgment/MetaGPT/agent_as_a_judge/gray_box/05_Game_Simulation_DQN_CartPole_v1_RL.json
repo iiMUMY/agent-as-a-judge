@@ -1,0 +1,156 @@
+{
+    "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+    "query": "إنشاء نظام موثوق لتدريب وكيل DQN باستخدام PyTorch في بيئة OpenAI Gym مثل CartPole-v1. تنفيذ DQN باستخدام PyTorch في `src/model.py`. يجب إنشاء البيئة في الملف الرئيسي، `src/main.py`. التعامل مع أي عدم تطابق في الأبعاد بين DQN والبيئة (كما يحدث إذا تم تغيير معرف بيئة Gym) عن طريق تسجيل خطأ. أيضًا، يرجى تسجيل العائد بعد كل حلقة في `results/metrics/` وتحديثه بعد انتهاء كل حلقة جديدة. حفظ منحنى العائد النهائي على مدار الحلقات كـ `results/figures/return_over_time.png` والنموذج المدرب النهائي كـ `models/saved_models/dqn_model.pt`. إذا كان ذلك ممكنًا، أضف تعليقات توضيحية إلى منحنى العائد على مدار الحلقات لإبراز المعالم الرئيسية.",
+    "tags": [
+        "Reinforcement Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ خوارزمية \"DQN\" باستخدام PyTorch وحفظها في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [],
+            "criteria": "يتم إنشاء بيئة \"OpenAI Gym\" في `src/main.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم رسم منحنى العائد بمرور الوقت، مع تسجيل العائد لكل حلقة، وحفظه كـ `results/figures/reward_over_time.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/dqn_model.pt`.",
+            "category": "Save Trained Model",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                0,
+                1
+            ],
+            "criteria": "يتم تسجيل العائد لكل حلقة في `results/metrics/` وتحديثه بعد انتهاء كل حلقة.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتعامل النظام مع عدم تطابق الأبعاد، وتسجيل المشكلات لتسهيل تصحيح الأخطاء.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يحتوي منحنى العائد على مدار الحلقات على تعليقات توضيحية للمعالم الرئيسية.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": false,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم تنفيذ خوارزمية \"DQN\" باستخدام PyTorch وحفظها في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.260637044906616,
+                "input_tokens": 1155,
+                "output_tokens": 139,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"DQN\" algorithm should be implemented using PyTorch and saved in `src/model.py`. However, the content of `src/model.py` provided does not show any implementation of the DQN algorithm using PyTorch. Instead, it contains a placeholder function `build_model()` that returns a string \"model placeholder\" and does not include any actual model code or PyTorch implementation. Additionally, the trajectory evidence mentions a warning related to tensor dimensions, but does not provide any details on the DQN implementation itself. Therefore, the requirement is not met as there is no evidence of the DQN algorithm being implemented in the specified file."
+                ]
+            },
+            "total_time": 8.350481271743774
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم إنشاء بيئة \"OpenAI Gym\" في `src/main.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.9903767108917236,
+                "input_tokens": 1163,
+                "output_tokens": 112,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that an \"OpenAI Gym\" environment should be instantiated in `src/main.py`. However, the content of `main.py` provided does not show any code related to the instantiation of an OpenAI Gym environment. Instead, it contains a function `main()` that returns a dictionary with status and notes, but no actual implementation of environment creation. Additionally, the trajectory evidence indicates an error during the execution of `src/main.py` related to the environment setup, further suggesting that the requirement is not met."
+                ]
+            },
+            "total_time": 7.586686134338379
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم رسم منحنى العائد بمرور الوقت، مع تسجيل العائد لكل حلقة، وحفظه كـ `results/figures/reward_over_time.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.3750650882720947,
+                "input_tokens": 1167,
+                "output_tokens": 113,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a reward curve over time should be plotted, with the reward recorded for each episode, and saved as `results/figures/reward_over_time.png`. Although the trajectory evidence indicates that the plot was successfully generated and saved without errors, the content evidence shows an error when attempting to read the image file, indicating it was unsupported or invalid. This discrepancy suggests that the file may not be correctly formatted or accessible, thus failing to meet the requirement of having a valid and usable plot saved in the specified location."
+                ]
+            },
+            "total_time": 7.793054580688477
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم حفظ النموذج المدرب كـ `models/saved_models/dqn_model.pt`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.9395413398742676,
+                "input_tokens": 1005,
+                "output_tokens": 92,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement that the trained model is saved as `models/saved_models/dqn_model.pt` is satisfied. The project structure clearly shows the presence of the file `dqn_model.pt` in the specified directory. Additionally, the trajectory evidence confirms that the model was saved successfully without any errors or warnings, and it was loaded and performed as expected during testing. This indicates that the model file is functioning correctly and fulfills the requirement."
+                ]
+            },
+            "total_time": 7.230633497238159
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم تسجيل العائد لكل حلقة في `results/metrics/` وتحديثه بعد انتهاء كل حلقة.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.2464709281921387,
+                "input_tokens": 963,
+                "output_tokens": 146,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the return for each episode should be recorded in `results/metrics/` and updated after the completion of each episode. While the evidence indicates that files such as `episode_45.json` and `episode_46.json` are being updated in the `results/metrics/` directory, there is a noted warning for episode 46 regarding a potential mismatch in expected data format. This warning suggests that there may be inconsistencies in how the metrics are recorded, which could affect the accuracy and reliability of the data. Therefore, the requirement is not fully satisfied due to the potential data format issue that needs to be addressed to ensure consistent and accurate recording of returns for each episode."
+                ]
+            },
+            "total_time": 6.369013547897339
+        }
+    ]
+}

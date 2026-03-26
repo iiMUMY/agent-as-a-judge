@@ -1,0 +1,19 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gpt-4o-partial-localization-ablation20\\Hindi\\GPT-Pilot\\workspaces\\GPT-Pilot\\05_Game_Simulation_DQN_CartPole_v1_RL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "dqn_model.pt": null
+        },
+        "results": {},
+        "results\\figures": {
+            "reward_over_time.png": null
+        },
+        "results\\metrics": {},
+        "src": {
+            "main.py": null,
+            "model.py": null
+        }
+    }
+}

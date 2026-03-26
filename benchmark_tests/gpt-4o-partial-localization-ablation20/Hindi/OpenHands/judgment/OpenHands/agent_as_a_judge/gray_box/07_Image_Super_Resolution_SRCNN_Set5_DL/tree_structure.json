@@ -1,0 +1,15 @@
+{
+    "workspace": "F:\\Program Files\\GitHub\\agent-as-a-judge\\benchmark_tests\\gpt-4o-partial-localization-ablation20\\Hindi\\OpenHands\\workspaces\\OpenHands\\07_Image_Super_Resolution_SRCNN_Set5_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "super_resolution_compare.png": null,
+            "super_resolution_results.png": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

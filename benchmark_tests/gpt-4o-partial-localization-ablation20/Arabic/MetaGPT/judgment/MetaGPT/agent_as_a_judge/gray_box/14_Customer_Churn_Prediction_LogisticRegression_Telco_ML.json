@@ -1,0 +1,216 @@
+{
+    "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+    "query": "ساعدني في تطوير نظام للتنبؤ بتسرب العملاء باستخدام مجموعة بيانات Telco Customer Churn، والتي يمكن تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). قم بتحميل مجموعة البيانات في `src/data_loader.py`. يجب أن يتضمن المشروع هندسة الميزات، مثل اختيار الميزات وتوسيعها، والتعامل مع البيانات غير المتوازنة باستخدام تقنيات زيادة أو تقليل العينة المطبقة في `src/data_loader.py`. التفاصيل الدقيقة لهذا متروكة لك لتقررها. قم بتنفيذ نموذج الانحدار اللوجستي في `src/model.py` وأجرِ التحقق المتقاطع أثناء تدريب النموذج في `src/train.py`. أخيرًا، اطبع واحفظ تقرير التصنيف (بما في ذلك الدقة والاسترجاع ودرجة F1) في `results/metrics/classification_report.txt`، واحفظ منحنى ROC في `results/figures/roc_curve.png`. تأكد من تحميل مجموعة البيانات بسلاسة مع معالجة الأخطاء المناسبة. يجب أن تختار هندسة الميزات بدقة الميزات الأكثر صلة.",
+    "tags": [
+        "Classification",
+        "Supervised Learning"
+    ],
+    "requirements": [
+        {
+            "requirement_id": 0,
+            "prerequisites": [],
+            "criteria": "يتم استخدام مجموعة البيانات \"Telco Customer Churn\"، مع إمكانية تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "category": "Dataset or Environment",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 1,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار الميزات وتقييسها، في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 2,
+            "prerequisites": [
+                0
+            ],
+            "criteria": "يتم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة أو التقليل من العينة في `src/data_loader.py`.",
+            "category": "Data preprocessing and postprocessing",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 3,
+            "prerequisites": [],
+            "criteria": "يتم تنفيذ نموذج \"Logistic Regression\" في `src/model.py`.",
+            "category": "Machine Learning Method",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 4,
+            "prerequisites": [
+                1,
+                2,
+                3
+            ],
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 5,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاستدعاء\" و\"درجة F1\"، كملف `results/metrics/classification_report.txt`.",
+            "category": "Performance Metrics",
+            "satisfied": null
+        },
+        {
+            "requirement_id": 6,
+            "prerequisites": [
+                0,
+                1,
+                2,
+                3,
+                4
+            ],
+            "criteria": "يتم حفظ \"منحنى ROC\" كملف `results/figures/roc_curve.png`.",
+            "category": "Visualization",
+            "satisfied": null
+        }
+    ],
+    "preferences": [
+        {
+            "preference_id": 0,
+            "criteria": "يجب أن يتم تحميل مجموعة البيانات بسلاسة، مع معالجة الأخطاء بشكل مناسب إذا ظهرت مشاكل أثناء التنزيل.",
+            "satisfied": null
+        },
+        {
+            "preference_id": 1,
+            "criteria": "يجب أن تكون عملية هندسة الميزات شاملة، مما يضمن اختيار الميزات الأكثر صلة للنموذج.",
+            "satisfied": null
+        }
+    ],
+    "is_kaggle_api_needed": false,
+    "is_training_needed": true,
+    "is_web_navigation_needed": true,
+    "language": "Arabic",
+    "judge_stats": [
+        {
+            "requirement_index": 0,
+            "criteria": "يتم استخدام مجموعة البيانات \"Telco Customer Churn\"، مع إمكانية تنزيلها من [هذا الرابط](https://huggingface.co/datasets/scikit-learn/churn-prediction). يتم تحميل مجموعة البيانات في `src/data_loader.py`.",
+            "satisfied": true,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 3.4950950145721436,
+                "input_tokens": 1331,
+                "output_tokens": 100,
+                "accumulated_cost": 0.0,
+                "satisfied": true,
+                "reason": [
+                    "<SATISFIED>: The requirement specifies that the \"Telco Customer Churn\" dataset should be used and potentially downloaded from the provided link, with the dataset loading implemented in `src/data_loader.py`. The content of `data_loader.py` includes a function `load_dataset()` which is described as a minimal dataset loader placeholder. The trajectory evidence confirms that the dataset was successfully loaded using `src/data_loader.py`, indicating that the implementation meets the requirement of loading the dataset from the specified link."
+                ]
+            },
+            "total_time": 9.40096640586853
+        },
+        {
+            "requirement_index": 1,
+            "criteria": "يتم تنفيذ هندسة الميزات، بما في ذلك اختيار الميزات وتقييسها، في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 5.606159210205078,
+                "input_tokens": 1259,
+                "output_tokens": 120,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that feature engineering, including feature selection and scaling, should be implemented in `src/data_loader.py`. However, the provided content of `data_loader.py` only includes a placeholder function `load_dataset()` and a placeholder for data augmentation `build_transforms()`, without any actual implementation of feature selection or scaling. Additionally, the trajectory evidence indicates that there were issues with feature scaling due to missing values and a critical error related to a missing library for feature selection, which halted the feature engineering process. These issues demonstrate that the requirement is not fully met."
+                ]
+            },
+            "total_time": 9.868584394454956
+        },
+        {
+            "requirement_index": 2,
+            "criteria": "يتم التعامل مع البيانات غير المتوازنة باستخدام تقنيات الإفراط في العينة أو التقليل من العينة في `src/data_loader.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.4633796215057373,
+                "input_tokens": 1248,
+                "output_tokens": 103,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that imbalanced data should be handled using oversampling or undersampling techniques in `src/data_loader.py`. The evidence indicates that oversampling was attempted, but a warning was logged about potential data leakage due to improper dataset splitting. Additionally, an error occurred during the attempt to apply undersampling due to a missing dependency, which halted execution. These issues suggest that the handling of imbalanced data is not fully implemented or functional, as both techniques have encountered significant problems."
+                ]
+            },
+            "total_time": 12.555655002593994
+        },
+        {
+            "requirement_index": 3,
+            "criteria": "يتم تنفيذ نموذج \"Logistic Regression\" في `src/model.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.7260048389434814,
+                "input_tokens": 1124,
+                "output_tokens": 109,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that a \"Logistic Regression\" model should be implemented in `src/model.py`. However, the content of `model.py` provided in the evidence does not show any implementation of a Logistic Regression model. Instead, it contains a placeholder function `build_model()` that returns a string \"model placeholder\" and checks for the presence of \"resnet-18\" in keywords, which is unrelated to Logistic Regression. There is no actual code implementing a Logistic Regression model in the provided file content."
+                ]
+            },
+            "total_time": 8.830350875854492
+        },
+        {
+            "requirement_index": 4,
+            "criteria": "يتم استخدام التحقق المتقاطع لتقييم النموذج في `src/train.py`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 2.3307790756225586,
+                "input_tokens": 1340,
+                "output_tokens": 118,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that cross-validation should be used to evaluate the model in `src/train.py`. However, the provided content of `train.py` does not include any implementation of cross-validation. The `train` function is a minimal training loop that simply iterates over a range and accumulates a score, without any indication of cross-validation being performed. Although the trajectory evidence mentions the execution of cross-validation, there is no corresponding code in `train.py` to substantiate this claim. Therefore, the requirement is not met based on the provided code."
+                ]
+            },
+            "total_time": 6.787627458572388
+        },
+        {
+            "requirement_index": 5,
+            "criteria": "يتم حفظ تقرير التصنيف، بما في ذلك \"الدقة\" و\"الاستدعاء\" و\"درجة F1\"، كملف `results/metrics/classification_report.txt`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 1.350987434387207,
+                "input_tokens": 1013,
+                "output_tokens": 93,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the classification report, including metrics such as \"accuracy,\" \"recall,\" and \"F1 score,\" should be saved in the file `results/metrics/classification_report.txt`. However, the content of this file is shown as `('placeholder\\r\\n', None)`, which indicates that the actual classification metrics are not present. The file does not contain the expected metrics, thus failing to meet the requirement."
+                ]
+            },
+            "total_time": 5.2790820598602295
+        },
+        {
+            "requirement_index": 6,
+            "criteria": "يتم حفظ \"منحنى ROC\" كملف `results/figures/roc_curve.png`.",
+            "satisfied": false,
+            "llm_stats": {
+                "cost": 0.0,
+                "inference_time": 7.053623914718628,
+                "input_tokens": 1096,
+                "output_tokens": 93,
+                "accumulated_cost": 0.0,
+                "satisfied": false,
+                "reason": [
+                    "<UNSATISFIED>: The requirement specifies that the \"ROC curve\" should be saved as a file named `results/figures/roc_curve.png`. However, the content of the file indicates an error message related to an unsupported image format, suggesting that the file is not a valid ROC curve image. Despite the trajectory evidence indicating successful saving and loading operations, the actual content of the file does not meet the requirement of being a valid ROC curve image."
+                ]
+            },
+            "total_time": 11.697367191314697
+        }
+    ]
+}
