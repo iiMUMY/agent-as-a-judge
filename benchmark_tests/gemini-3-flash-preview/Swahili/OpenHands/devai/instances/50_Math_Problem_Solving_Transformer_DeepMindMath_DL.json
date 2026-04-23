@@ -1,0 +1,113 @@
+{
+  "name": "50_Math_Problem_Solving_Transformer_DeepMindMath_DL",
+  "query": "Habari! Nahitaji msaada na mradi unaotumia mfano wa Transformer kutatua matatizo ya hesabu kutoka kwenye seti ya data ya DeepMind Mathematics. Tafadhali pakia seti ya data na uifanyie usindikaji awali katika `src/data_loader.py`. Usindikaji awali unapaswa kuchanganua na kusawazisha maneno ya hesabu kwa njia inayolingana kisintaksia ili mfano uweze kuyashughulikia kwa urahisi. Tekeleza Transformer katika `src/model.py`. Pia, rekebisha hyperparameters kama vile kiwango cha kujifunza na ukubwa wa kundi katika `src/train.py`, na hifadhi mchakato wa upotevu wa mafunzo kwenye `results/figures/training_loss_curve.png`. Chukua sampuli na hifadhi baadhi ya suluhisho zilizotengenezwa na Transformer katika `results/sample_solutions.txt`. Kwa kutumia mfano wako, tengeneza zana rahisi ya mwingiliano na Gradio au Streamlit katika `src/interface.py` ambayo inaweza kutatua matatizo mbalimbali ya hesabu yaliyotolewa na mtumiaji. Mwisho, tengeneza ripoti juu ya jinsi mfano unavyofanya kazi na aina tofauti za matatizo, ikijumuisha usahihi wa mfano, uchambuzi wa makosa, na mapendekezo ya maboresho ya baadaye. Hifadhi kama `results/metrics/model_report.md`. Asante mapema!",
+  "tags": [
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya DeepMind Mathematics imepakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usindikaji wa data unafanywa ikiwa ni pamoja na kuchanganua na kusawazisha maneno ya hesabu katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"Transformer\" umetekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Hyperparameters kama vile kiwango cha kujifunza na ukubwa wa kundi vimebadilishwa katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Mchakato wa upotevu wa mafunzo ya mfano umehifadhiwa kama `results/figures/training_loss_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Baadhi ya suluhisho zilizotengenezwa na Transformer zimehifadhiwa katika `results/sample_solutions.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Zana ya mwingiliano imetengenezwa inayoruhusu watumiaji kuingiza matatizo ya hesabu na kupokea suluhisho kwa kutumia \"Gradio\" au \"Streamlit\" katika `src/interface.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Ripoti imetengenezwa ikijumuisha usahihi wa mfano, uchambuzi wa makosa, na mapendekezo ya maboresho ya baadaye, na imehifadhiwa kama `results/metrics/model_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Hatua ya usindikaji awali inapaswa kuhakikisha kwamba maneno ya hesabu yamesawazishwa kwa njia inayowafanya yashughulikiwe kwa urahisi na mfano.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Zana ya mwingiliano inapaswa kuwa na uwezo wa kushughulikia aina mbalimbali za matatizo ya hesabu.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Ripoti inapaswa kutoa ufahamu juu ya jinsi mfano unavyoshughulikia aina tofauti za matatizo ya hesabu, ikibainisha nguvu maalum na maeneo ya kuboresha.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "42_Medical_Image_Classification_DenseNet121_ChestXray_DL",
+  "query": "Crear un sistema de clasificación de imágenes médicas utilizando un modelo DenseNet-121 preentrenado y el conjunto de datos Kaggle Chest X-ray. Comienza cargando y preprocesando el conjunto de datos y realizando aumentación de datos (incluyendo rotación, traslación y escalado) en `src/data_loader.py`. Aplica el modelo DenseNet-121 para la clasificación, registrando la precisión y guardándola en `results/metrics/classification_accuracy.txt`. Ajusta finamente el modelo y guárdalo como `models/saved_models/chest_xray_densenet_model.pth`. Usa Grad-CAM para visualizar el proceso de toma de decisiones del modelo y guarda estas visualizaciones como `results/figures/grad_cam_visualizations.gif`. Finalmente, crea un informe en Markdown que documente la arquitectura del modelo, el proceso de entrenamiento, las técnicas de aumentación de datos y el análisis de los resultados, y guárdalo como `results/medical_image_classification_report.md`. También sería bueno que el sistema fuera flexible para que el DenseNet-121 pudiera ser fácilmente ajustado finamente por un usuario humano.",
+  "tags": [
+    "Classification",
+    "Computer Vision",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Kaggle Chest X-ray\", con la carga y el preprocesamiento de datos implementados en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se realiza aumentación de datos, incluyendo rotación, traslación y escalado de imágenes en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "El modelo \"DenseNet-121\" preentrenado se ajusta finamente y se guarda en `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "La precisión de la clasificación se imprime y se guarda como `results/metrics/classification_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Se utiliza \"Grad-CAM\" para visualizar las decisiones del modelo, guardando las visualizaciones como `results/figures/grad_cam_visualizations.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Se crea un informe en \"Markdown\" que contiene la arquitectura del modelo, el proceso de entrenamiento, la aumentación de datos y el análisis de resultados, y se guarda como `results/medical_image_classification_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El informe en \"Markdown\" debe incluir una sección que explique el impacto de la aumentación de datos en el rendimiento del modelo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Las visualizaciones de \"Grad-CAM\" deben resaltar claramente las áreas de las imágenes que más contribuyeron a las decisiones del modelo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "El sistema debe ser flexible para permitir un ajuste fino adicional del modelo \"DenseNet-121\".",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

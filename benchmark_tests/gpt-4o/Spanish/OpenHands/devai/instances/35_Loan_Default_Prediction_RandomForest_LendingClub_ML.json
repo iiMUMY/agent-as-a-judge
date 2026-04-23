@@ -1,0 +1,91 @@
+{
+  "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+  "query": "¿Puedes ayudarme a construir un sistema de predicción de incumplimiento de préstamos utilizando un clasificador Random Forest con el conjunto de datos de Lending Club Loan? Comienza cargando el conjunto de datos, manejando datos desbalanceados usando técnicas de sobremuestreo o submuestreo, y realizando selección de características para identificar características importantes, todo implementado en `src/data_loader.py`. Entrena un modelo Random Forest y guarda el modelo entrenado en `models/saved_models/`. Guarda las importancias de las características en `results/feature_importances.txt` y guarda la curva ROC como `results/figures/roc_curve.png` usando matplotlib. Finalmente, crea un informe detallado en Markdown que resuma los pasos de preprocesamiento de datos, entrenamiento del modelo y proceso de evaluación, y guárdalo como `results/loan_default_prediction_report.md`. El informe debe incluir ideas sobre el rendimiento del modelo y sugerencias para posibles mejoras.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Lending Club Loan\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos desbalanceados se manejan usando técnicas de sobremuestreo o submuestreo, implementadas en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se realiza selección de características para identificar características importantes en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Se implementa un clasificador \"Random Forest\" para predecir el incumplimiento de préstamos. Guarda el modelo entrenado en `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Las importancias de las características se guardan como `results/feature_importances.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "La \"curva ROC\" se visualiza y guarda usando \"matplotlib\" en `results/figures/roc_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "Se crea un informe en Markdown que contiene los pasos de preprocesamiento de datos, entrenamiento del modelo y proceso de evaluación, y se guarda como `results/loan_default_prediction_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El informe en Markdown es detallado.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe en Markdown debe incluir ideas sobre el rendimiento del modelo y sugerencias para posibles mejoras.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

@@ -99,4 +99,67 @@ Amacın, kriterde geçen dosyalarda yürütme kaynaklı bir problem olup olmadı
 आपका लक्ष्य स्पष्ट और संक्षिप्त जानकारी देना है ताकि यह तय किया जा सके कि मानदंड में उल्लिखित फ़ाइलों में execution-संबंधी समस्या थी या नहीं।
         """
 
+    if language == "Japanese":
+        return """
+あなたは、プロジェクト実行トレースから環境フィードバックを抽出することに特化した高度な AI システムです。
+あなたの役割は、与えられたトレースデータを分析し、基準で言及されている最も関連性の高いファイルに関する情報を抽出することです。
+
+次の点に注目してください:
+
+1. 基準に直接関係するファイルが実行、読み込み、保存に関与した**最新のステップ**を特定すること。
+2. そのファイルに関する環境フィードバック、たとえばエラー、警告、処理中に発生した問題を示すこと。
+3. それらのファイルの機能や成功に影響し得る問題があったかどうかを明確にすること。
+
+出力は次の構造に従ってください:
+
+- **<RELEVANT STEPS>**: 関連ファイルを含む具体的なステップを列挙し、エラーメッセージ、実行結果、その他の環境フィードバックを簡潔にまとめること。
+
+ファイル内容や存在に関する詳細は含めないでください。これらの情報は別経路で取得できます。
+最も関連性の高いファイルの実行に関する環境フィードバックのみに集中してください。
+
+目的は、基準で触れられたファイルに実行上の問題があったかどうかを判断しやすくする、明確で簡潔な情報を提供することです。
+        """
+
+    if language == "Spanish":
+        return """
+Eres un sistema avanzado de IA especializado en extraer retroalimentación del entorno a partir de trayectorias de ejecución del proyecto.
+Tu tarea es analizar los datos de trayectoria proporcionados y extraer información sobre los archivos más relevantes mencionados en el criterio.
+
+Concéntrate en lo siguiente:
+
+1. Identifica los **pasos más recientes** en los que los archivos directamente relacionados con el criterio participaron en ejecución, carga o guardado.
+2. Proporciona retroalimentación del entorno para esos archivos, como errores, advertencias o problemas encontrados durante su ejecución o procesamiento.
+3. Señala si ocurrió algún problema que pueda afectar la funcionalidad o el éxito de esos archivos dentro del proyecto.
+
+La salida debe tener la siguiente estructura:
+
+- **<RELEVANT STEPS>**: enumera los pasos específicos que involucren a los archivos relevantes, incluyendo mensajes de error, resultados de ejecución u otra retroalimentación del entorno. Cada paso debe presentar de forma concisa la información clave necesaria para evaluar el estado de ejecución.
+
+Evita incluir detalles sobre el contenido o la existencia de los archivos, ya que esa información ya está disponible por otras vías.
+Concéntrate únicamente en la retroalimentación del entorno relacionada con la ejecución de los archivos más relevantes.
+
+Tu objetivo es ofrecer información clara y concisa que ayude a determinar si hubo problemas de ejecución en los archivos mencionados en el criterio.
+        """
+
+    if language == "Swahili":
+        return """
+Wewe ni mfumo wa hali ya juu wa AI unaobobea katika kutoa mrejesho wa mazingira kutoka kwenye trajekta za utekelezaji wa mradi.
+Kazi yako ni kuchanganua data ya trajekta uliyopewa na kutoa taarifa kuhusu faili muhimu zaidi zilizotajwa katika kigezo.
+
+Zingatia yafuatayo:
+
+1. Tambua **hatua za hivi karibuni zaidi** ambapo faili zinazohusiana moja kwa moja na kigezo zilihusika katika utekelezaji, upakiaji, au uhifadhi.
+2. Toa mrejesho wa mazingira kwa faili hizo, kama makosa, maonyo, au matatizo yaliyojitokeza wakati wa utekelezaji au uchakataji.
+3. Onesha kama kulikuwa na tatizo lolote linaloweza kuathiri utendaji au mafanikio ya faili hizo ndani ya mradi.
+
+Matokeo yako yawe katika muundo huu:
+
+- **<RELEVANT STEPS>**: orodhesha hatua maalum zilizohusisha faili husika, pamoja na ujumbe wa makosa, matokeo ya utekelezaji, au mrejesho mwingine wa mazingira. Kila hatua inapaswa kuwasilisha kwa ufupi taarifa muhimu za kutathmini hali ya utekelezaji.
+
+Epuka kujumuisha maelezo ya yaliyomo ndani ya faili au uwepo wa faili, kwa kuwa taarifa hizo tayari zinapatikana kutoka vyanzo vingine.
+Lenga tu mrejesho wa mazingira unaohusiana na utekelezaji wa faili zilizo muhimu zaidi.
+
+Lengo lako ni kutoa taarifa zilizo wazi na fupi zinazosaidia kubaini kama kulikuwa na matatizo ya utekelezaji katika faili zilizotajwa kwenye kigezo.
+        """
+
     raise NotImplementedError(f"The language '{language}' is not supported.")

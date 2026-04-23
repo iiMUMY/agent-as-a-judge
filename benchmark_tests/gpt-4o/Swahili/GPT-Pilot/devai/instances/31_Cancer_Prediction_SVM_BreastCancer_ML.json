@@ -1,0 +1,88 @@
+{
+  "name": "31_Cancer_Prediction_SVM_BreastCancer_ML",
+  "query": "Je, unaweza kunisaidia kuunda mradi wa utabiri wa saratani ya matiti kwa kutumia mfano wa SVM na seti ya data ya Breast Cancer Wisconsin? Pakia seti ya data na fanya uteuzi wa vipengele ili kutambua vipengele muhimu katika `src/data_loader.py`. Tekeleza kielekezi cha SVM kwa utabiri wa saratani katika `src/model.py`. Tumia uthibitishaji wa msalaba kutathmini mfano katika `src/train.py`. Hifadhi matriki ya mkanganyiko kama `results/figures/confusion_matrix.png`. Weka pamoja ripoti ya kina inayofafanua mchakato mzima-kuanzia usindikaji wa data hadi mafunzo na tathmini ya mfano. Ripoti inapaswa kufunika mchakato wa uteuzi wa vipengele na kujumuisha ramani ya joto ya wazi ya vipimo vya utendaji. Hifadhi ripoti kama `results/metrics/breast_cancer_prediction_report.pdf`.",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Breast Cancer Wisconsin\" inatumika.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uteuzi wa vipengele unafanywa ili kutambua vipengele muhimu katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Kielekezi cha \"SVM classifier\" kinatumika kwa utabiri wa saratani na kinapaswa kutekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Uthibitishaji wa msalaba unatumika kutathmini mfano katika `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Matriki ya mkanganyiko inachapishwa na kuhifadhiwa kama `results/figures/confusion_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Ripoti ya kina inayojumuisha usindikaji wa data, mafunzo ya mfano, na mchakato wa tathmini inaundwa na kuhifadhiwa kama `results/metrics/breast_cancer_prediction_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mchakato wa uteuzi wa vipengele unapaswa kuandikwa vizuri katika ripoti, ukieleza kwa nini vipengele fulani vilichaguliwa.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ramani ya joto inapaswa kutofautisha wazi kati ya vipimo tofauti vya utendaji, kama vile usahihi, kumbukumbu, na alama ya F1.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Ripoti inapaswa kujumuisha majadiliano juu ya utendaji wa mfano na maeneo yanayoweza kuboreshwa.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

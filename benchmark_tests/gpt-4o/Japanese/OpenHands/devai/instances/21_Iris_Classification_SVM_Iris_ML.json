@@ -1,0 +1,92 @@
+{
+  "name": "21_Iris_Classification_SVM_Iris_ML",
+  "query": "Irisデータセットを利用してアヤメの種を分類するプロジェクトを依頼します。分類器としてサポートベクターマシン（SVM）を`src/model.py`で実装します。プロジェクトではデータを標準化し、`src/data_loader.py`で特徴選択を行います。分類精度を記録し、`results/metrics/classification_accuracy.txt`として保存し、混同行列を生成して`results/figures/confusion_matrix.png`として保存します。さらに、Streamlitを使用して`src/app.py`でインタラクティブなWebアプリケーションを作成し、分類結果とモデルの性能を表示し、図を`results/figures/`に保存します。Webページはユーザーフレンドリーで、SVM分類器の動作を理解するための簡単な説明を含めるべきです。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Iris\"データセットが使用されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データは`src/data_loader.py`で標準化され、特徴値が同じ範囲内に収まるようにします。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "重要な特徴を特定するために`src/data_loader.py`で特徴選択が行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"SVM分類器\"は`src/model.py`で実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "分類精度は`results/metrics/classification_accuracy.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "混同行列が生成され、`results/figures/confusion_matrix.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "インタラクティブなWebアプリケーションが`src/app.py`で\"Streamlit\"を使用して作成され、分類結果とモデルの性能を表示し、図は`results/figures/`に保存されます。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "StreamlitのWebページはユーザーフレンドリーで、ユーザーがモデルの性能のさまざまな側面を簡単に探索できるようにするべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Webページには簡単なモデルの説明を含め、ユーザーがSVM分類器の動作を理解するのを助けるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

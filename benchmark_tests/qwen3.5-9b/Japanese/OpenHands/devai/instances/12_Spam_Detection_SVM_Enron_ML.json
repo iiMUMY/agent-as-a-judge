@@ -1,0 +1,99 @@
+{
+  "name": "12_Spam_Detection_SVM_Enron_ML",
+  "query": "こんにちは。Enron-Spamデータセットを使用して、サポートベクターマシン（SVM）分類器でスパムメールを検出するプロジェクトを構築してください。プロジェクトでは、ストップワードと句読点を削除してテキストを前処理し、TF-IDF特徴を使用し、GridSearchCVを用いてハイパーパラメータのチューニングを行い、混同行列を`results/figures/confusion_matrix.png`に保存してください。また、精度、再現率、F1スコア、混同行列（`results/figures/confusion_matrix.png`として生成）を含む包括的なレポートを作成し、`results/classification_report.pdf`に保存する必要があります。Enron-Spamデータセットは`src/data_loader.py`で読み込む必要があります。ストップワードと句読点の削除を含むテキストの前処理とTF-IDF特徴の計算は`src/data_loader.py`で行う必要があります。SVM分類器は`src/model.py`で実装する必要があります。ハイパーパラメータのチューニングは`src/train.py`でGridSearchCVを使用して行う必要があります。大量のメールを効率的に処理できるようにテキストの前処理ステップを最適化すると役立ちます。",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Enron-Spam\"データセットは`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "ストップワードと句読点を削除するテキストの前処理は`src/data_loader.py`で行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "\"TF-IDF\"特徴は`src/data_loader.py`で使用されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"SVM分類器\"は`src/model.py`で実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "ハイパーパラメータのチューニングは`src/train.py`で\"GridSearchCV\"を使用して行われます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "混同行列は`results/figures/confusion_matrix.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "精度、再現率、F1スコア、および図`results/figures/confusion_matrix.png`を含む分類レポートは`results/classification_report.pdf`として保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "テキストの前処理ステップは、大量のメールを効率的に処理できるように最適化されるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "分類レポートは包括的であるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

@@ -1,0 +1,89 @@
+{
+  "name": "34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+  "query": "Kaggleの顧客セグメンテーションデータセットを使用して、K-meansクラスタリングアルゴリズムを用いた顧客セグメンテーションシステムを作成する必要があります。まず、`src/data_loader.py`でデータを標準化し、エルボー法を使用して最適なクラスタ数を決定し、エルボープロットを`results/figures/elbow.jpg`に保存します。`src/model.py`でK-meansアルゴリズムを実装します。クラスタセンターを`results/metrics/cluster_centers.txt`に保存します。seabornを使用してセグメンテーション結果を視覚化し、プロットを`results/figures/customer_segmentation.png`として保存します。セグメントの動的な探索を可能にするインタラクティブなDashダッシュボードを作成します。",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Customer Segmentation\"データセットが使用され、`src/data_loader.py`でデータの読み込みと準備が行われます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データは`src/data_loader.py`で標準化され、特徴値が同じ範囲内に収まるようにします。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "エルボー法を使用して最適なクラスタ数を決定します。エルボープロットを`results/figures/elbow.jpg`に保存してください。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "K-meansクラスタリングアルゴリズムは`src/model.py`で実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "クラスタセンターは`results/metrics/cluster_centers.txt`に保存されます。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "顧客セグメンテーションは\"seaborn\"を使用して視覚化され、プロットは`results/figures/customer_segmentation.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "セグメントの動的な探索を可能にするインタラクティブなダッシュボードが\"Dash\"を使用して作成されます。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "エルボープロットは最適なクラスタ数がどのように決定されるかを明確に示しています。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "システムはダッシュボードの起動と終了を適切に管理します。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

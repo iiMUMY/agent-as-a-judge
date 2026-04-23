@@ -45,6 +45,39 @@ Yönergelere göre, <SATISFIED> veya <UNSATISFIED> ifadelerinden birini seçin v
 केवल <SATISFIED> या <UNSATISFIED> टैग और संक्षिप्त कारण दें।
     """
 
+    if language == "Japanese":
+        return f"""
+以下はプロジェクトに関する情報です:
+{evidence}
+
+次の基準を評価してください:
+{criteria}
+
+ガイドラインに従い、<SATISFIED> または <UNSATISFIED> のいずれかを用い、その後に簡潔な根拠を示してください。
+    """
+
+    if language == "Spanish":
+        return f"""
+La siguiente información está relacionada con el proyecto:
+{evidence}
+
+Evalúa los siguientes criterios:
+{criteria}
+
+De acuerdo con las directrices, responde con <SATISFIED> o <UNSATISFIED> y luego proporciona una justificación breve que haga referencia a elementos específicos de la información del proyecto, como fragmentos de código, muestras de datos o resultados de salida.
+    """
+
+    if language == "Swahili":
+        return f"""
+Taarifa zifuatazo zinahusiana na mradi:
+{evidence}
+
+Tafadhali tathmini vigezo vifuatavyo:
+{criteria}
+
+Kulingana na mwongozo, jibu kwa <SATISFIED> au <UNSATISFIED>, kisha utoe sababu fupi inayorejelea vipengele maalum vya taarifa ya mradi, kama vipande vya msimbo, sampuli za data, au matokeo ya utekelezaji.
+    """
+
     return f"""
 Provided below is relevant information about the project:
 {evidence}

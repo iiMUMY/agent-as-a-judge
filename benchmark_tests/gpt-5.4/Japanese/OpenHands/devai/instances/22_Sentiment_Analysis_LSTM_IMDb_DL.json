@@ -1,0 +1,89 @@
+{
+  "name": "22_Sentiment_Analysis_LSTM_IMDb_DL",
+  "query": "LSTMモデルとIMDbデータセットを使用して感情分析プロジェクトを設定するのを手伝ってもらえますか？データクリーニングを`src/data_loader.py`で実装し、ストップワードと句読点の削除を含めてください。テキストを数値形式に変換するために単語埋め込みを使用し、これらの埋め込みを`models/saved_models/`に保存してください。そして、これらの埋め込みをLSTMモデルの入力として使用し、LSTMモデルは`src/model.py`に実装してください。分類レポートを`results/metrics/classification_report.txt`に保存してください。モデルのアーキテクチャとトレーニングプロセスを可視化したJupyter Notebookを作成し、`results/report.ipynb`として保存してください。また、トレーニング損失と精度の曲線を`results/figures/training_curves.png`に保存してください。モデルのパフォーマンスを向上させるために、事前学習済みの埋め込み（例：Word2VecやGloVe）が推奨されます。",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"IMDb\"映画レビューのデータセットが使用されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データクリーニングは`src/data_loader.py`で実装され、ストップワードと句読点の削除が含まれます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "単語埋め込みを使用してテキストを数値形式に変換し、`models/saved_models/`に保存します。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "感情分析には\"LSTM\"モデルが使用され、`src/model.py`に実装されるべきです。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "分類レポートは`results/metrics/classification_report.txt`として保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "モデルのアーキテクチャとトレーニングプロセスの可視化を含むJupyter Notebookが生成され、`results/report.ipynb`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "トレーニング損失と精度の曲線が生成され、`results/figures/training_curves.png`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "単語埋め込みは事前学習済み（例：Word2VecやGloVe）であるべきで、既存の意味知識を活用します。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Jupyter Notebookはよく文書化されており、他の人がモデルのアーキテクチャとトレーニングプロセスを理解しやすくするべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

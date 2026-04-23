@@ -1,0 +1,69 @@
+{
+  "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+  "query": "Tengeneza mfumo wa kuaminika wa kufundisha wakala wa DQN kwa kutumia PyTorch katika mazingira ya OpenAI Gym kama CartPole-v1. Tekeleza DQN kwa kutumia PyTorch katika `src/model.py`. Mazingira yanapaswa kuanzishwa katika faili kuu, `src/main.py`. Shughulikia tofauti zozote za vipimo kati ya DQN na mazingira (kama ingekuwa inatokea ikiwa ID ya mazingira ya Gym imebadilishwa) kwa kurekodi hitilafu. Pia tafadhali rekodi kurudi baada ya kila kipindi hadi `results/metrics/` na uisasisha baada ya kila kipindi kipya kumalizika. Hifadhi kurudi kwa mwisho juu ya mchakato wa kipindi kama `results/figures/return_over_time.png` na mfano wa mwisho uliopata mafunzo kama `models/saved_models/dqn_model.pt`. Ikiwezekana, ongeza maelezo kwenye kurudi juu ya mchakato wa kipindi ili kuonyesha hatua muhimu.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Algoriti ya \"DQN\" imetekelezwa kwa kutumia PyTorch na imehifadhiwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Mazingira ya \"OpenAI Gym\" yameanzishwa katika `src/main.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Mchoro wa kurudi kwa muda umechorwa, ukirekodi kurudi kwa kila kipindi, na umehifadhiwa kama `results/figures/reward_over_time.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Mfano uliopata mafunzo umehifadhiwa kama `models/saved_models/dqn_model.pt`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Kurudi kwa kila kipindi kunarekodiwa hadi `results/metrics/` na kusasishwa baada ya kila kipindi kumalizika.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mfumo unapaswa kushughulikia tofauti za vipimo, ukirekodi masuala kwa urahisi wa kutatua hitilafu.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Mchoro wa kurudi juu ya mchakato wa kipindi una maelezo ya hatua muhimu.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

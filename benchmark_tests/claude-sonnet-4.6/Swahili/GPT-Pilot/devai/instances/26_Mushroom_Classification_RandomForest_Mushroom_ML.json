@@ -1,0 +1,95 @@
+{
+  "name": "26_Mushroom_Classification_RandomForest_Mushroom_ML",
+  "query": "Tengeneza mfumo wa uainishaji uyoga kwa kutumia mfano wa Random Forest kwenye seti ya data ya UCI Mushroom. Pakia seti ya data katika faili `src/data_loader.py`. Hakikisha kwamba uhandisi wa vipengele, ikiwa ni pamoja na usimbaji wa vipengele na uteuzi wa vipengele, na utunzaji wa data inayokosekana unakamilishwa katika `src/data_loader.py` kabla ya kufundisha mfano. Fundisha Random Forest classifier kwenye seti ya data iliyosindikwa katika `src/train.py`. Hifadhi matokeo ya uainishaji `results/classification_results.txt`. Onyesha na hifadhi umuhimu wa vipengele kama `results/figures/feature_importance.png`, kuhakikisha kwamba uonyeshaji unaonyesha wazi vipengele vyenye ushawishi mkubwa zaidi. Unda ukurasa wa wavuti wa maingiliano katika `src/app.py` kwa kutumia Streamlit kuonyesha matokeo ya uainishaji na utendaji wa mfano. Ukurasa wa wavuti wa Streamlit unapaswa kutoa muhtasari wa utendaji wa mfano na kuruhusu watumiaji kuingiliana na matokeo ya uainishaji. Mfumo unapaswa kusimamia mwanzo na mwisho wa uonyeshaji wa Streamlit ipasavyo.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"UCI Mushroom\" inapakiwa katika faili `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uhandisi wa vipengele unafanywa, ikiwa ni pamoja na usimbaji wa vipengele na uteuzi wa vipengele katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Data inayokosekana inashughulikiwa ili kuhakikisha seti ya data ni safi kabla ya kufundisha katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Random Forest classifier inafundishwa kwenye seti ya data iliyosindikwa katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya uainishaji yanahifadhiwa katika `results/classification_results.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Umuhimu wa vipengele unaonyeshwa na kuhifadhiwa kama `results/figures/feature_importance.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Ukurasa wa wavuti wa maingiliano unaundwa katika `src/app.py` kwa kutumia \"Streamlit\" kuonyesha matokeo ya uainishaji na utendaji wa mfano.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Uonyeshaji wa umuhimu wa vipengele unapaswa kuonyesha wazi vipengele vyenye ushawishi mkubwa zaidi, na kufanya iwe rahisi kufasiri.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ukurasa wa wavuti wa Streamlit unapaswa kutoa muhtasari wa utendaji wa mfano na kuruhusu watumiaji kuingiliana na matokeo ya uainishaji.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Mfumo unapaswa kusimamia mwanzo na mwisho wa uonyeshaji wa Streamlit ipasavyo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

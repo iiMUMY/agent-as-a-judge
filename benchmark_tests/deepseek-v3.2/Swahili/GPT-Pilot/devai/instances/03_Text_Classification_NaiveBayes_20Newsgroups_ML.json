@@ -1,0 +1,72 @@
+{
+  "name": "03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+  "query": "Tafadhali tekeleza kisanidi cha Naive Bayes kwa seti ya data ya 20 Newsgroups na uhifadhi katika faili inayoitwa `src/model.py`. Seti ya data inapaswa kupakiwa katika `src/data_loader.py`. Programu inapaswa kushughulikia uchakataji wa data, ikiwa ni pamoja na kuondoa maneno ya kusitisha, alama za uakifishaji, na herufi maalum. Onyesha uboreshaji wa kisanidi chako kwa kutengeneza mawingu ya maneno kabla na baada ya kufundisha kisanidi chako na kuyahifadhi kama `results/figures/wordcloud_before.png` na `results/figures/wordcloud_after.png`. Tafadhali hesabu na ujumuisha vipengele vya TF-IDF wakati wa kupakia data katika `src/data_loader.py`. Mwishowe, chapisha ripoti ya utendaji (ikiwa ni pamoja na usahihi, urejeshaji, na alama ya F1) na uhifadhi kama `results/metrics/performance.txt`. Mfano unapaswa kuwa rahisi kuelewa, na ripoti ya mwisho inapaswa kuandaliwa kwa uwazi kwa urahisi wa mapitio.",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"20 Newsgroups\" inatumika katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uchakataji wa data unafanywa, ikiwa ni pamoja na kuondoa maneno ya kusitisha, alama za uakifishaji, na herufi maalum. Mawingu ya maneno yanaonyeshwa kabla na baada ya kufundisha kisanidi, na kuhifadhiwa kama `results/figures/wordcloud_before.png` na `results/figures/wordcloud_after.png`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Vipengele vya \"TF-IDF\" vinatumika wakati wa kupakia data katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Kisanidi cha \"Naive Bayes\" kimetekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Ripoti ya utendaji, ikiwa ni pamoja na \"usahihi,\" \"urejeshaji,\" na \"alama ya F1,\" inachapishwa na kuhifadhiwa kama `results/metrics/performance.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mfano unapaswa kuwa rahisi kuelewa.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya mwisho inapaswa kuandaliwa kwa uwazi kwa urahisi wa mapitio.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "In the query, there is a missing word \"be\" after the word \"should\" in \"The dataset should loaded in `src/data_loader.py`\".",
+  "language": "Swahili"
+}

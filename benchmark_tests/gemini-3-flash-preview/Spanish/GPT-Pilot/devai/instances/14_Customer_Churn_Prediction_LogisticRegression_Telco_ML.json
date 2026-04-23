@@ -1,0 +1,95 @@
+{
+  "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+  "query": "Ayúdame a desarrollar un sistema para predecir la deserción de clientes utilizando el conjunto de datos Telco Customer Churn, que potencialmente se puede descargar desde [este enlace](https://huggingface.co/datasets/scikit-learn/churn-prediction). Carga el conjunto de datos en `src/data_loader.py`. El proyecto debe incluir ingeniería de características, como selección y escalado de características, y manejar datos desbalanceados utilizando técnicas de sobremuestreo o submuestreo implementadas en `src/data_loader.py`. Los detalles exactos de esto quedan a tu criterio. Implementa un modelo de Regresión Logística en `src/model.py` y realiza validación cruzada mientras entrenas el modelo en `src/train.py`. Finalmente, imprime y guarda el informe de clasificación (incluyendo precisión, recall y F1-score) en `results/metrics/classification_report.txt`, y guarda una curva ROC en `results/figures/roc_curve.png`. Asegúrate de que el conjunto de datos se cargue sin problemas con un manejo de errores adecuado. La ingeniería de características debe seleccionar minuciosamente las características más relevantes.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Telco Customer Churn\", que potencialmente se puede descargar desde [este enlace](https://huggingface.co/datasets/scikit-learn/churn-prediction). Carga el conjunto de datos en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La ingeniería de características, incluyendo la selección y el escalado de características, se implementa en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos desbalanceados se manejan utilizando técnicas de sobremuestreo o submuestreo en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "El modelo de \"Regresión Logística\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Se utiliza validación cruzada para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Un informe de clasificación, incluyendo \"precisión,\" \"recall,\" y \"F1-score,\" se guarda como `results/metrics/classification_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Una \"curva ROC\" se guarda como `results/figures/roc_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El conjunto de datos debe cargarse sin problemas, con un manejo de errores adecuado si surgen problemas durante la descarga.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El proceso de ingeniería de características debe ser minucioso, asegurando que se seleccionen las características más relevantes para el modelo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Spanish"
+}

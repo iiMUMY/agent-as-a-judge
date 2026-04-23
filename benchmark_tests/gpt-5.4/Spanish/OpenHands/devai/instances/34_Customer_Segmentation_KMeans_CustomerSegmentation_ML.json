@@ -1,0 +1,89 @@
+{
+  "name": "34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+  "query": "Necesito crear un sistema de segmentación de clientes utilizando el algoritmo de agrupamiento K-means con el conjunto de datos Kaggle Customer Segmentation. Comienza estandarizando los datos en `src/data_loader.py`, luego usa el método del codo para determinar el número óptimo de clusters y guarda el gráfico del codo en `results/figures/elbow.jpg`. Implementa el algoritmo K-means en `src/model.py`. Guarda los centros de los clusters en `results/metrics/cluster_centers.txt`. Visualiza los resultados de la segmentación usando seaborn y guarda el gráfico como `results/figures/customer_segmentation.png`. Crea un panel interactivo de Dash que permita la exploración dinámica de los segmentos.",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Kaggle Customer Segmentation\", incluyendo la carga y preparación de datos en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos se estandarizan para asegurar que los valores de las características estén dentro del mismo rango en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Se utiliza el método del codo para determinar el número óptimo de clusters. Por favor, guarda el gráfico del codo en `results/figures/elbow.jpg`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "El algoritmo de agrupamiento K-means se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Los centros de los clusters se guardan en `results/metrics/cluster_centers.txt`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "La segmentación de clientes se visualiza usando \"seaborn\", con el gráfico guardado como `results/figures/customer_segmentation.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se crea un panel interactivo que permite la exploración dinámica de los segmentos usando \"Dash\".",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El gráfico del codo muestra claramente cómo se determina el número óptimo de clusters.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": " El sistema gestiona adecuadamente el inicio y la terminación del panel.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

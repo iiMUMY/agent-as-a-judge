@@ -1,0 +1,92 @@
+{
+  "name": "21_Iris_Classification_SVM_Iris_ML",
+  "query": "Ninaomba mradi wa kuainisha aina za iris kwa kutumia seti ya data ya Iris na kisanidi cha Support Vector Machine (SVM) kilichotekelezwa katika `src/model.py`. Mradi unapaswa kusawazisha data na kufanya uteuzi wa vipengele katika `src/data_loader.py`. Itarekodi usahihi wa uainishaji na kuihifadhi kama `results/metrics/classification_accuracy.txt`, na itazalisha na kuhifadhi matriki ya mkanganyiko kama `results/figures/confusion_matrix.png`. Pia itaunda programu ya wavuti inayoshirikiana katika `src/app.py` kwa kutumia Streamlit kuonyesha matokeo ya uainishaji na utendaji wa modeli, na picha zitahifadhiwa katika `results/figures/`. Ukurasa wa wavuti unapaswa kuwa rafiki kwa mtumiaji, na maelezo mafupi ya modeli kusaidia watumiaji kuelewa jinsi kisanidi cha SVM kinavyofanya kazi.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Iris\" inatumika.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data inasawazishwa ili kuhakikisha thamani za vipengele ziko ndani ya kiwango sawa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uteuzi wa vipengele unafanywa ili kutambua vipengele muhimu katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Kisanidi cha \"SVM classifier\" kimetekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Usahihi wa uainishaji umehifadhiwa katika `results/metrics/classification_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Matriki ya mkanganyiko inazalishwa na kuhifadhiwa kama `results/figures/confusion_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Programu ya wavuti inayoshirikiana katika `src/app.py` imeundwa kwa kutumia \"Streamlit\" kuonyesha matokeo ya uainishaji na utendaji wa modeli, na picha zitahifadhiwa katika `results/figures/`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ukurasa wa wavuti wa Streamlit unapaswa kuwa rafiki kwa mtumiaji, ukiwaruhusu watumiaji kuchunguza kwa urahisi vipengele tofauti vya utendaji wa modeli.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Maelezo mafupi ya modeli yanapaswa kujumuishwa kwenye ukurasa wa wavuti, kusaidia watumiaji kuelewa jinsi kisanidi cha SVM kinavyofanya kazi.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

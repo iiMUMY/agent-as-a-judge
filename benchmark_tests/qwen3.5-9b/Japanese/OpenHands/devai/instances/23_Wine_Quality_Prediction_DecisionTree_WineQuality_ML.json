@@ -1,0 +1,98 @@
+{
+  "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+  "query": "UCIのワイン品質データセットを使用して、決定木モデルを用いたワイン品質予測システムを構築します。`src/data_loader.py`でデータを前処理し、欠損値の処理と特徴量のスケーリングを含めます。`src/train.py`でモデルを評価するためにクロスバリデーションを使用します。`src/model.py`で決定木回帰モデルを実装します。平均二乗誤差を`results/metrics/mean_squared_error.txt`に保存します。特徴量の重要性を視覚化し、`results/figures/feature_importance.png`として保存します。結果と視覚化を含むJupyter Notebookを作成し、観察結果を要約します。Notebookは再現性を確保するために前処理手順を詳細に記録する必要があります。NotebookをPDFレポートに変換し、`results/report.pdf`として保存します。PDFレポートにはモデルの改善の可能性についての簡単な議論も含める必要があります。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI\"の\"Wine Quality\"データセットが使用されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "欠損値の処理と特徴量のスケーリングを含め、データの前処理が`src/data_loader.py`で行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "決定木回帰モデルが`src/model.py`で実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "クロスバリデーションが`src/train.py`でモデルを評価するために使用されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "平均二乗誤差（MSE）が`results/metrics/mean_squared_error.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "特徴量の重要性プロットが生成され、`results/figures/feature_importance.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "前処理手順、結果、視覚化を含むJupyter Notebookが生成され、観察結果が要約されます。NotebookはPDFレポートに変換され、`results/report.pdf`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特徴量の重要性プロットは、最も影響力のある特徴を明確に強調するべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "最終的なPDFレポートには、モデルの改善の可能性についての簡単な議論を含めるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

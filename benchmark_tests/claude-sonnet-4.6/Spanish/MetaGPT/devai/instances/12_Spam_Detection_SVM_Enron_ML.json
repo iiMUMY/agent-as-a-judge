@@ -1,0 +1,99 @@
+{
+  "name": "12_Spam_Detection_SVM_Enron_ML",
+  "query": "Hola. Necesito que construyas un proyecto para detectar correos electrónicos de spam utilizando el clasificador de Máquina de Vectores de Soporte (SVM) en el conjunto de datos Enron-Spam. El proyecto debe preprocesar el texto eliminando palabras vacías y puntuación, emplear características TF-IDF, realizar ajuste de hiperparámetros usando GridSearchCV, y guardar la matriz de confusión en `results/figures/confusion_matrix.png`. También necesito escribir y guardar un informe completo, incluyendo precisión, recall, F1-score y la matriz de confusión (que se generará como `results/figures/confusion_matrix.png`), bajo `results/classification_report.pdf`. El conjunto de datos Enron-Spam debe cargarse en `src/data_loader.py`. El preprocesamiento de texto, incluyendo la eliminación de palabras vacías y puntuación, y el cálculo de características TF-IDF deben realizarse en `src/data_loader.py`. El clasificador SVM debe implementarse en `src/model.py`. El ajuste de hiperparámetros debe realizarse usando GridSearchCV en `src/train.py`. Sería útil si el paso de preprocesamiento de texto está optimizado para manejar eficientemente un gran número de correos electrónicos.",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Enron-Spam\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de texto se realiza, incluyendo la eliminación de palabras vacías y puntuación en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Se utilizan características \"TF-IDF\" en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "El \"clasificador SVM\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "El ajuste de hiperparámetros se realiza usando \"GridSearchCV\" en `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "La matriz de confusión se guarda como `results/figures/confusion_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Un informe de clasificación, incluyendo \"precisión,\" \"recall,\" \"F1-score,\" y la figura `results/figures/confusion_matrix.png`, se guarda como `results/classification_report.pdf`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El paso de preprocesamiento de texto debe estar optimizado para manejar eficientemente un gran número de correos electrónicos.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe de clasificación debe ser completo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

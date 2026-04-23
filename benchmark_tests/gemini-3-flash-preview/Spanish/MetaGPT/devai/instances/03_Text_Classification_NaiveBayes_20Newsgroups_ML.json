@@ -1,0 +1,72 @@
+{
+  "name": "03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+  "query": "Por favor, implemente un clasificador Naive Bayes para el conjunto de datos 20 Newsgroups y guárdelo en un archivo llamado `src/model.py`. El conjunto de datos debe cargarse en `src/data_loader.py`. El programa debe manejar el preprocesamiento de datos, incluyendo la eliminación de palabras vacías, puntuación y caracteres especiales. Muestre la mejora de su clasificador generando nubes de palabras antes y después de entrenar su clasificador y guárdelas como `results/figures/wordcloud_before.png` y `results/figures/wordcloud_after.png`. Por favor, calcule e incluya características TF-IDF al cargar los datos en `src/data_loader.py`. Finalmente, imprima un informe de rendimiento (incluyendo precisión, recall y F1-score) y guárdelo como `results/metrics/performance.txt`. El modelo debe ser fácil de interpretar, y el informe final debe estar estructurado claramente para una revisión sencilla.",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"20 Newsgroups\" se utiliza en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se realiza el preprocesamiento de datos, incluyendo la eliminación de palabras vacías, puntuación y caracteres especiales. Las nubes de palabras se visualizan antes y después de entrenar el clasificador, y se guardan como `results/figures/wordcloud_before.png` y `results/figures/wordcloud_after.png`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Se utilizan características \"TF-IDF\" al cargar los datos en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Se implementa un \"clasificador Naive Bayes\" en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se imprime un informe de rendimiento, incluyendo \"precisión,\" \"recall,\" y el \"F1-score,\" y se guarda como `results/metrics/performance.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El modelo debe ser fácil de interpretar.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe final debe estar estructurado claramente para una revisión sencilla.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "In the query, there is a missing word \"be\" after the word \"should\" in \"The dataset should loaded in `src/data_loader.py`\".",
+  "language": "Spanish"
+}

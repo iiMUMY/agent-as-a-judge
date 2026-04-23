@@ -1,0 +1,91 @@
+{
+  "name": "47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+  "query": "Tengeneza mfumo wa uchambuzi wa trafiki ya mtandao kwa kutumia algoriti ya K-means clustering na seti ya data ya Network Intrusion (CIC-IDS-2017) kutoka Kaggle. Pakia seti ya data na sanifisha data ili kuhakikisha thamani za vipengele ziko katika kiwango sawa katika `src/data_loader.py`. Tekeleza algoriti ya K-means clustering katika `src/model.py`. Tathmini makundi kwa kutumia kipimo cha silhouette na hifadhi matokeo ya tathmini chini ya `results/metrics/`. Hifadhi matokeo ya clustering kama `results/clustering_results.txt`. Onyesha matokeo ya clustering na hifadhi picha kama `results/figures/network_traffic_visualization.png`. Tengeneza dashibodi ya mwingiliano na Dash au Bokeh ili kuchunguza matokeo ya clustering, na hifadhi dashibodi chini ya `results/`. Hakikisha mfumo ni wa kimoduli ili mtumiaji aweze kubadilisha algoriti ya clustering haraka.",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Network Intrusion dataset (CIC-IDS-2017)\" kutoka Kaggle imepakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data imesanifishwa ili kuhakikisha thamani za vipengele ziko katika kiwango sawa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Algoriti ya \"K-means\" clustering imetekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"Silhouette coefficient\" inatumika kwa tathmini. Matokeo ya tathmini yamehifadhiwa chini ya `results/metrics/`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Matokeo ya clustering yamechapishwa na kuhifadhiwa kama `results/clustering_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Clustering ya trafiki ya mtandao imeonyeshwa na kuhifadhiwa kama `results/figures/network_traffic_visualization.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Dashibodi ya mwingiliano kwa kutumia \"Dash\" au \"Bokeh\" imetengenezwa kuonyesha matokeo ya clustering na kuhifadhiwa chini ya `results/`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Dashibodi inapaswa kuruhusu watumiaji kuchuja na kuchunguza makundi maalum kwa uchambuzi wa kina.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Michoro inapaswa kutofautisha wazi kati ya makundi tofauti, ikifanya iwe rahisi kutambua mifumo katika data ya trafiki ya mtandao.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Mradi unapaswa kuwa wa kimoduli, kuruhusu mtumiaji kubadilisha algoriti ya clustering kwa urahisi.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

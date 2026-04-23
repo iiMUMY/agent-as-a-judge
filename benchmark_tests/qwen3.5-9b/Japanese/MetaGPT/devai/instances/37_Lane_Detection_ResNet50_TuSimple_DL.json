@@ -1,0 +1,100 @@
+{
+  "name": "37_Lane_Detection_ResNet50_TuSimple_DL",
+  "query": "車線検出システムを開発します。まず、`src/model.py`でPyTorchから標準の事前学習済みResNet-50モデルをインポートします。テストデータセットとしてTuSimple車線検出データセットを使用し、`src/data_loader.py`を通じてロードします。次に、データセットをロードして前処理を行い、`src/data_loader.py`でランダムクロッピング、回転、スケーリングなどのデータ拡張技術を含めます。モデルを微調整し、検出精度を`results/metrics/detection_accuracy.txt`に保存し、訓練済みモデルを`models/saved_models/lane_detection_model.pth`として保存します。データの一部を検証用に分割し、`src/data_loader.py`で実装します。matplotlibを使用して検出結果を視覚化し、`results/figures/`に保存します。データの前処理、モデルの訓練、評価を含むプロセス全体の詳細なレポートを作成し、`results/lane_detection_report.pdf`として保存します。レポートには、カーブや照明が悪い状況などの困難な条件下でのモデルの性能分析も含める必要があります。",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"TuSimple\"車線検出データセットは`src/data_loader.py`でロードされます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "ランダムクロッピング、回転、スケーリングを含むデータ拡張は`src/data_loader.py`で実行されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データの一部は検証用に分割され、`src/data_loader.py`で実装されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "事前学習済みの\"ResNet-50\"モデルは`src/model.py`でPyTorchからインポートされます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"ResNet-50\"モデルを微調整し、`models/saved_models/lane_detection_model.pth`として保存します。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "検出精度は`results/metrics/detection_accuracy.txt`として保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "検出結果は\"matplotlib\"で視覚化され、`results/figures/`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "データの前処理、モデルの訓練、評価プロセスを含む詳細なレポートが作成され、`results/lane_detection_report.pdf`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "レポートには、カーブや照明が悪い状況などの困難なシナリオでのモデルの性能分析を含めるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "データ拡張のステップは十分に文書化され、レポートには拡張された画像の例を含めるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

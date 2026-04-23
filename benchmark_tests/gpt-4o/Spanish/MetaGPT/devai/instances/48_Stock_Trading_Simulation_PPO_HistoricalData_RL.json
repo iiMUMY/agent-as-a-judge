@@ -1,0 +1,96 @@
+{
+  "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+  "query": "¡Hola! Estoy interesado en desarrollar un agente de trading de acciones utilizando el algoritmo Proximal Policy Optimization (PPO). La idea es usar datos históricos del mercado para el entrenamiento y las pruebas. Se debe implementar un entorno de simulación de trading de acciones en `src/env.py`. El algoritmo Proximal Policy Optimization (PPO) debe implementarse en `src/train.py`. Por favor, guarda el agente entrenado en `models/saved_models/`. Registra todas las decisiones de trading en `results/trade_decisions.txt` y guarda el beneficio total en `results/metrics/total_profit.txt`. Visualiza la curva de beneficios y guárdala como `results/figures/profit_curve.png`. Genera un informe que cubra la estrategia de trading, el beneficio y el análisis de riesgos, y guárdalo como `results/trading_strategy_report.md`. Implementa una herramienta interactiva usando Streamlit en `src/visualize.py` que permita a los usuarios probar diferentes parámetros y ejecutar simulaciones.",
+  "tags": [
+    "Financial Analysis",
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se implementa un entorno de simulación de trading de acciones en `src/env.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se utilizan datos históricos del mercado para el entrenamiento y las pruebas.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El algoritmo \"Proximal Policy Optimization (PPO)\" se implementa en `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Las decisiones de trading se registran y guardan como `results/trade_decisions.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "El beneficio total se guarda como `results/metrics/total_profit.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "La curva de beneficios se visualiza y guarda como `results/figures/profit_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Se genera un informe que contiene la estrategia de trading, el beneficio y el análisis de riesgos, y se guarda como `results/trading_strategy_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Se implementa una herramienta interactiva que permite a los usuarios probar diferentes parámetros y ejecutar simulaciones usando \"Streamlit\" en `src/visualize.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "La visualización de la curva de beneficios debe resaltar operaciones o eventos significativos que impactaron el rendimiento.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe debe incluir ideas sobre cómo el ajuste de parámetros afecta el resultado del trading.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

@@ -1,0 +1,89 @@
+{
+  "name": "32_Weather_Data_Analysis_LinearRegression_Weather_ML",
+  "query": "Tengeneza mfumo wa uchambuzi wa data za hali ya hewa ukitumia mfano wa Linear Regression kwenye seti ya data ya Weather kutoka Kaggle. Pakia seti ya data na fanya uhandisi wa vipengele, ikiwa ni pamoja na uteuzi na uzalishaji wa vipengele na kushughulikia data inayokosekana kwa kutumia ujazaji wa wastani au upatanishi katika `src/data_loader.py`. Kisha, tumia mfano wa Linear Regression ambao unapaswa kutekelezwa katika `src/model.py`. Onyesha na hifadhi matriki ya uhusiano katika `results/figures/correlation_matrix.png` na matokeo ya utabiri kama mchoro wa mstari na vipindi vya kujiamini katika `results/figures/prediction_results.png`. Hatimaye, tengeneza ripoti ya kina inayohusu usindikaji wa data, uhandisi wa vipengele, mafunzo ya mfano, na matokeo ya utabiri. Hifadhi ripoti katika `results/weather_analysis_report.pdf`. Mchakato wa uhandisi wa vipengele unapaswa kuwa na maelezo ya kina.",
+  "tags": [
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Kaggle Weather\" inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uhandisi wa vipengele, ikiwa ni pamoja na uteuzi na uzalishaji wa vipengele, unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Data inayokosekana inashughulikiwa kwa kutumia ujazaji wa wastani au upatanishi katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"Linear Regression\" unatumika kwa uchambuzi wa data za hali ya hewa na unapaswa kutekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matriki ya uhusiano inahifadhiwa kama `results/figures/correlation_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya utabiri yanachorwa na kuhifadhiwa kama mchoro wa mstari na vipindi vya kujiamini. Mchoro unahifadhiwa kama `results/figures/prediction_results.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "Ripoti ya kina inayojumuisha usindikaji wa data, uhandisi wa vipengele, mafunzo ya mfano, na matokeo ya utabiri inatengenezwa na kuhifadhiwa kama `results/weather_analysis_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mchakato wa uhandisi wa vipengele unapaswa kuwa na maelezo ya wazi katika ripoti, ukielezea mantiki nyuma ya uteuzi na uzalishaji wa vipengele.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti inapaswa kujumuisha majadiliano juu ya matriki ya uhusiano, ikionyesha uhusiano wowote wa kuvutia kati ya vipengele.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

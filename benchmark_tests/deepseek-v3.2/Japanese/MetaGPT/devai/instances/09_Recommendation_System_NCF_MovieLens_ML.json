@@ -1,0 +1,80 @@
+{
+  "name": "09_Recommendation_System_NCF_MovieLens_ML",
+  "query": "ユーザーの評価に基づいて映画を推薦するシステムを、MovieLensデータセットを使用してNeural Collaborative Filtering (NCF)アプローチで開発するのを手伝ってください。まず、データセットを読み込み、`src/data_loader.py`でトレーニングセットとテストセットに分割します。次に、NCFアプローチと行列分解のベースラインを`src/model.py`で実装します。これらを使用して、テストユーザーに対するNCFアプローチとベースラインのトップ10の推薦例を出力し、`results/metrics/top_10_recommendations.txt`に保存します。これらのサンプル推薦がテストユーザーにとって意味のあるものであれば良いです。システムの性能をRMSE、MAEなどを使用して評価し、この評価結果を`results/metrics/evaluation_metrics.txt`に保存します。ファイルを保存する際に、欠落しているディレクトリなどに対処できる堅牢なパス処理を確保するようにしてください。",
+  "tags": [
+    "Recommender Systems",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Neural Collaborative Filtering (NCF)\"アルゴリズムが`src/model.py`に実装されている。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"MovieLens\"データセットが`src/data_loader.py`で読み込まれる。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "データは`src/data_loader.py`でトレーニングセットとテストセットに分割される。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "行列分解のベースラインが`src/model.py`に実装されている。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"NCF\"アプローチとベースラインのテストユーザーに対するトップ10の推薦が`results/metrics/top_10_recommendations.txt`に保存される。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "推薦システムの性能が評価され、\"RMSE\"や\"MAE\"を含む結果が`results/metrics/evaluation_metrics.txt`に保存される。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "欠落しているディレクトリなどに対処するための堅牢なパス処理が実装されている。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "トップ10の推薦はサンプルユーザーの好みに対して明確で関連性があるべきである。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

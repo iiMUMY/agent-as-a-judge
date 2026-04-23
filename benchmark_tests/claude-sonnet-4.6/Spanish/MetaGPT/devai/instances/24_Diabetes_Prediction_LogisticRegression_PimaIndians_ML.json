@@ -1,0 +1,103 @@
+{
+  "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+  "query": "Configura un proyecto de predicción de diabetes utilizando un modelo de Regresión Logística y el conjunto de datos Pima Indians Diabetes. Realiza el escalado de características y la estandarización de datos en `src/data_loader.py`. Usa validación cruzada para evaluar el modelo en `src/train.py`, y guarda la puntuación de precisión en `results/metrics/accuracy_score.txt`. Genera y guarda la curva ROC en `results/figures/roc_curve.png`. Crea un panel interactivo usando Tableau o Power BI para mostrar el rendimiento del modelo y resaltar características importantes. Asegúrate de que el panel sea fácil de usar y documenta los pasos de procesamiento del conjunto de datos y creación de visualizaciones. Durante el desarrollo, el sistema debe gestionar automáticamente la apertura y cierre de Tableau o Power BI para evitar bloqueos innecesarios.",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Pima Indians Diabetes\".",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El escalado de características y la estandarización de datos se implementan en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Se implementa un modelo de \"Regresión Logística\" en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se utiliza validación cruzada para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "La puntuación de precisión se guarda en `results/metrics/accuracy_score.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "La curva ROC se genera y guarda como `results/figures/roc_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Se crea un panel de visualización interactivo usando \"Tableau\" o \"Power BI\" para mostrar el rendimiento del modelo y características importantes.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El panel debe permitir a los usuarios explorar diferentes aspectos del rendimiento del modelo y entender qué características contribuyen más a las predicciones.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El panel debe mostrar claramente cómo se procesó el conjunto de datos y cómo se crearon las visualizaciones.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Durante el desarrollo, el sistema debe abrir y cerrar automáticamente \"Tableau\" o \"Power BI\" según sea necesario para evitar largos períodos de bloqueo o inactividad.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

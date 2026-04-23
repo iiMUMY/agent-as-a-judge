@@ -1,0 +1,91 @@
+{
+  "name": "30_Image_Segmentation_UNet_PascalVOC_DL",
+  "query": "Pascal VOCデータセットとPyTorchで実装された事前学習済みU-Netモデルを使用して、画像セグメンテーションプロジェクトのセットアップを手伝っていただけますか？追加のトレーニングは不要です。データ拡張（例：画像の反転や回転）を適用し、評価にはDice係数を使用し、セグメント化された画像を`results/figures/`に保存し、セグメンテーション前後の画像を示すGIFアニメーションを生成して`results/figures/segmentation_results.gif`に保存し、モデルのアーキテクチャ、プロセス、セグメンテーション結果を含む十分に文書化されたJupyter Notebookを作成し、それをHTMLレポートに変換して`results/report.html`として保存してください。",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Pascal VOC\"データセットは`src/data_loader.py`で使用されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "画像の反転や回転を含むデータ拡張は`src/data_loader.py`で実行されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "PyTorchの事前学習済み\"U-Net\"モデルが追加のトレーニングなしで使用され、`models/saved_models/`に保存されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"Dice係数\"は評価に使用され、`results/metrics/`に保存されるべきです。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "セグメント化された画像は指定されたフォルダ`results/figures/`に保存されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        4
+      ],
+      "criteria": "セグメンテーション前後の画像のGIFアニメーションが生成され、`results/figures/segmentation_results.gif`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "モデルのアーキテクチャ、事前学習済みモデルの適用プロセス、セグメンテーション結果を含むJupyter Notebookが作成されます。それはHTMLレポートに変換され、`results/report.html`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebookには、プロセスの各ステップを説明する十分に文書化されたコードスニペットを含めるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "GIFアニメーションは、データセットからの異なる画像に対するセグメンテーション前後の変化を明確に示すべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

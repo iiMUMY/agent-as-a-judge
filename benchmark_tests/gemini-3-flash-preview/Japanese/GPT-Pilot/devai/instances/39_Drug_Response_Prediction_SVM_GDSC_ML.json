@@ -1,0 +1,103 @@
+{
+  "name": "39_Drug_Response_Prediction_SVM_GDSC_ML",
+  "query": "GDSCデータセットを使用して薬物反応を予測するシステムを、サポートベクターマシン（SVM）回帰モデルで開発します。データセットをロードし、`src/data_loader.py`で重要な特徴を特定するために特徴選択を行います。SVM回帰モデルを`src/model.py`に実装します。`src/train.py`でモデルの性能を評価するためにクロスバリデーションを使用します。性能結果を`results/metrics/performance.txt`に保存します。seabornを使用して回帰結果を視覚化し、`results/figures/`に保存します。次に、データ前処理、モデルのトレーニング、評価プロセス、および視覚化を含むレポートを作成します。レポートを`results/drug_response_prediction_report.pdf`として保存します。レポートは、特徴選択がモデルの性能にどのように影響するかを強調し、回帰結果の視覚化は選択された特徴と予測された薬物反応の関係を明確に示すべきです。システムは、追加のデータセットや新しい特徴を組み込むために容易に拡張できるように設計されていることを確認してください。",
+  "tags": [
+    "Medical Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"GDSC\"薬物反応データセットが`src/data_loader.py`でロードされます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "重要な特徴を特定するために`src/data_loader.py`で特徴選択が行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"SVM回帰モデル\"が`src/model.py`に実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "クロスバリデーションが`src/train.py`でモデルを評価するために使用されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "性能結果が`results/metrics/performance.txt`として保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "回帰結果が\"seaborn\"を使用して視覚化され、`results/figures/`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "データ前処理、モデルのトレーニング、評価プロセス、および回帰結果の視覚化を含むレポートが作成され、`results/drug_response_prediction_report.pdf`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "レポートは、特徴選択がモデルの性能にどのように影響するかを強調すべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "回帰結果の視覚化は、選択された特徴と予測された薬物反応の関係を明確に示すべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "システムが追加のデータセットや新しい特徴を組み込むために、容易に拡張できることを確認してください。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

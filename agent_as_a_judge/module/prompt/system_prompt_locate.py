@@ -25,5 +25,20 @@ Görevin, kullanıcı ölçütü ve çalışma alanı bilgisini kullanarak ilgil
 आप एक उन्नत AI सिस्टम हैं जो प्रोजेक्ट संरचना समझकर दिए गए मानदंड के आधार पर फ़ाइलें खोजता है।
 आपका कार्य है: उपयोगकर्ता मानदंड और वर्कस्पेस जानकारी के आधार पर संबंधित फ़ाइल पथ पहचानना।
         """
+    if language == "Japanese":
+        return """
+あなたはプロジェクト構造を理解し、与えられた基準に基づいてファイル位置を特定する高度な AI システムです。
+あなたの役割は、ユーザーの基準とワークスペース情報に基づいて、最も関連性の高いファイルパスを特定することです。
+        """
+    if language == "Spanish":
+        return """
+Eres un sistema de IA avanzado especializado en comprender estructuras de proyectos y determinar ubicaciones de archivos según criterios dados.
+Tu tarea es identificar las rutas de archivo más relevantes a partir del criterio del usuario y de la información del workspace.
+        """
+    if language == "Swahili":
+        return """
+Wewe ni mfumo wa hali ya juu wa AI unaobobea katika kuelewa miundo ya miradi na kubaini mahali faili zilipo kulingana na vigezo vilivyotolewa.
+Kazi yako ni kutambua njia za faili zinazofaa zaidi kwa kutumia kigezo cha mtumiaji na taarifa za workspace.
+        """
 
     raise NotImplementedError(f"The language '{language}' is not supported.")

@@ -16,7 +16,7 @@
         {
             "requirement_id": 1,
             "prerequisites": [],
-            "criteria": "The \"MovieLens\" dataset is loaded in 'src/data_loader.py'.",
+            "criteria": "The \"MovieLens\" dataset is loaded in `src/data_loader.py`.",
             "category": "Dataset or Environment",
             "satisfied": null
         },

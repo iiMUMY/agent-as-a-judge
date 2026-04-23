@@ -1,0 +1,85 @@
+{
+  "name": "10_Face_Recognition_FaceNet_LFW_DL",
+  "query": "Ayúdame a crear un proyecto de reconocimiento facial en PyTorch usando el modelo FaceNet con el conjunto de datos LFW. Carga el conjunto de datos en `src/model.py`. Obtén el modelo de Hugging Face (puedes encontrarlo en https://huggingface.co/py-feat/facenet) y guárdalo en `models/saved_models/`. Asegúrate de que los datos estén preprocesados para garantizar la estandarización de las imágenes faciales en `src/data_loader.py`. Usa las incrustaciones faciales en `src/model.py` para mejorar el rendimiento de tu sistema. Imprime la precisión del reconocimiento y guárdala en `results/metrics/recognition_accuracy.txt`. Luego, visualiza los resultados de las incrustaciones y guárdalos como `results/figures/embedding_visualization.png`. El modelo debería cargarse sin problemas, idealmente con algún manejo de errores si algo sale mal. Las visualizaciones deberían facilitar la comprensión de cómo las incrustaciones representan características faciales distintas.",
+  "tags": [
+    "Computer Vision",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"LFW\" (Labeled Faces in the Wild) se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La alineación y estandarización de las imágenes faciales se realiza en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Se utiliza el modelo \"FaceNet\" en \"PyTorch\", cargándolo desde [Hugging Face](https://huggingface.co/py-feat/facenet). Guarda el modelo en models/saved_models/.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se utilizan las incrustaciones faciales en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "La precisión del reconocimiento se imprime y guarda como `results/metrics/recognition_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Los resultados de las incrustaciones se visualizan y guardan como `results/figures/embedding_visualization.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El proceso de carga del modelo debería ser fluido, con un manejo claro de cualquier problema si el modelo no se carga.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Las visualizaciones de las incrustaciones deberían ser claras y resaltar efectivamente las características faciales distintas.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "hint": "The page https://huggingface.co/py-feat/facenet provides guidance on how to use FaceNet; however, Hugging Face does not currently offer a model entry for direct use.",
+  "language": "Spanish"
+}

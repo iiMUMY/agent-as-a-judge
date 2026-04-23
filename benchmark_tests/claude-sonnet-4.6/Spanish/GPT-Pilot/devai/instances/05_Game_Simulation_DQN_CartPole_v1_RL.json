@@ -1,0 +1,69 @@
+{
+  "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+  "query": "Crear un sistema confiable para entrenar un agente DQN usando PyTorch en un entorno OpenAI Gym como CartPole-v1. Implementar DQN usando PyTorch en `src/model.py`. El entorno debe ser instanciado en el archivo principal, `src/main.py`. Manejar cualquier desajuste de dimensiones entre DQN y el entorno (como sucedería si se cambiara el ID del entorno Gym) registrando un error. Además, por favor registra el retorno después de cada episodio en `results/metrics/` y actualízalo después de que cada nuevo episodio termine. Guarda la curva final de retorno sobre episodios como `results/figures/return_over_time.png` y el modelo entrenado final como `models/saved_models/dqn_model.pt`. Si es posible, añade anotaciones a la curva de retorno sobre episodios para mostrar hitos clave.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El algoritmo \"DQN\" está implementado usando PyTorch y guardado en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Un entorno \"OpenAI Gym\" está instanciado en `src/main.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "La curva de retorno sobre el tiempo está graficada, registrando el retorno de cada episodio, y guardada como `results/figures/reward_over_time.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "El modelo entrenado está guardado como `models/saved_models/dqn_model.pt`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "El retorno de cada episodio está registrado en `results/metrics/` y actualizado después de que cada episodio termine.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El sistema debe manejar desajustes de dimensiones, registrando los problemas para facilitar la depuración.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La curva de retorno sobre episodios tiene hitos clave anotados.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

@@ -1,0 +1,103 @@
+{
+  "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+  "query": "ロジスティック回帰モデルとPima Indians Diabetesデータセットを使用して糖尿病予測プロジェクトを設定します。`src/data_loader.py`で特徴スケーリングとデータ標準化を実行します。`src/train.py`でモデルを評価するためにクロスバリデーションを使用し、精度スコアを`results/metrics/accuracy_score.txt`に保存します。ROC曲線を生成して`results/figures/roc_curve.png`に保存します。モデルのパフォーマンスを示し、重要な特徴を強調するために、TableauまたはPower BIを使用してインタラクティブなダッシュボードを作成します。ダッシュボードがユーザーフレンドリーであることを確認し、データセットの処理と可視化の作成手順を文書化します。開発中は、システムがTableauまたはPower BIの開閉を自動的に管理し、不必要なブロッキングを防ぎます。",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Pima Indians Diabetes\"データセットが使用されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "特徴スケーリングとデータ標準化が`src/data_loader.py`で実装されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"ロジスティック回帰\"モデルが`src/model.py`で実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "クロスバリデーションが`src/train.py`でモデルを評価するために使用されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "精度スコアが`results/metrics/accuracy_score.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "ROC曲線が生成され、`results/figures/roc_curve.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "モデルのパフォーマンスと重要な特徴を示すために、\"Tableau\"または\"Power BI\"を使用してインタラクティブな可視化ダッシュボードが作成されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "ダッシュボードは、ユーザーがモデルのパフォーマンスのさまざまな側面を探索し、どの特徴が予測に最も寄与しているかを理解できるようにするべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "ダッシュボードは、データセットがどのように処理され、可視化がどのように作成されたかを明確に示すべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "開発中は、システムが必要に応じて\"Tableau\"または\"Power BI\"を自動的に開閉し、長時間のブロッキングや非アクティブを避けるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

@@ -1,0 +1,84 @@
+{
+  "name": "18_Image_Enhancement_SRGAN_DIV2K_DL",
+  "query": "Necesito crear un sistema para mejorar imágenes utilizando un modelo SRGAN (puedes obtener un SRGAN preentrenado [aquí](https://github.com/tensorlayer/srgan)) con el conjunto de datos DIV2K, que se puede descargar desde [este enlace](https://data.vision.ee.ethz.ch/cvl/DIV2K/). El conjunto de datos debe cargarse en el archivo `src/data_loader.py`. El sistema debe preprocesar las imágenes, incluyendo el cambio de tamaño y la normalización, en `src/data_loader.py`. Usa un modelo preentrenado guardado en `models/saved_models/` para ahorrar tiempo, y guarda las imágenes mejoradas en el directorio `results/figures/`. Además, el sistema debe visualizar y guardar la comparación entre las imágenes originales y mejoradas en `results/figures/enhanced_comparison.png`. Finalmente, crea un informe en Markdown con resultados y visualizaciones sobre un conjunto diverso de muestras para mostrar el rendimiento del modelo en varios tipos de imágenes, y guárdalo como `results/report.md`. El informe debe incluir una comparación detallada del rendimiento del modelo en estas muestras seleccionadas, destacando dónde el modelo sobresale o tiene dificultades.",
+  "tags": [
+    "Computer Vision",
+    "Generative Models"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"DIV2K\" se carga en el archivo `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Un modelo \"SRGAN\" preentrenado está guardado en `models/saved_models/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de imágenes, incluyendo el cambio de tamaño y la normalización, se implementa en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Las imágenes mejoradas se guardan en la carpeta especificada `results/figures/`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "La comparación de las imágenes originales y mejoradas se visualiza y guarda como `results/figures/enhanced_comparison.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se genera un archivo Markdown que contiene resultados y visualizaciones y se guarda como `results/report.md`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Se debe seleccionar un conjunto diverso de muestras para mostrar el rendimiento del modelo en diferentes tipos de imágenes.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe en Markdown debe incluir una comparación detallada del rendimiento del modelo en estas muestras seleccionadas, destacando dónde el modelo sobresale o tiene dificultades.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "language": "Spanish"
+}

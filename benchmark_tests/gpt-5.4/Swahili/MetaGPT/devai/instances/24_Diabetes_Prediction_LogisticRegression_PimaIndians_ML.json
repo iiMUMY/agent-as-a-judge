@@ -1,0 +1,103 @@
+{
+  "name": "24_Diabetes_Prediction_LogisticRegression_PimaIndians_ML",
+  "query": "Sanidi mradi wa utabiri wa ugonjwa wa kisukari kwa kutumia mfano wa Logistic Regression na seti ya data ya Pima Indians Diabetes. Fanya upimaji wa vipengele na usanifishaji wa data katika `src/data_loader.py`. Tumia uthibitishaji wa msalaba kutathmini mfano katika `src/train.py`, na hifadhi alama ya usahihi kwenye `results/metrics/accuracy_score.txt`. Tengeneza na hifadhi mlinganyo wa ROC kwenye `results/figures/roc_curve.png`. Unda dashibodi shirikishi kwa kutumia Tableau au Power BI kuonyesha utendaji wa mfano na kuangazia vipengele muhimu. Hakikisha dashibodi ni rahisi kutumia na andika hatua za usindikaji wa seti ya data na uundaji wa taswira. Wakati wa maendeleo, mfumo unapaswa kudhibiti moja kwa moja ufunguaji na ufungaji wa Tableau au Power BI ili kuzuia kuzuia isiyo ya lazima.",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Pima Indians Diabetes\" inatumika.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Upimaji wa vipengele na usanifishaji wa data unatekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Mfano wa \"Logistic Regression\" unatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Uthibitishaji wa msalaba unatumika kutathmini mfano katika `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Alama ya usahihi inahifadhiwa katika `results/metrics/accuracy_score.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Mlinganyo wa ROC unazalishwa na kuhifadhiwa kama `results/figures/roc_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Dashibodi ya taswira shirikishi kwa kutumia \"Tableau\" au \"Power BI\" inaundwa kuonyesha utendaji wa mfano na vipengele muhimu.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Dashibodi inapaswa kuruhusu watumiaji kuchunguza vipengele tofauti vya utendaji wa mfano na kuelewa ni vipengele vipi vinachangia zaidi kwenye utabiri.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Dashibodi inapaswa kuonyesha wazi jinsi seti ya data ilivyoshughulikiwa na jinsi taswira zilivyoundwa.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Wakati wa maendeleo, mfumo unapaswa kufungua na kufunga \"Tableau\" au \"Power BI\" moja kwa moja inapohitajika ili kuepuka vipindi virefu vya kuzuia au kutofanya kazi.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

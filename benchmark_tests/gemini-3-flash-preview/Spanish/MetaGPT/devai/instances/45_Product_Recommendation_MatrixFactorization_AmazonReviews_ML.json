@@ -1,0 +1,88 @@
+{
+  "name": "45_Product_Recommendation_MatrixFactorization_AmazonReviews_ML",
+  "query": "¿Podrías ayudarme a configurar un sistema de recomendación de productos utilizando un algoritmo de factorización de matrices con el subconjunto de Electrónica del conjunto de datos Amazon Reviews 2023? Deberías manejar la carga de datos y todo el preprocesamiento de datos, incluyendo la eliminación de ruido y la normalización en `src/data_loader.py`. Aplica un modelo de factores latentes para calcular las interacciones usuario-artículo y guarda la implementación en `src/model.py`. Imprime y guarda los resultados de la recomendación en `results/recommendation_results.txt`. Luego visualiza estas recomendaciones usando la biblioteca Plotly y guarda la visualización como `results/figures/recommendation_visualization.html`. Finalmente, genera un informe de análisis que cubra el preprocesamiento de datos, el entrenamiento del modelo y los resultados, y debe guardarse como `results/recommendation_report.md`.",
+  "tags": [
+    "Recommender Systems"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El subconjunto \"Electronics\" del conjunto de datos \"Amazon Reviews 2023\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se realiza el preprocesamiento de datos, incluyendo la eliminación de ruido y la normalización en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Un \"modelo de factores latentes\" para calcular las interacciones usuario-artículo se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2,
+        3
+      ],
+      "criteria": "Los resultados de la recomendación se guardan como `results/recommendation_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Los resultados de la recomendación se visualizan usando \"Plotly\" y se guardan como `results/figures/recommendation_visualization.html`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se genera un informe de análisis que contiene el preprocesamiento de datos, el entrenamiento del modelo y los resultados de la recomendación, y se guarda como `results/recommendation_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El impacto de los diferentes pasos de preprocesamiento en la precisión de la recomendación debe discutirse en el informe de análisis.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La visualización debe ser interactiva, permitiendo a los usuarios explorar los resultados de la recomendación para diferentes productos.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "El sistema debe estar diseñado para incorporar fácilmente datos adicionales de comportamiento del usuario o características del producto para futuras mejoras.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

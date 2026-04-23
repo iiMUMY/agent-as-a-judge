@@ -1,0 +1,71 @@
+{
+  "name": "07_Image_Super_Resolution_SRCNN_Set5_DL",
+  "query": "Habari, nahitaji kuunda mradi wa kuongeza azimio la picha kwa kutumia mfano wa SRCNN na seti ya data ya Set5 (inapatikana kutoka `https://huggingface.co/datasets/eugenesiow/Set5`). Pakia seti ya data katika `src/data_loader.py`. Wakati wa kupakia data, jumuisha hatua za usindikaji wa awali wa picha kama vile kubadilisha ukubwa na kuweka kawaida, yote katika `src/data_loader.py`. Mfano wa SRCNN unapaswa kupakiwa na kutumika katika `src/model.py`. Hifadhi seti 5 za picha za kulinganisha, ukizoom kwenye maelezo, kama `results/figures/super_resolution_compare.png`, na matokeo ya kuongeza azimio kama `results/figures/super_resolution_results.png`. Picha zilizozalishwa zinapaswa kuwa za ubora wa juu na kuonyesha wazi maboresho.",
+  "tags": [
+    "Computer Vision",
+    "Generative Models"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Set5\" (inapatikana kutoka \"Hugging Face\") inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usindikaji wa awali wa picha, ikiwa ni pamoja na kubadilisha ukubwa na kuweka kawaida, unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"SRCNN\" unatumika katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Seti tano za picha za kulinganisha zinahifadhiwa, na maelezo yamezidishwa, na kuhifadhiwa kama `results/figures/super_resolution_compare.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Matokeo ya kuongeza azimio yanahifadhiwa kama `results/figures/super_resolution_results.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mradi unapaswa kuzalisha picha za kuongeza azimio za ubora wa juu, zilizo wazi na zenye kulinganisha kwa kina.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Picha za matokeo zilizopangwa vizuri, zikionyesha maboresho muhimu, zinapaswa kujumuishwa.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Swahili"
+}

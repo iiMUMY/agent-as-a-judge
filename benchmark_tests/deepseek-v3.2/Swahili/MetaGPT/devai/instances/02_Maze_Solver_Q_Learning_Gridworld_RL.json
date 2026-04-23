@@ -1,0 +1,70 @@
+{
+  "name": "02_Maze_Solver_Q_Learning_Gridworld_RL",
+  "query": "Je, unaweza kunisaidia kuunda mfumo wa kutatua kazi za Gridworld za mtindo wa maze kwa kutumia algoriti ya Q-learning? Mfumo unapaswa kutumia numpy kufanya mahesabu ya msingi kuwa bora zaidi na matplotlib kwa ajili ya michoro. Algoriti ya Q-learning inapaswa kutekelezwa katika `src/train.py`, na mazingira ya Gridworld yenye jina linalofaa yanapaswa kutekelezwa katika `src/env.py` kwa njia ambayo mtu anaweza kubainisha ukubwa wa gridi na nafasi za kuanzia/kumalizia wakati wa kuanzisha. Mfumo unahitaji kurekodi mchakato wa kujifunza wakati wa mafunzo, kufuatilia vipindi na mapato yao yanayolingana, na kuihifadhi kama `results/figures/learning_curve.png`. Zaidi ya hayo, ningependa uone na uhifadhi njia zilizochukuliwa na wakala katika kila kipindi katika faili inayoitwa `results/figures/path_changes.gif`, na uhifadhi mfano uliopatikana kama `models/saved_models/q_learning_model.npy`. Itakuwa vizuri kuwa na aina fulani ya maoni ya wakati halisi wakati wa mafunzo, kama kuona maendeleo au kupata masasisho juu ya jinsi mfano unavyojifunza. Pia, ikiwa unaweza, tafadhali jaribu na andika msimbo kwa njia ambayo ni rahisi kubadilisha au kupanua baadaye.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Algoriti ya \"Q-learning\" inatumika katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Mazingira ya \"Gridworld\" yanafafanuliwa katika `src/env.py` na uwezo wa mtumiaji kubainisha ukubwa wa gridi na nafasi za kuanzia/kumalizia.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Mikondo ya kujifunza inarekodiwa wakati wa mafunzo, na kuhifadhiwa kama `results/figures/learning_curve.png`. Vipindi na mapato yanarekodiwa.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Mfano uliopatikana unahifadhiwa kama `models/saved_models/q_learning_model.npy`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Njia zilizochukuliwa wakati wa kujifunza zinaonyeshwa na kuhifadhiwa kama `results/figures/path_changes.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Baadhi ya maendeleo ya wakati halisi au maoni wakati wa mchakato wa mafunzo yanapaswa kuonyeshwa.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Msimbo unapaswa kuandikwa kwa njia ambayo ni rahisi kubadilisha au kupanua baadaye.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

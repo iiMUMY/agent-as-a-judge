@@ -1,0 +1,92 @@
+{
+  "name": "49_Explainable_AI_LIME_Titanic_ML",
+  "query": "こんにちは！LIMEを使ってモデルの予測を説明するプロジェクトを作成したいと考えています。具体的には、タイタニック生存予測データセットを使用します。まず、データセットを`src/data_loader.py`で読み込みます。それから、ランダムフォレスト分類器を訓練し、`models/saved_models/`に保存します。最後に、LIMEを使ってランダムフォレスト分類器の予測を説明し、それを`src/visualize.py`に実装します。説明を含むレポートを生成し、`results/model_explanation.md`として保存します。このレポートはDashまたはBokehを使用して構築し、`src/report.py`に実装して、ユーザーが異なる特徴がモデルの予測にどのように影響するかを探索できるようにします。説明は技術に詳しくない人にもわかりやすくする必要があります。さらに、`results/figures/feature_importance.png`にラベル付けされた直感的な特徴重要度プロットを保存してください。ありがとうございます！",
+  "tags": [
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"タイタニック\"生存予測データセットが`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "生存予測のために\"ランダムフォレスト分類器\"が訓練されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "\"LIME\"がモデル予測の説明に使用され、`src/visualize.py`に実装されます。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "モデル予測の説明レポートが生成され、`results/model_explanation.md`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "特徴重要度プロットが`results/figures/feature_importance.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "criteria": "異なる特徴が予測に与える影響を示すインタラクティブなレポートが\"Dash\"または\"Bokeh\"を使用して作成され、`src/report.py`に実装されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "訓練されたモデルが`models/saved_models/`に保存されます。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "説明レポートは、深い技術的な背景がなくても理解できるように、明確でアクセスしやすいスタイルで書かれるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "特徴重要度プロットは、明確なラベルと説明を備えた視覚的に直感的なものであるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

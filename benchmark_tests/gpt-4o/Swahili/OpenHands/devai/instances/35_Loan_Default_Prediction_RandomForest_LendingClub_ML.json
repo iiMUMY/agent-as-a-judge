@@ -1,0 +1,91 @@
+{
+  "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+  "query": "Je, unaweza kunisaidia kujenga mfumo wa utabiri wa kutokulipa mkopo kwa kutumia Random Forest classifier na seti ya data ya Lending Club Loan? Anza kwa kupakia seti ya data, kushughulikia data isiyo na uwiano kwa kutumia mbinu za oversampling au undersampling, na kufanya uteuzi wa vipengele ili kutambua vipengele muhimu, vyote vikitekelezwa katika `src/data_loader.py`. Fundisha mfano wa Random Forest na uhifadhi mfano uliyopewa mafunzo katika `models/saved_models/`. Hifadhi umuhimu wa vipengele katika `results/feature_importances.txt` na hifadhi mduara wa ROC kama `results/figures/roc_curve.png` kwa kutumia matplotlib. Hatimaye, tengeneza ripoti ya kina ya Markdown inayofupisha hatua za usindikaji wa data, mafunzo ya mfano, na mchakato wa tathmini, na uhifadhi kama `results/loan_default_prediction_report.md`. Ripoti inapaswa kujumuisha maarifa juu ya utendaji wa mfano na mapendekezo ya maboresho yanayowezekana.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Lending Club Loan\" inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data isiyo na uwiano inashughulikiwa kwa kutumia mbinu za oversampling au undersampling, zinatekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uteuzi wa vipengele unafanywa ili kutambua vipengele muhimu katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Classifier ya \"Random Forest\" inatekelezwa kwa ajili ya kutabiri kutokulipa mkopo. Hifadhi mfano uliyopewa mafunzo katika `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Umuhimu wa vipengele unahifadhiwa kama `results/feature_importances.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Mduara wa \"ROC\" unaonyeshwa na kuhifadhiwa kwa kutumia \"matplotlib\" katika `results/figures/roc_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "Ripoti ya Markdown inayojumuisha hatua za usindikaji wa data, mafunzo ya mfano, na mchakato wa tathmini inatengenezwa na kuhifadhiwa kama `results/loan_default_prediction_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ripoti ya Markdown ni ya kina.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya Markdown inapaswa kujumuisha maarifa juu ya utendaji wa mfano na mapendekezo ya maboresho yanayowezekana.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

@@ -1,0 +1,96 @@
+{
+  "name": "20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+  "query": "¿Puedes ayudarme a crear un proyecto de predicción de precios de automóviles usando un modelo de Random Forest con el conjunto de datos de Kaggle Car Prices? Carga el conjunto de datos y realiza la selección de características para identificar características importantes en `src/data_loader.py`. Usa validación cruzada para evaluar el modelo en `src/train.py`. Guarda el puntaje R-cuadrado, el Error Cuadrático Medio (MSE) y el Error Absoluto Medio (MAE) en `results/metrics/results/metrics.txt`. Visualiza la importancia de las características y guárdala en `results/figures/feature_importance.png`. Genera un informe en Markdown con ideas sobre cómo las características seleccionadas contribuyen a las predicciones de precios de automóviles. Guarda el informe como `results/report.md`.",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Kaggle Car Prices\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La selección de características se implementa para identificar características importantes en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El modelo de regresión \"Random Forest\" se utiliza en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se utiliza validación cruzada para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "El puntaje \"R-cuadrado\", el \"Error Cuadrático Medio (MSE)\" y el \"Error Absoluto Medio (MAE)\" se guardan en `results/metrics/results/metrics.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Las importancias de las características se visualizan y se guardan como `results/figures/feature_importance.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Se genera un archivo Markdown que contiene resultados y visualizaciones y se guarda como `results/report.md`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El proceso de selección de características debe ser exhaustivo, asegurando que solo las características más relevantes se utilicen en el modelo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe en Markdown debe proporcionar ideas claras sobre cómo las características seleccionadas contribuyen a las predicciones de precios de automóviles.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

@@ -1,0 +1,96 @@
+{
+  "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+  "query": "こんにちは！Proximal Policy Optimization (PPO) アルゴリズムを使用して株式取引エージェントを開発したいと考えています。アイデアは、トレーニングとテストに歴史的な市場データを使用することです。株式取引シミュレーション環境は `src/env.py` に実装されるべきです。Proximal Policy Optimization (PPO) アルゴリズムは `src/train.py` に実装されるべきです。訓練されたエージェントは `models/saved_models/` に保存してください。すべての取引決定を `results/trade_decisions.txt` に記録し、総利益を `results/metrics/total_profit.txt` に保存してください。利益曲線を視覚化し、`results/figures/profit_curve.png` として保存してください。取引戦略、利益、およびリスク分析をカバーするレポートを作成し、`results/trading_strategy_report.md` として保存してください。ユーザーが異なるパラメータを試し、シミュレーションを実行できるようにするインタラクティブツールを Streamlit を使用して `src/visualize.py` に実装してください。",
+  "tags": [
+    "Financial Analysis",
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "株式取引シミュレーション環境が `src/env.py` に実装されている。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "トレーニングとテストに歴史的な市場データが使用されている。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Proximal Policy Optimization (PPO)\" アルゴリズムが `src/train.py` に実装されている。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "取引決定が記録され、`results/trade_decisions.txt` として保存されている。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "総利益が `results/metrics/total_profit.txt` として保存されている。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "利益曲線が視覚化され、`results/figures/profit_curve.png` として保存されている。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "取引戦略、利益、およびリスク分析を含むレポートが生成され、`results/trading_strategy_report.md` として保存されている。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "ユーザーが異なるパラメータを試し、シミュレーションを実行できるインタラクティブツールが \"Streamlit\" を使用して `src/visualize.py` に実装されている。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "利益曲線の視覚化は、パフォーマンスに影響を与えた重要な取引やイベントを強調するべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "レポートには、パラメータ調整が取引結果にどのように影響するかについての洞察を含めるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

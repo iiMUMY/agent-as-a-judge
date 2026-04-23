@@ -86,4 +86,54 @@ def get_planning_system_prompt(language="English"):
         केवल आवश्यक चरण चुनें और क्रमबद्ध करें।
         """
 
+    if language == "Japanese":
+        return """
+        あなたの役割は、プロジェクトの出力が指定された要件を満たしているかを検証するための段階的な計画を作成することです。
+        以下のアクションから必要なものだけを選び、論理的な順序で並べてください。
+
+        - [User Query]: ユーザーの元の依頼を使って文脈と要件を理解する。
+        - [Workspace]: ワークスペース全体の構造を分析し、プロジェクトの構成要素と依存関係を理解する。
+        - [Locate]: 要件に関連しそうなファイルやディレクトリをワークスペース内で特定する。
+        - [Read]: ファイル内容を読み、正確性と要件との関連性を確認する。
+        - [Search]: 要件に関連するコード片、関数、変数を検索する。
+        - [History]: 過去の評価、判断、または関連する履歴上の決定を参照する。
+        - [Trajectory]: プロジェクトの過去の開発/実行トレースと、それが現在の状態に与えた影響を分析する。
+
+        必要な手順だけを選び、実行可能な評価フローとして並べてください。
+        """
+
+    if language == "Spanish":
+        return """
+        Eres un sistema avanzado de IA encargado de generar un plan paso a paso para verificar si las salidas de un proyecto cumplen los requisitos especificados.
+        Tu objetivo es proponer una serie de acciones que permitan recopilar evidencia de forma sistemática desde distintas fuentes, como código, documentación, historial o datos.
+        Selecciona únicamente las acciones necesarias de la siguiente lista y ordénalas de forma lógica.
+
+        - [User Query]: usa la solicitud original del usuario para comprender el contexto y el requisito.
+        - [Workspace]: analiza la estructura general del workspace para comprender componentes y dependencias del proyecto.
+        - [Locate]: localiza en el workspace archivos o directorios que puedan contener información o implementación relevante.
+        - [Read]: lee y examina el contenido de los archivos para verificar su corrección y relevancia.
+        - [Search]: busca fragmentos de código, funciones o variables relacionados con el requisito.
+        - [History]: consulta evaluaciones previas, decisiones anteriores o resultados de iteraciones previas o proyectos relacionados.
+        - [Trajectory]: analiza la trayectoria histórica de desarrollo o ejecución del proyecto, incluyendo cambios previos o iteraciones que hayan influido en el estado actual.
+
+        Elige y ordena únicamente las acciones necesarias para formar un flujo de evaluación ejecutable.
+        """
+
+    if language == "Swahili":
+        return """
+        Wewe ni mfumo wa hali ya juu wa AI uliokabidhiwa jukumu la kutengeneza mpango wa hatua kwa hatua wa kuthibitisha kama matokeo ya mradi yanatimiza mahitaji yaliyobainishwa.
+        Lengo lako ni kupendekeza mfululizo wa hatua utakao kusaidia kukusanya ushahidi kwa utaratibu kutoka vyanzo mbalimbali kama msimbo, nyaraka, historia, au data.
+        Chagua hatua zinazohitajika tu kutoka kwenye orodha ifuatayo na uzipange kwa mantiki.
+
+        - [User Query]: tumia ombi la awali la mtumiaji kuelewa muktadha na hitaji.
+        - [Workspace]: changanua muundo wa jumla wa workspace ili kuelewa vipengele vya mradi na utegemezi wake.
+        - [Locate]: tafuta faili au saraka ambazo zinaweza kuwa na taarifa au utekelezaji unaohusika.
+        - [Read]: soma na uchunguze yaliyomo ndani ya faili ili kuthibitisha usahihi na uhusiano wake na hitaji.
+        - [Search]: tafuta vipande vya msimbo, functions, au variables vinavyohusiana na hitaji.
+        - [History]: rejelea tathmini za awali, maamuzi ya hapo nyuma, au matokeo ya iteration za awali au miradi inayohusiana.
+        - [Trajectory]: changanua trajekta ya kihistoria ya maendeleo au utekelezaji wa mradi, ikiwa ni pamoja na mabadiliko au iteration zilizotangulia zilizoathiri hali ya sasa.
+
+        Chagua na panga hatua zinazohitajika tu ili kuunda mtiririko wa tathmini unaoweza kutekelezwa.
+        """
+
     raise NotImplementedError(f"The language '{language}' is not supported.")

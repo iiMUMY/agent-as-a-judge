@@ -1,0 +1,103 @@
+{
+  "name": "38_Object_Tracking_Siamese_OTB50_DL",
+  "query": "Necesito crear un sistema para el seguimiento de objetos utilizando una red Siamese y el conjunto de datos OTB50. El conjunto de datos OTB50 debe cargarse en `src/data_loader.py`. El sistema debe incluir pasos de aumento de datos como rotación y escalado, realizados en `src/data_loader.py`. Implementar la red Siamese en `src/model.py`. Los hiperparámetros, como la tasa de aprendizaje y el tamaño del lote, deben ajustarse en `src/train.py`. Los resultados del seguimiento deben guardarse como `results/tracking_results.txt`. Visualizar los resultados del seguimiento con OpenCV y guardar los videos de seguimiento en `results/videos/`. Además, crear un informe detallado en Markdown que incluya detalles del preprocesamiento de datos, entrenamiento del modelo y proceso de evaluación y guardarlo como `results/object_tracking_report.md`. Asegúrese de que el sistema pueda procesar nuevas secuencias de video con ajustes mínimos para una aplicación flexible. El informe en Markdown debe incluir una sección que analice el impacto de diferentes hiperparámetros en el rendimiento del seguimiento.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"OTB50\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El aumento de datos, como rotación y escalado, se realiza en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Una red \"Siamese\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Los hiperparámetros, como la tasa de aprendizaje y el tamaño del lote, se ajustan en `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Los resultados del seguimiento se guardan como `results/tracking_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Los resultados del seguimiento se visualizan con OpenCV y se guardan en `results/videos/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Se crea un documento detallado en Markdown que contiene el preprocesamiento de datos, el entrenamiento del modelo y los procesos de evaluación, y se guarda como `results/object_tracking_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        6
+      ],
+      "criteria": "El informe en Markdown debe incluir una sección que analice el impacto de diferentes hiperparámetros en el rendimiento del seguimiento.",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Los videos de seguimiento deben guardarse en alta resolución e incluir anotaciones que destaquen el objeto seguido.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Asegúrese de que el sistema sea capaz de procesar nuevas secuencias de video con modificaciones mínimas, permitiendo casos de uso flexibles.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

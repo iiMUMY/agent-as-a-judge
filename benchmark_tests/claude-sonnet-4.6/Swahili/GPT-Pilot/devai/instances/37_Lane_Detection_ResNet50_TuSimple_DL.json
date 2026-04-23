@@ -1,0 +1,100 @@
+{
+  "name": "37_Lane_Detection_ResNet50_TuSimple_DL",
+  "query": "Tengeneza mfumo wa kugundua njia. Anza kwa kuingiza mfano wa kawaida wa ResNet-50 uliopangwa awali kutoka PyTorch katika `src/model.py`. Tutafanya kazi hapa na seti ya data ya kugundua njia ya TuSimple kama seti yetu ya majaribio, ambayo inapaswa kupakiwa kupitia `src/data_loader.py`. Kisha pakia na uandae seti ya data, ikijumuisha mbinu za kuongeza data kama vile kukata kwa nasibu, kuzungusha, na kupanua katika `src/data_loader.py`. Rekebisha mfano na uhifadhi usahihi wa kugundua katika `results/metrics/detection_accuracy.txt`, na uhifadhi mfano uliopangwa kama `models/saved_models/lane_detection_model.pth`. Gawa sehemu ndogo ya data kwa ajili ya uthibitishaji, iliyotekelezwa katika `src/data_loader.py`. Onyesha matokeo ya kugundua kwa kutumia matplotlib na uhifadhi katika `results/figures/`. Unda ripoti ya kina ya mchakato mzima, ikijumuisha uandaaji wa data, mafunzo ya mfano, na tathmini, na uhifadhi kama `results/lane_detection_report.pdf`. Ripoti inapaswa pia kuchambua utendaji wa mfano chini ya hali ngumu kama vile mikunjo au mwanga hafifu.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya kugundua njia ya \"TuSimple\" inapakuliwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Kuongeza data, ikijumuisha kukata kwa nasibu, kuzungusha, na kupanua, kunafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Sehemu ndogo ya data inagawanywa kwa ajili ya uthibitishaji na kutekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"ResNet-50\" uliopangwa awali unaingizwa kutoka PyTorch katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Rekebisha mfano wa \"ResNet-50\" na uhifadhi kama `models/saved_models/lane_detection_model.pth`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Usahihi wa kugundua unahifadhiwa kama `results/metrics/detection_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Matokeo ya kugundua yanaonyeshwa kwa \"matplotlib\" na kuhifadhiwa katika `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Ripoti ya kina inayojumuisha uandaaji wa data, mafunzo ya mfano, na mchakato wa tathmini inaundwa na kuhifadhiwa kama `results/lane_detection_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ripoti inapaswa kujumuisha uchambuzi wa utendaji wa mfano katika hali ngumu, kama vile mikunjo au hali za mwanga hafifu.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Hatua za kuongeza data zinapaswa kuwa na maelezo mazuri, na mifano ya picha zilizoongezwa ijumuishwe katika ripoti.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

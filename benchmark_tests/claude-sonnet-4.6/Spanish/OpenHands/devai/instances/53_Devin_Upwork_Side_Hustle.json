@@ -1,0 +1,75 @@
+{
+  "name": "53_Devin_Upwork_Side_Hustle",
+  "query": "Hola, estoy buscando hacer inferencias con los modelos en este repositorio `https://github.com/mahdi65/roadDamageDetection2020`. El sistema debe realizar inferencias utilizando los modelos del repositorio y guardar los resultados en `models/saved_models/`. Los datos de muestra deben descargarse y prepararse para probar los modelos en `src/data_loader.py`. La inferencia debe realizarse utilizando los modelos proporcionados en los datos de muestra en `models/saved_models/`. Se deben generar imágenes visualizadas que muestren las detecciones realizadas por los modelos y guardarse en el directorio `results/figures/`. Además, se debe generar un informe de rendimiento basado en los resultados de detección del modelo y guardarse como `results/metrics/model_performance_report.txt`.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El repositorio en `https://github.com/mahdi65/roadDamageDetection2020` está configurado.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos de muestra se descargan y preparan para probar los modelos en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "La inferencia se realiza utilizando los modelos proporcionados en los datos de muestra en `models/saved_models/`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se generan imágenes visualizadas que muestran las detecciones realizadas por los modelos y se guardan en el directorio `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Se genera un informe de rendimiento basado en los resultados de detección del modelo y se guarda como `results/metrics/model_performance_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Las imágenes visualizadas deben ser claras, con detecciones destacadas con precisión para una fácil interpretación.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe de rendimiento debe incluir un resumen de la precisión de detección y cualquier problema encontrado durante la inferencia.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "resource": "https://www.cognition.ai/blog/introducing-devin",
+  "language": "Spanish"
+}

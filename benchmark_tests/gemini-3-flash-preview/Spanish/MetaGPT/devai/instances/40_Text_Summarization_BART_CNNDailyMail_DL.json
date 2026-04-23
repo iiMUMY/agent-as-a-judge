@@ -1,0 +1,91 @@
+{
+  "name": "40_Text_Summarization_BART_CNNDailyMail_DL",
+  "query": "Desarrollar un sistema que realice la resumición de texto utilizando el modelo BART con el conjunto de datos CNN/Daily Mail. Comience cargando y preparando el conjunto de datos en `src/data_loader.py`, luego realice el preprocesamiento de datos, como eliminar etiquetas HTML y puntuación en `src/data_loader.py`. Importe un modelo BART preentrenado para la resumición de texto en `src/model.py` para generar resúmenes. Guarde los resúmenes generados en `results/summaries.txt`. Visualice la distribución de longitud de estos resúmenes usando seaborn y guarde la visualización en `results/figures/summary_length_distribution.png`. Además, implemente una página web interactiva de Streamlit en `src/visualize.py`, que permita a los usuarios ver textos de entrada y sus resúmenes generados. Finalmente, genere un informe que cubra el preprocesamiento de datos y los resultados de generación, y guárdelo como `results/text_summarization_report.pdf`.",
+  "tags": [
+    "Generative Models",
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos de noticias \"CNN/Daily Mail\", incluyendo la carga y preparación del conjunto de datos en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de datos se realiza en `src/data_loader.py`, incluyendo la eliminación de etiquetas HTML y puntuación.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Se importa un modelo \"BART\" preentrenado para la resumición de texto en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Los resultados de los resúmenes generados se guardan en `results/summary_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "La distribución de longitud de los resúmenes generados se visualiza usando \"seaborn\", y el gráfico se guarda como `results/figures/summary_length_distribution.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Se crea una página web interactiva usando \"Streamlit\" para mostrar textos de entrada y sus resúmenes generados e implementada en `src/visualize.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Se genera un informe que cubre el preprocesamiento de datos, el entrenamiento del modelo y los resultados de generación, y se guarda como `results/text_summarization_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "La página web interactiva de \"Streamlit\" debería permitir a los usuarios ingresar nuevos textos y generar resúmenes en tiempo real.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe debería incluir una discusión sobre cómo diferentes configuraciones de hiperparámetros afectaron el rendimiento del modelo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Durante el desarrollo, la aplicación \"Streamlit\" debería ser gestionada eficientemente para evitar el uso innecesario de recursos.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

@@ -1,0 +1,88 @@
+{
+  "name": "19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+  "query": "KaggleからダウンロードしたRossmann Store Salesデータセットを使用して、LSTMに基づくシーケンス・ツー・シーケンスモデルを用いた売上予測システムを開発します。データセットは[こちら](https://www.kaggle.com/c/rossmann-store-sales/data)からダウンロードし、`src/data_loader.py`で読み込みます。データをトレーニングセットとテストセットに分割し、`src/data_loader.py`に保存します。`LSTM`に基づくシーケンス・ツー・シーケンスモデルを適用し、トレーニング済みモデルを`models/saved_models/`ディレクトリに保存します。予測結果を`results/figures/forecast_results.png`として保存します。予測値と実際の値の比較プロットを`results/figures/comparison_plot.png`に保存します。予測結果と比較プロットを含むHTMLレポートを生成し、異なる予測ホライズンを探索するためのインタラクティブな要素を含め、`results/report.html`として保存します。モデルが売上データの季節的な傾向を捉えるように調整してください。",
+  "tags": [
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Rossmann Store Sales\"データセットを使用し、Kaggleから[このリンク](https://www.kaggle.com/c/rossmann-store-sales/data)でダウンロードし、`src/data_loader.py`で読み込みます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データはトレーニングセットとテストセットに分割され、`src/data_loader.py`で実装されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"LSTM\"に基づくシーケンス・ツー・シーケンスモデルを使用します。トレーニング済みモデルを`models/saved_models/`ディレクトリに保存してください。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "予測結果はプロットされ、`results/figures/forecast_results.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "予測値と実際の値の比較プロットは`results/figures/comparison_plot.png`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "予測結果と比較プロットを含むHTMLレポートが生成され、`results/report.html`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        5
+      ],
+      "criteria": "HTMLレポートには、異なる予測ホライズンを探索するためのインタラクティブな要素を含める必要があります。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "モデルは売上データの季節的な傾向を捉えるように調整し、より正確な予測を行うべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Japanese"
+}

@@ -1,0 +1,103 @@
+{
+  "name": "39_Drug_Response_Prediction_SVM_GDSC_ML",
+  "query": "Desarrollar un sistema para predecir la respuesta a medicamentos utilizando el conjunto de datos GDSC con un regresor de Máquina de Vectores de Soporte (SVM). Cargar el conjunto de datos y realizar la selección de características para identificar características clave en `src/data_loader.py`. Implementar el regresor SVM en `src/model.py`. Usar validación cruzada para evaluar el rendimiento del modelo en `src/train.py`. Guardar los resultados de rendimiento en `results/metrics/performance.txt`. Visualizar los resultados de la regresión usando seaborn y guardarlos en `results/figures/`. A continuación, crear un informe que incluya el preprocesamiento de datos, el entrenamiento del modelo, el proceso de evaluación y la visualización. Guardar el informe como `results/drug_response_prediction_report.pdf`. El informe debe enfatizar cómo la selección de características impacta el rendimiento del modelo, y la visualización de los resultados de la regresión debe resaltar claramente la relación entre las características seleccionadas y la respuesta a medicamentos predicha. Asegúrese de que el sistema esté diseñado para ser fácilmente extensible para incorporar conjuntos de datos adicionales o nuevas características.",
+  "tags": [
+    "Medical Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos de respuesta a medicamentos \"GDSC\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se realiza la selección de características para identificar características importantes en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El \"regresor SVM\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Se utiliza validación cruzada para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Los resultados de rendimiento se guardan como `results/metrics/performance.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Los resultados de la regresión se visualizan usando \"seaborn\" y se guardan en `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Se crea un informe que contiene el preprocesamiento de datos, el entrenamiento del modelo, el proceso de evaluación y la visualización de los resultados de la regresión, y se guarda como `results/drug_response_prediction_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El informe debe enfatizar cómo la selección de características impacta el rendimiento del modelo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La visualización de los resultados de la regresión debe resaltar claramente la relación entre las características seleccionadas y la respuesta a medicamentos predicha.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Asegúrese de que el sistema pueda extenderse fácilmente para incorporar conjuntos de datos adicionales o nuevas características sin un trabajo significativo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

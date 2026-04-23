@@ -1,0 +1,86 @@
+{
+  "name": "11_House_Price_Prediction_LinearRegression_BostonHousing_ML",
+  "query": "Hola. Configura un proyecto de predicción de precios de viviendas utilizando un modelo de Regresión Lineal en el conjunto de datos de Boston Housing. Carga el conjunto de datos usando `from datasets import load_dataset` y `ds = load_dataset(\"~/mrseba/boston_house_price\")` en `src/data_loader.py`. Asegúrate de que se realicen la escala de características y la estandarización de datos en `src/data_loader.py`. Implementa el modelo de Regresión Lineal en `src/model.py`. Usa la validación cruzada para evaluar el modelo en `src/train.py`. Imprime el Error Cuadrático Medio (MSE), el Error Absoluto Medio (MAE) y el puntaje $R^2$, y guárdalos en `results/metrics/metrics.txt`. Visualiza la comparación entre los valores predichos y los reales y guarda el resultado como `results/figures/prediction_vs_actual.png`. Las visualizaciones deben demostrar claramente la precisión del modelo (que, si se hace bien, debería ser buena).",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Boston Housing\" se utiliza usando `from datasets import load_dataset` y `ds = load_dataset(\"mrseba/boston_house_price\")` en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La escala de características y la estandarización de datos se realizan en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El modelo de \"Regresión Lineal\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se utiliza \"validación cruzada\" para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Se imprimen el \"Error Cuadrático Medio (MSE),\" el \"Error Absoluto Medio (MAE),\" y el \"puntaje R^2\", y se guardan como `results/metrics/metrics.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "La comparación de valores predichos vs. reales se visualiza y se guarda como `results/figures/prediction_vs_actual.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El conjunto de datos debe cargarse sin problemas usando el código `load_dataset` proporcionado, y se deben probar otros métodos si surgen problemas.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Las visualizaciones deben demostrar claramente la precisión del modelo destacando las diferencias entre los valores predichos y los reales.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "`ds = load_dataset(\"~/mrseba/boston_house_price\")` in the query is wrong, and it should be `ds = load_dataset(\"mrseba/boston_house_price\")`. We leave it here to check the self-debugging skill of the agents.",
+  "language": "Spanish"
+}

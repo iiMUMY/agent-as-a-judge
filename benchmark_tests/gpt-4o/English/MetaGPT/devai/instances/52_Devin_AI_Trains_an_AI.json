@@ -1,6 +1,6 @@
 {
     "name": "52_Devin_AI_Trains_an_AI",
-    "query": "Can you finetune a 7B LLaMA model using `https://github.com/artidoro/qlora`? Follow the instructions in the repository to finetune the 7B LLaMA model and save it in models/saved_models/. Ensure the necessary environment and dependencies are set up as outlined in `src/env.py`. Download and prepare the datasets required for finetuning the model as specified in `src/data_loader.py`. Complete the finetuning process, ensuring all configurations are properly set in accordance with qlora. Save the finetuned model and training summary, storing them in the specified directory as results/metrics/finetuning_summary.txt.",
+    "query": "Can you finetune a 7B LLaMA model using `https://github.com/artidoro/qlora`? Follow the instructions in the repository to finetune the 7B LLaMA model and save it in `models/saved_models/`. Ensure the necessary environment and dependencies are set up as outlined in `src/env.py`. Download and prepare the datasets required for finetuning the model as specified in `src/data_loader.py`. Complete the finetuning process, ensuring all configurations are properly set in accordance with `qlora`. Save the finetuned model and training summary, storing them in the specified directory as `results/metrics/finetuning_summary.txt`.",
     "tags": [
         "Generative Models",
         "Natural Language Processing"

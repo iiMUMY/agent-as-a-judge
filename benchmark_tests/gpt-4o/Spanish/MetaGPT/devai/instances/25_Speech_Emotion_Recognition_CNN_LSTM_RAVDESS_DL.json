@@ -1,0 +1,90 @@
+{
+  "name": "25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+  "query": "Estoy buscando un proyecto de reconocimiento de emociones en el habla utilizando un modelo CNN-LSTM con el conjunto de datos RAVDESS, que debe descargarse de Kaggle o [este enlace de Hugging Face](https://huggingface.co/datasets/xbgoose/ravdess). El proyecto debe cargar el conjunto de datos y realizar un preprocesamiento de audio robusto (eliminación de ruido y normalización) y extracción de características MFCC, implementado en `src/data_loader.py`. El modelo CNN-LSTM debe implementarse en `src/model.py`. La precisión del reconocimiento debe guardarse en `results/metrics/recognition_accuracy.txt`, y se debe generar una matriz de confusión y guardarse como `results/figures/confusion_matrix.png`. Además, se debe crear una API local fácil de usar con Flask para permitir a los usuarios subir archivos de audio y recibir resultados de reconocimiento de emociones, con la implementación incluida en `src/hci.py`.",
+  "tags": [
+    "Audio Processing",
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"RAVDESS\" se carga en `src/data_loader.py`, que se descarga de Kaggle o [este enlace de Hugging Face](https://huggingface.co/datasets/xbgoose/ravdess).",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de audio, incluida la eliminación de ruido y la normalización, se implementa en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "La extracción de características MFCC se implementa en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "El modelo \"CNN-LSTM\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "La precisión del reconocimiento se guarda en `results/metrics/recognition_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "La matriz de confusión se genera y guarda como `results/figures/confusion_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Se crea una API local usando \"Flask\" para permitir a los usuarios subir archivos de audio y recibir resultados de reconocimiento de emociones. La implementación debe incluirse en `src/hci.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El paso de preprocesamiento de audio debe ser robusto, reduciendo efectivamente el ruido mientras se preserva la integridad de las señales de habla.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La API local debe ser fácil de usar, con instrucciones claras para subir archivos e interpretar resultados.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Spanish"
+}

@@ -1,0 +1,93 @@
+{
+  "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+  "query": "Tengeneza mfumo wa uainishaji wa hisa kwa kutumia mfano wa KNN kwenye seti ya data ya Yahoo Finance. Utekelezaji wako unapaswa kuamua ikiwa hisa fulani itaongezeka au kupungua bei. Anza kwa kupakia seti ya data na kufanya uhandisi wa vipengele, ikiwa ni pamoja na kuzalisha viashiria vya kiufundi na kuchagua vipengele muhimu zaidi katika `src/data_loader.py`. Sanifisha data ili kuhakikisha thamani za vipengele ziko ndani ya kiwango sawa katika `src/data_loader.py`. Tumia kisanidi cha KNN kuainisha hisa kulingana na vipengele vilivyoundwa, na uhifadhi utekelezaji katika `src/model.py`. Kisha, hifadhi matokeo ya uainishaji katika `results/classification_results.txt`, na onyesha uhusiano kati ya viashiria vya kiufundi na matokeo ya uainishaji kama ramani ya joto kwa kutumia seaborn. Hifadhi ramani ya joto kama `results/figures/feature_correlation_heatmap.png`. Hatimaye, tengeneza Jupyter Notebook inayoweza kuingiliana chini ya `results/` ambayo inaelezea mchakato, inaonyesha matokeo ya uainishaji, na itasaidia kurahisisha masasisho ya baadaye yanayoanzisha data mpya.",
+  "tags": [
+    "Classification",
+    "Financial Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Yahoo Finance\" inatumika, ikiwa ni pamoja na upakiaji na maandalizi ya data katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uhandisi wa vipengele unafanywa, ikiwa ni pamoja na kuzalisha viashiria vya kiufundi na kufanya uteuzi wa vipengele katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data inasanifishwa ili kuhakikisha thamani za vipengele ziko ndani ya kiwango sawa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "\"Kisanidi cha KNN\" kinatumika kuainisha hisa kulingana na vipengele vilivyoundwa. Tafadhali hifadhi utekelezaji katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Matokeo ya uainishaji yanahifadhiwa katika `results/classification_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Ramani ya joto inayoonyesha uhusiano kati ya viashiria vya kiufundi na matokeo ya uainishaji inahifadhiwa kama `results/figures/feature_correlation_heatmap.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Jupyter Notebook inayoweza kuingiliana inatengenezwa chini ya `results/` ili kuelezea mchakato na kuonyesha matokeo ya uainishaji.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook inapaswa kujumuisha maelezo wazi ya kila hatua, ikiwa ni pamoja na uhandisi wa vipengele na tathmini ya mfano.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ramani ya joto ya uhusiano inapaswa kuonyesha viashiria vya kiufundi muhimu zaidi na kutoa ufahamu juu ya uhusiano wao.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Mfumo unapaswa kuruhusu masasisho rahisi na data mpya, na kufanya notebook iwe rahisi kwa uchambuzi wa baadaye.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

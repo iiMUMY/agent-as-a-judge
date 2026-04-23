@@ -1,0 +1,96 @@
+{
+  "name": "20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+  "query": "Je, unaweza kunisaidia kuunda mradi wa utabiri wa bei za magari kwa kutumia mfano wa Random Forest na seti ya data ya Kaggle Car Prices? Pakia seti ya data na fanya uteuzi wa vipengele ili kutambua vipengele muhimu katika `src/data_loader.py`. Tumia uthibitishaji wa msalaba kutathmini mfano katika `src/train.py`. Hifadhi alama ya R-squared, Mean Squared Error (MSE), na Mean Absolute Error (MAE) kwenye `results/metrics/results/metrics.txt`. Onyesha umuhimu wa vipengele na uhifadhi kwenye `results/figures/feature_importance.png`. Tengeneza ripoti ya Markdown yenye ufahamu wa jinsi vipengele vilivyochaguliwa vinavyochangia katika utabiri wa bei za magari. Hifadhi ripoti kama `results/report.md`.",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Kaggle Car Prices\" inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uteuzi wa vipengele unatekelezwa ili kutambua vipengele muhimu katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Mfano wa urejeleaji wa \"Random Forest\" unatumika katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Uthibitishaji wa msalaba unatumika kutathmini mfano katika `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Alama ya \"R-squared\", \"Mean Squared Error (MSE),\" na \"Mean Absolute Error (MAE)\" zinahifadhiwa katika `results/metrics/results/metrics.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Umuhimu wa vipengele unaonyeshwa na kuhifadhiwa kama `results/figures/feature_importance.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Faili ya Markdown yenye matokeo na vielelezo inatengenezwa na kuhifadhiwa kama `results/report.md`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mchakato wa uteuzi wa vipengele unapaswa kuwa wa kina, kuhakikisha kwamba ni vipengele muhimu tu vinavyotumika katika mfano.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya Markdown inapaswa kutoa ufahamu wazi wa jinsi vipengele vilivyochaguliwa vinavyochangia katika utabiri wa bei za magari.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

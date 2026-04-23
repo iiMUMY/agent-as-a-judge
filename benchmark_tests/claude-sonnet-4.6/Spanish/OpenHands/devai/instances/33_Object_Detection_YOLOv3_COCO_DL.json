@@ -1,0 +1,94 @@
+{
+  "name": "33_Object_Detection_YOLOv3_COCO_DL",
+  "query": "Ayúdame a desarrollar un sistema de detección de objetos utilizando el modelo YOLOv3 y el conjunto de datos COCO. Descarga el conjunto de datos y preprocesa las imágenes redimensionándolas y normalizándolas en `src/data_loader.py`. Implementa el modelo YOLOv3 y utiliza la Supresión No Máxima (NMS) para refinar los resultados en `src/model.py`. Guarda los objetos detectados en `results/figures/`, y crea una página web interactiva con Streamlit en `src/app.py` para mostrar los resultados de detección. Finalmente, evalúa el rendimiento del modelo, incluyendo métricas como mAP y tiempo de inferencia, y guarda los resultados de la evaluación en `results/metrics/model_performance.txt`. El sistema debe gestionar adecuadamente el inicio y la terminación de la aplicación Streamlit para evitar el uso innecesario de recursos.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "La descarga del conjunto de datos \"COCO\" se implementa en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de datos, incluyendo el redimensionamiento y la normalización de imágenes, se realiza en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El modelo \"YOLOv3\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Se aplica \"Supresión No Máxima\" (NMS) para refinar los resultados de detección. Por favor, implementa esto en `src/model.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Los resultados de detección se guardan en la carpeta especificada `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se crea una página web interactiva en `src/app.py` usando \"Streamlit\" para mostrar los resultados de detección guardados en `results/figures/`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Los resultados de la evaluación del rendimiento del modelo se guardan en `results/metrics/model_performance.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "La página web de \"Streamlit\" debe ser fácil de usar, permitiendo a los usuarios cargar y ver fácilmente nuevas imágenes para detección.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La evaluación del rendimiento incluye mAP y tiempo de inferencia como métricas.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "El sistema debe gestionar adecuadamente el inicio y la terminación de la aplicación Streamlit.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

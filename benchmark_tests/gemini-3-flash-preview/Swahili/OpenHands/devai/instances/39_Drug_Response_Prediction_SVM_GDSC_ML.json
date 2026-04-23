@@ -1,0 +1,103 @@
+{
+  "name": "39_Drug_Response_Prediction_SVM_GDSC_ML",
+  "query": "Tengeneza mfumo wa kutabiri mwitikio wa dawa ukitumia seti ya data ya GDSC na regressor ya Support Vector Machine (SVM). Pakia seti ya data na fanya uteuzi wa vipengele ili kutambua vipengele muhimu katika `src/data_loader.py`. Tekeleza regressor ya SVM katika `src/model.py`. Tumia uthibitishaji wa msalaba kutathmini utendaji wa mfano katika `src/train.py`. Hifadhi matokeo ya utendaji katika `results/metrics/performance.txt`. Onyesha matokeo ya regression ukitumia seaborn na uhifadhi chini ya `results/figures/`. Kisha, tengeneza ripoti ikijumuisha usindikaji wa data, mafunzo ya mfano, mchakato wa tathmini, na uonyeshaji. Hifadhi ripoti kama `results/drug_response_prediction_report.pdf`. Ripoti inapaswa kusisitiza jinsi uteuzi wa vipengele unavyoathiri utendaji wa mfano, na uonyeshaji wa matokeo ya regression unapaswa kuonyesha wazi uhusiano kati ya vipengele vilivyochaguliwa na mwitikio wa dawa uliotabiriwa. Hakikisha mfumo umeundwa kuwa rahisi kupanuliwa kwa kujumuisha seti za data za ziada au vipengele vipya.",
+  "tags": [
+    "Medical Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya mwitikio wa dawa \"GDSC\" inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uteuzi wa vipengele unafanywa ili kutambua vipengele muhimu katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Regressor ya \"SVM\" inatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Uthibitishaji wa msalaba unatumika kutathmini mfano katika `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya utendaji yanahifadhiwa kama `results/metrics/performance.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya regression yanaonyeshwa kwa kutumia \"seaborn,\" na kuhifadhiwa katika `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Ripoti inayojumuisha usindikaji wa data, mafunzo ya mfano, mchakato wa tathmini, na uonyeshaji wa matokeo ya regression, inatengenezwa na kuhifadhiwa kama `results/drug_response_prediction_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ripoti inapaswa kusisitiza jinsi uteuzi wa vipengele unavyoathiri utendaji wa mfano.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Uonyeshaji wa matokeo ya regression unapaswa kuonyesha wazi uhusiano kati ya vipengele vilivyochaguliwa na mwitikio wa dawa uliotabiriwa.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Hakikisha kwamba mfumo unaweza kupanuliwa kwa urahisi ili kujumuisha seti za data za ziada au vipengele vipya bila kazi kubwa ya upya.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

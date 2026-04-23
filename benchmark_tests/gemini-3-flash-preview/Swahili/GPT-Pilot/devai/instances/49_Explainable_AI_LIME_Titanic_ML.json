@@ -1,0 +1,92 @@
+{
+  "name": "49_Explainable_AI_LIME_Titanic_ML",
+  "query": "Habari! Ninatafuta kuunda mradi unaoelezea utabiri wa modeli kwa kutumia LIME, hasa na seti ya data ya utabiri wa kuokoka kwa Titanic. Kwanza, pakia seti ya data katika `src/data_loader.py`. Kisha, fundisha Random Forest classifier na uihifadhi chini ya `models/saved_models/`? Hatimaye, tumia LIME kuelezea utabiri wa Random Forest classifier na utekeleze katika `src/visualize.py`. Tengeneza ripoti ikijumuisha maelezo na uihifadhi kama `results/model_explanation.md`. Ripoti inapaswa kujengwa kwa kutumia ama Dash au Bokeh, ikitekelezwa katika `src/report.py`, ili watumiaji waweze kuchunguza jinsi vipengele tofauti vinavyoathiri utabiri wa modeli. Maelezo yanapaswa kuwa wazi na rahisi kueleweka kwa watu wasio wa kiufundi. Zaidi ya hayo, hifadhi mchoro wa umuhimu wa vipengele ulio na lebo nzuri na wa kueleweka katika `results/figures/feature_importance.png`. Asante!",
+  "tags": [
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya utabiri wa kuokoka kwa \"Titanic\" inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "\"Random Forest classifier\" inafundishwa kwa ajili ya utabiri wa kuokoka.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "\"LIME\" inatumika kwa maelezo ya utabiri wa modeli na inatekelezwa katika `src/visualize.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Ripoti ya maelezo ya utabiri wa modeli inatengenezwa na kuhifadhiwa kama `results/model_explanation.md`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Mchoro wa umuhimu wa vipengele unahifadhiwa kama `results/figures/feature_importance.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "criteria": "Ripoti ya maingiliano inayoonyesha athari za vipengele tofauti kwenye utabiri inatengenezwa kwa kutumia \"Dash\" au \"Bokeh\" na inatekelezwa katika `src/report.py`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Modeli iliyofundishwa inahifadhiwa chini ya `models/saved_models/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ripoti ya maelezo inapaswa kuandikwa kwa mtindo ulio wazi na rahisi, ikifanya iweze kueleweka hata kwa wale wasio na ujuzi wa kina wa kiufundi.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Mchoro wa umuhimu wa vipengele unapaswa kuwa wa kueleweka kwa urahisi, ukiwa na lebo na maelezo wazi.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

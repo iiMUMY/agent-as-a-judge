@@ -1,0 +1,83 @@
+{
+  "name": "28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+  "query": "LSTMモデルとYahoo Financeデータセットを使用して株価予測システムを構築するのを手伝っていただけますか？データをクリーンアップし、欠損値や外れ値の処理を含め、時系列データを教師あり学習問題に変換するために時間窓を使用してください。LSTMモデルは`src/model.py`に実装し、データセットの読み込み、クリーンアップ、変換は`src/data_loader.py`に実装してください。予測結果を`results/predictions.txt`に保存し、Plotlyを使用して予測結果のインタラクティブなチャートを生成して`results/figures/prediction_interactive.html`に保存してください。モデルのアーキテクチャの可視化、トレーニングプロセス、予測結果を含むJupyter Notebookを作成し、PDFレポートとして`results/report.pdf`に保存してください。",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"LSTM\"モデルは`src/model.py`に実装されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"Yahoo Finance\"データセットは`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "欠損値や外れ値の処理を含むデータクリーンアップは`src/data_loader.py`で行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2
+      ],
+      "criteria": "時系列データを教師あり学習問題に変換するために時間窓が使用されます。実装は`src/data_loader.py`に保存してください。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "予測結果は`results/predictions.txt`に保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "予測結果のインタラクティブなチャートは\"Plotly\"を使用して生成され、`results/figures/prediction_interactive.html`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "モデルのアーキテクチャの可視化、トレーニングプロセス、予測結果を含むJupyter Notebookが作成され、PDFレポートとして`results/report.pdf`に保存されます。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

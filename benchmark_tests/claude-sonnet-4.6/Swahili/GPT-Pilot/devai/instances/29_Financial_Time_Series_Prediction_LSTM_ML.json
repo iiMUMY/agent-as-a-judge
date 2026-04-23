@@ -1,0 +1,91 @@
+{
+  "name": "29_Financial_Time_Series_Prediction_LSTM_ML",
+  "query": "Je, unaweza kunisaidia kuanzisha mfumo wa utabiri wa mfululizo wa muda wa kifedha kwa kutumia mfano wa LSTM na Uchambuzi wa Kifedha wa ulimwengu halisi, kama bei za hisa au bei za Bitcoin? Kwanza, tutahitaji kusafisha data, tukishughulikia thamani zilizokosekana na vipimo vya nje katika `src/data_loader.py`. Kisha, hebu tukaibadilishe data ya mfululizo wa muda kuwa muundo wa kujifunza unaosimamiwa kwa kutumia dirisha la muda katika `src/data_loader.py`. Hatimaye tumia mfano wa LSTM kwa utabiri, ambapo mfano wa LSTM unatekelezwa katika `src/model.py`. Ukishapata utabiri, hifadhi matokeo kama `results/prediction_results.txt`. Unda dashibodi ya maingiliano inayoonyesha matokeo ya utabiri kwa kutumia Dash na hifadhi utekelezaji katika `src/visualize.py`. Hatimaye, ningefurahia hati ya Markdown inayoonyesha usanifu wa mfano, mchakato wa mafunzo, na uchambuzi wa utendaji, iliyohifadhiwa kama `results/report.md`. Hakikisha mfumo unasimamia kuanza na kusimamisha programu ya Dash kiotomatiki ili kuokoa rasilimali. Asante sana!",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Baadhi ya data halisi ya mfululizo wa muda wa kifedha (mfano, \"bei za hisa\" au \"bei za Bitcoin\") inapakuliwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usafishaji wa data unafanywa, ikiwa ni pamoja na kushughulikia thamani zilizokosekana na vipimo vya nje katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Dirisha la muda linatumika kubadilisha data ya mfululizo wa muda kuwa tatizo la kujifunza linalosimamiwa. Tafadhali tekeleza hili katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"LSTM\" unatumika kwa utabiri wa mfululizo wa muda wa kifedha na unatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya utabiri yanahifadhiwa kama `results/prediction_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Dashibodi ya maingiliano ya kuona matokeo ya utabiri inaundwa kwa kutumia \"Dash\". Utekelezaji unahifadhiwa katika `src/visualize.py`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Hati ya Markdown inayoonyesha usanifu wa mfano, mchakato wa mafunzo, na uchambuzi wa utendaji inazalishwa, na kuhifadhiwa kama `results/report.md`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Dashibodi ya \"Dash\" inapaswa kuruhusu watumiaji kuingiliana na matokeo ya utabiri, kuwezesha uchunguzi wa vipindi tofauti vya muda na kukuza vipindi maalum kwa uchambuzi wa kina.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Wakati wa maendeleo, mfumo unapaswa kusimamia kiotomatiki kuanza na kusimamisha programu ya \"Dash\" ili kuzuia matumizi yasiyo ya lazima ya rasilimali.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

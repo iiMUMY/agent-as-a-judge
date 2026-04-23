@@ -1,0 +1,92 @@
+{
+  "name": "43_Social_Network_Analysis_GCN_Cora_ML",
+  "query": "¡Hola! ¿Podrías ayudarme a crear un sistema de análisis de redes sociales utilizando un modelo GCN con el conjunto de datos de la red de citas Cora? Primero, carguemos y preprocesemos el conjunto de datos, incluyendo normalización y eliminación de ruido, en `src/data_loader.py`. Luego, aplica el modelo GCN para clasificar los nodos y ajusta los hiperparámetros como la tasa de aprendizaje y el tamaño de la capa oculta para obtener los mejores resultados en `src/train.py`. Guarda el modelo en `models/saved_models/`. Una vez hecho esto, por favor guarda el rendimiento de la clasificación de nodos en `results/metrics/node_classification_results.txt`. Visualiza la estructura de la red de citas y guárdala como `results/figures/citation_network_visualization.png`. Por último, crea un gráfico de red interactivo usando D3.js o Bokeh para mostrar los resultados de la clasificación de nodos y la visualización de la red en `results/figures/`. También sería genial si tu implementación permitiera a un programador cambiar fácilmente a otros conjuntos de datos de citas. ¡Muchas gracias por tu ayuda!",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Cora citation network\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de datos se realiza, incluyendo normalización y eliminación de ruido, en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Los hiperparámetros como la tasa de aprendizaje y el tamaño de la capa oculta se ajustan para optimizar el modelo en `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "El modelo se guarda en `models/saved_models/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "El rendimiento de la clasificación de nodos se guarda en `results/metrics/node_classification_results.txt`.",
+      "category": "Performence Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "La estructura de la red de citas se visualiza y guarda como `results/figures/citation_network_visualization.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4,
+        5
+      ],
+      "criteria": "Se crea un gráfico de red interactivo usando \"D3.js\" o \"Bokeh\" para mostrar los resultados de la clasificación de nodos y la visualización de la red en `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El gráfico de red interactivo debería permitir a los usuarios explorar dinámicamente nodos individuales y sus clasificaciones.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La visualización de la red de citas debería diferenciar claramente entre las diferentes clases de nodos y relaciones.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "El sistema debería estar diseñado para manejar conjuntos de datos de citas adicionales con modificaciones mínimas.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

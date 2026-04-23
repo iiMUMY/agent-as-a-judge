@@ -1,0 +1,76 @@
+{
+  "name": "08_Robot_Control_PPO_PyBullet_RL",
+  "query": "Estoy buscando implementar un proyecto que explore el control de un brazo robótico mediante aprendizaje por refuerzo en el entorno de simulación PyBullet con el algoritmo PPO. El simulador PyBullet debe ser importado y un entorno robótico relacionado debe ser cargado en `src/env.py`. El algoritmo PPO debe ser implementado en `src/train.py`. El proyecto debe documentar meticulosamente la posición final del robot, imprimiéndola y guardándola como `data/final_position.txt`. La trayectoria de retorno del entrenamiento debe ser graficada y guardada como `results/figures/training_returns.png`. Una muestra del movimiento del robot debe ser visualizada y guardada como `results/figures/robot_motion.gif`. Se debe proporcionar una descripción detallada de la configuración del entorno y la estructura de recompensas en `src/env.py`. Por favor, asegúrese de que cualquier problema con la carga de archivos URDF en PyBullet sea claramente manejado y documentado, proporcionando mensajes de error claros o registros para depuración.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El simulador \"PyBullet\" se utiliza en `src/env.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "El algoritmo \"PPO\" se utiliza en `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se proporciona una descripción detallada de la configuración del entorno y la estructura de recompensas en `src/env.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "La posición final del robot se imprime y guarda como `data/final_position.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "La curva de retornos del entrenamiento a lo largo del tiempo se registra y guarda como `results/figures/training_returns.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Una muestra del movimiento del robot se visualiza y guarda como `results/figures/robot_motion.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El sistema debe manejar eficazmente los posibles problemas con la carga de archivos URDF en PyBullet, proporcionando mensajes de error claros o registros para depuración.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

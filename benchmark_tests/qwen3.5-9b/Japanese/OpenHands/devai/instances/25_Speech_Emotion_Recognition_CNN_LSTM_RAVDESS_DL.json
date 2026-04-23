@@ -1,0 +1,90 @@
+{
+  "name": "25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+  "query": "CNN-LSTMモデルを使用した音声感情認識プロジェクトを探しています。このプロジェクトでは、RAVDESSデータセットを使用し、Kaggleまたは[このHugging Faceリンク](https://huggingface.co/datasets/xbgoose/ravdess)からダウンロードする必要があります。プロジェクトはデータセットをロードし、堅牢なオーディオ前処理（ノイズ除去と正規化）およびMFCC特徴抽出を行い、`src/data_loader.py`に実装されるべきです。CNN-LSTMモデルは`src/model.py`に実装されるべきです。認識精度は`results/metrics/recognition_accuracy.txt`に保存され、混同行列は生成されて`results/figures/confusion_matrix.png`として保存されるべきです。さらに、ユーザーが音声ファイルをアップロードして感情認識結果を受け取ることができるようにするために、Flaskを使用してユーザーフレンドリーなローカルAPIを作成し、その実装を`src/hci.py`に含めるべきです。",
+  "tags": [
+    "Audio Processing",
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"RAVDESS\"データセットは`src/data_loader.py`でロードされ、Kaggleまたは[このHugging Faceリンク](https://huggingface.co/datasets/xbgoose/ravdess)からダウンロードされます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "ノイズ除去と正規化を含むオーディオ前処理は`src/data_loader.py`に実装されています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "MFCC特徴抽出は`src/data_loader.py`に実装されています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"CNN-LSTM\"モデルは`src/model.py`に実装されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "認識精度は`results/metrics/recognition_accuracy.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "混同行列は生成され、`results/figures/confusion_matrix.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "ユーザーが音声ファイルをアップロードして感情認識結果を受け取ることができるようにするために、\"Flask\"を使用してローカルAPIが作成されます。実装は`src/hci.py`に含めるべきです。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "オーディオ前処理ステップは堅牢であり、音声信号の完全性を保ちながらノイズを効果的に低減するべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "ローカルAPIはユーザーフレンドリーであり、ファイルのアップロードと結果の解釈に関する明確な指示を提供するべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Japanese"
+}

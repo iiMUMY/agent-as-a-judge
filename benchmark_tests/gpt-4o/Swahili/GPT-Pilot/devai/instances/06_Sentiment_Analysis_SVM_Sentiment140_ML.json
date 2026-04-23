@@ -1,0 +1,74 @@
+{
+  "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+  "query": "Tafadhali nisaidie kujenga mfumo wa uchambuzi wa hisia kwenye tweets ukitumia seti ya data ya Sentiment140 inayopatikana kutoka Hugging Face. Pakia seti ya data ya Sentiment140 na, wakati wa kupakia data, isafishe kwa kuondoa maneno ya kusimama, alama za uandishi, na herufi maalum, yote katika `src/data_loader.py`. Tumia Word2Vec au GloVe kwa uvektaishaji wa maandishi. Hii inapaswa kufanyika katika `src/data_loader.py`. Kisha, tekeleza na funza kisanidi cha SVM katika `src/model.py`. Mwishowe, andika ripoti ya usahihi wa kisanidi kwenye `results/metrics/accuracy_score.txt`. Kwa kawaida, ripoti inapaswa kuwa rahisi kufasiri.",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Sentiment140,\" inayopatikana kutoka \"Hugging Face,\" inapatikana katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Seti ya data inasafishwa, ikiwa ni pamoja na kuondoa maneno ya kusimama, alama za uandishi, na herufi maalum, yote katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Uwekaji wa maneno, ama \"Word2Vec\" au \"GloVe,\" unatumika kubadilisha maandishi kuwa vekta katika `src/data_loader.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Kisanidi cha \"SVM\" kinatekelezwa na kufunzwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Alama ya usahihi inachapishwa na kuhifadhiwa kama `results/metrics/accuracy_score.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mchakato wa kupakua seti ya data unapaswa kuwa wa kuaminika, na uwe na utunzaji wa makosa wazi.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya mwisho ya usahihi inapaswa kuwa rahisi na rahisi kufasiri.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

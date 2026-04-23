@@ -1,0 +1,103 @@
+{
+  "name": "38_Object_Tracking_Siamese_OTB50_DL",
+  "query": "SiameseネットワークとOTB50データセットを使用してオブジェクト追跡システムを作成する必要があります。OTB50データセットは`src/data_loader.py`で読み込む必要があります。システムには、回転やスケーリングなどのデータ拡張ステップを含め、`src/data_loader.py`で実行します。Siameseネットワークは`src/model.py`で実装します。学習率やバッチサイズなどのハイパーパラメータは`src/train.py`で調整します。追跡結果は`results/tracking_results.txt`として保存します。OpenCVを使用して追跡結果を可視化し、追跡ビデオを`results/videos/`に保存します。さらに、データ前処理、モデルのトレーニング、評価プロセスの詳細を含む包括的なMarkdownレポートを作成し、`results/object_tracking_report.md`として保存します。システムが新しいビデオシーケンスを最小限の調整で処理できるようにし、柔軟なアプリケーションを可能にします。Markdownレポートには、異なるハイパーパラメータが追跡性能に与える影響を分析するセクションを含める必要があります。",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"OTB50\"データセットは`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "回転やスケーリングなどのデータ拡張は`src/data_loader.py`で実行されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Siamese\"ネットワークは`src/model.py`で実装されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "学習率やバッチサイズなどのハイパーパラメータは`src/train.py`で調整されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "追跡結果は`results/tracking_results.txt`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "追跡結果はOpenCVで可視化され、`results/videos/`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "データ前処理、モデルのトレーニング、評価プロセスを含む詳細なMarkdownドキュメントが作成され、`results/object_tracking_report.md`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        6
+      ],
+      "criteria": "Markdownレポートには、異なるハイパーパラメータが追跡性能に与える影響を分析するセクションを含める必要があります。",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "追跡ビデオは高解像度で保存され、追跡対象を強調する注釈を含むべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "システムは新しいビデオシーケンスを最小限の変更で処理でき、柔軟な使用ケースを可能にする必要があります。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

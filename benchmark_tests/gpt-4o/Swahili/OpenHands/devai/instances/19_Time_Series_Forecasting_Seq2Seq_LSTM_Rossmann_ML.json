@@ -1,0 +1,88 @@
+{
+  "name": "19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+  "query": "Tengeneza mfumo wa utabiri wa mauzo kwa kutumia mfano wa mfuatano-kwa-mfuatano unaotegemea LSTM na seti ya data ya Rossmann Store Sales, ukipakua kutoka Kaggle [hapa](https://www.kaggle.com/c/rossmann-store-sales/data) na kuipakia katika `src/data_loader.py`. Gawanya data katika seti za mafunzo na majaribio na uzihifadhi katika `src/data_loader.py`. Tumia mfano wa mfuatano-kwa-mfuatano unaotegemea `LSTM` na uhifadhi mfano uliopata mafunzo chini ya saraka ya `models/saved_models/`. Hifadhi matokeo ya utabiri kama `results/figures/forecast_results.png`. Hifadhi mchoro wa kulinganisha kati ya thamani zilizotabiriwa na halisi kwa `results/figures/comparison_plot.png`. Tengeneza ripoti ya HTML inayojumuisha matokeo ya utabiri na michoro ya kulinganisha, ikiwa na vipengele vya mwingiliano kwa ajili ya kuchunguza upeo tofauti wa utabiri, na uhifadhi kama `results/report.html`. Hakikisha mfano umeboreshwa ili kunasa mwelekeo wa msimu katika data ya mauzo.",
+  "tags": [
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Rossmann Store Sales\" inatumika, ikiwezekana kupakuliwa kutoka Kaggle [kiungo hiki](https://www.kaggle.com/c/rossmann-store-sales/data) na kupakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data inagawanywa katika seti za mafunzo na majaribio na kutekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Mfano wa mfuatano-kwa-mfuatano unaotegemea \"LSTM\" unatumika. Tafadhali hifadhi mfano uliopata mafunzo chini ya saraka ya `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Matokeo ya utabiri yanachorwa na kuhifadhiwa kama `results/figures/forecast_results.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Mchoro wa kulinganisha wa thamani zilizotabiriwa dhidi ya halisi unahifadhiwa kama `results/figures/comparison_plot.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Ripoti ya HTML inayojumuisha matokeo ya utabiri na michoro ya kulinganisha inatengenezwa na kuhifadhiwa kama `results/report.html`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        5
+      ],
+      "criteria": "Ripoti ya HTML inapaswa kujumuisha vipengele vya mwingiliano vinavyoruhusu watumiaji kuchunguza upeo tofauti wa utabiri.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mfano unapaswa kuboreshwa ili kunasa mwelekeo wa msimu katika data ya mauzo kwa utabiri sahihi zaidi.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Swahili"
+}

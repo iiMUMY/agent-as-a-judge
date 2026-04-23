@@ -1,10 +1,19 @@
 import hashlib
 import argparse
+import sys
 from pathlib import Path
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-LANGUAGES = ["English", "Arabic", "Turkish", "Chinese", "Hindi"]
-FRAMEWORKS = ["MetaGPT", "GPT-Pilot", "OpenHands"]
+from agent_as_a_judge.languages import (
+    ALL_LANGUAGES,
+    FRAMEWORKS as DEFAULT_FRAMEWORKS,
+)
+
+LANGUAGES = list(ALL_LANGUAGES)
+FRAMEWORKS = list(DEFAULT_FRAMEWORKS)
 
 
 def digest_files(paths: list[Path]) -> str:

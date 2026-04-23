@@ -1,0 +1,74 @@
+{
+  "name": "06_Sentiment_Analysis_SVM_Sentiment140_ML",
+  "query": "Hugging Faceから利用可能なSentiment140データセットを使用して、ツイートの感情分析システムを構築するのを手伝ってください。Sentiment140データセットをロードし、データをロードする際に、ストップワード、句読点、特殊文字を削除してクリーンにしてください。これらはすべて`src/data_loader.py`で行います。テキストのベクトル化にはWord2VecまたはGloVeを使用してください。これも`src/data_loader.py`で行う必要があります。次に、`src/model.py`でSVM分類器を実装し、トレーニングしてください。最後に、分類器の精度に関するレポートを`results/metrics/accuracy_score.txt`に書き込んでください。理想的には、レポートは簡単に解釈できるものであるべきです。",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Sentiment140\"データセットは、\"Hugging Face\"から`src/data_loader.py`で取得されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データセットは、ストップワード、句読点、特殊文字を削除することを含めてクリーンにされ、すべて`src/data_loader.py`で行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "テキストをベクトルに変換するために、\"Word2Vec\"または\"GloVe\"の単語埋め込みが`src/data_loader.py`で使用されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "\"SVM分類器\"は`src/model.py`で実装され、トレーニングされます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "精度スコアは出力され、`results/metrics/accuracy_score.txt`として保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "データセットのダウンロードプロセスは信頼性があり、明確なエラーハンドリングがあるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "最終的な精度レポートは簡潔で解釈しやすいものであるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

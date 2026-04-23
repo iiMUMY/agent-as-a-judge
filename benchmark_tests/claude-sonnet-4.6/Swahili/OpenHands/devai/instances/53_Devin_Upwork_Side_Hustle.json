@@ -1,0 +1,75 @@
+{
+  "name": "53_Devin_Upwork_Side_Hustle",
+  "query": "Habari, ninatafuta kufanya makisio na mifano katika hazina hii `https://github.com/mahdi65/roadDamageDetection2020`. Mfumo unapaswa kufanya makisio ukitumia mifano kutoka kwenye hazina na kuhifadhi matokeo katika `models/saved_models/`. Data ya sampuli inapaswa kupakuliwa na kuandaliwa kwa ajili ya kujaribu mifano katika `src/data_loader.py`. Makisio yanapaswa kufanywa ukitumia mifano iliyotolewa kwenye data ya sampuli katika `models/saved_models/`. Picha zilizoonyeshwa zikionyesha utambuzi uliofanywa na mifano zinapaswa kuzalishwa na kuhifadhiwa katika saraka ya `results/figures/`. Pia, ripoti ya utendaji kulingana na matokeo ya utambuzi wa mfano inapaswa kuzalishwa na kuhifadhiwa kama `results/metrics/model_performance_report.txt`.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Hazina katika `https://github.com/mahdi65/roadDamageDetection2020` imewekwa.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data ya sampuli imepakuliwa na kuandaliwa kwa ajili ya kujaribu mifano katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Makisio yanafanywa ukitumia mifano iliyotolewa kwenye data ya sampuli katika `models/saved_models/`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Picha zilizoonyeshwa zikionyesha utambuzi uliofanywa na mifano zinazalishwa na kuhifadhiwa katika saraka ya `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Ripoti ya utendaji kulingana na matokeo ya utambuzi wa mfano inazalishwa na kuhifadhiwa kama `results/metrics/model_performance_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Picha zilizoonyeshwa zinapaswa kuwa wazi, na utambuzi uonyeshwe kwa usahihi kwa urahisi wa tafsiri.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya utendaji inapaswa kujumuisha muhtasari wa usahihi wa utambuzi na masuala yoyote yaliyokutana wakati wa makisio.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "resource": "https://www.cognition.ai/blog/introducing-devin",
+  "language": "Swahili"
+}

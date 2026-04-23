@@ -1,0 +1,114 @@
+{
+  "name": "17_Heart_Disease_Prediction_XGBoost_UCI_ML",
+  "query": "UCI Heart Diseaseデータセットを使用して心臓病を予測するプロジェクトを作成します。このデータセットは[このリンク](https://archive.ics.uci.edu/dataset/45/heart+disease)からダウンロードできます。データセットを`src/data_loader.py`で読み込みます。特徴選択とデータ標準化を`src/data_loader.py`で実装します。特徴の重要性を説明するためにSHAP値を使用し、結果を`results/figures/shap_importance.png`として保存します。XGBoostモデルを`src/model.py`で実装します。その後、SHAP値を使用して特徴の重要性を説明し、結果を`results/shap_importance.png`として保存します。ROC曲線を`results/figures/roc_curve.png`に保存します。最後に、すべての結果と可視化を含むHTMLレポートを生成し、`results/report.html`として保存します。SHAPの可視化が最も影響力のある特徴を明確に強調することを確認してください。XGBoostモデルの堅牢性を検証するために、ロジスティック回帰などの他のモデルとのパフォーマンス比較を含めます。XGBoostモデルを`models/saved_models/`に保存します。",
+  "tags": [
+    "Classification",
+    "Medical Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI Heart Disease\"データセットが使用され、[このリンク](https://archive.ics.uci.edu/dataset/45/heart+disease)からダウンロードされる可能性があります。データセットを`src/data_loader.py`で読み込みます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "特徴選択が`src/data_loader.py`で実装されています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "特徴値が同じ範囲内にあることを保証するデータ標準化が`src/data_loader.py`で実装されています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "\"XGBoost\"モデルが`src/model.py`で実装されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "特徴の重要性の説明に\"SHAP\"値が使用され、結果が`results/figures/shap_importance.png`として保存されています。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "ROC曲線が`results/figures/roc_curve.png`として保存されています。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "結果と可視化を含むHTMLレポートが生成され、`results/report.html`として保存されています。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "XGBoostモデルの堅牢性を検証するために、他のモデル（例：ロジスティック回帰）とのパフォーマンス比較が含まれています。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 8,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "XGBoostモデルが`models/saved_models/`に保存されています。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "SHAPの可視化は明確で、最も影響力のある特徴を強調し、結果を解釈しやすくする必要があります。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Japanese"
+}

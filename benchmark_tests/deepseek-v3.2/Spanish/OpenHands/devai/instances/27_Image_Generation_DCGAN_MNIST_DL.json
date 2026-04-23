@@ -1,0 +1,95 @@
+{
+  "name": "27_Image_Generation_DCGAN_MNIST_DL",
+  "query": "Necesito crear un sistema para la generación de imágenes usando un modelo DCGAN con el conjunto de datos MNIST. Carga el conjunto de datos MNIST en `src/data_loader.py` e implementa el modelo DCGAN en `src/model.py`. El sistema debe asegurar el uso de la arquitectura correcta de DCGAN, guardar las imágenes generadas en `results/figures/`, monitorear el entrenamiento del modelo registrando la pérdida de entrenamiento en `results/metrics/` y las imágenes generadas en `results/figures/`, y realizar una búsqueda de hiperparámetros en los parámetros de generación como las dimensiones del vector de ruido y la tasa de aprendizaje en `src/train.py` para mejorar el rendimiento. Además, crea y guarda una animación GIF de las imágenes generadas en `results/figures/generated_images.gif`, presenta el proceso de entrenamiento y los resultados en un Jupyter Notebook bien estructurado, y convierte el Notebook en un informe PDF pulido guardado como `results/training_report.pdf`. La arquitectura del modelo DCGAN debe estar claramente documentada en el Notebook para evitar confusiones con otras variantes de GAN.",
+  "tags": [
+    "Computer Vision",
+    "Generative Models"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"MNIST\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "El modelo \"DCGAN\", no un GAN estándar, se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Las imágenes generadas se guardan en la carpeta especificada `results/figures/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "El entrenamiento del modelo se monitorea registrando la pérdida de entrenamiento guardada en `results/metrics/`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Se implementa un método de búsqueda de hiperparámetros para buscar parámetros como las dimensiones del vector de ruido y la tasa de aprendizaje en `src/train.py` para mejorar el rendimiento del modelo.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se crea una animación GIF de las imágenes generadas y se guarda como `results/figures/generated_images.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "El proceso de entrenamiento y los resultados se presentan en un Jupyter Notebook, se convierten en un informe PDF y se guardan como `results/training_report.pdf`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "La arquitectura del modelo DCGAN debe estar claramente documentada en el Notebook para evitar confusiones con otras variantes de GAN.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe PDF debe estar bien estructurado, con secciones claras para la arquitectura del modelo, el proceso de entrenamiento, los resultados y las mejoras futuras.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "hint": "Saving figures is mentioned twice, i.e., once in requirement 2 and once in requirement 3.",
+  "language": "Spanish"
+}

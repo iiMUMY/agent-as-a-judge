@@ -1,0 +1,76 @@
+{
+  "name": "08_Robot_Control_PPO_PyBullet_RL",
+  "query": "Ninatafuta kutekeleza mradi unaochunguza udhibiti wa mkono wa roboti kupitia ujifunzaji wa kuimarisha katika mazingira ya simulizi ya PyBullet kwa kutumia algoriti ya PPO. Simulizi ya PyBullet inapaswa kuingizwa na mazingira yanayohusiana na roboti yanapaswa kupakiwa katika `src/env.py`. Algoriti ya PPO inapaswa kutekelezwa katika `src/train.py`. Mradi unapaswa kuandika kwa umakini nafasi ya mwisho ya roboti, kuchapisha na kuihifadhi kama `data/final_position.txt`. Trajectory ya kurudi kwa mafunzo inapaswa kuchorwa na kuhifadhiwa kama `results/figures/training_returns.png`. Mfano wa mwendo wa roboti unapaswa kuonyeshwa na kuhifadhiwa kama `results/figures/robot_motion.gif`. Maelezo ya kina ya usanidi wa mazingira na muundo wa zawadi yanapaswa kutolewa katika `src/env.py`. Tafadhali hakikisha kwamba masuala yoyote ya kupakia faili za URDF katika PyBullet yanashughulikiwa na kuandikwa wazi, kutoa ujumbe wa makosa wazi au kuingia kwa ajili ya utatuzi.",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Simulizi ya \"PyBullet\" inatumika katika `src/env.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Algoriti ya \"PPO\" inatumika katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Maelezo ya kina ya usanidi wa mazingira na muundo wa zawadi yanatolewa katika `src/env.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Nafasi ya mwisho ya roboti inachapishwa na kuhifadhiwa kama `data/final_position.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Mchoro wa kurudi kwa mafunzo kwa muda unarekodiwa na kuhifadhiwa kama `results/figures/training_returns.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Mfano wa mwendo wa roboti unaonyeshwa na kuhifadhiwa kama `results/figures/robot_motion.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mfumo unapaswa kushughulikia kwa ufanisi masuala yanayoweza kutokea ya kupakia faili za URDF katika PyBullet, kutoa ujumbe wa makosa wazi au kuingia kwa ajili ya utatuzi.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

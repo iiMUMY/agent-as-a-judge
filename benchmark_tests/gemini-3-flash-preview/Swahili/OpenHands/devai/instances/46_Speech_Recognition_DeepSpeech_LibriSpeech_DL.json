@@ -1,0 +1,91 @@
+{
+  "name": "46_Speech_Recognition_DeepSpeech_LibriSpeech_DL",
+  "query": "Ningependa kuendeleza mfumo wa utambuzi wa sauti kwa kutumia maktaba ya DeepSpeech na seti ya data ya LibriSpeech kwa ajili yangu. Je, unaweza kutekeleza upakiaji wa data na usindikaji wa sauti, ikiwa ni pamoja na kupunguza kelele na kusawazisha, katika `src/data_loader.py`? Rekebisha vigezo kama vile kiwango cha kujifunza na ukubwa wa kundi katika `src/train.py`. Tafadhali hifadhi matokeo ya utambuzi katika `results/recognition_results.txt`. Kisha, tengeneza michoro ya hatua za usindikaji wa sauti (kama mawimbi na spectrogram) na uhifadhi kama `results/figures/audio_visualization.png`. Tengeneza ripoti ya kina juu ya usahihi wa utambuzi, uchambuzi wa makosa, na mapendekezo ya maboresho ya baadaye, na uhifadhi kama `results/recognition_report.md`. Zaidi ya hayo, andika mchakato wa usanidi wa DeepSpeech, na vidokezo kwa masuala ya kawaida ya usakinishaji, ukitumia [DeepSpeech documentation](https://deepspeech.readthedocs.io/en/r0.9/) kama rejeleo. Hifadhi mfano wa mwisho katika `models/saved_models/`. Asante mapema!",
+  "tags": [
+    "Audio Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"LibriSpeech\" imepakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usindikaji wa sauti, ikiwa ni pamoja na kupunguza kelele na kusawazisha, unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Vigezo kama vile kiwango cha kujifunza na ukubwa wa kundi vinarekebishwa katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Hifadhi mfano wa utambuzi wa sauti katika `models/saved_models/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Matokeo ya utambuzi yamehifadhiwa kama `results/recognition_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Michoro ya usindikaji wa sauti, kama mawimbi na spectrogram, imetengenezwa na kuhifadhiwa kama `results/figures/audio_visualization.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Ripoti inayojumuisha usahihi wa utambuzi, uchambuzi wa makosa, na mapendekezo ya maboresho ya baadaye imetengenezwa na kuhifadhiwa kama `results/recognition_report.md`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mchakato wa usakinishaji wa maktaba ya \"DeepSpeech\" unapaswa kuandikwa vizuri, na vidokezo vya utatuzi ikiwa maktaba itashindwa kusakinishwa. Rejelea [DeepSpeech documentation](https://deepspeech.readthedocs.io/en/r0.9/) kwa mwongozo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Michoro inapaswa kuonyesha wazi hatua za usindikaji wa sauti, na kufanya iwe rahisi kufasiri athari za usindikaji wa awali.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Ripoti inapaswa kujumuisha mapendekezo ya mifano mbadala au mbinu ikiwa maktaba ya \"DeepSpeech\" itakuwa ngumu kutekeleza.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Swahili"
+}

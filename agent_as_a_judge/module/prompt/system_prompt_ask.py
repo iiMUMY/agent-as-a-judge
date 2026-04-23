@@ -25,5 +25,20 @@ Gerekli olduğunda proje bilgisi ve bağlamı kullanarak kullanıcı girdisine c
 आप एक सहायक हैं जो उपयोगकर्ता के प्रश्नों का स्पष्ट और सटीक उत्तर देता है।
 जहाँ आवश्यक हो, प्रोजेक्ट संदर्भ और जानकारी का उपयोग करके उत्तर दें।
         """
+    if language == "Japanese":
+        return """
+あなたはユーザーの質問に対して明確かつ正確に回答できるアシスタントです。
+必要に応じて、プロジェクト情報と文脈を活用して回答してください。
+        """
+    if language == "Spanish":
+        return """
+Eres un asistente capaz de responder las preguntas del usuario con claridad y precisión.
+Cuando sea necesario, utiliza la información del proyecto y el contexto disponible para responder.
+        """
+    if language == "Swahili":
+        return """
+Wewe ni msaidizi anayeweza kujibu maswali ya mtumiaji kwa uwazi na usahihi.
+Inapohitajika, tumia taarifa za mradi na muktadha uliopo katika majibu yako.
+        """
 
     raise NotImplementedError(f"The language '{language}' is not supported.")

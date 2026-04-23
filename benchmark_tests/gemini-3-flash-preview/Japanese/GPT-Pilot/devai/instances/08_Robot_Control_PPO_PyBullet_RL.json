@@ -1,0 +1,76 @@
+{
+  "name": "08_Robot_Control_PPO_PyBullet_RL",
+  "query": "私は、PPOアルゴリズムを用いてPyBulletシミュレーション環境で強化学習によるロボットアーム制御を探求するプロジェクトを実施しようとしています。PyBulletシミュレータはインポートされ、関連するロボティクス環境が`src/env.py`にロードされるべきです。PPOアルゴリズムは`src/train.py`に実装されるべきです。プロジェクトはロボットの最終位置を詳細に記録し、`data/final_position.txt`として印刷および保存する必要があります。トレーニングのリターン軌跡はグラフ化され、`results/figures/training_returns.png`として保存されるべきです。ロボットの動きのサンプルは視覚化され、`results/figures/robot_motion.gif`として保存されるべきです。詳細な環境設定と報酬構造の説明は`src/env.py`に提供されるべきです。PyBulletでのURDFファイルの読み込みに関する問題が明確に処理され、デバッグのための明確なエラーメッセージまたはログが提供されることを確認してください。",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"PyBullet\"シミュレータは`src/env.py`で使用されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"PPO\"アルゴリズムは`src/train.py`で使用されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "詳細な環境設定と報酬構造の説明が`src/env.py`に提供されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "ロボットの最終位置は印刷され、`data/final_position.txt`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "トレーニングのリターンの時間経過曲線は記録され、`results/figures/training_returns.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "ロボットの動きのサンプルは視覚化され、`results/figures/robot_motion.gif`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "システムはPyBulletでのURDFファイルの読み込みに関する潜在的な問題を効果的に処理し、デバッグのための明確なエラーメッセージまたはログを提供するべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

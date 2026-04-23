@@ -1,0 +1,102 @@
+{
+  "name": "36_Music_Emotion_Classification_SVM_GTZAN_ML",
+  "query": "GTZANデータセットを使用してSVMモデルによる音楽感情分類プロジェクトを開発するのを手伝ってください。プロジェクトには、ノイズ除去と正規化のためのlibrosaを使用した音声前処理、13の係数を持つMFCC特徴抽出、およびハイパーパラメータ調整を伴う線形SVM分類器の使用が含まれるべきです。データセットの読み込み、ノイズ除去と正規化を含む音声前処理、およびMFCC特徴抽出は`src/data_loader.py`に実装されなければなりません。SVM分類器は`src/model.py`に実装してください。分類結果を`results/predictions.txt`に保存し、librosaで音声スペクトログラムを視覚化して`results/figures/`に保存し、Streamlitを使用して`src/app.py`にインタラクティブなウェブページを作成し、リアルタイムで音声ファイルをアップロードし、分類結果と`results/figures/`のスペクトログラムを表示できるようにしてください。Streamlitウェブページの起動と終了を自動的に管理することで、効率的なリソース管理を確保してください。",
+  "tags": [
+    "Audio Processing",
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"GTZAN\"音楽感情は`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "ノイズ除去と正規化を含む音声前処理は`src/data_loader.py`で行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "MFCC特徴抽出は`src/data_loader.py`に実装されています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"SVM分類器\"は`src/model.py`に実装されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "分類結果は`results/predictions.txt`に保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "音声スペクトログラムは\"librosa\"で視覚化され、`results/figures/`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "インタラクティブなウェブページは\"Streamlit\"を使用して`src/app.py`に作成され、分類結果と`results/figures/`のスペクトログラムを表示します。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "\"Streamlit\"ウェブページは、ユーザーが新しい音声ファイルをアップロードし、リアルタイムで分類結果を表示できるようにするべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "スペクトログラムの視覚化には、より深い分析のために周波数範囲と時間分解能を調整するオプションを含めるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "システムは、特にStreamlitウェブページの起動と終了の管理において効率的なリソース管理を行うべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

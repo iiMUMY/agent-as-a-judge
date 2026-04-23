@@ -1,0 +1,95 @@
+{
+  "name": "26_Mushroom_Classification_RandomForest_Mushroom_ML",
+  "query": "UCI Mushroomデータセットを使用して、ランダムフォレストモデルによるキノコ分類システムを開発してください。データセットは`src/data_loader.py`ファイルで読み込みます。特徴エンジニアリング（特徴エンコーディングと特徴選択を含む）と欠損データの処理が`src/data_loader.py`でモデルのトレーニング前に完了していることを確認してください。処理済みデータセットでランダムフォレスト分類器を`src/train.py`でトレーニングします。分類結果を`results/classification_results.txt`に保存します。特徴重要度を視覚化し、`results/figures/feature_importance.png`として保存し、視覚化が最も影響力のある特徴を明確に強調していることを確認してください。Streamlitを使用して`src/app.py`にインタラクティブなウェブページを作成し、分類結果とモデルのパフォーマンスを紹介します。Streamlitウェブページはモデルのパフォーマンスの概要を提供し、ユーザーが分類結果と対話できるようにする必要があります。システムはStreamlitの視覚化の開始と終了を適切に管理する必要があります。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"UCI Mushroom\"データセットは`src/data_loader.py`ファイルで読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "特徴エンジニアリングは、`src/data_loader.py`で特徴エンコーディングと特徴選択を含めて実行されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "欠損データは、`src/data_loader.py`でトレーニング前にデータセットがクリーンであることを保証するために処理されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "ランダムフォレスト分類器は、`src/train.py`で処理済みデータセットでトレーニングされます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "分類結果は`results/classification_results.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "特徴重要度は視覚化され、`results/figures/feature_importance.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "インタラクティブなウェブページは、分類結果とモデルのパフォーマンスを紹介するために\"Streamlit\"を使用して`src/app.py`で作成されます。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特徴重要度の視覚化は、最も影響力のある特徴を明確に強調し、解釈しやすくする必要があります。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Streamlitウェブページはモデルのパフォーマンスの概要を提供し、ユーザーが分類結果と対話できるようにする必要があります。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "システムはStreamlitの視覚化の開始と終了を適切に管理します。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

@@ -1,0 +1,94 @@
+{
+  "name": "33_Object_Detection_YOLOv3_COCO_DL",
+  "query": "Nisaidie kuunda mfumo wa kugundua vitu kwa kutumia mfano wa YOLOv3 na seti ya data ya COCO. Pakua seti ya data na uandae picha kwa kubadilisha ukubwa na kufanya kawaida katika `src/data_loader.py`. Tekeleza mfano wa YOLOv3 na tumia Non-Maximum Suppression (NMS) kuboresha matokeo katika `src/model.py`. Hifadhi vitu vilivyogunduliwa katika `results/figures/`, na unda ukurasa wa wavuti wa Streamlit unaoweza kuingiliana katika `src/app.py` ili kuonyesha matokeo ya ugunduzi. Hatimaye, tathmini utendaji wa mfano, ikiwa ni pamoja na vipimo kama mAP na muda wa inference, na hifadhi matokeo ya tathmini katika `results/metrics/model_performance.txt`. Mfumo unapaswa kusimamia vizuri uzinduzi na kumaliza kwa programu ya Streamlit ili kuzuia matumizi yasiyo ya lazima ya rasilimali.",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Upakuaji wa seti ya data ya \"COCO\" unatekelezwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uandaaji wa data, ikiwa ni pamoja na kubadilisha ukubwa na kufanya kawaida kwa picha, unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"YOLOv3\" unatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "\"Non-Maximum Suppression\" (NMS) inatumika kuboresha matokeo ya ugunduzi. Tafadhali tekeleza hii katika `src/model.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya ugunduzi yanahifadhiwa katika folda iliyotajwa `results/figures/`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Ukurasa wa wavuti unaoweza kuingiliana katika `src/app.py` kwa kutumia \"Streamlit\" unaundwa ili kuonyesha matokeo ya ugunduzi yaliyohifadhiwa katika `results/figures/`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya tathmini ya utendaji wa mfano yanahifadhiwa katika `results/metrics/model_performance.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Ukurasa wa wavuti wa \"Streamlit\" unapaswa kuwa rafiki kwa mtumiaji, ukiruhusu watumiaji kupakia na kuona picha mpya kwa urahisi kwa ajili ya ugunduzi.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Tathmini ya utendaji inajumuisha mAP na muda wa inference kama vipimo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Mfumo unapaswa kusimamia vizuri uzinduzi na kumaliza kwa programu ya Streamlit.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

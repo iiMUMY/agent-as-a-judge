@@ -1,0 +1,69 @@
+{
+  "name": "05_Game_Simulation_DQN_CartPole_v1_RL",
+  "query": "PyTorchを使用して、CartPole-v1のようなOpenAI Gym環境でDQNエージェントをトレーニングする信頼性のあるシステムを作成してください。DQNは`src/model.py`でPyTorchを使用して実装してください。環境はメインファイル`src/main.py`でインスタンス化されるべきです。Gym環境IDが変更された場合のように、DQNと環境の間で次元の不一致が発生した場合は、エラーをログに記録してください。また、各エピソード後にリターンを`results/metrics/`にログし、新しいエピソードが終了するたびに更新してください。エピソード曲線上の最終リターンを`results/figures/return_over_time.png`として保存し、最終的にトレーニングされたモデルを`models/saved_models/dqn_model.pt`として保存してください。可能であれば、エピソード曲線上のリターンに注釈を追加して、重要なマイルストーンを示してください。",
+  "tags": [
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"DQN\"アルゴリズムはPyTorchを使用して実装され、`src/model.py`に保存されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "\"OpenAI Gym\"環境は`src/main.py`でインスタンス化されます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "時間経過に伴うリターン曲線がプロットされ、各エピソードのリターンが記録され、`results/figures/reward_over_time.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "トレーニングされたモデルは`models/saved_models/dqn_model.pt`として保存されます。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "各エピソードのリターンは`results/metrics/`にログされ、各エピソード終了後に更新されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "システムは次元の不一致を処理し、デバッグを容易にするために問題をログに記録するべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "エピソード曲線上のリターンには重要なマイルストーンが注釈として追加されています。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

@@ -1,0 +1,91 @@
+{
+  "name": "35_Loan_Default_Prediction_RandomForest_LendingClub_ML",
+  "query": "Lending Club Loanデータセットを使用して、ランダムフォレスト分類器を用いたローンデフォルト予測システムの構築を手伝ってもらえますか？データセットの読み込みから始め、オーバーサンプリングまたはアンダーサンプリング技術を使用して不均衡データを処理し、重要な特徴を特定するための特徴選択を行い、すべてを`src/data_loader.py`に実装します。ランダムフォレストモデルを訓練し、訓練済みモデルを`models/saved_models/`に保存します。特徴の重要度を`results/feature_importances.txt`に保存し、ROC曲線をmatplotlibを使用して`results/figures/roc_curve.png`として保存します。最後に、データ前処理ステップ、モデル訓練、評価プロセスを要約した詳細なMarkdownレポートを作成し、`results/loan_default_prediction_report.md`として保存します。レポートにはモデルのパフォーマンスに関する洞察と潜在的な改善の提案を含めるべきです。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Lending Club Loan\"データセットは`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "不均衡データはオーバーサンプリングまたはアンダーサンプリング技術を使用して処理され、`src/data_loader.py`に実装されます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "重要な特徴を特定するために特徴選択が`src/data_loader.py`で行われます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "ローンデフォルトを予測するために\"Random Forest\"分類器が実装されます。訓練済みモデルは`models/saved_models/`に保存されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "特徴の重要度は`results/feature_importances.txt`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "\"ROC曲線\"は\"matplotlib\"を使用して視覚化され、`results/figures/roc_curve.png`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "データ前処理ステップ、モデル訓練、評価プロセスを含むMarkdownレポートが作成され、`results/loan_default_prediction_report.md`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Markdownレポートは詳細である。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdownレポートにはモデルのパフォーマンスに関する洞察と潜在的な改善の提案を含めるべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

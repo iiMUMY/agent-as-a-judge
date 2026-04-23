@@ -1,0 +1,96 @@
+{
+  "name": "20_Car_Price_Prediction_RandomForest_CarPrices_ML",
+  "query": "Kaggle Car Pricesデータセットを使用して、ランダムフォレストモデルを用いた車の価格予測プロジェクトを作成するのを手伝ってもらえますか？データセットをロードし、`src/data_loader.py`で重要な特徴を特定するために特徴選択を行ってください。`src/train.py`でモデルを評価するためにクロスバリデーションを使用してください。R二乗スコア、平均二乗誤差（MSE）、平均絶対誤差（MAE）を`results/metrics/results/metrics.txt`に保存してください。特徴の重要性を可視化し、`results/figures/feature_importance.png`に保存してください。選択された特徴が車の価格予測にどのように寄与するかについての洞察を含むMarkdownレポートを生成し、`results/report.md`として保存してください。",
+  "tags": [
+    "Financial Analysis",
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Kaggle Car Prices\"データセットが`src/data_loader.py`でロードされます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "重要な特徴を特定するために`src/data_loader.py`で特徴選択が実装されています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"Random Forest\"回帰モデルが`src/model.py`で使用されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "クロスバリデーションが`src/train.py`でモデルを評価するために使用されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"R-squared\"スコア、\"Mean Squared Error (MSE)\", \"Mean Absolute Error (MAE)\"が`results/metrics/results/metrics.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "特徴の重要性が可視化され、`results/figures/feature_importance.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "結果と可視化を含むMarkdownファイルが生成され、`results/report.md`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "特徴選択プロセスは徹底的であり、モデルに使用される最も関連性の高い特徴のみが選ばれるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdownレポートは、選択された特徴が車の価格予測にどのように寄与するかについての明確な洞察を提供するべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

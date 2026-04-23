@@ -6,13 +6,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from agent_as_a_judge.languages import (
+    ALL_LANGUAGES,
+    FRAMEWORKS as DEFAULT_FRAMEWORKS,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
 BENCHMARK_TESTS = ROOT / "benchmark_tests"
 OUTPUT_DIR = ROOT / "figures"
-LANGUAGES = ["English", "Arabic", "Turkish", "Chinese", "Hindi"]
-FRAMEWORKS = ["MetaGPT", "GPT-Pilot", "OpenHands"]
+LANGUAGES = list(ALL_LANGUAGES)
+FRAMEWORKS = list(DEFAULT_FRAMEWORKS)
 FRAMEWORK_COLORS = {
     "MetaGPT": "#4C72B0",
     "GPT-Pilot": "#55A868",
@@ -24,6 +28,9 @@ LANGUAGE_COLORS = {
     "Turkish": "#55A868",
     "Chinese": "#8172B3",
     "Hindi": "#C44E52",
+    "Japanese": "#937860",
+    "Spanish": "#DA8BC3",
+    "Swahili": "#8C8C8C",
 }
 FRAMEWORK_MARKERS = {"MetaGPT": "o", "GPT-Pilot": "s", "OpenHands": "^"}
 

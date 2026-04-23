@@ -1,6 +1,6 @@
 {
     "name": "21_Iris_Classification_SVM_Iris_ML",
-    "query": "I request a project to classify iris species utilizing the Iris dataset with a Support Vector Machine (SVM) classifier implemented in `src/model.py`. The project should standardize the data in and perform feature selection in `src/data_loader.py`. It will document the classification accuracy and save it as `results/metrics/classification_accuracy.txt`, and generate and save a confusion matrix as `results/figures/confusion_matrix.png`. It will further create an interactive web application in `src/app.py` using Streamlit to showcase classification results and model performance, with the figures stored in `results/figures/`. The web page should be user-friendly, with a brief explanation of the model to help users understand how the SVM classifier works.",
+    "query": "I request a project to classify iris species utilizing the Iris dataset with a Support Vector Machine (SVM) classifier implemented in `src/model.py`. The project should standardize the data and perform feature selection in `src/data_loader.py`. It will document the classification accuracy and save it as `results/metrics/classification_accuracy.txt`, and generate and save a confusion matrix as `results/figures/confusion_matrix.png`. It will further create an interactive web application in `src/app.py` using Streamlit to showcase classification results and model performance, with the figures stored in `results/figures/`. The web page should be user-friendly, with a brief explanation of the model to help users understand how the SVM classifier works.",
     "tags": [
         "Classification",
         "Supervised Learning"
@@ -68,7 +68,7 @@
                 4,
                 5
             ],
-            "criteria": "An interactive web application `src/app.py` is created using \"Streamlit\"` to showcase classification results and model performance in results/figures/.",
+            "criteria": "An interactive web application in `src/app.py` is created using \"Streamlit\" to showcase classification results and model performance, with the figures stored in `results/figures/`.",
             "category": "Human Computer Interaction",
             "satisfied": null
         }

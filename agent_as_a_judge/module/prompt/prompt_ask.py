@@ -44,6 +44,39 @@ Yönergelere uygun olarak, verilen bilgilerden uygun olan belirli unsurlara atı
 जहाँ उचित हो, साक्ष्य का संदर्भ देते हुए स्पष्ट उत्तर दें।
     """
 
+    if language == "Japanese":
+        return f"""
+以下はプロジェクトまたはコンテキストに関する情報です:
+{evidence}
+
+ユーザーの質問:
+{question}
+
+必要に応じて関連する根拠を参照しながら、明確で完全な回答をしてください。
+    """
+
+    if language == "Spanish":
+        return f"""
+Información del proyecto o del contexto:
+{evidence}
+
+Pregunta del usuario:
+{question}
+
+Responde de forma clara y completa, citando la evidencia pertinente cuando corresponda.
+    """
+
+    if language == "Swahili":
+        return f"""
+Hapa chini kuna taarifa kuhusu mradi au muktadha:
+{evidence}
+
+Swali la mtumiaji:
+{question}
+
+Toa jibu lililo wazi na kamili, ukirejelea ushahidi husika inapofaa.
+    """
+
     return f"""
 Provided below is relevant information about the project or context:
 {evidence}

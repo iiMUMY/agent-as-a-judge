@@ -1,0 +1,89 @@
+{
+  "name": "32_Weather_Data_Analysis_LinearRegression_Weather_ML",
+  "query": "Desarrollar un sistema de análisis de datos meteorológicos utilizando un modelo de Regresión Lineal en el conjunto de datos Weather de Kaggle. Cargar el conjunto de datos y realizar ingeniería de características, incluyendo selección y generación de características, y manejar los datos faltantes usando imputación por media o interpolación en `src/data_loader.py`. Luego, aplicar el modelo de Regresión Lineal que debe implementarse en `src/model.py`. Visualizar y guardar la matriz de correlación en `results/figures/correlation_matrix.png` y los resultados de la predicción como un gráfico de líneas con intervalos de confianza en `results/figures/prediction_results.png`. Finalmente, crear un informe detallado que cubra el preprocesamiento de datos, la ingeniería de características, el entrenamiento del modelo y los resultados de la predicción. Guardar el informe en `results/weather_analysis_report.pdf`. El proceso de ingeniería de características debe estar bien documentado.",
+  "tags": [
+    "Regression",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Kaggle Weather\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La ingeniería de características, incluyendo la selección y generación de características, se realiza en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Los datos faltantes se manejan usando imputación por media o interpolación en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "El modelo de \"Regresión Lineal\" se utiliza para el análisis de datos meteorológicos y debe implementarse en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "La matriz de correlación se guarda como `results/figures/correlation_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Los resultados de la predicción se grafican y guardan como un gráfico de líneas con intervalos de confianza. El gráfico se guarda como `results/figures/prediction_results.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3,
+        5
+      ],
+      "criteria": "Se crea un informe detallado que contiene el preprocesamiento de datos, la ingeniería de características, el entrenamiento del modelo y los resultados de la predicción, y se guarda como `results/weather_analysis_report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El proceso de ingeniería de características debe estar claramente documentado en el informe, explicando la razón detrás de la selección y generación de características.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe debe incluir una discusión sobre la matriz de correlación, destacando cualquier relación interesante entre las características.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

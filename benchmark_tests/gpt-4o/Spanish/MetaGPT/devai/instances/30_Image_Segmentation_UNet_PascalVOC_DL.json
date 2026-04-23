@@ -1,0 +1,91 @@
+{
+  "name": "30_Image_Segmentation_UNet_PascalVOC_DL",
+  "query": "¿Podrías ayudarme a configurar un proyecto de segmentación de imágenes utilizando el conjunto de datos Pascal VOC y un modelo U-Net preentrenado implementado en PyTorch? No es necesario entrenamiento adicional. Aplica aumento de datos (por ejemplo, volteo y rotación de imágenes), utiliza el coeficiente Dice para la evaluación, guarda las imágenes segmentadas en `results/figures/`, genera y guarda una animación GIF mostrando las imágenes antes y después de la segmentación en `results/figures/segmentation_results.gif`, y crea un Jupyter Notebook bien documentado con la arquitectura del modelo, el proceso y los resultados de la segmentación, convirtiéndolo en un informe HTML (guardándolo como `results/report.html`).",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Pascal VOC\" se utiliza en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El aumento de datos, incluyendo volteo y rotación de imágenes, se realiza en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Se utiliza un modelo \"U-Net\" preentrenado de PyTorch sin entrenamiento adicional y se guarda en `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "El \"coeficiente Dice\" se utiliza para la evaluación y debe guardarse en `results/metrics/`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Las imágenes segmentadas se guardan en la carpeta especificada `results/figures/`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        4
+      ],
+      "criteria": "Se genera una animación GIF de las imágenes antes y después de la segmentación y se guarda como `results/figures/segmentation_results.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se crea un Jupyter Notebook que contiene la arquitectura del modelo, el proceso de aplicación del modelo preentrenado y los resultados de la segmentación. Se convierte en un informe HTML y se guarda como `results/report.html`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El Jupyter Notebook debe incluir fragmentos de código bien documentados que expliquen cada paso del proceso.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "La animación GIF debe mostrar claramente los cambios antes y después de la segmentación sobre diferentes imágenes del conjunto de datos.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

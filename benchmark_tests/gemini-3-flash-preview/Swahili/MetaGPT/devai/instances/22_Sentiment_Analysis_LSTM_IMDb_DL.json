@@ -1,0 +1,89 @@
+{
+  "name": "22_Sentiment_Analysis_LSTM_IMDb_DL",
+  "query": "Je, unaweza kunisaidia kuanzisha mradi wa uchambuzi wa hisia ukitumia mfano wa LSTM na seti ya data ya IMDb? Tafadhali tekeleza usafishaji wa data katika `src/data_loader.py`, ikijumuisha kuondoa maneno ya kusitisha na alama za uakifishaji. Tumia embeddings za maneno kubadilisha maandishi kuwa muundo wa nambari na uhifadhi embeddings hizi chini ya `models/saved_models/`. Kisha tumia embeddings hizi kama ingizo la mfano wa LSTM, ambao unapaswa kutekelezwa katika `src/model.py`. Hifadhi ripoti ya uainishaji kwa `results/metrics/classification_report.txt`. Unda Jupyter Notebook iliyohifadhiwa kama `results/report.ipynb` na usanifu wa mfano na mchakato wa mafunzo umeonyeshwa. Pia, hifadhi mikondo ya hasara ya mafunzo na usahihi kwa `results/figures/training_curves.png`. Embeddings zilizofunzwa awali (mfano, Word2Vec au GloVe) zinapendekezwa ili kuboresha utendaji wa mfano.",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya hakiki za filamu ya \"IMDb\" inatumika.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usafishaji wa data unatekelezwa katika `src/data_loader.py`, ikijumuisha kuondoa maneno ya kusitisha na alama za uakifishaji.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Embeddings za maneno zinatumika kubadilisha maandishi kuwa muundo wa nambari na kuhifadhiwa chini ya `models/saved_models/`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"LSTM\" unatumika kwa uchambuzi wa hisia na unapaswa kutekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Ripoti ya uainishaji inahifadhiwa kama `results/metrics/classification_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Jupyter Notebook inayojumuisha usanifu wa mfano na uonyeshaji wa mchakato wa mafunzo inazalishwa na kuhifadhiwa kama `results/report.ipynb`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Mikondo ya hasara ya mafunzo na usahihi inazalishwa na kuhifadhiwa kama `results/figures/training_curves.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Embeddings za maneno zinapaswa kuwa zilizofunzwa awali (mfano, Word2Vec au GloVe) ili kutumia maarifa ya kisemantiki yaliyopo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Jupyter Notebook inapaswa kuwa na maelezo mazuri, ikifanya iwe rahisi kwa wengine kuelewa usanifu wa mfano na mchakato wa mafunzo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

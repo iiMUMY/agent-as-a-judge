@@ -1,0 +1,97 @@
+{
+  "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+  "query": "ドイツのクレジットデータセットを使用してクレジットスコアを予測するシステムの開発を手伝ってください。このデータセットは[このリンク](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)からダウンロードできます。データセットを読み込み、欠損値の処理や特徴エンコーディングを含む前処理を`src/data_loader.py`で行ってください。`src/model.py`で実装された決定木分類器を使用し、`src/train.py`で交差検証を用いてモデルを評価します。特徴量の重要度を`results/figures/feature_importances.png`で可視化します。分類レポートを生成し、精度、再現率、F1スコアを含めて`results/metrics/classification_report.txt`に保存します。結果と可視化を含むMarkdownレポートを作成し、`results/report.md`に保存します。データセットは適切なエラーハンドリングでスムーズに読み込まれ、Markdownレポートは簡単にレビューできるように整理されているべきです。",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"ドイツのクレジット\"データセットを読み込み、必要に応じて[このリンク](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data)から`src/data_loader.py`ファイルにダウンロードします。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データの前処理は`src/data_loader.py`で行い、欠損値の処理や特徴エンコーディングを含みます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"決定木\"分類器は`src/model.py`で実装されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "交差検証は`src/train.py`でモデルを評価するために使用されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "特徴量の重要度は`results/figures/feature_importances.png`で可視化されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "\"精度\"、\"再現率\"、\"F1スコア\"を含む分類レポートが生成され、`results/metrics/classification_report.txt`に保存されます。",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "結果と可視化を含むMarkdownファイルが生成され、`results/report.md`に保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "データセットはスムーズに読み込まれ、ダウンロード中に問題が発生した場合は明確なエラーハンドリングが行われるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Markdownレポートはよく整理されており、すべての結果と可視化を簡単にレビューできるようにするべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Japanese"
+}

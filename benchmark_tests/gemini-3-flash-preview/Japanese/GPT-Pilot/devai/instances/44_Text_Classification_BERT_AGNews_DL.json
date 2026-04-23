@@ -1,0 +1,84 @@
+{
+  "name": "44_Text_Classification_BERT_AGNews_DL",
+  "query": "こんにちは！事前学習済みのBERTモデルを使用して、AG Newsデータセットでテキスト分類システムを構築するのを手伝ってもらえますか？まず、`src/data_loader.py`でデータを読み込み、前処理を行ってください（ノイズを除去し、トークン化を行うことを含みます）。それが完了したら、BERTモデルのパラメータを`models/saved_models/`に保存してください。BERTモデルを適用し、分類結果を`results/results.txt`に保存してください。また、seabornを使用して混同行列を可視化し、`results/figures/confusion_matrix.png`として保存してください。最後に、入力テキストとその分類結果を`results/`に表示するインタラクティブなJupyter Notebookを作成してください。ノートブックには、転移学習がどのように使用され、そのモデルのパフォーマンスにどのように影響したかを説明していると良いです。同様に、データセットを簡単に入れ替えられるようにし、BERTを再訓練するコードを含めると良いです。ありがとうございます！",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"AG News\"データセットは`src/data_loader.py`で読み込まれます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データの前処理は`src/data_loader.py`で行われ、ノイズ除去とトークン化が含まれます。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "\"BERT\"モデルはテキスト分類に適用され、パラメータは`models/saved_models/`に保存されます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "分類結果は`results/results.txt`として保存されます。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "分類結果の混同行列は\"seaborn\"を使用して可視化され、`results/figures/confusion_matrix.png`として保存されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "インタラクティブな\"Jupyter Notebook\"が作成され、`results`に入力テキストとその分類結果が表示されます。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebookは、転移学習がどのように適用され、モデルのパフォーマンスにどのように影響したかを説明するべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "混同行列の可視化は、正しく分類されたサンプルと誤って分類されたサンプルを明確に区別するべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "システムは、新しいデータで\"BERT\"モデルを簡単に再訓練できるようにするべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

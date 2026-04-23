@@ -1,0 +1,97 @@
+{
+  "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+  "query": "Ayúdame a desarrollar un sistema para predecir puntajes de crédito utilizando el conjunto de datos German Credit, que se puede descargar desde [este enlace](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data). Carga el conjunto de datos y preprocésalo, incluyendo el manejo de valores faltantes y la codificación de características, en `src/data_loader.py`. Usa un clasificador de Árbol de Decisión implementado en `src/model.py` con validación cruzada para evaluar el modelo en `src/train.py`. Visualiza las importancias de las características en `results/figures/feature_importances.png`. Genera un informe de clasificación, incluyendo precisión, recall y F1-score, y guárdalo en `results/metrics/classification_report.txt`. Crea un informe en Markdown con resultados y visualizaciones y guárdalo en `results/report.md`. El conjunto de datos debe cargarse sin problemas con un manejo adecuado de errores, y el informe en Markdown debe estar bien organizado para una fácil revisión.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Carga el conjunto de datos \"German Credit\", potencialmente descargándolo desde [este enlace](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) en el archivo `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de datos se realiza en `src/data_loader.py`, incluyendo el manejo de valores faltantes y la codificación de características.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Un clasificador de \"Árbol de Decisión\" está implementado en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Se utiliza validación cruzada para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Las importancias de las características se visualizan en `results/figures/feature_importances.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Se genera un informe de clasificación, incluyendo \"precisión,\" \"recall,\" y \"F1-score,\" y se guarda como `results/metrics/classification_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Se genera un archivo Markdown que contiene resultados y visualizaciones y se guarda en `results/report.md`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El conjunto de datos debe cargarse sin problemas, con un manejo claro de errores si surgen problemas durante la descarga.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe en Markdown debe estar bien organizado, facilitando la revisión de todos los resultados y visualizaciones.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Spanish"
+}

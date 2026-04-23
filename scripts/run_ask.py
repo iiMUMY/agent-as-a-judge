@@ -12,6 +12,7 @@ import io
 
 from agent_as_a_judge.agent import JudgeAgent
 from agent_as_a_judge.config import AgentConfig
+from agent_as_a_judge.languages import ALL_LANGUAGES
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -107,7 +108,7 @@ def parse_arguments():
         "--language",
         type=str,
         default="English",
-        choices=["English", "Arabic", "Turkish", "Chinese", "Hindi"],
+        choices=list(ALL_LANGUAGES),
         help="Language for prompts and answers",
     )
 

@@ -1,0 +1,90 @@
+{
+  "name": "25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+  "query": "Ninatafuta mradi wa utambuzi wa hisia za sauti kwa kutumia mfano wa CNN-LSTM na seti ya data ya RAVDESS, ambayo inapaswa kupakuliwa kutoka Kaggle au [kiungo hiki cha Hugging Face](https://huggingface.co/datasets/xbgoose/ravdess). Mradi unapaswa kupakia seti ya data na kufanya usindikaji wa sauti thabiti (kuondoa kelele na kuweka sawa) na uchimbaji wa vipengele vya MFCC, vilivyotekelezwa katika `src/data_loader.py`. Mfano wa CNN-LSTM unapaswa kutekelezwa katika `src/model.py`. Usahihi wa utambuzi unapaswa kuhifadhiwa katika `results/metrics/recognition_accuracy.txt`, na matriki ya mkanganyiko inapaswa kuzalishwa na kuhifadhiwa kama `results/figures/confusion_matrix.png`. Zaidi ya hayo, API ya ndani inayofaa mtumiaji inapaswa kuundwa kwa kutumia Flask ili kuruhusu watumiaji kupakia faili za sauti na kupokea matokeo ya utambuzi wa hisia, na utekelezaji unajumuishwa katika `src/hci.py`.",
+  "tags": [
+    "Audio Processing",
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"RAVDESS\" inapakiwa katika `src/data_loader.py`, ambayo inapakuliwa kutoka Kaggle au [kiungo hiki cha Hugging Face](https://huggingface.co/datasets/xbgoose/ravdess).",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usindikaji wa sauti, ikiwa ni pamoja na kuondoa kelele na kuweka sawa, unatekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Uchimbaji wa vipengele vya MFCC unatekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"CNN-LSTM\" unatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Usahihi wa utambuzi unahifadhiwa katika `results/metrics/recognition_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3,
+        4
+      ],
+      "criteria": "Matriki ya mkanganyiko inazalishwa na kuhifadhiwa kama `results/figures/confusion_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "API ya ndani inaundwa kwa kutumia \"Flask\" ili kuruhusu watumiaji kupakia faili za sauti na kupokea matokeo ya utambuzi wa hisia. Utekelezaji unapaswa kujumuishwa katika `src/hci.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Hatua ya usindikaji wa sauti inapaswa kuwa thabiti, kupunguza kelele kwa ufanisi huku ikihifadhi uadilifu wa ishara za sauti.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "API ya ndani inapaswa kuwa rafiki kwa mtumiaji, ikiwa na maelekezo wazi ya kupakia faili na kufasiri matokeo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Swahili"
+}

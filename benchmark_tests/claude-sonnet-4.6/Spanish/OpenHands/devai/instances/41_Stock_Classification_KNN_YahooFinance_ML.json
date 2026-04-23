@@ -1,0 +1,93 @@
+{
+  "name": "41_Stock_Classification_KNN_YahooFinance_ML",
+  "query": "Desarrollar un sistema de clasificación de acciones utilizando un modelo KNN en el conjunto de datos de Yahoo Finance. Su implementación debe decidir si una acción dada aumentará o disminuirá de precio. Comience cargando el conjunto de datos y realizando ingeniería de características, incluyendo la generación de indicadores técnicos y la selección de las características más relevantes en `src/data_loader.py`. Estandarice los datos para asegurar que los valores de las características estén dentro del mismo rango en `src/data_loader.py`. Aplique el clasificador KNN para clasificar acciones basándose en las características desarrolladas, y guarde la implementación en `src/model.py`. A continuación, guarde los resultados de la clasificación en `results/classification_results.txt`, y visualice la correlación entre los indicadores técnicos y el resultado de la clasificación como un mapa de calor usando seaborn. Guarde el mapa de calor como `results/figures/feature_correlation_heatmap.png`. Finalmente, cree un Jupyter Notebook interactivo bajo `results/` que explique el proceso, muestre los resultados de la clasificación, y ayude a facilitar futuras actualizaciones que introduzcan nuevos datos.",
+  "tags": [
+    "Classification",
+    "Financial Analysis",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Yahoo Finance\", incluyendo la carga y preparación de datos en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se realiza ingeniería de características, incluyendo la generación de indicadores técnicos y la selección de características en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos se estandarizan para asegurar que los valores de las características estén dentro del mismo rango en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Se aplica el \"clasificador KNN\" para clasificar acciones basándose en las características desarrolladas. Por favor, guarde la implementación en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Los resultados de la clasificación se guardan en `results/classification_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Un mapa de calor que representa las correlaciones entre los indicadores técnicos y los resultados de la clasificación se guarda como `results/figures/feature_correlation_heatmap.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Se crea un \"Jupyter Notebook\" interactivo bajo `results/` para explicar el proceso y mostrar los resultados de la clasificación.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El Jupyter Notebook debe incluir explicaciones claras de cada paso, incluyendo la ingeniería de características y la evaluación del modelo.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El mapa de calor de correlación debe resaltar los indicadores técnicos más significativos y proporcionar información sobre sus relaciones.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "El sistema debe permitir actualizaciones fáciles con nuevos datos, haciendo que el notebook sea flexible para futuros análisis.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

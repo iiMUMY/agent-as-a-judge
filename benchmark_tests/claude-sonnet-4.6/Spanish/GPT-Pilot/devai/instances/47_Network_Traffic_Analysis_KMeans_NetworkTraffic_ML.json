@@ -1,0 +1,91 @@
+{
+  "name": "47_Network_Traffic_Analysis_KMeans_NetworkTraffic_ML",
+  "query": "Desarrollar un sistema de análisis de tráfico de red utilizando el algoritmo de agrupamiento K-means con el conjunto de datos de Intrusión de Red (CIC-IDS-2017) de Kaggle. Cargar el conjunto de datos y estandarizar los datos para asegurar que los valores de las características estén dentro del mismo rango en `src/data_loader.py`. Implementar el algoritmo de agrupamiento K-means en `src/model.py`. Evaluar los grupos utilizando el coeficiente de silueta y guardar los resultados de la evaluación en `results/metrics/`. Guardar los resultados del agrupamiento como `results/clustering_results.txt`. Visualizar los resultados del agrupamiento y guardar las visualizaciones como `results/figures/network_traffic_visualization.png`. Crear un panel interactivo con Dash o Bokeh para explorar los resultados del agrupamiento, y guardar el panel en `results/`. Asegurar que el sistema sea modular para que un usuario pueda cambiar rápidamente el algoritmo de agrupamiento.",
+  "tags": [
+    "Unsupervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El \"conjunto de datos de Intrusión de Red (CIC-IDS-2017)\" de Kaggle se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos se estandarizan para asegurar que los valores de las características estén dentro del mismo rango en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El algoritmo de agrupamiento \"K-means\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "El \"coeficiente de silueta\" se utiliza para la evaluación. Los resultados de la evaluación se guardan en `results/metrics/`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Los resultados del agrupamiento se imprimen y guardan como `results/clustering_results.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "El agrupamiento del tráfico de red se visualiza y guarda como `results/figures/network_traffic_visualization.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Se crea un panel interactivo usando \"Dash\" o \"Bokeh\" para mostrar los resultados del agrupamiento y se guarda en `results/`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El panel debería permitir a los usuarios filtrar y profundizar en grupos específicos para un análisis detallado.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Las visualizaciones deberían distinguir claramente entre diferentes grupos, facilitando la identificación de patrones en los datos de tráfico de red.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "El proyecto debería ser modular, permitiendo a un usuario cambiar fácilmente el algoritmo de agrupamiento.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

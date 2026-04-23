@@ -1,0 +1,88 @@
+{
+  "name": "19_Time_Series_Forecasting_Seq2Seq_LSTM_Rossmann_ML",
+  "query": "Desarrollar un sistema de pronóstico de ventas utilizando un modelo de secuencia a secuencia basado en LSTM con el conjunto de datos de Ventas de Tiendas Rossmann, descargándolo de Kaggle [aquí](https://www.kaggle.com/c/rossmann-store-sales/data) y cargándolo en `src/data_loader.py`. Dividir los datos en conjuntos de entrenamiento y prueba y guardarlos en `src/data_loader.py`. Aplicar un modelo de secuencia a secuencia basado en `LSTM` y guardar el modelo entrenado en el directorio `models/saved_models/`. Guardar los resultados del pronóstico como `results/figures/forecast_results.png`. Guardar un gráfico de comparación entre los valores predichos y reales en `results/figures/comparison_plot.png`. Generar un informe HTML que incluya los resultados de las predicciones y los gráficos de comparación, con algunos elementos interactivos para explorar diferentes horizontes de pronóstico, y guardarlo como `results/report.html`. Asegurarse de que el modelo esté ajustado para capturar tendencias estacionales en los datos de ventas.",
+  "tags": [
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Rossmann Store Sales\", potencialmente descargado de Kaggle [este enlace](https://www.kaggle.com/c/rossmann-store-sales/data) y cargado en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Los datos se dividen en conjuntos de entrenamiento y prueba e implementados en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Se utiliza un modelo de secuencia a secuencia basado en \"LSTM\". Por favor, guarde el modelo entrenado en el directorio `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Los resultados del pronóstico se grafican y guardan como `results/figures/forecast_results.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Un gráfico de comparación de valores predichos vs. reales se guarda como `results/figures/comparison_plot.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Se genera un informe HTML que contiene los resultados del pronóstico y los gráficos de comparación y se guarda como `results/report.html`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        5
+      ],
+      "criteria": "El informe HTML debe incluir elementos interactivos que permitan a los usuarios explorar diferentes horizontes de pronóstico.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El modelo debe estar ajustado para capturar tendencias estacionales en los datos de ventas para un pronóstico más preciso.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": true,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Spanish"
+}

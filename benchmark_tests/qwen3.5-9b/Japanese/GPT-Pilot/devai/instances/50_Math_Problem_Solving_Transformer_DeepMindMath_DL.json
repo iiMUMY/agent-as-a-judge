@@ -1,0 +1,113 @@
+{
+  "name": "50_Math_Problem_Solving_Transformer_DeepMindMath_DL",
+  "query": "こんにちは！DeepMind Mathematicsデータセットから数学問題を解くためにTransformerモデルを使用するプロジェクトの手助けが必要です。データセットを読み込み、`src/data_loader.py`で前処理を行ってください。前処理は数学式を構文的に一貫した方法で解析し標準化するべきで、モデルが容易に処理できるようにしてください。`src/model.py`でTransformerを実装してください。また、`src/train.py`で学習率やバッチサイズなどのハイパーパラメータを調整し、トレーニング損失曲線を`results/figures/training_loss_curve.png`に保存してください。Transformerが生成したいくつかの解を`results/sample_solutions.txt`にサンプルとして保存してください。モデルを使用して、`src/interface.py`でGradioまたはStreamlitを使った簡単なインタラクティブツールを作成し、ユーザーが与えた様々な数学問題を解決できるようにしてください。最後に、モデルが異なる種類の問題に対してどのように機能するかについてのレポートを生成し、モデルの精度、エラー分析、将来の改善提案を含めてください。`results/metrics/model_report.md`として保存してください。事前にありがとうございます！",
+  "tags": [
+    "Natural Language Processing"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "DeepMind Mathematicsデータセットが`src/data_loader.py`で読み込まれています。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データの前処理が`src/data_loader.py`で行われ、数学式の解析と標準化が含まれています。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "「Transformer」モデルが`src/model.py`で実装されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "学習率やバッチサイズなどのハイパーパラメータが`src/train.py`で調整されています。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "モデルのトレーニング損失曲線が`results/figures/training_loss_curve.png`として保存されています。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Transformerが生成したいくつかの解が`results/sample_solutions.txt`に保存されています。",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "インタラクティブツールが作成され、ユーザーが数学問題を入力し、「Gradio」または「Streamlit」を使用して解決することができるようになっています。`src/interface.py`で。",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "モデルの精度、エラー分析、将来の改善提案を含むレポートが生成され、`results/metrics/model_report.md`として保存されています。",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "前処理ステップは、数学式がモデルによって容易に処理されるように標準化されているべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "インタラクティブツールは、幅広い種類の数学問題を扱えるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "レポートは、モデルが異なる種類の数学問題をどのように処理するかについての洞察を提供し、特定の強みと改善の余地を特定するべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

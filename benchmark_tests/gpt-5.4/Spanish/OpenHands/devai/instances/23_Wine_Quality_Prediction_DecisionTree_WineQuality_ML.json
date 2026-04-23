@@ -1,0 +1,98 @@
+{
+  "name": "23_Wine_Quality_Prediction_DecisionTree_WineQuality_ML",
+  "query": "Construir un sistema de predicción de calidad de vino utilizando un modelo de Árbol de Decisión con el conjunto de datos de Calidad de Vino de UCI. Preprocesar los datos en `src/data_loader.py`, incluyendo el manejo de valores faltantes y la escala de características. Usar validación cruzada para evaluar el modelo en `src/train.py`. Implementar el modelo de regresión de Árbol de Decisión en `src/model.py`. Guardar el error cuadrático medio en `results/metrics/mean_squared_error.txt`. Visualizar y guardar la importancia de las características como `results/figures/feature_importance.png`. Crear un Jupyter Notebook con resultados y visualizaciones, y resumir tus observaciones. El Notebook debe documentar exhaustivamente los pasos de preprocesamiento para asegurar la reproducibilidad. Convertir el Notebook a un informe PDF y guardarlo como `results/report.pdf`. El informe PDF también debe incluir una breve discusión sobre posibles mejoras del modelo.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos \"Wine Quality\" de \"UCI\".",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "El preprocesamiento de datos se realiza en `src/data_loader.py`, incluyendo el manejo de valores faltantes y la escala de características.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El modelo de regresión de \"Árbol de Decisión\" se implementa en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se utiliza validación cruzada para evaluar el modelo en `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "El Error Cuadrático Medio (MSE) se guarda en `results/metrics/mean_squared_error.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "La gráfica de importancia de características se genera y guarda como `results/figures/feature_importance.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Se genera un Jupyter Notebook que contiene los pasos de preprocesamiento, resultados y visualizaciones con observaciones resumidas. El Notebook se convierte en un informe PDF y se guarda como `results/report.pdf`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "La gráfica de importancia de características debe resaltar claramente las características más influyentes.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El informe PDF final debe incluir una breve discusión sobre posibles mejoras del modelo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

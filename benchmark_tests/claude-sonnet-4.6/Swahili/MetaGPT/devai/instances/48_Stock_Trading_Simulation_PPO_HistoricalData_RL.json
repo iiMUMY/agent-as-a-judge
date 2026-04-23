@@ -1,0 +1,96 @@
+{
+  "name": "48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+  "query": "Habari! Ninavutiwa na kuendeleza wakala wa biashara ya hisa kwa kutumia algoriti ya Proximal Policy Optimization (PPO). Wazo ni kutumia data ya kihistoria ya soko kwa mafunzo na majaribio. Mazingira ya simulizi ya biashara ya hisa yanapaswa kutekelezwa katika `src/env.py`. Algoriti ya Proximal Policy Optimization (PPO) inapaswa kutekelezwa katika `src/train.py`. Tafadhali hifadhi wakala aliyefunzwa chini ya `models/saved_models/`. Rekodi maamuzi yote ya biashara katika `results/trade_decisions.txt` na hifadhi faida jumla katika `results/metrics/total_profit.txt`. Onyesha mchakato wa faida na uhifadhi kama `results/figures/profit_curve.png`. Tengeneza ripoti inayojumuisha mkakati wa biashara, faida, na uchambuzi wa hatari, na uhifadhi kama `results/trading_strategy_report.md`. Tekeleza zana ya maingiliano kwa kutumia Streamlit katika `src/visualize.py` inayoruhusu watumiaji kujaribu vigezo tofauti na kuendesha simulizi.",
+  "tags": [
+    "Financial Analysis",
+    "Reinforcement Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Mazingira ya simulizi ya biashara ya hisa yanatekelezwa katika `src/env.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data ya kihistoria ya soko inatumika kwa mafunzo na majaribio.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Algoriti ya \"Proximal Policy Optimization (PPO)\" inatekelezwa katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Maamuzi ya biashara yanarekodiwa na kuhifadhiwa kama `results/trade_decisions.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        3
+      ],
+      "criteria": "Faida jumla inahifadhiwa kama `results/metrics/total_profit.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Mchakato wa faida unaonyeshwa na kuhifadhiwa kama `results/figures/profit_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        4
+      ],
+      "criteria": "Ripoti inayojumuisha mkakati wa biashara, faida, na uchambuzi wa hatari inatengenezwa na kuhifadhiwa kama `results/trading_strategy_report.md`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 7,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Zana ya maingiliano inayoruhusu watumiaji kujaribu vigezo tofauti na kuendesha simulizi kwa kutumia \"Streamlit\" inatekelezwa katika `src/visualize.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Uonyeshaji wa mchakato wa faida unapaswa kuonyesha biashara au matukio muhimu ambayo yaliathiri utendaji.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti inapaswa kujumuisha maarifa juu ya jinsi urekebishaji wa vigezo unavyoathiri matokeo ya biashara.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

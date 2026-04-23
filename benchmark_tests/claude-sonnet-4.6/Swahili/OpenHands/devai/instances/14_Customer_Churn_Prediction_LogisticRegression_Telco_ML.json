@@ -1,0 +1,95 @@
+{
+  "name": "14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+  "query": "Nisaidie kuunda mfumo wa kutabiri mteja kuacha kutumia huduma kwa kutumia seti ya data ya Telco Customer Churn, ambayo inaweza kupakuliwa kutoka [kiungo hiki](https://huggingface.co/datasets/scikit-learn/churn-prediction). Pakia seti ya data katika `src/data_loader.py`. Mradi unapaswa kujumuisha uhandisi wa vipengele, kama vile uteuzi wa vipengele na upimaji, na kushughulikia data isiyo na uwiano kwa kutumia mbinu za kuongeza au kupunguza sampuli zilizotekelezwa katika `src/data_loader.py`. Maelezo halisi ya hili yameachwa kwako kuamua. Tekeleza modeli ya Logistic Regression katika `src/model.py` na fanya uthibitishaji wa msalaba wakati wa kufundisha modeli katika `src/train.py`. Hatimaye, chapisha na hifadhi ripoti ya uainishaji (ikiwemo usahihi, kumbukumbu, na alama ya F1) kwa `results/metrics/classification_report.txt`, na hifadhi mchoro wa ROC kwa `results/figures/roc_curve.png`. Hakikisha seti ya data inapakia vizuri na kushughulikia makosa ipasavyo. Uhandisi wa vipengele unapaswa kuchagua vipengele muhimu zaidi kwa kina.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Telco Customer Churn\" inatumika, ambayo inaweza kupakuliwa kutoka [kiungo hiki](https://huggingface.co/datasets/scikit-learn/churn-prediction). Pakia seti ya data katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uhandisi wa vipengele, ikiwa ni pamoja na uteuzi wa vipengele na upimaji, unatekelezwa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Data isiyo na uwiano inashughulikiwa kwa kutumia mbinu za kuongeza au kupunguza sampuli katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Modeli ya \"Logistic Regression\" inatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2,
+        3
+      ],
+      "criteria": "Uthibitishaji wa msalaba unatumika kutathmini modeli katika `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Ripoti ya uainishaji, ikiwa ni pamoja na \"usahihi,\" \"kumbukumbu,\" na \"alama ya F1,\" inahifadhiwa kama `results/metrics/classification_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Mchoro wa \"ROC curve\" unahifadhiwa kama `results/figures/roc_curve.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Seti ya data inapaswa kupakia vizuri, na kushughulikia makosa ipasavyo ikiwa matatizo yatatokea wakati wa kupakua.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Mchakato wa uhandisi wa vipengele unapaswa kuwa wa kina, kuhakikisha kwamba vipengele muhimu zaidi vinachaguliwa kwa modeli.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Swahili"
+}

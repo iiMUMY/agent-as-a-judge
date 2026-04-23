@@ -1,0 +1,92 @@
+{
+  "name": "49_Explainable_AI_LIME_Titanic_ML",
+  "query": "¡Hola! Estoy buscando crear un proyecto que explique las predicciones del modelo usando LIME, específicamente con el conjunto de datos de predicción de supervivencia del Titanic. Primero, carga el conjunto de datos en `src/data_loader.py`. Luego, entrena un clasificador de Bosque Aleatorio y guárdalo en `models/saved_models/`. Finalmente, utiliza LIME para explicar las predicciones del clasificador de Bosque Aleatorio e impleméntalo en `src/visualize.py`. Genera un informe que incluya las explicaciones y guárdalo como `results/model_explanation.md`. El informe debe construirse con Dash o Bokeh, implementado en `src/report.py`, para que los usuarios puedan explorar cómo diferentes características afectan las predicciones del modelo. La explicación debe ser clara y fácil de entender para personas no técnicas. Además, guarda un gráfico de importancia de características bien etiquetado e intuitivo en `results/figures/feature_importance.png`. ¡Gracias!",
+  "tags": [
+    "Classification"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos de predicción de supervivencia del \"Titanic\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Se entrena un \"clasificador de Bosque Aleatorio\" para la predicción de supervivencia.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Se utiliza \"LIME\" para la explicación de las predicciones del modelo y se implementa en `src/visualize.py`.",
+      "category": "Human Computer Interaction",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Se genera un informe de explicación de las predicciones del modelo y se guarda como `results/model_explanation.md`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2
+      ],
+      "criteria": "Se guarda un gráfico de importancia de características como `results/figures/feature_importance.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "criteria": "Se crea un informe interactivo que muestra el impacto de diferentes características en las predicciones usando \"Dash\" o \"Bokeh\" y se implementa en `src/report.py`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "El modelo entrenado se guarda en `models/saved_models/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El informe de explicación debe estar escrito en un estilo claro y accesible, haciéndolo comprensible incluso para aquellos sin un profundo conocimiento técnico.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El gráfico de importancia de características debe ser visualmente intuitivo, con etiquetas y descripciones claras.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

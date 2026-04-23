@@ -1,0 +1,97 @@
+{
+  "name": "16_Credit_Scoring_DecisionTree_GermanCredit_ML",
+  "query": "Nisaidie kuendeleza mfumo wa kutabiri alama za mkopo kwa kutumia seti ya data ya German Credit, ambayo inaweza kupakuliwa kutoka [kiungo hiki](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data). Pakia seti ya data na uifanyie usindikaji wa awali, ikiwa ni pamoja na kushughulikia thamani zinazokosekana na usimbaji wa vipengele, katika `src/data_loader.py`. Tumia classifier ya Decision Tree iliyotekelezwa katika `src/model.py` na utumie cross-validation kutathmini mfano katika `src/train.py`. Onyesha umuhimu wa vipengele katika `results/figures/feature_importances.png`. Tengeneza ripoti ya uainishaji, ikiwa ni pamoja na usahihi, urejeshaji, na F1-score, na uhifadhi katika `results/metrics/classification_report.txt`. Tengeneza ripoti ya Markdown yenye matokeo na vielelezo na uhifadhi katika `results/report.md`. Seti ya data inapaswa kupakiwa vizuri na kushughulikia makosa ipasavyo, na ripoti ya Markdown inapaswa kupangwa vizuri kwa urahisi wa mapitio.",
+  "tags": [
+    "Classification",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Pakia seti ya data ya \"German Credit\", ikiwezekana kuipakua kutoka [kiungo hiki](https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data) katika faili `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usindikaji wa awali wa data unafanywa katika `src/data_loader.py`, ikiwa ni pamoja na kushughulikia thamani zinazokosekana na usimbaji wa vipengele.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Classifier ya \"Decision Tree\" imetekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Cross-validation inatumika kutathmini mfano katika `src/train.py`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Umuhimu wa vipengele unaonyeshwa katika `results/figures/feature_importances.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Ripoti ya uainishaji, ikiwa ni pamoja na \"usahihi,\" \"urejeshaji,\" na \"F1-score,\" inatengenezwa na kuhifadhiwa kama `results/metrics/classification_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Faili ya Markdown yenye matokeo na vielelezo inatengenezwa na kuhifadhiwa katika `results/report.md`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Seti ya data inapaswa kupakiwa vizuri, na kushughulikia makosa kwa uwazi ikiwa kuna matatizo yoyote yanayotokea wakati wa kupakua.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya Markdown inapaswa kupangwa vizuri, ikifanya iwe rahisi kupitia matokeo yote na vielelezo.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": true,
+  "language": "Swahili"
+}

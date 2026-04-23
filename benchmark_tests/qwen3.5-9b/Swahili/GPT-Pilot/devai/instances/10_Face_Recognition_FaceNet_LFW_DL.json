@@ -1,0 +1,85 @@
+{
+  "name": "10_Face_Recognition_FaceNet_LFW_DL",
+  "query": "Nisaidie kuunda mradi wa utambuzi wa uso wa PyTorch ukitumia mfano wa FaceNet na seti ya data ya LFW. Pakia seti ya data katika `src/model.py`. Pata mfano kutoka Hugging Face (unaweza kuupata kwenye https://huggingface.co/py-feat/facenet) na uuhifadhi katika `models/saved_models/`. Hakikisha data imeandaliwa ili kuhakikisha usanifishaji wa picha za uso katika `src/data_loader.py`. Tumia embeddings za uso katika `src/model.py` ili kuboresha utendaji wa mfumo wako. Chapisha usahihi wa utambuzi na uuhifadhi katika `results/metrics/recognition_accuracy.txt`. Kisha, onyesha matokeo ya embedding na uyahifadhi kama `results/figures/embedding_visualization.png`. Mfano unapaswa kupakia bila matatizo, ikiwezekana na utunzaji wa makosa ikiwa kuna tatizo. Mionyesho inapaswa kufanya iwe rahisi kuona jinsi embeddings zinavyowakilisha vipengele tofauti vya uso.",
+  "tags": [
+    "Computer Vision",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"LFW\" (Labeled Faces in the Wild) inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Ulinganifu wa data na usanifishaji wa picha za uso unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"FaceNet\" katika \"PyTorch\" unatumika, ukipakiwa kutoka [Hugging Face](https://huggingface.co/py-feat/facenet). Hifadhi mfano katika models/saved_models/.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Embeddings za uso zinatumika katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Usahihi wa utambuzi unachapishwa na kuhifadhiwa kama `results/metrics/recognition_accuracy.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya embedding yanaonyeshwa na kuhifadhiwa kama `results/figures/embedding_visualization.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Mchakato wa kupakia mfano unapaswa kuwa laini, na utunzaji wazi wa masuala yoyote ikiwa mfano utashindwa kupakia.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Mionyesho ya embeddings inapaswa kuwa wazi na kuonyesha kwa ufanisi vipengele tofauti vya uso.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": true,
+  "hint": "The page https://huggingface.co/py-feat/facenet provides guidance on how to use FaceNet; however, Hugging Face does not currently offer a model entry for direct use.",
+  "language": "Swahili"
+}

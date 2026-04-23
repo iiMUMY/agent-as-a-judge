@@ -1,0 +1,89 @@
+{
+  "name": "22_Sentiment_Analysis_LSTM_IMDb_DL",
+  "query": "¿Podrías ayudarme a configurar un proyecto de análisis de sentimientos usando un modelo LSTM y el conjunto de datos IMDb? Por favor, implementa la limpieza de datos en `src/data_loader.py`, incluyendo la eliminación de palabras vacías y puntuación. Usa incrustaciones de palabras para convertir el texto a un formato numérico y guarda estas incrustaciones en `models/saved_models/`. Luego, utiliza estas incrustaciones como entrada de un modelo LSTM, que debe ser implementado en `src/model.py`. Guarda el informe de clasificación en `results/metrics/classification_report.txt`. Crea un Jupyter Notebook guardado como `results/report.ipynb` con la arquitectura del modelo y el proceso de entrenamiento visualizados. Además, guarda las curvas de pérdida y precisión del entrenamiento en `results/figures/training_curves.png`. Se prefieren las incrustaciones preentrenadas (por ejemplo, Word2Vec o GloVe) para mejorar el rendimiento del modelo.",
+  "tags": [
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Se utiliza el conjunto de datos de reseñas de películas \"IMDb\".",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La limpieza de datos se implementa en `src/data_loader.py`, incluyendo la eliminación de palabras vacías y puntuación.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Se utilizan incrustaciones de palabras para convertir el texto a formato numérico y se guardan en `models/saved_models/`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Se utiliza un modelo \"LSTM\" para el análisis de sentimientos y debe ser implementado en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Se guarda un informe de clasificación como `results/metrics/classification_report.txt`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Se genera un Jupyter Notebook que contiene la visualización de la arquitectura del modelo y el proceso de entrenamiento, y se guarda como `results/report.ipynb`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Se generan y guardan las curvas de pérdida y precisión del entrenamiento como `results/figures/training_curves.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Las incrustaciones de palabras deben estar preentrenadas (por ejemplo, Word2Vec o GloVe) para aprovechar el conocimiento semántico existente.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El Jupyter Notebook debe estar bien documentado, facilitando que otros entiendan la arquitectura del modelo y el proceso de entrenamiento.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

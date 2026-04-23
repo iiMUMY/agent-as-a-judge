@@ -1,66 +1,9 @@
 import argparse
 import json
-import re
-import time
 from pathlib import Path
 
 from dotenv import load_dotenv
-from litellm import completion
-
-
-def _extract_json_block(text: str) -> dict:
-    text = text.strip()
-    if text.startswith("```"):
-        text = re.sub(r"^```(?:json)?\s*", "", text)
-        text = re.sub(r"\s*```$", "", text)
-    try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        start = text.find("{")
-        end = text.rfind("}")
-        if start == -1 or end == -1 or end <= start:
-            raise
-        return json.loads(text[start : end + 1])
-
-
-def _translate_payload(payload: dict, model: str, language: str, retries: int = 5) -> dict:
-    system_prompt = (
-        "You are a precise software benchmark translator. "
-        "Translate text to the target language while preserving technical meaning."
-    )
-    user_prompt = (
-        f"Target language: {language}\n"
-        "Translate the JSON fields below.\n"
-        "Rules:\n"
-        "1) Translate all natural language text completely to the target language.\n"
-        "2) Keep technical tokens, library names, code identifiers, file paths, and numbers unchanged when appropriate.\n"
-        "3) Preserve punctuation and intent.\n"
-        "4) Return ONLY valid JSON with exactly these keys: query, requirements, preferences.\n"
-        "5) requirements and preferences must keep the exact same list lengths.\n"
-        "6) Do not add explanations or markdown.\n\n"
-        f"Input JSON:\n{json.dumps(payload, ensure_ascii=False)}"
-    )
-
-    last_error = None
-    for attempt in range(1, retries + 1):
-        try:
-            response = completion(
-                model=model,
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt},
-                ],
-                temperature=0,
-            )
-            content = response.choices[0].message.content or ""
-            translated = _extract_json_block(content)
-            if not isinstance(translated, dict):
-                raise ValueError("Translated output is not an object")
-            return translated
-        except Exception as exc:  # noqa: BLE001
-            last_error = exc
-            time.sleep(min(2 * attempt, 8))
-    raise RuntimeError(f"Translation failed after {retries} attempts: {last_error}")
+from agent_as_a_judge.translation_utils import translate_payload
 
 
 def main() -> None:
@@ -87,7 +30,7 @@ def main() -> None:
             "preferences": [p.get("criteria", "") for p in preferences],
         }
 
-        translated = _translate_payload(payload, model=args.model, language=args.language)
+        translated = translate_payload(payload, model=args.model, language=args.language)
 
         if "query" not in translated or "requirements" not in translated or "preferences" not in translated:
             raise ValueError(f"Missing required keys in translation for {instance_file.name}")

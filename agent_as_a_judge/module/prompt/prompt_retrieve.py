@@ -54,6 +54,45 @@ def get_text_retrieve_prompt(
         संबंधित फ़ाइलों/फ़ंक्शनों की नवीनतम स्थिति का संक्षिप्त विश्लेषण दें और अप्रासंगिक जानकारी हटाएँ।
         """
 
+    if language == "Japanese":
+        return f"""
+        以下は操作、手順、およびファイル処理のログです:
+        {long_context}
+
+        次の基準に直接関係する証拠を簡潔に要約してください:
+        {criteria}
+
+        関連するファイルや操作が最後に1回または2回登場した箇所に注目してください。
+        私はローカルでファイルを確認できるため、ファイルの存在や内容の詳細は省略してください。
+        関連するファイルや関数の最新状態を簡潔に分析し、無関係な情報は除外してください。
+        """
+
+    if language == "Spanish":
+        return f"""
+        A continuación se muestra un registro de acciones, pasos y operaciones sobre archivos:
+        {long_context}
+
+        Resume de forma concisa la evidencia directamente relacionada con el siguiente criterio:
+        {criteria}
+
+        Concéntrate en la última o las dos últimas menciones de archivos o acciones relevantes.
+        Como puedo revisar los archivos localmente, omite detalles sobre existencia de archivos y contenido.
+        Proporciona un análisis breve del estado más reciente de los archivos o funciones relevantes y excluye la información irrelevante.
+        """
+
+    if language == "Swahili":
+        return f"""
+        Hapa chini kuna kumbukumbu ya vitendo, hatua, na operesheni za faili:
+        {long_context}
+
+        Fupisha ushahidi unaohusiana moja kwa moja na kigezo hiki:
+        {criteria}
+
+        Zingatia kutajwa kwa mwisho au kwa mwisho wa pili kwa faili au vitendo husika.
+        Kwa kuwa ninaweza kukagua faili ndani ya mazingira ya ndani, acha maelezo ya uwepo wa faili au yaliyomo ndani yake.
+        Toa uchambuzi mfupi wa hali ya hivi karibuni ya faili au kazi husika, na uondoe taarifa zisizohusika.
+        """
+
     return f"""
         Below is a log of actions, steps, and file operations:
         {long_context}

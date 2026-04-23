@@ -1,0 +1,78 @@
+{
+  "name": "01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+  "query": "¡Hola! ¿Podrías ayudarme a configurar un sistema para clasificar imágenes del conjunto de datos Fashion-MNIST usando el modelo ResNet-18 en PyTorch? El conjunto de datos Fashion-MNIST debería cargarse en `src/data_loader.py`. Me gustaría que el sistema mostrara el progreso del entrenamiento con la biblioteca tqdm en el bucle de entrenamiento en `src/train.py` y que realizara alguna ampliación de datos con `torchvision.transforms` (como rotación y escalado) para hacer el modelo más robusto. Esto último debería implementarse en `src/data_loader.py` y el modelo ResNet-18 debería importarse desde PyTorch en `src/model.py`. Una vez finalizado el entrenamiento, por favor guarda el modelo entrenado como `fashionnet.pt` en el directorio `models/saved_models/`. Sería genial si el proceso de entrenamiento pudiera ser lo más eficiente posible. Además, intenta escribir el código de una manera fácilmente comprensible y mantenible. Si puedes, sería increíble incluir algunas ideas sobre la interpretabilidad del modelo también, como usando Grad-CAM o algo similar. ¡Muchas gracias!",
+  "tags": [
+    "Classification",
+    "Computer Vision",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "El conjunto de datos \"Fashion-MNIST\" se carga en `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "La ampliación de datos se realiza usando `torchvision.transforms`, incluyendo rotación, escalado, etc. La implementación está en `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "El modelo \"ResNet-18\" se importa desde \"PyTorch\" en `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "El progreso del entrenamiento se muestra usando la biblioteca \"tqdm\" en el bucle principal de entrenamiento en `src/train.py`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "El modelo entrenado se guarda bajo el nombre de archivo `fashionnet.pt` en `models/saved_models/`.",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "El código debe escribirse de manera clara, comprensible y mantenible con comentarios apropiados.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "El proceso de entrenamiento debe ser eficiente.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Se deben proporcionar ideas sobre la interpretabilidad del modelo, como usar técnicas como Grad-CAM para visualización.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Spanish"
+}

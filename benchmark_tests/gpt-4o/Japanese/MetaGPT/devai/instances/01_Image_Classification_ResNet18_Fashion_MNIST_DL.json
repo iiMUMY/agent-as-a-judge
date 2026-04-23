@@ -1,0 +1,78 @@
+{
+  "name": "01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+  "query": "こんにちは！Fashion-MNISTデータセットから画像を分類するシステムをPyTorchのResNet-18モデルを使ってセットアップするのを手伝ってもらえますか？Fashion-MNISTデータセットは`src/data_loader.py`でロードされるべきです。トレーニングの進捗を`src/train.py`のトレーニングループでtqdmライブラリを使って表示し、モデルをより堅牢にするために`torchvision.transforms`を使ってデータ拡張（回転やスケーリングなど）を行いたいです。後者は`src/data_loader.py`で実装され、ResNet-18モデルは`src/model.py`でPyTorchからインポートされるべきです。トレーニングが完了したら、トレーニング済みモデルを`models/saved_models/`ディレクトリに`fashionnet.pt`として保存してください。トレーニングプロセスができるだけ効率的であると素晴らしいです。また、コードが理解しやすく、メンテナンスしやすいスタイルで書かれていると嬉しいです。可能であれば、Grad-CAMなどを使ってモデルの解釈可能性に関する洞察も含めていただけると最高です。ありがとうございます！",
+  "tags": [
+    "Classification",
+    "Computer Vision",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "\"Fashion-MNIST\"データセットは`src/data_loader.py`でロードされます。",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "データ拡張は`torchvision.transforms`を使用して行われ、回転やスケーリングなどが含まれます。実装は`src/data_loader.py`にあります。",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "\"ResNet-18\"モデルは`src/model.py`で\"PyTorch\"からインポートされます。",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "トレーニングの進捗は`src/train.py`のメイントレーニングループで\"tqdm\"ライブラリを使用して表示されます。",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "トレーニング済みモデルは`models/saved_models/`に`fashionnet.pt`というファイル名で保存されます。",
+      "category": "Save Trained Model",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "コードは適切なコメントを含め、明確で理解しやすく、メンテナンスしやすいスタイルで書かれるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "トレーニングプロセスは効率的であるべきです。",
+      "satisfied": null
+    },
+    {
+      "preference_id": 2,
+      "criteria": "Grad-CAMなどの技術を使用して、モデルの解釈可能性に関する洞察を提供するべきです。",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Japanese"
+}

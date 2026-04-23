@@ -1,0 +1,99 @@
+{
+  "name": "12_Spam_Detection_SVM_Enron_ML",
+  "query": "Habari. Nahitaji ujenge mradi wa kugundua barua pepe za spam kwa kutumia kielekezi cha Support Vector Machine (SVM) kwenye seti ya data ya Enron-Spam. Mradi unapaswa kusindika maandishi kwa kuondoa maneno ya kusitisha na alama za uakifishaji, kutumia vipengele vya TF-IDF, kufanya tuning ya hyperparameter kwa kutumia GridSearchCV, na kuhifadhi matriki ya mkanganyiko kwenye `results/figures/confusion_matrix.png`. Pia nahitaji kuandika na kuhifadhi ripoti ya kina, ikijumuisha usahihi, kumbukumbu, alama ya F1, na matriki ya mkanganyiko (itakayotengenezwa kama `results/figures/confusion_matrix.png`), chini ya `results/classification_report.pdf`. Seti ya data ya Enron-Spam inapaswa kupakiwa katika `src/data_loader.py`. Usindikaji wa maandishi, ikijumuisha kuondoa maneno ya kusitisha na alama za uakifishaji, na kuhesabu vipengele vya TF-IDF unapaswa kufanywa katika `src/data_loader.py`. Kielekezi cha SVM kinapaswa kutekelezwa katika `src/model.py`. Tuning ya hyperparameter inapaswa kufanywa kwa kutumia GridSearchCV katika `src/train.py`. Itakuwa muhimu ikiwa hatua ya usindikaji wa maandishi itaboreshwa kushughulikia idadi kubwa ya barua pepe kwa ufanisi.",
+  "tags": [
+    "Classification",
+    "Natural Language Processing",
+    "Supervised Learning"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Enron-Spam\" inapakuliwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Usindikaji wa maandishi unafanywa, ikijumuisha kuondoa maneno ya kusitisha na alama za uakifishaji katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        0,
+        1
+      ],
+      "criteria": "Vipengele vya \"TF-IDF\" vinatumika katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [],
+      "criteria": "Kielekezi cha \"SVM classifier\" kinatekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "criteria": "Tuning ya hyperparameter inafanywa kwa kutumia \"GridSearchCV\" katika `src/train.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Matriki ya mkanganyiko inahifadhiwa kama `results/figures/confusion_matrix.png`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "criteria": "Ripoti ya uainishaji, ikijumuisha \"usahihi,\" \"kumbukumbu,\" \"alama ya F1,\" na picha `results/figures/confusion_matrix.png`, inahifadhiwa kama `results/classification_report.pdf`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Hatua ya usindikaji wa maandishi inapaswa kuboreshwa kushughulikia idadi kubwa ya barua pepe kwa ufanisi.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Ripoti ya uainishaji inapaswa kuwa ya kina.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

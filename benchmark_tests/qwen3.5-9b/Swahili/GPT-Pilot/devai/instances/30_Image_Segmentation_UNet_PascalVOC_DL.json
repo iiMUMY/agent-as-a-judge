@@ -1,0 +1,91 @@
+{
+  "name": "30_Image_Segmentation_UNet_PascalVOC_DL",
+  "query": "Je, unaweza kunisaidia kuanzisha mradi wa kugawanya picha kwa kutumia seti ya data ya Pascal VOC na modeli ya U-Net iliyofunzwa awali iliyotekelezwa katika PyTorch? Hakuna haja ya mafunzo ya ziada. Tumia uboreshaji wa data (mfano, kugeuza na kuzungusha picha), tumia kipimo cha Dice kwa tathmini, hifadhi picha zilizogawanywa kwenye `results/figures/`, tengeneza na uhifadhi uhuishaji wa GIF unaoonyesha picha kabla na baada ya kugawanya kwenye `results/figures/segmentation_results.gif`, na unda Jupyter Notebook iliyo na maelezo mazuri ya usanifu wa modeli, mchakato, na matokeo ya kugawanya, ukibadilisha kuwa ripoti ya HTML (ukiihifadhi kama `results/report.html`).",
+  "tags": [
+    "Computer Vision"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Pascal VOC\" inatumika katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [
+        0
+      ],
+      "criteria": "Uboreshaji wa data, ikiwa ni pamoja na kugeuza na kuzungusha picha, unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [],
+      "criteria": "Modeli ya \"U-Net\" iliyofunzwa awali kutoka PyTorch inatumika bila mafunzo ya ziada na imehifadhiwa katika `models/saved_models/`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Kipimo cha \"Dice coefficient\" kinatumika kwa tathmini na kinapaswa kuhifadhiwa katika `results/metrics/`.",
+      "category": "Performance Metrics",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        1,
+        2
+      ],
+      "criteria": "Picha zilizogawanywa zinahifadhiwa kwenye folda iliyotajwa `results/figures/`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        1,
+        2,
+        4
+      ],
+      "criteria": "Uhuishaji wa GIF wa picha kabla na baada ya kugawanya unazalishwa na kuhifadhiwa kama `results/figures/segmentation_results.gif`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Jupyter Notebook inaundwa ikijumuisha usanifu wa modeli, mchakato wa kutumia modeli iliyofunzwa awali, na matokeo ya kugawanya. Inabadilishwa kuwa ripoti ya HTML na kuhifadhiwa kama `results/report.html`.",
+      "category": "Visualization",
+      "satisfied": null
+    }
+  ],
+  "preferences": [
+    {
+      "preference_id": 0,
+      "criteria": "Jupyter Notebook inapaswa kujumuisha vipande vya msimbo vilivyo na maelezo mazuri vinavyoelezea kila hatua ya mchakato.",
+      "satisfied": null
+    },
+    {
+      "preference_id": 1,
+      "criteria": "Uhuishaji wa GIF unapaswa kuonyesha wazi mabadiliko kabla na baada ya kugawanya kwenye picha tofauti kutoka seti ya data.",
+      "satisfied": null
+    }
+  ],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": false,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

@@ -2,13 +2,18 @@ import argparse
 import os
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 from dotenv import load_dotenv
 
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
-LANGUAGES = ["English", "Arabic", "Turkish", "Chinese", "Hindi"]
-FRAMEWORKS = ["MetaGPT", "GPT-Pilot", "OpenHands"]
+from agent_as_a_judge.languages import ALL_LANGUAGES, FRAMEWORKS
+
+LANGUAGES = list(ALL_LANGUAGES)
 
 
 def parse_args():

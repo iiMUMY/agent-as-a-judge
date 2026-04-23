@@ -1,0 +1,83 @@
+{
+  "name": "28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+  "query": "Je, unaweza kunisaidia kujenga mfumo wa utabiri wa bei za hisa kwa kutumia mfano wa LSTM na seti ya data ya Yahoo Finance? Tafadhali safisha data, ikiwa ni pamoja na kushughulikia thamani zilizokosekana na vipimo vya nje, na tumia dirisha la muda kubadilisha data ya mfululizo wa muda kuwa tatizo la kujifunza kwa usimamizi. Mfano wa LSTM unapaswa kutekelezwa katika `src/model.py`, na upakiaji wa seti ya data, usafishaji, na ubadilishaji unapaswa kutekelezwa katika `src/data_loader.py`. Hifadhi matokeo ya utabiri katika `results/predictions.txt` na tengeneza na hifadhi chati za mwingiliano za matokeo ya utabiri katika `results/figures/prediction_interactive.html` kwa kutumia Plotly. Unda Jupyter Notebook yenye taswira ya usanifu wa mfano, mchakato wa mafunzo, na matokeo ya utabiri na ihifadhi kama ripoti ya PDF katika `results/report.pdf`.",
+  "tags": [
+    "Financial Analysis",
+    "Supervised Learning",
+    "Time Series Forecasting"
+  ],
+  "requirements": [
+    {
+      "requirement_id": 0,
+      "prerequisites": [],
+      "criteria": "Mfano wa \"LSTM\" umetekelezwa katika `src/model.py`.",
+      "category": "Machine Learning Method",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 1,
+      "prerequisites": [],
+      "criteria": "Seti ya data ya \"Yahoo Finance\" inapakiwa katika `src/data_loader.py`.",
+      "category": "Dataset or Environment",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 2,
+      "prerequisites": [
+        1
+      ],
+      "criteria": "Usafishaji wa data, ikiwa ni pamoja na kushughulikia thamani zilizokosekana na vipimo vya nje, unafanywa katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 3,
+      "prerequisites": [
+        0,
+        2
+      ],
+      "criteria": "Dirisha la muda linatumika kubadilisha data ya mfululizo wa muda kuwa tatizo la kujifunza kwa usimamizi. Tafadhali hifadhi utekelezaji katika `src/data_loader.py`.",
+      "category": "Data preprocessing and postprocessing",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 4,
+      "prerequisites": [
+        2,
+        3
+      ],
+      "criteria": "Matokeo ya utabiri yanahifadhiwa katika `results/predictions.txt`.",
+      "category": "Other",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 5,
+      "prerequisites": [
+        0,
+        1,
+        2
+      ],
+      "criteria": "Chati za mwingiliano za matokeo ya utabiri zinatengenezwa kwa kutumia \"Plotly\" na kuhifadhiwa katika `results/figures/prediction_interactive.html`.",
+      "category": "Visualization",
+      "satisfied": null
+    },
+    {
+      "requirement_id": 6,
+      "prerequisites": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "criteria": "Jupyter Notebook inayojumuisha taswira ya usanifu wa mfano, mchakato wa mafunzo, na matokeo ya utabiri inaundwa na kuhifadhiwa kama ripoti ya PDF kama `results/report.pdf`.",
+      "category": "Other",
+      "satisfied": null
+    }
+  ],
+  "preferences": [],
+  "is_kaggle_api_needed": false,
+  "is_training_needed": true,
+  "is_web_navigation_needed": false,
+  "language": "Swahili"
+}

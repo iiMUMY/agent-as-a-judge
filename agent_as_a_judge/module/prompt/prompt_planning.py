@@ -127,6 +127,99 @@ def get_planning_prompt(criteria: str, language: str = "English") -> str:
     उत्तर:
     """
 
+    if language == "Japanese":
+        return f"""
+    次の要件を評価するための行動計画を作成してください。
+    必要な手順だけを選び、論理的な順序で並べてください。
+
+    要件: "{criteria}"
+
+    例:
+
+    Example 1:
+    要件: "システムは要約レポートを生成し、`output/report.txt` として保存しなければならない。"
+    Plan:
+    - [Locate]: ワークスペース内で `output/report.txt` を特定する。
+    - [Read]: `report.txt` の内容を読み、要約レポートが含まれていることを確認する。
+    - [Search]: コードベース内で `report.txt` を生成する関数やメソッドを検索する。
+
+    Example 2:
+    要件: "機械学習モデルを学習し、`results/model.pkl` として保存しなければならない。"
+    Plan:
+    - [Locate]: ワークスペース内で `results/model.pkl` を特定する。
+    - [Search]: ソースコード内でモデル学習コードを検索する。
+    - [Read]: 学習コードを読み、要件に適合していることを確認する。
+    - [Trajectory]: モデル学習の履歴トレースを分析し、過去の変更を把握する。
+
+    それでは、次の要件に対するステップごとの計画を作成してください:
+
+    要件: "{criteria}"
+
+    応答:
+    """
+
+    if language == "Spanish":
+        return f"""
+    Genera un plan de acciones para evaluar el siguiente requisito.
+    Selecciona solo los pasos necesarios y ordénalos de forma lógica.
+
+    Requisito: "{criteria}"
+
+    Ejemplos:
+
+    Example 1:
+    Requisito: "El sistema debe generar un informe resumido y guardarlo en `output/report.txt`."
+    Plan:
+    - [Locate]: Localiza el archivo `output/report.txt` en el workspace.
+    - [Read]: Lee el contenido de `report.txt` para verificar que incluya el informe resumido.
+    - [Search]: Busca en el código las funciones o métodos responsables de generar `report.txt`.
+
+    Example 2:
+    Requisito: "El modelo de aprendizaje automático debe entrenarse y guardarse como `results/model.pkl`."
+    Plan:
+    - [Locate]: Localiza `results/model.pkl` en el workspace.
+    - [Search]: Busca en los archivos fuente el código de entrenamiento del modelo.
+    - [Read]: Lee el código de entrenamiento para verificar que cumpla el requisito.
+    - [Trajectory]: Analiza la trayectoria histórica del desarrollo para entender cambios previos.
+
+    Ahora genera un plan paso a paso para el siguiente requisito:
+
+    Requisito: "{criteria}"
+
+    Respuesta:
+    """
+
+    if language == "Swahili":
+        return f"""
+    Tengeneza mpango wa hatua za kutathmini hitaji lifuatalo.
+    Chagua hatua zinazohitajika tu na uzipange kwa mpangilio wa kimantiki.
+
+    Hitaji: "{criteria}"
+
+    Mifano:
+
+    Example 1:
+    Hitaji: "Mfumo lazima utoe ripoti ya muhtasari na kuihifadhi katika `output/report.txt`."
+    Plan:
+    - [Locate]: Tafuta faili ya `output/report.txt` ndani ya workspace.
+    - [Read]: Soma yaliyomo kwenye `report.txt` ili kuthibitisha kuwa ina ripoti ya muhtasari.
+    - [Search]: Tafuta kwenye codebase kazi au methods zinazotengeneza `report.txt`.
+
+    Example 2:
+    Hitaji: "Mfano wa machine learning lazima ufundishwe na uhifadhiwe kama `results/model.pkl`."
+    Plan:
+    - [Locate]: Tafuta `results/model.pkl` ndani ya workspace.
+    - [Search]: Tafuta msimbo wa kufundisha mfano ndani ya source files.
+    - [Read]: Soma msimbo wa mafunzo ili kuthibitisha kuwa unaendana na hitaji.
+    - [Trajectory]: Changanua trajekta ya kihistoria ya maendeleo ili kuelewa mabadiliko ya awali.
+
+    Sasa tengeneza mpango wa hatua kwa hatua kwa hitaji lifuatalo:
+
+    Hitaji: "{criteria}"
+
+    Jibu:
+    """
+
     return f"""
     You are tasked with generating a list of actions to evaluate or resolve the following requirement. 
     Select only the necessary actions and arrange them in a logical order to systematically collect evidence and verify whether the requirement is satisfied.
