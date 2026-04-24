@@ -1,0 +1,21 @@
+{
+    "workspace": "benchmark_tests\\claude-sonnet-4.6\\Japanese\\OpenHands\\workspaces\\OpenHands\\48_Stock_Trading_Simulation_PPO_HistoricalData_RL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "trade_decisions.txt": null,
+            "trading_strategy_report.md": null
+        },
+        "results\\figures": {
+            "profit_curve.png": null
+        },
+        "results\\metrics": {
+            "total_profit.txt": null
+        },
+        "src": {
+            "env.py": null,
+            "train.py": null,
+            "visualize.py": null
+        }
+    }
+}

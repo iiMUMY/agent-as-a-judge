@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Japanese\\MetaGPT\\workspaces\\MetaGPT\\14_Customer_Churn_Prediction_LogisticRegression_Telco_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "roc_curve.png": null
+        },
+        "results\\metrics": {
+            "classification_report.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

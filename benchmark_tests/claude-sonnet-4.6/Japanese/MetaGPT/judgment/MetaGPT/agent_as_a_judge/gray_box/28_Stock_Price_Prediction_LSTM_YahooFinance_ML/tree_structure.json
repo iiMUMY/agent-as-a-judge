@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\claude-sonnet-4.6\\Japanese\\MetaGPT\\workspaces\\MetaGPT\\28_Stock_Price_Prediction_LSTM_YahooFinance_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "predictions.txt": null,
+            "report.pdf": null
+        },
+        "results\\figures": {
+            "prediction_interactive.html": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

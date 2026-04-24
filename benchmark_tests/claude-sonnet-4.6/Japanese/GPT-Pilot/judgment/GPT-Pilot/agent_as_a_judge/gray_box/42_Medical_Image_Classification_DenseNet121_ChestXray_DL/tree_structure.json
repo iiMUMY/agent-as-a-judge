@@ -1,0 +1,20 @@
+{
+    "workspace": "benchmark_tests\\claude-sonnet-4.6\\Japanese\\GPT-Pilot\\workspaces\\GPT-Pilot\\42_Medical_Image_Classification_DenseNet121_ChestXray_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {
+            "medical_image_classification_report.md": null
+        },
+        "results\\figures": {
+            "grad_cam_visualizations.gif": null
+        },
+        "results\\metrics": {
+            "classification_accuracy.txt": null
+        },
+        "src": {
+            "data_loader.py": null
+        }
+    }
+}

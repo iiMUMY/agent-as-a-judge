@@ -176,3 +176,7 @@ Dockerfile
 
 # Ignore all judge files
 */judge/
+
+# Ignore Project files
+Project-1/
+Project-2/

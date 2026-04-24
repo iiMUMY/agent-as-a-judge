@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_tests\\qwen3.5-9b\\Japanese\\GPT-Pilot\\workspaces\\GPT-Pilot\\54_Mock_OpenAI_API_Response_Analyzer_App",
+    "tree_structure": {
+        ".": {},
+        "src": {
+            "backend.py": null,
+            "frontend.py": null,
+            "frontend_render.py": null,
+            "message_list.py": null,
+            "mock_llm.py": null,
+            "stream_handler.py": null,
+            "styles.css": null
+        }
+    }
+}

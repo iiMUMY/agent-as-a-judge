@@ -1,0 +1,16 @@
+{
+    "workspace": "benchmark_tests\\qwen3.5-9b\\Japanese\\GPT-Pilot\\workspaces\\GPT-Pilot\\01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+    "tree_structure": {
+        ".": {
+            "fashionnet.pt": null,
+            "torchvision.transforms": null
+        },
+        "models": {},
+        "models\\saved_models": {},
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

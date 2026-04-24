@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_tests\\gpt-5.4\\Japanese\\GPT-Pilot\\workspaces\\GPT-Pilot\\13_Style_Transfer_Perceptual_Loss_CustomImages_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "processing_time.txt": null
+        },
+        "results\\figures": {
+            "intermediate_results.png": null
+        },
+        "src": {
+            "model.py": null
+        }
+    }
+}
