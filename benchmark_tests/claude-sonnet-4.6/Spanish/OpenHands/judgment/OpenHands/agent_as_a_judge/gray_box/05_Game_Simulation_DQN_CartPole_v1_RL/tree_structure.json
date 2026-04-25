@@ -1,0 +1,19 @@
+{
+    "workspace": "benchmark_tests\\claude-sonnet-4.6\\Spanish\\OpenHands\\workspaces\\OpenHands\\05_Game_Simulation_DQN_CartPole_v1_RL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "dqn_model.pt": null
+        },
+        "results": {},
+        "results\\figures": {
+            "reward_over_time.png": null
+        },
+        "results\\metrics": {},
+        "src": {
+            "main.py": null,
+            "model.py": null
+        }
+    }
+}

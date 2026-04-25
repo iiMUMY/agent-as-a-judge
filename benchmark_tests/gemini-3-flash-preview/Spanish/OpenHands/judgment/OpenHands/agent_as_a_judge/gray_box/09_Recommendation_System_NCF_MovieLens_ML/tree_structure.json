@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_tests\\gemini-3-flash-preview\\Spanish\\OpenHands\\workspaces\\OpenHands\\09_Recommendation_System_NCF_MovieLens_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\metrics": {
+            "evaluation_metrics.txt": null,
+            "top_10_recommendations.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

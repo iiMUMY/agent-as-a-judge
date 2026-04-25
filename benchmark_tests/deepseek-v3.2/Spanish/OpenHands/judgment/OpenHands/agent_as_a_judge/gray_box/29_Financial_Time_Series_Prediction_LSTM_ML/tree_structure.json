@@ -1,0 +1,15 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Spanish\\OpenHands\\workspaces\\OpenHands\\29_Financial_Time_Series_Prediction_LSTM_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "prediction_results.txt": null,
+            "report.md": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "visualize.py": null
+        }
+    }
+}

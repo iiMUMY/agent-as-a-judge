@@ -1,0 +1,14 @@
+{
+    "workspace": "benchmark_tests\\gpt-4o\\Spanish\\GPT-Pilot\\workspaces\\GPT-Pilot\\06_Sentiment_Analysis_SVM_Sentiment140_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\metrics": {
+            "accuracy_score.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

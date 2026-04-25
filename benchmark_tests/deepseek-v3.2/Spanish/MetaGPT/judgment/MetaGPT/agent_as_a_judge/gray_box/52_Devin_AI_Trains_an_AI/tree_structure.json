@@ -1,0 +1,16 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Spanish\\MetaGPT\\workspaces\\MetaGPT\\52_Devin_AI_Trains_an_AI",
+    "tree_structure": {
+        ".": {},
+        "github.com": {},
+        "github.com\\artidoro": {
+            "qlora": null
+        },
+        "models": {},
+        "models\\saved_models": {},
+        "results": {},
+        "results\\metrics": {
+            "finetuning_summary.txt": null
+        }
+    }
+}
