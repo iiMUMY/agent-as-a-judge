@@ -1,0 +1,16 @@
+{
+    "workspace": "benchmark_tests\\gpt-5.4\\Swahili\\MetaGPT\\workspaces\\MetaGPT\\01_Image_Classification_ResNet18_Fashion_MNIST_DL",
+    "tree_structure": {
+        ".": {
+            "fashionnet.pt": null,
+            "torchvision.transforms": null
+        },
+        "models": {},
+        "models\\saved_models": {},
+        "src": {
+            "data_loader.py": null,
+            "model.py": null,
+            "train.py": null
+        }
+    }
+}

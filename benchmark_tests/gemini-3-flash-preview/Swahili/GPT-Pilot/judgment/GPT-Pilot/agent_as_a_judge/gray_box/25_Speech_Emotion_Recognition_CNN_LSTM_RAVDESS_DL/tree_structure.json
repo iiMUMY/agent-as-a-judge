@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\gemini-3-flash-preview\\Swahili\\GPT-Pilot\\workspaces\\GPT-Pilot\\25_Speech_Emotion_Recognition_CNN_LSTM_RAVDESS_DL",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "confusion_matrix.png": null
+        },
+        "results\\metrics": {
+            "recognition_accuracy.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "hci.py": null,
+            "model.py": null
+        }
+    }
+}

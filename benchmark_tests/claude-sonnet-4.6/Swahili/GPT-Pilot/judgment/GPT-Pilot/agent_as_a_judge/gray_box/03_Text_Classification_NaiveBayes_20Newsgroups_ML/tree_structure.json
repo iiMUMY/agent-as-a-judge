@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\claude-sonnet-4.6\\Swahili\\GPT-Pilot\\workspaces\\GPT-Pilot\\03_Text_Classification_NaiveBayes_20Newsgroups_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "wordcloud_after.png": null,
+            "wordcloud_before.png": null
+        },
+        "results\\metrics": {
+            "performance.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

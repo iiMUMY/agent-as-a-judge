@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\deepseek-v3.2\\Swahili\\MetaGPT\\workspaces\\MetaGPT\\26_Mushroom_Classification_RandomForest_Mushroom_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "classification_results.txt": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "train.py": null
+        }
+    }
+}

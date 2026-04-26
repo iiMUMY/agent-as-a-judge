@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\gemini-3-flash-preview\\Swahili\\OpenHands\\workspaces\\OpenHands\\26_Mushroom_Classification_RandomForest_Mushroom_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "classification_results.txt": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "train.py": null
+        }
+    }
+}

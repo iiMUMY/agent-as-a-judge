@@ -1,0 +1,17 @@
+{
+    "workspace": "benchmark_tests\\gpt-4o\\Swahili\\GPT-Pilot\\workspaces\\GPT-Pilot\\26_Mushroom_Classification_RandomForest_Mushroom_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {
+            "classification_results.txt": null
+        },
+        "results\\figures": {
+            "feature_importance.png": null
+        },
+        "src": {
+            "app.py": null,
+            "data_loader.py": null,
+            "train.py": null
+        }
+    }
+}

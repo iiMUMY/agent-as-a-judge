@@ -1,0 +1,21 @@
+{
+    "workspace": "benchmark_tests\\gemini-3-flash-preview\\Swahili\\OpenHands\\workspaces\\OpenHands\\15_Image_Captioning_ShowAndTell_Flickr8k_DL",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {
+            "show_and_tell_model.pt": null
+        },
+        "results": {},
+        "results\\figures": {
+            "attention_weights.png": null
+        },
+        "results\\metrics": {
+            "generated_descriptions.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "workspace": "benchmark_tests\\qwen3.5-9b\\Swahili\\OpenHands\\workspaces\\OpenHands\\34_Customer_Segmentation_KMeans_CustomerSegmentation_ML",
+    "tree_structure": {
+        ".": {},
+        "results": {},
+        "results\\figures": {
+            "customer_segmentation.png": null,
+            "elbow.jpg": null
+        },
+        "results\\metrics": {
+            "cluster_centers.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "model.py": null
+        }
+    }
+}

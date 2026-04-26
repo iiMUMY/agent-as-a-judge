@@ -1,0 +1,19 @@
+{
+    "workspace": "benchmark_tests\\gemini-3-flash-preview\\Swahili\\MetaGPT\\workspaces\\MetaGPT\\43_Social_Network_Analysis_GCN_Cora_ML",
+    "tree_structure": {
+        ".": {},
+        "models": {},
+        "models\\saved_models": {},
+        "results": {},
+        "results\\figures": {
+            "citation_network_visualization.png": null
+        },
+        "results\\metrics": {
+            "node_classification_results.txt": null
+        },
+        "src": {
+            "data_loader.py": null,
+            "train.py": null
+        }
+    }
+}
