@@ -41,7 +41,9 @@ TABLE2_METHODS = [
     "Per-language norm.",
     "Backbone-only norm.",
     "Z-score",
-    "Quantile",
+    "Quantile normalization",
+    "ComBat-EB",
+    "Dawid-Skene EM",
     "Ensemble",
     "CBC",
     "CBC-Weighted",
@@ -84,13 +86,15 @@ def load_run_level_scores() -> pd.DataFrame:
                     continue
                 for path in sorted(gray_dir.glob("*.json"), key=lambda p: task_key(p.stem)):
                     obj = json.loads(path.read_text(encoding="utf-8"))
+                    score = compute_task_satisfaction_rate(obj)
                     rows.append(
                         {
                             "backbone": backbone,
                             "language": language,
                             "framework": framework,
                             "task": obj.get("name", path.stem),
-                            "score": compute_task_satisfaction_rate(obj),
+                            "score": score,
+                            "task_solved": int(score == 100.0),
                         }
                     )
     df = pd.DataFrame(rows)
@@ -106,6 +110,18 @@ def aggregate_task_level(df: pd.DataFrame) -> pd.DataFrame:
         .rename(columns={"score": "score"})
     )
     return grouped
+
+
+def expand_rows_by_task_weights(
+    df: pd.DataFrame,
+    task_weights: dict[str, int],
+) -> pd.DataFrame:
+    weighted = df.copy()
+    weighted["weight"] = weighted["task"].map(task_weights).fillna(0).astype(int)
+    weighted = weighted[weighted["weight"] > 0].copy()
+    if weighted.empty:
+        raise ValueError("No rows remain after applying task weights.")
+    return weighted.loc[weighted.index.repeat(weighted["weight"])].drop(columns=["weight"]).reset_index(drop=True)
 
 
 def build_score_matrix(
@@ -243,23 +259,17 @@ def fit_ols_r2(
 
 def save_heatmap(beta_df: pd.DataFrame) -> None:
     import matplotlib.pyplot as plt
-    import seaborn as sns  # pyright: ignore[reportMissingModuleSource]
-
-    sns.set_theme(style="white", context="paper")
     fig, ax = plt.subplots(figsize=(8.5, 3.6))
     vmax = float(np.abs(beta_df.to_numpy()).max())
-    sns.heatmap(
-        beta_df,
-        annot=True,
-        fmt=".2f",
-        cmap="RdBu",
-        center=0.0,
-        vmin=-vmax,
-        vmax=vmax,
-        linewidths=0.6,
-        cbar_kws={"label": r"$\hat{\beta}(\ell,b)$"},
-        ax=ax,
-    )
+    image = ax.imshow(beta_df.to_numpy(dtype=float), cmap="RdBu", vmin=-vmax, vmax=vmax, aspect="auto")
+    ax.set_xticks(np.arange(len(beta_df.columns)), labels=list(beta_df.columns), rotation=45, ha="right")
+    ax.set_yticks(np.arange(len(beta_df.index)), labels=list(beta_df.index))
+    for row_idx, language in enumerate(beta_df.index):
+        for col_idx, backbone in enumerate(beta_df.columns):
+            value = float(beta_df.loc[language, backbone])
+            ax.text(col_idx, row_idx, f"{value:.2f}", ha="center", va="center", fontsize=8)
+    cbar = fig.colorbar(image, ax=ax)
+    cbar.set_label(r"$\hat{\beta}(\ell,b)$")
     ax.set_xlabel("Backbone")
     ax.set_ylabel("Language")
     fig.tight_layout()
@@ -287,7 +297,7 @@ def mean_pairwise_kendall_tau(score_matrix: pd.DataFrame) -> float:
         if not np.isnan(tau):
             taus.append(float(tau))
     if not taus:
-        raise ValueError("No valid Kendall tau values were computed.")
+        return 0.0
     return float(np.mean(taus))
 
 
@@ -316,6 +326,166 @@ def col_quantile(matrix: pd.DataFrame, train_matrix: pd.DataFrame) -> pd.DataFra
     return quantile_df
 
 
+def combat_eb_adjust(
+    eval_matrix: pd.DataFrame,
+    train_task_df: pd.DataFrame,
+) -> pd.DataFrame:
+    train_df = train_task_df.copy()
+    global_mean = float(train_df["score"].mean())
+    backbone_effect = train_df.groupby("backbone")["score"].mean().reindex(eval_matrix.columns) - global_mean
+    train_df["residual"] = train_df.apply(
+        lambda row: row["score"] - global_mean - float(backbone_effect[row["backbone"]]),
+        axis=1,
+    )
+    language_mean = train_df.groupby("language")["residual"].mean().reindex(eval_matrix.index).fillna(0.0)
+    centered = train_df["residual"] - train_df["language"].map(language_mean)
+    pooled_var = float(np.var(centered.to_numpy(dtype=float), ddof=0))
+    pooled_std = float(np.sqrt(pooled_var)) if pooled_var > 0 else 1.0
+    language_counts = train_df.groupby("language").size().reindex(eval_matrix.index).fillna(0.0)
+    tau2 = float(np.var(language_mean.to_numpy(dtype=float), ddof=0))
+    gamma_shrunk = {}
+    delta_shrunk = {}
+    lang_scale = {}
+    for language in eval_matrix.index:
+        n_l = float(language_counts[language])
+        gamma_l = float(language_mean[language])
+        if n_l <= 0:
+            gamma_shrunk[language] = 0.0
+            delta_shrunk[language] = 1.0
+            continue
+        lambda_mean = tau2 / (tau2 + pooled_var / n_l) if (tau2 + pooled_var / n_l) > 0 else 0.0
+        gamma_shrunk[language] = lambda_mean * gamma_l
+        lang_resid = train_df.loc[train_df["language"] == language, "residual"].to_numpy(dtype=float) - gamma_l
+        if len(lang_resid) > 1:
+            delta_l = float(np.std(lang_resid, ddof=0) / pooled_std) if pooled_std > 0 else 1.0
+        else:
+            delta_l = 1.0
+        lang_scale[language] = delta_l
+    scale_values = np.array(list(lang_scale.values()), dtype=float)
+    scale_var = float(np.var(scale_values, ddof=0))
+    for language in eval_matrix.index:
+        n_l = float(language_counts[language])
+        delta_l = float(lang_scale.get(language, 1.0))
+        lambda_scale = scale_var / (scale_var + 1.0 / max(n_l, 1.0)) if (scale_var + 1.0 / max(n_l, 1.0)) > 0 else 0.0
+        delta_shrunk[language] = max(1e-6, 1.0 + lambda_scale * (delta_l - 1.0))
+
+    adjusted = eval_matrix.copy()
+    for language in adjusted.index:
+        for backbone in adjusted.columns:
+            alpha_b = float(backbone_effect[backbone])
+            gamma_l = float(gamma_shrunk[language])
+            delta_l = float(delta_shrunk[language])
+            value = float(adjusted.loc[language, backbone])
+            adjusted.loc[language, backbone] = global_mean + alpha_b + (value - global_mean - alpha_b - gamma_l) / delta_l
+    return adjusted
+
+
+def fit_dawid_skene(
+    train_run_df: pd.DataFrame,
+    task_weights: dict[str, int],
+    max_iter: int = 25,
+    smoothing: float = 1.0,
+) -> dict:
+    train_df = expand_rows_by_task_weights(train_run_df, task_weights)
+    train_df = train_df.copy()
+    train_df["item_id"] = train_df["task"] + "::" + train_df["framework"]
+    train_df["annotator_id"] = train_df["language"] + "::" + train_df["backbone"]
+    pivot = (
+        train_df.pivot_table(index="item_id", columns="annotator_id", values="task_solved", aggfunc="mean")
+        .sort_index(axis=1)
+    )
+    annotations = pivot.to_numpy(dtype=float)
+    posterior = np.clip(np.nanmean(annotations, axis=1), 1e-3, 1 - 1e-3)
+    prior = float(np.mean(posterior))
+    annotators = list(pivot.columns)
+    confusion = {annotator: {"sens": 0.7, "spec": 0.7} for annotator in annotators}
+
+    for _ in range(max_iter):
+        prior = float(np.clip(np.mean(posterior), 1e-3, 1 - 1e-3))
+        for j, annotator in enumerate(annotators):
+            obs = annotations[:, j]
+            tp = float(np.sum(posterior * (obs == 1.0)))
+            fn = float(np.sum(posterior * (obs == 0.0)))
+            fp = float(np.sum((1.0 - posterior) * (obs == 1.0)))
+            tn = float(np.sum((1.0 - posterior) * (obs == 0.0)))
+            sens = (tp + smoothing) / (tp + fn + 2 * smoothing)
+            spec = (tn + smoothing) / (tn + fp + 2 * smoothing)
+            confusion[annotator] = {"sens": float(np.clip(sens, 1e-4, 1 - 1e-4)), "spec": float(np.clip(spec, 1e-4, 1 - 1e-4))}
+
+        new_posterior = np.zeros_like(posterior)
+        for i in range(len(posterior)):
+            log_p1 = np.log(prior)
+            log_p0 = np.log(1.0 - prior)
+            for j, annotator in enumerate(annotators):
+                obs = annotations[i, j]
+                sens = confusion[annotator]["sens"]
+                spec = confusion[annotator]["spec"]
+                if obs == 1.0:
+                    log_p1 += np.log(sens)
+                    log_p0 += np.log(1.0 - spec)
+                else:
+                    log_p1 += np.log(1.0 - sens)
+                    log_p0 += np.log(spec)
+            max_log = max(log_p1, log_p0)
+            p1 = np.exp(log_p1 - max_log)
+            p0 = np.exp(log_p0 - max_log)
+            new_posterior[i] = p1 / (p1 + p0)
+        if np.max(np.abs(new_posterior - posterior)) < 1e-6:
+            posterior = new_posterior
+            break
+        posterior = new_posterior
+
+    return {"prior": prior, "confusion": confusion}
+
+
+def dawid_skene_eval_matrix(
+    eval_run_df: pd.DataFrame,
+    ds_params: dict,
+    backbones: list[str],
+) -> pd.DataFrame:
+    eval_df = eval_run_df.copy()
+    eval_df["item_id"] = eval_df["task"] + "::" + eval_df["framework"]
+    eval_df["annotator_id"] = eval_df["language"] + "::" + eval_df["backbone"]
+    pivot = eval_df.pivot_table(index="item_id", columns="annotator_id", values="task_solved", aggfunc="mean")
+    annotators = list(pivot.columns)
+    posterior = {}
+    prior = float(ds_params["prior"])
+    confusion = ds_params["confusion"]
+    for item_id, row in pivot.iterrows():
+        log_p1 = np.log(np.clip(prior, 1e-4, 1 - 1e-4))
+        log_p0 = np.log(np.clip(1.0 - prior, 1e-4, 1 - 1e-4))
+        for annotator in annotators:
+            obs = float(row[annotator])
+            params = confusion[annotator]
+            sens = params["sens"]
+            spec = params["spec"]
+            if obs == 1.0:
+                log_p1 += np.log(sens)
+                log_p0 += np.log(1.0 - spec)
+            else:
+                log_p1 += np.log(1.0 - sens)
+                log_p0 += np.log(spec)
+        max_log = max(log_p1, log_p0)
+        p1 = np.exp(log_p1 - max_log)
+        p0 = np.exp(log_p0 - max_log)
+        posterior[item_id] = p1 / (p1 + p0)
+
+    rows = []
+    for annotator in annotators:
+        language, backbone = annotator.split("::")
+        obs = pivot[annotator].to_numpy(dtype=float)
+        item_ids = list(pivot.index)
+        accuracy = float(
+            np.mean([
+                posterior[item_id] if obs_val == 1.0 else 1.0 - posterior[item_id]
+                for item_id, obs_val in zip(item_ids, obs)
+            ])
+        )
+        rows.append({"language": language, "backbone": backbone, "score": 100.0 * accuracy})
+    matrix_df = pd.DataFrame(rows)
+    return matrix_df.pivot(index="language", columns="backbone", values="score").reindex(index=LANGUAGES, columns=backbones)
+
+
 def random_control(matrix: pd.DataFrame, rng: np.random.Generator) -> pd.DataFrame:
     shuffled = matrix.copy()
     for language in shuffled.index:
@@ -333,7 +503,9 @@ def ensemble_baseline(matrix: pd.DataFrame, train_matrix: pd.DataFrame) -> pd.Da
 def evaluate_method_matrix(
     method: str,
     full_task_df: pd.DataFrame,
+    full_run_df: pd.DataFrame,
     eval_df: pd.DataFrame,
+    eval_run_df: pd.DataFrame,
     eval_matrix: pd.DataFrame,
     train_matrix: pd.DataFrame,
     train_weights: dict[str, int],
@@ -350,8 +522,17 @@ def evaluate_method_matrix(
         return col_center(eval_matrix, train_matrix)
     if method == "Z-score":
         return col_zscore(eval_matrix, train_matrix)
-    if method == "Quantile":
+    if method == "Quantile normalization":
         return col_quantile(eval_matrix, train_matrix)
+    if method == "ComBat-EB":
+        train_task_df = expand_rows_by_task_weights(full_task_df, train_weights)
+        return combat_eb_adjust(eval_matrix, train_task_df)
+    if method == "Dawid-Skene EM":
+        ds_params = fit_dawid_skene(
+            full_run_df[full_run_df["backbone"].isin(backbones)].copy(),
+            task_weights=train_weights,
+        )
+        return dawid_skene_eval_matrix(eval_run_df[eval_run_df["backbone"].isin(backbones)].copy(), ds_params, backbones)
     if method == "Ensemble":
         return ensemble_baseline(eval_matrix, train_matrix)
     if method == "CBC":
@@ -386,6 +567,7 @@ def summarize_replicates(replicate_df: pd.DataFrame) -> pd.DataFrame:
 
 def evaluate_calibration_methods(
     task_df: pd.DataFrame,
+    run_df: pd.DataFrame,
     methods: list[str] | None = None,
     bootstrap_reps: int = BOOTSTRAP_REPS,
     seed: int = BOOTSTRAP_SEED,
@@ -394,6 +576,7 @@ def evaluate_calibration_methods(
     methods = TABLE2_METHODS if methods is None else list(methods)
     backbone_order = BACKBONE_ORDER if backbones is None else list(backbones)
     subset_df = task_df[task_df["backbone"].isin(backbone_order)].copy()
+    subset_run_df = run_df[run_df["backbone"].isin(backbone_order)].copy()
     tasks = sorted(subset_df["task"].unique(), key=task_key)
     rng = np.random.default_rng(seed)
     replicate_rows: list[dict] = []
@@ -406,6 +589,7 @@ def evaluate_calibration_methods(
             continue
 
         eval_df = subset_df[subset_df["task"].isin(eval_tasks)].copy()
+        eval_run_df = subset_run_df[subset_run_df["task"].isin(eval_tasks)].copy()
         eval_matrix = build_score_matrix(eval_df, backbones=backbone_order)
         train_matrix = build_score_matrix(subset_df, task_weights=train_weights, backbones=backbone_order)
 
@@ -413,7 +597,9 @@ def evaluate_calibration_methods(
             method_matrix = evaluate_method_matrix(
                 method=method,
                 full_task_df=subset_df,
+                full_run_df=subset_run_df,
                 eval_df=eval_df,
+                eval_run_df=eval_run_df,
                 eval_matrix=eval_matrix,
                 train_matrix=train_matrix,
                 train_weights=train_weights,
@@ -455,12 +641,13 @@ def evaluate_calibration_methods(
     return replicate_df, payload
 
 
-def run_backbone_ablation(task_df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
+def run_backbone_ablation(task_df: pd.DataFrame, run_df: pd.DataFrame) -> tuple[pd.DataFrame, dict]:
     subset_rows: list[dict] = []
     for m_size in range(2, len(BACKBONE_ORDER) + 1):
         for subset in combinations(BACKBONE_ORDER, m_size):
             _, payload = evaluate_calibration_methods(
                 task_df,
+                run_df,
                 methods=["CBC"],
                 bootstrap_reps=ABLATION_BOOTSTRAP_REPS,
                 seed=BOOTSTRAP_SEED + m_size,
@@ -626,7 +813,7 @@ def aggregate_requirement_task_level(
     )
 
 
-def run_requirement_type_decomposition() -> dict:
+def run_requirement_type_decomposition(run_df: pd.DataFrame) -> dict:
     req_df = load_requirement_level_scores()
     type_sets = {
         "operational": {"Data Loading", "Training"},
@@ -637,6 +824,7 @@ def run_requirement_type_decomposition() -> dict:
         split_task_df = aggregate_requirement_task_level(req_df, included_types)
         _, split_payload = evaluate_calibration_methods(
             split_task_df,
+            run_df,
             methods=["Raw (no calibration)", "CBC", "CBC-Weighted"],
             bootstrap_reps=REQUIREMENT_BOOTSTRAP_REPS,
             seed=BOOTSTRAP_SEED + len(included_types),
@@ -664,7 +852,9 @@ def classify_cbc_status(
         "Per-language norm.",
         "Backbone-only norm.",
         "Z-score",
-        "Quantile",
+        "Quantile normalization",
+        "ComBat-EB",
+        "Dawid-Skene EM",
         "Ensemble",
     ]
     cbc_tau = float(result_map["CBC"])
@@ -718,10 +908,10 @@ def main() -> None:
     task_df = aggregate_task_level(run_df)
     beta_df = compute_beta(task_df)
     delta_df = compute_rank_reversal(task_df)
-    calibration_replicates_df, calibration_payload = evaluate_calibration_methods(task_df)
-    backbone_ablation_df, backbone_ablation_payload = run_backbone_ablation(task_df)
+    calibration_replicates_df, calibration_payload = evaluate_calibration_methods(task_df, run_df)
+    backbone_ablation_df, backbone_ablation_payload = run_backbone_ablation(task_df, run_df)
     task_ablation_df, task_ablation_payload = run_task_ablation(task_df)
-    requirement_payload = run_requirement_type_decomposition()
+    requirement_payload = run_requirement_type_decomposition(run_df)
     cbc_status_payload = classify_cbc_status(
         calibration_payload,
         backbone_ablation_payload,
